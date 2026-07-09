@@ -1,6 +1,6 @@
 {
-  "version": "1.8.0",
-  "build": 4,
+  "version": "1.9.0",
+  "build": 5,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,16 +9,16 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 4,
+    "overall_completion": 5,
     "current_build": {
-      "number": 4,
-      "title": "Master Phase Registry"
-    },
-    "active_phase": "Foundation & Governance",
-    "last_completed": "Mission Control Dashboard",
-    "next_build": {
       "number": 5,
-      "title": "Historical Foundation \u2014 Hall 1 Depth"
+      "title": "Master Site Architecture & Navigation Blueprint"
+    },
+    "active_phase": "Information Architecture",
+    "last_completed": "Master Phase Registry",
+    "next_build": {
+      "number": 6,
+      "title": "Master Content Inventory"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
@@ -34,8 +34,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 4,
-      "note": "Foundation and governance strong. Master Phase Registry locked. Educational content and data layers remain early."
+      "value": 5,
+      "note": "Governance and IA blueprint locked. Canonical site map live. Content, data, and deep pages remain early."
     },
     {
       "id": "constitution",
@@ -52,8 +52,8 @@
     {
       "id": "ia",
       "label": "Information Architecture",
-      "value": 10,
-      "note": "Section routes exist. Most halls are L1 stubs only."
+      "value": 38,
+      "note": "Master IA v1.0: 10 sections, 82 subsections, URL standards, redirects, public site map. Search and glossary planned."
     },
     {
       "id": "content",
@@ -351,43 +351,43 @@
     {
       "id": "before",
       "label": "Before Citizens United",
-      "href": "/halls/story-before.html",
+      "href": "/the-story",
       "status": "building"
     },
     {
       "id": "case",
       "label": "The Case",
-      "href": "/halls/the-case.html",
+      "href": "/the-case",
       "status": "building"
     },
     {
       "id": "decided",
       "label": "What the Court Decided",
-      "href": "/halls/what-court-decided.html",
+      "href": "/the-constitution",
       "status": "building"
     },
     {
       "id": "after",
       "label": "After 2010",
-      "href": "/halls/after-2010.html",
+      "href": "/the-impact",
       "status": "planning"
     },
     {
       "id": "money",
       "label": "Follow the Money",
-      "href": "/halls/money-map.html",
+      "href": "/follow-the-money",
       "status": "planning"
     },
     {
       "id": "debate",
       "label": "Arguments and Debate",
-      "href": "/halls/debate.html",
+      "href": "/the-debate",
       "status": "planning"
     },
     {
       "id": "reform",
       "label": "Reform Paths",
-      "href": "/halls/reform.html",
+      "href": "/reform",
       "status": "building"
     },
     {
@@ -399,13 +399,13 @@
     {
       "id": "teach",
       "label": "Teach This Locally",
-      "href": "/educate/",
+      "href": "/teach",
       "status": "complete"
     },
     {
       "id": "library",
       "label": "Source Library",
-      "href": "/library/",
+      "href": "/sources",
       "status": "building"
     },
     {
@@ -460,6 +460,18 @@
       "id": "netlify",
       "label": "Netlify Production",
       "href": "https://arkansas-facts.netlify.app",
+      "status": "complete"
+    },
+    {
+      "id": "site-map",
+      "label": "Site Map (Explore)",
+      "href": "/explore/",
+      "status": "complete"
+    },
+    {
+      "id": "architecture",
+      "label": "IA Blueprint",
+      "href": "/mission-control/architecture.html",
       "status": "complete"
     }
   ],
@@ -1487,6 +1499,53 @@
   ],
   "builds": [
     {
+      "number": 5,
+      "title": "Master Site Architecture & Navigation Blueprint",
+      "version": "1.9.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Canonical map of every destination before individual page design",
+      "summary": "Master IA v1.0 with 10 primary sections, 82 subsections, reader journey, cross-linking standards, URL redirects, public /explore/ site map",
+      "files_created": [
+        "data/site-architecture.json",
+        "docs/SITE_ARCHITECTURE.md",
+        "builds/005-master-site-architecture.md",
+        "explore/index.html",
+        "mission-control/architecture.html",
+        "js/site-map.js",
+        "css/site-map.css"
+      ],
+      "files_modified": [
+        "data/knowledge.json",
+        "js/layout.js",
+        "netlify.toml",
+        "data/mission-control.json",
+        "js/mission-control.js"
+      ],
+      "pages_created": [
+        "/explore/",
+        "/mission-control/architecture.html"
+      ],
+      "decisions_made": [
+        "Question-based primary nav",
+        "Canonical URLs with hall redirects during migration",
+        "Discover-to-Lead reader journey on all pages"
+      ],
+      "open_questions": [
+        "Which subsection gets first deep page in Build #6?",
+        "Search: static index vs live API?"
+      ],
+      "risks": [
+        "76 planned subsections \u2014 content inventory must prioritize"
+      ],
+      "next_recommended": 6,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/explore/",
+      "review_status": "complete"
+    },
+    {
       "number": 4,
       "title": "Master Phase Registry v1.0",
       "version": "1.8.0",
@@ -1589,23 +1648,24 @@
     }
   ],
   "briefing": {
-    "what_built": "Constitution, Mission Control, 15-phase Master Phase Registry, 100-step tracker, MT/HI live research",
-    "building_now": "Phase 1 governance wrap-up; Phase 9 reform content; Phase 10 civic workspaces",
+    "what_built": "Constitution, Phase Registry, Site Architecture blueprint, public site map, canonical URL redirects",
+    "building_now": "IA migration \u2014 canonical URLs redirect to hall stubs; content inventory next",
     "blocked": [
-      "Participant backend (step 99)",
+      "Participant backend",
       "Spending charts",
-      "Halls L2-L4 depth"
+      "Search/glossary pages"
     ],
     "ready_public": [
-      "Front Door L1",
-      "Montana/Hawaii Hall 7",
+      "Home",
+      "Site map /explore/",
+      "Montana/Hawaii",
       "Mission Control",
-      "Phase Registry"
+      "Architecture blueprint"
     ],
-    "next": "Build #5 \u2014 Historical Foundation (Hall 1 Depth)"
+    "next": "Build #6 \u2014 Master Content Inventory"
   },
   "admin_only": {
-    "internal_notes": "Update phase-registry.json and mission-control.json every commit. Two trackers: 15-phase registry + 100-step BUILD_PLAN.",
+    "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
     "blocked_tasks": [
       "Supabase participant profiles",
       "FEC data pipeline",
@@ -1619,5 +1679,7 @@
     "signup_records_note": "View in Netlify Forms dashboard \u00e2\u20ac\u201d not yet integrated into MC"
   },
   "phase_registry": "/data/phase-registry.json",
-  "phase_registry_route": "/mission-control/phases.html"
+  "phase_registry_route": "/mission-control/phases.html",
+  "site_architecture": "/data/site-architecture.json",
+  "site_architecture_route": "/mission-control/architecture.html"
 }

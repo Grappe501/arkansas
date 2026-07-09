@@ -50,9 +50,10 @@ function renderActionHub() {
         <a href="/action/share.html" class="action-hub__link">↗ Share This Page</a>
         <a href="/action/share.html#invite" class="action-hub__link">👥 Invite Friends and Family</a>
         <a href="/action/join-network.html" class="action-hub__link">📋 Contact List Signup</a>
-        <a href="/action/draft-laws.html" class="action-hub__link">§ Draft a Law</a>
+        <a href="/action/draft-laws.html" class="action-hub__link">§ Draft a Model Law</a>
         <a href="/action/ballot-lab.html" class="action-hub__link">✓ Ballot Initiative Lab</a>
         <a href="/action/ideas.html" class="action-hub__link">💡 Community Ideas</a>
+        <a href="/action/contact-legislators.html" class="action-hub__link">🏛 Contact Legislators</a>
         <a href="/action/ideas.html" class="action-hub__link">? Ask a Question</a>
         <a href="/action/ideas.html#feedback" class="action-hub__link">💬 Give Feedback</a>
       </nav>

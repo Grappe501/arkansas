@@ -1,0 +1,128 @@
+/* Public site map — Build #5 */
+
+.site-map-intro {
+  margin-bottom: 2rem;
+}
+
+.site-map-journey {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 1rem 0 2rem;
+  padding: 1rem;
+  background: var(--surface-alt, #f4f6f8);
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.site-map-journey__stage {
+  background: #fff;
+  border: 1px solid var(--border, #dde3ea);
+  padding: 0.35rem 0.65rem;
+  border-radius: 4px;
+}
+
+.site-map-journey__arrow {
+  color: var(--text-muted, #5a6a7a);
+  align-self: center;
+}
+
+.site-map-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border, #dde3ea);
+}
+
+.site-map-section__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.site-map-section__header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.site-map-section__question {
+  font-style: italic;
+  color: var(--text-muted, #5a6a7a);
+  margin: 0 0 0.5rem;
+}
+
+.site-map-section__purpose {
+  color: var(--text-muted, #5a6a7a);
+  font-size: 0.9rem;
+  margin: 0 0 0.75rem;
+}
+
+.site-map-status {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.site-map-status--live { background: #e8f5e9; color: #2d5a3d; }
+.site-map-status--partial { background: #fff8e1; color: #6d4c00; }
+.site-map-status--stub { background: #e3f2fd; color: #1a4a6e; }
+.site-map-status--planned { background: #f3f4f6; color: #4b5563; }
+
+.site-map-subsections {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-map-subsections li {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.6rem;
+  background: #fff;
+  border: 1px solid var(--border, #dde3ea);
+  border-radius: 4px;
+}
+
+.site-map-subsections li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-map-subsections li a:hover {
+  color: var(--accent, #1a4a6e);
+  text-decoration: underline;
+}
+
+.site-map-secondary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.site-map-secondary a {
+  font-size: 0.85rem;
+  padding: 0.35rem 0.65rem;
+  background: var(--surface-alt, #f4f6f8);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--accent, #1a4a6e);
+}
+
+.site-map-secondary a[aria-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.site-map-cta {
+  margin-top: 2rem;
+  padding: 1rem;
+  background: var(--surface-alt, #f4f6f8);
+  border-radius: 8px;
+  font-size: 0.9rem;
+}

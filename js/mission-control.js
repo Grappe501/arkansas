@@ -1,5 +1,5 @@
 /**
- * Citizens United Mission Control v1.8.0 — Build #4
+ * Citizens United Mission Control v1.9.0 — Build #5
  */
 
 const isAdmin = () =>
@@ -231,8 +231,10 @@ async function initMissionControl() {
       </div>
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
-    <h2 class="mc-section-title">Master Phase Registry <a href="/mission-control/phases.html" class="mc-inline-link">Full registry →</a></h2>
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Site Architecture <a href="/mission-control/architecture.html" class="mc-inline-link">Full blueprint →</a></h2>
+    <p class="mc-bar-note">Build #5 — 10 primary sections, 82 subsections, canonical URLs. <a href="/explore/">Public site map</a></p>
+    <h2 class="mc-section-title">Master Phase Registry <a href="/mission-control/phases.html" class="mc-inline-link">Full registry →</a></h2>
     ${renderPhases(data.phases, true)}
     <h2 class="mc-section-title">Step-Level Tracking</h2>
     <div class="mc-card">${renderSteps(data.steps)}</div>
@@ -303,6 +305,99 @@ async function initBuildDetail() {
     <p><a href="/mission-control/">← Mission Control</a></p>`;
 }
 
+function renderArchitectureSection(section) {
+  const subs = (section.subsections || []).map(s => `
+    <li><span class="mc-arch-status mc-arch-status--${s.status}">${s.status}</span> ${s.title}
+      <code class="mc-arch-slug">${section.canonical_url}/${s.slug}</code></li>`).join('');
+  return `
+    <div class="mc-phase" data-phase>
+      <button type="button" class="mc-phase__header" aria-expanded="false">
+        <span class="mc-phase__toggle">▶</span>
+        <span class="mc-phase__title">${section.title}</span>
+        <span class="mc-phase__status mc-phase__status--${section.status === 'live' ? 'live' : section.status === 'partial' ? 'building' : 'planning'}">${section.status}</span>
+        <code class="mc-arch-canonical">${section.canonical_url}</code>
+      </button>
+      <div class="mc-phase__body" hidden>
+        ${section.question ? `<p class="mc-phase-mission"><strong>Q:</strong> ${section.question}</p>` : ''}
+        <p class="mc-bar-note">${section.purpose}</p>
+        <p class="mc-bar-note"><strong>Current:</strong> <a href="${section.current_url}">${section.current_url}</a> · Registry Phase ${section.registry_phase}</p>
+        ${subs ? `<h4 class="mc-phase-sub">Subsections (${section.subsections.length})</h4><ul class="mc-deliverables mc-arch-list">${subs}</ul>` : ''}
+      </div>
+    </div>`;
+}
+
+async function initArchitectureBlueprint() {
+  const root = document.getElementById('mc-architecture-root');
+  if (!root) return;
+
+  const [archRes, mcRes] = await Promise.all([
+    fetch('/data/site-architecture.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const arch = await archRes.json();
+  const mc = await mcRes.json();
+  const counts = arch.destination_counts;
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Site Architecture</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #5 · ${arch.title}</p>
+      <h1>Master Site Architecture</h1>
+      <p class="mc-header__question">${arch.design_philosophy.architecture_principle}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Primary Sections</div><div class="mc-stat__value">${counts.primary_sections}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Subsections</div><div class="mc-stat__value">${counts.primary_subsections}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Live Now</div><div class="mc-stat__value">${counts.live_now}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Planned</div><div class="mc-stat__value">${counts.planned_subsections}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">IA Completion</div><div class="mc-stat__value">${mc.progress_bars.find(b => b.id === 'ia')?.value ?? '—'}%</div></div>
+    </div>
+    <section class="mc-card">
+      <h3>Design Philosophy</h3>
+      <p class="mc-bar-note">${arch.design_philosophy.navigation_rule}</p>
+      <ul class="mc-deliverables">${arch.design_philosophy.principles.map(p => `<li>${p}</li>`).join('')}</ul>
+    </section>
+    <section class="mc-card">
+      <h3>Reader Journey</h3>
+      <div class="mc-dep-map">
+        ${arch.reader_journey.map((s, i) => `
+          <span class="mc-dep-map__node"><span class="mc-dep-map__num">${s.stage}</span><span class="mc-dep-map__label">${s.title}</span></span>
+          ${i < arch.reader_journey.length - 1 ? '<span class="mc-dep-map__arrow">→</span>' : ''}`).join('')}
+      </div>
+    </section>
+    <section class="mc-card">
+      <h3>Cross-Linking (required on every page)</h3>
+      <p class="mc-bar-note">${arch.cross_linking.rule}</p>
+      <ul class="mc-deliverables">${arch.cross_linking.required_on_every_page.map(c => `<li>${c}</li>`).join('')}</ul>
+    </section>
+    <section class="mc-card">
+      <h3>Search Strategy</h3>
+      <p class="mc-bar-note">${arch.search_strategy.implementation}</p>
+      <ul class="mc-deliverables">${arch.search_strategy.modes.map(m => `<li>${m}</li>`).join('')}</ul>
+    </section>
+    <h2 class="mc-section-title">Primary Navigation <a href="/explore/" class="mc-inline-link">Public site map →</a></h2>
+    ${arch.primary_navigation.map(renderArchitectureSection).join('')}
+    <h2 class="mc-section-title">Secondary Navigation</h2>
+    <div class="mc-card">
+      <ul class="mc-deliverables">${arch.secondary_navigation.map(n => `
+        <li>${n.title} — <code>${n.canonical_url}</code> <span class="mc-arch-status mc-arch-status--${n.status}">${n.status}</span></li>`).join('')}</ul>
+    </div>
+    <h2 class="mc-section-title">Action Hub Actions</h2>
+    <div class="mc-card">
+      <p class="mc-bar-note">${arch.action_hub.principle}</p>
+      <ul class="mc-deliverables">${arch.action_hub.actions.map(a => `
+        <li><a href="${a.url}">${a.title}</a> — ${a.reader_stage} <span class="mc-arch-status mc-arch-status--${a.status}">${a.status}</span></li>`).join('')}</ul>
+    </div>
+    <p class="mc-bar-note">
+      <a href="/docs/SITE_ARCHITECTURE.md">SITE_ARCHITECTURE.md</a> ·
+      <a href="/data/site-architecture.json">JSON</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initPhaseToggles();
+  initDevConsole(mc);
+}
+
 async function initPhaseRegistryPage() {
   const root = document.getElementById('mc-phases-root');
   if (!root) return;
@@ -342,4 +437,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
   initPhaseRegistryPage();
+  initArchitectureBlueprint();
 });

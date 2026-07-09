@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.9.0] - 2026-07-09 — Build #5 Complete
+
+### Build #5: Master Site Architecture & Navigation Blueprint
+- **Master IA v1.0** — 10 primary sections, 82 subsections, reader journey, cross-linking standards
+- `data/site-architecture.json` + `docs/SITE_ARCHITECTURE.md`
+- Public site map at `/explore/` · Team blueprint at `/mission-control/architecture.html`
+- Canonical URL redirects (`/the-story`, `/the-case`, `/teach`, `/sources`, etc.)
+- Question-based primary navigation · Discover → Lead ladder aligned
+
 ## [1.8.0] - 2026-07-09 — Build #4 Complete
 
 ### Build #4: Master Phase Registry v1.0

@@ -1,5 +1,5 @@
 /**
- * Citizens Facts — Shared layout v1.4.0
+ * Citizens Facts — Shared layout v1.9.0
  */
 
 const SITE_CSS = '/css/action-hub.css';
@@ -21,24 +21,28 @@ function ensureActionHubAssets() {
 }
 
 function renderSiteHeader(activePath) {
-  const hallsActive = activePath && activePath.startsWith('/halls');
-  const educateActive = activePath && (activePath.startsWith('/educate') || activePath.startsWith('/teach'));
-  const libraryActive = activePath && activePath.startsWith('/library');
-  const actionActive = activePath && activePath.startsWith('/action');
+  const exploreActive = activePath && activePath.startsWith('/explore');
+  const teachActive = activePath && (activePath.startsWith('/educate') || activePath.startsWith('/teach'));
+  const sourcesActive = activePath && (activePath.startsWith('/library') || activePath.startsWith('/sources'));
+  const storyActive = activePath && (activePath.startsWith('/the-story') || activePath.includes('story-before'));
+  const caseActive = activePath && (activePath.startsWith('/the-case') || activePath.includes('the-case'));
+  const reformActive = activePath && (activePath.startsWith('/reform') || activePath.includes('reform') || activePath.includes('montana-hawaii'));
 
   return `
   <header class="site-header">
     <div class="site-header__inner">
       <div>
         <h1 class="site-title"><a href="/">Citizens Facts</a></h1>
-        <p class="site-tagline">Learn → Participate → Organize → Build Solutions</p>
+        <p class="site-tagline">Discover → Understand → Explore → Teach → Lead</p>
       </div>
       <nav class="site-nav" aria-label="Main navigation">
-        <a href="/"${activePath === '/' || activePath === '/index.html' ? ' aria-current="page"' : ''}>Front Door</a>
-        <a href="/halls/"${hallsActive ? ' aria-current="page"' : ''}>Halls</a>
-        <a href="/library/"${libraryActive ? ' aria-current="page"' : ''}>Library</a>
-        <a href="/educate/"${educateActive ? ' aria-current="page"' : ''}>Teach</a>
-        <a href="/action/share.html"${actionActive ? ' aria-current="page"' : ''}>Organize</a>
+        <a href="/"${activePath === '/' || activePath === '/index.html' ? ' aria-current="page"' : ''}>Home</a>
+        <a href="/the-story"${storyActive ? ' aria-current="page"' : ''}>The Story</a>
+        <a href="/the-case"${caseActive ? ' aria-current="page"' : ''}>The Case</a>
+        <a href="/reform"${reformActive ? ' aria-current="page"' : ''}>Reform</a>
+        <a href="/teach"${teachActive ? ' aria-current="page"' : ''}>Teach</a>
+        <a href="/sources"${sourcesActive ? ' aria-current="page"' : ''}>Sources</a>
+        <a href="/explore/"${exploreActive ? ' aria-current="page"' : ''}>Explore</a>
       </nav>
     </div>
   </header>`;
@@ -48,9 +52,11 @@ function renderSiteFooter() {
   return `
   <footer class="site-footer">
     <p>
-      Citizens Facts · v<span data-site-version>1.8.0</span> ·
+      Citizens Facts · v<span data-site-version>1.9.0</span> ·
+      <a href="/explore/">Site Map</a> ·
       <a href="/mission-control/">Mission Control</a> ·
       <a href="/mission-control/phases.html">Phase Registry</a> ·
+      <a href="/mission-control/architecture.html">Architecture</a> ·
       <a href="/builds/">Builds</a> ·
       <a href="/BUILD_PLAN.md">Build Plan</a> ·
       <a href="/docs/CIVIC_ACTION.md">Civic Action</a> ·

@@ -1,0 +1,353 @@
+{
+  "version": "1.0",
+  "build": 5,
+  "updated": "2026-07-09",
+  "title": "Master Information Architecture v1.0",
+  "route": "/mission-control/architecture.html",
+  "public_map": "/explore/",
+  "data_file": "/data/site-architecture.json",
+  "design_philosophy": {
+    "model": "layered exploration",
+    "principles": [
+      "Learn the basics in minutes",
+      "Drill down into increasing levels of detail",
+      "Return to higher-level summaries at any time",
+      "Follow natural connections between topics",
+      "Never feel lost"
+    ],
+    "navigation_rule": "Navigation should answer questions rather than expose technical categories.",
+    "architecture_principle": "The platform should never feel like a collection of articles. It should feel like exploring a living institution dedicated to helping citizens understand one of the most consequential Supreme Court decisions in modern American history."
+  },
+  "reader_journey": [
+    { "stage": 1, "id": "discover", "title": "Discover", "description": "Learn why Citizens United still matters." },
+    { "stage": 2, "id": "understand", "title": "Understand", "description": "Grasp what happened and what changed." },
+    { "stage": 3, "id": "explore", "title": "Explore", "description": "Drill into history, law, data, and sources." },
+    { "stage": 4, "id": "evaluate", "title": "Evaluate", "description": "Weigh evidence and strongest arguments." },
+    { "stage": 5, "id": "discuss", "title": "Discuss", "description": "Engage debate and perspectives fairly." },
+    { "stage": 6, "id": "teach", "title": "Teach", "description": "Prepare to educate your community." },
+    { "stage": 7, "id": "lead", "title": "Lead", "description": "Become a local education leader." }
+  ],
+  "depth_levels": [
+    { "id": "L1", "label": "1 minute", "description": "Plain English overview — return here anytime" },
+    { "id": "L2", "label": "5 minutes", "description": "Reader-friendly article" },
+    { "id": "L3", "label": "20 minutes", "description": "Detailed explainer with charts" },
+    { "id": "L4", "label": "Research file", "description": "Sources, cases, data, citations" }
+  ],
+  "primary_navigation": [
+    {
+      "id": "home",
+      "title": "Home",
+      "question": null,
+      "purpose": "Introduce the issue and explain why Citizens United still matters.",
+      "canonical_url": "/",
+      "current_url": "/",
+      "status": "live",
+      "registry_phase": 2,
+      "reader_stage": "discover",
+      "sections": [
+        { "id": "hero", "title": "Hero", "status": "live" },
+        { "id": "what-changed", "title": "What Changed?", "status": "live" },
+        { "id": "why-it-matters", "title": "Why It Matters", "status": "live" },
+        { "id": "timeline-preview", "title": "Interactive Timeline Preview", "status": "partial" },
+        { "id": "money-preview", "title": "Money in Politics Preview", "status": "partial" },
+        { "id": "reform-preview", "title": "Current Reform Preview", "status": "partial" },
+        { "id": "leadership-invitation", "title": "Leadership Invitation", "status": "live" }
+      ]
+    },
+    {
+      "id": "the-story",
+      "title": "The Story",
+      "question": "How did we get here?",
+      "purpose": "Historical narrative leading to Citizens United.",
+      "canonical_url": "/the-story",
+      "current_url": "/halls/story-before.html",
+      "legacy_urls": ["/halls/story-before.html"],
+      "status": "stub",
+      "registry_phase": 3,
+      "reader_stage": "explore",
+      "hall_id": "hall-1",
+      "subsections": [
+        { "id": "before-laws", "title": "America Before Campaign Finance Laws", "slug": "before-laws", "status": "planned" },
+        { "id": "progressive-era", "title": "Progressive Era", "slug": "progressive-era", "status": "planned" },
+        { "id": "early-federal-laws", "title": "Early Federal Laws", "slug": "early-federal-laws", "status": "planned" },
+        { "id": "watergate", "title": "Watergate", "slug": "watergate", "status": "planned" },
+        { "id": "campaign-finance-reform", "title": "Campaign Finance Reform", "slug": "campaign-finance-reform", "status": "planned" },
+        { "id": "major-scotus-cases", "title": "Major Supreme Court Cases", "slug": "major-scotus-cases", "status": "planned" },
+        { "id": "road-to-cu", "title": "The Road to Citizens United", "slug": "road-to-citizens-united", "status": "planned" }
+      ]
+    },
+    {
+      "id": "the-case",
+      "title": "The Case",
+      "question": "What actually happened?",
+      "purpose": "Explain Citizens United v. FEC thoroughly and accurately.",
+      "canonical_url": "/the-case",
+      "current_url": "/halls/the-case.html",
+      "legacy_urls": ["/halls/the-case.html"],
+      "status": "stub",
+      "registry_phase": 4,
+      "reader_stage": "understand",
+      "hall_id": "hall-2",
+      "subsections": [
+        { "id": "who-was-cu", "title": "Who was Citizens United?", "slug": "who-was-citizens-united", "status": "planned" },
+        { "id": "hillary-movie", "title": "Hillary: The Movie", "slug": "hillary-the-movie", "status": "planned" },
+        { "id": "fec", "title": "The Federal Election Commission", "slug": "fec", "status": "planned" },
+        { "id": "lower-courts", "title": "Lower Courts", "slug": "lower-courts", "status": "planned" },
+        { "id": "supreme-court", "title": "Supreme Court", "slug": "supreme-court", "status": "planned" },
+        { "id": "oral-arguments", "title": "Oral Arguments", "slug": "oral-arguments", "status": "planned" },
+        { "id": "majority", "title": "Majority Opinion", "slug": "majority-opinion", "status": "planned" },
+        { "id": "dissents", "title": "Dissents", "slug": "dissents", "status": "planned" },
+        { "id": "timeline", "title": "Timeline", "slug": "timeline", "status": "planned" },
+        { "id": "misunderstood", "title": "Frequently Misunderstood Facts", "slug": "misunderstood-facts", "status": "planned" }
+      ]
+    },
+    {
+      "id": "the-constitution",
+      "title": "The Constitution",
+      "question": "Why did the Court rule this way?",
+      "purpose": "Teach constitutional concepts underlying the decision.",
+      "canonical_url": "/the-constitution",
+      "current_url": "/halls/what-court-decided.html",
+      "legacy_urls": ["/halls/what-court-decided.html"],
+      "status": "stub",
+      "registry_phase": 5,
+      "reader_stage": "understand",
+      "subsections": [
+        { "id": "first-amendment", "title": "First Amendment", "slug": "first-amendment", "status": "planned" },
+        { "id": "political-speech", "title": "Political Speech", "slug": "political-speech", "status": "planned" },
+        { "id": "corporate-speech", "title": "Corporate Speech", "slug": "corporate-speech", "status": "planned" },
+        { "id": "association", "title": "Freedom of Association", "slug": "freedom-of-association", "status": "planned" },
+        { "id": "judicial-review", "title": "Judicial Review", "slug": "judicial-review", "status": "planned" },
+        { "id": "strict-scrutiny", "title": "Strict Scrutiny", "slug": "strict-scrutiny", "status": "planned" },
+        { "id": "interpretation", "title": "Constitutional Interpretation", "slug": "constitutional-interpretation", "status": "planned" },
+        { "id": "prior-cases", "title": "Prior Cases", "slug": "prior-cases", "status": "planned" }
+      ]
+    },
+    {
+      "id": "the-impact",
+      "title": "The Impact",
+      "question": "What changed after 2010?",
+      "purpose": "Document measurable changes after the decision.",
+      "canonical_url": "/the-impact",
+      "current_url": "/halls/after-2010.html",
+      "legacy_urls": ["/halls/after-2010.html"],
+      "status": "stub",
+      "registry_phase": 6,
+      "reader_stage": "explore",
+      "hall_id": "hall-3",
+      "subsections": [
+        { "id": "election-spending", "title": "Election Spending", "slug": "election-spending", "status": "planned" },
+        { "id": "super-pacs", "title": "Super PACs", "slug": "super-pacs", "status": "planned" },
+        { "id": "independent-expenditures", "title": "Independent Expenditures", "slug": "independent-expenditures", "status": "planned" },
+        { "id": "dark-money", "title": "Dark Money", "slug": "dark-money", "status": "planned" },
+        { "id": "donor-trends", "title": "Donor Trends", "slug": "donor-trends", "status": "planned" },
+        { "id": "federal-elections", "title": "Federal Elections", "slug": "federal-elections", "status": "planned" },
+        { "id": "state-elections", "title": "State Elections", "slug": "state-elections", "status": "planned" },
+        { "id": "ballot-measures", "title": "Ballot Measures", "slug": "ballot-measures", "status": "planned" },
+        { "id": "judicial-elections", "title": "Judicial Elections", "slug": "judicial-elections", "status": "planned" }
+      ]
+    },
+    {
+      "id": "follow-the-money",
+      "title": "Follow the Money",
+      "question": "Where does political money actually go?",
+      "purpose": "Trace political money through every channel.",
+      "canonical_url": "/follow-the-money",
+      "current_url": "/halls/money-map.html",
+      "legacy_urls": ["/halls/money-map.html"],
+      "status": "stub",
+      "registry_phase": 6,
+      "reader_stage": "explore",
+      "hall_id": "hall-4",
+      "subsections": [
+        { "id": "individuals", "title": "Individuals", "slug": "individuals", "status": "planned" },
+        { "id": "pacs", "title": "PACs", "slug": "pacs", "status": "planned" },
+        { "id": "super-pacs", "title": "Super PACs", "slug": "super-pacs", "status": "planned" },
+        { "id": "parties", "title": "Political Parties", "slug": "political-parties", "status": "planned" },
+        { "id": "independent-expenditures", "title": "Independent Expenditures", "slug": "independent-expenditures", "status": "planned" },
+        { "id": "nonprofits", "title": "Nonprofits", "slug": "nonprofits", "status": "planned" },
+        { "id": "disclosure", "title": "Disclosure", "slug": "disclosure", "status": "planned" },
+        { "id": "money-flow", "title": "Money Flow Diagrams", "slug": "money-flow-diagrams", "status": "planned" }
+      ]
+    },
+    {
+      "id": "the-debate",
+      "title": "The Debate",
+      "question": "Why do intelligent people disagree?",
+      "purpose": "Present major viewpoints fairly and accurately.",
+      "canonical_url": "/the-debate",
+      "current_url": "/halls/debate.html",
+      "legacy_urls": ["/halls/debate.html"],
+      "status": "stub",
+      "registry_phase": 8,
+      "reader_stage": "discuss",
+      "hall_id": "hall-5",
+      "subsections": [
+        { "id": "supporting", "title": "Supporting Arguments", "slug": "supporting-arguments", "status": "planned" },
+        { "id": "opposing", "title": "Opposing Arguments", "slug": "opposing-arguments", "status": "planned" },
+        { "id": "academic", "title": "Academic Perspectives", "slug": "academic-perspectives", "status": "planned" },
+        { "id": "faq", "title": "Frequently Asked Questions", "slug": "faq", "status": "planned" },
+        { "id": "misconceptions", "title": "Common Misconceptions", "slug": "misconceptions", "status": "planned" }
+      ]
+    },
+    {
+      "id": "reform",
+      "title": "Reform",
+      "question": "What are people trying to do now?",
+      "purpose": "Explain modern responses to Citizens United.",
+      "canonical_url": "/reform",
+      "current_url": "/halls/reform.html",
+      "legacy_urls": ["/halls/reform.html", "/halls/montana-hawaii.html"],
+      "status": "partial",
+      "registry_phase": 9,
+      "reader_stage": "evaluate",
+      "hall_id": "hall-6",
+      "subsections": [
+        { "id": "amendments", "title": "Constitutional Amendments", "slug": "constitutional-amendments", "status": "planned" },
+        { "id": "federal-legislation", "title": "Federal Legislation", "slug": "federal-legislation", "status": "planned" },
+        { "id": "state-legislation", "title": "State Legislation", "slug": "state-legislation", "status": "planned" },
+        { "id": "montana", "title": "Montana", "slug": "montana", "status": "live", "url": "/halls/montana-hawaii.html#montana" },
+        { "id": "hawaii", "title": "Hawaii", "slug": "hawaii", "status": "live", "url": "/halls/montana-hawaii.html#hawaii" },
+        { "id": "other-states", "title": "Other State Efforts", "slug": "other-state-efforts", "status": "planned" },
+        { "id": "court-challenges", "title": "Court Challenges", "slug": "court-challenges", "status": "planned" },
+        { "id": "future", "title": "Future Possibilities", "slug": "future-possibilities", "status": "planned" }
+      ]
+    },
+    {
+      "id": "teach",
+      "title": "Teach Your Community",
+      "question": "How can I help educate others?",
+      "purpose": "Equip visitors to educate others locally.",
+      "canonical_url": "/teach",
+      "current_url": "/educate/",
+      "legacy_urls": ["/educate/"],
+      "status": "partial",
+      "registry_phase": 11,
+      "reader_stage": "teach",
+      "subsections": [
+        { "id": "start-here", "title": "Start Here", "slug": "start-here", "status": "live", "url": "/educate/" },
+        { "id": "community-conversation", "title": "Host a Community Conversation", "slug": "community-conversation", "status": "planned" },
+        { "id": "classroom", "title": "Classroom Resources", "slug": "classroom-resources", "status": "planned" },
+        { "id": "civic-club", "title": "Civic Club Toolkit", "slug": "civic-club-toolkit", "status": "planned" },
+        { "id": "faith", "title": "Faith Community Toolkit", "slug": "faith-community-toolkit", "status": "planned" },
+        { "id": "campus", "title": "Campus Toolkit", "slug": "campus-toolkit", "status": "planned" },
+        { "id": "slides", "title": "Presentation Slides", "slug": "presentation-slides", "status": "planned" },
+        { "id": "facilitator", "title": "Facilitator Guide", "slug": "facilitator-guide", "status": "planned" }
+      ]
+    },
+    {
+      "id": "sources",
+      "title": "Source Library",
+      "question": "Where did this information come from?",
+      "purpose": "Definitive evidence archive supporting the platform.",
+      "canonical_url": "/sources",
+      "current_url": "/library/",
+      "legacy_urls": ["/library/"],
+      "status": "partial",
+      "registry_phase": 13,
+      "reader_stage": "explore",
+      "subsections": [
+        { "id": "opinions", "title": "Supreme Court Opinions", "slug": "supreme-court-opinions", "status": "planned" },
+        { "id": "oral-args", "title": "Oral Argument Transcripts", "slug": "oral-argument-transcripts", "status": "planned" },
+        { "id": "briefs", "title": "Briefs", "slug": "briefs", "status": "planned" },
+        { "id": "fec", "title": "FEC Documents", "slug": "fec-documents", "status": "planned" },
+        { "id": "academic", "title": "Academic Research", "slug": "academic-research", "status": "planned" },
+        { "id": "congress", "title": "Congressional Reports", "slug": "congressional-reports", "status": "planned" },
+        { "id": "historical-laws", "title": "Historical Laws", "slug": "historical-laws", "status": "planned" },
+        { "id": "spending-data", "title": "Spending Data", "slug": "spending-data", "status": "planned" },
+        { "id": "books", "title": "Books", "slug": "books", "status": "planned" },
+        { "id": "multimedia", "title": "Multimedia", "slug": "multimedia", "status": "planned" }
+      ]
+    }
+  ],
+  "secondary_navigation": [
+    { "id": "timeline", "title": "Timeline", "canonical_url": "/timeline", "status": "planned", "registry_phase": 7 },
+    { "id": "search", "title": "Search", "canonical_url": "/search", "status": "planned", "registry_phase": 2 },
+    { "id": "glossary", "title": "Glossary", "canonical_url": "/glossary", "status": "planned", "registry_phase": 2 },
+    { "id": "maps", "title": "Interactive Maps", "canonical_url": "/maps", "status": "planned", "registry_phase": 7 },
+    { "id": "faq", "title": "Frequently Asked Questions", "canonical_url": "/faq", "status": "planned", "registry_phase": 8 },
+    { "id": "research", "title": "Latest Research", "canonical_url": "/research", "status": "planned", "registry_phase": 13 },
+    { "id": "mission-control", "title": "Mission Control", "canonical_url": "/mission-control", "current_url": "/mission-control/", "status": "live" },
+    { "id": "site-map", "title": "Site Map", "canonical_url": "/explore", "current_url": "/explore/", "status": "live" }
+  ],
+  "action_hub": {
+    "principle": "Intelligently highlight the next recommended action based on visitor progress.",
+    "actions": [
+      { "id": "education-leader", "title": "Become an Education Leader", "url": "/educate/", "reader_stage": "lead", "status": "live" },
+      { "id": "contact-network", "title": "Join the Contact Network", "url": "/action/join-network.html", "reader_stage": "lead", "status": "live" },
+      { "id": "share", "title": "Share with Friends & Family", "url": "/action/share.html", "reader_stage": "teach", "status": "live" },
+      { "id": "invite", "title": "Invite Someone to Learn", "url": "/action/share.html#invite", "reader_stage": "teach", "status": "live" },
+      { "id": "model-law", "title": "Draft a Model Law", "url": "/action/draft-laws.html", "reader_stage": "lead", "status": "stub" },
+      { "id": "ballot-lab", "title": "Ballot Initiative Lab", "url": "/action/ballot-lab.html", "reader_stage": "lead", "status": "stub" },
+      { "id": "community-ideas", "title": "Community Ideas", "url": "/action/ideas.html", "reader_stage": "discuss", "status": "live" },
+      { "id": "legislators", "title": "Contact Legislators", "url": "/action/contact-legislators.html", "reader_stage": "lead", "status": "stub" },
+      { "id": "ask", "title": "Ask a Question", "url": "/action/ideas.html", "reader_stage": "discuss", "status": "live" },
+      { "id": "feedback", "title": "Give Feedback", "url": "/action/ideas.html#feedback", "reader_stage": "discuss", "status": "live" }
+    ]
+  },
+  "cross_linking": {
+    "required_on_every_page": [
+      "Related Topics",
+      "Previous Topic",
+      "Next Topic",
+      "Go Deeper",
+      "Return to Overview",
+      "Primary Sources",
+      "Share This Page",
+      "Take Action"
+    ],
+    "rule": "No page should become a dead end."
+  },
+  "search_strategy": {
+    "modes": [
+      "Global keyword search",
+      "Topic search",
+      "Timeline search",
+      "Supreme Court case search",
+      "Historical event search",
+      "Spending data search",
+      "State reform search",
+      "Source library search",
+      "Glossary search"
+    ],
+    "status": "planned",
+    "implementation": "Build #6+ — static index first, live search later"
+  },
+  "url_standards": {
+    "rules": [
+      "Short, descriptive, and stable",
+      "Deep pages extend naturally beneath parent section",
+      "Canonical URLs are the target; legacy hall URLs redirect during migration"
+    ],
+    "pattern_examples": [
+      "/the-story/progressive-era",
+      "/the-case/oral-arguments",
+      "/reform/montana",
+      "/sources/supreme-court-opinions"
+    ],
+    "canonical_primary": [
+      "/",
+      "/the-story",
+      "/the-case",
+      "/the-constitution",
+      "/the-impact",
+      "/follow-the-money",
+      "/the-debate",
+      "/reform",
+      "/teach",
+      "/sources",
+      "/mission-control"
+    ]
+  },
+  "destination_counts": {
+    "primary_sections": 10,
+    "primary_subsections": 82,
+    "secondary_nav": 8,
+    "action_hub_actions": 10,
+    "total_planned_destinations": 100,
+    "live_now": 6,
+    "partial": 3,
+    "stub": 7,
+    "planned_subsections": 76
+  }
+}

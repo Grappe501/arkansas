@@ -50,8 +50,15 @@
       "blocked": 0,
       "updated": "2026-07-09",
       "notes": "Constitution, Mission Control, and Phase Registry locked. Master Build Plan documented but step tracking early.",
-      "routes": ["/builds/", "/mission-control/", "/docs/CONSTITUTION.md"],
-      "build_plan_phases": [0, 1]
+      "routes": [
+        "/builds/",
+        "/mission-control/",
+        "/docs/CONSTITUTION.md"
+      ],
+      "build_plan_phases": [
+        0,
+        1
+      ]
     },
     {
       "id": 2,
@@ -69,18 +76,31 @@
         "Reader pathways"
       ],
       "completion_criteria": "Every page has a defined place in the system.",
-      "dependencies": ["Foundation & Governance"],
-      "depends_on_phases": [1],
+      "dependencies": [
+        "Foundation & Governance"
+      ],
+      "depends_on_phases": [
+        1
+      ],
       "status": "building",
-      "completion": 12,
+      "completion": 38,
       "steps_total": 12,
-      "steps_complete": 2,
-      "active_step": "Search strategy",
+      "steps_complete": 5,
+      "active_step": "Content inventory (Build #6)",
       "blocked": 0,
       "updated": "2026-07-09",
-      "notes": "Hall routes and depth model exist. Formal IA doc and search not started.",
-      "routes": ["/", "/halls/", "/data/knowledge.json"],
-      "build_plan_phases": [2, 3, 6]
+      "notes": "Master IA v1.0 locked. Site map, URL strategy, reader pathways defined. Search/glossary planned.",
+      "routes": [
+        "/",
+        "/explore/",
+        "/mission-control/architecture.html",
+        "/data/site-architecture.json"
+      ],
+      "build_plan_phases": [
+        2,
+        3,
+        6
+      ]
     },
     {
       "id": 3,
@@ -97,8 +117,12 @@
         "Interactive chronology"
       ],
       "completion_criteria": "Readers understand the historical path to the 2010 decision.",
-      "dependencies": ["Information Architecture"],
-      "depends_on_phases": [2],
+      "dependencies": [
+        "Information Architecture"
+      ],
+      "depends_on_phases": [
+        2
+      ],
       "status": "planning",
       "completion": 5,
       "steps_total": 8,
@@ -107,8 +131,12 @@
       "blocked": 0,
       "updated": "2026-07-09",
       "notes": "Hall 1 (Before Citizens United) is L1 stub only. Timeline preview on homepage.",
-      "routes": ["/halls/story-before.html"],
-      "build_plan_phases": [4]
+      "routes": [
+        "/halls/story-before.html"
+      ],
+      "build_plan_phases": [
+        4
+      ]
     },
     {
       "id": 4,
@@ -127,8 +155,12 @@
         "Case glossary"
       ],
       "completion_criteria": "Readers can accurately explain the case to someone else.",
-      "dependencies": ["Historical Foundation"],
-      "depends_on_phases": [3],
+      "dependencies": [
+        "Historical Foundation"
+      ],
+      "depends_on_phases": [
+        3
+      ],
       "status": "planning",
       "completion": 5,
       "steps_total": 9,
@@ -137,8 +169,12 @@
       "blocked": 0,
       "updated": "2026-07-09",
       "notes": "Hall 2 route exists. No oral argument or opinion walkthrough yet.",
-      "routes": ["/halls/the-case.html"],
-      "build_plan_phases": [4]
+      "routes": [
+        "/halls/the-case.html"
+      ],
+      "build_plan_phases": [
+        4
+      ]
     },
     {
       "id": 5,
@@ -155,8 +191,12 @@
         "Constitutional glossary"
       ],
       "completion_criteria": "Readers understand the legal reasoning without needing legal training.",
-      "dependencies": ["The Case"],
-      "depends_on_phases": [4],
+      "dependencies": [
+        "The Case"
+      ],
+      "depends_on_phases": [
+        4
+      ],
       "status": "not_started",
       "completion": 3,
       "steps_total": 7,
@@ -165,8 +205,12 @@
       "blocked": 0,
       "updated": "2026-07-09",
       "notes": "Hall 3 L1 stub. Precedent chain not written.",
-      "routes": ["/halls/what-court-decided.html"],
-      "build_plan_phases": [4]
+      "routes": [
+        "/halls/what-court-decided.html"
+      ],
+      "build_plan_phases": [
+        4
+      ]
     },
     {
       "id": 6,
@@ -183,8 +227,12 @@
         "State-level impacts"
       ],
       "completion_criteria": "The platform clearly distinguishes documented changes from interpretation.",
-      "dependencies": ["Constitutional Principles"],
-      "depends_on_phases": [5],
+      "dependencies": [
+        "Constitutional Principles"
+      ],
+      "depends_on_phases": [
+        5
+      ],
       "status": "not_started",
       "completion": 2,
       "steps_total": 7,
@@ -192,9 +240,15 @@
       "active_step": null,
       "blocked": 0,
       "updated": "2026-07-09",
-      "notes": "Halls 4–5 are stubs. No FEC/spending data integrated.",
-      "routes": ["/halls/after-2010.html", "/halls/money-map.html"],
-      "build_plan_phases": [4, 5]
+      "notes": "Halls 4\u00e2\u20ac\u201c5 are stubs. No FEC/spending data integrated.",
+      "routes": [
+        "/halls/after-2010.html",
+        "/halls/money-map.html"
+      ],
+      "build_plan_phases": [
+        4,
+        5
+      ]
     },
     {
       "id": 7,
@@ -211,8 +265,12 @@
         "Infographics"
       ],
       "completion_criteria": "Visualizations help readers understand rather than decorate the content.",
-      "dependencies": ["Impact Analysis"],
-      "depends_on_phases": [6],
+      "dependencies": [
+        "Impact Analysis"
+      ],
+      "depends_on_phases": [
+        6
+      ],
       "status": "not_started",
       "completion": 0,
       "steps_total": 7,
@@ -221,8 +279,12 @@
       "blocked": 0,
       "updated": "2026-07-09",
       "notes": "Chart definitions in inventories only. No static or interactive charts.",
-      "routes": ["/data/inventories/spending.json"],
-      "build_plan_phases": [5]
+      "routes": [
+        "/data/inventories/spending.json"
+      ],
+      "build_plan_phases": [
+        5
+      ]
     },
     {
       "id": 8,
@@ -238,8 +300,12 @@
         "Myth vs. fact resources"
       ],
       "completion_criteria": "Readers can explain both the strongest supporting and opposing arguments.",
-      "dependencies": ["Data & Visualization"],
-      "depends_on_phases": [7],
+      "dependencies": [
+        "Data & Visualization"
+      ],
+      "depends_on_phases": [
+        7
+      ],
       "status": "not_started",
       "completion": 2,
       "steps_total": 6,
@@ -248,8 +314,12 @@
       "blocked": 0,
       "updated": "2026-07-09",
       "notes": "Debate hall L1 only. Opposition/supporter research not collected.",
-      "routes": ["/halls/debate.html"],
-      "build_plan_phases": [4]
+      "routes": [
+        "/halls/debate.html"
+      ],
+      "build_plan_phases": [
+        4
+      ]
     },
     {
       "id": 9,
@@ -267,8 +337,12 @@
         "Future outlook"
       ],
       "completion_criteria": "Readers understand the range of current reform efforts and their legal context.",
-      "dependencies": ["Debate & Perspectives"],
-      "depends_on_phases": [8],
+      "dependencies": [
+        "Debate & Perspectives"
+      ],
+      "depends_on_phases": [
+        8
+      ],
       "status": "building",
       "completion": 18,
       "steps_total": 8,
@@ -277,8 +351,13 @@
       "blocked": 0,
       "updated": "2026-07-09",
       "notes": "Montana I-194 and Hawaii Act 11 live in Hall 7. Reform hall mostly stub.",
-      "routes": ["/halls/reform.html", "/halls/montana-hawaii.html"],
-      "build_plan_phases": [4]
+      "routes": [
+        "/halls/reform.html",
+        "/halls/montana-hawaii.html"
+      ],
+      "build_plan_phases": [
+        4
+      ]
     },
     {
       "id": 10,
@@ -297,8 +376,12 @@
         "Volunteer pathways"
       ],
       "completion_criteria": "Visitors can easily transition from learning to participating in civic education.",
-      "dependencies": ["Reform & Current Developments"],
-      "depends_on_phases": [9],
+      "dependencies": [
+        "Reform & Current Developments"
+      ],
+      "depends_on_phases": [
+        9
+      ],
       "status": "building",
       "completion": 6,
       "steps_total": 12,
@@ -307,8 +390,14 @@
       "blocked": 1,
       "updated": "2026-07-09",
       "notes": "Action Hub and forms live. Workspaces stubbed. Participant backend blocked.",
-      "routes": ["/action/", "/js/action-hub.js"],
-      "build_plan_phases": [7, 8]
+      "routes": [
+        "/action/",
+        "/js/action-hub.js"
+      ],
+      "build_plan_phases": [
+        7,
+        8
+      ]
     },
     {
       "id": 11,
@@ -325,8 +414,12 @@
         "Training curriculum"
       ],
       "completion_criteria": "A new volunteer can confidently lead an educational event.",
-      "dependencies": ["Civic Action Platform"],
-      "depends_on_phases": [10],
+      "dependencies": [
+        "Civic Action Platform"
+      ],
+      "depends_on_phases": [
+        10
+      ],
       "status": "planning",
       "completion": 5,
       "steps_total": 7,
@@ -335,8 +428,12 @@
       "blocked": 0,
       "updated": "2026-07-09",
       "notes": "Educate funnel and Teach This Locally page exist. No facilitator handbook.",
-      "routes": ["/educate/"],
-      "build_plan_phases": [8]
+      "routes": [
+        "/educate/"
+      ],
+      "build_plan_phases": [
+        8
+      ]
     },
     {
       "id": 12,
@@ -354,8 +451,12 @@
         "Security review"
       ],
       "completion_criteria": "The platform is stable, secure, and production-ready.",
-      "dependencies": ["Foundation & Governance"],
-      "depends_on_phases": [1],
+      "dependencies": [
+        "Foundation & Governance"
+      ],
+      "depends_on_phases": [
+        1
+      ],
       "status": "building",
       "completion": 15,
       "steps_total": 18,
@@ -364,8 +465,15 @@
       "blocked": 0,
       "updated": "2026-07-09",
       "notes": "Static site on GitHub/Netlify. No search, security review, or full a11y audit.",
-      "routes": ["https://github.com/Grappe501/arkansas", "https://arkansas-facts.netlify.app"],
-      "build_plan_phases": [9, 10, 11]
+      "routes": [
+        "https://github.com/Grappe501/arkansas",
+        "https://arkansas-facts.netlify.app"
+      ],
+      "build_plan_phases": [
+        9,
+        10,
+        11
+      ]
     },
     {
       "id": 13,
@@ -385,8 +493,12 @@
         "Multimedia resources"
       ],
       "completion_criteria": "Every significant factual claim on the site is traceable to reliable sources.",
-      "dependencies": ["Foundation & Governance"],
-      "depends_on_phases": [1],
+      "dependencies": [
+        "Foundation & Governance"
+      ],
+      "depends_on_phases": [
+        1
+      ],
       "status": "planning",
       "completion": 4,
       "steps_total": 10,
@@ -395,8 +507,13 @@
       "blocked": 0,
       "updated": "2026-07-09",
       "notes": "Inventories and claims ledger started. Library page is early scaffold.",
-      "routes": ["/library/", "/data/claims-ledger.json"],
-      "build_plan_phases": [4]
+      "routes": [
+        "/library/",
+        "/data/claims-ledger.json"
+      ],
+      "build_plan_phases": [
+        4
+      ]
     },
     {
       "id": 14,
@@ -414,8 +531,14 @@
         "Editorial review"
       ],
       "completion_criteria": "The platform meets defined quality standards before public release.",
-      "dependencies": ["Technical Platform", "Research Library"],
-      "depends_on_phases": [12, 13],
+      "dependencies": [
+        "Technical Platform",
+        "Research Library"
+      ],
+      "depends_on_phases": [
+        12,
+        13
+      ],
       "status": "not_started",
       "completion": 3,
       "steps_total": 8,
@@ -424,7 +547,9 @@
       "blocked": 0,
       "updated": "2026-07-09",
       "notes": "Editorial checklist exists. No systematic QA pass.",
-      "routes": ["/docs/EDITORIAL_CHECKLIST.md"],
+      "routes": [
+        "/docs/EDITORIAL_CHECKLIST.md"
+      ],
       "build_plan_phases": []
     },
     {
@@ -443,8 +568,12 @@
         "Version planning"
       ],
       "completion_criteria": "The platform is live, growing, and continuously improving through measured feedback.",
-      "dependencies": ["Quality Assurance"],
-      "depends_on_phases": [14],
+      "dependencies": [
+        "Quality Assurance"
+      ],
+      "depends_on_phases": [
+        14
+      ],
       "status": "planning",
       "completion": 2,
       "steps_total": 8,
@@ -453,8 +582,12 @@
       "blocked": 0,
       "updated": "2026-07-09",
       "notes": "Site is live in early-foundation mode. Not ready for broad public education launch.",
-      "routes": ["https://arkansas-facts.netlify.app"],
-      "build_plan_phases": [12]
+      "routes": [
+        "https://arkansas-facts.netlify.app"
+      ],
+      "build_plan_phases": [
+        12
+      ]
     }
   ]
 }

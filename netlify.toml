@@ -39,6 +39,57 @@
   to = "/educate/"
   status = 301
 
+# Build #5 — Canonical IA URLs → current destinations
+[[redirects]]
+  from = "/the-story"
+  to = "/halls/story-before.html"
+  status = 301
+
+[[redirects]]
+  from = "/the-case"
+  to = "/halls/the-case.html"
+  status = 301
+
+[[redirects]]
+  from = "/the-constitution"
+  to = "/halls/what-court-decided.html"
+  status = 301
+
+[[redirects]]
+  from = "/the-impact"
+  to = "/halls/after-2010.html"
+  status = 301
+
+[[redirects]]
+  from = "/follow-the-money"
+  to = "/halls/money-map.html"
+  status = 301
+
+[[redirects]]
+  from = "/the-debate"
+  to = "/halls/debate.html"
+  status = 301
+
+[[redirects]]
+  from = "/reform"
+  to = "/halls/reform.html"
+  status = 301
+
+[[redirects]]
+  from = "/teach"
+  to = "/educate/"
+  status = 301
+
+[[redirects]]
+  from = "/sources"
+  to = "/library/"
+  status = 301
+
+[[redirects]]
+  from = "/explore"
+  to = "/explore/"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]

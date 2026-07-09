@@ -558,6 +558,28 @@ body.mc-body .action-hub__toggle {
 
 .mc-breadcrumb a { color: var(--mc-accent); }
 
+.mc-arch-canonical,
+.mc-arch-slug {
+  font-size: 0.7rem;
+  color: var(--mc-text-muted);
+  margin-left: 0.35rem;
+}
+
+.mc-arch-list li { margin-bottom: 0.4rem; }
+
+.mc-arch-status {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  margin-right: 0.35rem;
+}
+
+.mc-arch-status--live { background: #14532d; color: #bbf7d0; }
+.mc-arch-status--partial { background: #422006; color: #fef08a; }
+.mc-arch-status--stub { background: #1e3a5f; color: #bfdbfe; }
+.mc-arch-status--planned { background: var(--mc-gray); color: #fff; }
+
 .mc-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
 .mc-table th, .mc-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--mc-border); text-align: left; }
 .mc-table th { color: var(--mc-text-muted); font-size: 0.7rem; text-transform: uppercase; }

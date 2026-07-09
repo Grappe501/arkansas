@@ -4,12 +4,12 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.8.0 · **OS:** [Mission Control](/mission-control/) · **Registry:** [Phase Registry](/mission-control/phases.html)  
-**Build #4:** ✅ Master Phase Registry · **Build #3:** ✅ Mission Control · **Build #2:** ✅ Constitution  
-**Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
+**Current version:** 1.9.0 · **OS:** [Mission Control](/mission-control/) · **Registry:** [Phase Registry](/mission-control/phases.html) · **IA:** [Site Architecture](/mission-control/architecture.html)  
+**Build #5:** ✅ Site Architecture · **Build #4:** ✅ Phase Registry · **Build #3:** ✅ Mission Control  
+**Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
-> **Governing roadmap:** `docs/PHASE_REGISTRY.md` · `data/phase-registry.json`  
-> Every BUILD_PLAN step maps to one registry phase. Update both JSON files every build.
+> **Governing blueprints:** `docs/PHASE_REGISTRY.md` · `docs/SITE_ARCHITECTURE.md`  
+> **Data:** `data/phase-registry.json` · `data/site-architecture.json`
 
 ---
 
@@ -213,4 +213,4 @@ Learn          →  Participate     →  Organize         →  Build Solutions
 | **7** | **Civic Action Layer** | **🟡 Scaffolded v1.4.0** |
 | 8–12 | Forms, tech, launch | 🟡 |
 
-**Next:** Build #5 — Historical Foundation (Hall 1 L2–L4 depth). Backend for participant profiles (step 99), full collaborative workspaces (59–61).
+**Next:** Build #6 — Master Content Inventory. Then deep subsection pages per architecture blueprint.
