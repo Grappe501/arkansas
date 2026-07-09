@@ -879,6 +879,33 @@
       "number": 31,
       "id": "IMP-31",
       "title": "Master AI Orchestration, Agent Collaboration & Autonomous Institutional Assistance",
+      "status": "documented"
+    }
+  },
+  "ai_orchestration": {
+    "title": "Master AI Orchestration, Agent Collaboration & Autonomous Institutional Assistance",
+    "package": "Implementation Package 31 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_31_AI_ORCHESTRATION.md",
+    "manifest": "/data/ai-orchestration-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "AI functions as an institutional workforce \u2014 human-led, AI-assisted, never replacing accountable leadership",
+    "ai_architecture_layer_count": 5,
+    "department_localbrain_count": 14,
+    "specialized_agent_total_count": 13,
+    "ai_ethics_principle_count": 7,
+    "mc_ai_dashboard_metric_count": 9,
+    "packages_completed": 31,
+    "packages_complete_pct": 62,
+    "county_milestone_date": "2026-10-01",
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000,
+    "mc_dashboard": "/mission-control/institutional-ai.html",
+    "engineering_note": "Doctrinal IMP-31 AI Orchestration; engineering IMP-31 is MC executive dashboard API",
+    "next_package": {
+      "number": 32,
+      "id": "IMP-32",
+      "title": "Master Implementation Roadmap, Build Sequencing & Cursor Execution Framework",
       "status": "specified"
     }
   },
@@ -2281,7 +2308,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 30,
+        "current": 31,
         "status": "partial"
       },
       {
@@ -2472,6 +2499,12 @@
       },
       {
         "id": "CIP-D34",
+        "indicator": "AI Orchestration (IMP-31)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D35",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -2526,7 +2559,7 @@
     "days_remaining": 176,
     "implementation_package_readiness_pct": 100,
     "steps_total": 50,
-    "steps_documented": 30,
+    "steps_documented": 31,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

@@ -1,5 +1,5 @@
 {
-  "version": "2.05.30",
+  "version": "2.05.31",
   "build": 101,
   "updated": "2026-07-09",
   "identity": {
@@ -121,7 +121,7 @@
     "connected_citizen_goal_pct": 15,
     "implementation_steps_total": 50,
     "implementation_steps_implemented": 0,
-    "implementation_steps_documented": 30,
+    "implementation_steps_documented": 31,
     "overall_completion": 101,
     "current_build": {
       "number": 101,
@@ -7814,21 +7814,21 @@
     }
   ],
   "briefing": {
-    "what_built": "IMP-01\u201330 documented \u2014 statewide launch strategy (60% MILESTONE)",
-    "building_now": "IMP-31 AI Orchestration & Agent Collaboration next; Sprint Zero pending",
+    "what_built": "IMP-01\u201331 documented \u2014 AI orchestration & agent collaboration (62%)",
+    "building_now": "IMP-32 Implementation Roadmap & Cursor Execution next; Sprint Zero pending",
     "blocked": [
       "Sprint Zero not complete",
       "0/50 code-implemented",
       "2 days to software target"
     ],
     "ready_public": [
+      "AI Orchestration",
+      "ai-orchestration-manifest.json",
+      "LocalBrains & multi-agent collaboration",
       "Launch Strategy",
-      "launch-strategy-manifest.json",
-      "Four-phase rollout plan",
-      "Statewide readiness certification",
-      "County-by-county launch framework"
+      "Human-led AI-assisted institutional model"
     ],
-    "next": "IMP-31 \u2014 Master AI Orchestration, Agent Collaboration & Autonomous Institutional Assistance"
+    "next": "IMP-32 \u2014 Master Implementation Roadmap, Build Sequencing & Cursor Execution Framework"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8847,7 +8847,7 @@
     "readiness_score": 100,
     "steps_total": 50,
     "steps_implemented": 0,
-    "steps_documented": 30,
+    "steps_documented": 31,
     "bands_total": 5,
     "sprint_zero_started": false,
     "cursor_master_prompt_ready": true

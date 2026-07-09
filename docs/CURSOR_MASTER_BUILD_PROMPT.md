@@ -46,6 +46,7 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 0ab. **Governance & PMO (IMP-28):** [/docs/IMPLEMENTATION_PACKAGE_28_GOVERNANCE_PMO.md](/docs/IMPLEMENTATION_PACKAGE_28_GOVERNANCE_PMO.md) · [/data/governance-pmo-manifest.json](/data/governance-pmo-manifest.json)
 0ac. **Sustainability & Continuity (IMP-29):** [/docs/IMPLEMENTATION_PACKAGE_29_SUSTAINABILITY_CONTINUITY.md](/docs/IMPLEMENTATION_PACKAGE_29_SUSTAINABILITY_CONTINUITY.md) · [/data/sustainability-continuity-manifest.json](/data/sustainability-continuity-manifest.json)
 0ad. **Launch Strategy (IMP-30):** [/docs/IMPLEMENTATION_PACKAGE_30_LAUNCH_STRATEGY.md](/docs/IMPLEMENTATION_PACKAGE_30_LAUNCH_STRATEGY.md) · [/data/launch-strategy-manifest.json](/data/launch-strategy-manifest.json)
+0ae. **AI Orchestration (IMP-31):** [/docs/IMPLEMENTATION_PACKAGE_31_AI_ORCHESTRATION.md](/docs/IMPLEMENTATION_PACKAGE_31_AI_ORCHESTRATION.md) · [/data/ai-orchestration-manifest.json](/data/ai-orchestration-manifest.json)
 
 ## Master timeline (updated IMP-11)
 
@@ -151,7 +152,7 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 
 ## First step to implement
 
-**IMP-01** through **IMP-30** are **documented** (60% blueprint milestone):
+**IMP-01** through **IMP-31** are **documented**:
 - [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
 - [Technical Architecture](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
 - [Route Map](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [route-manifest.json](/data/route-manifest.json)
@@ -182,7 +183,8 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 - [Governance & PMO](/docs/IMPLEMENTATION_PACKAGE_28_GOVERNANCE_PMO.md) · [governance-pmo-manifest.json](/data/governance-pmo-manifest.json)
 - [Sustainability & Continuity](/docs/IMPLEMENTATION_PACKAGE_29_SUSTAINABILITY_CONTINUITY.md) · [sustainability-continuity-manifest.json](/data/sustainability-continuity-manifest.json)
 - [Launch Strategy](/docs/IMPLEMENTATION_PACKAGE_30_LAUNCH_STRATEGY.md) · [launch-strategy-manifest.json](/data/launch-strategy-manifest.json)
+- [AI Orchestration](/docs/IMPLEMENTATION_PACKAGE_31_AI_ORCHESTRATION.md) · [ai-orchestration-manifest.json](/data/ai-orchestration-manifest.json)
 
-**IMP-31** is next (doctrinal): Master AI Orchestration, Agent Collaboration & Autonomous Institutional Assistance.
+**IMP-32** is next (doctrinal): Master Implementation Roadmap, Build Sequencing & Cursor Execution Framework.
 
 Engineering **Sprint Zero (IMP-10 step registry)** is the Band A gate before Band B code slices.

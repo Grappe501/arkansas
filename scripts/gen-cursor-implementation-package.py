@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 30  # IMP-01 through IMP-30 (doctrinal)
+steps_documented = 31  # IMP-01 through IMP-31 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3335,7 +3335,7 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'institutional_analytics', 'institutional_automation', 'public_digital_experience',
     'mobile_field_operations', 'institutional_digital_library',
     'institutional_integration_platform', 'institutional_security_trust',
-    'institutional_sustainability_continuity', 'institutional_launch_strategy',
+    'institutional_launch_strategy', 'institutional_ai_orchestration',
 ]
 
 RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
@@ -5505,6 +5505,195 @@ LAUNCH_STRATEGY_MANIFEST = {
     'implemented': False,
 }
 
+AI_PHILOSOPHY_ACTIONS = [
+    'teach', 'assist', 'organize', 'summarize', 'recommend', 'coordinate',
+]
+
+AI_PHILOSOPHY_PROHIBITIONS = [
+    'never_manipulate', 'never_obscure_evidence', 'never_replace_human_leadership',
+]
+
+AI_ARCHITECTURE_LAYERS = [
+    'executive_ai', 'department_localbrains', 'specialized_ai_agents',
+    'personal_ai_assistants', 'workflow_automation',
+]
+
+EXECUTIVE_AI_CAPABILITIES = [
+    'daily_briefings', 'strategic_analysis', 'trend_identification', 'risk_detection',
+    'county_readiness', 'volunteer_forecasting', 'organizational_growth_recommendations',
+]
+
+DEPARTMENT_LOCALBRAINS = [
+    'mission_control', 'research', 'evidence', 'knowledge_platform',
+    'community_education_academy', 'volunteer_network', 'county_operations',
+    'city_operations', 'neighborhood_operations', 'coalition', 'communications',
+    'technology', 'governance', 'pmo',
+]
+
+SPECIALIZED_AGENT_DOMAINS = {
+    'research_brain': [
+        'citation_agent', 'evidence_agent', 'case_law_agent', 'writing_agent',
+        'fact_verification_agent',
+    ],
+    'education_brain': [
+        'curriculum_agent', 'lesson_builder', 'assessment_agent', 'presentation_agent',
+    ],
+    'volunteer_brain': [
+        'recruitment_agent', 'mentorship_agent', 'scheduling_agent', 'recognition_agent',
+    ],
+}
+
+PERSONAL_AI_CONTEXT = [
+    'learning_progress', 'volunteer_assignments', 'calendar', 'organizations',
+    'county', 'projects', 'research_interests', 'communication_preferences',
+]
+
+MULTI_AGENT_COLLABORATION_STEPS = [
+    'research_brain_resources', 'academy_brain_lessons', 'calendar_brain_scheduling',
+    'volunteer_brain_facilitators', 'communications_brain_invitations',
+    'mission_control_progress',
+]
+
+AI_MEMORY_TYPES = [
+    'department_memory', 'project_memory', 'decision_history',
+    'frequently_used_resources', 'institutional_procedures', 'lessons_learned',
+]
+
+AI_KNOWLEDGE_BOUNDARIES = [
+    'institutional_knowledge', 'approved_research', 'verified_evidence',
+    'authorized_user_information', 'configured_integrations', 'uncertainty_disclosure',
+]
+
+AI_PERMITTED_ACTIONS = [
+    'recommend', 'draft', 'summarize', 'prioritize', 'organize', 'teach',
+]
+
+AI_PROHIBITED_ACTIONS = [
+    'change_governance', 'publish_sensitive_without_review', 'assign_elevated_permissions',
+    'modify_institutional_policy', 'represent_speculation_as_fact',
+]
+
+AI_LEARNING_EVALUATIONS = [
+    'frequently_asked_questions', 'knowledge_gaps', 'repeated_volunteer_challenges',
+    'popular_research_topics', 'learning_outcomes', 'workflow_efficiency',
+]
+
+MC_AI_DASHBOARD_METRICS = [
+    'ai_usage', 'questions_answered', 'time_saved', 'research_assistance',
+    'volunteer_assistance', 'educational_assistance', 'workflow_support',
+    'confidence_levels', 'knowledge_gaps',
+]
+
+AI_QUALITY_STANDARDS = [
+    'accuracy', 'clarity', 'evidence', 'transparency', 'appropriate_confidence',
+    'related_resources', 'suggested_next_steps',
+]
+
+AI_ETHICS_PRINCIPLES = [
+    'respect_people', 'protect_privacy', 'disclose_uncertainty',
+    'support_civic_education', 'encourage_critical_thinking', 'avoid_unnecessary_bias',
+    'remain_accountable',
+]
+
+AI_MARKETPLACE_FUTURE_AGENTS = [
+    'grant_development_agent', 'historical_archives_agent', 'legislative_monitoring_agent',
+    'public_records_agent', 'media_analysis_agent', 'translation_agent',
+]
+
+OCTOBER_AI_READINESS_SCOPE = [
+    'county_operating_systems', 'education_leaders', 'volunteer_onboarding',
+    'community_conversations', 'academy_instruction', 'research_assistance',
+    'mission_control', 'organizational_partnerships',
+]
+
+AI_ORCHESTRATION_SYSTEM_CHAIN = [
+    'mission_control', 'knowledge_platform', 'research_institute',
+    'community_education_academy', 'volunteer_network', 'coalition_network',
+    'county_operating_system', 'city_operating_system', 'neighborhood_operating_system',
+    'communications', 'calendar_brain', 'relationship_intelligence',
+    'automation_engine', 'integration_platform',
+]
+
+AI_ORCHESTRATION_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-31',
+    'updated': today,
+    'title': 'Master AI Orchestration, Agent Collaboration & Autonomous Institutional Assistance',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_31_AI_ORCHESTRATION.md',
+    'source_registries': {
+        'localbrain_network': '/data/localbrain-network-manifest.json',
+        'automation_engine': '/data/automation-engine-manifest.json',
+        'integration_platform': '/data/integration-platform-manifest.json',
+        'security_trust': '/data/security-trust-manifest.json',
+        'relationship_intelligence': '/data/relationship-intelligence-manifest.json',
+    },
+    'philosophy': 'AI functions as an institutional workforce — human-led, AI-assisted, never replacing accountable leadership',
+    'governing_principle': (
+        'AI should never become the institution; it quietly amplifies volunteers, '
+        'Education Leaders, and community leaders with transparency and clear boundaries'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'ai_philosophy_actions': AI_PHILOSOPHY_ACTIONS,
+    'ai_philosophy_prohibitions': AI_PHILOSOPHY_PROHIBITIONS,
+    'ai_architecture_layers': AI_ARCHITECTURE_LAYERS,
+    'ai_architecture_layer_count': len(AI_ARCHITECTURE_LAYERS),
+    'executive_ai_capabilities': EXECUTIVE_AI_CAPABILITIES,
+    'executive_ai_capability_count': len(EXECUTIVE_AI_CAPABILITIES),
+    'department_localbrains': DEPARTMENT_LOCALBRAINS,
+    'department_localbrain_count': len(DEPARTMENT_LOCALBRAINS),
+    'specialized_agent_domains': SPECIALIZED_AGENT_DOMAINS,
+    'specialized_agent_domain_count': len(SPECIALIZED_AGENT_DOMAINS),
+    'specialized_agent_total_count': sum(len(v) for v in SPECIALIZED_AGENT_DOMAINS.values()),
+    'personal_ai_context': PERSONAL_AI_CONTEXT,
+    'personal_ai_context_count': len(PERSONAL_AI_CONTEXT),
+    'multi_agent_collaboration_steps': MULTI_AGENT_COLLABORATION_STEPS,
+    'multi_agent_collaboration_step_count': len(MULTI_AGENT_COLLABORATION_STEPS),
+    'ai_memory_types': AI_MEMORY_TYPES,
+    'ai_memory_type_count': len(AI_MEMORY_TYPES),
+    'ai_knowledge_boundaries': AI_KNOWLEDGE_BOUNDARIES,
+    'ai_knowledge_boundary_count': len(AI_KNOWLEDGE_BOUNDARIES),
+    'ai_permitted_actions': AI_PERMITTED_ACTIONS,
+    'ai_prohibited_actions': AI_PROHIBITED_ACTIONS,
+    'ai_learning_evaluations': AI_LEARNING_EVALUATIONS,
+    'ai_learning_evaluation_count': len(AI_LEARNING_EVALUATIONS),
+    'mc_ai_dashboard_metrics': MC_AI_DASHBOARD_METRICS,
+    'mc_ai_dashboard_metric_count': len(MC_AI_DASHBOARD_METRICS),
+    'ai_quality_standards': AI_QUALITY_STANDARDS,
+    'ai_quality_standard_count': len(AI_QUALITY_STANDARDS),
+    'ai_ethics_principles': AI_ETHICS_PRINCIPLES,
+    'ai_ethics_principle_count': len(AI_ETHICS_PRINCIPLES),
+    'ai_marketplace_future_agents': AI_MARKETPLACE_FUTURE_AGENTS,
+    'ai_marketplace_future_agent_count': len(AI_MARKETPLACE_FUTURE_AGENTS),
+    'october_ai_readiness': {
+        'target_date': county_milestone_date,
+        'scope': OCTOBER_AI_READINESS_SCOPE,
+        'label': 'AI as statewide force multiplier by October 1',
+    },
+    'organizational_goals': {
+        'counties_total': 75,
+        'counties_with_partnerships_goal': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'ai_orchestration_system_chain': AI_ORCHESTRATION_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/institutional-ai.html',
+    'packages_completed': 31,
+    'packages_total': 50,
+    'packages_complete_pct': 62,
+    'engineering_note': 'Doctrinal IMP-31 AI Orchestration; engineering IMP-31 is MC executive dashboard API',
+    'status': 'documented',
+    'implemented': False,
+}
+
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -5651,7 +5840,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D31', 'indicator': 'Governance & PMO (IMP-28)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D32', 'indicator': 'Sustainability & Continuity (IMP-29)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D33', 'indicator': 'Launch Strategy (IMP-30)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D34', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D34', 'indicator': 'AI Orchestration (IMP-31)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D35', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -6435,6 +6625,33 @@ out = {
             'number': 31,
             'id': 'IMP-31',
             'title': 'Master AI Orchestration, Agent Collaboration & Autonomous Institutional Assistance',
+            'status': 'documented',
+        },
+    },
+    'ai_orchestration': {
+        'title': 'Master AI Orchestration, Agent Collaboration & Autonomous Institutional Assistance',
+        'package': 'Implementation Package 31 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_31_AI_ORCHESTRATION.md',
+        'manifest': '/data/ai-orchestration-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': AI_ORCHESTRATION_MANIFEST['philosophy'],
+        'ai_architecture_layer_count': AI_ORCHESTRATION_MANIFEST['ai_architecture_layer_count'],
+        'department_localbrain_count': AI_ORCHESTRATION_MANIFEST['department_localbrain_count'],
+        'specialized_agent_total_count': AI_ORCHESTRATION_MANIFEST['specialized_agent_total_count'],
+        'ai_ethics_principle_count': AI_ORCHESTRATION_MANIFEST['ai_ethics_principle_count'],
+        'mc_ai_dashboard_metric_count': AI_ORCHESTRATION_MANIFEST['mc_ai_dashboard_metric_count'],
+        'packages_completed': AI_ORCHESTRATION_MANIFEST['packages_completed'],
+        'packages_complete_pct': AI_ORCHESTRATION_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': AI_ORCHESTRATION_MANIFEST['mc_dashboard'],
+        'engineering_note': AI_ORCHESTRATION_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 32,
+            'id': 'IMP-32',
+            'title': 'Master Implementation Roadmap, Build Sequencing & Cursor Execution Framework',
             'status': 'specified',
         },
     },
@@ -6647,6 +6864,10 @@ with open(root / 'data/sustainability-continuity-manifest.json', 'w', newline='\
 
 with open(root / 'data/launch-strategy-manifest.json', 'w', newline='\n') as f:
     json.dump(LAUNCH_STRATEGY_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/ai-orchestration-manifest.json', 'w', newline='\n') as f:
+    json.dump(AI_ORCHESTRATION_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(
