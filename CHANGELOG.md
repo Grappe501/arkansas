@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.03.0] - 2026-07-09 — Build #99 Master Institutional Manifesto
+
+### Why We Are Building This
+- **Master Institutional Manifesto v1.0** — moral and philosophical foundation of Citizens United Facts
+- 11 belief sections, 7 Our Promise commitments, 4 motto lines, required reading spec, governing compass question
+- Document hierarchy: technical = how · strategic = what · manifesto = why
+- Education before advocacy — Arkansans draw their own conclusions
+- Honest: required reading not enforced · 0 acknowledgments · dashboard not live · 36% readiness
+- MC dashboard: `/mission-control/institutional-manifesto.html`
+
 ## [2.02.0] - 2026-07-09 — Build #98 Master Institutional Self-Build & Continuous Improvement System
 
 ### Never Finished. Always Improving.

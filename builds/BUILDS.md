@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#99** | **Master Institutional Manifesto** | **2.03.0** | **✅ Complete** | [099](099-institutional-manifesto.md) · [/mission-control/institutional-manifesto.html](../mission-control/institutional-manifesto.html) |
 | **#98** | **Master Institutional Self-Build & Continuous Improvement** | **2.02.0** | **✅ Complete** | [098](098-institutional-continuous-improvement.md) · [/mission-control/institutional-continuous-improvement.html](../mission-control/institutional-continuous-improvement.html) |
 | **#97** | **Master Institutional Launch Certification** | **2.01.0** | **✅ Complete** | [097](097-institutional-launch-certification.md) · [/mission-control/institutional-launch-certification.html](../mission-control/institutional-launch-certification.html) |
 | **#96** | **Master Arkansas Civic Operating System (ACOS 2.0)** | **2.00.0** | **✅ Complete** | [096](096-arkansas-civic-operating-system.md) · [/mission-control/arkansas-civic-operating-system.html](../mission-control/arkansas-civic-operating-system.html) |

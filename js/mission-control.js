@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Institutional Manifesto <a href="/mission-control/institutional-manifesto.html" class="mc-inline-link">Why We Build #99 →</a></h2>
+    <p class="mc-bar-note">Build #99 — Master Institutional Manifesto. Moral foundation — 11 belief sections, Our Promise, institutional motto. Learn with Curiosity · Lead with Integrity · Serve with Humility · Strengthen Arkansas. 0 acknowledgments · required reading not enforced. 36% readiness.</p>
     <h2 class="mc-section-title">Continuous Improvement <a href="/mission-control/institutional-continuous-improvement.html" class="mc-inline-link">Never Finished #98 →</a></h2>
     <p class="mc-bar-note">Build #98 — Master Self-Build & Continuous Improvement. 8-step cycle, backlog, innovation pipeline, lessons learned, AI-assisted improvement. 0 backlog items · dashboard not live. 54% readiness.</p>
     <h2 class="mc-section-title">Launch Certification <a href="/mission-control/institutional-launch-certification.html" class="mc-inline-link">Jan 2027 Readiness Audit #97 →</a></h2>
@@ -5283,6 +5285,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initArkansasCivicOperatingSystem();
   initInstitutionalLaunchCertification();
   initInstitutionalContinuousImprovement();
+  initInstitutionalManifesto();
 });
 
 async function initUxArchitecture() {
@@ -10402,6 +10405,99 @@ async function initInstitutionalContinuousImprovement() {
       <a href="/data/institutional-continuous-improvement.json">JSON</a> ·
       <a href="/mission-control/institutional-launch-certification.html">Launch Certification (#97)</a> ·
       <a href="/mission-control/pmo-execution-office.html">PMO (#89)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initInstitutionalManifesto() {
+  const root = document.getElementById('mc-institutional-manifesto-root');
+  if (!root) return;
+
+  const [imRes, mcRes] = await Promise.all([
+    fetch('/data/institutional-manifesto.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const im = await imRes.json();
+  const mc = await mcRes.json();
+  const s = im.summary;
+
+  const beliefBlocks = im.belief_sections.sections.map(b => {
+    const extras = [];
+    if (b.beliefs) extras.push(...b.beliefs.map(x => `<li>${x}</li>`));
+    if (b.example_questions) extras.push(...b.example_questions.map(q => `<li>${q}</li>`));
+    if (b.trust_earned_through) extras.push(...b.trust_earned_through.map(t => `<li>${t}</li>`));
+    if (b.ordinary_volunteer_examples) extras.push(...b.ordinary_volunteer_examples.map(v => `<li>${v}</li>`));
+    if (b.responsibilities) extras.push(...b.responsibilities.map(r => `<li>${r}</li>`));
+    if (b.built_through) extras.push(...b.built_through.map(x => `<li>${x}</li>`));
+    if (b.arkansas_deserves) extras.push(...b.arkansas_deserves.map(a => `<li>${a}</li>`));
+    return `
+    <h3 class="mc-subsection-title">${b.title}</h3>
+    <p class="mc-bar-note">${b.summary}</p>
+    ${extras.length ? `<ul class="mc-deliverables">${extras.join('')}</ul>` : ''}`;
+  }).join('');
+
+  const dashRows = im.manifesto_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td>
+      <td>${typeof d.current === 'number' ? d.current.toLocaleString() : d.current}${d.unit || ''}</td>
+      <td>${d.status}</td></tr>`).join('');
+
+  const systemRows = im.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Institutional Manifesto</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #99 · ${im.title}</p>
+      <h1>${im.subtitle}</h1>
+      <p class="mc-header__question">${im.governing_principle}</p>
+      <p class="mc-bar-note">${im.purpose}</p>
+      <p class="mc-bar-note"><strong>${im.tagline}</strong> · ${s.days_remaining} days to ${im.completion_target_date}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Manifesto readiness</div><div class="mc-stat__value">${s.institutional_manifesto_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Belief sections</div><div class="mc-stat__value">${s.belief_sections}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Acknowledgments</div><div class="mc-stat__value">${s.volunteer_acknowledgments}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Required reading</div><div class="mc-stat__value">${s.required_reading_enforced ? 'Enforced' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Promise commitments</div><div class="mc-stat__value">${s.promise_commitments}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Dashboard</div><div class="mc-stat__value">${s.manifesto_dashboard_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Document Hierarchy</h2>
+    <p class="mc-bar-note">Technical: ${im.document_hierarchy.technical_plans} · Strategic: ${im.document_hierarchy.strategic_plans} · Manifesto: ${im.document_hierarchy.manifesto}</p>
+    <h2 class="mc-section-title">${im.belief_sections.title}</h2>
+    ${beliefBlocks}
+    <h2 class="mc-section-title">${im.our_promise.title}</h2>
+    <ul class="mc-deliverables">${im.our_promise.commitments.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${im.january_2027.title}</h2>
+    <p class="mc-bar-note">Not the finish line — begins fulfilling the promise. Responsibility begins.</p>
+    <h2 class="mc-section-title">${im.institutional_motto.title}</h2>
+    <ul class="mc-deliverables">${im.institutional_motto.lines.map(m => `<li><strong>${m.line}</strong></li>`).join('')}</ul>
+    <h2 class="mc-section-title">${im.required_reading.title}</h2>
+    <p class="mc-bar-note">Before beginning service · Enforced: ${im.required_reading.enforced ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${im.required_reading.audiences.map(a => `<li>${a}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${im.founders_reflection.title}</h2>
+    <p class="mc-bar-note">${im.founders_principle}</p>
+    <h2 class="mc-section-title">${im.manifesto_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${im.manifesto_dashboard.live ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${im.integration.chain}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${im.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${im.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${im.recommended_next_build.number} — ${im.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${im.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_INSTITUTIONAL_MANIFESTO.md">MASTER_INSTITUTIONAL_MANIFESTO.md</a> ·
+      <a href="/data/institutional-manifesto.json">JSON</a> ·
+      <a href="/mission-control/organizational-constitution.html">Constitution (#76)</a> ·
+      <a href="/mission-control/public-trust-institutional-credibility.html">Public Trust (#82)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 
