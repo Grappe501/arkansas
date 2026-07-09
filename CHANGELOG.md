@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.70.0] - 2026-07-09 — Build #66 Sustainability, Funding & Institutional Stewardship
+
+### Building an Institution That Lasts
+- **Sustainability & Stewardship Blueprint v1.0** — long-term institution without compromising educational integrity
+- 5 sustainability principles, diversified funding portfolio, financial transparency, resource allocation
+- Volunteer stewardship, knowledge preservation, technology & leadership sustainability
+- Annual Sustainability Report and dashboard — 9 indicators
+- Integrates Governance (#49), PMO (#54), Command Center (#65)
+- Honest: 0 funding sources · 0 volunteers · reserve not established · ~38% readiness
+- MC dashboard: `/mission-control/sustainability-stewardship.html`
+
 ## [1.69.0] - 2026-07-09 — Build #65 Civic Intelligence Command Center
 
 ### The Executive Mission Control

@@ -1,0 +1,393 @@
+{
+  "version": "1.0",
+  "build": 66,
+  "updated": "2026-07-09",
+  "title": "Master Sustainability, Funding & Institutional Stewardship Blueprint v1.0",
+  "subtitle": "Building an Institution That Lasts \u2014 Financial Sustainability Without Compromising Trust",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/sustainability-stewardship.html",
+  "constitution": "/docs/MASTER_SUSTAINABILITY_STEWARDSHIP.md",
+  "purpose": "Ensure the institution can serve Arkansas for decades while protecting educational integrity, transparency, and independence.",
+  "governing_principle": "Permanent institutions endure through trust, wise investment, careful documentation, future leader development, mission protection, and earned community confidence.",
+  "core_philosophy": "Never forced to choose between financial survival and educational integrity. Governance and funding reduce conflicts of interest and strengthen public trust.",
+  "five_sustainability_principles": [
+    {
+      "id": "SS-P1",
+      "principle": "Educational Mission",
+      "test": "Does it advance civic education?",
+      "status": "live"
+    },
+    {
+      "id": "SS-P2",
+      "principle": "Independence",
+      "test": "Can the institution maintain editorial independence?",
+      "status": "live"
+    },
+    {
+      "id": "SS-P3",
+      "principle": "Transparency",
+      "test": "Can the funding relationship be publicly explained?",
+      "status": "live"
+    },
+    {
+      "id": "SS-P4",
+      "principle": "Long-Term Value",
+      "test": "Does it strengthen the institution over time?",
+      "status": "live"
+    },
+    {
+      "id": "SS-P5",
+      "principle": "Public Trust",
+      "test": "Would a reasonable visitor view it as mission-consistent?",
+      "status": "live"
+    }
+  ],
+  "funding_portfolio": {
+    "title": "Diversified Funding Portfolio",
+    "avoid_single_source": true,
+    "categories": [
+      {
+        "id": "SS-F1",
+        "category": "Individual Supporters",
+        "description": "Arkansans who value civic education",
+        "sources": 0,
+        "status": "planned"
+      },
+      {
+        "id": "SS-F2",
+        "category": "Foundation Grants",
+        "description": "Civic education, research, technology, community engagement",
+        "sources": 0,
+        "status": "planned"
+      },
+      {
+        "id": "SS-F3",
+        "category": "Institutional Partnerships",
+        "description": "Libraries, universities, museums, educational organizations",
+        "sources": 0,
+        "status": "planned"
+      },
+      {
+        "id": "SS-F4",
+        "category": "Coalition Contributions",
+        "description": "Organizations supporting shared educational resources",
+        "sources": 0,
+        "status": "scaffolded"
+      },
+      {
+        "id": "SS-F5",
+        "category": "Educational Sponsorships",
+        "description": "Events or resource development \u2014 editorial separation required",
+        "sources": 0,
+        "status": "planned"
+      }
+    ],
+    "total_active_sources": 0,
+    "all_documented_transparently": true,
+    "status": "planned"
+  },
+  "financial_transparency": {
+    "title": "Financial Transparency",
+    "annual_reporting_sections": [
+      "Revenue categories",
+      "Major expense categories",
+      "Program investments",
+      "Technology investments",
+      "Research investments",
+      "Community education investments"
+    ],
+    "balance": "Transparency without unnecessary private donor disclosure",
+    "report_live": false,
+    "status": "planned"
+  },
+  "resource_allocation": {
+    "title": "Resource Allocation",
+    "areas": [
+      {
+        "area": "Research",
+        "route": "/mission-control/research-observatory.html",
+        "status": "partial"
+      },
+      {
+        "area": "Education",
+        "route": "/mission-control/education-academy.html",
+        "status": "partial"
+      },
+      {
+        "area": "Technology",
+        "route": "/mission-control/technical-architecture.html",
+        "status": "partial"
+      },
+      {
+        "area": "Community Education",
+        "route": "/mission-control/neighborhood-organizing.html",
+        "status": "partial"
+      },
+      {
+        "area": "Coalition Development",
+        "route": "/mission-control/coalition-network.html",
+        "status": "partial"
+      },
+      {
+        "area": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      },
+      {
+        "area": "Media",
+        "route": "/mission-control/media-studio.html",
+        "status": "planned"
+      },
+      {
+        "area": "Operations",
+        "route": "/mission-control/pmo.html",
+        "status": "partial"
+      }
+    ],
+    "status": "partial"
+  },
+  "institutional_reserve": {
+    "title": "Institutional Reserve",
+    "objective": "Resilience during financial uncertainty without sacrificing standards",
+    "current_reserve": 0,
+    "status": "planned"
+  },
+  "volunteer_stewardship": {
+    "title": "Volunteer Stewardship",
+    "metrics": [
+      {
+        "id": "SS-V1",
+        "metric": "Volunteer onboarding",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "SS-V2",
+        "metric": "Training completion",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "SS-V3",
+        "metric": "Leadership development",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "SS-V4",
+        "metric": "Retention",
+        "current": 0,
+        "unit": "percent",
+        "status": "planned"
+      },
+      {
+        "id": "SS-V5",
+        "metric": "Recognition",
+        "current": 0,
+        "status": "planned"
+      }
+    ],
+    "status": "planned"
+  },
+  "knowledge_preservation": {
+    "title": "Knowledge Preservation",
+    "items": [
+      "Research",
+      "Documentation",
+      "Editorial standards",
+      "Mission Control history",
+      "Governance decisions",
+      "Educational resources",
+      "Institutional memory"
+    ],
+    "principle": "Knowledge continuity as important as financial continuity",
+    "builds_documented": 67,
+    "status": "partial"
+  },
+  "technology_sustainability": {
+    "title": "Technology Sustainability",
+    "requirements": [
+      "Documented architecture",
+      "Automated backups",
+      "Disaster recovery planning",
+      "Version control",
+      "Infrastructure documentation",
+      "Maintainable software"
+    ],
+    "version_control": true,
+    "github_connected": true,
+    "status": "partial"
+  },
+  "leadership_sustainability": {
+    "title": "Leadership Sustainability",
+    "elements": [
+      "Documentation",
+      "Mentorship",
+      "Shared decision-making",
+      "Leadership development",
+      "Succession planning"
+    ],
+    "no_single_point_of_failure": true,
+    "status": "partial"
+  },
+  "annual_sustainability_review": {
+    "title": "Annual Institutional Sustainability Report",
+    "sections": [
+      "Mission alignment",
+      "Financial health",
+      "Volunteer health",
+      "Coalition health",
+      "Research continuity",
+      "Technology resilience",
+      "Leadership development",
+      "Operational risks"
+    ],
+    "auto_generated": false,
+    "live": false,
+    "status": "planned"
+  },
+  "sustainability_dashboard": {
+    "title": "Sustainability Dashboard",
+    "indicators": [
+      {
+        "id": "SS-D1",
+        "indicator": "Institutional Health",
+        "current": 51,
+        "unit": "percent",
+        "status": "partial"
+      },
+      {
+        "id": "SS-D2",
+        "indicator": "Research Capacity",
+        "current": 26,
+        "unit": "percent",
+        "status": "partial"
+      },
+      {
+        "id": "SS-D3",
+        "indicator": "Volunteer Capacity",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "SS-D4",
+        "indicator": "Coalition Strength",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "SS-D5",
+        "indicator": "Technology Stability",
+        "current": 38,
+        "unit": "percent",
+        "status": "partial"
+      },
+      {
+        "id": "SS-D6",
+        "indicator": "Operational Readiness",
+        "current": 46,
+        "unit": "percent",
+        "status": "partial"
+      },
+      {
+        "id": "SS-D7",
+        "indicator": "Documentation Completeness",
+        "current": 67,
+        "target": 66,
+        "status": "partial"
+      },
+      {
+        "id": "SS-D8",
+        "indicator": "Leadership Pipeline",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "SS-D9",
+        "indicator": "Community Growth",
+        "current": 0,
+        "target": 200000,
+        "status": "planned"
+      }
+    ],
+    "status": "partial"
+  },
+  "integration": {
+    "systems": [
+      {
+        "system": "Governance Constitution (#49)",
+        "route": "/mission-control/governance.html",
+        "status": "live"
+      },
+      {
+        "system": "PMO (#54)",
+        "route": "/mission-control/pmo.html",
+        "status": "live"
+      },
+      {
+        "system": "Institutional Roadmap",
+        "route": "/mission-control/institutional-roadmap.html",
+        "status": "partial"
+      },
+      {
+        "system": "Civic Intelligence Command Center (#65)",
+        "route": "/mission-control/civic-intelligence-command-center.html",
+        "status": "live"
+      },
+      {
+        "system": "Coalition Network (#61)",
+        "route": "/mission-control/coalition-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Arkansas Action Network (#64)",
+        "route": "/mission-control/arkansas-action-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      }
+    ],
+    "monitored_with_same_rigor_as": "Research quality and educational impact"
+  },
+  "long_term_vision": "Twenty years after launch: still researching, teaching, training, documenting, supporting communities. Sustainability from governance, stewardship, diversified support, and public trust \u2014 not one source or one leader.",
+  "summary": {
+    "principles_total": 5,
+    "funding_categories": 5,
+    "funding_sources_active": 0,
+    "operational_reserve": 0,
+    "volunteers_onboarded": 0,
+    "volunteer_retention_pct": 0,
+    "annual_report_live": false,
+    "financial_report_live": false,
+    "documentation_builds": 67,
+    "documentation_pct": 102,
+    "governance_owners_assigned": 0,
+    "sustainability_stewardship_readiness_pct": 38,
+    "governance_readiness_pct": 44,
+    "institutional_maturity_pct": 32,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "0 active funding sources \u2014 no revenue tracking in Mission Control",
+    "Financial transparency report not published \u2014 annual reporting planned only",
+    "Operational reserve $0 \u2014 resilience planning not implemented",
+    "0 volunteers onboarded \u2014 volunteer stewardship metrics not wired",
+    "Annual Sustainability Report not auto-generated",
+    "Resource allocation categories defined \u2014 no budget tracking per area",
+    "Educational sponsorship policy not operational \u2014 editorial separation unspecified in UI",
+    "Build #66 vs Governance (#49) annual stewardship report \u2014 unify workflows?",
+    "Technology sustainability partial \u2014 backups/DR documented in architecture, not verified",
+    "Leadership succession from Action Network (#64) not linked to stewardship dashboard",
+    "Documentation completeness counts builds \u2014 not all operational systems",
+    "PMO 0/10 department owners \u2014 stewardship roles undefined"
+  ],
+  "recommended_next_build": {
+    "number": 67,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "Funding registry schema, volunteer tracking, annual report generator, reserve policy, resource allocation dashboard, route inventory, COMP-* specs, GitHub backlog."
+  }
+}

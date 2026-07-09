@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Sustainability & Stewardship <a href="/mission-control/sustainability-stewardship.html" class="mc-inline-link">Institution That Lasts #66 →</a></h2>
+    <p class="mc-bar-note">Build #66 — Sustainability, Funding & Institutional Stewardship. 5 principles, funding portfolio, volunteer stewardship. Never compromise integrity. 0 funding sources · 0 volunteers. ~38% readiness.</p>
     <h2 class="mc-section-title">Civic Intelligence Command Center <a href="/mission-control/civic-intelligence-command-center.html" class="mc-inline-link">Executive MC #65 →</a></h2>
     <p class="mc-bar-note">Build #65 — Civic Intelligence Command Center. Executive nervous system, 10 department boards, readiness index. Unifies 65 builds. 8% launch · 0 leaders. ~43% readiness.</p>
     <h2 class="mc-section-title">Arkansas Action Network <a href="/mission-control/arkansas-action-network.html" class="mc-inline-link">200K Arkansans #64 →</a></h2>
@@ -5184,6 +5186,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCampaignFinanceObservatory();
   initArkansasActionNetwork();
   initCivicIntelligenceCommandCenter();
+  initSustainabilityStewardship();
 });
 
 async function initUxArchitecture() {
@@ -6801,6 +6804,110 @@ async function initCivicIntelligenceCommandCenter() {
       <a href="/mission-control/executive.html">MC 2.0 Executive</a> ·
       <a href="/mission-control/arkansas-action-network.html">Action Network</a> ·
       <a href="/mission-control/civic-atlas.html">Civic Atlas</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initSustainabilityStewardship() {
+  const root = document.getElementById('mc-sustainability-stewardship-root');
+  if (!root) return;
+
+  const [ssRes, mcRes] = await Promise.all([
+    fetch('/data/sustainability-stewardship.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ss = await ssRes.json();
+  const mc = await mcRes.json();
+  const s = ss.summary;
+
+  const principleRows = ss.five_sustainability_principles.map(p => `
+    <tr><td><code>${p.id}</code></td><td>${p.principle}</td><td>${p.test}</td><td>${p.status}</td></tr>`).join('');
+
+  const fundingRows = ss.funding_portfolio.categories.map(f => `
+    <tr><td><code>${f.id}</code></td><td>${f.category}</td><td>${f.sources}</td><td>${f.status}</td></tr>`).join('');
+
+  const allocRows = ss.resource_allocation.areas.map(a => `
+    <tr><td>${a.area}</td><td>${a.status}</td><td><a href="${a.route}">→</a></td></tr>`).join('');
+
+  const volunteerRows = ss.volunteer_stewardship.metrics.map(v => `
+    <tr><td><code>${v.id}</code></td><td>${v.metric}</td><td>${v.current}${v.unit ? ` ${v.unit}` : ''}</td><td>${v.status}</td></tr>`).join('');
+
+  const dashboardRows = ss.sustainability_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td><td>${d.current}${d.unit ? ` ${d.unit}` : ''}</td>
+      <td>${d.target ?? '—'}</td><td>${d.status}</td></tr>`).join('');
+
+  const systemRows = ss.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td><td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Sustainability & Stewardship</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #66 · ${ss.title}</p>
+      <h1>Building an Institution That Lasts</h1>
+      <p class="mc-header__question">${ss.governing_principle}</p>
+      <p class="mc-bar-note">${ss.purpose}</p>
+      <p class="mc-bar-note"><strong>Core philosophy:</strong> ${ss.core_philosophy}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Stewardship readiness</div><div class="mc-stat__value">${s.sustainability_stewardship_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Funding sources</div><div class="mc-stat__value">${s.funding_sources_active}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Volunteers</div><div class="mc-stat__value">${s.volunteers_onboarded}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Reserve</div><div class="mc-stat__value">${s.operational_reserve}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Builds documented</div><div class="mc-stat__value">${s.documentation_builds}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Annual report</div><div class="mc-stat__value">${s.annual_report_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Five Sustainability Principles</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Principle</th><th>Test</th><th>Status</th></tr></thead>
+      <tbody>${principleRows}</tbody></table>
+    <h2 class="mc-section-title">${ss.funding_portfolio.title}</h2>
+    <p class="mc-bar-note">Avoid single source: ${ss.funding_portfolio.avoid_single_source ? 'Yes' : 'No'} · ${ss.funding_portfolio.total_active_sources} active · ${ss.funding_portfolio.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Category</th><th>Sources</th><th>Status</th></tr></thead>
+      <tbody>${fundingRows}</tbody></table>
+    ${ss.funding_portfolio.categories.map(f => `<p class="mc-bar-note"><strong>${f.category}:</strong> ${f.description}</p>`).join('')}
+    <h2 class="mc-section-title">${ss.financial_transparency.title}</h2>
+    <p class="mc-bar-note">${ss.financial_transparency.balance} · report live: ${ss.financial_transparency.report_live ? 'Yes' : 'No'} · ${ss.financial_transparency.status}</p>
+    <ul class="mc-deliverables">${ss.financial_transparency.annual_reporting_sections.map(sec => `<li>${sec}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ss.resource_allocation.title}</h2>
+    <table class="mc-table"><thead><tr><th>Area</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${allocRows}</tbody></table>
+    <h2 class="mc-section-title">${ss.institutional_reserve.title}</h2>
+    <p class="mc-bar-note">${ss.institutional_reserve.objective} · current: ${ss.institutional_reserve.current_reserve} · ${ss.institutional_reserve.status}</p>
+    <h2 class="mc-section-title">${ss.volunteer_stewardship.title}</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${volunteerRows}</tbody></table>
+    <h2 class="mc-section-title">${ss.knowledge_preservation.title}</h2>
+    <p class="mc-bar-note">${ss.knowledge_preservation.principle} · ${ss.knowledge_preservation.builds_documented} builds documented</p>
+    <ul class="mc-deliverables">${ss.knowledge_preservation.items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ss.technology_sustainability.title}</h2>
+    <p class="mc-bar-note">Version control: ${ss.technology_sustainability.version_control ? 'Yes' : 'No'} · GitHub: ${ss.technology_sustainability.github_connected ? 'connected' : '—'} · ${ss.technology_sustainability.status}</p>
+    <ul class="mc-deliverables">${ss.technology_sustainability.requirements.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ss.leadership_sustainability.title}</h2>
+    <p class="mc-bar-note">No single point of failure: ${ss.leadership_sustainability.no_single_point_of_failure ? 'Yes' : 'No'} · ${ss.leadership_sustainability.status}</p>
+    <ul class="mc-deliverables">${ss.leadership_sustainability.elements.map(e => `<li>${e}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ss.annual_sustainability_review.title}</h2>
+    <p class="mc-bar-note">Auto-generated: ${ss.annual_sustainability_review.auto_generated ? 'Yes' : 'No'} · live: ${ss.annual_sustainability_review.live ? 'Yes' : 'No'} · ${ss.annual_sustainability_review.status}</p>
+    <ul class="mc-deliverables">${ss.annual_sustainability_review.sections.map(sec => `<li>${sec}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ss.sustainability_dashboard.title}</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Target</th><th>Status</th></tr></thead>
+      <tbody>${dashboardRows}</tbody></table>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">Monitored with same rigor as: ${ss.integration.monitored_with_same_rigor_as}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${ss.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ss.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ss.recommended_next_build.number} — ${ss.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ss.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_SUSTAINABILITY_STEWARDSHIP.md">MASTER_SUSTAINABILITY_STEWARDSHIP.md</a> ·
+      <a href="/data/sustainability-stewardship.json">JSON</a> ·
+      <a href="/mission-control/governance.html">Governance</a> ·
+      <a href="/mission-control/pmo.html">PMO</a> ·
+      <a href="/mission-control/civic-intelligence-command-center.html">Command Center</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 
