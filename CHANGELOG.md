@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.10.0] - 2026-07-09 — Build #6 Complete
+
+### Build #6: Master Content Inventory
+- **Content Master Registry v1.0** — 351 items with stable IDs (LAND, HIST, CASE, etc.)
+- `data/content-inventory.json` + `docs/CONTENT_INVENTORY.md`
+- Filterable inventory at `/mission-control/inventory.html`
+- 10 content domains, 8 cross-domain asset classes, 13-step status lifecycle
+- V1 targets ~2,700 assets documented; nothing created without registry entry
+
 ## [1.9.0] - 2026-07-09 — Build #5 Complete
 
 ### Build #5: Master Site Architecture & Navigation Blueprint

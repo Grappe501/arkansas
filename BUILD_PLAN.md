@@ -4,12 +4,12 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.9.0 · **OS:** [Mission Control](/mission-control/) · **Registry:** [Phase Registry](/mission-control/phases.html) · **IA:** [Site Architecture](/mission-control/architecture.html)  
-**Build #5:** ✅ Site Architecture · **Build #4:** ✅ Phase Registry · **Build #3:** ✅ Mission Control  
+**Current version:** 1.10.0 · **OS:** [Mission Control](/mission-control/) · **Inventory:** [Content Registry](/mission-control/inventory.html)  
+**Build #6:** ✅ Content Inventory · **Build #5:** ✅ Site Architecture · **Build #4:** ✅ Phase Registry  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
-> **Governing blueprints:** `docs/PHASE_REGISTRY.md` · `docs/SITE_ARCHITECTURE.md`  
-> **Data:** `data/phase-registry.json` · `data/site-architecture.json`
+> **Governing blueprints:** `docs/PHASE_REGISTRY.md` · `docs/SITE_ARCHITECTURE.md` · `docs/CONTENT_INVENTORY.md`  
+> **Data:** `phase-registry.json` · `site-architecture.json` · `content-inventory.json`
 
 ---
 
@@ -213,4 +213,4 @@ Learn          →  Participate     →  Organize         →  Build Solutions
 | **7** | **Civic Action Layer** | **🟡 Scaffolded v1.4.0** |
 | 8–12 | Forms, tech, launch | 🟡 |
 
-**Next:** Build #6 — Master Content Inventory. Then deep subsection pages per architecture blueprint.
+**Next:** Build #7 — First Deep Content (priority L2 articles). Expand registry as new assets are defined.

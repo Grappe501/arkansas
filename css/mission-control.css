@@ -580,6 +580,44 @@ body.mc-body .action-hub__toggle {
 .mc-arch-status--stub { background: #1e3a5f; color: #bfdbfe; }
 .mc-arch-status--planned { background: var(--mc-gray); color: #fff; }
 
+.mc-inv-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+}
+
+.mc-inv-filters label {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--mc-text-muted);
+}
+
+.mc-inv-filters select,
+.mc-inv-filters input {
+  background: var(--mc-surface-alt);
+  border: 1px solid var(--mc-border);
+  color: var(--mc-text);
+  padding: 0.35rem 0.5rem;
+  border-radius: 4px;
+}
+
+.mc-inv-table-wrap {
+  overflow-x: auto;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.mc-inv-table code { font-size: 0.75rem; }
+.mc-inv-url { font-size: 0.75rem; max-width: 140px; overflow: hidden; text-overflow: ellipsis; }
+.mc-inv-url a { color: var(--mc-accent); }
+
+.mc-inv-highlight td {
+  background: rgba(59, 130, 246, 0.15);
+}
+
 .mc-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
 .mc-table th, .mc-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--mc-border); text-align: left; }
 .mc-table th { color: var(--mc-text-muted); font-size: 0.7rem; text-transform: uppercase; }

@@ -1,5 +1,5 @@
 /**
- * Citizens United Mission Control v1.9.0 — Build #5
+ * Citizens United Mission Control v1.10.0 — Build #6
  */
 
 const isAdmin = () =>
@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Content Inventory <a href="/mission-control/inventory.html" class="mc-inline-link">Full registry →</a></h2>
+    <p class="mc-bar-note">Build #6 — stable IDs for every asset. Nothing created without registry entry.</p>
     <h2 class="mc-section-title">Site Architecture <a href="/mission-control/architecture.html" class="mc-inline-link">Full blueprint →</a></h2>
     <p class="mc-bar-note">Build #5 — 10 primary sections, 82 subsections, canonical URLs. <a href="/explore/">Public site map</a></p>
     <h2 class="mc-section-title">Master Phase Registry <a href="/mission-control/phases.html" class="mc-inline-link">Full registry →</a></h2>
@@ -433,9 +435,144 @@ async function initPhaseRegistryPage() {
   initDevConsole(data);
 }
 
+function renderInventoryRow(item) {
+  const url = item.url ? `<a href="${item.url}">${item.url}</a>` : '—';
+  return `
+    <tr class="mc-table__row--${item.status}" id="${item.id}">
+      <td><code>${item.id}</code></td>
+      <td>${item.title}</td>
+      <td>${item.parent_section}</td>
+      <td>${item.reader_level}</td>
+      <td>${item.status}</td>
+      <td>${item.completion_pct}%</td>
+      <td>${item.source_status}</td>
+      <td>${item.review_status}</td>
+      <td class="mc-inv-url">${url}</td>
+    </tr>`;
+}
+
+function initInventoryFilters(items, onFilter) {
+  const root = document.getElementById('mc-inv-filters');
+  if (!root) return;
+  const domains = [...new Set(items.map(i => i.domain).filter(Boolean))].sort((a, b) => a - b);
+  const statuses = [...new Set(items.map(i => i.status))].sort();
+
+  root.innerHTML = `
+    <label>Domain <select id="mc-inv-domain"><option value="">All</option>
+      ${domains.map(d => `<option value="${d}">${d}</option>`).join('')}</select></label>
+    <label>Status <select id="mc-inv-status"><option value="">All</option>
+      ${statuses.map(s => `<option value="${s}">${s}</option>`).join('')}</select></label>
+    <label>Level <select id="mc-inv-level"><option value="">All</option>
+      <option value="L1">L1</option><option value="L2">L2</option><option value="L3">L3</option><option value="L4">L4</option></select></label>
+    <label>Search <input type="search" id="mc-inv-search" placeholder="ID or title…"></label>`;
+
+  const apply = () => {
+    const dom = root.querySelector('#mc-inv-domain').value;
+    const st = root.querySelector('#mc-inv-status').value;
+    const lvl = root.querySelector('#mc-inv-level').value;
+    const q = root.querySelector('#mc-inv-search').value.toLowerCase();
+    const filtered = items.filter(i => {
+      if (dom && String(i.domain) !== dom) return false;
+      if (st && i.status !== st) return false;
+      if (lvl && i.reader_level !== lvl) return false;
+      if (q && !i.id.toLowerCase().includes(q) && !i.title.toLowerCase().includes(q)) return false;
+      return true;
+    });
+    onFilter(filtered);
+  };
+
+  root.querySelectorAll('select, input').forEach(el => el.addEventListener('input', apply));
+  root.querySelectorAll('select').forEach(el => el.addEventListener('change', apply));
+}
+
+async function initContentInventory() {
+  const root = document.getElementById('mc-inventory-root');
+  if (!root) return;
+
+  const [invRes, mcRes] = await Promise.all([
+    fetch('/data/content-inventory.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const inv = await invRes.json();
+  const mc = await mcRes.json();
+  const s = inv.summary;
+
+  const renderTable = (items) => {
+    const el = document.getElementById('mc-inv-table-body');
+    if (!el) return;
+    el.innerHTML = items.map(renderInventoryRow).join('');
+    const count = document.getElementById('mc-inv-count');
+    if (count) count.textContent = `${items.length} of ${inv.items.length} items`;
+  };
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Content Inventory</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #6 · ${inv.title}</p>
+      <h1>Master Content Inventory</h1>
+      <p class="mc-header__question">${inv.principle}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Registered</div><div class="mc-stat__value">${s.registered_items}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Published</div><div class="mc-stat__value">${s.published}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Partial/Outlined</div><div class="mc-stat__value">${s.partial_or_outlined}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Planned</div><div class="mc-stat__value">${s.planned}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">V1 Target</div><div class="mc-stat__value">~${s.v1_target_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Avg Completion</div><div class="mc-stat__value">${s.average_completion_pct}%</div></div>
+    </div>
+    <section class="mc-card">
+      <h3>ID Standard</h3>
+      <p class="mc-bar-note">${inv.id_standard}</p>
+    </section>
+    <h2 class="mc-section-title">Content Domains</h2>
+    <div class="mc-card">
+      <table class="mc-table">
+        <thead><tr><th>ID</th><th>Code</th><th>Domain</th><th>Est.</th><th>Registered</th></tr></thead>
+        <tbody>
+          ${inv.domains.map(d => `
+            <tr><td>${d.id}</td><td><code>${d.code}</code></td><td>${d.title}</td>
+            <td>${d.estimated_assets}</td><td>${d.registered}</td></tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+    <h2 class="mc-section-title">Cross-Domain Assets</h2>
+    <div class="mc-card">
+      <ul class="mc-deliverables">${inv.cross_domain.map(c => `
+        <li><code>${c.prefix}</code> ${c.title} — est. ${c.estimated_assets}, registered ${c.registered_items}</li>`).join('')}</ul>
+    </div>
+    <h2 class="mc-section-title">All Registered Items</h2>
+    <div class="mc-inv-filters" id="mc-inv-filters"></div>
+    <p class="mc-bar-note" id="mc-inv-count">${inv.items.length} items</p>
+    <div class="mc-card mc-inv-table-wrap">
+      <table class="mc-table mc-inv-table">
+        <thead><tr><th>ID</th><th>Title</th><th>Section</th><th>Level</th><th>Status</th><th>%</th><th>Sources</th><th>Review</th><th>URL</th></tr></thead>
+        <tbody id="mc-inv-table-body"></tbody>
+      </table>
+    </div>
+    <p class="mc-bar-note">
+      <a href="/docs/CONTENT_INVENTORY.md">CONTENT_INVENTORY.md</a> ·
+      <a href="/data/content-inventory.json">JSON</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  renderTable(inv.items);
+  initInventoryFilters(inv.items, renderTable);
+  initDevConsole(mc);
+
+  const hash = window.location.hash.slice(1);
+  if (hash) {
+    const row = document.getElementById(hash);
+    if (row) {
+      row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      row.classList.add('mc-inv-highlight');
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
   initPhaseRegistryPage();
   initArchitectureBlueprint();
+  initContentInventory();
 });

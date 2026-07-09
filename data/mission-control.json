@@ -1,6 +1,6 @@
 {
-  "version": "1.9.0",
-  "build": 5,
+  "version": "1.10.0",
+  "build": 6,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,20 +9,20 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 5,
+    "overall_completion": 6,
     "current_build": {
-      "number": 5,
-      "title": "Master Site Architecture & Navigation Blueprint"
-    },
-    "active_phase": "Information Architecture",
-    "last_completed": "Master Phase Registry",
-    "next_build": {
       "number": 6,
       "title": "Master Content Inventory"
     },
+    "active_phase": "Information Architecture",
+    "last_completed": "Master Site Architecture",
+    "next_build": {
+      "number": 7,
+      "title": "First Deep Content \u2014 Hall Priority"
+    },
     "github_status": "connected",
     "netlify_status": "production_healthy",
-    "content_readiness": 5,
+    "content_readiness": 8,
     "research_readiness": 3,
     "data_viz_readiness": 0,
     "signup_funnel_readiness": 5,
@@ -34,8 +34,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 5,
-      "note": "Governance and IA blueprint locked. Canonical site map live. Content, data, and deep pages remain early."
+      "value": 6,
+      "note": "Planning blueprints complete (phases, IA, content inventory). Published educational content remains early."
     },
     {
       "id": "constitution",
@@ -58,8 +58,8 @@
     {
       "id": "content",
       "label": "Content System",
-      "value": 5,
-      "note": "Inventories and claims ledger started. Deep content largely unwritten."
+      "value": 12,
+      "note": "Content Master Registry: 351 items with stable IDs. 15 published, 316 planned. V1 target ~2700."
     },
     {
       "id": "research",
@@ -472,6 +472,12 @@
       "id": "architecture",
       "label": "IA Blueprint",
       "href": "/mission-control/architecture.html",
+      "status": "complete"
+    },
+    {
+      "id": "inventory",
+      "label": "Content Inventory",
+      "href": "/mission-control/inventory.html",
       "status": "complete"
     }
   ],
@@ -1499,6 +1505,48 @@
   ],
   "builds": [
     {
+      "number": 6,
+      "title": "Master Content Inventory",
+      "version": "1.10.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Bill of materials for every educational asset \u2014 page-level tracking from day one",
+      "summary": "Content Master Registry v1.0: 351 items with stable IDs. 10 domains, cross-domain assets, 13-step lifecycle.",
+      "files_created": [
+        "data/content-inventory.json",
+        "docs/CONTENT_INVENTORY.md",
+        "builds/006-master-content-inventory.md",
+        "mission-control/inventory.html",
+        "scripts/gen-content-inventory.py"
+      ],
+      "files_modified": [
+        "data/mission-control.json",
+        "js/mission-control.js",
+        "css/mission-control.css"
+      ],
+      "pages_created": [
+        "/mission-control/inventory.html"
+      ],
+      "decisions_made": [
+        "Stable ID standard (DOMAIN-NNN)",
+        "Nothing created without registry entry",
+        "L2-L4 depth slots pre-registered per subsection"
+      ],
+      "open_questions": [
+        "Which subsection gets first L2 draft in Build #7?",
+        "Timeline vs glossary priority for cross-domain?"
+      ],
+      "risks": [
+        "351 registered of ~2700 v1 targets \u2014 discipline needed to expand registry as content grows"
+      ],
+      "next_recommended": 7,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/inventory.html",
+      "review_status": "complete"
+    },
+    {
       "number": 5,
       "title": "Master Site Architecture & Navigation Blueprint",
       "version": "1.9.0",
@@ -1648,21 +1696,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Constitution, Phase Registry, Site Architecture blueprint, public site map, canonical URL redirects",
-    "building_now": "IA migration \u2014 canonical URLs redirect to hall stubs; content inventory next",
+    "what_built": "Phase Registry, Site Architecture, Content Inventory with 351 stable IDs",
+    "building_now": "Registry tracking \u2014 most items planned; MT/HI and homepage partial live",
     "blocked": [
       "Participant backend",
       "Spending charts",
       "Search/glossary pages"
     ],
     "ready_public": [
-      "Home",
-      "Site map /explore/",
+      "Home L1",
+      "Site map",
       "Montana/Hawaii",
       "Mission Control",
-      "Architecture blueprint"
+      "Content inventory dashboard"
     ],
-    "next": "Build #6 \u2014 Master Content Inventory"
+    "next": "Build #7 \u2014 First Deep Content (priority L2 articles)"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -1681,5 +1729,7 @@
   "phase_registry": "/data/phase-registry.json",
   "phase_registry_route": "/mission-control/phases.html",
   "site_architecture": "/data/site-architecture.json",
-  "site_architecture_route": "/mission-control/architecture.html"
+  "site_architecture_route": "/mission-control/architecture.html",
+  "content_inventory": "/data/content-inventory.json",
+  "content_inventory_route": "/mission-control/inventory.html"
 }
