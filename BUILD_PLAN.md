@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.97.0 · **Knowledge Platform:** [/mission-control/civic-knowledge-platform.html](/mission-control/civic-knowledge-platform.html) · **93 builds complete**  
-**One source of truth** — 4 layers · canonical records · unified search spec · **Next:** Build #94 War Room Components  
+**Current version:** 1.98.0 · **Executive Institution:** [/mission-control/executive-institution.html](/mission-control/executive-institution.html) · **94 builds complete**  
+**Governance & leadership** — 12 council offices · 14 departments · decision framework · **Next:** Build #95 War Room Components  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **94** | **Master Executive Institution** | **✅ v1.98.0** |
 | **93** | **Master Civic Data Warehouse & Knowledge Platform** | **✅ v1.97.0** |
 | **92** | **Master LocalBrain Architecture** | **✅ v1.96.0** |
 | **91** | **Master AI Institution** | **✅ v1.95.0** |

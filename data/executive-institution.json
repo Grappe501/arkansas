@@ -1,0 +1,488 @@
+{
+  "version": "1.0",
+  "build": 94,
+  "updated": "2026-07-09",
+  "completion_target_date": "2027-01-01",
+  "title": "Master Executive Institution v1.0",
+  "subtitle": "The Complete Governance & Leadership Architecture",
+  "tagline": "Leadership Is a Responsibility",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/executive-institution.html",
+  "constitution": "/docs/MASTER_EXECUTIVE_INSTITUTION.md",
+  "purpose": "By January 2027, Citizens United Facts operates as a well-organized institution \u2014 not a loose collection of volunteers. Defines how leadership functions, decisions are made, departments coordinate, and accountability is maintained while remaining all-volunteer. Organized enough for extraordinary things; flexible enough to enjoy serving.",
+  "governing_principle": "Leadership exists to make it easier for volunteers to succeed. When volunteers succeed, communities grow. When communities grow, civic understanding grows. When civic understanding grows, Arkansas becomes stronger. The Executive Institution exists to make that chain of success possible every single day.",
+  "founders_principle": "Great institutions are not built because a few people work harder. They are built because thousands of volunteers know exactly where they fit, understand the mission, trust one another, and are supported by thoughtful leadership and disciplined organization.",
+  "institutional_philosophy": {
+    "title": "Institutional Philosophy",
+    "leadership_purposes": [
+      "Serve the mission",
+      "Support volunteers",
+      "Protect public trust",
+      "Strengthen civic education",
+      "Develop future leaders"
+    ],
+    "not_position_of_authority": true,
+    "leadership_is_responsibility": true
+  },
+  "executive_institution": {
+    "title": "The Executive Institution",
+    "executive_office_coordinates_not_controls": true,
+    "permanent_departments_supported": true,
+    "every_department_advances_mission": true
+  },
+  "executive_leadership_council": {
+    "title": "Executive Leadership Council",
+    "offices": [
+      {
+        "id": "EX-01",
+        "office": "Executive Director (or equivalent)",
+        "filled": false,
+        "volunteer": null
+      },
+      {
+        "id": "EX-02",
+        "office": "Deputy Director",
+        "filled": false,
+        "volunteer": null
+      },
+      {
+        "id": "EX-03",
+        "office": "Chief Research Officer",
+        "filled": false,
+        "volunteer": null
+      },
+      {
+        "id": "EX-04",
+        "office": "Chief Technology Officer",
+        "filled": false,
+        "volunteer": null
+      },
+      {
+        "id": "EX-05",
+        "office": "Chief Education Officer",
+        "filled": false,
+        "volunteer": null
+      },
+      {
+        "id": "EX-06",
+        "office": "Chief Community Officer",
+        "filled": false,
+        "volunteer": null
+      },
+      {
+        "id": "EX-07",
+        "office": "Chief Coalition Officer",
+        "filled": false,
+        "volunteer": null
+      },
+      {
+        "id": "EX-08",
+        "office": "Chief Communications Officer",
+        "filled": false,
+        "volunteer": null
+      },
+      {
+        "id": "EX-09",
+        "office": "Chief Operations Officer",
+        "filled": false,
+        "volunteer": null
+      },
+      {
+        "id": "EX-10",
+        "office": "Chief Mission Control Officer",
+        "filled": false,
+        "volunteer": null
+      },
+      {
+        "id": "EX-11",
+        "office": "Chief Volunteer Officer",
+        "filled": false,
+        "volunteer": null
+      },
+      {
+        "id": "EX-12",
+        "office": "Chief Data & AI Officer",
+        "filled": false,
+        "volunteer": null
+      }
+    ],
+    "functional_responsibilities_not_prestige": true,
+    "one_volunteer_multiple_roles": true,
+    "offices_filled": 0,
+    "offices_total": 12,
+    "status": "planned"
+  },
+  "permanent_departments": {
+    "title": "Permanent Departments",
+    "departments": [
+      {
+        "id": "DEPT-01",
+        "department": "Research",
+        "route": "/mission-control/arkansas-research-institute.html",
+        "localbrain": false,
+        "dashboard": "partial"
+      },
+      {
+        "id": "DEPT-02",
+        "department": "Education",
+        "route": "/mission-control/education-academy.html",
+        "localbrain": false,
+        "dashboard": "partial"
+      },
+      {
+        "id": "DEPT-03",
+        "department": "Technology",
+        "route": "/mission-control/platform.html",
+        "localbrain": false,
+        "dashboard": "partial"
+      },
+      {
+        "id": "DEPT-04",
+        "department": "Mission Control",
+        "route": "/mission-control/",
+        "localbrain": false,
+        "dashboard": "live"
+      },
+      {
+        "id": "DEPT-05",
+        "department": "Communications",
+        "route": "/mission-control/arkansas-communications.html",
+        "localbrain": false,
+        "dashboard": "partial"
+      },
+      {
+        "id": "DEPT-06",
+        "department": "Volunteer Development",
+        "route": "/mission-control/volunteer-funding-constitution.html",
+        "localbrain": false,
+        "dashboard": "partial"
+      },
+      {
+        "id": "DEPT-07",
+        "department": "Community Engagement",
+        "route": "/mission-control/arkansas-community-listening.html",
+        "localbrain": false,
+        "dashboard": "partial"
+      },
+      {
+        "id": "DEPT-08",
+        "department": "Coalition Development",
+        "route": "/mission-control/coalition.html",
+        "localbrain": false,
+        "dashboard": "partial"
+      },
+      {
+        "id": "DEPT-09",
+        "department": "County Operations",
+        "route": "/mission-control/arkansas-county-operating-system.html",
+        "localbrain": false,
+        "dashboard": "partial"
+      },
+      {
+        "id": "DEPT-10",
+        "department": "City Operations",
+        "route": "/mission-control/arkansas-city-operating-system.html",
+        "localbrain": false,
+        "dashboard": "partial"
+      },
+      {
+        "id": "DEPT-11",
+        "department": "Neighborhood Operations",
+        "route": "/mission-control/arkansas-neighborhood-operating-system.html",
+        "localbrain": false,
+        "dashboard": "partial"
+      },
+      {
+        "id": "DEPT-12",
+        "department": "Governance",
+        "route": "/mission-control/organizational-constitution.html",
+        "localbrain": false,
+        "dashboard": "partial"
+      },
+      {
+        "id": "DEPT-13",
+        "department": "Finance & Compliance",
+        "route": null,
+        "localbrain": false,
+        "dashboard": "planned"
+      },
+      {
+        "id": "DEPT-14",
+        "department": "Project Management Office",
+        "route": "/mission-control/pmo-execution-office.html",
+        "localbrain": false,
+        "dashboard": "partial"
+      }
+    ],
+    "each_has_localbrain_and_dashboard": true,
+    "departments_with_localbrain": 0,
+    "departments_total": 14,
+    "status": "partial"
+  },
+  "executive_meetings": {
+    "title": "Executive Meetings",
+    "rhythm": [
+      {
+        "cadence": "Weekly",
+        "focus": "Operational review",
+        "status": "specified"
+      },
+      {
+        "cadence": "Monthly",
+        "focus": "Strategic review",
+        "status": "specified"
+      },
+      {
+        "cadence": "Quarterly",
+        "focus": "Institutional review",
+        "status": "specified"
+      },
+      {
+        "cadence": "Annually",
+        "focus": "Mission review",
+        "status": "specified"
+      }
+    ],
+    "mc_prepares_briefing_materials": true,
+    "operational": false,
+    "status": "specified"
+  },
+  "decision_framework": {
+    "title": "Decision Framework",
+    "steps": [
+      {
+        "step": 1,
+        "stage": "Issue identified",
+        "status": "specified"
+      },
+      {
+        "step": 2,
+        "stage": "Research completed",
+        "status": "specified"
+      },
+      {
+        "step": 3,
+        "stage": "Alternatives evaluated",
+        "status": "specified"
+      },
+      {
+        "step": 4,
+        "stage": "Volunteer input considered",
+        "status": "specified"
+      },
+      {
+        "step": 5,
+        "stage": "Leadership decision",
+        "status": "specified"
+      },
+      {
+        "step": 6,
+        "stage": "Mission Control documentation",
+        "status": "specified"
+      },
+      {
+        "step": 7,
+        "stage": "Implementation",
+        "status": "specified"
+      },
+      {
+        "step": 8,
+        "stage": "Review",
+        "status": "specified"
+      }
+    ],
+    "institutional_memory_preserved": true,
+    "tracked_in_mc": false,
+    "status": "specified"
+  },
+  "delegation_philosophy": {
+    "title": "Delegation Philosophy",
+    "delegated_close_to_work": true,
+    "county_by_county_leadership": true,
+    "city_by_city_leadership": true,
+    "research_by_research_leadership": true,
+    "mc_coordinates_not_centralizes": true
+  },
+  "accountability": {
+    "title": "Accountability",
+    "fields_per_department": [
+      "Annual goals",
+      "Quarterly objectives",
+      "Current projects",
+      "Performance indicators",
+      "Documentation"
+    ],
+    "mc_reports_transparently": true,
+    "status": "specified"
+  },
+  "cross_department_coordination": {
+    "title": "Cross-Department Coordination",
+    "examples": [
+      "Research supports Communications",
+      "Communications supports Community",
+      "Community supports Leadership",
+      "Leadership supports Volunteers",
+      "Technology supports everyone"
+    ],
+    "mc_visualizes_continuously": true,
+    "status": "partial"
+  },
+  "leadership_development": {
+    "title": "Leadership Development",
+    "responsibilities": [
+      "Mentoring",
+      "Documentation",
+      "Delegation",
+      "Knowledge transfer",
+      "Succession planning"
+    ],
+    "healthy_institutions_produce_leaders": true,
+    "status": "specified"
+  },
+  "executive_dashboard": {
+    "title": "Executive Dashboard",
+    "indicators": [
+      {
+        "id": "EI-D01",
+        "indicator": "Department health",
+        "current": 0,
+        "unit": "%",
+        "status": "planned"
+      },
+      {
+        "id": "EI-D02",
+        "indicator": "Project completion",
+        "current": 93,
+        "unit": "%",
+        "status": "partial"
+      },
+      {
+        "id": "EI-D03",
+        "indicator": "Volunteer capacity",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "EI-D04",
+        "indicator": "Leadership vacancies",
+        "current": 12,
+        "status": "partial"
+      },
+      {
+        "id": "EI-D05",
+        "indicator": "Strategic priorities",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "EI-D06",
+        "indicator": "Institutional risks",
+        "current": 4,
+        "status": "partial"
+      },
+      {
+        "id": "EI-D07",
+        "indicator": "Upcoming milestones",
+        "current": 176,
+        "unit": " days",
+        "status": "partial"
+      },
+      {
+        "id": "EI-D08",
+        "indicator": "Executive decisions pending",
+        "current": 0,
+        "status": "planned"
+      }
+    ],
+    "live": false,
+    "leadership_operates_from_shared_information": true,
+    "status": "planned"
+  },
+  "ethics_integrity": {
+    "title": "Ethics & Integrity",
+    "commitments": [
+      "Evidence-based decision-making",
+      "Transparency",
+      "Respectful collaboration",
+      "Responsible stewardship",
+      "Volunteer empowerment",
+      "Protection of institutional independence"
+    ],
+    "public_trust_highest_priority": true,
+    "status": "specified"
+  },
+  "integration": {
+    "chain": "Mission Control \u2192 PMO \u2192 LocalBrains \u2192 Research Institute \u2192 Community Education Academy \u2192 County/City/Neighborhood OS \u2192 Communications \u2192 Coalition Network \u2192 Volunteer Network",
+    "every_component_reports_through_governance": true,
+    "systems": [
+      {
+        "system": "PMO & Execution Office (#89)",
+        "route": "/mission-control/pmo-execution-office.html",
+        "status": "live"
+      },
+      {
+        "system": "Operating Manual (#90)",
+        "route": "/mission-control/institutional-operating-manual.html",
+        "status": "live"
+      },
+      {
+        "system": "LocalBrain Architecture (#92)",
+        "route": "/mission-control/localbrain-architecture.html",
+        "status": "live"
+      },
+      {
+        "system": "Knowledge Platform (#93)",
+        "route": "/mission-control/civic-knowledge-platform.html",
+        "status": "live"
+      },
+      {
+        "system": "Organizational Constitution (#76)",
+        "route": "/mission-control/organizational-constitution.html",
+        "status": "live"
+      },
+      {
+        "system": "Execution Schedule (#88)",
+        "route": "/mission-control/execution-schedule.html",
+        "status": "live"
+      }
+    ]
+  },
+  "long_term_vision": "By January 2027, Citizens United Facts functions as a mature volunteer institution. Leadership meetings organized. Departments coordinate effectively. Mission Control provides real-time visibility. Volunteers understand roles. Decisions documented. Knowledge preserved. Sustained growth without depending on any one individual.",
+  "summary": {
+    "completion_target_date": "2027-01-01",
+    "days_remaining": 176,
+    "executive_institution_readiness_pct": 50,
+    "civic_knowledge_platform_readiness_pct": 58,
+    "localbrain_architecture_readiness_pct": 60,
+    "pmo_readiness_pct": 60,
+    "executive_dashboard_live": false,
+    "meeting_rhythm_operational": false,
+    "decision_framework_tracked": false,
+    "leadership_vacancies": 12,
+    "executive_offices_total": 12,
+    "executive_offices_filled": 0,
+    "departments_total": 14,
+    "departments_with_localbrain": 0,
+    "institutional_completion_pct": 93
+  },
+  "catalog_gaps": [
+    "Executive dashboard not live",
+    "All 12 leadership council offices vacant",
+    "No department LocalBrains assigned yet",
+    "Meeting rhythm not scheduled or tracked",
+    "Decision framework not tracked in Mission Control",
+    "Department accountability metrics not populated",
+    "Cross-department coordination not visualized",
+    "Leadership development / succession not tracked",
+    "Executive briefing materials not auto-generated",
+    "Volunteer capacity not measured",
+    "Pending executive decisions queue not operational",
+    "Finance & Compliance department has no dashboard"
+  ],
+  "recommended_next_build": {
+    "number": 95,
+    "title": "Executive War Room & Countdown Dashboard Components",
+    "note": "War room UI, countdown dashboard, executive briefing generator, leadership vacancy tracker, department health panel, COMP-* specs."
+  }
+}

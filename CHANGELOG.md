@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.98.0] - 2026-07-09 — Build #94 Master Executive Institution
+
+### The Complete Governance & Leadership Architecture
+- **Master Executive Institution v1.0** — how leadership functions in an all-volunteer institution
+- Executive Leadership Council (12 offices), 14 permanent departments, meeting rhythm, decision framework
+- Delegation philosophy, accountability, cross-department coordination, leadership development
+- Executive dashboard (8 indicators), ethics & integrity commitments
+- Integrates PMO (#89), Operating Manual (#90), LocalBrains (#92), Knowledge Platform (#93)
+- Honest: 0/12 offices filled · 0 department LocalBrains · dashboard not live · 50% readiness
+- MC dashboard: `/mission-control/executive-institution.html`
+
 ## [1.97.0] - 2026-07-09 — Build #93 Master Civic Data Warehouse & Knowledge Platform
 
 ### One Source of Truth — Institutional Intelligence Backbone

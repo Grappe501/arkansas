@@ -354,10 +354,10 @@ out = {
     ],
     'recommended_next_build': {
         'number': 94,
-        'title': 'Executive War Room & Countdown Dashboard Components',
+        'title': 'Master Executive Institution',
         'note': (
-            'War room UI, unified search, canonical record registry, knowledge lifecycle '
-            'tracker, platform health dashboard, COMP-* specs.'
+            'Complete governance & leadership architecture — executive council, departments, '
+            'meeting rhythm, decision framework, executive dashboard.'
         ),
     },
 }

@@ -1,6 +1,6 @@
 {
-  "version": "1.97.0",
-  "build": 93,
+  "version": "1.98.0",
+  "build": 94,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 93,
+    "overall_completion": 94,
     "current_build": {
-      "number": 93,
-      "title": "Citizens United Facts Master Arkansas Civic Data Warehouse & Knowledge Platform v1.0"
-    },
-    "active_phase": "Knowledge Platform \u2192 War Room",
-    "last_completed": "LocalBrain Architecture",
-    "next_build": {
       "number": 94,
+      "title": "Citizens United Facts Master Executive Institution v1.0"
+    },
+    "active_phase": "Executive Institution \u2192 War Room",
+    "last_completed": "Knowledge Platform",
+    "next_build": {
+      "number": 95,
       "title": "Executive war room & countdown dashboard components"
     },
     "github_status": "connected",
@@ -43,6 +43,7 @@
     "ai_institution_readiness": 57,
     "localbrain_architecture_readiness": 60,
     "civic_knowledge_platform_readiness": 58,
+    "executive_institution_readiness": 50,
     "coalition_network_readiness": 44,
     "citizen_action_center_readiness": 42,
     "campaign_finance_observatory_readiness": 38,
@@ -98,7 +99,7 @@
     "production_matrix_readiness": 39,
     "visitor_journey_readiness": 40,
     "technical_architecture_readiness": 38,
-    "governance_readiness": 46,
+    "governance_readiness": 50,
     "build_bible_readiness": 49,
     "data_architecture_readiness": 58,
     "ux_architecture_readiness": 39,
@@ -126,8 +127,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 93,
-      "note": "Build #93 \u2014 Knowledge Platform. 176 days to Jan 2027."
+      "value": 94,
+      "note": "Build #94 \u2014 Executive Institution. 176 days to Jan 2027."
     },
     {
       "id": "constitution",
@@ -801,7 +802,14 @@
       "label": "Knowledge Platform",
       "value": 58,
       "max": 100,
-      "note": "Unified search planned \u00b7 14 gaps."
+      "note": "Knowledge platform \u00b7 search planned \u00b7 58% readiness."
+    },
+    {
+      "id": "executive_institution",
+      "label": "Executive Institution",
+      "value": 50,
+      "max": 100,
+      "note": "12 leadership vacancies \u00b7 dashboard planned."
     }
   ],
   "public_readiness": {
@@ -1652,6 +1660,12 @@
       "id": "civic_knowledge_platform",
       "label": "Knowledge Platform",
       "href": "/mission-control/civic-knowledge-platform.html",
+      "status": "complete"
+    },
+    {
+      "id": "executive_institution",
+      "label": "Executive Institution",
+      "href": "/mission-control/executive-institution.html",
       "status": "complete"
     }
   ],
@@ -2678,6 +2692,58 @@
     }
   ],
   "builds": [
+    {
+      "number": 94,
+      "title": "Citizens United Facts Master Executive Institution v1.0",
+      "version": "1.98.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Complete governance & leadership architecture",
+      "summary": "12 council offices, 14 departments, meeting rhythm, decision framework, delegation, accountability, leadership development, executive dashboard, ethics. 50% readiness \u00b7 0/12 offices filled \u00b7 dashboard not live.",
+      "files_created": [
+        "data/executive-institution.json",
+        "docs/MASTER_EXECUTIVE_INSTITUTION.md",
+        "builds/094-executive-institution.md",
+        "mission-control/executive-institution.html",
+        "scripts/gen-executive-institution.py",
+        "scripts/update-mc-build94.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/executive-institution.html"
+      ],
+      "decisions_made": [
+        "Executive Office coordinates \u2014 does not control",
+        "12 functional leadership offices \u2014 not prestige titles",
+        "14 permanent departments with LocalBrain + dashboard each",
+        "Decision framework: issue \u2192 research \u2192 decision \u2192 MC doc \u2192 review",
+        "Delegation as close to work as practical",
+        "50% readiness \u2014 blueprint only"
+      ],
+      "open_questions": [
+        "When to fill leadership council offices?",
+        "Department LocalBrain assignment schedule?",
+        "Meeting rhythm tooling \u2014 MC calendar vs external?",
+        "Executive briefing auto-generation from MC data?"
+      ],
+      "risks": [
+        "Executive dashboard not live",
+        "All 12 leadership council offices vacant",
+        "No department LocalBrains assigned yet",
+        "Meeting rhythm not scheduled or tracked"
+      ],
+      "next_recommended": 95,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/executive-institution.html",
+      "review_status": "complete"
+    },
     {
       "number": 93,
       "title": "Citizens United Facts Master Arkansas Civic Data Warehouse & Knowledge Platform v1.0",
@@ -7667,21 +7733,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Civic Data Warehouse & Knowledge Platform v1.0 \u2014 One Source of Truth",
-    "building_now": "93 builds \u2014 executive war room next",
+    "what_built": "Master Executive Institution v1.0 \u2014 Governance & Leadership Architecture",
+    "building_now": "94 builds \u2014 executive war room next",
     "blocked": [
-      "Unified warehouse",
-      "Unified search",
-      "Canonical enforcement",
-      "Platform dashboard"
+      "Executive dashboard",
+      "Leadership vacancies",
+      "Department LocalBrains",
+      "Meeting rhythm"
     ],
     "ready_public": [
-      "Four layers",
-      "Canonical model",
-      "Lifecycle",
-      "Governance fields"
+      "Council structure",
+      "Departments",
+      "Decision framework",
+      "Ethics commitments"
     ],
-    "next": "Build #94 \u2014 Executive war room & countdown dashboard components"
+    "next": "Build #95 \u2014 Executive war room & countdown dashboard components"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8628,5 +8694,14 @@
     "platform_dashboard_live": false,
     "canonical_records_enforced": false,
     "knowledge_gaps_identified": 14
+  },
+  "executive_institution": "/data/executive-institution.json",
+  "executive_institution_dashboard": "/mission-control/executive-institution.html",
+  "executive_institution_inventory": {
+    "readiness_score": 50,
+    "executive_dashboard_live": false,
+    "leadership_vacancies": 12,
+    "departments_with_localbrain": 0,
+    "meeting_rhythm_operational": false
   }
 }

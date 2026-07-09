@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Executive Institution <a href="/mission-control/executive-institution.html" class="mc-inline-link">Governance & Leadership #94 →</a></h2>
+    <p class="mc-bar-note">Build #94 — Master Executive Institution. 12 council offices, 14 departments, meeting rhythm, decision framework, delegation, accountability. 0/12 offices filled · dashboard not live. 50% readiness.</p>
     <h2 class="mc-section-title">Knowledge Platform <a href="/mission-control/civic-knowledge-platform.html" class="mc-inline-link">One Source of Truth #93 →</a></h2>
     <p class="mc-bar-note">Build #93 — Civic Data Warehouse & Knowledge Platform. Four layers: structured data, institutional knowledge, relationship graph, intelligence. Canonical records, unified search spec. Search not live · warehouse not unified. 58% readiness.</p>
     <h2 class="mc-section-title">LocalBrain Architecture <a href="/mission-control/localbrain-architecture.html" class="mc-inline-link">Distributed Intelligence #92 →</a></h2>
@@ -5268,6 +5270,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAiInstitution();
   initLocalbrainArchitecture();
   initCivicKnowledgePlatform();
+  initExecutiveInstitution();
 });
 
 async function initUxArchitecture() {
@@ -9781,7 +9784,7 @@ async function initCivicKnowledgePlatform() {
     <tr><td><code>${d.id}</code></td><td>${d.type}</td>
       <td>${typeof d.records === 'number' ? d.records.toLocaleString() : (d.records || '—')}</td>
       <td>${d.canonical ? 'Yes' : 'No'}</td>
-      <td>${d.get('route') ? `<a href="${d.route}">→</a>` : '—'}</td></tr>`).join('');
+      <td>${d.route ? `<a href="${d.route}">→</a>` : '—'}</td></tr>`).join('');
 
   const lifecycleRows = ckp.knowledge_lifecycle.stages.map(st => `
     <tr><td>${st.stage}</td><td>${st.status}</td></tr>`).join('');
@@ -9871,6 +9874,118 @@ async function initCivicKnowledgePlatform() {
       <a href="/data/civic-knowledge-platform.json">JSON</a> ·
       <a href="/mission-control/localbrain-architecture.html">LocalBrain (#92)</a> ·
       <a href="/mission-control/knowledge-graph.html">Knowledge Graph</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initExecutiveInstitution() {
+  const root = document.getElementById('mc-executive-institution-root');
+  if (!root) return;
+
+  const [eiRes, mcRes] = await Promise.all([
+    fetch('/data/executive-institution.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ei = await eiRes.json();
+  const mc = await mcRes.json();
+  const s = ei.summary;
+
+  const officeRows = ei.executive_leadership_council.offices.map(o => `
+    <tr><td><code>${o.id}</code></td><td>${o.office}</td>
+      <td>${o.filled ? (o.volunteer || 'Filled') : 'Vacant'}</td></tr>`).join('');
+
+  const deptRows = ei.permanent_departments.departments.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.department}</td>
+      <td>${d.localbrain ? 'Yes' : 'No'}</td><td>${d.dashboard}</td>
+      <td>${d.route ? `<a href="${d.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  const meetingRows = ei.executive_meetings.rhythm.map(m => `
+    <tr><td>${m.cadence}</td><td>${m.focus}</td><td>${m.status}</td></tr>`).join('');
+
+  const decisionRows = ei.decision_framework.steps.map(st => `
+    <tr><td>${st.step}</td><td>${st.stage}</td><td>${st.status}</td></tr>`).join('');
+
+  const dashRows = ei.executive_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td>
+      <td>${typeof d.current === 'number' ? d.current.toLocaleString() : d.current}${d.unit || ''}</td>
+      <td>${d.status}</td></tr>`).join('');
+
+  const systemRows = ei.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Executive Institution</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #94 · ${ei.title}</p>
+      <h1>${ei.subtitle}</h1>
+      <p class="mc-header__question">${ei.governing_principle}</p>
+      <p class="mc-bar-note">${ei.purpose}</p>
+      <p class="mc-bar-note"><strong>${ei.tagline}</strong> · ${s.days_remaining} days to ${ei.completion_target_date}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Institution readiness</div><div class="mc-stat__value">${s.executive_institution_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Executive dashboard</div><div class="mc-stat__value">${s.executive_dashboard_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Offices filled</div><div class="mc-stat__value">${s.executive_offices_filled}/${s.executive_offices_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Departments</div><div class="mc-stat__value">${s.departments_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">LocalBrains assigned</div><div class="mc-stat__value">${s.departments_with_localbrain}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Meeting rhythm</div><div class="mc-stat__value">${s.meeting_rhythm_operational ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">${ei.institutional_philosophy.title}</h2>
+    <ul class="mc-deliverables">${ei.institutional_philosophy.leadership_purposes.map(p => `<li>${p}</li>`).join('')}</ul>
+    <p class="mc-bar-note">Leadership is responsibility, not authority: ${ei.institutional_philosophy.leadership_is_responsibility ? 'Yes' : 'No'}</p>
+    <h2 class="mc-section-title">${ei.executive_institution.title}</h2>
+    <p class="mc-bar-note">Coordinates rather than controls: ${ei.executive_institution.executive_office_coordinates_not_controls ? 'Yes' : 'No'}</p>
+    <h2 class="mc-section-title">${ei.executive_leadership_council.title}</h2>
+    <p class="mc-bar-note">Functional responsibilities · one volunteer may fill multiple roles</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Office</th><th>Status</th></tr></thead>
+      <tbody>${officeRows}</tbody></table>
+    <h2 class="mc-section-title">${ei.permanent_departments.title}</h2>
+    <p class="mc-bar-note">Each department: LocalBrain + operational dashboard</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Department</th><th>LocalBrain</th><th>Dashboard</th><th>Route</th></tr></thead>
+      <tbody>${deptRows}</tbody></table>
+    <h2 class="mc-section-title">${ei.executive_meetings.title}</h2>
+    <p class="mc-bar-note">MC prepares briefing materials before every meeting</p>
+    <table class="mc-table"><thead><tr><th>Cadence</th><th>Focus</th><th>Status</th></tr></thead>
+      <tbody>${meetingRows}</tbody></table>
+    <h2 class="mc-section-title">${ei.decision_framework.title}</h2>
+    <p class="mc-bar-note">Tracked in MC: ${ei.decision_framework.tracked_in_mc ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>Step</th><th>Stage</th><th>Status</th></tr></thead>
+      <tbody>${decisionRows}</tbody></table>
+    <h2 class="mc-section-title">${ei.delegation_philosophy.title}</h2>
+    <p class="mc-bar-note">Authority delegated close to work · MC coordinates, does not centralize</p>
+    <h2 class="mc-section-title">${ei.accountability.title}</h2>
+    <ul class="mc-deliverables">${ei.accountability.fields_per_department.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ei.cross_department_coordination.title}</h2>
+    <ul class="mc-deliverables">${ei.cross_department_coordination.examples.map(e => `<li>${e}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ei.leadership_development.title}</h2>
+    <ul class="mc-deliverables">${ei.leadership_development.responsibilities.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ei.executive_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${ei.executive_dashboard.live ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">${ei.ethics_integrity.title}</h2>
+    <ul class="mc-deliverables">${ei.ethics_integrity.commitments.map(c => `<li>${c}</li>`).join('')}</ul>
+    <p class="mc-bar-note">Public trust highest priority: ${ei.ethics_integrity.public_trust_highest_priority ? 'Yes' : 'No'}</p>
+    <h2 class="mc-section-title">Founder's Principle</h2>
+    <p class="mc-bar-note">${ei.founders_principle}</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${ei.integration.chain}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${ei.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ei.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ei.recommended_next_build.number} — ${ei.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ei.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_EXECUTIVE_INSTITUTION.md">MASTER_EXECUTIVE_INSTITUTION.md</a> ·
+      <a href="/data/executive-institution.json">JSON</a> ·
+      <a href="/mission-control/pmo-execution-office.html">PMO (#89)</a> ·
+      <a href="/mission-control/civic-knowledge-platform.html">Knowledge Platform (#93)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 
