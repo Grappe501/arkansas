@@ -18,6 +18,8 @@ const PATH_STAGE_HINTS = {
   '/the-impact': 'explore',
   '/follow-the-money': 'explore',
   '/the-debate': 'discuss',
+  '/solutions': 'evaluate',
+  '/solutions/': 'evaluate',
   '/reform': 'evaluate',
   '/teach': 'teach',
   '/educate/': 'lead',
@@ -85,7 +87,7 @@ function estimateStage() {
   if (pages.some(p => p.includes('/educate'))) return 'lead';
   if (pages.some(p => p.includes('/action/share') || p.includes('/action/ideas'))) return 'discuss';
   if (milestones.includes('community-education') || pages.some(p => p.includes('/teach') || p.includes('/educate'))) return 'teach';
-  if (halls.includes('reform') || halls.includes('debate') || halls.includes('montana-hawaii')) return 'evaluate';
+  if (halls.includes('solutions') || halls.includes('reform') || halls.includes('debate') || halls.includes('montana-hawaii')) return 'evaluate';
   if (halls.length >= 3 || pages.some(p => p.includes('/library') || p.includes('/sources'))) return 'explore';
   if (halls.length >= 1) return 'understand';
   return 'discover';

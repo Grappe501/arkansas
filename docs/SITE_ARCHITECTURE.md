@@ -34,7 +34,7 @@ Every visitor should be able to:
 | **The Impact** | What changed after 2010? | `/the-impact` | Stub |
 | **Follow the Money** | Where does political money go? | `/follow-the-money` | Stub |
 | **The Debate** | Why do intelligent people disagree? | `/the-debate` | Stub |
-| **Reform** | What are people trying to do now? | `/reform` | Partial (MT/HI live) |
+| **Reform** → **Solutions & Policy Options** | What policy options exist — and who can pursue them? | `/solutions` | Partial (hub + MT/HI live) |
 | **Teach Your Community** | How can I help educate others? | `/teach` | Partial |
 | **Source Library** | Where did this information come from? | `/sources` | Partial |
 

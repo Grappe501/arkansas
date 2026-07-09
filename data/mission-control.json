@@ -385,9 +385,9 @@
       "status": "planning"
     },
     {
-      "id": "reform",
-      "label": "Reform Paths",
-      "href": "/reform",
+      "id": "solutions",
+      "label": "Solutions & Policy Options",
+      "href": "/solutions/",
       "status": "building"
     },
     {

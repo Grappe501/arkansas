@@ -1,0 +1,145 @@
+{
+  "version": "1.0",
+  "updated": "2026-07-09",
+  "title": "Solutions & Policy Options Center",
+  "route": "/solutions/",
+  "legacy_route": "/reform",
+  "data_file": "/data/solutions-policy.json",
+  "inventory": "/data/inventories/reform.json",
+  "governing_doc": "/docs/SOLUTIONS_POLICY_OPTIONS.md",
+  "purpose": "Present a structured, evidence-based exploration of proposals advanced to address issues related to Citizens United — distinguishing existing law, proposed reforms, and educational analysis.",
+  "principle": "Educate readers about the range of policy approaches, who has authority to pursue each, and the legal or constitutional considerations — without advocacy.",
+  "authority_levels": [
+    { "id": "federal", "title": "Federal Action", "description": "Congress, federal agencies, constitutional amendment process" },
+    { "id": "state", "title": "State Action", "description": "State legislatures, ballot initiatives, state constitutions, ethics commissions" },
+    { "id": "constitutional", "title": "Constitutional Amendment", "description": "Article V process — federal or state-led convention paths" },
+    { "id": "private", "title": "Private-Sector / Institutional", "description": "Shareholder governance, corporate policy, nonprofit education" },
+    { "id": "community", "title": "Community / Civic", "description": "Education, forums, local leadership — no legislation required" },
+    { "id": "litigation", "title": "Litigation", "description": "Court challenges testing boundaries of existing precedent" }
+  ],
+  "sections": [
+    {
+      "id": "federal",
+      "title": "Federal Policy Options",
+      "question": "What could happen at the federal level?",
+      "route": "/solutions/#federal",
+      "topics": [
+        "Campaign finance legislation",
+        "Disclosure and transparency requirements",
+        "Coordination rule reforms",
+        "Federal Election Commission reforms",
+        "Public financing proposals",
+        "Shareholder disclosure or governance proposals",
+        "Constitutional amendment proposals",
+        "Congressional oversight initiatives",
+        "Election administration proposals related to campaign finance"
+      ],
+      "proposal_fields": [
+        "What the proposal is",
+        "What problem it seeks to address",
+        "Legal authority involved",
+        "Potential constitutional questions",
+        "Arguments offered by supporters",
+        "Arguments offered by critics",
+        "Current status"
+      ],
+      "share_tool": {
+        "title": "Share With Your U.S. Representative and Senators",
+        "route": "/action/contact-legislators.html#federal",
+        "description": "Provide educational resources to federal elected officials."
+      }
+    },
+    {
+      "id": "state",
+      "title": "State Policy Options",
+      "question": "What can states do?",
+      "route": "/solutions/#state",
+      "topics": [
+        "State campaign finance laws",
+        "Disclosure requirements",
+        "Corporate governance approaches",
+        "Ballot initiative opportunities",
+        "State constitutional considerations",
+        "State ethics reforms",
+        "Public education initiatives",
+        "Other state-level responses"
+      ],
+      "arkansas": {
+        "title": "Arkansas General Assembly",
+        "description": "Dedicated section on the Arkansas legislative process and educational materials shareable with state legislators.",
+        "route": "/solutions/#arkansas",
+        "assembly": "Arkansas General Assembly",
+        "share_tool": {
+          "title": "Share With Your State Legislators",
+          "route": "/action/contact-legislators.html#arkansas",
+          "description": "Send educational resources to members of the Arkansas General Assembly."
+        }
+      },
+      "live_examples": [
+        { "title": "Montana Initiative 194", "url": "/halls/montana-hawaii.html#montana", "authority": "state" },
+        { "title": "Hawaii Act 11", "url": "/halls/montana-hawaii.html#hawaii", "authority": "state" }
+      ]
+    },
+    {
+      "id": "community",
+      "title": "Community Solutions",
+      "question": "What can citizens do without legislation?",
+      "route": "/solutions/#community",
+      "topics": [
+        "Community education",
+        "Public forums",
+        "Classroom discussions",
+        "Civic clubs",
+        "Faith communities",
+        "Campus organizations",
+        "Local leadership development"
+      ],
+      "emphasis": "Expanding public understanding through education — not every response requires legislation."
+    }
+  ],
+  "comparison_matrix": {
+    "title": "Solutions Comparison Matrix",
+    "description": "Every proposal compared using a consistent educational framework.",
+    "columns": [
+      "Level of government involved",
+      "Primary decision-makers",
+      "Mechanism required (legislation, regulation, constitutional amendment, litigation, private action)",
+      "Potential advantages",
+      "Potential challenges",
+      "Current implementation status"
+    ],
+    "distinctions": [
+      "Existing law",
+      "Proposed reform",
+      "Educational analysis"
+    ]
+  },
+  "civic_engagement_tools": [
+    {
+      "id": "share-federal",
+      "title": "Share with U.S. Representative",
+      "route": "/action/contact-legislators.html#federal"
+    },
+    {
+      "id": "share-senators",
+      "title": "Share with U.S. Senators",
+      "route": "/action/contact-legislators.html#federal"
+    },
+    {
+      "id": "share-arkansas",
+      "title": "Share with Arkansas General Assembly",
+      "route": "/action/contact-legislators.html#arkansas"
+    },
+    {
+      "id": "share-community",
+      "title": "Share with local civic organizations & educators",
+      "route": "/action/share.html"
+    },
+    {
+      "id": "invite",
+      "title": "Invite others to explore the platform",
+      "route": "/action/share.html"
+    }
+  ],
+  "platform_role": "Provide accurate educational resources that readers may choose to share with public officials and their communities as part of informed civic participation."
+}

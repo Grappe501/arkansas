@@ -40,7 +40,7 @@ function renderSiteHeader(activePath) {
   const sourcesActive = activePath && (activePath.startsWith('/library') || activePath.startsWith('/sources'));
   const storyActive = activePath && (activePath.startsWith('/the-story') || activePath.includes('story-before'));
   const caseActive = activePath && (activePath.startsWith('/the-case') || activePath.includes('the-case'));
-  const reformActive = activePath && (activePath.startsWith('/reform') || activePath.includes('reform') || activePath.includes('montana-hawaii'));
+  const solutionsActive = activePath && (activePath.startsWith('/solutions') || activePath.startsWith('/reform') || activePath.includes('reform') || activePath.includes('montana-hawaii'));
 
   return `
   <header class="site-header">
@@ -53,7 +53,7 @@ function renderSiteHeader(activePath) {
         <a href="/"${activePath === '/' || activePath === '/index.html' ? ' aria-current="page"' : ''}>Home</a>
         <a href="/the-story"${storyActive ? ' aria-current="page"' : ''}>The Story</a>
         <a href="/the-case"${caseActive ? ' aria-current="page"' : ''}>The Case</a>
-        <a href="/reform"${reformActive ? ' aria-current="page"' : ''}>Reform</a>
+        <a href="/solutions/"${solutionsActive ? ' aria-current="page"' : ''}>Solutions</a>
         <a href="/teach"${teachActive ? ' aria-current="page"' : ''}>Teach</a>
         <a href="/sources"${sourcesActive ? ' aria-current="page"' : ''}>Sources</a>
         <a href="/explore/"${exploreActive ? ' aria-current="page"' : ''}>Explore</a>
@@ -69,7 +69,7 @@ function renderSiteFooter() {
       Citizens Facts · v<span data-site-version>1.14.0</span> ·
       <a href="/explore/">Site Map</a> ·
       <a href="/library/">Sources</a> ·
-      <a href="/design-system/">Design</a> ·
+      <a href="/solutions/">Solutions Center</a> ·
       <a href="/mission-control/journey.html">Journey</a> ·
       <a href="/mission-control/">Mission Control</a> ·
       <a href="/mission-control/phases.html">Phase Registry</a> ·

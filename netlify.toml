@@ -72,7 +72,17 @@
 
 [[redirects]]
   from = "/reform"
-  to = "/halls/reform.html"
+  to = "/solutions/"
+  status = 301
+
+[[redirects]]
+  from = "/solutions"
+  to = "/solutions/"
+  status = 301
+
+[[redirects]]
+  from = "/halls/reform.html"
+  to = "/solutions/"
   status = 301
 
 [[redirects]]

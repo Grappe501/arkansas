@@ -191,26 +191,29 @@
       ]
     },
     {
-      "id": "reform",
-      "title": "Reform",
-      "question": "What are people trying to do now?",
-      "purpose": "Explain modern responses to Citizens United.",
-      "canonical_url": "/reform",
-      "current_url": "/halls/reform.html",
-      "legacy_urls": ["/halls/reform.html", "/halls/montana-hawaii.html"],
+      "id": "solutions",
+      "title": "Solutions & Policy Options",
+      "question": "What policy options exist — and who can pursue them?",
+      "purpose": "Structured exploration of federal, state, constitutional, private-sector, and community responses. Distinguishes existing law, proposed reforms, and educational analysis.",
+      "canonical_url": "/solutions",
+      "current_url": "/solutions/",
+      "legacy_urls": ["/reform", "/halls/reform.html", "/halls/montana-hawaii.html"],
+      "legacy_id": "reform",
       "status": "partial",
       "registry_phase": 9,
       "reader_stage": "evaluate",
       "hall_id": "hall-6",
       "subsections": [
+        { "id": "federal", "title": "Federal Policy Options", "slug": "federal", "status": "partial", "url": "/solutions/#federal" },
+        { "id": "state", "title": "State Policy Options", "slug": "state", "status": "partial", "url": "/solutions/#state" },
+        { "id": "arkansas", "title": "Arkansas General Assembly", "slug": "arkansas", "status": "partial", "url": "/solutions/#arkansas" },
+        { "id": "community", "title": "Community Solutions", "slug": "community", "status": "partial", "url": "/solutions/#community" },
+        { "id": "matrix", "title": "Solutions Comparison Matrix", "slug": "comparison-matrix", "status": "partial", "url": "/solutions/#matrix" },
         { "id": "amendments", "title": "Constitutional Amendments", "slug": "constitutional-amendments", "status": "planned" },
-        { "id": "federal-legislation", "title": "Federal Legislation", "slug": "federal-legislation", "status": "planned" },
-        { "id": "state-legislation", "title": "State Legislation", "slug": "state-legislation", "status": "planned" },
         { "id": "montana", "title": "Montana", "slug": "montana", "status": "live", "url": "/halls/montana-hawaii.html#montana" },
         { "id": "hawaii", "title": "Hawaii", "slug": "hawaii", "status": "live", "url": "/halls/montana-hawaii.html#hawaii" },
         { "id": "other-states", "title": "Other State Efforts", "slug": "other-state-efforts", "status": "planned" },
-        { "id": "court-challenges", "title": "Court Challenges", "slug": "court-challenges", "status": "planned" },
-        { "id": "future", "title": "Future Possibilities", "slug": "future-possibilities", "status": "planned" }
+        { "id": "court-challenges", "title": "Court Challenges", "slug": "court-challenges", "status": "planned" }
       ]
     },
     {
@@ -322,7 +325,7 @@
     "pattern_examples": [
       "/the-story/progressive-era",
       "/the-case/oral-arguments",
-      "/reform/montana",
+      "/solutions/montana",
       "/sources/supreme-court-opinions"
     ],
     "canonical_primary": [
@@ -333,7 +336,7 @@
       "/the-impact",
       "/follow-the-money",
       "/the-debate",
-      "/reform",
+      "/solutions",
       "/teach",
       "/sources",
       "/mission-control"

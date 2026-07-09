@@ -24,7 +24,7 @@ Status: ✅ Done · 🟡 Partial · ⬜ Not started
 | 6 | Impact Analysis | |
 | 7 | Data & Visualization | |
 | 8 | Debate & Perspectives | |
-| 9 | Reform & Current Developments | |
+| 9 | Reform & Current Developments → **Solutions & Policy Options** | |
 | 10 | Civic Action Platform | |
 | 11 | Community Leadership | |
 | 12 | Technical Platform | |
@@ -75,7 +75,7 @@ Status: ✅ Done · 🟡 Partial · ⬜ Not started
 | 12 | After 2010 | ✅ | `/halls/after-2010.html` |
 | 13 | Follow the Money | ✅ | `/halls/money-map.html` |
 | 14 | Arguments and Debate | ✅ | `/halls/debate.html` |
-| 15 | Reform Paths | ✅ | `/halls/reform.html` |
+| 15 | **Solutions & Policy Options** | 🟡 | `/solutions/` |
 | 16 | Montana and Hawaii | ✅ | `/halls/montana-hawaii.html` |
 | 17 | Teach This Locally | ✅ | `/educate/` |
 | 18 | Source Library | ✅ | `/library/` |
@@ -212,4 +212,70 @@ Learn          →  Participate     →  Organize         →  Build Solutions
 | **7** | **Civic Action Layer** | **🟡 Scaffolded v1.4.0** |
 | 8–12 | Forms, tech, launch | 🟡 |
 
-**Next:** Build #9 — First Deep Content with MRIDs and journey-aware cross-links.
+**Next:** Build #11 — First Deep Content with MRIDs, Evidence IDs, and journey-aware cross-links.
+
+---
+
+## Solutions & Policy Options Center
+
+*Expands former "Reform Paths" into a structured policy exploration hub.*
+
+**Hub:** [/solutions/](/solutions/) · **Blueprint:** `data/solutions-policy.json` · **Doc:** [SOLUTIONS_POLICY_OPTIONS.md](/docs/SOLUTIONS_POLICY_OPTIONS.md)
+
+### Purpose
+
+Educate readers about the range of policy approaches related to *Citizens United* — who has authority to pursue each, how proposals would work, and legal or constitutional considerations. Clearly distinguish **existing law**, **proposed reforms**, and **educational analysis**.
+
+### Authority levels readers must distinguish
+
+| Level | Mechanism examples |
+|-------|-------------------|
+| Federal | Legislation, FEC reform, disclosure statutes |
+| State | Ballot initiatives, state legislatures, ethics commissions |
+| Constitutional amendment | Article V campaigns |
+| Private-sector | Shareholder governance, institutional policy |
+| Community / civic | Education, forums, local leadership |
+| Litigation | Court challenges testing precedent |
+
+### Content pillars
+
+| Pillar | Status | Route |
+|--------|--------|-------|
+| Federal Policy Options | 🟡 Hub scaffold | `/solutions/#federal` |
+| State Policy Options | 🟡 MT/HI live | `/solutions/#state` |
+| Arkansas General Assembly | 🟡 Dedicated section | `/solutions/#arkansas` |
+| Community Solutions | 🟡 Linked to Teach | `/solutions/#community` |
+| Solutions Comparison Matrix | 🟡 Live from `reform.json` | `/solutions/#matrix` |
+
+### Per-proposal content standard
+
+Each proposal explains: what it is · problem addressed · legal authority · constitutional questions · supporter arguments · critic arguments · current status.
+
+### Civic engagement tools
+
+| Tool | Status | Route |
+|------|--------|-------|
+| Share with U.S. Representative & Senators | 🟡 Scaffold | `/action/contact-legislators.html#federal` |
+| Share with Arkansas General Assembly | 🟡 Scaffold | `/action/contact-legislators.html#arkansas` |
+| Share with community & educators | 🟡 | `/action/share.html` |
+| Invite others to explore | 🟡 | `/action/share.html` |
+
+### Build steps (Solutions Center)
+
+| # | Step | Status |
+|---|------|--------|
+| S1 | Rename Reform → Solutions in IA & nav | ✅ |
+| S2 | Solutions hub page + comparison matrix | ✅ |
+| S3 | `solutions-policy.json` blueprint | ✅ |
+| S4 | Expand `reform.json` with matrix fields | ✅ |
+| S5 | Federal share tool scaffold | 🟡 |
+| S6 | Arkansas legislator share scaffold | 🟡 |
+| S7 | L2 per-proposal deep pages | ⬜ Build #11+ |
+| S8 | ZIP-based legislator lookup | ⬜ |
+| S9 | Printable share packets (PDF) | ⬜ |
+| S10 | Evidence IDs on every proposal claim | ⬜ |
+
+### URL migration
+
+- Canonical: `/solutions/`
+- Legacy `/reform` and `/halls/reform.html` → redirect to `/solutions/`

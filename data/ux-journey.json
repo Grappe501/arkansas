@@ -89,7 +89,7 @@
     { "id": "case-complete", "title": "Completed The Case", "section": "the-case", "url": "/the-case", "stage_unlock": "understand", "mrid": "UX-011" },
     { "id": "constitution-complete", "title": "Completed Constitutional Principles", "section": "the-constitution", "url": "/the-constitution", "stage_unlock": "explore", "mrid": "UX-012" },
     { "id": "impact-complete", "title": "Completed Impact", "section": "the-impact", "url": "/the-impact", "stage_unlock": "evaluate", "mrid": "UX-013" },
-    { "id": "reform-complete", "title": "Completed Reform", "section": "reform", "url": "/reform", "stage_unlock": "evaluate", "mrid": "UX-014" },
+    { "id": "reform-complete", "title": "Completed Solutions Center", "section": "solutions", "url": "/solutions/", "stage_unlock": "evaluate", "mrid": "UX-014" },
     { "id": "community-education", "title": "Completed Community Education", "section": "teach", "url": "/teach", "stage_unlock": "teach", "mrid": "UX-015" }
   ],
   "session_memory": {
@@ -124,12 +124,12 @@
       ],
       "explore": [
         { "title": "Compare Montana and Hawaii", "url": "/halls/montana-hawaii.html", "reason": "See live reform efforts side by side." },
-        { "title": "Explore current reform paths", "url": "/reform", "reason": "Understand what people are trying now." },
+        { "title": "Explore policy options", "url": "/solutions/", "reason": "Understand federal, state, and community paths." },
         { "title": "Weigh both sides fairly", "url": "/the-debate", "reason": "Evaluate strongest arguments on each side." }
       ],
       "evaluate": [
         { "title": "Share with friends and family", "url": "/action/share.html", "reason": "Start a conversation grounded in evidence." },
-        { "title": "Explore reform comparisons", "url": "/reform", "reason": "Compare amendment, federal, and state paths." },
+        { "title": "Explore solutions comparison", "url": "/solutions/#matrix", "reason": "Compare amendment, federal, and state paths." },
         { "title": "Read the source library", "url": "/sources", "reason": "Deepen evaluation with primary evidence." }
       ],
       "discuss": [
@@ -162,7 +162,7 @@
         { "title": "Primary sources", "url": "/sources" }
       ],
       "/halls/montana-hawaii.html": [
-        { "title": "All reform paths", "url": "/reform" },
+        { "title": "All policy options", "url": "/solutions/" },
         { "title": "Teach this locally", "url": "/teach" }
       ]
     }
