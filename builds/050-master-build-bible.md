@@ -46,11 +46,11 @@ The first complete architecture — master index integrating every blueprint. **
 |--------|-------|
 | Planning builds | **50 / 50** |
 | Foundation systems indexed | **28** |
-| Avg engine operational readiness | **~24%** |
+| Avg engine operational readiness | **26%** |
 | Educational assets published | **15** |
 | Public launch readiness | **8%** |
 | Implementation started | **No** (Sprint Zero next) |
-| Build Bible readiness | **~55%** |
+| Build Bible readiness | **49%** |
 
 50 design builds establish the blueprint — the institution is designed, not yet built.
 
