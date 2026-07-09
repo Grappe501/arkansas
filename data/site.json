@@ -2,8 +2,9 @@
   "site": {
     "title": "Citizens Facts",
     "tagline": "Citizens United civic education — Understand → Teach → Lead",
-    "version": "2.05.15",
+    "version": "2.05.16",
     "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000,
     "county_milestone_date": "2026-10-01",
     "software_completion_date": "2026-07-11",
     "organizational_readiness_date": "2027-01-01",

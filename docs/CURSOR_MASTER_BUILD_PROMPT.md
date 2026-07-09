@@ -31,6 +31,7 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 0m. **Volunteer Network (IMP-13):** [/docs/IMPLEMENTATION_PACKAGE_13_VOLUNTEER_NETWORK.md](/docs/IMPLEMENTATION_PACKAGE_13_VOLUNTEER_NETWORK.md) · [/data/volunteer-network-manifest.json](/data/volunteer-network-manifest.json)
 0n. **Coalition Network (IMP-14):** [/docs/IMPLEMENTATION_PACKAGE_14_COALITION_NETWORK.md](/docs/IMPLEMENTATION_PACKAGE_14_COALITION_NETWORK.md) · [/data/coalition-network-manifest.json](/data/coalition-network-manifest.json)
 0o. **Local Operating Systems (IMP-15):** [/docs/IMPLEMENTATION_PACKAGE_15_LOCAL_OPERATING_SYSTEMS.md](/docs/IMPLEMENTATION_PACKAGE_15_LOCAL_OPERATING_SYSTEMS.md) · [/data/local-operating-systems-manifest.json](/data/local-operating-systems-manifest.json)
+0p. **Communication Platform (IMP-16):** [/docs/IMPLEMENTATION_PACKAGE_16_COMMUNICATION_PLATFORM.md](/docs/IMPLEMENTATION_PACKAGE_16_COMMUNICATION_PLATFORM.md) · [/data/communication-platform-manifest.json](/data/communication-platform-manifest.json)
 
 ## Master timeline (updated IMP-11)
 
@@ -39,6 +40,7 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 | **Software complete** | **July 11, 2026** | Feature-complete platform |
 | **75 counties** | **October 1, 2026** | County profiles, dashboards, Education Leaders in all 75 counties |
 | **15% engagement** | **Ongoing → Jan 2027** | Minimum 15% of registered voters connected per county and target city |
+| **200K connected** | **Ongoing → Jan 2027** | 200,000 Arkansans connected to the platform |
 | **Organizational readiness** | **January 2027** | Statewide volunteer development, city/neighborhood systems mature, launch certification |
 
 Between the two dates: populate content, train volunteers, expand leadership, validate operations (~6 months build-out).
@@ -135,7 +137,7 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 
 ## First step to implement
 
-**IMP-01** through **IMP-15** are **documented**:
+**IMP-01** through **IMP-16** are **documented**:
 - [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
 - [Technical Architecture](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
 - [Route Map](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [route-manifest.json](/data/route-manifest.json)
@@ -151,7 +153,8 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 - [Volunteer Network](/docs/IMPLEMENTATION_PACKAGE_13_VOLUNTEER_NETWORK.md) · [volunteer-network-manifest.json](/data/volunteer-network-manifest.json)
 - [Coalition Network](/docs/IMPLEMENTATION_PACKAGE_14_COALITION_NETWORK.md) · [coalition-network-manifest.json](/data/coalition-network-manifest.json)
 - [Local Operating Systems](/docs/IMPLEMENTATION_PACKAGE_15_LOCAL_OPERATING_SYSTEMS.md) · [local-operating-systems-manifest.json](/data/local-operating-systems-manifest.json)
+- [Communication Platform](/docs/IMPLEMENTATION_PACKAGE_16_COMMUNICATION_PLATFORM.md) · [communication-platform-manifest.json](/data/communication-platform-manifest.json)
 
-**IMP-16** is next (doctrinal): Master Communication Platform, Messaging System & Arkansas Civic Media Network.
+**IMP-17** is next (doctrinal): Master Calendar, Scheduling, Event Management & Time Intelligence System.
 
 Engineering **Sprint Zero (IMP-10 step registry)** is the Band A gate before Band B code slices.

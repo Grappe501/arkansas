@@ -26,7 +26,7 @@ tl = cip.get('master_timeline', {})
 
 
 
-mc['version'] = '2.05.15'
+mc['version'] = '2.05.16'
 
 mc['updated'] = '2026-07-09'
 
@@ -53,6 +53,8 @@ mc['executive'] = {
     'days_to_county_milestone': s.get('days_to_county_milestone', 0),
 
     'engagement_goal_pct': s.get('engagement_goal_pct', 15),
+
+    'arkansans_connected_goal': s.get('arkansans_connected_goal', 200000),
 
     'days_to_organizational': s.get('days_to_organizational', s.get('days_remaining', 0)),
 
@@ -94,21 +96,21 @@ for bar in mc['progress_bars']:
 
 mc['briefing'] = {
 
-    'what_built': 'IMP-01–15 documented — statewide org framework complete (30%)',
+    'what_built': 'IMP-01–16 documented — communication platform + civic media (32%)',
 
-    'building_now': 'IMP-16 Communication Platform & Civic Media Network next; Sprint Zero pending',
+    'building_now': 'IMP-17 Calendar & Time Intelligence next; Sprint Zero pending',
 
     'blocked': ['Sprint Zero not complete', '0/50 code-implemented', f"{s.get('days_to_software', 0)} days to software target"],
 
     'ready_public': [
 
-        'Local Operating Systems', 'local-operating-systems-manifest.json', '15% engagement goal',
+        'Communication Platform', 'communication-platform-manifest.json', 'Arkansas Civic Media Network',
 
-        'Coalition Network', 'Volunteer Network', '75-by-October-1 Milestone',
+        'Local Operating Systems', '15% engagement · 200K connected goals',
 
     ],
 
-    'next': 'IMP-16 — Master Communication Platform, Messaging System & Arkansas Civic Media Network',
+    'next': 'IMP-17 — Master Calendar, Scheduling, Event Management & Time Intelligence System',
 
 }
 

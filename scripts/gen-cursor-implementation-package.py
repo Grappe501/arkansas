@@ -17,6 +17,7 @@ organizational_readiness = date(2027, 1, 1)
 today_date = date(2026, 7, 9)
 engagement_goal_pct = 15
 target_cities = 250
+arkansans_connected_goal = 200000
 days_to_software = max((software_completion - today_date).days, 0)
 days_to_county_milestone = max((county_milestone - today_date).days, 0)
 days_to_organizational = max((organizational_readiness - today_date).days, 0)
@@ -88,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 15  # IMP-01 through IMP-15 (doctrinal)
+steps_documented = 16  # IMP-01 through IMP-16 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3049,6 +3050,186 @@ LOCAL_OPERATING_SYSTEMS_MANIFEST = {
     'implemented': False,
 }
 
+COMMUNICATION_PHILOSOPHY = [
+    'clearly', 'honestly', 'consistently', 'respectfully', 'only_what_is_useful',
+]
+
+COMMUNICATION_LAYERS = {
+    'layer_1_public': {
+        'title': 'Public Communication',
+        'audience': 'everyone',
+        'examples': [
+            'research_releases', 'educational_articles', 'public_announcements',
+            'videos', 'educational_campaigns', 'community_event_listings',
+        ],
+    },
+    'layer_2_member': {
+        'title': 'Member Communication',
+        'audience': 'registered_users',
+        'examples': [
+            'learning_reminders', 'recommended_resources', 'saved_topics',
+            'personal_calendar_updates', 'account_notifications',
+        ],
+    },
+    'layer_3_volunteer': {
+        'title': 'Volunteer Communication',
+        'audience': 'volunteers',
+        'examples': [
+            'assignments', 'projects', 'mentorship', 'training',
+            'county_updates', 'education_leader_coordination',
+        ],
+    },
+    'layer_4_organization': {
+        'title': 'Organization Communication',
+        'audience': 'coalition_partners',
+        'examples': [
+            'coalition_announcements', 'shared_projects', 'joint_events',
+            'resource_updates', 'organization_messaging',
+        ],
+    },
+    'layer_5_executive': {
+        'title': 'Executive Communication',
+        'audience': 'leadership',
+        'examples': [
+            'mission_control_alerts', 'executive_briefings', 'risk_notifications',
+            'strategic_updates', 'pmo_reports', 'leadership_coordination',
+        ],
+    },
+}
+
+PERSONAL_INBOX_FEATURES = [
+    'messages', 'announcements', 'learning_reminders', 'volunteer_assignments',
+    'calendar_invitations', 'organization_updates', 'ai_summaries', 'priority_alerts',
+]
+
+NOTIFICATION_PREFERENCES = [
+    'research_updates', 'county_activity', 'community_conversations',
+    'academy_reminders', 'volunteer_assignments', 'coalition_news', 'executive_alerts',
+]
+
+BROADCAST_SCOPES = [
+    'county', 'city', 'neighborhood', 'volunteer_team', 'organization', 'academy_learners',
+]
+
+NEWSLETTER_CHANNELS = [
+    'statewide', 'county', 'city', 'topic', 'academy', 'research', 'volunteer', 'coalition',
+]
+
+EVENT_COMMUNICATION_STAGES = [
+    'invitations', 'reminders', 'attendance_confirmation', 'follow_up_resources',
+    'post_event_surveys', 'educational_recommendations',
+]
+
+INTERNAL_MESSAGING_CHANNELS = [
+    'direct_messages', 'group_discussions', 'project_conversations', 'volunteer_teams',
+    'organization_channels', 'county_leadership',
+]
+
+AI_COMMUNICATION_CAPABILITIES = [
+    'draft_announcements', 'summarize_discussions', 'prepare_presentations',
+    'generate_newsletters', 'suggest_responses', 'create_meeting_agendas',
+    'translate_research_to_plain_language',
+]
+
+CIVIC_MEDIA_FORMATS = [
+    'articles', 'videos', 'podcasts', 'infographics', 'presentation_decks',
+    'printable_handouts', 'short_educational_clips', 'downloadable_resources',
+]
+
+COMMUNICATION_CALENDAR_ITEMS = [
+    'research_releases', 'educational_campaigns', 'academy_launches',
+    'volunteer_recruitment', 'community_conversations', 'public_events',
+    'annual_reports', 'institution_wide_announcements',
+]
+
+COMMUNITY_FEEDBACK_ACTIONS = [
+    'ask_questions', 'suggest_resources', 'report_errors', 'recommend_topics',
+    'provide_event_feedback', 'request_presentations',
+]
+
+MC_COMMUNICATION_METRICS = [
+    'messages_delivered', 'open_rates', 'resource_downloads', 'newsletter_engagement',
+    'community_participation', 'presentation_requests', 'questions_received',
+    'response_times', 'most_requested_topics',
+]
+
+GROWTH_COMMUNICATION_DASHBOARDS = [
+    'county_representation_75', 'city_leadership_250', 'engagement_15pct',
+    'arkansans_connected_200k', 'educational_participation', 'volunteer_growth',
+]
+
+COMMUNICATION_SYSTEM_CHAIN = [
+    'mission_control', 'knowledge_platform', 'community_education_academy',
+    'volunteer_network', 'coalition_network', 'county_operating_system',
+    'city_operating_system', 'neighborhood_operating_system', 'calendar_brain', 'ai_localbrains',
+]
+
+FOUNDATIONAL_SYSTEMS_WITH_COMMUNICATION = [
+    'institutional_architecture', 'mission_control', 'localbrains', 'knowledge_platform',
+    'research_institute', 'community_education_academy', 'volunteer_network',
+    'coalition_network', 'local_operating_systems', 'communication_platform',
+]
+
+COMMUNICATION_PLATFORM_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-16',
+    'updated': today,
+    'title': 'Master Communication Platform, Messaging System & Arkansas Civic Media Network',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_16_COMMUNICATION_PLATFORM.md',
+    'source_registries': {
+        'arkansas_communications': '/data/arkansas-communications.json',
+        'media_studio': '/data/media-studio.json',
+        'local_operating_systems': '/data/local-operating-systems-manifest.json',
+        'volunteer_network': '/data/volunteer-network-manifest.json',
+        'coalition_network': '/data/coalition-network-manifest.json',
+        'education_academy': '/data/education-academy-manifest.json',
+    },
+    'philosophy': 'Signal not noise — every communication strengthens trust and civic learning',
+    'governing_principle': (
+        'Every message should help someone learn, connect, participate, or lead; '
+        'timely, trustworthy communication strengthens relationships'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'communication_philosophy': COMMUNICATION_PHILOSOPHY,
+    'communication_layers': COMMUNICATION_LAYERS,
+    'communication_layer_count': len(COMMUNICATION_LAYERS),
+    'personal_inbox_features': PERSONAL_INBOX_FEATURES,
+    'notification_preferences': NOTIFICATION_PREFERENCES,
+    'broadcast_scopes': BROADCAST_SCOPES,
+    'newsletter_channels': NEWSLETTER_CHANNELS,
+    'event_communication_stages': EVENT_COMMUNICATION_STAGES,
+    'internal_messaging_channels': INTERNAL_MESSAGING_CHANNELS,
+    'ai_communication_capabilities': AI_COMMUNICATION_CAPABILITIES,
+    'ai_communication_rule': 'AI supports communication while preserving human oversight',
+    'civic_media_formats': CIVIC_MEDIA_FORMATS,
+    'civic_media_format_count': len(CIVIC_MEDIA_FORMATS),
+    'communication_calendar_items': COMMUNICATION_CALENDAR_ITEMS,
+    'community_feedback_actions': COMMUNITY_FEEDBACK_ACTIONS,
+    'mc_communication_metrics': MC_COMMUNICATION_METRICS,
+    'growth_communication_dashboards': GROWTH_COMMUNICATION_DASHBOARDS,
+    'organizational_goals': {
+        'counties_total': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'communication_system_chain': COMMUNICATION_SYSTEM_CHAIN,
+    'foundational_systems': FOUNDATIONAL_SYSTEMS_WITH_COMMUNICATION,
+    'packages_completed': 16,
+    'packages_total': 50,
+    'packages_complete_pct': 32,
+    'engineering_note': 'Doctrinal IMP-16 Communication Platform; engineering IMP-16 is component registry COMP-* index',
+    'status': 'documented',
+    'implemented': False,
+}
+
 ROUTE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -3116,11 +3297,12 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D16', 'indicator': 'Volunteer Network (IMP-13)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D17', 'indicator': 'Coalition Network (IMP-14)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D18', 'indicator': 'Local Operating Systems (IMP-15)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D19', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D19', 'indicator': 'Communication Platform (IMP-16)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D20', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
-    90,
+    92,
     14
     + len(IMPLEMENTATION_STEPS) // 2
     + len(BANDS) * 2
@@ -3502,7 +3684,30 @@ out = {
             'number': 16,
             'id': 'IMP-16',
             'title': 'Master Communication Platform, Messaging System & Arkansas Civic Media Network',
-            'note': 'Doctrinal package 16; engineering IMP-16 is component registry COMP-* index',
+            'status': 'documented',
+        },
+    },
+    'communication_platform': {
+        'title': 'Master Communication Platform, Messaging System & Arkansas Civic Media Network',
+        'package': 'Implementation Package 16 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_16_COMMUNICATION_PLATFORM.md',
+        'manifest': '/data/communication-platform-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': COMMUNICATION_PLATFORM_MANIFEST['philosophy'],
+        'communication_layer_count': COMMUNICATION_PLATFORM_MANIFEST['communication_layer_count'],
+        'civic_media_format_count': COMMUNICATION_PLATFORM_MANIFEST['civic_media_format_count'],
+        'newsletter_channel_count': len(NEWSLETTER_CHANNELS),
+        'packages_completed': COMMUNICATION_PLATFORM_MANIFEST['packages_completed'],
+        'packages_complete_pct': COMMUNICATION_PLATFORM_MANIFEST['packages_complete_pct'],
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'engineering_note': COMMUNICATION_PLATFORM_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 17,
+            'id': 'IMP-17',
+            'title': 'Master Calendar, Scheduling, Event Management & Time Intelligence System',
+            'note': 'Doctrinal package 17; engineering IMP-17 is COMP-01–05 primitive specs',
         },
     },
     'master_timeline': MASTER_TIMELINE,
@@ -3561,6 +3766,7 @@ out = {
         'days_to_county_milestone': days_to_county_milestone,
         'days_to_organizational': days_to_organizational,
         'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
         'completion_target_date': organizational_readiness_date,
         'days_remaining': days_to_organizational,
         'implementation_package_readiness_pct': implementation_package_readiness,
@@ -3653,6 +3859,10 @@ with open(root / 'data/coalition-network-manifest.json', 'w', newline='\n') as f
 
 with open(root / 'data/local-operating-systems-manifest.json', 'w', newline='\n') as f:
     json.dump(LOCAL_OPERATING_SYSTEMS_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/communication-platform-manifest.json', 'w', newline='\n') as f:
+    json.dump(COMMUNICATION_PLATFORM_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

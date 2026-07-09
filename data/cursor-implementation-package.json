@@ -481,7 +481,30 @@
       "number": 16,
       "id": "IMP-16",
       "title": "Master Communication Platform, Messaging System & Arkansas Civic Media Network",
-      "note": "Doctrinal package 16; engineering IMP-16 is component registry COMP-* index"
+      "status": "documented"
+    }
+  },
+  "communication_platform": {
+    "title": "Master Communication Platform, Messaging System & Arkansas Civic Media Network",
+    "package": "Implementation Package 16 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_16_COMMUNICATION_PLATFORM.md",
+    "manifest": "/data/communication-platform-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Signal not noise \u2014 every communication strengthens trust and civic learning",
+    "communication_layer_count": 5,
+    "civic_media_format_count": 8,
+    "newsletter_channel_count": 8,
+    "packages_completed": 16,
+    "packages_complete_pct": 32,
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000,
+    "engineering_note": "Doctrinal IMP-16 Communication Platform; engineering IMP-16 is component registry COMP-* index",
+    "next_package": {
+      "number": 17,
+      "id": "IMP-17",
+      "title": "Master Calendar, Scheduling, Event Management & Time Intelligence System",
+      "note": "Doctrinal package 17; engineering IMP-17 is COMP-01\u201305 primitive specs"
     }
   },
   "master_timeline": {
@@ -1883,7 +1906,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 15,
+        "current": 16,
         "status": "partial"
       },
       {
@@ -1984,6 +2007,12 @@
       },
       {
         "id": "CIP-D19",
+        "indicator": "Communication Platform (IMP-16)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D20",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -2033,11 +2062,12 @@
     "days_to_county_milestone": 84,
     "days_to_organizational": 176,
     "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000,
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "implementation_package_readiness_pct": 90,
+    "implementation_package_readiness_pct": 92,
     "steps_total": 50,
-    "steps_documented": 15,
+    "steps_documented": 16,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,
