@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.35.0] - 2026-07-09 — Build #31 County Operating System
+
+### Arkansas County Operating System
+- **County Education Network Blueprint v1.0** — 75 counties, 12 profile sections
+- 5-category County Education Score (no competitive rankings)
+- 6 leadership roles, 7 regional groupings, outreach gap signals
+- Aligned to county-coalition-index (75 scaffolds, 0 partners)
+- 28% honest readiness — structure exists, all metrics at zero
+- MC dashboard: `/mission-control/county-os.html`
+
 ## [1.34.0] - 2026-07-09 — Build #30 Outreach Engine
 
 ### Public Engagement & Education Campaign System

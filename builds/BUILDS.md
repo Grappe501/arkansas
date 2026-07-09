@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#31** | **County Operating System** | **1.35.0** | **✅ Complete** | [031](031-county-operating-system.md) · [/mission-control/county-os.html](../mission-control/county-os.html) |
 | **#30** | **Outreach Engine** | **1.34.0** | **✅ Complete** | [030](030-outreach-engine.md) · [/mission-control/outreach.html](../mission-control/outreach.html) |
 | **#29** | **Research Observatory** | **1.33.0** | **✅ Complete** | [029](029-research-observatory.md) · [/mission-control/research-observatory.html](../mission-control/research-observatory.html) |
 | **#28** | **Education Academy** | **1.32.0** | **✅ Complete** | [028](028-education-academy.md) · [/mission-control/education-academy.html](../mission-control/education-academy.html) |
@@ -44,6 +45,7 @@
 | **Education Academy** | `/mission-control/education-academy.html` | **4 stages · 8 modules · leader development** |
 | **Research Observatory** | `/mission-control/research-observatory.html` | **6 divisions · legislative intelligence · gaps** |
 | **Outreach Engine** | `/mission-control/outreach.html` | **5 pillars · 7 campaigns · county outreach** |
+| **County Operating System** | `/mission-control/county-os.html` | **75 counties · education score · regions** |
 | Phase Registry | `/mission-control/phases.html` | Project phases |
 | Site Architecture | `/mission-control/architecture.html` | Information architecture (IA) |
 | **Platform Blueprint** | `/mission-control/platform.html` | **Technical architecture · v1 system** |

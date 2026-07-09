@@ -1,6 +1,6 @@
 {
-  "version": "1.34.0",
-  "build": 30,
+  "version": "1.35.0",
+  "build": 31,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 30,
+    "overall_completion": 31,
     "current_build": {
-      "number": 30,
-      "title": "Citizens United Facts Public Engagement & Education Campaign System"
-    },
-    "active_phase": "Arkansas Outreach \u2014 Public Engagement Campaign System",
-    "last_completed": "Research Observatory",
-    "next_build": {
       "number": 31,
+      "title": "Citizens United Facts Arkansas County Operating System"
+    },
+    "active_phase": "County Education Network \u2014 Arkansas County OS",
+    "last_completed": "Public Engagement & Outreach Engine",
+    "next_build": {
+      "number": 32,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
@@ -26,8 +26,8 @@
     "research_readiness": 22,
     "data_viz_readiness": 2,
     "signup_funnel_readiness": 22,
-    "civic_action_readiness": 30,
-    "coalition_readiness": 16,
+    "civic_action_readiness": 32,
+    "coalition_readiness": 18,
     "data_model_readiness": 38,
     "route_inventory_readiness": 18,
     "component_registry_readiness": 22,
@@ -44,6 +44,7 @@
     "education_academy_readiness": 24,
     "observatory_readiness": 18,
     "outreach_readiness": 22,
+    "county_os_readiness": 28,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -51,8 +52,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 30,
-      "note": "Outreach Engine live \u2014 5 pillars, 7 campaigns. Help more Arkansans understand."
+      "value": 31,
+      "note": "County OS live \u2014 75 county scaffolds, education score architecture. One county at a time."
     },
     {
       "id": "constitution",
@@ -286,6 +287,13 @@
       "value": 22,
       "max": 100,
       "note": "3 pillars partial \u2014 no analytics or campaign management yet."
+    },
+    {
+      "id": "county_os",
+      "label": "County Operating System",
+      "value": 28,
+      "max": 100,
+      "note": "0 counties with partners \u2014 75 scaffolds at 0% completeness."
     }
   ],
   "public_readiness": {
@@ -758,6 +766,12 @@
       "id": "outreach_engine",
       "label": "Outreach Engine",
       "href": "/mission-control/outreach.html",
+      "status": "complete"
+    },
+    {
+      "id": "county_os",
+      "label": "County Operating System",
+      "href": "/mission-control/county-os.html",
       "status": "complete"
     }
   ],
@@ -1784,6 +1798,54 @@
     }
   ],
   "builds": [
+    {
+      "number": 31,
+      "title": "Citizens United Facts Arkansas County Operating System",
+      "version": "1.35.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "County Education Network Blueprint v1.0 \u2014 75 locally relevant educational presences",
+      "summary": "75 counties, 5 score categories, 7 regions; 28% readiness.",
+      "files_created": [
+        "data/county-operating-system.json",
+        "docs/COUNTY_OPERATING_SYSTEM.md",
+        "builds/031-county-operating-system.md",
+        "mission-control/county-os.html",
+        "scripts/gen-county-operating-system.py",
+        "scripts/update-mc-build31.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/county-os.html"
+      ],
+      "decisions_made": [
+        "12 county profile sections per /arkansas/[county-name]",
+        "5-category County Education Score \u2014 no competitive rankings",
+        "6 volunteer leadership roles per county",
+        "7 regional groupings for broader trends",
+        "Aligned to county-coalition-index (75 counties scaffolded)",
+        "28% honest readiness \u2014 scaffolds exist, all metrics at zero"
+      ],
+      "open_questions": [
+        "When to migrate to canonical /arkansas/[county] routes?",
+        "District data source?"
+      ],
+      "risks": [
+        "0 counties with partners",
+        "Public officials not mapped per county"
+      ],
+      "next_recommended": 32,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/county-os.html",
+      "review_status": "complete"
+    },
     {
       "number": 30,
       "title": "Citizens United Facts Public Engagement & Education Campaign System",
@@ -3122,20 +3184,20 @@
     }
   ],
   "briefing": {
-    "what_built": "Outreach Engine v1.0 \u2014 5 pillars, 7 campaigns, Arkansas county outreach",
-    "building_now": "Public engagement architecture \u2014 component specs next",
+    "what_built": "County OS v1.0 \u2014 75 county scaffolds, education score, regional architecture",
+    "building_now": "County network \u2014 component specs to map profile sections next",
     "blocked": [
-      "No analytics integration",
-      "Campaign management not built",
-      "Social library planned"
+      "0 counties with partners",
+      "Canonical /arkansas routes not built",
+      "Education score not computed"
     ],
     "ready_public": [
-      "Outreach MC dashboard",
-      "Pillar + campaign map",
-      "Share toolkit schema",
-      "County outreach profile"
+      "County OS MC dashboard",
+      "75 county index",
+      "Profile section schema",
+      "Regional groupings"
     ],
-    "next": "Build #31 \u2014 Component specifications with props/states"
+    "next": "Build #32 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -3428,5 +3490,17 @@
     "campaigns_partial": 2,
     "analytics_live": 0,
     "campaign_management_live": false
+  },
+  "county_operating_system": "/data/county-operating-system.json",
+  "county_os_dashboard": "/mission-control/county-os.html",
+  "county_os_inventory": {
+    "readiness_score": 28,
+    "counties_total": 75,
+    "counties_scaffolded": 75,
+    "counties_with_partner": 0,
+    "education_score_categories": 5,
+    "regions": 7,
+    "canonical_route_live": false,
+    "education_score_live": false
   }
 }

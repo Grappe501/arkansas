@@ -1,0 +1,302 @@
+{
+  "version": "1.0",
+  "build": 31,
+  "updated": "2026-07-09",
+  "title": "Arkansas County Operating System v1.0",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/county-os.html",
+  "canonical_county_route": "/arkansas/[county-name]",
+  "current_county_route": "/coalition/county.html?county={slug}",
+  "constitution": "/docs/COUNTY_OPERATING_SYSTEM.md",
+  "purpose": "Transform statewide website into 75 locally relevant educational presences.",
+  "county_philosophy": "Grow one county at a time \u2014 meaningful engagement, not just coverage.",
+  "governing_principle": "Strong statewide civic education is built from strong local communities.",
+  "counties_total": 75,
+  "county_profile_sections": [
+    "County overview",
+    "Population snapshot",
+    "Legislative districts",
+    "Congressional district",
+    "State Senate districts",
+    "State House districts",
+    "Major communities",
+    "Coalition partners",
+    "Education Leaders",
+    "Upcoming educational events",
+    "Community conversations",
+    "Available resources"
+  ],
+  "education_score_categories": [
+    {
+      "id": "COS-ES-L",
+      "title": "Learning",
+      "indicators": [
+        "Registered learners",
+        "Returning learners",
+        "Learning path completion"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "COS-ES-LD",
+      "title": "Leadership",
+      "indicators": [
+        "Education Leaders",
+        "Community conversation hosts",
+        "Research volunteers"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "COS-ES-C",
+      "title": "Coalition",
+      "indicators": [
+        "Partner organizations",
+        "New organizations",
+        "Organization activity"
+      ],
+      "status": "partial"
+    },
+    {
+      "id": "COS-ES-CM",
+      "title": "Community",
+      "indicators": [
+        "Educational events",
+        "Presentations delivered",
+        "Resource downloads"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "COS-ES-R",
+      "title": "Research",
+      "indicators": [
+        "Arkansas-specific resources",
+        "Local educational content",
+        "County profile completeness"
+      ],
+      "status": "planned"
+    }
+  ],
+  "leadership_roles": [
+    "County Education Leader",
+    "Coalition Coordinator",
+    "Event Coordinator",
+    "Research Contributor",
+    "Community Conversation Facilitator",
+    "Organization Liaison"
+  ],
+  "organization_directory_types": [
+    "Civic clubs",
+    "Libraries",
+    "Educational institutions",
+    "Faith communities",
+    "Community nonprofits",
+    "Neighborhood associations",
+    "Veteran organizations",
+    "Professional associations"
+  ],
+  "public_official_categories": [
+    "Arkansas House members",
+    "Arkansas Senators",
+    "Arkansas constitutional officers (where relevant)",
+    "Arkansas's U.S. Representative for the district",
+    "Arkansas's U.S. Senators"
+  ],
+  "resource_library": [
+    "Downloadable educational materials",
+    "Presentation slides",
+    "Community conversation guides",
+    "Frequently asked questions",
+    "Arkansas legislative resources",
+    "Relevant research summaries"
+  ],
+  "event_calendar_types": [
+    "Educational events",
+    "Community conversations",
+    "Coalition meetings",
+    "Workshops",
+    "Presentations",
+    "Webinars"
+  ],
+  "outreach_gap_signals": [
+    "No Education Leaders",
+    "No coalition organizations",
+    "Few community conversations",
+    "Limited resource usage",
+    "No scheduled events"
+  ],
+  "regions": [
+    {
+      "id": "COS-RG-01",
+      "title": "Northwest Arkansas",
+      "status": "defined"
+    },
+    {
+      "id": "COS-RG-02",
+      "title": "North Central Arkansas",
+      "status": "defined"
+    },
+    {
+      "id": "COS-RG-03",
+      "title": "Central Arkansas",
+      "status": "defined"
+    },
+    {
+      "id": "COS-RG-04",
+      "title": "River Valley",
+      "status": "defined"
+    },
+    {
+      "id": "COS-RG-05",
+      "title": "Delta",
+      "status": "defined"
+    },
+    {
+      "id": "COS-RG-06",
+      "title": "Southwest Arkansas",
+      "status": "defined"
+    },
+    {
+      "id": "COS-RG-07",
+      "title": "Southeast Arkansas",
+      "status": "defined"
+    }
+  ],
+  "storytelling_types": [
+    "Community conversations hosted",
+    "Coalition organizations joining",
+    "New educational initiatives",
+    "Research contributions",
+    "Volunteer accomplishments"
+  ],
+  "county_metrics": [
+    {
+      "id": "COS-CM-01",
+      "title": "Active learners",
+      "status": "planned"
+    },
+    {
+      "id": "COS-CM-02",
+      "title": "Education Leaders",
+      "status": "partial"
+    },
+    {
+      "id": "COS-CM-03",
+      "title": "Coalition partners",
+      "status": "partial"
+    },
+    {
+      "id": "COS-CM-04",
+      "title": "Educational events",
+      "status": "planned"
+    },
+    {
+      "id": "COS-CM-05",
+      "title": "Toolkit downloads",
+      "status": "planned"
+    },
+    {
+      "id": "COS-CM-06",
+      "title": "Research volunteers",
+      "status": "planned"
+    },
+    {
+      "id": "COS-CM-07",
+      "title": "Community conversations",
+      "status": "planned"
+    },
+    {
+      "id": "COS-CM-08",
+      "title": "Public official educational outreach",
+      "status": "planned"
+    },
+    {
+      "id": "COS-CM-09",
+      "title": "Learning path completion",
+      "status": "planned"
+    }
+  ],
+  "future_expansion": [
+    "County newsletters",
+    "County resource collections",
+    "Local educational campaigns",
+    "Regional conferences",
+    "County-specific dashboards",
+    "Community-generated educational content (after review)"
+  ],
+  "county_index_alignment": {
+    "registry": "/data/county-coalition-index.json",
+    "arkansas_counties": "/data/arkansas-counties.json",
+    "build": 14,
+    "counties_registered": 75,
+    "counties_with_partner": 0,
+    "average_completeness_pct": 0
+  },
+  "statewide_totals": {
+    "organizations": 0,
+    "education_leaders": 0,
+    "upcoming_events": 0,
+    "community_conversations": 0
+  },
+  "related_systems": [
+    {
+      "title": "County Coalition Index",
+      "route": "/data/county-coalition-index.json",
+      "build": 14
+    },
+    {
+      "title": "Civic Ecosystem",
+      "route": "/mission-control/civic-ecosystem.html",
+      "build": 12
+    },
+    {
+      "title": "Outreach Engine",
+      "route": "/mission-control/outreach.html",
+      "build": 30
+    },
+    {
+      "title": "Education Academy",
+      "route": "/mission-control/education-academy.html",
+      "build": 28
+    },
+    {
+      "title": "Contact Intelligence",
+      "route": "/mission-control/contact-intelligence.html",
+      "build": 24
+    }
+  ],
+  "summary": {
+    "counties_total": 75,
+    "counties_scaffolded": 75,
+    "profile_sections": 12,
+    "education_score_categories": 5,
+    "leadership_roles": 6,
+    "regions": 7,
+    "county_metrics": 9,
+    "counties_with_partner": 0,
+    "statewide_education_leaders": 0,
+    "statewide_organizations": 0,
+    "canonical_route_live": false,
+    "education_score_live": false,
+    "public_officials_per_county": false,
+    "county_event_calendar_live": false,
+    "county_os_readiness_pct": 28
+  },
+  "catalog_gaps": [
+    "Canonical /arkansas/[county] routes not built \u2014 uses coalition/county.html?county=",
+    "County Education Score not computed per county",
+    "Public officials not mapped per county",
+    "Population and district data not on county profiles",
+    "County event calendar not per-county",
+    "Regional dashboards not built",
+    "All 75 counties at 0% completeness \u2014 no live partners yet",
+    "County storytelling section not implemented"
+  ],
+  "recommended_next_build": {
+    "number": 32,
+    "title": "Component Specifications with Props/States",
+    "note": "Map county profile sections to COMP-* components; wire education score to county-coalition-index."
+  }
+}

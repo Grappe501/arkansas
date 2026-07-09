@@ -317,6 +317,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/county-os"
+  to = "/mission-control/county-os.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301

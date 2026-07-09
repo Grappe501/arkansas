@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.34.0 · **Outreach Engine:** [/mission-control/outreach.html](/mission-control/outreach.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #30:** ✅ Outreach Engine · **Build #29:** ✅ Research Observatory · **Build #28:** ✅ Education Academy  
+**Current version:** 1.35.0 · **County OS:** [/mission-control/county-os.html](/mission-control/county-os.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #31:** ✅ County OS · **Build #30:** ✅ Outreach Engine · **Build #29:** ✅ Research Observatory  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,8 +274,25 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **31** | **County Operating System** | **✅ v1.35.0** |
 
-**Next:** Build #31 — Component specifications with props/states.
+**Next:** Build #32 — Component specifications with props/states.
+
+---
+
+## Phase 31 — County Operating System (Build #31) ★ NEW
+
+*75 counties — locally relevant educational network.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| K1 | County OS Blueprint v1.0 | ✅ | `data/county-operating-system.json` |
+| K2 | 12 county profile sections | ✅ | `/arkansas/[county-name]` canonical |
+| K3 | 5-category County Education Score | ✅ | No competitive rankings |
+| K4 | 6 leadership roles + 7 regions | ✅ | Regional dashboards planned |
+| K5 | 75 county scaffolds aligned | ✅ | `county-coalition-index.json` |
+| K6 | Outreach gap signals | ✅ | Planning priorities |
+| K7 | MC county OS dashboard | ✅ | `/mission-control/county-os.html` |
 
 ---
 
@@ -579,7 +596,8 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#28**~~ | ~~Community Education Academy~~ ✅ Done |
 | ~~**#29**~~ | ~~Research Observatory~~ ✅ Done |
 | ~~**#30**~~ | ~~Public Engagement & Outreach Engine~~ ✅ Done |
-| **#31** | **Component specifications with props/states** |
+| ~~**#31**~~ | ~~Arkansas County Operating System~~ ✅ Done |
+| **#32** | **Component specifications with props/states** |
 
 ---
 

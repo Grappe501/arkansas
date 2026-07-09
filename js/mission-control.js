@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">County Operating System <a href="/mission-control/county-os.html" class="mc-inline-link">75 Counties →</a></h2>
+    <p class="mc-bar-note">Build #31 — County profiles, education score, leadership roles, regional groupings. 28% county OS readiness.</p>
     <h2 class="mc-section-title">Outreach Engine <a href="/mission-control/outreach.html" class="mc-inline-link">Arkansas Campaigns →</a></h2>
     <p class="mc-bar-note">Build #30 — 5 pillars, 7 campaigns, share toolkit, county outreach. 22% outreach readiness.</p>
     <h2 class="mc-section-title">Research Observatory <a href="/mission-control/research-observatory.html" class="mc-inline-link">Early Warning System →</a></h2>
@@ -3012,6 +3014,89 @@ async function initOutreachEngine() {
   initDevConsole(mc);
 }
 
+async function initCountyOperatingSystem() {
+  const root = document.getElementById('mc-county-os-root');
+  if (!root) return;
+
+  const [cosRes, cciRes, mcRes] = await Promise.all([
+    fetch('/data/county-operating-system.json'),
+    fetch('/data/county-coalition-index.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const cos = await cosRes.json();
+  const cci = await cciRes.json();
+  const mc = await mcRes.json();
+  const s = cos.summary;
+  const st = cos.statewide_totals;
+
+  const scoreCards = cos.education_score_categories.map(cat => `
+    <div class="mc-card"><h3>${cat.title}</h3>
+      <ul class="mc-deliverables">${cat.indicators.map(i => `<li>${i}</li>`).join('')}</ul>
+      <p class="mc-bar-note">Status: ${cat.status}</p></div>`).join('');
+
+  const regionRows = cos.regions.map(r => `
+    <tr><td><code>${r.id}</code></td><td>${r.title}</td><td>${r.status}</td></tr>`).join('');
+
+  const metricRows = cos.county_metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td></tr>`).join('');
+
+  const countySample = (cci.counties || []).slice(0, 15).map(c => `
+    <tr><td>${c.name}</td><td><a href="${c.route}">${c.slug}</a></td>
+      <td>${c.education_leaders}</td><td>${c.organizations}</td>
+      <td>${c.completeness_pct}%</td><td>${c.status}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → County Operating System</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #31 · ${cos.title}</p>
+      <h1>Arkansas County Education Network</h1>
+      <p class="mc-header__question">${cos.governing_principle}</p>
+      <p class="mc-bar-note">Canonical: <code>${cos.canonical_county_route}</code> · Current: <code>${cos.current_county_route}</code></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">County OS readiness</div><div class="mc-stat__value">${s.county_os_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Counties</div><div class="mc-stat__value">${s.counties_scaffolded}/${s.counties_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">With partner</div><div class="mc-stat__value">${s.counties_with_partner}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Education leaders</div><div class="mc-stat__value">${st.education_leaders}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Organizations</div><div class="mc-stat__value">${st.organizations}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Conversations</div><div class="mc-stat__value">${st.community_conversations}</div></div>
+    </div>
+    <h2 class="mc-section-title">County Profile Sections (${s.profile_sections})</h2>
+    <ol class="mc-deliverables">${cos.county_profile_sections.map(sec => `<li>${sec}</li>`).join('')}</ol>
+    <h2 class="mc-section-title">County Education Score — 5 Categories</h2>
+    <div class="mc-grid-2">${scoreCards}</div>
+    <p class="mc-bar-note">No competitive rankings — indicators support planning only.</p>
+    <h2 class="mc-section-title">County Leadership Roles</h2>
+    <ul class="mc-deliverables">${cos.leadership_roles.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Regional Groupings (${s.regions})</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Region</th><th>Status</th></tr></thead>
+      <tbody>${regionRows}</tbody></table>
+    <h2 class="mc-section-title">Outreach Gap Signals</h2>
+    <ul class="mc-deliverables">${cos.outreach_gap_signals.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">County Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">75 Counties <a href="/coalition/counties.html" class="mc-inline-link">County map →</a></h2>
+    <div class="mc-card mc-inv-table-wrap" style="max-height:320px;overflow-y:auto">
+      <table class="mc-table"><thead><tr><th>County</th><th>Slug</th><th>Leaders</th><th>Orgs</th><th>Complete</th><th>Status</th></tr></thead>
+        <tbody>${countySample}</tbody></table>
+    </div>
+    <p class="mc-bar-note">Showing 15 of ${s.counties_scaffolded} — full index in county-coalition-index.json</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${cos.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${cos.recommended_next_build.number} — ${cos.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${cos.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/COUNTY_OPERATING_SYSTEM.md">COUNTY_OPERATING_SYSTEM.md</a> ·
+      <a href="/data/county-operating-system.json">JSON</a> ·
+      <a href="/data/county-coalition-index.json">County Index</a> ·
+      <a href="/mission-control/civic-ecosystem.html">Civic Ecosystem</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -3041,4 +3126,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initEducationAcademy();
   initResearchObservatory();
   initOutreachEngine();
+  initCountyOperatingSystem();
 });
