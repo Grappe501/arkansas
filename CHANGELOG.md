@@ -13,6 +13,18 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.23] - 2026-07-09 — IMP-23 Digital Library & Institutional Archive
+
+### Implementation Package 23 of 50
+- **Master Document Management, Digital Library & Institutional Archive**
+- 6 library collections · 16 metadata fields · 8 lifecycle stages · 13 search dimensions
+- Version control, institutional archive, AI document assistant, media management
+- Meeting records framework, Oct 1 county library objective
+- Machine-readable **digital-library-manifest.json**
+- Institutional OS evolution: 23/50 packages (**46%**)
+- IMP-24 next (doctrinal): Integration Platform, External Data & Open API
+- Honest: 23/50 documented · 0/50 implemented · 100% package readiness
+
 ## [2.05.22] - 2026-07-09 — IMP-22 Mobile PWA & Field Operations
 
 ### Implementation Package 22 of 50

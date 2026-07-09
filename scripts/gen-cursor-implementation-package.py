@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 22  # IMP-01 through IMP-22 (doctrinal)
+steps_documented = 23  # IMP-01 through IMP-23 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3333,7 +3333,7 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'coalition_network', 'local_operating_systems', 'communication_platform',
     'institutional_time_intelligence', 'institutional_relationship_intelligence',
     'institutional_analytics', 'institutional_automation', 'public_digital_experience',
-    'mobile_field_operations',
+    'mobile_field_operations', 'institutional_digital_library',
 ]
 
 RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
@@ -4128,6 +4128,176 @@ MOBILE_PWA_MANIFEST = {
     'implemented': False,
 }
 
+LIBRARY_PHILOSOPHY_PRINCIPLES = [
+    'stored_once', 'versioned', 'searchable', 'connected',
+    'protected', 'reusable', 'archived',
+]
+
+DIGITAL_LIBRARY_COLLECTIONS = {
+    'research': [
+        'court_opinions', 'research_papers', 'white_papers', 'academic_journals',
+        'government_publications', 'historical_documents', 'legislative_materials',
+    ],
+    'education': [
+        'courses', 'lessons', 'presentations', 'study_guides', 'discussion_guides',
+        'worksheets', 'learning_resources',
+    ],
+    'media': [
+        'videos', 'images', 'podcasts', 'infographics', 'photography',
+        'logos', 'graphics', 'animations',
+    ],
+    'governance': [
+        'constitution', 'operating_manuals', 'policies', 'implementation_packages',
+        'governance_decisions', 'meeting_records', 'strategic_plans',
+    ],
+    'community': [
+        'community_conversations', 'meeting_notes', 'county_reports', 'city_reports',
+        'volunteer_reports', 'listening_sessions', 'community_requests',
+    ],
+    'operations': [
+        'project_documents', 'pmo_reports', 'templates', 'forms',
+        'training_manuals', 'checklists', 'technical_documentation',
+    ],
+}
+
+DOCUMENT_METADATA_FIELDS = [
+    'unique_id', 'title', 'summary', 'author', 'contributors', 'date_created',
+    'date_updated', 'review_schedule', 'category', 'tags', 'county_relevance',
+    'city_relevance', 'organizations', 'related_research', 'visibility_level',
+    'version_number',
+]
+
+VERSION_CONTROL_HISTORY = [
+    'current_version', 'previous_versions', 'change_history', 'author_history',
+    'approval_history', 'publication_history',
+]
+
+ARCHIVE_CATEGORIES = [
+    'historical_research', 'retired_policies', 'superseded_publications',
+    'completed_projects', 'legacy_training', 'past_reports', 'institutional_history',
+]
+
+SEARCH_DIMENSIONS = [
+    'title', 'keyword', 'question', 'topic', 'county', 'city', 'organization',
+    'author', 'court_case', 'research_category', 'date', 'document_type',
+    'natural_language_ai',
+]
+
+DOCUMENT_RELATIONSHIP_TARGETS = [
+    'research', 'evidence', 'claims', 'courses', 'lessons', 'organizations',
+    'counties', 'cities', 'projects', 'events', 'community_conversations',
+]
+
+DOCUMENT_ACCESS_LEVELS = [
+    'public', 'registered_member', 'volunteer', 'education_leader',
+    'organization', 'executive', 'administrator',
+]
+
+AI_DOCUMENT_ASSISTANT = [
+    'find_documents', 'summarize_reports', 'compare_versions',
+    'identify_related_resources', 'extract_citations', 'executive_summaries',
+    'prepare_presentations', 'suggest_additional_reading',
+]
+
+DOCUMENT_LIFECYCLE_STAGES = [
+    'draft', 'review', 'approved', 'published', 'periodic_review',
+    'updated', 'archived', 'historical_record',
+]
+
+MEDIA_MANAGEMENT_FEATURES = [
+    'automatic_metadata', 'captions', 'transcripts', 'alternative_text',
+    'copyright_information', 'usage_rights', 'optimized_delivery',
+]
+
+MEETING_RECORD_COMPONENTS = [
+    'agenda', 'attendance', 'notes', 'decisions', 'action_items',
+    'related_documents', 'follow_up_schedule',
+]
+
+MC_LIBRARY_DASHBOARD_METRICS = [
+    'documents_created', 'documents_reviewed', 'review_compliance', 'archive_growth',
+    'library_usage', 'search_performance', 'knowledge_gaps',
+    'most_used_resources', 'county_resource_completeness',
+]
+
+OCTOBER_COUNTY_LIBRARY_REQUIREMENTS = [
+    'county_profile', 'local_government_overview', 'educational_resources',
+    'community_contacts', 'local_organizations', 'presentation_materials',
+    'community_conversation_toolkit',
+]
+
+DIGITAL_LIBRARY_SYSTEM_CHAIN = [
+    'mission_control', 'knowledge_platform', 'research_institute',
+    'community_education_academy', 'volunteer_network', 'county_operating_system',
+    'city_operating_system', 'neighborhood_operating_system', 'communications',
+    'ai_localbrains', 'relationship_intelligence',
+]
+
+DIGITAL_LIBRARY_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-23',
+    'updated': today,
+    'title': 'Master Document Management, Digital Library & Institutional Archive',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_23_DIGITAL_LIBRARY.md',
+    'source_registries': {
+        'master_research_library': '/data/master-research-library.json',
+        'encyclopedia': '/data/encyclopedia-knowledge-library.json',
+        'content_management': '/data/content-management-manifest.json',
+        'knowledge_graph': '/data/knowledge-graph-manifest.json',
+        'evidence_registry': '/data/evidence-registry.json',
+        'local_operating_systems': '/data/local-operating-systems-manifest.json',
+    },
+    'philosophy': 'Nothing important should ever be lost — every asset becomes permanent institutional memory',
+    'governing_principle': (
+        'Institutions endure because they remember; knowledge accumulated today '
+        'must strengthen Arkansas for generations to come'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'library_philosophy_principles': LIBRARY_PHILOSOPHY_PRINCIPLES,
+    'digital_library_collections': DIGITAL_LIBRARY_COLLECTIONS,
+    'collection_count': len(DIGITAL_LIBRARY_COLLECTIONS),
+    'document_metadata_fields': DOCUMENT_METADATA_FIELDS,
+    'metadata_field_count': len(DOCUMENT_METADATA_FIELDS),
+    'version_control_history': VERSION_CONTROL_HISTORY,
+    'archive_categories': ARCHIVE_CATEGORIES,
+    'search_dimensions': SEARCH_DIMENSIONS,
+    'document_relationship_targets': DOCUMENT_RELATIONSHIP_TARGETS,
+    'document_access_levels': DOCUMENT_ACCESS_LEVELS,
+    'ai_document_assistant': AI_DOCUMENT_ASSISTANT,
+    'document_lifecycle_stages': DOCUMENT_LIFECYCLE_STAGES,
+    'lifecycle_stage_count': len(DOCUMENT_LIFECYCLE_STAGES),
+    'media_management_features': MEDIA_MANAGEMENT_FEATURES,
+    'meeting_record_components': MEETING_RECORD_COMPONENTS,
+    'mc_library_dashboard_metrics': MC_LIBRARY_DASHBOARD_METRICS,
+    'october_county_library': {
+        'target_date': county_milestone_date,
+        'requirements': OCTOBER_COUNTY_LIBRARY_REQUIREMENTS,
+        'label': 'Foundational digital library in every county',
+    },
+    'organizational_goals': {
+        'counties_total': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'digital_library_system_chain': DIGITAL_LIBRARY_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/research-library.html',
+    'packages_completed': 23,
+    'packages_total': 50,
+    'packages_complete_pct': 46,
+    'engineering_note': 'Doctrinal IMP-23 Digital Library; engineering IMP-23 is Neon provisioning and migrations',
+    'status': 'documented',
+    'implemented': False,
+}
+
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -4266,7 +4436,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D23', 'indicator': 'Automation Engine (IMP-20)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D24', 'indicator': 'Public Website (IMP-21)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D25', 'indicator': 'Mobile PWA & Field Ops (IMP-22)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D26', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D26', 'indicator': 'Digital Library (IMP-23)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D27', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -4832,6 +5003,33 @@ out = {
             'number': 23,
             'id': 'IMP-23',
             'title': 'Master Document Management, Digital Library & Institutional Archive',
+            'status': 'documented',
+        },
+    },
+    'digital_library': {
+        'title': 'Master Document Management, Digital Library & Institutional Archive',
+        'package': 'Implementation Package 23 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_23_DIGITAL_LIBRARY.md',
+        'manifest': '/data/digital-library-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': DIGITAL_LIBRARY_MANIFEST['philosophy'],
+        'collection_count': DIGITAL_LIBRARY_MANIFEST['collection_count'],
+        'metadata_field_count': DIGITAL_LIBRARY_MANIFEST['metadata_field_count'],
+        'lifecycle_stage_count': DIGITAL_LIBRARY_MANIFEST['lifecycle_stage_count'],
+        'search_dimension_count': len(SEARCH_DIMENSIONS),
+        'document_access_level_count': len(DOCUMENT_ACCESS_LEVELS),
+        'packages_completed': DIGITAL_LIBRARY_MANIFEST['packages_completed'],
+        'packages_complete_pct': DIGITAL_LIBRARY_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': DIGITAL_LIBRARY_MANIFEST['mc_dashboard'],
+        'engineering_note': DIGITAL_LIBRARY_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 24,
+            'id': 'IMP-24',
+            'title': 'Master Integration Platform, External Data Services & Open API Architecture',
             'status': 'specified',
         },
     },
@@ -5012,6 +5210,10 @@ with open(root / 'data/public-website-manifest.json', 'w', newline='\n') as f:
 
 with open(root / 'data/mobile-pwa-manifest.json', 'w', newline='\n') as f:
     json.dump(MOBILE_PWA_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/digital-library-manifest.json', 'w', newline='\n') as f:
+    json.dump(DIGITAL_LIBRARY_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(
