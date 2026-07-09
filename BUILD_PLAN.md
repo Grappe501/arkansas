@@ -4,12 +4,11 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.10.0 · **OS:** [Mission Control](/mission-control/) · **Inventory:** [Content Registry](/mission-control/inventory.html)  
-**Build #6:** ✅ Content Inventory · **Build #5:** ✅ Site Architecture · **Build #4:** ✅ Phase Registry  
+**Current version:** 1.11.0 · **MRID:** [Requirement IDs](/mission-control/mrid.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #7:** ✅ MRID System · **Build #6:** ✅ Content Inventory · **Build #5:** ✅ Site Architecture  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
-> **Governing blueprints:** `docs/PHASE_REGISTRY.md` · `docs/SITE_ARCHITECTURE.md` · `docs/CONTENT_INVENTORY.md`  
-> **Data:** `phase-registry.json` · `site-architecture.json` · `content-inventory.json`
+> **Four registries:** `PHASE_REGISTRY.md` · `SITE_ARCHITECTURE.md` · `CONTENT_INVENTORY.md` · `MRID_SYSTEM.md`
 
 ---
 
@@ -213,4 +212,4 @@ Learn          →  Participate     →  Organize         →  Build Solutions
 | **7** | **Civic Action Layer** | **🟡 Scaffolded v1.4.0** |
 | 8–12 | Forms, tech, launch | 🟡 |
 
-**Next:** Build #7 — First Deep Content (priority L2 articles). Expand registry as new assets are defined.
+**Next:** Build #8 — First Deep Content against priority MRIDs (`HIST-002`, `CASE-002`).

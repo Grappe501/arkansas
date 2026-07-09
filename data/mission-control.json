@@ -1,6 +1,6 @@
 {
-  "version": "1.10.0",
-  "build": 6,
+  "version": "1.11.0",
+  "build": 7,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,16 +9,16 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 6,
+    "overall_completion": 7,
     "current_build": {
-      "number": 6,
-      "title": "Master Content Inventory"
-    },
-    "active_phase": "Information Architecture",
-    "last_completed": "Master Site Architecture",
-    "next_build": {
       "number": 7,
-      "title": "First Deep Content \u2014 Hall Priority"
+      "title": "Master Requirement ID System"
+    },
+    "active_phase": "Foundation & Governance",
+    "last_completed": "Master Content Inventory",
+    "next_build": {
+      "number": 8,
+      "title": "First Deep Content \u2014 Priority MRIDs"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
@@ -34,8 +34,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 6,
-      "note": "Planning blueprints complete (phases, IA, content inventory). Published educational content remains early."
+      "value": 7,
+      "note": "Four planning registries complete (phases, IA, content, MRID). Traceability framework live. Educational content remains early."
     },
     {
       "id": "constitution",
@@ -46,8 +46,8 @@
     {
       "id": "build_plan",
       "label": "Master Build Plan",
-      "value": 22,
-      "note": "100-step plan mapped to 15-phase registry. Full step tracker live in Mission Control."
+      "value": 28,
+      "note": "MRID system links requirements to phases, content, builds, and deployments."
     },
     {
       "id": "ia",
@@ -478,6 +478,12 @@
       "id": "inventory",
       "label": "Content Inventory",
       "href": "/mission-control/inventory.html",
+      "status": "complete"
+    },
+    {
+      "id": "mrid",
+      "label": "MRID System",
+      "href": "/mission-control/mrid.html",
       "status": "complete"
     }
   ],
@@ -1505,6 +1511,49 @@
   ],
   "builds": [
     {
+      "number": 7,
+      "title": "Master Requirement ID System & Traceability Framework",
+      "version": "1.11.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Permanent MRIDs for every platform component \u2014 Mission Control central nervous system",
+      "summary": "MRID v1.0: 165 requirements, 16 domains, traceability matrix, dependency lookup. 132 content items cross-linked.",
+      "files_created": [
+        "data/mrid-registry.json",
+        "docs/MRID_SYSTEM.md",
+        "builds/007-master-requirement-id.md",
+        "mission-control/mrid.html",
+        "scripts/gen-mrid-registry.py"
+      ],
+      "files_modified": [
+        "data/content-inventory.json",
+        "data/mission-control.json",
+        "js/mission-control.js",
+        "css/mission-control.css"
+      ],
+      "pages_created": [
+        "/mission-control/mrid.html"
+      ],
+      "decisions_made": [
+        "16 domain codes (GOV, NAV, HOME, CASE, etc.)",
+        "Content inventory IDs map to MRIDs \u2014 dual registry",
+        "12-step requirement lifecycle distinct from content status"
+      ],
+      "open_questions": [
+        "Display MRIDs on public pages in Build #8?",
+        "GitHub commit auto-link to MRIDs?"
+      ],
+      "risks": [
+        "165 MRIDs of growing universe \u2014 regenerate discipline required"
+      ],
+      "next_recommended": 8,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/mrid.html",
+      "review_status": "complete"
+    },
+    {
       "number": 6,
       "title": "Master Content Inventory",
       "version": "1.10.0",
@@ -1696,21 +1745,20 @@
     }
   ],
   "briefing": {
-    "what_built": "Phase Registry, Site Architecture, Content Inventory with 351 stable IDs",
-    "building_now": "Registry tracking \u2014 most items planned; MT/HI and homepage partial live",
+    "what_built": "Phase Registry, Site Architecture, Content Inventory, MRID traceability (165 requirements)",
+    "building_now": "Registry infrastructure complete \u2014 ready for first deep content against MRIDs",
     "blocked": [
       "Participant backend",
       "Spending charts",
-      "Search/glossary pages"
+      "Search/glossary"
     ],
     "ready_public": [
-      "Home L1",
-      "Site map",
-      "Montana/Hawaii",
       "Mission Control",
-      "Content inventory dashboard"
+      "MRID dashboard",
+      "Site map",
+      "Montana/Hawaii"
     ],
-    "next": "Build #7 \u2014 First Deep Content (priority L2 articles)"
+    "next": "Build #8 \u2014 First Deep Content (HIST-002, CASE-002 priority)"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -1731,5 +1779,7 @@
   "site_architecture": "/data/site-architecture.json",
   "site_architecture_route": "/mission-control/architecture.html",
   "content_inventory": "/data/content-inventory.json",
-  "content_inventory_route": "/mission-control/inventory.html"
+  "content_inventory_route": "/mission-control/inventory.html",
+  "mrid_registry": "/data/mrid-registry.json",
+  "mrid_route": "/mission-control/mrid.html"
 }

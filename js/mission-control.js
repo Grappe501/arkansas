@@ -1,5 +1,5 @@
 /**
- * Citizens United Mission Control v1.10.0 — Build #6
+ * Citizens United Mission Control v1.11.0 — Build #7
  */
 
 const isAdmin = () =>
@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">MRID System <a href="/mission-control/mrid.html" class="mc-inline-link">Traceability →</a></h2>
+    <p class="mc-bar-note">Build #7 — permanent requirement IDs across 16 domains. Nothing anonymous.</p>
     <h2 class="mc-section-title">Content Inventory <a href="/mission-control/inventory.html" class="mc-inline-link">Full registry →</a></h2>
     <p class="mc-bar-note">Build #6 — stable IDs for every asset. Nothing created without registry entry.</p>
     <h2 class="mc-section-title">Site Architecture <a href="/mission-control/architecture.html" class="mc-inline-link">Full blueprint →</a></h2>
@@ -440,6 +442,7 @@ function renderInventoryRow(item) {
   return `
     <tr class="mc-table__row--${item.status}" id="${item.id}">
       <td><code>${item.id}</code></td>
+      <td>${item.mrid || '—'}</td>
       <td>${item.title}</td>
       <td>${item.parent_section}</td>
       <td>${item.reader_level}</td>
@@ -545,7 +548,7 @@ async function initContentInventory() {
     <p class="mc-bar-note" id="mc-inv-count">${inv.items.length} items</p>
     <div class="mc-card mc-inv-table-wrap">
       <table class="mc-table mc-inv-table">
-        <thead><tr><th>ID</th><th>Title</th><th>Section</th><th>Level</th><th>Status</th><th>%</th><th>Sources</th><th>Review</th><th>URL</th></tr></thead>
+        <thead><tr><th>ID</th><th>MRID</th><th>Title</th><th>Section</th><th>Level</th><th>Status</th><th>%</th><th>Sources</th><th>Review</th><th>URL</th></tr></thead>
         <tbody id="mc-inv-table-body"></tbody>
       </table>
     </div>
@@ -569,10 +572,190 @@ async function initContentInventory() {
   }
 }
 
+function findDependents(mrid, all) {
+  return all.filter(r =>
+    r.dependencies?.includes(mrid) ||
+    r.related?.includes(mrid) ||
+    r.traceability?.content_pages?.some(c => c === mrid)
+  );
+}
+
+function renderMridDetail(req, all) {
+  const deps = findDependents(req.mrid, all);
+  const tr = req.traceability || {};
+  return `
+    <div class="mc-mrid-detail" id="mrid-detail">
+      <h3><code>${req.mrid}</code> — ${req.title}</h3>
+      <div class="mc-dna">
+        <div class="mc-dna__item"><strong>Status</strong>${req.status}</div>
+        <div class="mc-dna__item"><strong>Completion</strong>${req.completion_pct}%</div>
+        <div class="mc-dna__item"><strong>Phase</strong>${req.phase}</div>
+        <div class="mc-dna__item"><strong>Domain</strong>${req.domain}</div>
+        <div class="mc-dna__item"><strong>Review</strong>${req.review_status}</div>
+        <div class="mc-dna__item"><strong>Sources</strong>${req.source_coverage}</div>
+      </div>
+      ${req.content_id ? `<p class="mc-bar-note"><strong>Content ID:</strong> <a href="/mission-control/inventory.html#${req.content_id}">${req.content_id}</a></p>` : ''}
+      ${req.url ? `<p class="mc-bar-note"><strong>URL:</strong> <a href="${req.url}">${req.url}</a></p>` : ''}
+      ${req.builds?.length ? `<p class="mc-bar-note"><strong>Builds:</strong> ${req.builds.map(b => `<a href="/mission-control/build.html?b=${b}">#${b}</a>`).join(' · ')}</p>` : ''}
+      ${req.dependencies?.length ? `<p class="mc-bar-note"><strong>Depends on:</strong> ${req.dependencies.map(d => `<a href="#${d}">${d}</a>`).join(', ')}</p>` : ''}
+      ${req.related?.length ? `<p class="mc-bar-note"><strong>Related:</strong> ${req.related.filter(Boolean).map(d => `<a href="#${d}">${d}</a>`).join(', ')}</p>` : ''}
+      ${deps.length ? `<p class="mc-bar-note"><strong>Dependents (${deps.length}):</strong> ${deps.map(d => `<a href="#${d.mrid}">${d.mrid}</a>`).join(', ')}</p>` : ''}
+      ${tr.research_sources?.length ? `<p class="mc-bar-note"><strong>Research:</strong> ${tr.research_sources.join(', ')}</p>` : ''}
+      <button type="button" class="mc-mrid-close" id="mrid-close">Close</button>
+    </div>`;
+}
+
+function renderMridRow(req) {
+  const url = req.url ? `<a href="${req.url}">↗</a>` : '';
+  return `
+    <tr class="mc-table__row--${req.status}" id="${req.mrid}" data-mrid="${req.mrid}">
+      <td><code>${req.mrid}</code></td>
+      <td>${req.domain}</td>
+      <td>${req.title}</td>
+      <td>P${req.phase}</td>
+      <td>${req.status}</td>
+      <td>${req.completion_pct}%</td>
+      <td>${req.content_id || '—'}</td>
+      <td>${url}</td>
+    </tr>`;
+}
+
+async function initMridDashboard() {
+  const root = document.getElementById('mc-mrid-root');
+  if (!root) return;
+
+  const [mridRes, mcRes] = await Promise.all([
+    fetch('/data/mrid-registry.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const reg = await mridRes.json();
+  const mc = await mcRes.json();
+  const s = reg.summary;
+  const all = reg.requirements;
+
+  const renderTable = (items) => {
+    const el = document.getElementById('mc-mrid-table-body');
+    if (!el) return;
+    el.innerHTML = items.map(renderMridRow).join('');
+    const count = document.getElementById('mc-mrid-count');
+    if (count) count.textContent = `${items.length} of ${all.length} requirements`;
+    el.querySelectorAll('tr').forEach(row => {
+      row.addEventListener('click', () => {
+        const id = row.dataset.mrid;
+        const req = all.find(r => r.mrid === id);
+        if (!req) return;
+        const slot = document.getElementById('mc-mrid-detail-slot');
+        if (slot) {
+          slot.innerHTML = renderMridDetail(req, all);
+          slot.querySelector('#mrid-close')?.addEventListener('click', () => { slot.innerHTML = ''; });
+          slot.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    });
+  };
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → MRID System</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #7 · ${reg.title}</p>
+      <h1>Master Requirement ID System</h1>
+      <p class="mc-header__question">${reg.principle}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Requirements</div><div class="mc-stat__value">${s.total_requirements}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Published</div><div class="mc-stat__value">${s.published}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Domains</div><div class="mc-stat__value">${s.domains_active}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Content Linked</div><div class="mc-stat__value">${s.content_items_linked}</div></div>
+    </div>
+    <section class="mc-card">
+      <h3>16 Domain Codes</h3>
+      <div class="mc-dep-map">
+        ${reg.domain_codes.map(d => `
+          <span class="mc-dep-map__node"><span class="mc-dep-map__num">${d.code}</span><span class="mc-dep-map__label">${d.title}</span></span>`).join('')}
+      </div>
+    </section>
+    <section class="mc-card">
+      <h3>Dependency Lookup</h3>
+      <p class="mc-bar-note">Enter an MRID to find what depends on it, what it links to, and its traceability chain.</p>
+      <label>MRID <input type="search" id="mc-mrid-lookup" placeholder="e.g. CASE-021, NAV-004, REFORM-015" style="margin-left:0.5rem;padding:0.35rem 0.5rem;background:var(--mc-surface-alt);border:1px solid var(--mc-border);color:var(--mc-text);border-radius:4px;width:220px"></label>
+    </section>
+    <div id="mc-mrid-detail-slot"></div>
+    <h2 class="mc-section-title">All Requirements</h2>
+    <div class="mc-inv-filters" id="mc-mrid-filters"></div>
+    <p class="mc-bar-note" id="mc-mrid-count">${all.length} requirements</p>
+    <div class="mc-card mc-inv-table-wrap">
+      <table class="mc-table mc-inv-table">
+        <thead><tr><th>MRID</th><th>Domain</th><th>Title</th><th>Phase</th><th>Status</th><th>%</th><th>Content ID</th><th></th></tr></thead>
+        <tbody id="mc-mrid-table-body"></tbody>
+      </table>
+    </div>
+    <p class="mc-bar-note">
+      <a href="/docs/MRID_SYSTEM.md">MRID_SYSTEM.md</a> ·
+      <a href="/data/mrid-registry.json">JSON</a> ·
+      <a href="/mission-control/inventory.html">Content Inventory</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  renderTable(all);
+
+  const filterRoot = document.getElementById('mc-mrid-filters');
+  const domains = [...new Set(all.map(r => r.domain))].sort();
+  const statuses = [...new Set(all.map(r => r.status))].sort();
+  filterRoot.innerHTML = `
+    <label>Domain <select id="mc-mrid-domain"><option value="">All</option>${domains.map(d => `<option value="${d}">${d}</option>`).join('')}</select></label>
+    <label>Status <select id="mc-mrid-status"><option value="">All</option>${statuses.map(s => `<option value="${s}">${s}</option>`).join('')}</select></label>
+    <label>Search <input type="search" id="mc-mrid-search" placeholder="MRID or title…"></label>`;
+
+  const applyFilter = () => {
+    const dom = filterRoot.querySelector('#mc-mrid-domain').value;
+    const st = filterRoot.querySelector('#mc-mrid-status').value;
+    const q = filterRoot.querySelector('#mc-mrid-search').value.toLowerCase();
+    const filtered = all.filter(r => {
+      if (dom && r.domain !== dom) return false;
+      if (st && r.status !== st) return false;
+      if (q && !r.mrid.toLowerCase().includes(q) && !r.title.toLowerCase().includes(q)) return false;
+      return true;
+    });
+    renderTable(filtered);
+  };
+  filterRoot.querySelectorAll('select, input').forEach(el => {
+    el.addEventListener('input', applyFilter);
+    el.addEventListener('change', applyFilter);
+  });
+
+  document.getElementById('mc-mrid-lookup')?.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter') return;
+    const id = e.target.value.trim().toUpperCase();
+    const req = all.find(r => r.mrid === id);
+    const slot = document.getElementById('mc-mrid-detail-slot');
+    if (req && slot) {
+      slot.innerHTML = renderMridDetail(req, all);
+      slot.querySelector('#mrid-close')?.addEventListener('click', () => { slot.innerHTML = ''; });
+      document.getElementById(req.mrid)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      document.getElementById(req.mrid)?.classList.add('mc-inv-highlight');
+    } else if (slot) {
+      slot.innerHTML = `<div class="mc-card"><p>MRID <code>${id}</code> not found.</p></div>`;
+    }
+  });
+
+  initDevConsole(mc);
+
+  const hash = window.location.hash.slice(1);
+  if (hash) {
+    const req = all.find(r => r.mrid === hash);
+    if (req) {
+      const slot = document.getElementById('mc-mrid-detail-slot');
+      if (slot) slot.innerHTML = renderMridDetail(req, all);
+      document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
   initPhaseRegistryPage();
   initArchitectureBlueprint();
   initContentInventory();
+  initMridDashboard();
 });

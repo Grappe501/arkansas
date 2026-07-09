@@ -618,6 +618,32 @@ body.mc-body .action-hub__toggle {
   background: rgba(59, 130, 246, 0.15);
 }
 
+.mc-mrid-detail {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  background: var(--mc-surface);
+  border: 1px solid var(--mc-accent);
+  border-radius: 6px;
+}
+
+.mc-mrid-detail h3 { margin: 0 0 1rem; font-size: 1.1rem; }
+
+.mc-mrid-close {
+  margin-top: 1rem;
+  background: var(--mc-surface-alt);
+  border: 1px solid var(--mc-border);
+  color: var(--mc-text-muted);
+  padding: 0.35rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.mc-mrid-close:hover { color: var(--mc-text); border-color: var(--mc-accent); }
+
+.mc-inv-table tbody tr { cursor: pointer; }
+.mc-inv-table tbody tr:hover td { background: rgba(59, 130, 246, 0.08); }
+
 .mc-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
 .mc-table th, .mc-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--mc-border); text-align: left; }
 .mc-table th { color: var(--mc-text-muted); font-size: 0.7rem; text-transform: uppercase; }

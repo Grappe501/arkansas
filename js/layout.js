@@ -52,9 +52,9 @@ function renderSiteFooter() {
   return `
   <footer class="site-footer">
     <p>
-      Citizens Facts · v<span data-site-version>1.10.0</span> ·
+      Citizens Facts · v<span data-site-version>1.11.0</span> ·
       <a href="/explore/">Site Map</a> ·
-      <a href="/mission-control/inventory.html">Content Inventory</a> ·
+      <a href="/mission-control/mrid.html">MRIDs</a> ·
       <a href="/mission-control/">Mission Control</a> ·
       <a href="/mission-control/phases.html">Phase Registry</a> ·
       <a href="/mission-control/architecture.html">Architecture</a> ·

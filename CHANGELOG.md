@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.11.0] - 2026-07-09 — Build #7 Complete
+
+### Build #7: Master Requirement ID System & Traceability Framework
+- **MRID v1.0** — 165 permanent requirements across 16 domains (GOV, NAV, HOME, CASE, etc.)
+- `data/mrid-registry.json` + `docs/MRID_SYSTEM.md`
+- Traceability dashboard at `/mission-control/mrid.html` with dependency lookup
+- 132 content inventory items cross-linked to MRIDs
+- 12-step requirement lifecycle · traceability matrix (phases, builds, content, sources)
+
 ## [1.10.0] - 2026-07-09 — Build #6 Complete
 
 ### Build #6: Master Content Inventory

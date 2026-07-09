@@ -1,7 +1,8 @@
 {
   "version": "1.0",
-  "build": 6,
+  "build": 7,
   "updated": "2026-07-09",
+  "mrid_system": "/data/mrid-registry.json",
   "title": "Content Master Registry v1.0",
   "route": "/mission-control/inventory.html",
   "data_file": "/data/content-inventory.json",
@@ -287,7 +288,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#LAND-001"
+      "mission_control": "/mission-control/inventory.html#LAND-001",
+      "mrid": "HOME-001"
     },
     {
       "id": "LAND-002",
@@ -309,7 +311,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#LAND-002"
+      "mission_control": "/mission-control/inventory.html#LAND-002",
+      "mrid": "HOME-002"
     },
     {
       "id": "LAND-003",
@@ -331,7 +334,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#LAND-003"
+      "mission_control": "/mission-control/inventory.html#LAND-003",
+      "mrid": "HOME-003"
     },
     {
       "id": "LAND-004",
@@ -353,7 +357,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#LAND-004"
+      "mission_control": "/mission-control/inventory.html#LAND-004",
+      "mrid": "HOME-004"
     },
     {
       "id": "LAND-005",
@@ -375,7 +380,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#LAND-005"
+      "mission_control": "/mission-control/inventory.html#LAND-005",
+      "mrid": "HOME-005"
     },
     {
       "id": "LAND-006",
@@ -397,7 +403,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#LAND-006"
+      "mission_control": "/mission-control/inventory.html#LAND-006",
+      "mrid": "HOME-006"
     },
     {
       "id": "LAND-007",
@@ -419,7 +426,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#LAND-007"
+      "mission_control": "/mission-control/inventory.html#LAND-007",
+      "mrid": "HOME-007"
     },
     {
       "id": "LAND-008",
@@ -441,7 +449,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#LAND-008"
+      "mission_control": "/mission-control/inventory.html#LAND-008",
+      "mrid": "HOME-008"
     },
     {
       "id": "LAND-009",
@@ -463,7 +472,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#LAND-009"
+      "mission_control": "/mission-control/inventory.html#LAND-009",
+      "mrid": "HOME-009"
     },
     {
       "id": "LAND-010",
@@ -485,7 +495,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#LAND-010"
+      "mission_control": "/mission-control/inventory.html#LAND-010",
+      "mrid": "HOME-010"
     },
     {
       "id": "LAND-011",
@@ -507,7 +518,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#LAND-011"
+      "mission_control": "/mission-control/inventory.html#LAND-011",
+      "mrid": "HOME-011"
     },
     {
       "id": "HIST-001",
@@ -529,7 +541,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#HIST-001"
+      "mission_control": "/mission-control/inventory.html#HIST-001",
+      "mrid": "HIST-001"
     },
     {
       "id": "HIST-002",
@@ -551,7 +564,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#HIST-002"
+      "mission_control": "/mission-control/inventory.html#HIST-002",
+      "mrid": "HIST-002"
     },
     {
       "id": "HIST-003",
@@ -639,7 +653,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#HIST-006"
+      "mission_control": "/mission-control/inventory.html#HIST-006",
+      "mrid": "HIST-003"
     },
     {
       "id": "HIST-007",
@@ -727,7 +742,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#HIST-010"
+      "mission_control": "/mission-control/inventory.html#HIST-010",
+      "mrid": "HIST-004"
     },
     {
       "id": "HIST-011",
@@ -815,7 +831,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#HIST-014"
+      "mission_control": "/mission-control/inventory.html#HIST-014",
+      "mrid": "HIST-005"
     },
     {
       "id": "HIST-015",
@@ -903,7 +920,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#HIST-018"
+      "mission_control": "/mission-control/inventory.html#HIST-018",
+      "mrid": "HIST-006"
     },
     {
       "id": "HIST-019",
@@ -991,7 +1009,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#HIST-022"
+      "mission_control": "/mission-control/inventory.html#HIST-022",
+      "mrid": "HIST-007"
     },
     {
       "id": "HIST-023",
@@ -1079,7 +1098,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#HIST-026"
+      "mission_control": "/mission-control/inventory.html#HIST-026",
+      "mrid": "HIST-008"
     },
     {
       "id": "HIST-027",
@@ -1167,7 +1187,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CASE-001"
+      "mission_control": "/mission-control/inventory.html#CASE-001",
+      "mrid": "CASE-001"
     },
     {
       "id": "CASE-002",
@@ -1189,7 +1210,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CASE-002"
+      "mission_control": "/mission-control/inventory.html#CASE-002",
+      "mrid": "CASE-002"
     },
     {
       "id": "CASE-003",
@@ -1277,7 +1299,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CASE-006"
+      "mission_control": "/mission-control/inventory.html#CASE-006",
+      "mrid": "CASE-003"
     },
     {
       "id": "CASE-007",
@@ -1365,7 +1388,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CASE-010"
+      "mission_control": "/mission-control/inventory.html#CASE-010",
+      "mrid": "CASE-004"
     },
     {
       "id": "CASE-011",
@@ -1453,7 +1477,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CASE-014"
+      "mission_control": "/mission-control/inventory.html#CASE-014",
+      "mrid": "CASE-005"
     },
     {
       "id": "CASE-015",
@@ -1541,7 +1566,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CASE-018"
+      "mission_control": "/mission-control/inventory.html#CASE-018",
+      "mrid": "CASE-006"
     },
     {
       "id": "CASE-019",
@@ -1629,7 +1655,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CASE-022"
+      "mission_control": "/mission-control/inventory.html#CASE-022",
+      "mrid": "CASE-007"
     },
     {
       "id": "CASE-023",
@@ -1717,7 +1744,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CASE-026"
+      "mission_control": "/mission-control/inventory.html#CASE-026",
+      "mrid": "CASE-008"
     },
     {
       "id": "CASE-027",
@@ -1805,7 +1833,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CASE-030"
+      "mission_control": "/mission-control/inventory.html#CASE-030",
+      "mrid": "CASE-009"
     },
     {
       "id": "CASE-031",
@@ -1893,7 +1922,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CASE-034"
+      "mission_control": "/mission-control/inventory.html#CASE-034",
+      "mrid": "CASE-010"
     },
     {
       "id": "CASE-035",
@@ -1981,7 +2011,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CASE-038"
+      "mission_control": "/mission-control/inventory.html#CASE-038",
+      "mrid": "CASE-011"
     },
     {
       "id": "CASE-039",
@@ -2069,7 +2100,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CONST-001"
+      "mission_control": "/mission-control/inventory.html#CONST-001",
+      "mrid": "CONST-001"
     },
     {
       "id": "CONST-002",
@@ -2091,7 +2123,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CONST-002"
+      "mission_control": "/mission-control/inventory.html#CONST-002",
+      "mrid": "CONST-002"
     },
     {
       "id": "CONST-003",
@@ -2179,7 +2212,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CONST-006"
+      "mission_control": "/mission-control/inventory.html#CONST-006",
+      "mrid": "CONST-003"
     },
     {
       "id": "CONST-007",
@@ -2267,7 +2301,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CONST-010"
+      "mission_control": "/mission-control/inventory.html#CONST-010",
+      "mrid": "CONST-004"
     },
     {
       "id": "CONST-011",
@@ -2355,7 +2390,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CONST-014"
+      "mission_control": "/mission-control/inventory.html#CONST-014",
+      "mrid": "CONST-005"
     },
     {
       "id": "CONST-015",
@@ -2443,7 +2479,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CONST-018"
+      "mission_control": "/mission-control/inventory.html#CONST-018",
+      "mrid": "CONST-006"
     },
     {
       "id": "CONST-019",
@@ -2531,7 +2568,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CONST-022"
+      "mission_control": "/mission-control/inventory.html#CONST-022",
+      "mrid": "CONST-007"
     },
     {
       "id": "CONST-023",
@@ -2619,7 +2657,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CONST-026"
+      "mission_control": "/mission-control/inventory.html#CONST-026",
+      "mrid": "CONST-008"
     },
     {
       "id": "CONST-027",
@@ -2707,7 +2746,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CONST-030"
+      "mission_control": "/mission-control/inventory.html#CONST-030",
+      "mrid": "CONST-009"
     },
     {
       "id": "CONST-031",
@@ -2795,7 +2835,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#IMPACT-001"
+      "mission_control": "/mission-control/inventory.html#IMPACT-001",
+      "mrid": "IMPACT-001"
     },
     {
       "id": "IMPACT-002",
@@ -2817,7 +2858,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#IMPACT-002"
+      "mission_control": "/mission-control/inventory.html#IMPACT-002",
+      "mrid": "IMPACT-002"
     },
     {
       "id": "IMPACT-003",
@@ -2905,7 +2947,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#IMPACT-006"
+      "mission_control": "/mission-control/inventory.html#IMPACT-006",
+      "mrid": "IMPACT-003"
     },
     {
       "id": "IMPACT-007",
@@ -2993,7 +3036,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#IMPACT-010"
+      "mission_control": "/mission-control/inventory.html#IMPACT-010",
+      "mrid": "IMPACT-004"
     },
     {
       "id": "IMPACT-011",
@@ -3081,7 +3125,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#IMPACT-014"
+      "mission_control": "/mission-control/inventory.html#IMPACT-014",
+      "mrid": "IMPACT-005"
     },
     {
       "id": "IMPACT-015",
@@ -3169,7 +3214,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#IMPACT-018"
+      "mission_control": "/mission-control/inventory.html#IMPACT-018",
+      "mrid": "IMPACT-006"
     },
     {
       "id": "IMPACT-019",
@@ -3257,7 +3303,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#IMPACT-022"
+      "mission_control": "/mission-control/inventory.html#IMPACT-022",
+      "mrid": "IMPACT-007"
     },
     {
       "id": "IMPACT-023",
@@ -3345,7 +3392,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#IMPACT-026"
+      "mission_control": "/mission-control/inventory.html#IMPACT-026",
+      "mrid": "IMPACT-008"
     },
     {
       "id": "IMPACT-027",
@@ -3433,7 +3481,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#IMPACT-030"
+      "mission_control": "/mission-control/inventory.html#IMPACT-030",
+      "mrid": "IMPACT-009"
     },
     {
       "id": "IMPACT-031",
@@ -3521,7 +3570,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#IMPACT-034"
+      "mission_control": "/mission-control/inventory.html#IMPACT-034",
+      "mrid": "IMPACT-010"
     },
     {
       "id": "IMPACT-035",
@@ -3609,7 +3659,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#MONEY-001"
+      "mission_control": "/mission-control/inventory.html#MONEY-001",
+      "mrid": "MONEY-001"
     },
     {
       "id": "MONEY-002",
@@ -3631,7 +3682,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#MONEY-002"
+      "mission_control": "/mission-control/inventory.html#MONEY-002",
+      "mrid": "MONEY-002"
     },
     {
       "id": "MONEY-003",
@@ -3719,7 +3771,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#MONEY-006"
+      "mission_control": "/mission-control/inventory.html#MONEY-006",
+      "mrid": "MONEY-003"
     },
     {
       "id": "MONEY-007",
@@ -3807,7 +3860,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#MONEY-010"
+      "mission_control": "/mission-control/inventory.html#MONEY-010",
+      "mrid": "MONEY-004"
     },
     {
       "id": "MONEY-011",
@@ -3895,7 +3949,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#MONEY-014"
+      "mission_control": "/mission-control/inventory.html#MONEY-014",
+      "mrid": "MONEY-005"
     },
     {
       "id": "MONEY-015",
@@ -3983,7 +4038,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#MONEY-018"
+      "mission_control": "/mission-control/inventory.html#MONEY-018",
+      "mrid": "MONEY-006"
     },
     {
       "id": "MONEY-019",
@@ -4071,7 +4127,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#MONEY-022"
+      "mission_control": "/mission-control/inventory.html#MONEY-022",
+      "mrid": "MONEY-007"
     },
     {
       "id": "MONEY-023",
@@ -4159,7 +4216,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#MONEY-026"
+      "mission_control": "/mission-control/inventory.html#MONEY-026",
+      "mrid": "MONEY-008"
     },
     {
       "id": "MONEY-027",
@@ -4247,7 +4305,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#MONEY-030"
+      "mission_control": "/mission-control/inventory.html#MONEY-030",
+      "mrid": "MONEY-009"
     },
     {
       "id": "MONEY-031",
@@ -4335,7 +4394,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#DEBATE-001"
+      "mission_control": "/mission-control/inventory.html#DEBATE-001",
+      "mrid": "DEBATE-001"
     },
     {
       "id": "DEBATE-002",
@@ -4357,7 +4417,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#DEBATE-002"
+      "mission_control": "/mission-control/inventory.html#DEBATE-002",
+      "mrid": "DEBATE-002"
     },
     {
       "id": "DEBATE-003",
@@ -4445,7 +4506,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#DEBATE-006"
+      "mission_control": "/mission-control/inventory.html#DEBATE-006",
+      "mrid": "DEBATE-003"
     },
     {
       "id": "DEBATE-007",
@@ -4533,7 +4595,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#DEBATE-010"
+      "mission_control": "/mission-control/inventory.html#DEBATE-010",
+      "mrid": "DEBATE-004"
     },
     {
       "id": "DEBATE-011",
@@ -4621,7 +4684,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#DEBATE-014"
+      "mission_control": "/mission-control/inventory.html#DEBATE-014",
+      "mrid": "DEBATE-005"
     },
     {
       "id": "DEBATE-015",
@@ -4709,7 +4773,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#DEBATE-018"
+      "mission_control": "/mission-control/inventory.html#DEBATE-018",
+      "mrid": "DEBATE-006"
     },
     {
       "id": "DEBATE-019",
@@ -4797,7 +4862,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#REFORM-001"
+      "mission_control": "/mission-control/inventory.html#REFORM-001",
+      "mrid": "REFORM-001"
     },
     {
       "id": "REFORM-002",
@@ -4819,7 +4885,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#REFORM-002"
+      "mission_control": "/mission-control/inventory.html#REFORM-002",
+      "mrid": "REFORM-002"
     },
     {
       "id": "REFORM-003",
@@ -4907,7 +4974,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#REFORM-006"
+      "mission_control": "/mission-control/inventory.html#REFORM-006",
+      "mrid": "REFORM-003"
     },
     {
       "id": "REFORM-007",
@@ -4995,7 +5063,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#REFORM-010"
+      "mission_control": "/mission-control/inventory.html#REFORM-010",
+      "mrid": "REFORM-004"
     },
     {
       "id": "REFORM-011",
@@ -5083,7 +5152,8 @@
       "sources_complete": 6,
       "version": "1.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#REFORM-014"
+      "mission_control": "/mission-control/inventory.html#REFORM-014",
+      "mrid": "REFORM-005"
     },
     {
       "id": "REFORM-015",
@@ -5171,7 +5241,8 @@
       "sources_complete": 6,
       "version": "1.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#REFORM-018"
+      "mission_control": "/mission-control/inventory.html#REFORM-018",
+      "mrid": "REFORM-006"
     },
     {
       "id": "REFORM-019",
@@ -5259,7 +5330,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#REFORM-022"
+      "mission_control": "/mission-control/inventory.html#REFORM-022",
+      "mrid": "REFORM-007"
     },
     {
       "id": "REFORM-023",
@@ -5347,7 +5419,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#REFORM-026"
+      "mission_control": "/mission-control/inventory.html#REFORM-026",
+      "mrid": "REFORM-008"
     },
     {
       "id": "REFORM-027",
@@ -5435,7 +5508,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#REFORM-030"
+      "mission_control": "/mission-control/inventory.html#REFORM-030",
+      "mrid": "REFORM-009"
     },
     {
       "id": "REFORM-031",
@@ -5523,7 +5597,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CIVIC-001"
+      "mission_control": "/mission-control/inventory.html#CIVIC-001",
+      "mrid": "EDUCATE-001"
     },
     {
       "id": "CIVIC-002",
@@ -5545,7 +5620,8 @@
       "sources_complete": 6,
       "version": "1.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CIVIC-002"
+      "mission_control": "/mission-control/inventory.html#CIVIC-002",
+      "mrid": "EDUCATE-002"
     },
     {
       "id": "CIVIC-003",
@@ -5633,7 +5709,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CIVIC-006"
+      "mission_control": "/mission-control/inventory.html#CIVIC-006",
+      "mrid": "EDUCATE-003"
     },
     {
       "id": "CIVIC-007",
@@ -5721,7 +5798,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CIVIC-010"
+      "mission_control": "/mission-control/inventory.html#CIVIC-010",
+      "mrid": "EDUCATE-004"
     },
     {
       "id": "CIVIC-011",
@@ -5809,7 +5887,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CIVIC-014"
+      "mission_control": "/mission-control/inventory.html#CIVIC-014",
+      "mrid": "EDUCATE-005"
     },
     {
       "id": "CIVIC-015",
@@ -5897,7 +5976,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CIVIC-018"
+      "mission_control": "/mission-control/inventory.html#CIVIC-018",
+      "mrid": "EDUCATE-006"
     },
     {
       "id": "CIVIC-019",
@@ -5985,7 +6065,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CIVIC-022"
+      "mission_control": "/mission-control/inventory.html#CIVIC-022",
+      "mrid": "EDUCATE-007"
     },
     {
       "id": "CIVIC-023",
@@ -6073,7 +6154,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CIVIC-026"
+      "mission_control": "/mission-control/inventory.html#CIVIC-026",
+      "mrid": "EDUCATE-008"
     },
     {
       "id": "CIVIC-027",
@@ -6161,7 +6243,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CIVIC-030"
+      "mission_control": "/mission-control/inventory.html#CIVIC-030",
+      "mrid": "EDUCATE-009"
     },
     {
       "id": "CIVIC-031",
@@ -6249,7 +6332,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#SOURCE-001"
+      "mission_control": "/mission-control/inventory.html#SOURCE-001",
+      "mrid": "SOURCE-001"
     },
     {
       "id": "SOURCE-002",
@@ -6271,7 +6355,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#SOURCE-002"
+      "mission_control": "/mission-control/inventory.html#SOURCE-002",
+      "mrid": "SOURCE-002"
     },
     {
       "id": "SOURCE-003",
@@ -6359,7 +6444,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#SOURCE-006"
+      "mission_control": "/mission-control/inventory.html#SOURCE-006",
+      "mrid": "SOURCE-003"
     },
     {
       "id": "SOURCE-007",
@@ -6447,7 +6533,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#SOURCE-010"
+      "mission_control": "/mission-control/inventory.html#SOURCE-010",
+      "mrid": "SOURCE-004"
     },
     {
       "id": "SOURCE-011",
@@ -6535,7 +6622,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#SOURCE-014"
+      "mission_control": "/mission-control/inventory.html#SOURCE-014",
+      "mrid": "SOURCE-005"
     },
     {
       "id": "SOURCE-015",
@@ -6623,7 +6711,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#SOURCE-018"
+      "mission_control": "/mission-control/inventory.html#SOURCE-018",
+      "mrid": "SOURCE-006"
     },
     {
       "id": "SOURCE-019",
@@ -6711,7 +6800,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#SOURCE-022"
+      "mission_control": "/mission-control/inventory.html#SOURCE-022",
+      "mrid": "SOURCE-007"
     },
     {
       "id": "SOURCE-023",
@@ -6799,7 +6889,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#SOURCE-026"
+      "mission_control": "/mission-control/inventory.html#SOURCE-026",
+      "mrid": "SOURCE-008"
     },
     {
       "id": "SOURCE-027",
@@ -6887,7 +6978,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#SOURCE-030"
+      "mission_control": "/mission-control/inventory.html#SOURCE-030",
+      "mrid": "SOURCE-009"
     },
     {
       "id": "SOURCE-031",
@@ -6975,7 +7067,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#SOURCE-034"
+      "mission_control": "/mission-control/inventory.html#SOURCE-034",
+      "mrid": "SOURCE-010"
     },
     {
       "id": "SOURCE-035",
@@ -7063,7 +7156,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#SOURCE-038"
+      "mission_control": "/mission-control/inventory.html#SOURCE-038",
+      "mrid": "SOURCE-011"
     },
     {
       "id": "SOURCE-039",
@@ -7155,7 +7249,8 @@
       "related": [
         "REFORM-002",
         "REFORM-003"
-      ]
+      ],
+      "mrid": "REFORM-010"
     },
     {
       "id": "ACTION-001",
@@ -7177,7 +7272,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#ACTION-001"
+      "mission_control": "/mission-control/inventory.html#ACTION-001",
+      "mrid": "ACTION-001"
     },
     {
       "id": "ACTION-002",
@@ -7199,7 +7295,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#ACTION-002"
+      "mission_control": "/mission-control/inventory.html#ACTION-002",
+      "mrid": "ACTION-002"
     },
     {
       "id": "ACTION-003",
@@ -7221,7 +7318,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#ACTION-003"
+      "mission_control": "/mission-control/inventory.html#ACTION-003",
+      "mrid": "ACTION-003"
     },
     {
       "id": "ACTION-004",
@@ -7243,7 +7341,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#ACTION-004"
+      "mission_control": "/mission-control/inventory.html#ACTION-004",
+      "mrid": "ACTION-004"
     },
     {
       "id": "ACTION-005",
@@ -7265,7 +7364,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#ACTION-005"
+      "mission_control": "/mission-control/inventory.html#ACTION-005",
+      "mrid": "ACTION-005"
     },
     {
       "id": "ACTION-006",
@@ -7287,7 +7387,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#ACTION-006"
+      "mission_control": "/mission-control/inventory.html#ACTION-006",
+      "mrid": "ACTION-006"
     },
     {
       "id": "ACTION-007",
@@ -7309,7 +7410,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#ACTION-007"
+      "mission_control": "/mission-control/inventory.html#ACTION-007",
+      "mrid": "ACTION-007"
     },
     {
       "id": "ACTION-008",
@@ -7331,7 +7433,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#ACTION-008"
+      "mission_control": "/mission-control/inventory.html#ACTION-008",
+      "mrid": "ACTION-008"
     },
     {
       "id": "ACTION-009",
@@ -7353,7 +7456,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#ACTION-009"
+      "mission_control": "/mission-control/inventory.html#ACTION-009",
+      "mrid": "ACTION-009"
     },
     {
       "id": "CROSS-TIME-001",
@@ -7375,7 +7479,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-TIME-001"
+      "mission_control": "/mission-control/inventory.html#CROSS-TIME-001",
+      "mrid": "DATA-001"
     },
     {
       "id": "CROSS-TIME-002",
@@ -7397,7 +7502,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-TIME-002"
+      "mission_control": "/mission-control/inventory.html#CROSS-TIME-002",
+      "mrid": "DATA-002"
     },
     {
       "id": "CROSS-TIME-003",
@@ -7419,7 +7525,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-TIME-003"
+      "mission_control": "/mission-control/inventory.html#CROSS-TIME-003",
+      "mrid": "DATA-003"
     },
     {
       "id": "CROSS-GLOS-001",
@@ -7441,7 +7548,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-GLOS-001"
+      "mission_control": "/mission-control/inventory.html#CROSS-GLOS-001",
+      "mrid": "DATA-004"
     },
     {
       "id": "CROSS-GLOS-002",
@@ -7463,7 +7571,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-GLOS-002"
+      "mission_control": "/mission-control/inventory.html#CROSS-GLOS-002",
+      "mrid": "DATA-005"
     },
     {
       "id": "CROSS-GLOS-003",
@@ -7485,7 +7594,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-GLOS-003"
+      "mission_control": "/mission-control/inventory.html#CROSS-GLOS-003",
+      "mrid": "DATA-006"
     },
     {
       "id": "CROSS-FAQ-001",
@@ -7507,7 +7617,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-FAQ-001"
+      "mission_control": "/mission-control/inventory.html#CROSS-FAQ-001",
+      "mrid": "DATA-007"
     },
     {
       "id": "CROSS-FAQ-002",
@@ -7529,7 +7640,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-FAQ-002"
+      "mission_control": "/mission-control/inventory.html#CROSS-FAQ-002",
+      "mrid": "DATA-008"
     },
     {
       "id": "CROSS-FAQ-003",
@@ -7551,7 +7663,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-FAQ-003"
+      "mission_control": "/mission-control/inventory.html#CROSS-FAQ-003",
+      "mrid": "DATA-009"
     },
     {
       "id": "CROSS-CHART-001",
@@ -7573,7 +7686,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-CHART-001"
+      "mission_control": "/mission-control/inventory.html#CROSS-CHART-001",
+      "mrid": "DATA-010"
     },
     {
       "id": "CROSS-CHART-002",
@@ -7595,7 +7709,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-CHART-002"
+      "mission_control": "/mission-control/inventory.html#CROSS-CHART-002",
+      "mrid": "DATA-011"
     },
     {
       "id": "CROSS-CHART-003",
@@ -7617,7 +7732,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-CHART-003"
+      "mission_control": "/mission-control/inventory.html#CROSS-CHART-003",
+      "mrid": "DATA-012"
     },
     {
       "id": "CROSS-DATA-001",
@@ -7639,7 +7755,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-DATA-001"
+      "mission_control": "/mission-control/inventory.html#CROSS-DATA-001",
+      "mrid": "DATA-013"
     },
     {
       "id": "CROSS-DATA-002",
@@ -7661,7 +7778,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-DATA-002"
+      "mission_control": "/mission-control/inventory.html#CROSS-DATA-002",
+      "mrid": "DATA-014"
     },
     {
       "id": "CROSS-DATA-003",
@@ -7683,7 +7801,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-DATA-003"
+      "mission_control": "/mission-control/inventory.html#CROSS-DATA-003",
+      "mrid": "DATA-015"
     },
     {
       "id": "CROSS-DL-001",
@@ -7705,7 +7824,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-DL-001"
+      "mission_control": "/mission-control/inventory.html#CROSS-DL-001",
+      "mrid": "DATA-016"
     },
     {
       "id": "CROSS-DL-002",
@@ -7727,7 +7847,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-DL-002"
+      "mission_control": "/mission-control/inventory.html#CROSS-DL-002",
+      "mrid": "DATA-017"
     },
     {
       "id": "CROSS-DL-003",
@@ -7749,7 +7870,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-DL-003"
+      "mission_control": "/mission-control/inventory.html#CROSS-DL-003",
+      "mrid": "DATA-018"
     },
     {
       "id": "CROSS-VID-001",
@@ -7771,7 +7893,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-VID-001"
+      "mission_control": "/mission-control/inventory.html#CROSS-VID-001",
+      "mrid": "DATA-019"
     },
     {
       "id": "CROSS-VID-002",
@@ -7793,7 +7916,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-VID-002"
+      "mission_control": "/mission-control/inventory.html#CROSS-VID-002",
+      "mrid": "DATA-020"
     },
     {
       "id": "CROSS-VID-003",
@@ -7815,7 +7939,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-VID-003"
+      "mission_control": "/mission-control/inventory.html#CROSS-VID-003",
+      "mrid": "DATA-021"
     },
     {
       "id": "CROSS-GUIDE-001",
@@ -7837,7 +7962,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-GUIDE-001"
+      "mission_control": "/mission-control/inventory.html#CROSS-GUIDE-001",
+      "mrid": "EDUCATE-010"
     },
     {
       "id": "CROSS-GUIDE-002",
@@ -7859,7 +7985,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-GUIDE-002"
+      "mission_control": "/mission-control/inventory.html#CROSS-GUIDE-002",
+      "mrid": "EDUCATE-011"
     },
     {
       "id": "CROSS-GUIDE-003",
@@ -7881,7 +8008,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#CROSS-GUIDE-003"
+      "mission_control": "/mission-control/inventory.html#CROSS-GUIDE-003",
+      "mrid": "EDUCATE-012"
     },
     {
       "id": "LAND-012",
@@ -7903,7 +8031,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#LAND-012"
+      "mission_control": "/mission-control/inventory.html#LAND-012",
+      "mrid": "DASH-011"
     },
     {
       "id": "LAND-013",
@@ -7925,7 +8054,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#LAND-013"
+      "mission_control": "/mission-control/inventory.html#LAND-013",
+      "mrid": "DASH-012"
     },
     {
       "id": "LAND-014",
@@ -7947,7 +8077,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#LAND-014"
+      "mission_control": "/mission-control/inventory.html#LAND-014",
+      "mrid": "DASH-013"
     },
     {
       "id": "LAND-015",
@@ -7969,7 +8100,8 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#LAND-015"
+      "mission_control": "/mission-control/inventory.html#LAND-015",
+      "mrid": "DASH-014"
     },
     {
       "id": "LAND-016",
@@ -7991,7 +8123,9 @@
       "sources_complete": 0,
       "version": "0.0",
       "updated": "2026-07-09",
-      "mission_control": "/mission-control/inventory.html#LAND-016"
+      "mission_control": "/mission-control/inventory.html#LAND-016",
+      "mrid": "DASH-015"
     }
-  ]
+  ],
+  "mrid_system": "/data/mrid-registry.json"
 }

@@ -1,0 +1,6775 @@
+{
+  "version": "1.0",
+  "build": 7,
+  "updated": "2026-07-09",
+  "title": "Master Requirement Identification System v1.0",
+  "route": "/mission-control/mrid.html",
+  "data_file": "/data/mrid-registry.json",
+  "principle": "If it cannot be identified, it cannot be measured. If it cannot be measured, it cannot be managed.",
+  "id_rules": [
+    "Permanent",
+    "Unique",
+    "Human-readable",
+    "Searchable",
+    "Stable across versions",
+    "Never reused after retirement",
+    "Traceable to parent domain"
+  ],
+  "domain_codes": [
+    {
+      "code": "GOV",
+      "title": "Governance",
+      "purpose": "Project governance, standards, planning documents."
+    },
+    {
+      "code": "NAV",
+      "title": "Navigation",
+      "purpose": "Entire navigation system."
+    },
+    {
+      "code": "HOME",
+      "title": "Landing Experience",
+      "purpose": "Homepage and orientation."
+    },
+    {
+      "code": "HIST",
+      "title": "Historical Foundation",
+      "purpose": "Path to Citizens United."
+    },
+    {
+      "code": "CASE",
+      "title": "Citizens United Case",
+      "purpose": "The Supreme Court case."
+    },
+    {
+      "code": "CONST",
+      "title": "Constitutional Principles",
+      "purpose": "Legal doctrines behind the decision."
+    },
+    {
+      "code": "IMPACT",
+      "title": "Impact Analysis",
+      "purpose": "Changes after 2010."
+    },
+    {
+      "code": "MONEY",
+      "title": "Money Flow",
+      "purpose": "How political money moves."
+    },
+    {
+      "code": "DEBATE",
+      "title": "Perspectives",
+      "purpose": "Competing viewpoints."
+    },
+    {
+      "code": "REFORM",
+      "title": "Reform",
+      "purpose": "Modern reform efforts."
+    },
+    {
+      "code": "EDUCATE",
+      "title": "Community Education",
+      "purpose": "Volunteer and educator resources."
+    },
+    {
+      "code": "ACTION",
+      "title": "Civic Action",
+      "purpose": "Participation infrastructure."
+    },
+    {
+      "code": "DATA",
+      "title": "Research & Visualization",
+      "purpose": "Datasets, charts, interactive modules."
+    },
+    {
+      "code": "SOURCE",
+      "title": "Source Library",
+      "purpose": "Primary source archive."
+    },
+    {
+      "code": "TECH",
+      "title": "Technical Platform",
+      "purpose": "GitHub, Netlify, search, analytics."
+    },
+    {
+      "code": "DASH",
+      "title": "Mission Control",
+      "purpose": "Project operating system dashboards."
+    }
+  ],
+  "lifecycle": [
+    "proposed",
+    "approved",
+    "planned",
+    "researching",
+    "designing",
+    "building",
+    "internal_review",
+    "testing",
+    "published",
+    "monitoring",
+    "revision_required",
+    "retired"
+  ],
+  "traceability_fields": [
+    "parent_phase",
+    "content_pages",
+    "research_sources",
+    "charts",
+    "downloads",
+    "volunteer_resources",
+    "builds",
+    "commits",
+    "deployments",
+    "testing_records"
+  ],
+  "content_id_map": {
+    "LAND-001": "HOME-001",
+    "LAND-002": "HOME-002",
+    "LAND-003": "HOME-003",
+    "LAND-004": "HOME-004",
+    "LAND-005": "HOME-005",
+    "LAND-006": "HOME-006",
+    "LAND-007": "HOME-007",
+    "LAND-008": "HOME-008",
+    "LAND-009": "HOME-009",
+    "LAND-010": "HOME-010",
+    "LAND-011": "HOME-011",
+    "HIST-001": "HIST-001",
+    "HIST-002": "HIST-002",
+    "HIST-006": "HIST-003",
+    "HIST-010": "HIST-004",
+    "HIST-014": "HIST-005",
+    "HIST-018": "HIST-006",
+    "HIST-022": "HIST-007",
+    "HIST-026": "HIST-008",
+    "CASE-001": "CASE-001",
+    "CASE-002": "CASE-002",
+    "CASE-006": "CASE-003",
+    "CASE-010": "CASE-004",
+    "CASE-014": "CASE-005",
+    "CASE-018": "CASE-006",
+    "CASE-022": "CASE-007",
+    "CASE-026": "CASE-008",
+    "CASE-030": "CASE-009",
+    "CASE-034": "CASE-010",
+    "CASE-038": "CASE-011",
+    "CONST-001": "CONST-001",
+    "CONST-002": "CONST-002",
+    "CONST-006": "CONST-003",
+    "CONST-010": "CONST-004",
+    "CONST-014": "CONST-005",
+    "CONST-018": "CONST-006",
+    "CONST-022": "CONST-007",
+    "CONST-026": "CONST-008",
+    "CONST-030": "CONST-009",
+    "IMPACT-001": "IMPACT-001",
+    "IMPACT-002": "IMPACT-002",
+    "IMPACT-006": "IMPACT-003",
+    "IMPACT-010": "IMPACT-004",
+    "IMPACT-014": "IMPACT-005",
+    "IMPACT-018": "IMPACT-006",
+    "IMPACT-022": "IMPACT-007",
+    "IMPACT-026": "IMPACT-008",
+    "IMPACT-030": "IMPACT-009",
+    "IMPACT-034": "IMPACT-010",
+    "MONEY-001": "MONEY-001",
+    "MONEY-002": "MONEY-002",
+    "MONEY-006": "MONEY-003",
+    "MONEY-010": "MONEY-004",
+    "MONEY-014": "MONEY-005",
+    "MONEY-018": "MONEY-006",
+    "MONEY-022": "MONEY-007",
+    "MONEY-026": "MONEY-008",
+    "MONEY-030": "MONEY-009",
+    "DEBATE-001": "DEBATE-001",
+    "DEBATE-002": "DEBATE-002",
+    "DEBATE-006": "DEBATE-003",
+    "DEBATE-010": "DEBATE-004",
+    "DEBATE-014": "DEBATE-005",
+    "DEBATE-018": "DEBATE-006",
+    "REFORM-001": "REFORM-001",
+    "REFORM-002": "REFORM-002",
+    "REFORM-006": "REFORM-003",
+    "REFORM-010": "REFORM-004",
+    "REFORM-014": "REFORM-005",
+    "REFORM-018": "REFORM-006",
+    "REFORM-022": "REFORM-007",
+    "REFORM-026": "REFORM-008",
+    "REFORM-030": "REFORM-009",
+    "CIVIC-001": "EDUCATE-001",
+    "CIVIC-002": "EDUCATE-002",
+    "CIVIC-006": "EDUCATE-003",
+    "CIVIC-010": "EDUCATE-004",
+    "CIVIC-014": "EDUCATE-005",
+    "CIVIC-018": "EDUCATE-006",
+    "CIVIC-022": "EDUCATE-007",
+    "CIVIC-026": "EDUCATE-008",
+    "CIVIC-030": "EDUCATE-009",
+    "SOURCE-001": "SOURCE-001",
+    "SOURCE-002": "SOURCE-002",
+    "SOURCE-006": "SOURCE-003",
+    "SOURCE-010": "SOURCE-004",
+    "SOURCE-014": "SOURCE-005",
+    "SOURCE-018": "SOURCE-006",
+    "SOURCE-022": "SOURCE-007",
+    "SOURCE-026": "SOURCE-008",
+    "SOURCE-030": "SOURCE-009",
+    "SOURCE-034": "SOURCE-010",
+    "SOURCE-038": "SOURCE-011",
+    "REFORM-034": "REFORM-010",
+    "ACTION-001": "ACTION-001",
+    "ACTION-002": "ACTION-002",
+    "ACTION-003": "ACTION-003",
+    "ACTION-004": "ACTION-004",
+    "ACTION-005": "ACTION-005",
+    "ACTION-006": "ACTION-006",
+    "ACTION-007": "ACTION-007",
+    "ACTION-008": "ACTION-008",
+    "ACTION-009": "ACTION-009",
+    "CROSS-TIME-001": "DATA-001",
+    "CROSS-TIME-002": "DATA-002",
+    "CROSS-TIME-003": "DATA-003",
+    "CROSS-GLOS-001": "DATA-004",
+    "CROSS-GLOS-002": "DATA-005",
+    "CROSS-GLOS-003": "DATA-006",
+    "CROSS-FAQ-001": "DATA-007",
+    "CROSS-FAQ-002": "DATA-008",
+    "CROSS-FAQ-003": "DATA-009",
+    "CROSS-CHART-001": "DATA-010",
+    "CROSS-CHART-002": "DATA-011",
+    "CROSS-CHART-003": "DATA-012",
+    "CROSS-DATA-001": "DATA-013",
+    "CROSS-DATA-002": "DATA-014",
+    "CROSS-DATA-003": "DATA-015",
+    "CROSS-DL-001": "DATA-016",
+    "CROSS-DL-002": "DATA-017",
+    "CROSS-DL-003": "DATA-018",
+    "CROSS-VID-001": "DATA-019",
+    "CROSS-VID-002": "DATA-020",
+    "CROSS-VID-003": "DATA-021",
+    "CROSS-GUIDE-001": "EDUCATE-010",
+    "CROSS-GUIDE-002": "EDUCATE-011",
+    "CROSS-GUIDE-003": "EDUCATE-012",
+    "LAND-012": "DASH-011",
+    "LAND-013": "DASH-012",
+    "LAND-014": "DASH-013",
+    "LAND-015": "DASH-014",
+    "LAND-016": "DASH-015"
+  },
+  "summary": {
+    "total_requirements": 165,
+    "published": 37,
+    "building_or_planned": 128,
+    "domains_active": 16,
+    "content_items_linked": 132
+  },
+  "requirements": [
+    {
+      "mrid": "GOV-001",
+      "domain": "GOV",
+      "title": "Project Constitution v1.0",
+      "type": "document",
+      "status": "published",
+      "completion_pct": 100,
+      "phase": 1,
+      "builds": [
+        2
+      ],
+      "content_id": null,
+      "url": "docs/CONSTITUTION.md",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 1,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          2
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "complete",
+      "source_coverage": "complete",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#GOV-001"
+    },
+    {
+      "mrid": "GOV-002",
+      "domain": "GOV",
+      "title": "Project Mission Statement",
+      "type": "document",
+      "status": "published",
+      "completion_pct": 100,
+      "phase": 1,
+      "builds": [
+        1
+      ],
+      "content_id": null,
+      "url": "/builds/001-mission-statement.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 1,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "complete",
+      "source_coverage": "complete",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#GOV-002"
+    },
+    {
+      "mrid": "GOV-003",
+      "domain": "GOV",
+      "title": "Master Phase Registry v1.0",
+      "type": "document",
+      "status": "published",
+      "completion_pct": 100,
+      "phase": 1,
+      "builds": [
+        4
+      ],
+      "content_id": null,
+      "url": "/mission-control/phases.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 1,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          4
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "complete",
+      "source_coverage": "complete",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#GOV-003"
+    },
+    {
+      "mrid": "GOV-004",
+      "domain": "GOV",
+      "title": "Master Site Architecture v1.0",
+      "type": "document",
+      "status": "published",
+      "completion_pct": 100,
+      "phase": 2,
+      "builds": [
+        5
+      ],
+      "content_id": null,
+      "url": "/mission-control/architecture.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          5
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "complete",
+      "source_coverage": "complete",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#GOV-004"
+    },
+    {
+      "mrid": "GOV-005",
+      "domain": "GOV",
+      "title": "Master Content Inventory v1.0",
+      "type": "document",
+      "status": "published",
+      "completion_pct": 100,
+      "phase": 2,
+      "builds": [
+        6
+      ],
+      "content_id": null,
+      "url": "/mission-control/inventory.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          6
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "complete",
+      "source_coverage": "complete",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#GOV-005"
+    },
+    {
+      "mrid": "GOV-006",
+      "domain": "GOV",
+      "title": "Master Requirement ID System v1.0",
+      "type": "document",
+      "status": "planned",
+      "completion_pct": 80,
+      "phase": 1,
+      "builds": [
+        7
+      ],
+      "content_id": null,
+      "url": "/mission-control/mrid.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 1,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          7
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "internal_review",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#GOV-006"
+    },
+    {
+      "mrid": "GOV-007",
+      "domain": "GOV",
+      "title": "Editorial Standards",
+      "type": "document",
+      "status": "published",
+      "completion_pct": 90,
+      "phase": 1,
+      "builds": [
+        2
+      ],
+      "content_id": null,
+      "url": "/docs/EDITORIAL_CHECKLIST.md",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 1,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          2
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "internal_review",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#GOV-007"
+    },
+    {
+      "mrid": "GOV-008",
+      "domain": "GOV",
+      "title": "Citation Guide",
+      "type": "document",
+      "status": "published",
+      "completion_pct": 85,
+      "phase": 1,
+      "builds": [
+        2
+      ],
+      "content_id": null,
+      "url": "/docs/CITATION_GUIDE.md",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 1,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          2
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "internal_review",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#GOV-008"
+    },
+    {
+      "mrid": "NAV-001",
+      "domain": "NAV",
+      "title": "Primary Navigation",
+      "type": "navigation",
+      "status": "published",
+      "completion_pct": 70,
+      "phase": 2,
+      "builds": [
+        5
+      ],
+      "content_id": null,
+      "url": "/",
+      "dependencies": [],
+      "related": [
+        "HOME-001"
+      ],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          5
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#NAV-001"
+    },
+    {
+      "mrid": "NAV-002",
+      "domain": "NAV",
+      "title": "Footer Navigation",
+      "type": "navigation",
+      "status": "published",
+      "completion_pct": 65,
+      "phase": 2,
+      "builds": [
+        5
+      ],
+      "content_id": null,
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          5
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#NAV-002"
+    },
+    {
+      "mrid": "NAV-003",
+      "domain": "NAV",
+      "title": "Breadcrumbs",
+      "type": "navigation",
+      "status": "building",
+      "completion_pct": 40,
+      "phase": 2,
+      "builds": [
+        5
+      ],
+      "content_id": null,
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          5
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#NAV-003"
+    },
+    {
+      "mrid": "NAV-004",
+      "domain": "NAV",
+      "title": "Floating Action Hub",
+      "type": "navigation",
+      "status": "building",
+      "completion_pct": 35,
+      "phase": 10,
+      "builds": [
+        4,
+        5
+      ],
+      "content_id": null,
+      "url": "/action/share.html",
+      "dependencies": [
+        "ACTION-001",
+        "ACTION-002",
+        "ACTION-003"
+      ],
+      "related": [
+        "ACTION-001"
+      ],
+      "traceability": {
+        "parent_phase": 10,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          4,
+          5
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#NAV-004"
+    },
+    {
+      "mrid": "NAV-005",
+      "domain": "NAV",
+      "title": "Reader Journey Indicator",
+      "type": "navigation",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 2,
+      "builds": [],
+      "content_id": null,
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#NAV-005"
+    },
+    {
+      "mrid": "NAV-006",
+      "domain": "NAV",
+      "title": "Site Map / Explore",
+      "type": "navigation",
+      "status": "published",
+      "completion_pct": 60,
+      "phase": 2,
+      "builds": [
+        5
+      ],
+      "content_id": null,
+      "url": "/explore/",
+      "dependencies": [],
+      "related": [
+        "HOME-010"
+      ],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          5
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#NAV-006"
+    },
+    {
+      "mrid": "NAV-007",
+      "domain": "NAV",
+      "title": "Secondary Navigation",
+      "type": "navigation",
+      "status": "planned",
+      "completion_pct": 5,
+      "phase": 2,
+      "builds": [
+        5
+      ],
+      "content_id": null,
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          5
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#NAV-007"
+    },
+    {
+      "mrid": "TECH-001",
+      "domain": "TECH",
+      "title": "GitHub Repository",
+      "type": "infrastructure",
+      "status": "published",
+      "completion_pct": 85,
+      "phase": 12,
+      "builds": [
+        1,
+        9
+      ],
+      "content_id": null,
+      "url": "https://github.com/Grappe501/arkansas",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 12,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          9
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#TECH-001"
+    },
+    {
+      "mrid": "TECH-002",
+      "domain": "TECH",
+      "title": "Netlify Deployment",
+      "type": "infrastructure",
+      "status": "published",
+      "completion_pct": 80,
+      "phase": 12,
+      "builds": [
+        1,
+        11
+      ],
+      "content_id": null,
+      "url": "https://arkansas-facts.netlify.app",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 12,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          11
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#TECH-002"
+    },
+    {
+      "mrid": "TECH-003",
+      "domain": "TECH",
+      "title": "Netlify Forms",
+      "type": "infrastructure",
+      "status": "building",
+      "completion_pct": 50,
+      "phase": 12,
+      "builds": [
+        8
+      ],
+      "content_id": null,
+      "url": "/educate/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 12,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          8
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#TECH-003"
+    },
+    {
+      "mrid": "TECH-004",
+      "domain": "TECH",
+      "title": "Static Site Architecture",
+      "type": "infrastructure",
+      "status": "published",
+      "completion_pct": 90,
+      "phase": 12,
+      "builds": [
+        1
+      ],
+      "content_id": null,
+      "url": "/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 12,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#TECH-004"
+    },
+    {
+      "mrid": "TECH-005",
+      "domain": "TECH",
+      "title": "Search",
+      "type": "feature",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 12,
+      "builds": [],
+      "content_id": null,
+      "url": "/search",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 12,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#TECH-005"
+    },
+    {
+      "mrid": "TECH-006",
+      "domain": "TECH",
+      "title": "Analytics",
+      "type": "feature",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 15,
+      "builds": [],
+      "content_id": null,
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 15,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#TECH-006"
+    },
+    {
+      "mrid": "TECH-007",
+      "domain": "TECH",
+      "title": "Accessibility Audit",
+      "type": "feature",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 14,
+      "builds": [],
+      "content_id": null,
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 14,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#TECH-007"
+    },
+    {
+      "mrid": "TECH-008",
+      "domain": "TECH",
+      "title": "URL Redirect Strategy",
+      "type": "infrastructure",
+      "status": "published",
+      "completion_pct": 75,
+      "phase": 12,
+      "builds": [
+        5
+      ],
+      "content_id": null,
+      "url": "/netlify.toml",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 12,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          5
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#TECH-008"
+    },
+    {
+      "mrid": "DASH-001",
+      "domain": "DASH",
+      "title": "Executive Summary",
+      "type": "dashboard",
+      "status": "published",
+      "completion_pct": 100,
+      "phase": 0,
+      "builds": [
+        3
+      ],
+      "content_id": null,
+      "url": "/mission-control/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 0,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          3
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#DASH-001"
+    },
+    {
+      "mrid": "DASH-002",
+      "domain": "DASH",
+      "title": "Phase Dashboard",
+      "type": "dashboard",
+      "status": "published",
+      "completion_pct": 100,
+      "phase": 0,
+      "builds": [
+        4
+      ],
+      "content_id": null,
+      "url": "/mission-control/phases.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 0,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          4
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#DASH-002"
+    },
+    {
+      "mrid": "DASH-003",
+      "domain": "DASH",
+      "title": "Site Architecture Blueprint",
+      "type": "dashboard",
+      "status": "published",
+      "completion_pct": 100,
+      "phase": 0,
+      "builds": [
+        5
+      ],
+      "content_id": null,
+      "url": "/mission-control/architecture.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 0,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          5
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#DASH-003"
+    },
+    {
+      "mrid": "DASH-004",
+      "domain": "DASH",
+      "title": "Content Inventory Dashboard",
+      "type": "dashboard",
+      "status": "published",
+      "completion_pct": 100,
+      "phase": 0,
+      "builds": [
+        6
+      ],
+      "content_id": null,
+      "url": "/mission-control/inventory.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 0,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          6
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#DASH-004"
+    },
+    {
+      "mrid": "DASH-005",
+      "domain": "DASH",
+      "title": "MRID Traceability Dashboard",
+      "type": "dashboard",
+      "status": "planned",
+      "completion_pct": 80,
+      "phase": 0,
+      "builds": [
+        7
+      ],
+      "content_id": null,
+      "url": "/mission-control/mrid.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 0,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          7
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#DASH-005"
+    },
+    {
+      "mrid": "DASH-006",
+      "domain": "DASH",
+      "title": "Progress Bars",
+      "type": "dashboard",
+      "status": "published",
+      "completion_pct": 100,
+      "phase": 0,
+      "builds": [
+        3
+      ],
+      "content_id": null,
+      "url": "/mission-control/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 0,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          3
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#DASH-006"
+    },
+    {
+      "mrid": "DASH-007",
+      "domain": "DASH",
+      "title": "Living Build Map",
+      "type": "dashboard",
+      "status": "published",
+      "completion_pct": 90,
+      "phase": 0,
+      "builds": [
+        3
+      ],
+      "content_id": null,
+      "url": "/mission-control/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 0,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          3
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#DASH-007"
+    },
+    {
+      "mrid": "DASH-008",
+      "domain": "DASH",
+      "title": "Deployment Monitor",
+      "type": "dashboard",
+      "status": "building",
+      "completion_pct": 60,
+      "phase": 0,
+      "builds": [
+        3
+      ],
+      "content_id": null,
+      "url": "/mission-control/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 0,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          3
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#DASH-008"
+    },
+    {
+      "mrid": "DASH-009",
+      "domain": "DASH",
+      "title": "Public Readiness Tracker",
+      "type": "dashboard",
+      "status": "published",
+      "completion_pct": 90,
+      "phase": 0,
+      "builds": [
+        3
+      ],
+      "content_id": null,
+      "url": "/mission-control/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 0,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          3
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#DASH-009"
+    },
+    {
+      "mrid": "DASH-010",
+      "domain": "DASH",
+      "title": "Build DNA Records",
+      "type": "dashboard",
+      "status": "published",
+      "completion_pct": 95,
+      "phase": 0,
+      "builds": [
+        3
+      ],
+      "content_id": null,
+      "url": "/mission-control/build.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 0,
+        "content_pages": [],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          3
+        ],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#DASH-010"
+    },
+    {
+      "mrid": "HOME-001",
+      "domain": "HOME",
+      "title": "Homepage",
+      "type": "page",
+      "status": "published",
+      "completion_pct": 45,
+      "phase": 2,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "LAND-001",
+      "url": "/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [
+          "LAND-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "editorial",
+      "source_coverage": "partial",
+      "public_readiness": 45,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#HOME-001",
+      "reader_level": "L1",
+      "parent_section": "home"
+    },
+    {
+      "mrid": "HOME-002",
+      "domain": "HOME",
+      "title": "Why It Matters",
+      "type": "section",
+      "status": "published",
+      "completion_pct": 40,
+      "phase": 2,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "LAND-002",
+      "url": "/#why-it-matters",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [
+          "LAND-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 40,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#HOME-002",
+      "reader_level": "L1",
+      "parent_section": "home"
+    },
+    {
+      "mrid": "HOME-003",
+      "domain": "HOME",
+      "title": "Hero Story",
+      "type": "section",
+      "status": "published",
+      "completion_pct": 50,
+      "phase": 2,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "LAND-003",
+      "url": "/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [
+          "LAND-003"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 50,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#HOME-003",
+      "reader_level": "L1",
+      "parent_section": "home"
+    },
+    {
+      "mrid": "HOME-004",
+      "domain": "HOME",
+      "title": "Platform Overview",
+      "type": "section",
+      "status": "building",
+      "completion_pct": 25,
+      "phase": 2,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "LAND-004",
+      "url": "/explore/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [
+          "LAND-004"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#HOME-004",
+      "reader_level": "L1",
+      "parent_section": "home"
+    },
+    {
+      "mrid": "HOME-005",
+      "domain": "HOME",
+      "title": "Interactive Timeline Preview",
+      "type": "section",
+      "status": "building",
+      "completion_pct": 10,
+      "phase": 2,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "LAND-005",
+      "url": "/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [
+          "LAND-005"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#HOME-005",
+      "reader_level": "L1",
+      "parent_section": "home"
+    },
+    {
+      "mrid": "HOME-006",
+      "domain": "HOME",
+      "title": "Money in Politics Preview",
+      "type": "section",
+      "status": "building",
+      "completion_pct": 10,
+      "phase": 2,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "LAND-006",
+      "url": "/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [
+          "LAND-006"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#HOME-006",
+      "reader_level": "L1",
+      "parent_section": "home"
+    },
+    {
+      "mrid": "HOME-007",
+      "domain": "HOME",
+      "title": "Current Reform Preview",
+      "type": "section",
+      "status": "building",
+      "completion_pct": 15,
+      "phase": 2,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "LAND-007",
+      "url": "/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [
+          "LAND-007"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#HOME-007",
+      "reader_level": "L1",
+      "parent_section": "home"
+    },
+    {
+      "mrid": "HOME-008",
+      "domain": "HOME",
+      "title": "Leadership Invitation",
+      "type": "section",
+      "status": "published",
+      "completion_pct": 55,
+      "phase": 2,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "LAND-008",
+      "url": "/educate/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [
+          "LAND-008"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "editorial",
+      "source_coverage": "none",
+      "public_readiness": 55,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#HOME-008",
+      "reader_level": "L1",
+      "parent_section": "home"
+    },
+    {
+      "mrid": "HOME-009",
+      "domain": "HOME",
+      "title": "Quick Facts",
+      "type": "section",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 2,
+      "builds": [],
+      "content_id": "LAND-009",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [
+          "LAND-009"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#HOME-009",
+      "reader_level": "L1",
+      "parent_section": "home"
+    },
+    {
+      "mrid": "HOME-010",
+      "domain": "HOME",
+      "title": "Site Orientation / Explore Map",
+      "type": "page",
+      "status": "published",
+      "completion_pct": 60,
+      "phase": 2,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "LAND-010",
+      "url": "/explore/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [
+          "LAND-010"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 60,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#HOME-010",
+      "reader_level": "L1",
+      "parent_section": "home"
+    },
+    {
+      "mrid": "HOME-011",
+      "domain": "HOME",
+      "title": "Frequently Asked Questions",
+      "type": "page",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 2,
+      "builds": [],
+      "content_id": "LAND-011",
+      "url": "/faq",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [
+          "LAND-011"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#HOME-011",
+      "reader_level": "L1",
+      "parent_section": "home"
+    },
+    {
+      "mrid": "HIST-001",
+      "domain": "HIST",
+      "title": "The Story \u2014 Overview",
+      "type": "hall-overview",
+      "status": "planned",
+      "completion_pct": 15,
+      "phase": 3,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "HIST-001",
+      "url": "/halls/story-before.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 3,
+        "content_pages": [
+          "HIST-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#HIST-001",
+      "reader_level": "L1",
+      "parent_section": "the-story"
+    },
+    {
+      "mrid": "HIST-002",
+      "domain": "HIST",
+      "title": "America Before Campaign Finance Laws",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 3,
+      "builds": [],
+      "content_id": "HIST-002",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 3,
+        "content_pages": [
+          "HIST-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#HIST-002",
+      "reader_level": "L1",
+      "parent_section": "the-story"
+    },
+    {
+      "mrid": "HIST-003",
+      "domain": "HIST",
+      "title": "Progressive Era",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 3,
+      "builds": [],
+      "content_id": "HIST-006",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 3,
+        "content_pages": [
+          "HIST-006"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#HIST-003",
+      "reader_level": "L1",
+      "parent_section": "the-story"
+    },
+    {
+      "mrid": "HIST-004",
+      "domain": "HIST",
+      "title": "Early Federal Laws",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 3,
+      "builds": [],
+      "content_id": "HIST-010",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 3,
+        "content_pages": [
+          "HIST-010"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#HIST-004",
+      "reader_level": "L1",
+      "parent_section": "the-story"
+    },
+    {
+      "mrid": "HIST-005",
+      "domain": "HIST",
+      "title": "Watergate",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 3,
+      "builds": [],
+      "content_id": "HIST-014",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 3,
+        "content_pages": [
+          "HIST-014"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#HIST-005",
+      "reader_level": "L1",
+      "parent_section": "the-story"
+    },
+    {
+      "mrid": "HIST-006",
+      "domain": "HIST",
+      "title": "Campaign Finance Reform",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 3,
+      "builds": [],
+      "content_id": "HIST-018",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 3,
+        "content_pages": [
+          "HIST-018"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#HIST-006",
+      "reader_level": "L1",
+      "parent_section": "the-story"
+    },
+    {
+      "mrid": "HIST-007",
+      "domain": "HIST",
+      "title": "Major Supreme Court Cases",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 3,
+      "builds": [],
+      "content_id": "HIST-022",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 3,
+        "content_pages": [
+          "HIST-022"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#HIST-007",
+      "reader_level": "L1",
+      "parent_section": "the-story"
+    },
+    {
+      "mrid": "HIST-008",
+      "domain": "HIST",
+      "title": "The Road to Citizens United",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 3,
+      "builds": [],
+      "content_id": "HIST-026",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 3,
+        "content_pages": [
+          "HIST-026"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#HIST-008",
+      "reader_level": "L1",
+      "parent_section": "the-story"
+    },
+    {
+      "mrid": "CASE-001",
+      "domain": "CASE",
+      "title": "The Case \u2014 Overview",
+      "type": "hall-overview",
+      "status": "planned",
+      "completion_pct": 15,
+      "phase": 4,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "CASE-001",
+      "url": "/halls/the-case.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 4,
+        "content_pages": [
+          "CASE-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CASE-001",
+      "reader_level": "L1",
+      "parent_section": "the-case"
+    },
+    {
+      "mrid": "CASE-002",
+      "domain": "CASE",
+      "title": "Who was Citizens United?",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 4,
+      "builds": [],
+      "content_id": "CASE-002",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 4,
+        "content_pages": [
+          "CASE-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CASE-002",
+      "reader_level": "L1",
+      "parent_section": "the-case"
+    },
+    {
+      "mrid": "CASE-003",
+      "domain": "CASE",
+      "title": "Hillary: The Movie",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 4,
+      "builds": [],
+      "content_id": "CASE-006",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 4,
+        "content_pages": [
+          "CASE-006"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CASE-003",
+      "reader_level": "L1",
+      "parent_section": "the-case"
+    },
+    {
+      "mrid": "CASE-004",
+      "domain": "CASE",
+      "title": "The Federal Election Commission",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 4,
+      "builds": [],
+      "content_id": "CASE-010",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 4,
+        "content_pages": [
+          "CASE-010"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CASE-004",
+      "reader_level": "L1",
+      "parent_section": "the-case"
+    },
+    {
+      "mrid": "CASE-005",
+      "domain": "CASE",
+      "title": "Lower Courts",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 4,
+      "builds": [],
+      "content_id": "CASE-014",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 4,
+        "content_pages": [
+          "CASE-014"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CASE-005",
+      "reader_level": "L1",
+      "parent_section": "the-case"
+    },
+    {
+      "mrid": "CASE-006",
+      "domain": "CASE",
+      "title": "Supreme Court",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 4,
+      "builds": [],
+      "content_id": "CASE-018",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 4,
+        "content_pages": [
+          "CASE-018"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CASE-006",
+      "reader_level": "L1",
+      "parent_section": "the-case"
+    },
+    {
+      "mrid": "CASE-007",
+      "domain": "CASE",
+      "title": "Oral Arguments",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 4,
+      "builds": [],
+      "content_id": "CASE-022",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 4,
+        "content_pages": [
+          "CASE-022"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CASE-007",
+      "reader_level": "L1",
+      "parent_section": "the-case"
+    },
+    {
+      "mrid": "CASE-008",
+      "domain": "CASE",
+      "title": "Majority Opinion",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 4,
+      "builds": [],
+      "content_id": "CASE-026",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 4,
+        "content_pages": [
+          "CASE-026"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CASE-008",
+      "reader_level": "L1",
+      "parent_section": "the-case"
+    },
+    {
+      "mrid": "CASE-009",
+      "domain": "CASE",
+      "title": "Dissents",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 4,
+      "builds": [],
+      "content_id": "CASE-030",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 4,
+        "content_pages": [
+          "CASE-030"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CASE-009",
+      "reader_level": "L1",
+      "parent_section": "the-case"
+    },
+    {
+      "mrid": "CASE-010",
+      "domain": "CASE",
+      "title": "Timeline",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 4,
+      "builds": [],
+      "content_id": "CASE-034",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 4,
+        "content_pages": [
+          "CASE-034"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CASE-010",
+      "reader_level": "L1",
+      "parent_section": "the-case"
+    },
+    {
+      "mrid": "CASE-011",
+      "domain": "CASE",
+      "title": "Frequently Misunderstood Facts",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 4,
+      "builds": [],
+      "content_id": "CASE-038",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 4,
+        "content_pages": [
+          "CASE-038"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CASE-011",
+      "reader_level": "L1",
+      "parent_section": "the-case"
+    },
+    {
+      "mrid": "CONST-001",
+      "domain": "CONST",
+      "title": "The Constitution \u2014 Overview",
+      "type": "hall-overview",
+      "status": "planned",
+      "completion_pct": 15,
+      "phase": 5,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "CONST-001",
+      "url": "/halls/what-court-decided.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 5,
+        "content_pages": [
+          "CONST-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CONST-001",
+      "reader_level": "L1",
+      "parent_section": "the-constitution"
+    },
+    {
+      "mrid": "CONST-002",
+      "domain": "CONST",
+      "title": "First Amendment",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 5,
+      "builds": [],
+      "content_id": "CONST-002",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 5,
+        "content_pages": [
+          "CONST-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CONST-002",
+      "reader_level": "L1",
+      "parent_section": "the-constitution"
+    },
+    {
+      "mrid": "CONST-003",
+      "domain": "CONST",
+      "title": "Political Speech",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 5,
+      "builds": [],
+      "content_id": "CONST-006",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 5,
+        "content_pages": [
+          "CONST-006"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CONST-003",
+      "reader_level": "L1",
+      "parent_section": "the-constitution"
+    },
+    {
+      "mrid": "CONST-004",
+      "domain": "CONST",
+      "title": "Corporate Speech",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 5,
+      "builds": [],
+      "content_id": "CONST-010",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 5,
+        "content_pages": [
+          "CONST-010"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CONST-004",
+      "reader_level": "L1",
+      "parent_section": "the-constitution"
+    },
+    {
+      "mrid": "CONST-005",
+      "domain": "CONST",
+      "title": "Freedom of Association",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 5,
+      "builds": [],
+      "content_id": "CONST-014",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 5,
+        "content_pages": [
+          "CONST-014"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CONST-005",
+      "reader_level": "L1",
+      "parent_section": "the-constitution"
+    },
+    {
+      "mrid": "CONST-006",
+      "domain": "CONST",
+      "title": "Judicial Review",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 5,
+      "builds": [],
+      "content_id": "CONST-018",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 5,
+        "content_pages": [
+          "CONST-018"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CONST-006",
+      "reader_level": "L1",
+      "parent_section": "the-constitution"
+    },
+    {
+      "mrid": "CONST-007",
+      "domain": "CONST",
+      "title": "Strict Scrutiny",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 5,
+      "builds": [],
+      "content_id": "CONST-022",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 5,
+        "content_pages": [
+          "CONST-022"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CONST-007",
+      "reader_level": "L1",
+      "parent_section": "the-constitution"
+    },
+    {
+      "mrid": "CONST-008",
+      "domain": "CONST",
+      "title": "Constitutional Interpretation",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 5,
+      "builds": [],
+      "content_id": "CONST-026",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 5,
+        "content_pages": [
+          "CONST-026"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CONST-008",
+      "reader_level": "L1",
+      "parent_section": "the-constitution"
+    },
+    {
+      "mrid": "CONST-009",
+      "domain": "CONST",
+      "title": "Prior Cases",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 5,
+      "builds": [],
+      "content_id": "CONST-030",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 5,
+        "content_pages": [
+          "CONST-030"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#CONST-009",
+      "reader_level": "L1",
+      "parent_section": "the-constitution"
+    },
+    {
+      "mrid": "IMPACT-001",
+      "domain": "IMPACT",
+      "title": "The Impact \u2014 Overview",
+      "type": "hall-overview",
+      "status": "planned",
+      "completion_pct": 15,
+      "phase": 6,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "IMPACT-001",
+      "url": "/halls/after-2010.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "IMPACT-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#IMPACT-001",
+      "reader_level": "L1",
+      "parent_section": "the-impact"
+    },
+    {
+      "mrid": "IMPACT-002",
+      "domain": "IMPACT",
+      "title": "Election Spending",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 6,
+      "builds": [],
+      "content_id": "IMPACT-002",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "IMPACT-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#IMPACT-002",
+      "reader_level": "L1",
+      "parent_section": "the-impact"
+    },
+    {
+      "mrid": "IMPACT-003",
+      "domain": "IMPACT",
+      "title": "Super PACs",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 6,
+      "builds": [],
+      "content_id": "IMPACT-006",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "IMPACT-006"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#IMPACT-003",
+      "reader_level": "L1",
+      "parent_section": "the-impact"
+    },
+    {
+      "mrid": "IMPACT-004",
+      "domain": "IMPACT",
+      "title": "Independent Expenditures",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 6,
+      "builds": [],
+      "content_id": "IMPACT-010",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "IMPACT-010"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#IMPACT-004",
+      "reader_level": "L1",
+      "parent_section": "the-impact"
+    },
+    {
+      "mrid": "IMPACT-005",
+      "domain": "IMPACT",
+      "title": "Dark Money",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 6,
+      "builds": [],
+      "content_id": "IMPACT-014",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "IMPACT-014"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#IMPACT-005",
+      "reader_level": "L1",
+      "parent_section": "the-impact"
+    },
+    {
+      "mrid": "IMPACT-006",
+      "domain": "IMPACT",
+      "title": "Donor Trends",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 6,
+      "builds": [],
+      "content_id": "IMPACT-018",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "IMPACT-018"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#IMPACT-006",
+      "reader_level": "L1",
+      "parent_section": "the-impact"
+    },
+    {
+      "mrid": "IMPACT-007",
+      "domain": "IMPACT",
+      "title": "Federal Elections",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 6,
+      "builds": [],
+      "content_id": "IMPACT-022",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "IMPACT-022"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#IMPACT-007",
+      "reader_level": "L1",
+      "parent_section": "the-impact"
+    },
+    {
+      "mrid": "IMPACT-008",
+      "domain": "IMPACT",
+      "title": "State Elections",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 6,
+      "builds": [],
+      "content_id": "IMPACT-026",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "IMPACT-026"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#IMPACT-008",
+      "reader_level": "L1",
+      "parent_section": "the-impact"
+    },
+    {
+      "mrid": "IMPACT-009",
+      "domain": "IMPACT",
+      "title": "Ballot Measures",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 6,
+      "builds": [],
+      "content_id": "IMPACT-030",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "IMPACT-030"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#IMPACT-009",
+      "reader_level": "L1",
+      "parent_section": "the-impact"
+    },
+    {
+      "mrid": "IMPACT-010",
+      "domain": "IMPACT",
+      "title": "Judicial Elections",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 6,
+      "builds": [],
+      "content_id": "IMPACT-034",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "IMPACT-034"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#IMPACT-010",
+      "reader_level": "L1",
+      "parent_section": "the-impact"
+    },
+    {
+      "mrid": "MONEY-001",
+      "domain": "MONEY",
+      "title": "Follow the Money \u2014 Overview",
+      "type": "hall-overview",
+      "status": "planned",
+      "completion_pct": 15,
+      "phase": 6,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "MONEY-001",
+      "url": "/halls/money-map.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "MONEY-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#MONEY-001",
+      "reader_level": "L1",
+      "parent_section": "follow-the-money"
+    },
+    {
+      "mrid": "MONEY-002",
+      "domain": "MONEY",
+      "title": "Individuals",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 6,
+      "builds": [],
+      "content_id": "MONEY-002",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "MONEY-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#MONEY-002",
+      "reader_level": "L1",
+      "parent_section": "follow-the-money"
+    },
+    {
+      "mrid": "MONEY-003",
+      "domain": "MONEY",
+      "title": "PACs",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 6,
+      "builds": [],
+      "content_id": "MONEY-006",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "MONEY-006"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#MONEY-003",
+      "reader_level": "L1",
+      "parent_section": "follow-the-money"
+    },
+    {
+      "mrid": "MONEY-004",
+      "domain": "MONEY",
+      "title": "Super PACs",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 6,
+      "builds": [],
+      "content_id": "MONEY-010",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "MONEY-010"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#MONEY-004",
+      "reader_level": "L1",
+      "parent_section": "follow-the-money"
+    },
+    {
+      "mrid": "MONEY-005",
+      "domain": "MONEY",
+      "title": "Political Parties",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 6,
+      "builds": [],
+      "content_id": "MONEY-014",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "MONEY-014"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#MONEY-005",
+      "reader_level": "L1",
+      "parent_section": "follow-the-money"
+    },
+    {
+      "mrid": "MONEY-006",
+      "domain": "MONEY",
+      "title": "Independent Expenditures",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 6,
+      "builds": [],
+      "content_id": "MONEY-018",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "MONEY-018"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#MONEY-006",
+      "reader_level": "L1",
+      "parent_section": "follow-the-money"
+    },
+    {
+      "mrid": "MONEY-007",
+      "domain": "MONEY",
+      "title": "Nonprofits",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 6,
+      "builds": [],
+      "content_id": "MONEY-022",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "MONEY-022"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#MONEY-007",
+      "reader_level": "L1",
+      "parent_section": "follow-the-money"
+    },
+    {
+      "mrid": "MONEY-008",
+      "domain": "MONEY",
+      "title": "Disclosure",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 6,
+      "builds": [],
+      "content_id": "MONEY-026",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "MONEY-026"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#MONEY-008",
+      "reader_level": "L1",
+      "parent_section": "follow-the-money"
+    },
+    {
+      "mrid": "MONEY-009",
+      "domain": "MONEY",
+      "title": "Money Flow Diagrams",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 6,
+      "builds": [],
+      "content_id": "MONEY-030",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 6,
+        "content_pages": [
+          "MONEY-030"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#MONEY-009",
+      "reader_level": "L1",
+      "parent_section": "follow-the-money"
+    },
+    {
+      "mrid": "DEBATE-001",
+      "domain": "DEBATE",
+      "title": "The Debate \u2014 Overview",
+      "type": "hall-overview",
+      "status": "planned",
+      "completion_pct": 15,
+      "phase": 8,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "DEBATE-001",
+      "url": "/halls/debate.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 8,
+        "content_pages": [
+          "DEBATE-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DEBATE-001",
+      "reader_level": "L1",
+      "parent_section": "the-debate"
+    },
+    {
+      "mrid": "DEBATE-002",
+      "domain": "DEBATE",
+      "title": "Supporting Arguments",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 8,
+      "builds": [],
+      "content_id": "DEBATE-002",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 8,
+        "content_pages": [
+          "DEBATE-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DEBATE-002",
+      "reader_level": "L1",
+      "parent_section": "the-debate"
+    },
+    {
+      "mrid": "DEBATE-003",
+      "domain": "DEBATE",
+      "title": "Opposing Arguments",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 8,
+      "builds": [],
+      "content_id": "DEBATE-006",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 8,
+        "content_pages": [
+          "DEBATE-006"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DEBATE-003",
+      "reader_level": "L1",
+      "parent_section": "the-debate"
+    },
+    {
+      "mrid": "DEBATE-004",
+      "domain": "DEBATE",
+      "title": "Academic Perspectives",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 8,
+      "builds": [],
+      "content_id": "DEBATE-010",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 8,
+        "content_pages": [
+          "DEBATE-010"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DEBATE-004",
+      "reader_level": "L1",
+      "parent_section": "the-debate"
+    },
+    {
+      "mrid": "DEBATE-005",
+      "domain": "DEBATE",
+      "title": "Frequently Asked Questions",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 8,
+      "builds": [],
+      "content_id": "DEBATE-014",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 8,
+        "content_pages": [
+          "DEBATE-014"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DEBATE-005",
+      "reader_level": "L1",
+      "parent_section": "the-debate"
+    },
+    {
+      "mrid": "DEBATE-006",
+      "domain": "DEBATE",
+      "title": "Common Misconceptions",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 8,
+      "builds": [],
+      "content_id": "DEBATE-018",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 8,
+        "content_pages": [
+          "DEBATE-018"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DEBATE-006",
+      "reader_level": "L1",
+      "parent_section": "the-debate"
+    },
+    {
+      "mrid": "REFORM-001",
+      "domain": "REFORM",
+      "title": "Reform \u2014 Overview",
+      "type": "hall-overview",
+      "status": "building",
+      "completion_pct": 35,
+      "phase": 9,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "REFORM-001",
+      "url": "/halls/reform.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 9,
+        "content_pages": [
+          "REFORM-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#REFORM-001",
+      "reader_level": "L1",
+      "parent_section": "reform"
+    },
+    {
+      "mrid": "REFORM-002",
+      "domain": "REFORM",
+      "title": "Constitutional Amendments",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 9,
+      "builds": [],
+      "content_id": "REFORM-002",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 9,
+        "content_pages": [
+          "REFORM-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#REFORM-002",
+      "reader_level": "L1",
+      "parent_section": "reform"
+    },
+    {
+      "mrid": "REFORM-003",
+      "domain": "REFORM",
+      "title": "Federal Legislation",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 9,
+      "builds": [],
+      "content_id": "REFORM-006",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 9,
+        "content_pages": [
+          "REFORM-006"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#REFORM-003",
+      "reader_level": "L1",
+      "parent_section": "reform"
+    },
+    {
+      "mrid": "REFORM-004",
+      "domain": "REFORM",
+      "title": "State Legislation",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 9,
+      "builds": [],
+      "content_id": "REFORM-010",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 9,
+        "content_pages": [
+          "REFORM-010"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#REFORM-004",
+      "reader_level": "L1",
+      "parent_section": "reform"
+    },
+    {
+      "mrid": "REFORM-005",
+      "domain": "REFORM",
+      "title": "Montana",
+      "type": "article",
+      "status": "published",
+      "completion_pct": 70,
+      "phase": 9,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "REFORM-014",
+      "url": "/halls/montana-hawaii.html#montana",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 9,
+        "content_pages": [
+          "REFORM-014"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "fact-check",
+      "source_coverage": "complete",
+      "public_readiness": 70,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#REFORM-005",
+      "reader_level": "L1",
+      "parent_section": "reform"
+    },
+    {
+      "mrid": "REFORM-006",
+      "domain": "REFORM",
+      "title": "Hawaii",
+      "type": "article",
+      "status": "published",
+      "completion_pct": 70,
+      "phase": 9,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "REFORM-018",
+      "url": "/halls/montana-hawaii.html#hawaii",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 9,
+        "content_pages": [
+          "REFORM-018"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "fact-check",
+      "source_coverage": "complete",
+      "public_readiness": 70,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#REFORM-006",
+      "reader_level": "L1",
+      "parent_section": "reform"
+    },
+    {
+      "mrid": "REFORM-007",
+      "domain": "REFORM",
+      "title": "Other State Efforts",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 9,
+      "builds": [],
+      "content_id": "REFORM-022",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 9,
+        "content_pages": [
+          "REFORM-022"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#REFORM-007",
+      "reader_level": "L1",
+      "parent_section": "reform"
+    },
+    {
+      "mrid": "REFORM-008",
+      "domain": "REFORM",
+      "title": "Court Challenges",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 9,
+      "builds": [],
+      "content_id": "REFORM-026",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 9,
+        "content_pages": [
+          "REFORM-026"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#REFORM-008",
+      "reader_level": "L1",
+      "parent_section": "reform"
+    },
+    {
+      "mrid": "REFORM-009",
+      "domain": "REFORM",
+      "title": "Future Possibilities",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 9,
+      "builds": [],
+      "content_id": "REFORM-030",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 9,
+        "content_pages": [
+          "REFORM-030"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#REFORM-009",
+      "reader_level": "L1",
+      "parent_section": "reform"
+    },
+    {
+      "mrid": "EDUCATE-001",
+      "domain": "EDUCATE",
+      "title": "Teach Your Community \u2014 Overview",
+      "type": "hall-overview",
+      "status": "building",
+      "completion_pct": 35,
+      "phase": 11,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "CIVIC-001",
+      "url": "/educate/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "CIVIC-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#EDUCATE-001",
+      "reader_level": "L1",
+      "parent_section": "teach"
+    },
+    {
+      "mrid": "EDUCATE-002",
+      "domain": "EDUCATE",
+      "title": "Start Here",
+      "type": "article",
+      "status": "published",
+      "completion_pct": 70,
+      "phase": 11,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "CIVIC-002",
+      "url": "/educate/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "CIVIC-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "fact-check",
+      "source_coverage": "complete",
+      "public_readiness": 70,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#EDUCATE-002",
+      "reader_level": "L1",
+      "parent_section": "teach"
+    },
+    {
+      "mrid": "EDUCATE-003",
+      "domain": "EDUCATE",
+      "title": "Host a Community Conversation",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 11,
+      "builds": [],
+      "content_id": "CIVIC-006",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "CIVIC-006"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#EDUCATE-003",
+      "reader_level": "L1",
+      "parent_section": "teach"
+    },
+    {
+      "mrid": "EDUCATE-004",
+      "domain": "EDUCATE",
+      "title": "Classroom Resources",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 11,
+      "builds": [],
+      "content_id": "CIVIC-010",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "CIVIC-010"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#EDUCATE-004",
+      "reader_level": "L1",
+      "parent_section": "teach"
+    },
+    {
+      "mrid": "EDUCATE-005",
+      "domain": "EDUCATE",
+      "title": "Civic Club Toolkit",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 11,
+      "builds": [],
+      "content_id": "CIVIC-014",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "CIVIC-014"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#EDUCATE-005",
+      "reader_level": "L1",
+      "parent_section": "teach"
+    },
+    {
+      "mrid": "EDUCATE-006",
+      "domain": "EDUCATE",
+      "title": "Faith Community Toolkit",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 11,
+      "builds": [],
+      "content_id": "CIVIC-018",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "CIVIC-018"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#EDUCATE-006",
+      "reader_level": "L1",
+      "parent_section": "teach"
+    },
+    {
+      "mrid": "EDUCATE-007",
+      "domain": "EDUCATE",
+      "title": "Campus Toolkit",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 11,
+      "builds": [],
+      "content_id": "CIVIC-022",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "CIVIC-022"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#EDUCATE-007",
+      "reader_level": "L1",
+      "parent_section": "teach"
+    },
+    {
+      "mrid": "EDUCATE-008",
+      "domain": "EDUCATE",
+      "title": "Presentation Slides",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 11,
+      "builds": [],
+      "content_id": "CIVIC-026",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "CIVIC-026"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#EDUCATE-008",
+      "reader_level": "L1",
+      "parent_section": "teach"
+    },
+    {
+      "mrid": "EDUCATE-009",
+      "domain": "EDUCATE",
+      "title": "Facilitator Guide",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 11,
+      "builds": [],
+      "content_id": "CIVIC-030",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "CIVIC-030"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#EDUCATE-009",
+      "reader_level": "L1",
+      "parent_section": "teach"
+    },
+    {
+      "mrid": "SOURCE-001",
+      "domain": "SOURCE",
+      "title": "Source Library \u2014 Overview",
+      "type": "hall-overview",
+      "status": "building",
+      "completion_pct": 35,
+      "phase": 13,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "SOURCE-001",
+      "url": "/library/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 13,
+        "content_pages": [
+          "SOURCE-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#SOURCE-001",
+      "reader_level": "L1",
+      "parent_section": "sources"
+    },
+    {
+      "mrid": "SOURCE-002",
+      "domain": "SOURCE",
+      "title": "Supreme Court Opinions",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 13,
+      "builds": [],
+      "content_id": "SOURCE-002",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 13,
+        "content_pages": [
+          "SOURCE-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#SOURCE-002",
+      "reader_level": "L1",
+      "parent_section": "sources"
+    },
+    {
+      "mrid": "SOURCE-003",
+      "domain": "SOURCE",
+      "title": "Oral Argument Transcripts",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 13,
+      "builds": [],
+      "content_id": "SOURCE-006",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 13,
+        "content_pages": [
+          "SOURCE-006"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#SOURCE-003",
+      "reader_level": "L1",
+      "parent_section": "sources"
+    },
+    {
+      "mrid": "SOURCE-004",
+      "domain": "SOURCE",
+      "title": "Briefs",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 13,
+      "builds": [],
+      "content_id": "SOURCE-010",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 13,
+        "content_pages": [
+          "SOURCE-010"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#SOURCE-004",
+      "reader_level": "L1",
+      "parent_section": "sources"
+    },
+    {
+      "mrid": "SOURCE-005",
+      "domain": "SOURCE",
+      "title": "FEC Documents",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 13,
+      "builds": [],
+      "content_id": "SOURCE-014",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 13,
+        "content_pages": [
+          "SOURCE-014"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#SOURCE-005",
+      "reader_level": "L1",
+      "parent_section": "sources"
+    },
+    {
+      "mrid": "SOURCE-006",
+      "domain": "SOURCE",
+      "title": "Academic Research",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 13,
+      "builds": [],
+      "content_id": "SOURCE-018",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 13,
+        "content_pages": [
+          "SOURCE-018"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#SOURCE-006",
+      "reader_level": "L1",
+      "parent_section": "sources"
+    },
+    {
+      "mrid": "SOURCE-007",
+      "domain": "SOURCE",
+      "title": "Congressional Reports",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 13,
+      "builds": [],
+      "content_id": "SOURCE-022",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 13,
+        "content_pages": [
+          "SOURCE-022"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#SOURCE-007",
+      "reader_level": "L1",
+      "parent_section": "sources"
+    },
+    {
+      "mrid": "SOURCE-008",
+      "domain": "SOURCE",
+      "title": "Historical Laws",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 13,
+      "builds": [],
+      "content_id": "SOURCE-026",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 13,
+        "content_pages": [
+          "SOURCE-026"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#SOURCE-008",
+      "reader_level": "L1",
+      "parent_section": "sources"
+    },
+    {
+      "mrid": "SOURCE-009",
+      "domain": "SOURCE",
+      "title": "Spending Data",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 13,
+      "builds": [],
+      "content_id": "SOURCE-030",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 13,
+        "content_pages": [
+          "SOURCE-030"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#SOURCE-009",
+      "reader_level": "L1",
+      "parent_section": "sources"
+    },
+    {
+      "mrid": "SOURCE-010",
+      "domain": "SOURCE",
+      "title": "Books",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 13,
+      "builds": [],
+      "content_id": "SOURCE-034",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 13,
+        "content_pages": [
+          "SOURCE-034"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#SOURCE-010",
+      "reader_level": "L1",
+      "parent_section": "sources"
+    },
+    {
+      "mrid": "SOURCE-011",
+      "domain": "SOURCE",
+      "title": "Multimedia",
+      "type": "article",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 13,
+      "builds": [],
+      "content_id": "SOURCE-038",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 13,
+        "content_pages": [
+          "SOURCE-038"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#SOURCE-011",
+      "reader_level": "L1",
+      "parent_section": "sources"
+    },
+    {
+      "mrid": "REFORM-010",
+      "domain": "REFORM",
+      "title": "Montana & Hawaii: Two Paths (Ernie Entry 001)",
+      "type": "research-entry",
+      "status": "published",
+      "completion_pct": 75,
+      "phase": 9,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "REFORM-034",
+      "url": "/halls/montana-hawaii.html",
+      "dependencies": [],
+      "related": [
+        "REFORM-005",
+        "REFORM-006"
+      ],
+      "traceability": {
+        "parent_phase": 9,
+        "content_pages": [
+          "REFORM-034"
+        ],
+        "research_sources": [
+          "content/entries/001-montana-hawaii-citizens-united.json"
+        ],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "fact-check",
+      "source_coverage": "complete",
+      "public_readiness": 75,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#REFORM-010",
+      "reader_level": "L4",
+      "parent_section": "reform"
+    },
+    {
+      "mrid": "ACTION-001",
+      "domain": "ACTION",
+      "title": "Education Leader Program",
+      "type": "civic-module",
+      "status": "published",
+      "completion_pct": 50,
+      "phase": 11,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "ACTION-001",
+      "url": "/educate/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "ACTION-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 50,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#ACTION-001",
+      "reader_level": "L2",
+      "parent_section": "civic-action"
+    },
+    {
+      "mrid": "ACTION-002",
+      "domain": "ACTION",
+      "title": "Contact Network",
+      "type": "civic-module",
+      "status": "building",
+      "completion_pct": 35,
+      "phase": 11,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "ACTION-002",
+      "url": "/action/join-network.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "ACTION-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#ACTION-002",
+      "reader_level": "L2",
+      "parent_section": "civic-action"
+    },
+    {
+      "mrid": "ACTION-003",
+      "domain": "ACTION",
+      "title": "Share Toolkit",
+      "type": "civic-module",
+      "status": "building",
+      "completion_pct": 30,
+      "phase": 11,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "ACTION-003",
+      "url": "/action/share.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "ACTION-003"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#ACTION-003",
+      "reader_level": "L2",
+      "parent_section": "civic-action"
+    },
+    {
+      "mrid": "ACTION-004",
+      "domain": "ACTION",
+      "title": "Relational Organizing Guide",
+      "type": "civic-module",
+      "status": "building",
+      "completion_pct": 20,
+      "phase": 11,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "ACTION-004",
+      "url": "/action/share.html#invite",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "ACTION-004"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#ACTION-004",
+      "reader_level": "L2",
+      "parent_section": "civic-action"
+    },
+    {
+      "mrid": "ACTION-005",
+      "domain": "ACTION",
+      "title": "Community Conversation Guide",
+      "type": "civic-module",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 11,
+      "builds": [],
+      "content_id": "ACTION-005",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "ACTION-005"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#ACTION-005",
+      "reader_level": "L2",
+      "parent_section": "civic-action"
+    },
+    {
+      "mrid": "ACTION-006",
+      "domain": "ACTION",
+      "title": "Ballot Initiative Lab",
+      "type": "civic-module",
+      "status": "planned",
+      "completion_pct": 10,
+      "phase": 11,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "ACTION-006",
+      "url": "/action/ballot-lab.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "ACTION-006"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#ACTION-006",
+      "reader_level": "L2",
+      "parent_section": "civic-action"
+    },
+    {
+      "mrid": "ACTION-007",
+      "domain": "ACTION",
+      "title": "Model Law Workspace",
+      "type": "civic-module",
+      "status": "planned",
+      "completion_pct": 10,
+      "phase": 11,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "ACTION-007",
+      "url": "/action/draft-laws.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "ACTION-007"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#ACTION-007",
+      "reader_level": "L2",
+      "parent_section": "civic-action"
+    },
+    {
+      "mrid": "ACTION-008",
+      "domain": "ACTION",
+      "title": "Legislative Outreach Toolkit",
+      "type": "civic-module",
+      "status": "planned",
+      "completion_pct": 10,
+      "phase": 11,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "ACTION-008",
+      "url": "/action/contact-legislators.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "ACTION-008"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#ACTION-008",
+      "reader_level": "L2",
+      "parent_section": "civic-action"
+    },
+    {
+      "mrid": "ACTION-009",
+      "domain": "ACTION",
+      "title": "Community Ideas Portal",
+      "type": "civic-module",
+      "status": "building",
+      "completion_pct": 35,
+      "phase": 11,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "ACTION-009",
+      "url": "/action/ideas.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 11,
+        "content_pages": [
+          "ACTION-009"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "partial",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#ACTION-009",
+      "reader_level": "L2",
+      "parent_section": "civic-action"
+    },
+    {
+      "mrid": "DATA-001",
+      "domain": "DATA",
+      "title": "Interactive Timeline \u2014 Slot 1",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-TIME-001",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-TIME-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-001",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-002",
+      "domain": "DATA",
+      "title": "Interactive Timeline \u2014 Slot 2",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-TIME-002",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-TIME-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-002",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-003",
+      "domain": "DATA",
+      "title": "Interactive Timeline \u2014 Slot 3",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-TIME-003",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-TIME-003"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-003",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-004",
+      "domain": "DATA",
+      "title": "Interactive Glossary \u2014 Slot 1",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-GLOS-001",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-GLOS-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-004",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-005",
+      "domain": "DATA",
+      "title": "Interactive Glossary \u2014 Slot 2",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-GLOS-002",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-GLOS-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-005",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-006",
+      "domain": "DATA",
+      "title": "Interactive Glossary \u2014 Slot 3",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-GLOS-003",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-GLOS-003"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-006",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-007",
+      "domain": "DATA",
+      "title": "Frequently Asked Questions \u2014 Slot 1",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-FAQ-001",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-FAQ-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-007",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-008",
+      "domain": "DATA",
+      "title": "Frequently Asked Questions \u2014 Slot 2",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-FAQ-002",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-FAQ-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-008",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-009",
+      "domain": "DATA",
+      "title": "Frequently Asked Questions \u2014 Slot 3",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-FAQ-003",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-FAQ-003"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-009",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-010",
+      "domain": "DATA",
+      "title": "Charts & Infographics \u2014 Slot 1",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-CHART-001",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-CHART-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-010",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-011",
+      "domain": "DATA",
+      "title": "Charts & Infographics \u2014 Slot 2",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-CHART-002",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-CHART-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-011",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-012",
+      "domain": "DATA",
+      "title": "Charts & Infographics \u2014 Slot 3",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-CHART-003",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-CHART-003"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-012",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-013",
+      "domain": "DATA",
+      "title": "Interactive Data Visualizations \u2014 Slot 1",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-DATA-001",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-DATA-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-013",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-014",
+      "domain": "DATA",
+      "title": "Interactive Data Visualizations \u2014 Slot 2",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-DATA-002",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-DATA-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-014",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-015",
+      "domain": "DATA",
+      "title": "Interactive Data Visualizations \u2014 Slot 3",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-DATA-003",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-DATA-003"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-015",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-016",
+      "domain": "DATA",
+      "title": "Downloadable Resources \u2014 Slot 1",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-DL-001",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-DL-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-016",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-017",
+      "domain": "DATA",
+      "title": "Downloadable Resources \u2014 Slot 2",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-DL-002",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-DL-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-017",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-018",
+      "domain": "DATA",
+      "title": "Downloadable Resources \u2014 Slot 3",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-DL-003",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-DL-003"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-018",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-019",
+      "domain": "DATA",
+      "title": "Educational Videos \u2014 Slot 1",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-VID-001",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-VID-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-019",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-020",
+      "domain": "DATA",
+      "title": "Educational Videos \u2014 Slot 2",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-VID-002",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-VID-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-020",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DATA-021",
+      "domain": "DATA",
+      "title": "Educational Videos \u2014 Slot 3",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-VID-003",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-VID-003"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#DATA-021",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "EDUCATE-010",
+      "domain": "EDUCATE",
+      "title": "Community Discussion Guides \u2014 Slot 1",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-GUIDE-001",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-GUIDE-001"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#EDUCATE-010",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "EDUCATE-011",
+      "domain": "EDUCATE",
+      "title": "Community Discussion Guides \u2014 Slot 2",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-GUIDE-002",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-GUIDE-002"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#EDUCATE-011",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "EDUCATE-012",
+      "domain": "EDUCATE",
+      "title": "Community Discussion Guides \u2014 Slot 3",
+      "type": "cross-domain",
+      "status": "planned",
+      "completion_pct": 0,
+      "phase": 7,
+      "builds": [],
+      "content_id": "CROSS-GUIDE-003",
+      "url": null,
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 7,
+        "content_pages": [
+          "CROSS-GUIDE-003"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [],
+        "commits": [],
+        "deployments": []
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "none",
+      "source_coverage": "none",
+      "public_readiness": 0,
+      "outstanding_tasks": [
+        "Draft content"
+      ],
+      "mission_control": "/mission-control/mrid.html#EDUCATE-012",
+      "reader_level": "L1",
+      "parent_section": "cross-domain"
+    },
+    {
+      "mrid": "DASH-011",
+      "domain": "DASH",
+      "title": "Mission Control Dashboard",
+      "type": "system",
+      "status": "published",
+      "completion_pct": 100,
+      "phase": 2,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "LAND-012",
+      "url": "/mission-control/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [
+          "LAND-012"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "complete",
+      "source_coverage": "n/a",
+      "public_readiness": 100,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#DASH-011",
+      "reader_level": "L1",
+      "parent_section": "mission-control"
+    },
+    {
+      "mrid": "DASH-012",
+      "domain": "DASH",
+      "title": "Phase Registry",
+      "type": "system",
+      "status": "published",
+      "completion_pct": 100,
+      "phase": 2,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "LAND-013",
+      "url": "/mission-control/phases.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [
+          "LAND-013"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "complete",
+      "source_coverage": "n/a",
+      "public_readiness": 100,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#DASH-012",
+      "reader_level": "L1",
+      "parent_section": "mission-control"
+    },
+    {
+      "mrid": "DASH-013",
+      "domain": "DASH",
+      "title": "Site Architecture Blueprint",
+      "type": "system",
+      "status": "published",
+      "completion_pct": 100,
+      "phase": 2,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "LAND-014",
+      "url": "/mission-control/architecture.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [
+          "LAND-014"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "complete",
+      "source_coverage": "n/a",
+      "public_readiness": 100,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#DASH-013",
+      "reader_level": "L1",
+      "parent_section": "mission-control"
+    },
+    {
+      "mrid": "DASH-014",
+      "domain": "DASH",
+      "title": "Content Inventory",
+      "type": "system",
+      "status": "published",
+      "completion_pct": 100,
+      "phase": 2,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "LAND-015",
+      "url": "/mission-control/inventory.html",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [
+          "LAND-015"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "complete",
+      "source_coverage": "n/a",
+      "public_readiness": 100,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#DASH-014",
+      "reader_level": "L1",
+      "parent_section": "mission-control"
+    },
+    {
+      "mrid": "DASH-015",
+      "domain": "DASH",
+      "title": "Build Registry",
+      "type": "system",
+      "status": "published",
+      "completion_pct": 100,
+      "phase": 2,
+      "builds": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "content_id": "LAND-016",
+      "url": "/builds/",
+      "dependencies": [],
+      "related": [],
+      "traceability": {
+        "parent_phase": 2,
+        "content_pages": [
+          "LAND-016"
+        ],
+        "research_sources": [],
+        "charts": [],
+        "downloads": [],
+        "volunteer_resources": [],
+        "builds": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "commits": [],
+        "deployments": [
+          "https://arkansas-facts.netlify.app"
+        ]
+      },
+      "last_modified": "2026-07-09",
+      "review_status": "complete",
+      "source_coverage": "n/a",
+      "public_readiness": 100,
+      "outstanding_tasks": [],
+      "mission_control": "/mission-control/mrid.html#DASH-015",
+      "reader_level": "L1",
+      "parent_section": "mission-control"
+    }
+  ]
+}
