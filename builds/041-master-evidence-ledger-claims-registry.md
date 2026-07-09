@@ -62,6 +62,6 @@ Authority from evidence quality and transparent review — not institutional ass
 
 ---
 
-## Recommended Next: Build #43 — Component Specifications with Props/States
+## Recommended Next: Build #44 — Component Specifications with Props/States
 
 Map claim panels, evidence strength badges, audit history viewers, and transparency widgets to COMP-* from Build #17.

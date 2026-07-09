@@ -288,7 +288,7 @@ out = {
         'Trust framework has A–D levels — ledger adds Level E synthesis',
     ],
     'recommended_next_build': {
-        'number': 43,
+        'number': 44,
         'title': 'Component Specifications with Props/States',
         'note': 'Map claim panels, evidence strength badges, audit history viewers, and transparency widgets to COMP-* from Build #17.',
     },

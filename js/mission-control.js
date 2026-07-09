@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Research Methodology <a href="/mission-control/research-methodology.html" class="mc-inline-link">10 Principles →</a></h2>
+    <p class="mc-bar-note">Build #43 — Master research methodology & standards, 11-stage workflow, source checklist. Extends Build #10. 25% methodology readiness.</p>
     <h2 class="mc-section-title">Civic Action Lab <a href="/mission-control/civic-action-lab.html" class="mc-inline-link">6 Divisions →</a></h2>
     <p class="mc-bar-note">Build #42 — Master civic action lab, legislative & ballot studios, comparative reforms. Educate first — not a campaign HQ. 26% lab readiness.</p>
     <h2 class="mc-section-title">Evidence Ledger <a href="/mission-control/evidence-ledger.html" class="mc-inline-link">Claims Registry →</a></h2>
@@ -4144,6 +4146,91 @@ async function initCivicActionLab() {
   initDevConsole(mc);
 }
 
+async function initResearchMethodology() {
+  const root = document.getElementById('mc-research-methodology-root');
+  if (!root) return;
+
+  const [rmRes, mcRes] = await Promise.all([
+    fetch('/data/research-methodology.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const rm = await rmRes.json();
+  const mc = await mcRes.json();
+  const s = rm.summary;
+
+  const principleRows = rm.principles.map(p => `
+    <tr><td>P${p.number}</td><td>${p.title}</td><td>${p.readiness_pct}%</td>
+      <td>${p.in_build_10 ? 'Build #10' : 'New'}</td><td>${p.status}</td></tr>`).join('');
+
+  const principleCards = rm.principles.map(p => `
+    <div class="mc-card"><h3>Principle ${p.number}: ${p.title}</h3>
+      <p class="mc-bar-note">${p.description}</p>
+      <p class="mc-bar-note">${p.readiness_pct}% · ${p.status}${p.in_build_10 ? ' · in Build #10' : ''}</p>
+      ${p.examples ? `<ul class="mc-deliverables">${p.examples.map(e => `<li>${e}</li>`).join('')}</ul>` : ''}
+    </div>`).join('');
+
+  const workflowRows = rm.research_workflow.map(w => `
+    <tr><td>${w.stage}</td><td>${w.title}</td><td>${w.status}</td></tr>`).join('');
+
+  const metricRows = rm.mc_integration.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td>
+      <td>${m.current}${m.target ? ` / ${m.target}` : ''}${m.unit || ''}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Research Methodology</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #43 · ${rm.title}</p>
+      <h1>Research Methodology & Standards</h1>
+      <p class="mc-header__question">${rm.governing_principle}</p>
+      <p class="mc-bar-note"><strong>${rm.core_question}</strong></p>
+      <p class="mc-bar-note">Foundation: <a href="/mission-control/research.html">Research Framework Build #10</a></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Methodology readiness</div><div class="mc-stat__value">${s.research_methodology_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Principles</div><div class="mc-stat__value">${s.principles_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Avg principle</div><div class="mc-stat__value">${s.avg_principle_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">EV items</div><div class="mc-stat__value">${s.evidence_items}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Citations</div><div class="mc-stat__value">${s.citation_coverage_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Adherence</div><div class="mc-stat__value">${s.adherence_tracking_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Ten Research Principles</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>Principle</th><th>Ready</th><th>Origin</th><th>Status</th></tr></thead>
+      <tbody>${principleRows}</tbody></table>
+    <div class="mc-grid-2">${principleCards}</div>
+    <h2 class="mc-section-title">Research Workflow (11 stages)</h2>
+    <table class="mc-table"><thead><tr><th>Stage</th><th>Step</th><th>Status</th></tr></thead>
+      <tbody>${workflowRows}</tbody></table>
+    <h2 class="mc-section-title">Source Evaluation Checklist</h2>
+    <ul class="mc-deliverables">${rm.source_evaluation_checklist.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Citation Standards</h2>
+    <ul class="mc-deliverables">${rm.citation_standards.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Research Documentation</h2>
+    <ul class="mc-deliverables">${rm.research_documentation.map(d => `<li>${d}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Quality Assurance</h2>
+    <ul class="mc-deliverables">${rm.quality_assurance.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Institutional Responsibility</h2>
+    <ul class="mc-deliverables">${rm.institutional_responsibility.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Research Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Future Research Capacity</h2>
+    <ul class="mc-deliverables">${rm.future_capacity.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${rm.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${rm.recommended_next_build.number} — ${rm.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${rm.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_RESEARCH_METHODOLOGY.md">MASTER_RESEARCH_METHODOLOGY.md</a> ·
+      <a href="/data/research-methodology.json">JSON</a> ·
+      <a href="/data/research-framework.json">Research Framework</a> ·
+      <a href="/data/evidence-registry.json">Evidence Registry</a> ·
+      <a href="/docs/CITATION_GUIDE.md">Citation Guide</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -4185,4 +4272,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initCivicIntelligence();
   initEvidenceLedger();
   initCivicActionLab();
+  initResearchMethodology();
 });

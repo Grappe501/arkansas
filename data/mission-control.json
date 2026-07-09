@@ -1,6 +1,6 @@
 {
-  "version": "1.46.0",
-  "build": 42,
+  "version": "1.47.0",
+  "build": 43,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,21 +9,21 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 42,
+    "overall_completion": 43,
     "current_build": {
-      "number": 42,
-      "title": "Citizens United Facts Master Civic Action Lab"
-    },
-    "active_phase": "Civic Participation \u2014 Master Civic Action Lab",
-    "last_completed": "Master Evidence Ledger & Claims Registry",
-    "next_build": {
       "number": 43,
+      "title": "Citizens United Facts Master Research Methodology & Standards Manual"
+    },
+    "active_phase": "Institutional Research \u2014 Methodology & Standards Manual",
+    "last_completed": "Master Civic Action Lab",
+    "next_build": {
+      "number": 44,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
     "content_readiness": 26,
-    "research_readiness": 28,
+    "research_readiness": 25,
     "data_viz_readiness": 6,
     "signup_funnel_readiness": 22,
     "civic_action_readiness": 26,
@@ -56,6 +56,7 @@
     "civic_intelligence_readiness": 24,
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
+    "research_methodology_readiness": 25,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -63,8 +64,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 42,
-      "note": "Civic Action Lab live \u2014 6 divisions, 2 comparative studies."
+      "value": 43,
+      "note": "Research Methodology live \u2014 10 principles, 14 evidence items."
     },
     {
       "id": "constitution",
@@ -381,7 +382,14 @@
       "label": "Master Civic Action Lab",
       "value": 26,
       "max": 100,
-      "note": "5/6 divisions partial \u2014 no guided draft builder."
+      "note": "Civic Action Lab \u2014 5/6 divisions partial."
+    },
+    {
+      "id": "research_methodology",
+      "label": "Research Methodology & Standards",
+      "value": 25,
+      "max": 100,
+      "note": "7/10 principles partial \u2014 12% citation coverage."
     }
   ],
   "public_readiness": {
@@ -926,6 +934,12 @@
       "id": "civic_action_lab",
       "label": "Master Civic Action Lab",
       "href": "/mission-control/civic-action-lab.html",
+      "status": "complete"
+    },
+    {
+      "id": "research_methodology",
+      "label": "Research Methodology & Standards",
+      "href": "/mission-control/research-methodology.html",
       "status": "complete"
     }
   ],
@@ -1952,6 +1966,56 @@
     }
   ],
   "builds": [
+    {
+      "number": 43,
+      "title": "Citizens United Facts Master Research Methodology & Standards Manual",
+      "version": "1.47.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Institutional Research Constitution v1.0 \u2014 how do we know what we know",
+      "summary": "10 principles, 11 workflow stages; 14 EV-* items; 25% overall.",
+      "files_created": [
+        "data/research-methodology.json",
+        "docs/MASTER_RESEARCH_METHODOLOGY.md",
+        "builds/043-master-research-methodology-standards-manual.md",
+        "mission-control/research-methodology.html",
+        "scripts/gen-research-methodology.py",
+        "scripts/update-mc-build43.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/research-methodology.html"
+      ],
+      "decisions_made": [
+        "10 research principles \u2014 extends Build #10 (5 principles)",
+        "11-stage research workflow \u2014 distinct from 9-stage evidence workflow",
+        "Source evaluation checklist + QA standards",
+        "Extends research-framework.json \u2014 not a replacement",
+        "Adherence tracking planned \u2014 methodology defined first",
+        "25% honest readiness \u2014 12% citations"
+      ],
+      "open_questions": [
+        "Per-article adherence scoring?",
+        "Research project folder structure?",
+        "Review schedule automation?"
+      ],
+      "risks": [
+        "Evidence at 14/500",
+        "5 new principles unenforced",
+        "Documentation trail sparse"
+      ],
+      "next_recommended": 44,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/research-methodology.html",
+      "review_status": "complete"
+    },
     {
       "number": 42,
       "title": "Citizens United Facts Master Civic Action Lab",
@@ -3933,19 +3997,19 @@
     }
   ],
   "briefing": {
-    "what_built": "Civic Action Lab v1.0 \u2014 6 divisions, legislative tracker, draft builder schema, MC metrics",
-    "building_now": "Solutions hub and action pages as interim \u2014 MT/HI comparisons live",
+    "what_built": "Research Methodology v1.0 \u2014 10 principles, 11-stage workflow, source checklist, MC metrics",
+    "building_now": "Methodology constitution \u2014 research-framework.json as foundation",
     "blocked": [
-      "Guided draft builder",
-      "Community review panels",
-      "Submission tracking"
+      "Adherence tracking",
+      "Scheduled review automation",
+      "Per-source evaluation records"
     ],
     "ready_public": [
-      "Civic Action Lab MC dashboard",
-      "6-division taxonomy",
-      "Public official center link"
+      "Research Methodology MC dashboard",
+      "10-principle taxonomy",
+      "QA checklist"
     ],
-    "next": "Build #43 \u2014 Component specifications with props/states"
+    "next": "Build #44 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -4416,5 +4480,15 @@
     "comparative_studies_live": 2,
     "guided_draft_builder_live": false,
     "submission_tracking_live": false
+  },
+  "research_methodology": "/data/research-methodology.json",
+  "research_methodology_dashboard": "/mission-control/research-methodology.html",
+  "research_methodology_inventory": {
+    "readiness_score": 25,
+    "principles_total": 10,
+    "principles_partial": 7,
+    "evidence_items": 14,
+    "citation_coverage_pct": 12,
+    "adherence_tracking_live": false
   }
 }

@@ -215,7 +215,7 @@ out = {
         'Distinguish enacted law vs proposals — matrix partial only',
     ],
     'recommended_next_build': {
-        'number': 43,
+        'number': 44,
         'title': 'Component Specifications with Props/States',
         'note': 'Map lab division shells, draft builder workspaces, legislative tracker panels, and packet builders to COMP-* from Build #17.',
     },

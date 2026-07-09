@@ -52,6 +52,6 @@ Educate first — illuminate options, preserve transparency, encourage evidence-
 
 ---
 
-## Recommended Next: Build #43 — Component Specifications with Props/States
+## Recommended Next: Build #44 — Component Specifications with Props/States
 
 Map lab division shells, draft builder workspaces, legislative tracker panels, and packet builders to COMP-* from Build #17.

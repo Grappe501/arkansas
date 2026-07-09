@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.47.0] - 2026-07-09 — Build #43 Master Research Methodology & Standards Manual
+
+### Institutional Research Constitution
+- **Master Research Methodology & Standards Manual v1.0** — 10 principles, 11-stage workflow
+- Source evaluation checklist, citation standards, QA checklist
+- Extends Build #10 research framework — not a replacement
+- 25% honest readiness — adherence tracking not built
+- MC dashboard: `/mission-control/research-methodology.html`
+
 ## [1.46.0] - 2026-07-09 — Build #42 Master Civic Action Lab
 
 ### Civic Solutions & Ballot Initiative Architecture
