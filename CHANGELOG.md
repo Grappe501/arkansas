@@ -13,6 +13,14 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.1] - 2026-07-09 — IMP-01 Technical Constitution documented
+
+### Implementation Package 1 of 50
+- **Master Technical Constitution & Build Doctrine** — Prime Directive, four-layer architecture, build order rule
+- Platform, technical, user, MC-first, AI-first, knowledge-first, Arkansas-first, volunteer-first principles
+- IMP-01 status: documented · IMP-02 next: Technical Architecture & Repository Blueprint
+- Honest: 1/50 documented · 0/50 implemented · 59% package readiness
+
 ## [2.05.0] - 2026-07-09 — Build #101 Cursor Implementation Package
 
 ### Master Build Bible v2.0 — 50 Executable Steps

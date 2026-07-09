@@ -1,5 +1,5 @@
 {
-  "version": "2.05.0",
+  "version": "2.05.1",
   "build": 101,
   "updated": "2026-07-09",
   "identity": {
@@ -11,7 +11,7 @@
   "executive": {
     "github_status": "connected",
     "netlify_status": "production_healthy",
-    "content_readiness": 57,
+    "content_readiness": 59,
     "research_readiness": 43,
     "data_viz_readiness": 12,
     "signup_funnel_readiness": 26,
@@ -119,6 +119,8 @@
     "days_remaining_to_completion": 176,
     "mission_complete_label": "Mission Complete \u2014 January 2027",
     "connected_citizen_goal_pct": 15,
+    "implementation_steps_total": 50,
+    "implementation_steps_implemented": 0,
     "overall_completion": 101,
     "current_build": {
       "number": 101,
@@ -130,12 +132,11 @@
       "number": 102,
       "title": "Executive war room & countdown dashboard components"
     },
-    "implementation_package_readiness": 57,
-    "cursor_implementation_package_readiness": 57,
+    "implementation_package_readiness": 59,
+    "cursor_implementation_package_readiness": 59,
     "implementation_phase_started": false,
     "sprint_zero_started": false,
-    "implementation_steps_total": 50,
-    "implementation_steps_implemented": 0
+    "implementation_steps_documented": 1
   },
   "progress_bars": [
     {
@@ -870,7 +871,7 @@
     {
       "id": "cursor_implementation_package",
       "label": "Implementation Package",
-      "value": 57,
+      "value": 59,
       "max": 100,
       "note": "0/50 steps implemented \u00b7 Sprint Zero pending."
     }
@@ -2800,16 +2801,17 @@
     {
       "number": 101,
       "title": "Citizens United Facts Cursor Implementation Package v1.0",
-      "version": "2.05.0",
+      "version": "2.05.1",
       "status": "complete",
       "started": "2026-07-09",
       "completed": "2026-07-09",
       "purpose": "50 executable implementation steps \u2014 blueprint to code",
-      "summary": "50 steps in 5 bands (repo \u2192 launch). Cursor master prompt, MVP scope, acceptance criteria per step. 57% readiness \u00b7 0/50 implemented \u00b7 Sprint Zero not started.",
+      "summary": "50 steps in 5 bands. IMP-01 Technical Constitution documented. 59% readiness \u00b7 1/50 documented \u00b7 0 implemented.",
       "files_created": [
         "data/cursor-implementation-package.json",
         "docs/MASTER_CURSOR_IMPLEMENTATION_PACKAGE.md",
         "docs/CURSOR_MASTER_BUILD_PROMPT.md",
+        "docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md",
         "builds/101-cursor-implementation-package.md",
         "mission-control/cursor-implementation-package.html",
         "scripts/gen-cursor-implementation-package.py",
@@ -2826,17 +2828,16 @@
       ],
       "decisions_made": [
         "50 steps \u2014 thorough without drifting into abstract planning",
+        "IMP-01 Master Technical Constitution governs all future packages",
         "Five bands of 10: foundation, presentation, data, operations, knowledge/launch",
         "Supersedes Build Bible v1 as executable engineering layer (Build Bible v2)",
-        "IMP-38 War Room specified here; Build #102 extends it",
-        "Zero steps implemented \u2014 honest specification-only status",
-        "57% readiness \u2014 package documented"
+        "1 documented \u00b7 0 implemented \u2014 honest status",
+        "59% readiness"
       ],
       "open_questions": [
-        "Next.js monorepo vs strangler-fig \u2014 resolved in IMP-01",
+        "IMP-02 architecture and repository \u2014 next package",
         "MC read paths public vs auth-gated \u2014 IMP-28 decision",
-        "Single source of truth: JSON registries vs DB \u2014 per-entity in IMP-47",
-        "Automated step status tracking in MC?"
+        "Single source of truth: JSON registries vs DB \u2014 per-entity in IMP-47"
       ],
       "risks": [
         "Zero implementation steps completed \u2014 package is specification only",
@@ -3539,65 +3540,6 @@
       "review_status": "complete"
     },
     {
-      "number": 88,
-      "title": "Citizens United Facts Master Execution Schedule v1.0",
-      "version": "1.92.0",
-      "status": "complete",
-      "started": "2026-07-09",
-      "completed": "2026-07-09",
-      "purpose": "January 2027 V1 completion target \u2014 master execution countdown",
-      "summary": "Countdown, war room, critical path, 10 departments, Arkansas progress, 56% readiness. 176 days to mission complete \u00b7 war room not live.",
-      "files_created": [
-        "data/execution-schedule.json",
-        "docs/MASTER_EXECUTION_SCHEDULE.md",
-        "builds/088-execution-schedule.md",
-        "mission-control/execution-schedule.html",
-        "scripts/gen-execution-schedule.py",
-        "scripts/update-mc-build88.py"
-      ],
-      "files_modified": [
-        "js/mission-control.js",
-        "data/site.json",
-        "BUILD_PLAN.md",
-        "netlify.toml",
-        "scripts/gen-arkansas-strategic-plan-2035.py",
-        "scripts/gen-master-launch-plan.py",
-        "scripts/gen-launch-campaign-first-100-days.py",
-        "docs/MASTER_ARKANSAS_STRATEGIC_PLAN_2035.md",
-        "docs/MASTER_LAUNCH_PLAN.md",
-        "docs/MASTER_LAUNCH_CAMPAIGN_FIRST_100_DAYS.md"
-      ],
-      "pages_created": [
-        "/mission-control/execution-schedule.html"
-      ],
-      "decisions_made": [
-        "January 2027 = V1 substantial completion \u2014 not construction start",
-        "Mission Control countdown always displays days remaining",
-        "Executive War Room \u2014 leadership daily operating screen",
-        "Department readiness: Planning \u2192 Building \u2192 Testing \u2192 Ready \u2192 Complete",
-        "Timeline alignment for Builds #84, #85, #87",
-        "Every build exists to complete institution by January 2027",
-        "56% readiness \u2014 blueprint only"
-      ],
-      "open_questions": [
-        "Overall completion % \u2014 build count vs V1 deliverable checklist?",
-        "War room \u2014 separate page or MC home overlay?",
-        "Critical path \u2014 manual PM or auto from dependencies?",
-        "Department stages \u2014 who updates?"
-      ],
-      "risks": [
-        "Executive War Room not live \u2014 no daily operating screen",
-        "Countdown dashboard not fully operational \u2014 days in JSON only",
-        "0 critical path tasks tracked \u2014 on schedule/at risk/blocked all 0",
-        "0 departments at Complete stage"
-      ],
-      "next_recommended": 89,
-      "branch": "main",
-      "git_commit": "pending",
-      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/execution-schedule.html",
-      "review_status": "complete"
-    },
-    {
       "number": 87,
       "title": "Citizens United Facts Master Launch Campaign & First 100 Days Blueprint v1.0",
       "version": "1.91.0",
@@ -4018,112 +3960,6 @@
       "branch": "main",
       "git_commit": "pending",
       "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-civic-institution-roadmap.html",
-      "review_status": "complete"
-    },
-    {
-      "number": 80,
-      "title": "Citizens United Facts Master Arkansas Civic Institution Roadmap v1.0",
-      "version": "1.84.0",
-      "status": "complete",
-      "started": "2026-07-09",
-      "completed": "2026-07-09",
-      "purpose": "Twenty-year vision & institutional legacy plan \u2014 80 builds complete",
-      "summary": "4 eras, 8 twenty-year goals, legacy map, milestones, founder reflection, 48% readiness. 80 builds \u00b7 era 1 \u00b7 0/10 milestones.",
-      "files_created": [
-        "data/arkansas-civic-institution-roadmap.json",
-        "docs/MASTER_ARKANSAS_CIVIC_INSTITUTION_ROADMAP.md",
-        "builds/080-arkansas-civic-institution-roadmap.md",
-        "mission-control/arkansas-civic-institution-roadmap.html",
-        "scripts/gen-arkansas-civic-institution-roadmap.py",
-        "scripts/update-mc-build80.py"
-      ],
-      "files_modified": [
-        "js/mission-control.js",
-        "data/site.json",
-        "BUILD_PLAN.md",
-        "netlify.toml"
-      ],
-      "pages_created": [
-        "/mission-control/arkansas-civic-institution-roadmap.html"
-      ],
-      "decisions_made": [
-        "80 builds \u2014 planning arc complete",
-        "Twenty-year legacy vision, not launch plan",
-        "Four eras: Foundation \u2192 Expansion \u2192 Maturity \u2192 Legacy",
-        "Success measured by legacy, not traffic",
-        "MC compares current state to long-term vision",
-        "Extends Institutional Roadmap (#44)",
-        "48% readiness \u2014 vision document only"
-      ],
-      "open_questions": [
-        "Reconcile four eras vs V1\u2013V10 institutional roadmap?",
-        "Legacy map UI \u2014 MC-native or public exhibit?",
-        "Milestone celebration workflow?",
-        "When does implementation translation begin in earnest?"
-      ],
-      "risks": [
-        "Legacy map not live \u2014 permanent visual record not built",
-        "0/9 milestones achieved (except 80 builds complete)",
-        "Annual reflection workflow not operational",
-        "0 legacy projects started"
-      ],
-      "next_recommended": 81,
-      "branch": "main",
-      "git_commit": "pending",
-      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-civic-institution-roadmap.html",
-      "review_status": "complete"
-    },
-    {
-      "number": 79,
-      "title": "Citizens United Facts Master Arkansas Neighborhood Operating System (ANOS) v1.0",
-      "version": "1.83.0",
-      "status": "complete",
-      "started": "2026-07-09",
-      "completed": "2026-07-09",
-      "purpose": "Master ANOS \u2014 final layer; neighborhood trust foundation",
-      "summary": "Growth cycle, health score, mentorship trees, 200K strategy, 47% readiness. 0 profiles \u00b7 0/200000 connected.",
-      "files_created": [
-        "data/arkansas-neighborhood-operating-system.json",
-        "docs/MASTER_ARKANSAS_NEIGHBORHOOD_OPERATING_SYSTEM.md",
-        "builds/079-arkansas-neighborhood-operating-system.md",
-        "mission-control/arkansas-neighborhood-operating-system.html",
-        "scripts/gen-arkansas-neighborhood-operating-system.py",
-        "scripts/update-mc-build79.py"
-      ],
-      "files_modified": [
-        "js/mission-control.js",
-        "data/site.json",
-        "BUILD_PLAN.md",
-        "netlify.toml"
-      ],
-      "pages_created": [
-        "/mission-control/arkansas-neighborhood-operating-system.html"
-      ],
-      "decisions_made": [
-        "ANOS as final institutional architecture layer",
-        "8-step neighborhood growth cycle",
-        "Privacy: no residential data publicly displayed",
-        "6-role neighborhood leadership team",
-        "200K Arkansan strategy via local relationships",
-        "Extends Neighborhood Organizing (#57)",
-        "47% readiness \u2014 blueprint only"
-      ],
-      "open_questions": [
-        "ANOS vs Neighborhood Organizing (#57) \u2014 single dashboard?",
-        "Neighborhood profile creation workflow?",
-        "Health score weighting formula?",
-        "Mentorship tree data model \u2014 ROS or MC-native?"
-      ],
-      "risks": [
-        "0 neighborhood profiles \u2014 registry empty",
-        "0 neighborhood digital twins operational",
-        "0 neighborhood dashboards live \u2014 local operating center not built",
-        "Neighborhood Health Score not computed \u2014 factors specified only"
-      ],
-      "next_recommended": 80,
-      "branch": "main",
-      "git_commit": "pending",
-      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-neighborhood-operating-system.html",
       "review_status": "complete"
     },
     {
@@ -4601,112 +4437,6 @@
       "branch": "main",
       "git_commit": "pending",
       "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-community-listening.html",
-      "review_status": "complete"
-    },
-    {
-      "number": 71,
-      "title": "Citizens United Facts Master Arkansas Community Intelligence & Listening System v1.0",
-      "version": "1.75.0",
-      "status": "complete",
-      "started": "2026-07-09",
-      "completed": "2026-07-09",
-      "purpose": "Community Intelligence & Listening \u2014 learn from Arkansas, not only teach",
-      "summary": "Six listening sources, question observatory, needs mapping, workflow, pulse reports; 41% readiness. 0 questions \u00b7 0 leader reports \u00b7 0 pulse reports.",
-      "files_created": [
-        "data/arkansas-community-listening.json",
-        "docs/MASTER_ARKANSAS_COMMUNITY_LISTENING.md",
-        "builds/071-arkansas-community-listening.md",
-        "mission-control/arkansas-community-listening.html",
-        "scripts/gen-arkansas-community-listening.py",
-        "scripts/update-mc-build71.py"
-      ],
-      "files_modified": [
-        "js/mission-control.js",
-        "data/site.json",
-        "BUILD_PLAN.md",
-        "netlify.toml"
-      ],
-      "pages_created": [
-        "/mission-control/arkansas-community-listening.html"
-      ],
-      "decisions_made": [
-        "Listening as important as publishing \u2014 learn from Arkansas",
-        "Operating principle: begin by listening, not answers",
-        "Six sources: learners, leaders, coalition, conversations, research, public",
-        "Question Observatory \u2014 living inventory drives new content",
-        "Listening-to-action workflow \u2014 nothing in a black hole",
-        "Community Pulse Reports \u2014 monthly, quarterly, annual",
-        "41% readiness \u2014 constitution only"
-      ],
-      "open_questions": [
-        "Reconcile listening (#71) vs Research Observatory (#29)?",
-        "Unify feedback channels with Citizen Action Center (#62)?",
-        "Conversation analysis privacy model \u2014 aggregate only?",
-        "Leader reporting: structured form vs free text?"
-      ],
-      "risks": [
-        "0 questions received \u2014 no feedback intake forms wired",
-        "0 education leader reports \u2014 leader reporting tool not built",
-        "0 coalition feedback items \u2014 organizational listening workflow missing",
-        "0 community conversation analyses \u2014 post-conversation capture not implemented"
-      ],
-      "next_recommended": 72,
-      "branch": "main",
-      "git_commit": "pending",
-      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-community-listening.html",
-      "review_status": "complete"
-    },
-    {
-      "number": 70,
-      "title": "Citizens United Facts Master Arkansas Command Strategy v1.0",
-      "version": "1.74.0",
-      "status": "complete",
-      "started": "2026-07-09",
-      "completed": "2026-07-09",
-      "purpose": "Statewide execution playbook \u2014 75 counties, 250 cities, 200K Arkansans",
-      "summary": "Five phases, county/city readiness models, monthly targets, regional strategy, flywheel; 39% readiness. 0/75 counties \u00b7 0/250 cities \u00b7 0/200000 connected.",
-      "files_created": [
-        "data/arkansas-command-strategy.json",
-        "docs/MASTER_ARKANSAS_COMMAND_STRATEGY.md",
-        "builds/070-arkansas-command-strategy.md",
-        "mission-control/arkansas-command-strategy.html",
-        "scripts/gen-arkansas-command-strategy.py",
-        "scripts/update-mc-build70.py"
-      ],
-      "files_modified": [
-        "js/mission-control.js",
-        "data/site.json",
-        "BUILD_PLAN.md",
-        "netlify.toml"
-      ],
-      "pages_created": [
-        "/mission-control/arkansas-command-strategy.html"
-      ],
-      "decisions_made": [
-        "Statewide execution strategy \u2014 operational playbook after 69 design builds",
-        "Three objectives: 75 counties, 250 cities, 200,000 connected",
-        "Five phases: Core \u2192 County Anchors \u2192 City \u2192 Neighborhood \u2192 Multiplication",
-        "County 5-stage and city 6-stage readiness models",
-        "7 regional strategy \u2014 mentorship and coordination",
-        "Grow deliberately \u2014 not advertising, pressure, or campaigning",
-        "39% readiness \u2014 constitution only"
-      ],
-      "open_questions": [
-        "Reconcile Build #70 command vs Build #56 statewide growth blueprint?",
-        "Growth dashboard: replace or augment Civic Intelligence Command Center?",
-        "Monthly targets: manual entry vs automated from forms?",
-        "Projected completion timeline modeling approach?"
-      ],
-      "risks": [
-        "0/75 counties with Education Leaders \u2014 Phase Two not started",
-        "0/250 cities with teams \u2014 Phase Three not started",
-        "0/200,000 connected \u2014 participant tracking not operational",
-        "County readiness model specified \u2014 0 counties past Awareness stage"
-      ],
-      "next_recommended": 71,
-      "branch": "main",
-      "git_commit": "pending",
-      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-command-strategy.html",
       "review_status": "complete"
     },
     {
@@ -6025,56 +5755,6 @@
       "review_status": "complete"
     },
     {
-      "number": 46,
-      "title": "Citizens United Facts Master Content Production Matrix",
-      "version": "1.50.0",
-      "status": "complete",
-      "started": "2026-07-09",
-      "completed": "2026-07-09",
-      "purpose": "Master production matrix \u2014 every educational asset ID'd and sequenced",
-      "summary": "14 domains, 509 queued, 61 published; 3.0% institutional completion.",
-      "files_created": [
-        "data/content-production-matrix.json",
-        "docs/MASTER_CONTENT_PRODUCTION_MATRIX.md",
-        "builds/046-master-content-production-matrix.md",
-        "mission-control/content-production-matrix.html",
-        "scripts/gen-content-production-matrix.py",
-        "scripts/update-mc-build46.py"
-      ],
-      "files_modified": [
-        "js/mission-control.js",
-        "data/site.json",
-        "BUILD_PLAN.md",
-        "netlify.toml"
-      ],
-      "pages_created": [
-        "/mission-control/content-production-matrix.html"
-      ],
-      "decisions_made": [
-        "14 content domains (1000\u201314000) \u2014 master library production taxonomy",
-        "11-stage production pipeline \u2014 extends Build #6 inventory lifecycle",
-        "10 production ID prefixes \u2014 ARTICLE, CASE, TIMELINE, VIDEO, etc.",
-        "Executive production dashboard \u2014 11 completion metrics from live registries",
-        "509 assets registered of 2045 target \u2014 honest queue coverage",
-        "43% readiness \u2014 taxonomy live, automation none"
-      ],
-      "open_questions": [
-        "Unified domain IDs vs Build #6 inventory?",
-        "Velocity tracking for capacity model?",
-        "CMS workflow enforcement?"
-      ],
-      "risks": [
-        "~2000 assets target vs 15 published",
-        "Domain ID remap may confuse editors",
-        "No automated sequencing"
-      ],
-      "next_recommended": 47,
-      "branch": "main",
-      "git_commit": "pending",
-      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/content-production-matrix.html",
-      "review_status": "complete"
-    },
-    {
       "number": 45,
       "title": "Citizens United Facts Master Systems Integration Blueprint",
       "version": "1.49.0",
@@ -6704,55 +6384,6 @@
         "KG registry (38 nodes) as interim published entry source",
         "Canonical /encyclopedia/[category]/[slug] defined \u2014 not built",
         "19% honest readiness \u2014 architecture live, 9.5% catalog published"
-      ],
-      "open_questions": [
-        "When to migrate KG nodes to canonical encyclopedia routes?",
-        "Glossary scale for Category 700?"
-      ],
-      "risks": [
-        "Category 700 empty",
-        "Only 7 entries fully sourced",
-        "Search not implemented"
-      ],
-      "next_recommended": 34,
-      "branch": "main",
-      "git_commit": "pending",
-      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/encyclopedia.html",
-      "review_status": "complete"
-    },
-    {
-      "number": 33,
-      "title": "Citizens United Facts Research Encyclopedia & Knowledge Library",
-      "version": "1.37.0",
-      "status": "complete",
-      "started": "2026-07-09",
-      "completed": "2026-07-09",
-      "purpose": "Encyclopedia Architecture v1.0 \u2014 living reference connected through knowledge graph",
-      "summary": "9 categories, 38/400 entries; 19% readiness.",
-      "files_created": [
-        "data/encyclopedia-knowledge-library.json",
-        "docs/ENCYCLOPEDIA_ARCHITECTURE.md",
-        "builds/033-encyclopedia-knowledge-library.md",
-        "mission-control/encyclopedia.html",
-        "scripts/gen-encyclopedia-knowledge-library.py",
-        "scripts/update-mc-build33.py"
-      ],
-      "files_modified": [
-        "js/mission-control.js",
-        "data/site.json",
-        "BUILD_PLAN.md",
-        "netlify.toml"
-      ],
-      "pages_created": [
-        "/mission-control/encyclopedia.html"
-      ],
-      "decisions_made": [
-        "9 encyclopedia categories (100\u2013900) aligned to KG node types",
-        "9-section entry structure for every encyclopedia page",
-        "Completion score tracks planned, published, sourced, cross-links",
-        "KG registry (38 nodes) as interim published entry source",
-        "Canonical /encyclopedia/[category]/[slug] defined \u2014 not built",
-        "26% honest readiness \u2014 architecture live, 7.6% catalog published"
       ],
       "open_questions": [
         "When to migrate KG nodes to canonical encyclopedia routes?",
@@ -8205,21 +7836,20 @@
     }
   ],
   "briefing": {
-    "what_built": "Cursor Implementation Package v1.0 \u2014 50 executable steps",
-    "building_now": "101 builds \u2014 Sprint Zero (IMP-01\u201310) next",
+    "what_built": "IMP-01 Technical Constitution + 50-step implementation package",
+    "building_now": "IMP-02 Technical Architecture & Repository Blueprint next",
     "blocked": [
-      "Sprint Zero not started",
-      "0/50 steps implemented",
-      "No Neon/Prisma in production",
-      "War Room not built"
+      "Sprint Zero not complete",
+      "0/50 steps code-implemented",
+      "No Neon/Prisma in production"
     ],
     "ready_public": [
+      "Technical Constitution",
       "50 step specs",
       "Cursor master prompt",
-      "MVP scope",
-      "5 band structure"
+      "MVP scope"
     ],
-    "next": "Build #102 \u2014 Executive war room & countdown dashboard components"
+    "next": "IMP-02 \u2014 Master Technical Architecture & Repository Blueprint"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -9235,9 +8865,10 @@
   "cursor_implementation_package": "/data/cursor-implementation-package.json",
   "cursor_implementation_package_dashboard": "/mission-control/cursor-implementation-package.html",
   "cursor_implementation_package_inventory": {
-    "readiness_score": 57,
+    "readiness_score": 59,
     "steps_total": 50,
     "steps_implemented": 0,
+    "steps_documented": 1,
     "bands_total": 5,
     "sprint_zero_started": false,
     "cursor_master_prompt_ready": true

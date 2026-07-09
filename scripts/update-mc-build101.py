@@ -14,7 +14,7 @@ s = cip['summary']
 prior_maturity = mc.get('executive', {}).get('institutional_maturity_pct', 32)
 prior_ex = mc.get('executive', {})
 
-mc['version'] = '2.05.0'
+mc['version'] = '2.05.1'
 mc['build'] = 101
 mc['updated'] = '2026-07-09'
 mc['cursor_implementation_package'] = '/data/cursor-implementation-package.json'
@@ -37,6 +37,7 @@ mc['executive'] = {
     'sprint_zero_started': s['sprint_zero_started'],
     'implementation_steps_total': s['steps_total'],
     'implementation_steps_implemented': s['steps_implemented'],
+    'implementation_steps_documented': s.get('steps_documented', 0),
     'content_readiness': max(s['implementation_package_readiness_pct'], prior_ex.get('content_readiness', 28)),
     'repository_structure_readiness': max(32, prior_ex.get('repository_structure_readiness', 28)),
     'database_schema_readiness': max(44, prior_ex.get('database_schema_readiness', 42)),
@@ -56,6 +57,7 @@ mc['cursor_implementation_package_inventory'] = {
     'readiness_score': s['implementation_package_readiness_pct'],
     'steps_total': s['steps_total'],
     'steps_implemented': s['steps_implemented'],
+    'steps_documented': s.get('steps_documented', 0),
     'bands_total': s['bands_total'],
     'sprint_zero_started': s['sprint_zero_started'],
     'cursor_master_prompt_ready': s['cursor_master_prompt_ready'],
@@ -81,24 +83,25 @@ else:
         if bar['id'] == 'cursor_implementation_package':
             bar['value'] = s['implementation_package_readiness_pct']
 
-mc['builds'].insert(0, {
+build_entry = {
     'number': 101,
     'title': title,
-    'version': '2.05.0',
+    'version': '2.05.1',
     'status': 'complete',
     'started': '2026-07-09',
     'completed': '2026-07-09',
     'purpose': '50 executable implementation steps — blueprint to code',
     'summary': (
-        f"50 steps in 5 bands (repo → launch). Cursor master prompt, MVP scope, acceptance criteria per step. "
+        f"50 steps in 5 bands. IMP-01 Technical Constitution documented. "
         f"{s['implementation_package_readiness_pct']}% readiness · "
-        f"{s['steps_implemented']}/{s['steps_total']} implemented · "
-        f"Sprint Zero {'started' if s['sprint_zero_started'] else 'not started'}."
+        f"{s.get('steps_documented', 0)}/{s['steps_total']} documented · "
+        f"{s['steps_implemented']} implemented."
     ),
     'files_created': [
         'data/cursor-implementation-package.json',
         'docs/MASTER_CURSOR_IMPLEMENTATION_PACKAGE.md',
         'docs/CURSOR_MASTER_BUILD_PROMPT.md',
+        'docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md',
         'builds/101-cursor-implementation-package.md',
         'mission-control/cursor-implementation-package.html',
         'scripts/gen-cursor-implementation-package.py',
@@ -110,17 +113,16 @@ mc['builds'].insert(0, {
     'pages_created': ['/mission-control/cursor-implementation-package.html'],
     'decisions_made': [
         '50 steps — thorough without drifting into abstract planning',
+        'IMP-01 Master Technical Constitution governs all future packages',
         'Five bands of 10: foundation, presentation, data, operations, knowledge/launch',
         'Supersedes Build Bible v1 as executable engineering layer (Build Bible v2)',
-        'IMP-38 War Room specified here; Build #102 extends it',
-        'Zero steps implemented — honest specification-only status',
-        f"{s['implementation_package_readiness_pct']}% readiness — package documented",
+        f"{s.get('steps_documented', 0)} documented · {s['steps_implemented']} implemented — honest status",
+        f"{s['implementation_package_readiness_pct']}% readiness",
     ],
     'open_questions': [
-        'Next.js monorepo vs strangler-fig — resolved in IMP-01',
+        'IMP-02 architecture and repository — next package',
         'MC read paths public vs auth-gated — IMP-28 decision',
         'Single source of truth: JSON registries vs DB — per-entity in IMP-47',
-        'Automated step status tracking in MC?',
     ],
     'risks': cip['catalog_gaps'][:4],
     'next_recommended': 102,
@@ -128,14 +130,17 @@ mc['builds'].insert(0, {
     'git_commit': 'pending',
     'netlify_deploy': 'https://arkansas-facts.netlify.app/mission-control/cursor-implementation-package.html',
     'review_status': 'complete',
-})
+}
+
+mc['builds'] = [b for b in mc['builds'] if b.get('number') != 101]
+mc['builds'].insert(0, build_entry)
 
 mc['briefing'] = {
-    'what_built': 'Cursor Implementation Package v1.0 — 50 executable steps',
-    'building_now': '101 builds — Sprint Zero (IMP-01–10) next',
-    'blocked': ['Sprint Zero not started', '0/50 steps implemented', 'No Neon/Prisma in production', 'War Room not built'],
-    'ready_public': ['50 step specs', 'Cursor master prompt', 'MVP scope', '5 band structure'],
-    'next': 'Build #102 — Executive war room & countdown dashboard components',
+    'what_built': 'IMP-01 Technical Constitution + 50-step implementation package',
+    'building_now': 'IMP-02 Technical Architecture & Repository Blueprint next',
+    'blocked': ['Sprint Zero not complete', '0/50 steps code-implemented', 'No Neon/Prisma in production'],
+    'ready_public': ['Technical Constitution', '50 step specs', 'Cursor master prompt', 'MVP scope'],
+    'next': 'IMP-02 — Master Technical Architecture & Repository Blueprint',
 }
 
 if not any(n.get('id') == 'cursor_implementation_package' for n in mc['build_map']):

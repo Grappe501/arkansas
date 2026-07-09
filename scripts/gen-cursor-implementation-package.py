@@ -26,6 +26,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
+steps_documented = 1  # IMP-01 Technical Constitution
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -72,41 +73,68 @@ IMPLEMENTATION_STEPS = [
     # Band A — 1–10
     {
         'number': 1, 'id': 'IMP-01', 'band': 'A',
-        'title': 'Repository audit and migration decision',
-        'summary': 'Document strangler-fig vs full Next.js migration from current flat static layout',
-        'deliverables': ['docs/MIGRATION_PLAN.md', 'docs/REPO_AUDIT.md'],
-        'acceptance_criteria': [
-            'Current tree diffed against data/repository-blueprint.json target_root_structure',
-            'Migration strategy chosen with rollback plan',
-            'Safe-edit zones listed for volunteer contributors',
+        'package_label': 'Implementation Package 1 of 50',
+        'title': 'Master Technical Constitution & Build Doctrine',
+        'summary': 'Technical constitution for every developer, AI system, Cursor session, and contributor — every line of code aligns here',
+        'deliverables': [
+            'docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md',
+            'Technical Constitution', 'Development Doctrine', 'Platform Philosophy',
+            'Build Standards', 'Architectural Rules', 'AI Rules', 'Documentation Rules',
+            'Mission Control Rules', 'Volunteer-First Standards', 'Arkansas-First Standards',
         ],
-        'source_blueprints': ['/data/repository-blueprint.json', '/docs/REPOSITORY_ARCHITECTURE.md'],
-        'status': 'specified',
+        'acceptance_criteria': [
+            'Prime Directive documented: one integrated institution',
+            'Three-question feature test: why / who / how',
+            'Four-layer architecture defined (Experience, Application, Knowledge, Institution)',
+            'Build order rule: Design through Acceptance — nothing skips sequence',
+            'Platform, technical, user, MC-first, AI-first, knowledge-first principles documented',
+            'Governing principle: Build once, correctly, for decades',
+        ],
+        'source_blueprints': [
+            '/docs/MASTER_TECHNICAL_ARCHITECTURE.md',
+            '/docs/MASTER_FOUNDING_CHARTER.md',
+            '/docs/MASTER_INSTITUTIONAL_MANIFESTO.md',
+            '/docs/CURSOR_MASTER_BUILD_PROMPT.md',
+        ],
+        'constitution': '/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md',
+        'status': 'documented',
+        'documented_date': today,
     },
     {
         'number': 2, 'id': 'IMP-02', 'band': 'A',
-        'title': 'Target folder structure scaffold',
-        'summary': 'Create src/, public/, prisma/, tests/ skeleton without breaking static site',
-        'deliverables': ['src/README.md', 'prisma/README.md', 'tests/README.md'],
-        'acceptance_criteria': [
-            'Target folders exist per repository-blueprint target_root_structure',
-            'Existing static routes still deploy to Netlify unchanged',
-            'CONTRIBUTING.md updated with folder map',
+        'package_label': 'Implementation Package 2 of 50',
+        'title': 'Master Technical Architecture & Repository Blueprint',
+        'summary': 'Repository structure, application architecture, technology stack, folder organization, service boundaries, naming conventions, deployment topology',
+        'deliverables': [
+            'docs/MIGRATION_PLAN.md', 'docs/REPO_AUDIT.md', 'docs/STACK.md',
+            'src/README.md', 'prisma/README.md', 'tests/README.md',
         ],
-        'source_blueprints': ['/data/repository-blueprint.json'],
+        'acceptance_criteria': [
+            'Current tree diffed against data/repository-blueprint.json target_root_structure',
+            'Migration strategy chosen with rollback plan (strangler-fig vs Next.js monorepo)',
+            'Stack locked: Next.js, TypeScript, Tailwind, Neon, Prisma, Netlify',
+            'Target folders scaffolded without breaking static Netlify deploy',
+            'Safe-edit zones listed for volunteer contributors',
+        ],
+        'source_blueprints': [
+            '/data/repository-blueprint.json',
+            '/data/technical-architecture.json',
+            '/docs/MASTER_TECHNICAL_ARCHITECTURE.md',
+            '/docs/REPOSITORY_ARCHITECTURE.md',
+        ],
         'status': 'specified',
     },
     {
         'number': 3, 'id': 'IMP-03', 'band': 'A',
-        'title': 'Stack lock document',
-        'summary': 'Lock Next.js, TypeScript, Tailwind, Neon, Prisma, Netlify versions',
-        'deliverables': ['docs/STACK.md'],
+        'title': 'Service boundaries and deployment topology',
+        'summary': 'Service boundaries, API surface, and deployment units per technical architecture',
+        'deliverables': ['docs/SERVICE_BOUNDARIES.md', 'docs/DEPLOYMENT_TOPOLOGY.md'],
         'acceptance_criteria': [
-            'Pinned versions documented with rationale',
-            'Aligns with data/technical-architecture.json technology_stack',
-            'Deferrals explicitly listed (e.g. ACOS 2.0, full AI institution)',
+            'Public site, MC, API, and admin deployment units defined',
+            'Service boundaries map to four-layer architecture (IMP-01)',
+            'Aligns with data/technical-architecture.json deployment section',
         ],
-        'source_blueprints': ['/data/technical-architecture.json', '/docs/MASTER_TECHNICAL_ARCHITECTURE.md'],
+        'source_blueprints': ['/data/technical-architecture.json', '/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md'],
         'status': 'specified',
     },
     {
@@ -757,20 +785,21 @@ MVP_SCOPE = {
 
 PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D01', 'indicator': 'Steps specified', 'current': len(IMPLEMENTATION_STEPS), 'status': 'partial'},
-    {'id': 'CIP-D02', 'indicator': 'Steps implemented', 'current': steps_implemented, 'status': 'planned'},
-    {'id': 'CIP-D03', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
-    {'id': 'CIP-D04', 'indicator': 'Cursor master prompt', 'current': 'Ready', 'status': 'partial'},
-    {'id': 'CIP-D05', 'indicator': 'Bands complete', 'current': 0, 'unit': '/5', 'status': 'planned'},
+    {'id': 'CIP-D02', 'indicator': 'Steps documented', 'current': steps_documented, 'status': 'partial'},
+    {'id': 'CIP-D03', 'indicator': 'Steps implemented', 'current': steps_implemented, 'status': 'planned'},
+    {'id': 'CIP-D04', 'indicator': 'Technical Constitution (IMP-01)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D05', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
     {'id': 'CIP-D06', 'indicator': 'QA gates passed', 'current': qa_gates_passed, 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
-    70,
+    72,
     14
     + len(IMPLEMENTATION_STEPS) // 2
     + len(BANDS) * 2
     + len(MVP_SCOPE['in_scope']) // 2
     + len(PACKAGE_DASHBOARD_INDICATORS) // 2
+    + steps_documented * 2
     + (4 if steps_implemented else 0)
     + (2 if sprint_zero_started else 0),
 )
@@ -794,10 +823,38 @@ out = {
         'acceptance criteria, and source blueprint links. No abstract planning; build-ready slices only.'
     ),
     'governing_principle': (
-        'One step at a time. One acceptance criterion at a time. Honest status always. '
+        'Build once. Build correctly. Build for decades. '
         'Does this implementation step help an Arkansan understand self-government through a '
         'working, trustworthy platform? If yes, ship the slice. If no, defer.'
     ),
+    'technical_constitution': {
+        'title': 'Master Technical Constitution & Build Doctrine',
+        'package': 'Implementation Package 1 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md',
+        'status': 'documented',
+        'documented_date': today,
+        'prime_directive': 'Build one integrated institution — one login, one design language, one data model, one knowledge platform, one AI ecosystem, one Mission Control, one Arkansas.',
+        'feature_test': ['Why does this exist? (Mission)', 'Who does it serve? (User)', 'How does it strengthen the institution? (System)'],
+        'platform_principles': [
+            'Volunteer-first', 'Mobile-first', 'Accessibility-first', 'Research-first', 'Evidence-first',
+            'AI-assisted', 'Mission-Control-driven', 'Arkansas-focused', 'Future-ready',
+        ],
+        'four_layer_architecture': [
+            {'layer': 1, 'name': 'Experience', 'scope': 'User Interface'},
+            {'layer': 2, 'name': 'Application', 'scope': 'Business Logic'},
+            {'layer': 3, 'name': 'Knowledge', 'scope': 'Data & Documents'},
+            {'layer': 4, 'name': 'Institution', 'scope': 'Mission Control & Governance'},
+        ],
+        'build_order': [
+            'Design', 'Data', 'API', 'Business Logic', 'User Interface',
+            'Mission Control', 'AI', 'Testing', 'Documentation', 'Acceptance',
+        ],
+        'next_package': {
+            'number': 2,
+            'id': 'IMP-02',
+            'title': 'Master Technical Architecture & Repository Blueprint',
+        },
+    },
     'supersedes': {
         'build': 50,
         'title': 'Master Build Bible v1.0',
@@ -844,6 +901,7 @@ out = {
         'days_remaining': days_remaining,
         'implementation_package_readiness_pct': implementation_package_readiness,
         'steps_total': len(IMPLEMENTATION_STEPS),
+        'steps_documented': steps_documented,
         'steps_implemented': steps_implemented,
         'steps_remaining': len(IMPLEMENTATION_STEPS) - steps_implemented,
         'bands_total': len(BANDS),
@@ -884,5 +942,5 @@ with open(root / 'data/cursor-implementation-package.json', 'w', newline='\n') a
 print(
     f'Implementation Package: {len(IMPLEMENTATION_STEPS)} steps, '
     f'{len(BANDS)} bands, {implementation_package_readiness}% readiness, '
-    f'{steps_implemented} implemented'
+    f'{steps_documented} documented, {steps_implemented} implemented'
 )

@@ -233,7 +233,7 @@ async function initMissionControl() {
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
     <h2 class="mc-section-title">Implementation Package <a href="/mission-control/cursor-implementation-package.html" class="mc-inline-link">50 Steps #101 →</a></h2>
-    <p class="mc-bar-note">Build #101 — Cursor Implementation Package. Blueprint → code: 50 steps in 5 bands, Cursor master prompt, MVP scope. 0/50 implemented · Sprint Zero pending. 57% readiness.</p>
+    <p class="mc-bar-note">Build #101 — Cursor Implementation Package. IMP-01 Technical Constitution documented · 1/50 documented · 0/50 implemented · 59% readiness.</p>
     <h2 class="mc-section-title">Founding Charter <a href="/mission-control/founding-charter.html" class="mc-inline-link">Arkansas Declaration #100 →</a></h2>
     <p class="mc-bar-note">Build #100 — Master Founding Charter. Completion of the founding blueprint — 14 charter sections, 9 commitments, institutional covenant. Knowledge strengthens citizens · Citizens strengthen communities. 0 acknowledgments · blueprint documented. 56% readiness.</p>
     <h2 class="mc-section-title">Institutional Manifesto <a href="/mission-control/institutional-manifesto.html" class="mc-inline-link">Why We Build #99 →</a></h2>
@@ -10652,11 +10652,19 @@ async function initCursorImplementationPackage() {
     <div class="mc-executive mc-executive--hero">
       <div class="mc-stat"><div class="mc-stat__label">Package readiness</div><div class="mc-stat__value">${s.implementation_package_readiness_pct}%</div></div>
       <div class="mc-stat"><div class="mc-stat__label">Steps specified</div><div class="mc-stat__value">${s.steps_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Documented</div><div class="mc-stat__value">${s.steps_documented}</div></div>
       <div class="mc-stat"><div class="mc-stat__label">Implemented</div><div class="mc-stat__value">${s.steps_implemented}</div></div>
       <div class="mc-stat"><div class="mc-stat__label">Sprint Zero</div><div class="mc-stat__value">${s.sprint_zero_started ? 'Started' : 'Pending'}</div></div>
       <div class="mc-stat"><div class="mc-stat__label">MVP in scope</div><div class="mc-stat__value">${s.mvp_in_scope_count}</div></div>
       <div class="mc-stat"><div class="mc-stat__label">Days to Jan 2027</div><div class="mc-stat__value">${s.days_remaining}</div></div>
     </div>
+    <h2 class="mc-section-title">Technical Constitution (IMP-01)</h2>
+    <p class="mc-bar-note"><strong>${cip.technical_constitution.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.technical_constitution.prime_directive}</p>
+    <p class="mc-bar-note"><a href="${cip.technical_constitution.route}">IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md</a></p>
+    <h3 class="mc-subsection-title">Four-Layer Architecture</h3>
+    <ul class="mc-deliverables">${cip.technical_constitution.four_layer_architecture.map(l => `<li>Layer ${l.layer}: ${l.name} (${l.scope})</li>`).join('')}</ul>
+    <h3 class="mc-subsection-title">Build Order</h3>
+    <p class="mc-bar-note">${cip.technical_constitution.build_order.join(' → ')}</p>
     <h2 class="mc-section-title">Five Bands</h2>
     ${bandBlocks}
     <h2 class="mc-section-title">${cip.mvp_scope.title}</h2>
