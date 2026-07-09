@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#100** | **Master Founding Charter** | **2.04.0** | **✅ Complete** | [100](100-founding-charter.md) · [/mission-control/founding-charter.html](../mission-control/founding-charter.html) |
 | **#99** | **Master Institutional Manifesto** | **2.03.0** | **✅ Complete** | [099](099-institutional-manifesto.md) · [/mission-control/institutional-manifesto.html](../mission-control/institutional-manifesto.html) |
 | **#98** | **Master Institutional Self-Build & Continuous Improvement** | **2.02.0** | **✅ Complete** | [098](098-institutional-continuous-improvement.md) · [/mission-control/institutional-continuous-improvement.html](../mission-control/institutional-continuous-improvement.html) |
 | **#97** | **Master Institutional Launch Certification** | **2.01.0** | **✅ Complete** | [097](097-institutional-launch-certification.md) · [/mission-control/institutional-launch-certification.html](../mission-control/institutional-launch-certification.html) |

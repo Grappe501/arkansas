@@ -308,10 +308,10 @@ out = {
     ],
     'recommended_next_build': {
         'number': 100,
-        'title': 'Executive War Room & Countdown Dashboard Components',
+        'title': 'Master Founding Charter (The Arkansas Declaration for an Informed Citizenry)',
         'note': (
-            'War room UI, countdown dashboard, manifesto onboarding integration, '
-            'acknowledgment tracker, public manifesto page, COMP-* specs.'
+            'Completion of the founding blueprint — permanent charter foundation, '
+            'founding documents bundle, covenant, January 2027 goals, COMP-* specs.'
         ),
     },
 }

@@ -662,6 +662,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/founding-charter"
+  to = "/mission-control/founding-charter.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301

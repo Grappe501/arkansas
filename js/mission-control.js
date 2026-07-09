@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Founding Charter <a href="/mission-control/founding-charter.html" class="mc-inline-link">Arkansas Declaration #100 →</a></h2>
+    <p class="mc-bar-note">Build #100 — Master Founding Charter. Completion of the founding blueprint — 14 charter sections, 9 commitments, institutional covenant. Knowledge strengthens citizens · Citizens strengthen communities. 0 acknowledgments · blueprint documented. 56% readiness.</p>
     <h2 class="mc-section-title">Institutional Manifesto <a href="/mission-control/institutional-manifesto.html" class="mc-inline-link">Why We Build #99 →</a></h2>
     <p class="mc-bar-note">Build #99 — Master Institutional Manifesto. Moral foundation — 11 belief sections, Our Promise, institutional motto. Learn with Curiosity · Lead with Integrity · Serve with Humility · Strengthen Arkansas. 0 acknowledgments · required reading not enforced. 36% readiness.</p>
     <h2 class="mc-section-title">Continuous Improvement <a href="/mission-control/institutional-continuous-improvement.html" class="mc-inline-link">Never Finished #98 →</a></h2>
@@ -5286,6 +5288,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initInstitutionalLaunchCertification();
   initInstitutionalContinuousImprovement();
   initInstitutionalManifesto();
+  initFoundingCharter();
 });
 
 async function initUxArchitecture() {
@@ -10498,6 +10501,108 @@ async function initInstitutionalManifesto() {
       <a href="/data/institutional-manifesto.json">JSON</a> ·
       <a href="/mission-control/organizational-constitution.html">Constitution (#76)</a> ·
       <a href="/mission-control/public-trust-institutional-credibility.html">Public Trust (#82)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initFoundingCharter() {
+  const root = document.getElementById('mc-founding-charter-root');
+  if (!root) return;
+
+  const [fcRes, mcRes] = await Promise.all([
+    fetch('/data/founding-charter.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const fc = await fcRes.json();
+  const mc = await mcRes.json();
+  const s = fc.summary;
+
+  const sectionBlocks = fc.charter_sections.sections.map(sec => {
+    const extras = [];
+    if (sec.beliefs) extras.push(...sec.beliefs.map(x => `<li>${x}</li>`));
+    if (sec.topics) extras.push(...sec.topics.map(t => `<li>${t}</li>`));
+    if (sec.not_building) extras.push(...sec.not_building.map(x => `<li><em>Not:</em> ${x}</li>`));
+    if (sec.building) extras.push(...sec.building.map(x => `<li><em>Building:</em> ${x}</li>`));
+    if (sec.audiences) extras.push(...sec.audiences.map(a => `<li>${a}</li>`));
+    if (sec.commitments) extras.push(...sec.commitments.map(c => `<li>${c}</li>`));
+    if (sec.standards) extras.push(...sec.standards.map(st => `<li>${st}</li>`));
+    if (sec.stewardship_goals) extras.push(...sec.stewardship_goals.map(g => `<li>${g}</li>`));
+    if (sec.january_2027_goals) extras.push(...sec.january_2027_goals.map(g => `<li>${g}</li>`));
+    if (sec.inheritance) extras.push(...sec.inheritance.map(i => `<li>${i}</li>`));
+    if (sec.not_measured_by) extras.push(...sec.not_measured_by.map(m => `<li><em>Not:</em> ${m}</li>`));
+    if (sec.measured_by) extras.push(...sec.measured_by.map(m => `<li>${m}</li>`));
+    if (sec.built_sequence) extras.push(...sec.built_sequence.map(b => `<li>${b}</li>`));
+    if (sec.systems_designed) extras.push(...sec.systems_designed.map(sys => `<li>${sys}</li>`));
+    if (sec.covenant) extras.push(...sec.covenant.map(c => `<li>${c}</li>`));
+    if (sec.principle_lines) extras.push(...sec.principle_lines.map(p => `<li><strong>${p}</strong></li>`));
+    return `
+    <h3 class="mc-subsection-title">${sec.title}</h3>
+    <p class="mc-bar-note">${sec.summary}</p>
+    ${extras.length ? `<ul class="mc-deliverables">${extras.join('')}</ul>` : ''}`;
+  }).join('');
+
+  const dashRows = fc.charter_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td>
+      <td>${typeof d.current === 'number' ? d.current.toLocaleString() : d.current}${d.unit || ''}</td>
+      <td>${d.status}</td></tr>`).join('');
+
+  const systemRows = fc.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Founding Charter</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #100 · ${fc.title}</p>
+      <h1>${fc.subtitle}</h1>
+      <p class="mc-header__question">${fc.governing_principle}</p>
+      <p class="mc-bar-note">${fc.purpose}</p>
+      <p class="mc-bar-note"><strong>${fc.tagline}</strong> · ${s.days_remaining} days to ${fc.completion_target_date}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Charter readiness</div><div class="mc-stat__value">${s.founding_charter_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Charter sections</div><div class="mc-stat__value">${s.charter_sections}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Acknowledgments</div><div class="mc-stat__value">${s.charter_acknowledgments}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Blueprint</div><div class="mc-stat__value">${s.founding_blueprint_documented ? 'Documented' : 'In progress'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Jan 2027 goals</div><div class="mc-stat__value">${s.january_2027_goals}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Dashboard</div><div class="mc-stat__value">${s.charter_dashboard_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Founding Milestone</h2>
+    <p class="mc-bar-note">${fc.founding_milestone.builds_from_idea} builds from idea to blueprint · Founding build complete target: January 2027 · Mission continues beyond</p>
+    <h2 class="mc-section-title">Document Hierarchy</h2>
+    <p class="mc-bar-note">Manifesto: ${fc.document_hierarchy.manifesto} · Charter: ${fc.document_hierarchy.charter} · Constitution: ${fc.document_hierarchy.constitution}</p>
+    <h2 class="mc-section-title">${fc.charter_sections.title}</h2>
+    ${sectionBlocks}
+    <h2 class="mc-section-title">${fc.institutional_covenant.title}</h2>
+    <ul class="mc-deliverables">${fc.institutional_covenant.items.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${fc.final_governing_principle.title}</h2>
+    <ul class="mc-deliverables">${fc.final_governing_principle.lines.map(l => `<li><strong>${l}</strong></li>`).join('')}</ul>
+    <h2 class="mc-section-title">Founder's Closing Reflection</h2>
+    <p class="mc-bar-note">${fc.founders_closing}</p>
+    <h2 class="mc-section-title">${fc.required_reading.title}</h2>
+    <p class="mc-bar-note">Manifesto + Charter · Enforced: ${fc.required_reading.enforced ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${fc.required_reading.audiences.map(a => `<li>${a}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${fc.charter_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${fc.charter_dashboard.live ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${fc.integration.chain}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${fc.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${fc.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${fc.recommended_next_build.number} — ${fc.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${fc.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_FOUNDING_CHARTER.md">MASTER_FOUNDING_CHARTER.md</a> ·
+      <a href="/data/founding-charter.json">JSON</a> ·
+      <a href="/mission-control/institutional-manifesto.html">Manifesto (#99)</a> ·
+      <a href="/mission-control/organizational-constitution.html">Constitution (#76)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

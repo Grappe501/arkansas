@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.04.0] - 2026-07-09 — Build #100 Master Founding Charter
+
+### The Arkansas Declaration for an Informed Citizenry
+- **Master Founding Charter v1.0** — completion of the 100-build founding blueprint
+- 14 charter sections, 9 commitments, 6 standards, 10 January 2027 goals, institutional covenant
+- Preamble through Final Governing Principle — permanent foundation for all future generations
+- January 2027 = founding build complete, mission continues beyond
+- Honest: founding blueprint documented · 0 acknowledgments · dashboard not live · 56% readiness
+- MC dashboard: `/mission-control/founding-charter.html`
+
 ## [2.03.0] - 2026-07-09 — Build #99 Master Institutional Manifesto
 
 ### Why We Are Building This

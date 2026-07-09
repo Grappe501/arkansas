@@ -326,7 +326,7 @@ out = {
         'Post-Jan 2027 improvement cadence not defined',
     ],
     'recommended_next_build': {
-        'number': 100,
+        'number': 101,
         'title': 'Executive War Room & Countdown Dashboard Components',
         'note': (
             'War room UI, countdown dashboard, improvement backlog tracker, '

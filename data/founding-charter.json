@@ -1,0 +1,452 @@
+{
+  "version": "1.0",
+  "build": 100,
+  "updated": "2026-07-09",
+  "completion_target_date": "2027-01-01",
+  "title": "Master Founding Charter v1.0",
+  "subtitle": "The Arkansas Declaration for an Informed Citizenry",
+  "tagline": "The Completion of the Founding Blueprint",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/founding-charter.html",
+  "constitution": "/docs/MASTER_FOUNDING_CHARTER.md",
+  "purpose": "Build #100 completes the founding blueprint. One hundred builds ago there was only an idea; today there is a complete institutional blueprint. This Charter becomes the permanent foundation upon which every future generation may continue building. The Arkansas Declaration for an Informed Citizenry.",
+  "governing_principle": "Knowledge strengthens citizens. Citizens strengthen communities. Communities strengthen Arkansas. And Arkansas, strengthened by informed citizens, strengthens the American promise of self-government. This is the founding charter of Citizens United Facts.",
+  "founders_closing": "One hundred builds ago there was only an idea. Today there is a complete institutional blueprint. If Citizens United Facts helps even one generation of Arkansans better understand their constitutional system, strengthens public trust through careful scholarship, and inspires neighbors to learn together with respect and curiosity, then this institution will have fulfilled its highest purpose.",
+  "founding_milestone": {
+    "title": "Build #100 \u2014 Founding Blueprint Complete",
+    "builds_from_idea": 100,
+    "blueprint_complete": true,
+    "january_2027_founding_build_complete": true,
+    "mission_continues_beyond_january_2027": true,
+    "days_remaining": 176
+  },
+  "document_hierarchy": {
+    "manifesto": "Why the institution must exist (#99)",
+    "charter": "Permanent founding foundation (#100)",
+    "constitution": "Governance and operating rules",
+    "technical_plans": "How the institution is built",
+    "if_all_else_lost_charter_and_manifesto_remain": true
+  },
+  "charter_sections": {
+    "title": "The Founding Charter",
+    "sections": [
+      {
+        "id": "FC-01",
+        "title": "Preamble",
+        "summary": "Founding volunteers establish an enduring institution devoted to civic education",
+        "beliefs": [
+          "A free people cannot govern themselves if they cannot understand the systems that govern them",
+          "Knowledge is the foundation of liberty",
+          "Understanding is the foundation of participation",
+          "Trust is the foundation of healthy institutions"
+        ],
+        "permanent_foundation": true
+      },
+      {
+        "id": "FC-02",
+        "title": "Why We Exist",
+        "summary": "Important civic questions should never belong only to insiders",
+        "topics": [
+          "Complex court decisions",
+          "Campaign finance laws",
+          "Government processes",
+          "Constitutional questions",
+          "Legislative procedures",
+          "Public transparency"
+        ],
+        "belong_to_the_people": true
+      },
+      {
+        "id": "FC-03",
+        "title": "What We Are Building",
+        "summary": "An institution \u2014 not a campaign, party, or temporary project",
+        "not_building": [
+          "A political campaign",
+          "A political party",
+          "A lobbying organization",
+          "A temporary project",
+          "A collection of webpages"
+        ],
+        "building": [
+          "An institution",
+          "A public educational resource",
+          "A statewide volunteer network",
+          "A civic research center",
+          "A leadership academy",
+          "A coalition of Arkansas organizations",
+          "A permanent civic education infrastructure"
+        ]
+      },
+      {
+        "id": "FC-04",
+        "title": "Who We Serve",
+        "summary": "The institution belongs to all who come seeking knowledge",
+        "audiences": [
+          "Every Arkansas citizen",
+          "Every student",
+          "Every teacher",
+          "Every librarian",
+          "Every journalist",
+          "Every volunteer",
+          "Every community organization",
+          "Every elected official seeking accurate information",
+          "Every person who sincerely wants to understand"
+        ]
+      },
+      {
+        "id": "FC-05",
+        "title": "Our Commitments",
+        "summary": "These commitments define our culture",
+        "commitments": [
+          "Research before assumption",
+          "Evidence before opinion",
+          "Transparency before convenience",
+          "Listening before speaking",
+          "Teaching before persuading",
+          "Communities before institutions",
+          "Volunteers before bureaucracy",
+          "Service before recognition",
+          "Arkansas before ourselves"
+        ]
+      },
+      {
+        "id": "FC-06",
+        "title": "Our Standard",
+        "summary": "These standards never expire",
+        "standards": [
+          "Every page should answer questions honestly",
+          "Every citation should be verifiable",
+          "Every volunteer should feel valued",
+          "Every community should feel welcomed",
+          "Every correction should be made openly",
+          "Every decision should strengthen trust"
+        ]
+      },
+      {
+        "id": "FC-07",
+        "title": "Our Responsibility",
+        "summary": "Every generation becomes a steward",
+        "stewardship_goals": [
+          "Better documented",
+          "Better researched",
+          "Better organized",
+          "More accessible",
+          "More trusted",
+          "More useful"
+        ]
+      },
+      {
+        "id": "FC-08",
+        "title": "Our Goals",
+        "summary": "January 2027 \u2014 completion of founding build, not completion of mission",
+        "january_2027_goals": [
+          "A fully operational statewide civic education institution",
+          "Mission Control functioning",
+          "Education Leaders across Arkansas",
+          "Leadership developing in all 75 counties",
+          "Leadership growing in the 250 largest cities",
+          "A thriving Community Education Academy",
+          "A strong coalition of Arkansas organizations",
+          "A trusted research library",
+          "A volunteer-powered organization",
+          "A foundation capable of serving Arkansas for decades"
+        ],
+        "founding_build_complete_target": true
+      },
+      {
+        "id": "FC-09",
+        "title": "The Next Generation",
+        "summary": "New volunteers should inherit an institution worthy of continuing",
+        "inheritance": [
+          "Clear documentation",
+          "Reliable systems",
+          "Thoughtful governance",
+          "Strong leadership",
+          "Trusted research",
+          "Healthy communities",
+          "An institution worthy of continuing"
+        ],
+        "should_never_need_to_know_founders": true
+      },
+      {
+        "id": "FC-10",
+        "title": "Our Measure of Success",
+        "summary": "Measured by understanding, trust, and faithfulness \u2014 not popularity",
+        "not_measured_by": [
+          "Money",
+          "Popularity",
+          "Recognition",
+          "Awards",
+          "Media attention"
+        ],
+        "measured_by": [
+          "Did more Arkansans understand?",
+          "Did communities become stronger?",
+          "Did volunteers become leaders?",
+          "Did neighbors learn together?",
+          "Did trust increase?",
+          "Did the institution remain faithful to its mission?"
+        ]
+      },
+      {
+        "id": "FC-11",
+        "title": "The Arkansas Promise",
+        "summary": "Arkansas can become a national example of thoughtful civic education",
+        "built_sequence": [
+          "Volunteer by volunteer",
+          "County by county",
+          "City by city",
+          "Neighborhood by neighborhood",
+          "Conversation by conversation",
+          "Generation by generation"
+        ],
+        "arkansas_not_perfect_but_cares": true
+      },
+      {
+        "id": "FC-12",
+        "title": "Founder's Closing Reflection",
+        "summary": "One hundred builds \u2014 from idea to complete institutional blueprint",
+        "systems_designed": [
+          "Research",
+          "Technology",
+          "Mission Control",
+          "Education",
+          "Leadership",
+          "Coalition",
+          "Volunteers",
+          "Counties",
+          "Cities",
+          "Neighborhoods",
+          "Artificial Intelligence",
+          "Knowledge Systems",
+          "Governance",
+          "Operations"
+        ],
+        "enduring_belief": "An informed citizen is the strongest guardian of self-government",
+        "builds_from_idea": 100
+      },
+      {
+        "id": "FC-13",
+        "title": "Institutional Covenant",
+        "summary": "Dedicated to the people of Arkansas \u2014 with gratitude, responsibility, and hope",
+        "covenant": [
+          "We will seek truth with humility",
+          "We will teach with integrity",
+          "We will serve without expectation of recognition",
+          "We will protect the public trust entrusted to us",
+          "We will leave this institution stronger for those who follow",
+          "We dedicate Citizens United Facts to the people of Arkansas"
+        ]
+      },
+      {
+        "id": "FC-14",
+        "title": "Final Governing Principle",
+        "summary": "This is the founding charter of Citizens United Facts",
+        "principle_lines": [
+          "Knowledge strengthens citizens",
+          "Citizens strengthen communities",
+          "Communities strengthen Arkansas",
+          "Arkansas, strengthened by informed citizens, strengthens the American promise of self-government"
+        ]
+      }
+    ],
+    "sections_total": 14
+  },
+  "our_commitments": {
+    "title": "Our Commitments",
+    "items": [
+      "Research before assumption",
+      "Evidence before opinion",
+      "Transparency before convenience",
+      "Listening before speaking",
+      "Teaching before persuading",
+      "Communities before institutions",
+      "Volunteers before bureaucracy",
+      "Service before recognition",
+      "Arkansas before ourselves"
+    ],
+    "define_culture": true
+  },
+  "our_standard": {
+    "title": "Our Standard",
+    "standards": [
+      "Every page should answer questions honestly",
+      "Every citation should be verifiable",
+      "Every volunteer should feel valued",
+      "Every community should feel welcomed",
+      "Every correction should be made openly",
+      "Every decision should strengthen trust"
+    ],
+    "never_expire": true
+  },
+  "january_2027": {
+    "title": "January 2027",
+    "founding_build_complete": true,
+    "mission_continues": true,
+    "goals": [
+      "A fully operational statewide civic education institution",
+      "Mission Control functioning",
+      "Education Leaders across Arkansas",
+      "Leadership developing in all 75 counties",
+      "Leadership growing in the 250 largest cities",
+      "A thriving Community Education Academy",
+      "A strong coalition of Arkansas organizations",
+      "A trusted research library",
+      "A volunteer-powered organization",
+      "A foundation capable of serving Arkansas for decades"
+    ],
+    "days_remaining": 176
+  },
+  "institutional_covenant": {
+    "title": "Institutional Covenant",
+    "items": [
+      "We will seek truth with humility",
+      "We will teach with integrity",
+      "We will serve without expectation of recognition",
+      "We will protect the public trust entrusted to us",
+      "We will leave this institution stronger for those who follow",
+      "We dedicate Citizens United Facts to the people of Arkansas"
+    ],
+    "dedicated_to_people_of_arkansas": true
+  },
+  "final_governing_principle": {
+    "title": "Final Governing Principle",
+    "lines": [
+      "Knowledge strengthens citizens",
+      "Citizens strengthen communities",
+      "Communities strengthen Arkansas",
+      "Arkansas, strengthened by informed citizens, strengthens the American promise of self-government"
+    ],
+    "full": "Knowledge strengthens citizens. Citizens strengthen communities. Communities strengthen Arkansas. And Arkansas, strengthened by informed citizens, strengthens the American promise of self-government."
+  },
+  "required_reading": {
+    "title": "Founding Documents",
+    "audiences": [
+      "Every founding volunteer",
+      "Every volunteer",
+      "Every Education Leader",
+      "Every coalition partner",
+      "Every future leader"
+    ],
+    "includes_manifesto_and_charter": true,
+    "enforced": false,
+    "acknowledgments": 0,
+    "status": "planned"
+  },
+  "charter_dashboard": {
+    "title": "Founding Charter Dashboard",
+    "indicators": [
+      {
+        "id": "FC-D01",
+        "indicator": "Charter acknowledgments",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "FC-D02",
+        "indicator": "Founding blueprint documented",
+        "current": "Yes",
+        "status": "partial"
+      },
+      {
+        "id": "FC-D03",
+        "indicator": "Charter sections documented",
+        "current": 14,
+        "status": "partial"
+      },
+      {
+        "id": "FC-D04",
+        "indicator": "January 2027 goals specified",
+        "current": 10,
+        "status": "partial"
+      },
+      {
+        "id": "FC-D05",
+        "indicator": "Public charter page",
+        "current": "Partial",
+        "status": "partial"
+      },
+      {
+        "id": "FC-D06",
+        "indicator": "Charter dashboard",
+        "current": "Planned",
+        "status": "planned"
+      }
+    ],
+    "live": false,
+    "status": "planned"
+  },
+  "integration": {
+    "chain": "Founding Charter \u2192 Institutional Manifesto \u2192 Organizational Constitution \u2192 Project Constitution \u2192 Launch Certification \u2192 Continuous Improvement",
+    "founding_blueprint_capstone": true,
+    "systems": [
+      {
+        "system": "Institutional Manifesto (#99)",
+        "route": "/mission-control/institutional-manifesto.html",
+        "status": "live"
+      },
+      {
+        "system": "Organizational Constitution (#76)",
+        "route": "/mission-control/organizational-constitution.html",
+        "status": "live"
+      },
+      {
+        "system": "Project Constitution (#2)",
+        "route": "/builds/002-project-constitution.html",
+        "status": "live"
+      },
+      {
+        "system": "Launch Certification (#97)",
+        "route": "/mission-control/institutional-launch-certification.html",
+        "status": "live"
+      },
+      {
+        "system": "Continuous Improvement (#98)",
+        "route": "/mission-control/institutional-continuous-improvement.html",
+        "status": "live"
+      },
+      {
+        "system": "Operating Manual (#90)",
+        "route": "/mission-control/institutional-operating-manual.html",
+        "status": "live"
+      }
+    ]
+  },
+  "long_term_vision": "The founding charter remains when founders are forgotten and generations change. Every steward leaves the institution better documented, more trusted, and more useful. Arkansas strengthened by informed citizens strengthens the American promise of self-government.",
+  "summary": {
+    "completion_target_date": "2027-01-01",
+    "days_remaining": 176,
+    "founding_charter_readiness_pct": 56,
+    "charter_sections": 14,
+    "commitments": 9,
+    "standards": 6,
+    "january_2027_goals": 10,
+    "covenant_items": 6,
+    "charter_dashboard_live": false,
+    "required_reading_enforced": false,
+    "charter_acknowledgments": 0,
+    "public_charter_page_live": false,
+    "founding_blueprint_documented": true,
+    "trust_readiness_pct": 50,
+    "governance_readiness_pct": 50,
+    "institutional_completion_pct": 99
+  },
+  "catalog_gaps": [
+    "Charter acknowledgments not tracked in onboarding",
+    "No public-facing charter page separate from MC",
+    "Charter dashboard not live",
+    "Founding documents bundle not enforced before service",
+    "Coalition partners not prompted to acknowledge charter",
+    "Education Leaders no charter certification step",
+    "Charter not linked from volunteer signup funnel",
+    "No translation or accessibility review of charter",
+    "January 2027 goals not instrumented against live metrics",
+    "War Room countdown not yet built (#101)"
+  ],
+  "recommended_next_build": {
+    "number": 101,
+    "title": "Executive War Room & Countdown Dashboard Components",
+    "note": "War room UI, countdown dashboard, founding documents onboarding, charter acknowledgment tracker, public charter page, COMP-* specs."
+  }
+}

@@ -1,6 +1,6 @@
 {
-  "version": "2.03.0",
-  "build": 99,
+  "version": "2.04.0",
+  "build": 100,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,20 +9,20 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 99,
+    "overall_completion": 100,
     "current_build": {
-      "number": 99,
-      "title": "Citizens United Facts Master Institutional Manifesto v1.0"
-    },
-    "active_phase": "Institutional Manifesto \u2192 War Room",
-    "last_completed": "Continuous Improvement",
-    "next_build": {
       "number": 100,
+      "title": "Citizens United Facts Master Founding Charter v1.0"
+    },
+    "active_phase": "Founding Charter Complete \u2192 War Room",
+    "last_completed": "Institutional Manifesto",
+    "next_build": {
+      "number": 101,
       "title": "Executive war room & countdown dashboard components"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
-    "content_readiness": 36,
+    "content_readiness": 56,
     "research_readiness": 43,
     "data_viz_readiness": 12,
     "signup_funnel_readiness": 26,
@@ -49,6 +49,7 @@
     "institutional_launch_certification_readiness": 57,
     "institutional_continuous_improvement_readiness": 54,
     "institutional_manifesto_readiness": 36,
+    "founding_charter_readiness": 56,
     "coalition_network_readiness": 44,
     "citizen_action_center_readiness": 42,
     "campaign_finance_observatory_readiness": 38,
@@ -70,7 +71,7 @@
     "arkansas_neighborhood_operating_system_readiness": 47,
     "arkansas_civic_institution_roadmap_readiness": 48,
     "institutional_digital_twin_readiness": 51,
-    "public_trust_institutional_credibility_readiness": 50,
+    "public_trust_institutional_credibility_readiness": 56,
     "arkansas_civic_ecosystem_readiness": 54,
     "arkansas_strategic_plan_2035_readiness": 55,
     "master_launch_plan_readiness": 54,
@@ -88,7 +89,7 @@
     "county_os_readiness": 59,
     "campaign_os_readiness": 47,
     "encyclopedia_readiness": 19,
-    "narrative_readiness": 36,
+    "narrative_readiness": 56,
     "curriculum_readiness": 26,
     "trust_readiness": 50,
     "library_readiness": 22,
@@ -119,6 +120,8 @@
     "planning_phase_complete": true,
     "planning_constitution_complete": true,
     "eighty_builds_complete": true,
+    "hundred_builds_complete": true,
+    "founding_blueprint_complete": true,
     "implementation_phase": "executive_war_room_next",
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation",
@@ -132,8 +135,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 99,
-      "note": "Build #99 \u2014 Institutional Manifesto. 176 days to Jan 2027."
+      "value": 100,
+      "note": "Build #100 \u2014 Founding Charter. 176 days to Jan 2027. Blueprint complete."
     },
     {
       "id": "constitution",
@@ -849,7 +852,14 @@
       "label": "Institutional Manifesto",
       "value": 36,
       "max": 100,
-      "note": "0 acknowledgments \u00b7 required reading planned."
+      "note": "Institutional manifesto \u00b7 36% readiness."
+    },
+    {
+      "id": "founding_charter",
+      "label": "Founding Charter",
+      "value": 56,
+      "max": 100,
+      "note": "0 acknowledgments \u00b7 blueprint documented."
     }
   ],
   "public_readiness": {
@@ -1736,6 +1746,12 @@
       "id": "institutional_manifesto",
       "label": "Institutional Manifesto",
       "href": "/mission-control/institutional-manifesto.html",
+      "status": "complete"
+    },
+    {
+      "id": "founding_charter",
+      "label": "Founding Charter",
+      "href": "/mission-control/founding-charter.html",
       "status": "complete"
     }
   ],
@@ -2762,6 +2778,58 @@
     }
   ],
   "builds": [
+    {
+      "number": 100,
+      "title": "Citizens United Facts Master Founding Charter v1.0",
+      "version": "2.04.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Completion of the founding blueprint \u2014 permanent foundation for all future generations",
+      "summary": "14 charter sections, 10 commitments, 6 standards, 10 January 2027 goals, institutional covenant. Founding blueprint complete. 56% readiness \u00b7 0 acknowledgments \u00b7 charter dashboard not live.",
+      "files_created": [
+        "data/founding-charter.json",
+        "docs/MASTER_FOUNDING_CHARTER.md",
+        "builds/100-founding-charter.md",
+        "mission-control/founding-charter.html",
+        "scripts/gen-founding-charter.py",
+        "scripts/update-mc-build100.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/founding-charter.html"
+      ],
+      "decisions_made": [
+        "Charter completes 100-build founding blueprint",
+        "Arkansas Declaration for an Informed Citizenry",
+        "January 2027 = founding build complete, mission continues",
+        "Knowledge \u2192 Citizens \u2192 Communities \u2192 Arkansas \u2192 self-government",
+        "Stewardship: every generation leaves institution stronger",
+        "56% readiness \u2014 blueprint documented"
+      ],
+      "open_questions": [
+        "Public charter page route \u2014 /charter/ vs /about/charter/?",
+        "Founding documents bundle \u2014 manifesto + charter acknowledgment?",
+        "Display governing principle on public site footer?",
+        "January 2027 goal instrumentation against live metrics?"
+      ],
+      "risks": [
+        "Charter acknowledgments not tracked in onboarding",
+        "No public-facing charter page separate from MC",
+        "Charter dashboard not live",
+        "Founding documents bundle not enforced before service"
+      ],
+      "next_recommended": 101,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/founding-charter.html",
+      "review_status": "complete"
+    },
     {
       "number": 99,
       "title": "Citizens United Facts Master Institutional Manifesto v1.0",
@@ -8065,21 +8133,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Master Institutional Manifesto v1.0 \u2014 Why We Are Building This",
-    "building_now": "99 builds \u2014 executive war room next",
+    "what_built": "Master Founding Charter v1.0 \u2014 The Arkansas Declaration for an Informed Citizenry",
+    "building_now": "100 builds \u2014 founding blueprint complete \u2014 executive war room next",
     "blocked": [
-      "Required reading enforcement",
-      "Volunteer acknowledgments",
-      "Public manifesto page",
-      "Onboarding integration"
+      "Charter acknowledgments",
+      "Public charter page",
+      "Charter dashboard",
+      "War Room UI"
     ],
     "ready_public": [
-      "11 belief sections",
-      "Our Promise",
-      "Institutional motto",
-      "Governing compass question"
+      "14 charter sections",
+      "Our Commitments",
+      "Institutional Covenant",
+      "Final governing principle"
     ],
-    "next": "Build #100 \u2014 Executive war room & countdown dashboard components"
+    "next": "Build #101 \u2014 Executive war room & countdown dashboard components"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -9082,5 +9150,14 @@
     "volunteer_acknowledgments": 0,
     "required_reading_enforced": false,
     "manifesto_dashboard_live": false
+  },
+  "founding_charter": "/data/founding-charter.json",
+  "founding_charter_dashboard": "/mission-control/founding-charter.html",
+  "founding_charter_inventory": {
+    "readiness_score": 56,
+    "charter_sections": 14,
+    "charter_acknowledgments": 0,
+    "founding_blueprint_documented": true,
+    "charter_dashboard_live": false
   }
 }
