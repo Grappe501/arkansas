@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#95** | **Master Arkansas Action Network** | **1.99.0** | **✅ Complete** | [095](095-master-arkansas-action-network.md) · [/mission-control/master-arkansas-action-network.html](../mission-control/master-arkansas-action-network.html) |
 | **#94** | **Master Executive Institution** | **1.98.0** | **✅ Complete** | [094](094-executive-institution.md) · [/mission-control/executive-institution.html](../mission-control/executive-institution.html) |
 | **#93** | **Master Civic Data Warehouse & Knowledge Platform** | **1.97.0** | **✅ Complete** | [093](093-civic-knowledge-platform.md) · [/mission-control/civic-knowledge-platform.html](../mission-control/civic-knowledge-platform.html) |
 | **#92** | **Master LocalBrain Architecture** | **1.96.0** | **✅ Complete** | [092](092-localbrain-architecture.md) · [/mission-control/localbrain-architecture.html](../mission-control/localbrain-architecture.html) |

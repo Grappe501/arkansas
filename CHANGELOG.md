@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.99.0] - 2026-07-09 — Build #95 Master Arkansas Action Network
+
+### From Learning to Local Civic Participation — Educate. Connect. Act.
+- **Master Arkansas Action Network v2.0** — neutral civic participation layer (evolution of #64 growth pipeline)
+- Arkansas Action Center (11 questions), participation library (13 guides), action opportunity calendar
+- Community action pages, legislative resource center, letter builder, community issue hub
+- Mission Control action dashboard (8 indicators), volunteer opportunities
+- Neutral — explains process, not outcomes; institution does not tell Arkansans what positions to take
+- Honest: Action Center not live · calendar not unified · dashboard not live · 50% readiness
+- MC dashboard: `/mission-control/master-arkansas-action-network.html`
+
 ## [1.98.0] - 2026-07-09 — Build #94 Master Executive Institution
 
 ### The Complete Governance & Leadership Architecture

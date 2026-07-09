@@ -316,10 +316,10 @@ out = {
     ],
     'recommended_next_build': {
         'number': 95,
-        'title': 'Executive War Room & Countdown Dashboard Components',
+        'title': 'Master Arkansas Action Network',
         'note': (
-            'War room UI, countdown dashboard, executive briefing generator, '
-            'leadership vacancy tracker, department health panel, COMP-* specs.'
+            'From learning to local civic participation — Action Center, participation library, '
+            'legislative resources, community pages, neutral civic engagement.'
         ),
     },
 }

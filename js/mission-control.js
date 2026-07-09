@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Master Action Network <a href="/mission-control/master-arkansas-action-network.html" class="mc-inline-link">Educate. Connect. Act. #95 →</a></h2>
+    <p class="mc-bar-note">Build #95 — Master Arkansas Action Network. Civic participation layer — Action Center, participation library, legislative resources, community pages. Neutral, not partisan. Action Center not live · calendar not unified. 50% readiness.</p>
     <h2 class="mc-section-title">Executive Institution <a href="/mission-control/executive-institution.html" class="mc-inline-link">Governance & Leadership #94 →</a></h2>
     <p class="mc-bar-note">Build #94 — Master Executive Institution. 12 council offices, 14 departments, meeting rhythm, decision framework, delegation, accountability. 0/12 offices filled · dashboard not live. 50% readiness.</p>
     <h2 class="mc-section-title">Knowledge Platform <a href="/mission-control/civic-knowledge-platform.html" class="mc-inline-link">One Source of Truth #93 →</a></h2>
@@ -5271,6 +5273,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLocalbrainArchitecture();
   initCivicKnowledgePlatform();
   initExecutiveInstitution();
+  initMasterArkansasActionNetwork();
 });
 
 async function initUxArchitecture() {
@@ -9986,6 +9989,110 @@ async function initExecutiveInstitution() {
       <a href="/data/executive-institution.json">JSON</a> ·
       <a href="/mission-control/pmo-execution-office.html">PMO (#89)</a> ·
       <a href="/mission-control/civic-knowledge-platform.html">Knowledge Platform (#93)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initMasterArkansasActionNetwork() {
+  const root = document.getElementById('mc-master-arkansas-action-network-root');
+  if (!root) return;
+
+  const [maanRes, mcRes] = await Promise.all([
+    fetch('/data/master-arkansas-action-network.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const maan = await maanRes.json();
+  const mc = await mcRes.json();
+  const s = maan.summary;
+
+  const sequenceRows = maan.institutional_philosophy.sequence.map(st => `
+    <tr><td>${st.step}</td><td>${st.stage}</td><td>${st.status}</td></tr>`).join('');
+
+  const calendarRows = maan.action_opportunities.calendar_types.map(a => `
+    <tr><td><code>${a.id}</code></td><td>${a.type}</td><td>${a.status}</td></tr>`).join('');
+
+  const legislativeRows = maan.legislative_resource_center.resources.map(r => `
+    <tr><td><code>${r.id}</code></td><td>${r.resource}</td><td>${r.status}</td></tr>`).join('');
+
+  const dashRows = maan.mission_control_action_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td>
+      <td>${typeof d.current === 'number' ? d.current.toLocaleString() : d.current}</td>
+      <td>${d.status}</td></tr>`).join('');
+
+  const systemRows = maan.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Master Action Network</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #95 · ${maan.title}</p>
+      <h1>${maan.subtitle}</h1>
+      <p class="mc-header__question">${maan.governing_principle}</p>
+      <p class="mc-bar-note">${maan.purpose}</p>
+      <p class="mc-bar-note"><strong>${maan.tagline}</strong> · ${s.days_remaining} days to ${maan.completion_target_date}</p>
+      <p class="mc-bar-note">Prior: <a href="${maan.prior_route}">Action Network Pipeline (#64)</a></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Network readiness</div><div class="mc-stat__value">${s.master_arkansas_action_network_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Action Center</div><div class="mc-stat__value">${s.action_center_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Participation calendar</div><div class="mc-stat__value">${s.participation_calendar_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Participation guides</div><div class="mc-stat__value">${s.participation_guides}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Action dashboard</div><div class="mc-stat__value">${s.action_dashboard_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Legacy #64 readiness</div><div class="mc-stat__value">${s.legacy_action_network_readiness_pct}%</div></div>
+    </div>
+    <h2 class="mc-section-title">${maan.institutional_philosophy.title}</h2>
+    <p class="mc-bar-note">Neutral, not partisan: ${maan.institutional_philosophy.neutral_not_partisan ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>Step</th><th>Stage</th><th>Status</th></tr></thead>
+      <tbody>${sequenceRows}</tbody></table>
+    <h2 class="mc-section-title">${maan.arkansas_action_center.title}</h2>
+    <p class="mc-bar-note">Live: ${maan.arkansas_action_center.live ? 'Yes' : 'No'} · Emphasis: education and process</p>
+    <ul class="mc-deliverables">${maan.arkansas_action_center.questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${maan.civic_participation_library.title}</h2>
+    <p class="mc-bar-note">Explains process, not outcomes: ${maan.civic_participation_library.explains_process_not_outcomes ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${maan.civic_participation_library.guides.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${maan.action_opportunities.title}</h2>
+    <p class="mc-bar-note">${maan.action_opportunities.note || ''}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Calendar type</th><th>Status</th></tr></thead>
+      <tbody>${calendarRows}</tbody></table>
+    <h2 class="mc-section-title">${maan.community_action_pages.title}</h2>
+    <p class="mc-bar-note">Counties: ${maan.community_action_pages.counties_total} · Enriched: ${maan.community_action_pages.enriched ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${maan.community_action_pages.fields_per_county_city.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${maan.legislative_resource_center.title}</h2>
+    <p class="mc-bar-note">Bill tracker: ${maan.legislative_resource_center.bill_tracker_live ? 'Live' : 'Planned'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Resource</th><th>Status</th></tr></thead>
+      <tbody>${legislativeRows}</tbody></table>
+    <h2 class="mc-section-title">${maan.letter_communication_builder.title}</h2>
+    <p class="mc-bar-note">Live: ${maan.letter_communication_builder.live ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${maan.letter_communication_builder.templates.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${maan.community_issue_hub.title}</h2>
+    <p class="mc-bar-note">Tracks educational interest, not positions: ${maan.community_issue_hub.tracks_educational_interest_not_positions ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${maan.community_issue_hub.topics.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${maan.volunteer_opportunities.title}</h2>
+    <ul class="mc-deliverables">${maan.volunteer_opportunities.opportunities.map(o => `<li>${o}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${maan.mission_control_action_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${maan.mission_control_action_dashboard.live ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">Founder's Principle</h2>
+    <p class="mc-bar-note">${maan.founders_principle}</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${maan.integration.chain}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${maan.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${maan.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${maan.recommended_next_build.number} — ${maan.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${maan.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_ARKANSAS_ACTION_NETWORK_PARTICIPATION.md">MASTER_ARKANSAS_ACTION_NETWORK_PARTICIPATION.md</a> ·
+      <a href="/data/master-arkansas-action-network.json">JSON</a> ·
+      <a href="/mission-control/arkansas-action-network.html">Pipeline (#64)</a> ·
+      <a href="/mission-control/citizen-action-center.html">Citizen Action Center</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

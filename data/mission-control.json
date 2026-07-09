@@ -1,6 +1,6 @@
 {
-  "version": "1.98.0",
-  "build": 94,
+  "version": "1.99.0",
+  "build": 95,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 94,
+    "overall_completion": 95,
     "current_build": {
-      "number": 94,
-      "title": "Citizens United Facts Master Executive Institution v1.0"
-    },
-    "active_phase": "Executive Institution \u2192 War Room",
-    "last_completed": "Knowledge Platform",
-    "next_build": {
       "number": 95,
+      "title": "Citizens United Facts Master Arkansas Action Network v2.0"
+    },
+    "active_phase": "Action Network \u2192 War Room",
+    "last_completed": "Executive Institution",
+    "next_build": {
+      "number": 96,
       "title": "Executive war room & countdown dashboard components"
     },
     "github_status": "connected",
@@ -26,7 +26,7 @@
     "research_readiness": 43,
     "data_viz_readiness": 12,
     "signup_funnel_readiness": 26,
-    "civic_action_readiness": 28,
+    "civic_action_readiness": 50,
     "coalition_readiness": 44,
     "data_model_readiness": 58,
     "route_inventory_readiness": 18,
@@ -44,10 +44,11 @@
     "localbrain_architecture_readiness": 60,
     "civic_knowledge_platform_readiness": 58,
     "executive_institution_readiness": 50,
+    "master_arkansas_action_network_readiness": 50,
     "coalition_network_readiness": 44,
     "citizen_action_center_readiness": 42,
     "campaign_finance_observatory_readiness": 38,
-    "arkansas_action_network_readiness": 38,
+    "arkansas_action_network_readiness": 50,
     "civic_intelligence_command_center_readiness": 43,
     "sustainability_stewardship_readiness": 41,
     "impact_measurement_readiness": 31,
@@ -127,8 +128,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 94,
-      "note": "Build #94 \u2014 Executive Institution. 176 days to Jan 2027."
+      "value": 95,
+      "note": "Build #95 \u2014 Master Action Network. 176 days to Jan 2027."
     },
     {
       "id": "constitution",
@@ -809,7 +810,14 @@
       "label": "Executive Institution",
       "value": 50,
       "max": 100,
-      "note": "12 leadership vacancies \u00b7 dashboard planned."
+      "note": "Executive institution \u00b7 50% readiness."
+    },
+    {
+      "id": "master_arkansas_action_network",
+      "label": "Master Action Network",
+      "value": 50,
+      "max": 100,
+      "note": "Action Center planned \u00b7 calendar planned."
     }
   ],
   "public_readiness": {
@@ -1666,6 +1674,12 @@
       "id": "executive_institution",
       "label": "Executive Institution",
       "href": "/mission-control/executive-institution.html",
+      "status": "complete"
+    },
+    {
+      "id": "master_arkansas_action_network",
+      "label": "Master Action Network",
+      "href": "/mission-control/master-arkansas-action-network.html",
       "status": "complete"
     }
   ],
@@ -2692,6 +2706,58 @@
     }
   ],
   "builds": [
+    {
+      "number": 95,
+      "title": "Citizens United Facts Master Arkansas Action Network v2.0",
+      "version": "1.99.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "From learning to local civic participation \u2014 Educate. Connect. Act.",
+      "summary": "11 Action Center questions, 13 participation guides, 9 calendar types, legislative resources, letter builder, community issue hub, action dashboard. 50% readiness \u00b7 Action Center not live \u00b7 neutral participation only.",
+      "files_created": [
+        "data/master-arkansas-action-network.json",
+        "docs/MASTER_ARKANSAS_ACTION_NETWORK_PARTICIPATION.md",
+        "builds/095-master-arkansas-action-network.md",
+        "mission-control/master-arkansas-action-network.html",
+        "scripts/gen-master-arkansas-action-network.py",
+        "scripts/update-mc-build95.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/master-arkansas-action-network.html"
+      ],
+      "decisions_made": [
+        "Educate. Connect. Act. \u2014 neutral civic participation, not partisan advocacy",
+        "Learn \u2192 Understand \u2192 Discuss \u2192 Decide \u2192 Participate",
+        "Action Center answers process questions \u2014 who represents me, how to testify, etc.",
+        "Community pages enriched with meetings, contacts, districts, opportunities",
+        "Evolution of Action Network #64 \u2014 growth pipeline + civic participation layer",
+        "50% readiness \u2014 blueprint only"
+      ],
+      "open_questions": [
+        "Action Center public route \u2014 /action/ vs dedicated hub?",
+        "Bill tracker \u2014 third-party API vs manual curation?",
+        "Participation calendar \u2014 scrape vs volunteer-maintained?",
+        "Neutral-participation guardrails in UI copy?"
+      ],
+      "risks": [
+        "Action Center not live \u2014 no unified public-facing hub",
+        "Participation calendar not unified across state/local/federal",
+        "Community county/city pages not enriched with action fields",
+        "Bill tracker not operational"
+      ],
+      "next_recommended": 96,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/master-arkansas-action-network.html",
+      "review_status": "complete"
+    },
     {
       "number": 94,
       "title": "Citizens United Facts Master Executive Institution v1.0",
@@ -7733,21 +7799,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Master Executive Institution v1.0 \u2014 Governance & Leadership Architecture",
-    "building_now": "94 builds \u2014 executive war room next",
+    "what_built": "Master Arkansas Action Network v2.0 \u2014 Educate. Connect. Act.",
+    "building_now": "95 builds \u2014 executive war room next",
     "blocked": [
-      "Executive dashboard",
-      "Leadership vacancies",
-      "Department LocalBrains",
-      "Meeting rhythm"
+      "Action Center",
+      "Participation calendar",
+      "Action dashboard",
+      "Bill tracker"
     ],
     "ready_public": [
-      "Council structure",
-      "Departments",
-      "Decision framework",
-      "Ethics commitments"
+      "Participation library spec",
+      "Action Center questions",
+      "Neutral philosophy",
+      "Community page fields"
     ],
-    "next": "Build #95 \u2014 Executive war room & countdown dashboard components"
+    "next": "Build #96 \u2014 Executive war room & countdown dashboard components"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8703,5 +8769,14 @@
     "leadership_vacancies": 12,
     "departments_with_localbrain": 0,
     "meeting_rhythm_operational": false
+  },
+  "master_arkansas_action_network": "/data/master-arkansas-action-network.json",
+  "master_arkansas_action_network_dashboard": "/mission-control/master-arkansas-action-network.html",
+  "master_arkansas_action_network_inventory": {
+    "readiness_score": 50,
+    "action_center_live": false,
+    "participation_calendar_live": false,
+    "action_dashboard_live": false,
+    "community_pages_enriched": false
   }
 }
