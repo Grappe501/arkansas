@@ -48,6 +48,6 @@ Make difficult ideas understandable through thoughtful interaction and transpare
 
 ---
 
-## Recommended Next: Build #42 — Component Specifications with Props/States
+## Recommended Next: Build #43 — Component Specifications with Props/States
 
 Map laboratory shells, interactive widgets, and accessibility patterns to COMP-* from Build #17.

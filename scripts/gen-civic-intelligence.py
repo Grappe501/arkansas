@@ -296,7 +296,7 @@ out = {
         'Timeline intelligence partial — no unified temporal query layer',
     ],
     'recommended_next_build': {
-        'number': 42,
+        'number': 43,
         'title': 'Component Specifications with Props/States',
         'note': 'Map brain visualization shells, node panels, relationship edges, and explore-further widgets to COMP-* from Build #17.',
     },

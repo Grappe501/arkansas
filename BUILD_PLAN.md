@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.45.0 · **Evidence Ledger:** [/mission-control/evidence-ledger.html](/mission-control/evidence-ledger.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #41:** ✅ Evidence Ledger · **Build #40:** ✅ Institutional Brain · **Build #39:** ✅ Media Studio · **Build #38:** ✅ Learning Lab  
+**Current version:** 1.46.0 · **Civic Action Lab:** [/mission-control/civic-action-lab.html](/mission-control/civic-action-lab.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #42:** ✅ Civic Action Lab · **Build #41:** ✅ Evidence Ledger · **Build #40:** ✅ Institutional Brain · **Build #39:** ✅ Media Studio  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **42** | **Master Civic Action Lab** | **✅ v1.46.0** |
 | **41** | **Master Evidence Ledger & Claims Registry** | **✅ v1.45.0** |
 | **40** | **Master Knowledge Graph & Civic Intelligence** | **✅ v1.44.0** |
 | **39** | **Documentary Experience & Media Studio** | **✅ v1.43.0** |
@@ -281,7 +282,23 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **37** | **Master Research Library** | **✅ v1.41.0** |
 | **36** | **Trust Framework** | **✅ v1.40.0** |
 
-**Next:** Build #42 — Component specifications with props/states.
+**Next:** Build #43 — Component specifications with props/states.
+
+---
+
+## Phase 42 — Master Civic Action Lab (Build #42) ★ NEW
+
+*Civic participation bridge — educate first.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| C1 | Civic Action Lab Blueprint v1.0 | ✅ | `data/civic-action-lab.json` |
+| C2 | 6 lab divisions defined | ✅ | Federal through Community Review |
+| C3 | Learn→Share philosophy + legislative tracker | ✅ | 7 tracker elements |
+| C4 | Draft builder schema (3 workspaces) | 🟡 | Guided workflow not built |
+| C5 | Solutions/action pages as interim | 🟡 | MT/HI comparisons live |
+| C6 | MC civic action metrics (8) | ✅ | Tracking partial |
+| C7 | MC civic action lab dashboard | ✅ | `/mission-control/civic-action-lab.html` |
 
 ---
 

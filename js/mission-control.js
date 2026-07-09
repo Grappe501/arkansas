@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Civic Action Lab <a href="/mission-control/civic-action-lab.html" class="mc-inline-link">6 Divisions →</a></h2>
+    <p class="mc-bar-note">Build #42 — Master civic action lab, legislative & ballot studios, comparative reforms. Educate first — not a campaign HQ. 26% lab readiness.</p>
     <h2 class="mc-section-title">Evidence Ledger <a href="/mission-control/evidence-ledger.html" class="mc-inline-link">Claims Registry →</a></h2>
     <p class="mc-bar-note">Build #41 — Master evidence ledger & claims registry, A–E strength levels, 7-stage review. 3/500 CLAIM-* records. 22% ledger readiness.</p>
     <h2 class="mc-section-title">Institutional Brain <a href="/mission-control/civic-intelligence.html" class="mc-inline-link">Civic Intelligence →</a></h2>
@@ -4059,6 +4061,89 @@ async function initEvidenceLedger() {
   initDevConsole(mc);
 }
 
+async function initCivicActionLab() {
+  const root = document.getElementById('mc-civic-action-lab-root');
+  if (!root) return;
+
+  const [labRes, mcRes] = await Promise.all([
+    fetch('/data/civic-action-lab.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const lab = await labRes.json();
+  const mc = await mcRes.json();
+  const s = lab.summary;
+
+  const divRows = lab.divisions.map(d => `
+    <tr><td>Div ${d.number}</td><td>${d.title}</td><td>${d.readiness_pct}%</td>
+      <td><a href="${d.interim_route}">${d.interim_route}</a></td><td>${d.status}</td></tr>`).join('');
+
+  const divCards = lab.divisions.map(d => `
+    <div class="mc-card"><h3>Division ${d.number}: ${d.title}</h3>
+      <p class="mc-bar-note">${d.purpose}</p>
+      <p class="mc-bar-note">${d.readiness_pct}% · ${d.status}</p>
+      <ul class="mc-deliverables">${d.examples.map(e => `<li>${e}</li>`).join('')}</ul>
+      ${d.note ? `<p class="mc-bar-note">${d.note}</p>` : ''}
+    </div>`).join('');
+
+  const metricRows = lab.mc_integration.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('');
+
+  const philosophy = lab.core_philosophy.map((p, i) =>
+    `${p}${i < lab.core_philosophy.length - 1 ? ' →' : ''}`).join(' ');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Civic Action Lab</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #42 · ${lab.title}</p>
+      <h1>Master Civic Action Lab</h1>
+      <p class="mc-header__question">${lab.governing_principle}</p>
+      <p class="mc-bar-note">${lab.not_a_campaign}</p>
+      <p class="mc-bar-note">Philosophy: ${philosophy}</p>
+      <p class="mc-bar-note">Canonical: <code>${lab.canonical_lab_route}</code></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Lab readiness</div><div class="mc-stat__value">${s.civic_action_lab_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Divisions</div><div class="mc-stat__value">${s.divisions_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Avg division</div><div class="mc-stat__value">${s.avg_division_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Comparisons</div><div class="mc-stat__value">${s.comparative_studies_live}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Draft builder</div><div class="mc-stat__value">${s.guided_draft_builder_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Submissions</div><div class="mc-stat__value">${s.model_law_submissions + s.ballot_lab_submissions}</div></div>
+    </div>
+    <h2 class="mc-section-title">Six Divisions</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>Division</th><th>Ready</th><th>Interim</th><th>Status</th></tr></thead>
+      <tbody>${divRows}</tbody></table>
+    <div class="mc-grid-2">${divCards}</div>
+    <h2 class="mc-section-title">Legislative Tracker (7 elements)</h2>
+    <ul class="mc-deliverables">${lab.legislative_tracker.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Draft Builder</h2>
+    <p class="mc-bar-note">${lab.draft_builder.title} — ${lab.draft_builder.status}</p>
+    <ul class="mc-deliverables">${lab.draft_builder.workspaces.map(w =>
+      `<li>${w.title}: <a href="${w.route}">${w.route}</a> (${w.status})</li>`).join('')}</ul>
+    <ul class="mc-deliverables">${lab.draft_builder.steps.map(st => `<li>${st}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Public Official Education Center</h2>
+    <p class="mc-bar-note"><a href="${lab.public_official_center.route}">${lab.public_official_center.route}</a> · ${lab.public_official_center.status}</p>
+    <ul class="mc-deliverables">${lab.public_official_center.audiences.map(a => `<li>${a}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Civic Action Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Future Expansion</h2>
+    <ul class="mc-deliverables">${lab.future_expansion.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${lab.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${lab.recommended_next_build.number} — ${lab.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${lab.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_CIVIC_ACTION_LAB.md">MASTER_CIVIC_ACTION_LAB.md</a> ·
+      <a href="/data/civic-action-lab.json">JSON</a> ·
+      <a href="/solutions/">Solutions Hub</a> ·
+      <a href="/action/ballot-lab.html">Ballot Lab</a> ·
+      <a href="/action/contact-legislators.html">Official Education</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -4099,4 +4184,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initMediaStudio();
   initCivicIntelligence();
   initEvidenceLedger();
+  initCivicActionLab();
 });

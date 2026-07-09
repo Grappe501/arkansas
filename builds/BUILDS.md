@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#42** | **Master Civic Action Lab** | **1.46.0** | **✅ Complete** | [042](042-master-civic-action-lab.md) · [/mission-control/civic-action-lab.html](../mission-control/civic-action-lab.html) |
 | **#41** | **Master Evidence Ledger & Claims Registry** | **1.45.0** | **✅ Complete** | [041](041-master-evidence-ledger-claims-registry.md) · [/mission-control/evidence-ledger.html](../mission-control/evidence-ledger.html) |
 | **#40** | **Master Knowledge Graph & Civic Intelligence** | **1.44.0** | **✅ Complete** | [040](040-master-knowledge-graph-civic-intelligence.md) · [/mission-control/civic-intelligence.html](../mission-control/civic-intelligence.html) |
 | **#39** | **Documentary Experience & Media Studio** | **1.43.0** | **✅ Complete** | [039](039-documentary-experience-media-studio.md) · [/mission-control/media-studio.html](../mission-control/media-studio.html) |
@@ -66,6 +67,7 @@
 | **Documentary Experience & Media Studio** | `/mission-control/media-studio.html` | **8 divisions · multimedia learning** |
 | **Institutional Brain & Civic Intelligence** | `/mission-control/civic-intelligence.html` | **17 node types · 7 intelligence layers** |
 | **Master Evidence Ledger** | `/mission-control/evidence-ledger.html` | **CLAIM-* registry · A–E strength** |
+| **Master Civic Action Lab** | `/mission-control/civic-action-lab.html` | **6 divisions · civic solutions** |
 | Phase Registry | `/mission-control/phases.html` | Project phases |
 | Site Architecture | `/mission-control/architecture.html` | Information architecture (IA) |
 | **Platform Blueprint** | `/mission-control/platform.html` | **Technical architecture · v1 system** |
