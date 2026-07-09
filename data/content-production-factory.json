@@ -1,0 +1,436 @@
+{
+  "version": "1.0",
+  "build": 27,
+  "updated": "2026-07-09",
+  "title": "Content Production Factory v1.0",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/content-factory.html",
+  "constitution": "/docs/CONTENT_PRODUCTION_FACTORY.md",
+  "purpose": "One institution, one voice \u2014 structured production for hundreds of educational assets.",
+  "editorial_mission": [
+    "Increase understanding",
+    "Increase trust",
+    "Encourage continued learning"
+  ],
+  "governing_principle": "Build a permanent educational library \u2014 never chase attention.",
+  "content_types": [
+    {
+      "id": "CPF-CT-01",
+      "title": "Educational Articles",
+      "template_id": "TPL-EDU",
+      "examples": [
+        "What is Citizens United?",
+        "What is a Super PAC?",
+        "Understanding Independent Expenditures"
+      ],
+      "status": "partial",
+      "notes": "Start-here and hall pages serve as interim L1"
+    },
+    {
+      "id": "CPF-CT-02",
+      "title": "Historical Articles",
+      "template_id": "TPL-HIST",
+      "examples": [
+        "Watergate",
+        "The Tillman Act",
+        "The Bipartisan Campaign Reform Act"
+      ],
+      "status": "partial",
+      "notes": "Hall 1 scaffold; deep historical articles not written"
+    },
+    {
+      "id": "CPF-CT-03",
+      "title": "Supreme Court Case Guides",
+      "template_id": "TPL-CASE",
+      "sections": [
+        "Background",
+        "Facts",
+        "Questions Presented",
+        "Holding",
+        "Majority Opinion",
+        "Dissents",
+        "Long-Term Impact"
+      ],
+      "examples": [
+        "Citizens United v. FEC"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "CPF-CT-04",
+      "title": "Constitutional Explainers",
+      "template_id": "TPL-CONST",
+      "examples": [
+        "Political Speech",
+        "Corporate Speech",
+        "Judicial Review",
+        "Strict Scrutiny"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "CPF-CT-05",
+      "title": "Data Stories",
+      "template_id": "TPL-DATA",
+      "examples": [
+        "Political spending trends",
+        "Independent expenditures",
+        "Disclosure requirements"
+      ],
+      "status": "planned",
+      "notes": "No interactive charts yet"
+    },
+    {
+      "id": "CPF-CT-06",
+      "title": "FAQ Articles",
+      "template_id": "TPL-FAQ",
+      "examples": [
+        "Did Citizens United create Super PACs?",
+        "Can corporations contribute directly?",
+        "What is dark money?"
+      ],
+      "status": "partial",
+      "notes": "FAQ growth tracked in MC; dedicated FAQ pages sparse"
+    },
+    {
+      "id": "CPF-CT-07",
+      "title": "Arkansas Education Guides",
+      "template_id": "TPL-AR",
+      "examples": [
+        "Host a community conversation",
+        "Arkansas legislative process",
+        "Ballot initiative basics"
+      ],
+      "status": "partial",
+      "notes": "Teach/educate pages partial; not full article factory output"
+    }
+  ],
+  "content_type_count": 7,
+  "article_structure": [
+    "Plain-language summary",
+    "Why it matters",
+    "Historical context",
+    "Detailed explanation",
+    "Supporting evidence",
+    "Common misconceptions",
+    "Frequently asked questions",
+    "Related topics",
+    "Primary sources",
+    "Community education suggestions"
+  ],
+  "reading_levels": [
+    {
+      "level": 1,
+      "title": "One-minute explanation",
+      "facts_depth": "L1",
+      "status": "partial"
+    },
+    {
+      "level": 2,
+      "title": "Five-minute explanation",
+      "facts_depth": "L2",
+      "status": "partial"
+    },
+    {
+      "level": 3,
+      "title": "Full educational article",
+      "facts_depth": "L3",
+      "status": "planned"
+    },
+    {
+      "level": 4,
+      "title": "Research and primary sources",
+      "facts_depth": "L4",
+      "status": "planned"
+    }
+  ],
+  "workflow_stages": [
+    {
+      "stage": 1,
+      "title": "Topic Approved",
+      "inventory_status": "planned",
+      "status": "defined"
+    },
+    {
+      "stage": 2,
+      "title": "Research Assigned",
+      "inventory_status": "researching",
+      "status": "defined"
+    },
+    {
+      "stage": 3,
+      "title": "Source Collection",
+      "inventory_status": "researching",
+      "status": "defined"
+    },
+    {
+      "stage": 4,
+      "title": "Outline Complete",
+      "inventory_status": "outlined",
+      "status": "defined"
+    },
+    {
+      "stage": 5,
+      "title": "First Draft",
+      "inventory_status": "drafting",
+      "status": "defined"
+    },
+    {
+      "stage": 6,
+      "title": "Fact Verification",
+      "inventory_status": "fact_check",
+      "status": "partial"
+    },
+    {
+      "stage": 7,
+      "title": "Citation Review",
+      "inventory_status": "citation_review",
+      "status": "partial"
+    },
+    {
+      "stage": 8,
+      "title": "Editorial Review",
+      "inventory_status": "editorial_review",
+      "status": "defined"
+    },
+    {
+      "stage": 9,
+      "title": "Accessibility Review",
+      "inventory_status": "technical_review",
+      "status": "planned"
+    },
+    {
+      "stage": 10,
+      "title": "Published",
+      "inventory_status": "published",
+      "status": "partial"
+    },
+    {
+      "stage": 11,
+      "title": "Scheduled Review",
+      "inventory_status": "monitoring",
+      "status": "planned"
+    }
+  ],
+  "source_requirements": [
+    "Primary sources used",
+    "Government sources used",
+    "Academic sources used",
+    "Supporting journalism when appropriate",
+    "Last verification date"
+  ],
+  "visual_types": [
+    "Timelines",
+    "Charts",
+    "Infographics",
+    "Flow diagrams",
+    "Comparison tables",
+    "Maps"
+  ],
+  "internal_link_targets": [
+    "Related history",
+    "Relevant Supreme Court cases",
+    "Constitutional principles",
+    "Data",
+    "Source documents",
+    "Community education resources"
+  ],
+  "quality_gates": [
+    "Is it understandable?",
+    "Is it accurate?",
+    "Are the sources visible?",
+    "Does it distinguish fact from interpretation?",
+    "Does it explain why the topic matters?",
+    "Does it help readers continue learning?"
+  ],
+  "dashboard_metrics": [
+    {
+      "id": "CPF-DM-01",
+      "title": "Planned articles",
+      "source": "content-inventory",
+      "current": 316,
+      "status": "partial"
+    },
+    {
+      "id": "CPF-DM-02",
+      "title": "Articles in research",
+      "source": "content-inventory",
+      "current": 0,
+      "status": "partial"
+    },
+    {
+      "id": "CPF-DM-03",
+      "title": "Articles being written",
+      "source": "content-inventory",
+      "current": 9,
+      "status": "partial"
+    },
+    {
+      "id": "CPF-DM-04",
+      "title": "Articles under review",
+      "source": "content-inventory",
+      "current": 0,
+      "status": "partial"
+    },
+    {
+      "id": "CPF-DM-05",
+      "title": "Published articles",
+      "source": "content-inventory",
+      "current": 15,
+      "status": "partial"
+    },
+    {
+      "id": "CPF-DM-06",
+      "title": "Articles needing updates",
+      "source": "content-inventory",
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "id": "CPF-DM-07",
+      "title": "Citation completeness",
+      "source": "computed",
+      "current": null,
+      "status": "planned"
+    },
+    {
+      "id": "CPF-DM-08",
+      "title": "Reading-level coverage",
+      "source": "facts-framework",
+      "current": null,
+      "status": "partial"
+    },
+    {
+      "id": "CPF-DM-09",
+      "title": "Visual coverage",
+      "source": "computed",
+      "current": null,
+      "status": "planned"
+    }
+  ],
+  "evergreen_review": [
+    {
+      "topic": "Core constitutional topics",
+      "interval_months": 24,
+      "status": "defined"
+    },
+    {
+      "topic": "Historical articles",
+      "interval_months": 36,
+      "status": "defined"
+    },
+    {
+      "topic": "Current legal developments",
+      "interval_months": 12,
+      "status": "defined"
+    },
+    {
+      "topic": "Arkansas legislative content",
+      "interval": "After each regular session",
+      "status": "defined"
+    },
+    {
+      "topic": "Spending data",
+      "interval": "When updated datasets available",
+      "status": "defined"
+    }
+  ],
+  "institutional_voice": [
+    "Calm",
+    "Clear",
+    "Respectful",
+    "Evidence-based",
+    "Accessible",
+    "Thorough",
+    "Transparent"
+  ],
+  "inventory_alignment": {
+    "registry": "/data/content-inventory.json",
+    "dashboard": "/mission-control/inventory.html",
+    "build": 6,
+    "lifecycle_stages": [
+      "planned",
+      "researching",
+      "outlined",
+      "drafting",
+      "technical_review",
+      "fact_check",
+      "citation_review",
+      "editorial_review",
+      "ready_for_publication",
+      "published",
+      "monitoring",
+      "revision_needed",
+      "archived"
+    ],
+    "total_assets_registered": 351,
+    "status_breakdown": {
+      "published": 15,
+      "partial": 11,
+      "planned": 316,
+      "outlined": 9
+    }
+  },
+  "related_registries": [
+    {
+      "title": "Content Inventory",
+      "route": "/mission-control/inventory.html",
+      "build": 6
+    },
+    {
+      "title": "Facts Framework",
+      "route": "/mission-control/facts.html",
+      "build": 18
+    },
+    {
+      "title": "Research Framework",
+      "route": "/mission-control/research.html",
+      "build": 10
+    },
+    {
+      "title": "Knowledge Atlas",
+      "route": "/mission-control/atlas.html",
+      "build": 19
+    },
+    {
+      "title": "MRID System",
+      "route": "/mission-control/mrid.html",
+      "build": 7
+    }
+  ],
+  "summary": {
+    "content_types": 7,
+    "article_structure_sections": 10,
+    "workflow_stages": 11,
+    "reading_levels": 4,
+    "quality_gates": 6,
+    "dashboard_metrics": 9,
+    "evergreen_policies": 5,
+    "assets_registered": 351,
+    "assets_published": 15,
+    "assets_in_pipeline": 9,
+    "by_content_type_status": {
+      "partial": 4,
+      "planned": 3
+    },
+    "factory_readiness_pct": 28,
+    "automated_review_scheduling": false,
+    "workflow_dashboard_live": false
+  },
+  "catalog_gaps": [
+    "No unified factory dashboard tracking all workflow stages per article",
+    "Most registered assets remain planned or L1 stub",
+    "Case guide and constitutional explainer templates not implemented",
+    "Citation completeness not computed automatically",
+    "Evergreen review scheduling not automated",
+    "Visual coverage tracking not built",
+    "L3/L4 reading levels sparse across content",
+    "Accessibility review stage not operational"
+  ],
+  "recommended_next_build": {
+    "number": 28,
+    "title": "Component Specifications with Props/States",
+    "note": "Map article structure sections to COMP-* components; wire factory dashboard to inventory."
+  }
+}

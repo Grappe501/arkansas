@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.30.0 · **AI Knowledge Engine:** [/mission-control/ai-knowledge.html](/mission-control/ai-knowledge.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #26:** ✅ AI Engine · **Build #25:** ✅ MC 2.0 · **Build #24:** ✅ Contact Intelligence  
+**Current version:** 1.31.0 · **Content Factory:** [/mission-control/content-factory.html](/mission-control/content-factory.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #27:** ✅ Content Factory · **Build #26:** ✅ AI Engine · **Build #25:** ✅ MC 2.0  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -270,8 +270,25 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **24** | **Contact Intelligence** | **✅ v1.28.0** |
 | **25** | **Mission Control 2.0** | **✅ v1.29.0** |
 | **26** | **AI Knowledge Engine** | **✅ v1.30.0** |
+| **27** | **Content Production Factory** | **✅ v1.31.0** |
 
-**Next:** Build #27 — Component specifications with props/states.
+**Next:** Build #28 — Component specifications with props/states.
+
+---
+
+## Phase 27 — Content Production Factory (Build #27) ★ NEW
+
+*Editorial Operating System — one institution, one voice.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| F1 | Content Factory Blueprint v1.0 | ✅ | `data/content-production-factory.json` |
+| F2 | 7 content type templates | ✅ | Educational through Arkansas guides |
+| F3 | 10-section article structure | ✅ | Standard reader pattern |
+| F4 | 11-stage editorial workflow | ✅ | Aligned to content inventory |
+| F5 | L1–L4 reading levels | ✅ | Mapped to facts framework |
+| F6 | Quality gates + evergreen review | ✅ | 6 gates, 5 review policies |
+| F7 | MC content factory dashboard | ✅ | `/mission-control/content-factory.html` |
 
 ---
 
@@ -507,7 +524,8 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#24**~~ | ~~Contact Intelligence & Community Relationship Architecture~~ ✅ Done |
 | ~~**#25**~~ | ~~Mission Control 2.0 & Executive Command Center~~ ✅ Done |
 | ~~**#26**~~ | ~~AI Knowledge & Research Engine~~ ✅ Done |
-| **#27** | **Component specifications with props/states** |
+| ~~**#27**~~ | ~~Content Production Factory~~ ✅ Done |
+| **#28** | **Component specifications with props/states** |
 
 ---
 

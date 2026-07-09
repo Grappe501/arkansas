@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Content Production Factory <a href="/mission-control/content-factory.html" class="mc-inline-link">Editorial OS →</a></h2>
+    <p class="mc-bar-note">Build #27 — 7 content types, 11-stage workflow, standard article structure, evergreen review. 28% factory readiness.</p>
     <h2 class="mc-section-title">AI Knowledge Engine <a href="/mission-control/ai-knowledge.html" class="mc-inline-link">Educational Intelligence →</a></h2>
     <p class="mc-bar-note">Build #26 — Arkansas Civic Librarian, 5 learning modes, evidence-first responses, guardrails. Architecture only — 14% readiness.</p>
     <h2 class="mc-section-title">Executive Command Center <a href="/mission-control/executive.html" class="mc-inline-link">MC 2.0 →</a></h2>
@@ -2630,6 +2632,102 @@ async function initAiKnowledgeEngine() {
   initDevConsole(mc);
 }
 
+async function initContentProductionFactory() {
+  const root = document.getElementById('mc-content-factory-root');
+  if (!root) return;
+
+  const [cpfRes, mcRes] = await Promise.all([
+    fetch('/data/content-production-factory.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const cpf = await cpfRes.json();
+  const mc = await mcRes.json();
+  const s = cpf.summary;
+  const inv = cpf.inventory_alignment;
+
+  const typeRows = cpf.content_types.map(ct => `
+    <tr class="${ct.status === 'partial' ? 'mc-table__row--approved' : ''}">
+      <td><code>${ct.id}</code></td><td><strong>${ct.title}</strong></td>
+      <td><code>${ct.template_id}</code></td><td>${ct.status}</td></tr>`).join('');
+
+  const workflowRows = cpf.workflow_stages.map(w => `
+    <tr><td>${w.stage}</td><td>${w.title}</td><td><code>${w.inventory_status}</code></td><td>${w.status}</td></tr>`).join('');
+
+  const metricRows = cpf.dashboard_metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td>
+      <td>${m.current !== null && m.current !== undefined ? m.current : '—'}</td><td>${m.status}</td></tr>`).join('');
+
+  const statusBreakdown = Object.entries(inv.status_breakdown || {}).map(([k, v]) =>
+    `<div class="mc-phase-item"><span>${k}</span><span>${v}</span></div>`
+  ).join('');
+
+  const typeCards = cpf.content_types.map(ct => `
+    <div class="mc-card"><h3>${ct.title}</h3>
+      <p class="mc-bar-note">Template: <code>${ct.template_id}</code> · ${ct.status}</p>
+      <ul class="mc-deliverables">${(ct.examples || ct.sections || []).map(e => `<li>${e}</li>`).join('')}</ul>
+      ${ct.notes ? `<p class="mc-bar-note"><em>${ct.notes}</em></p>` : ''}</div>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Content Production Factory</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #27 · ${cpf.title}</p>
+      <h1>Editorial Operating System</h1>
+      <p class="mc-header__question">${cpf.governing_principle}</p>
+      <p class="mc-bar-note">Editorial mission: ${cpf.editorial_mission.join(' · ')}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Factory readiness</div><div class="mc-stat__value">${s.factory_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Content types</div><div class="mc-stat__value">${s.content_types}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Assets registered</div><div class="mc-stat__value">${s.assets_registered}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Published</div><div class="mc-stat__value">${s.assets_published}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">In pipeline</div><div class="mc-stat__value">${s.assets_in_pipeline}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Workflow stages</div><div class="mc-stat__value">${s.workflow_stages}</div></div>
+    </div>
+    <h2 class="mc-section-title">Standard Article Structure (${s.article_structure_sections} sections)</h2>
+    <ol class="mc-deliverables">${cpf.article_structure.map(sec => `<li>${sec}</li>`).join('')}</ol>
+    <h2 class="mc-section-title">Reading Levels</h2>
+    <table class="mc-table"><thead><tr><th>Level</th><th>Title</th><th>Facts depth</th><th>Status</th></tr></thead>
+      <tbody>${cpf.reading_levels.map(r => `<tr><td>L${r.level}</td><td>${r.title}</td><td>${r.facts_depth}</td><td>${r.status}</td></tr>`).join('')}</tbody></table>
+    <h2 class="mc-section-title">Content Types</h2>
+    <div class="mc-card mc-inv-table-wrap">
+      <table class="mc-table"><thead><tr><th>ID</th><th>Type</th><th>Template</th><th>Status</th></tr></thead>
+        <tbody>${typeRows}</tbody></table>
+    </div>
+    <h2 class="mc-section-title">Editorial Workflow</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>Stage</th><th>Inventory status</th><th>Factory status</th></tr></thead>
+      <tbody>${workflowRows}</tbody></table>
+    <h2 class="mc-section-title">Content Dashboard Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Inventory Status <a href="/mission-control/inventory.html" class="mc-inline-link">Full registry →</a></h2>
+    <div class="mc-card">${statusBreakdown || '<p class="mc-bar-note">No breakdown available.</p>'}</div>
+    <h2 class="mc-section-title">Educational Quality Gates</h2>
+    <ul class="mc-deliverables">${cpf.quality_gates.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Source Requirements</h2>
+    <ul class="mc-deliverables">${cpf.source_requirements.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Visual Types</h2>
+    <ul class="mc-deliverables">${cpf.visual_types.map(v => `<li>${v}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Evergreen Review</h2>
+    <table class="mc-table"><thead><tr><th>Topic</th><th>Interval</th><th>Status</th></tr></thead>
+      <tbody>${cpf.evergreen_review.map(e => `<tr><td>${e.topic}</td><td>${e.interval_months ? e.interval_months + ' months' : (e.interval || '—')}</td><td>${e.status}</td></tr>`).join('')}</tbody></table>
+    <h2 class="mc-section-title">Institutional Voice</h2>
+    <ul class="mc-deliverables">${cpf.institutional_voice.map(v => `<li>${v}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Content Type Details</h2>
+    <div class="mc-grid-2">${typeCards}</div>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${cpf.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${cpf.recommended_next_build.number} — ${cpf.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${cpf.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/CONTENT_PRODUCTION_FACTORY.md">CONTENT_PRODUCTION_FACTORY.md</a> ·
+      <a href="/data/content-production-factory.json">JSON</a> ·
+      <a href="/mission-control/inventory.html">Content Inventory</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -2655,4 +2753,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initContactIntelligenceBlueprint();
   initExecutiveCommandCenter();
   initAiKnowledgeEngine();
+  initContentProductionFactory();
 });

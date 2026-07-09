@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.31.0] - 2026-07-09 — Build #27 Content Production Factory
+
+### Citizens United Facts Content Production Factory
+- **Editorial Operating System v1.0** — 7 content types, 11-stage workflow
+- Standard 10-section article structure, L1–L4 reading levels
+- 6 quality gates, 5 evergreen review policies, institutional voice
+- Aligned to content inventory (351 assets registered)
+- 28% honest factory readiness — templates defined, automation pending
+- MC dashboard: `/mission-control/content-factory.html`
+
 ## [1.30.0] - 2026-07-09 — Build #26 AI Knowledge Engine
 
 ### Citizens United Facts AI Knowledge & Research Engine

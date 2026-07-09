@@ -1,6 +1,6 @@
 {
-  "version": "1.30.0",
-  "build": 26,
+  "version": "1.31.0",
+  "build": 27,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,20 +9,20 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 26,
+    "overall_completion": 27,
     "current_build": {
-      "number": 26,
-      "title": "Citizens United Facts AI Knowledge & Research Engine"
-    },
-    "active_phase": "Educational Intelligence \u2014 AI Knowledge Engine",
-    "last_completed": "Mission Control 2.0 & Executive Command Center",
-    "next_build": {
       "number": 27,
+      "title": "Citizens United Facts Content Production Factory"
+    },
+    "active_phase": "Editorial Operating System \u2014 Content Production Factory",
+    "last_completed": "AI Knowledge & Research Engine",
+    "next_build": {
+      "number": 28,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
-    "content_readiness": 18,
+    "content_readiness": 20,
     "research_readiness": 20,
     "data_viz_readiness": 2,
     "signup_funnel_readiness": 18,
@@ -40,6 +40,7 @@
     "contact_intelligence_readiness": 31,
     "mc2_readiness": 33,
     "ai_engine_readiness": 14,
+    "content_factory_readiness": 28,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -47,8 +48,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 26,
-      "note": "AI Knowledge Engine architecture live \u2014 5 learning modes, Arkansas Civic Librarian persona. No chat UI yet."
+      "value": 27,
+      "note": "Content factory live \u2014 7 types, 351 assets registered, 11-stage workflow."
     },
     {
       "id": "constitution",
@@ -77,8 +78,8 @@
     {
       "id": "content",
       "label": "Content System",
-      "value": 14,
-      "note": "Knowledge graph links 38 objects. L2 deep pages with KG-IDs next (Build #12)."
+      "value": 20,
+      "note": "Editorial OS defined \u2014 15 published of 351 registered. Factory dashboard at content-factory.html."
     },
     {
       "id": "research",
@@ -254,6 +255,13 @@
       "value": 14,
       "max": 100,
       "note": "Architecture + guardrails defined; RAG pipeline and chat UI not built."
+    },
+    {
+      "id": "content_factory",
+      "label": "Content Production Factory",
+      "value": 28,
+      "max": 100,
+      "note": "9 in pipeline \u2014 workflow aligned with content inventory; automation pending."
     }
   ],
   "public_readiness": {
@@ -702,6 +710,12 @@
       "id": "ai_knowledge",
       "label": "AI Knowledge Engine",
       "href": "/mission-control/ai-knowledge.html",
+      "status": "complete"
+    },
+    {
+      "id": "content_factory",
+      "label": "Content Production Factory",
+      "href": "/mission-control/content-factory.html",
       "status": "complete"
     }
   ],
@@ -1728,6 +1742,54 @@
     }
   ],
   "builds": [
+    {
+      "number": 27,
+      "title": "Citizens United Facts Content Production Factory",
+      "version": "1.31.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Editorial Operating System v1.0 \u2014 one institution, one voice",
+      "summary": "7 types, 11 workflow stages, 351 assets; 28% factory readiness.",
+      "files_created": [
+        "data/content-production-factory.json",
+        "docs/CONTENT_PRODUCTION_FACTORY.md",
+        "builds/027-content-production-factory.md",
+        "mission-control/content-factory.html",
+        "scripts/gen-content-production-factory.py",
+        "scripts/update-mc-build27.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/content-factory.html"
+      ],
+      "decisions_made": [
+        "7 content type templates with standard article structure (10 sections)",
+        "11-stage editorial workflow aligned to content-inventory lifecycle",
+        "L1\u2013L4 reading levels mapped to facts framework depths",
+        "6 quality gates before publication",
+        "5 evergreen review policies defined",
+        "28% honest readiness \u2014 inventory exists, factory automation not built"
+      ],
+      "open_questions": [
+        "When to automate evergreen review alerts?",
+        "Minimum published count before public launch?"
+      ],
+      "risks": [
+        "351 assets registered but few published",
+        "Citation completeness not computed"
+      ],
+      "next_recommended": 28,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/content-factory.html",
+      "review_status": "complete"
+    },
     {
       "number": 26,
       "title": "Citizens United Facts AI Knowledge & Research Engine",
@@ -2874,20 +2936,20 @@
     }
   ],
   "briefing": {
-    "what_built": "AI Knowledge Engine v1.0 \u2014 10 capabilities, Arkansas Civic Librarian, evidence-first architecture",
-    "building_now": "Educational intelligence architecture \u2014 component specs and Ask UI shell next",
+    "what_built": "Content Production Factory v1.0 \u2014 7 types, 11-stage workflow, institutional voice",
+    "building_now": "Editorial OS \u2014 component specs to map article sections next",
     "blocked": [
-      "No chat UI",
-      "No RAG pipeline",
-      "Knowledge base too sparse for reliable answers"
+      "Workflow dashboard not unified",
+      "Evergreen review not automated",
+      "L3/L4 sparse"
     ],
     "ready_public": [
-      "AI architecture MC dashboard",
-      "Learning modes + guardrails",
-      "Example question bank",
-      "Knowledge source map"
+      "Factory MC dashboard",
+      "Content type templates",
+      "Workflow + quality gates",
+      "Inventory alignment"
     ],
-    "next": "Build #27 \u2014 Component specifications with props/states"
+    "next": "Build #28 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -3135,5 +3197,17 @@
       "partial": 2,
       "learning_mode_planned": 5
     }
+  },
+  "content_production_factory": "/data/content-production-factory.json",
+  "content_factory_dashboard": "/mission-control/content-factory.html",
+  "content_factory_inventory": {
+    "readiness_score": 28,
+    "content_types": 7,
+    "workflow_stages": 11,
+    "assets_registered": 351,
+    "assets_published": 15,
+    "assets_in_pipeline": 9,
+    "automated_review_scheduling": false,
+    "workflow_dashboard_live": false
   }
 }
