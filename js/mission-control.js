@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Trust Framework <a href="/mission-control/trust.html" class="mc-inline-link">Public Trust OS →</a></h2>
+    <p class="mc-bar-note">Build #36 — Evidence, transparency, trust pyramid, A–D evidence levels. v2 DB: Netlify or Neon. 24% trust readiness.</p>
     <h2 class="mc-section-title">Master Curriculum <a href="/mission-control/curriculum.html" class="mc-inline-link">6 Tiers →</a></h2>
     <p class="mc-bar-note">Build #35 — Educational framework, 6 learning paths, 4 reading levels. Understanding before opinion. 26% curriculum readiness.</p>
     <h2 class="mc-section-title">Narrative Architecture <a href="/mission-control/narrative.html" class="mc-inline-link">8 Acts →</a></h2>
@@ -3509,6 +3511,110 @@ async function initMasterCurriculum() {
   initDevConsole(mc);
 }
 
+async function initTrustFramework() {
+  const root = document.getElementById('mc-trust-root');
+  if (!root) return;
+
+  const [trustRes, factsRes, evRes, mcRes] = await Promise.all([
+    fetch('/data/trust-framework.json'),
+    fetch('/data/facts-registry.json'),
+    fetch('/data/evidence-registry.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const trust = await trustRes.json();
+  const facts = await factsRes.json();
+  const ev = await evRes.json();
+  const mc = await mcRes.json();
+  const s = trust.summary;
+  const snap = trust.registry_snapshot;
+  const db = trust.database_decision;
+
+  const pyramidCards = trust.trust_pyramid.map(p => `
+    <div class="mc-card"><h3>Level ${p.level}: ${p.title}</h3>
+      <p class="mc-bar-note">Status: ${p.status}</p>
+      <ul class="mc-deliverables">${p.requirements.map(r => `<li>${r}</li>`).join('')}</ul>
+    </div>`).join('');
+
+  const evidenceRows = trust.evidence_levels.map(e => `
+    <tr><td><code>${e.id}</code></td><td>Level ${e.level}</td><td>${e.title}</td>
+      <td>${e.count}</td><td>${e.status}</td></tr>`).join('');
+
+  const reviewRows = trust.fact_review_process.map(r => `
+    <tr><td>${r.stage}</td><td>${r.title}</td><td>${r.status}</td></tr>`).join('');
+
+  const metricRows = trust.trust_dashboard_metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('');
+
+  const panelRows = trust.transparency_panels.map(p => `
+    <tr><td><code>${p.id}</code></td><td>${p.title}</td><td>${p.purpose}</td><td>${p.status}</td></tr>`).join('');
+
+  const accountabilityRows = trust.public_accountability.map(a => `
+    <tr><td>${a.title}</td><td>${a.status}</td>
+      <td>${a.route ? `<a href="${a.route}">${a.route}</a>` : '—'}</td></tr>`).join('');
+
+  const trialRows = db.v2_trial_recommended.map(t => `
+    <tr><td>${t.provider}</td><td>${t.type}</td><td>${t.status}</td><td>${t.rationale}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Trust Framework</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #36 · ${trust.title}</p>
+      <h1>Evidence, Transparency & Trust</h1>
+      <p class="mc-header__question">${trust.governing_principle}</p>
+      <blockquote class="mc-bar-note" style="font-style:italic;border-left:3px solid var(--mc-accent);padding-left:1rem">${trust.trust_philosophy}</blockquote>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Trust readiness</div><div class="mc-stat__value">${s.trust_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Facts verified</div><div class="mc-stat__value">${snap.facts_verified}/${snap.facts_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Evidence sources</div><div class="mc-stat__value">${snap.evidence_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Citation coverage</div><div class="mc-stat__value">${snap.citation_coverage_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Pyramid levels</div><div class="mc-stat__value">${s.trust_pyramid_levels}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Panels live</div><div class="mc-stat__value">${s.transparency_panels_live}</div></div>
+    </div>
+    <h2 class="mc-section-title">Trust Pyramid</h2>
+    <div class="mc-grid-2">${pyramidCards}</div>
+    <h2 class="mc-section-title">Evidence Levels (A–D)</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Level</th><th>Title</th><th>Count</th><th>Status</th></tr></thead>
+      <tbody>${evidenceRows}</tbody></table>
+    <h2 class="mc-section-title">Source Transparency Standards</h2>
+    <ul class="mc-deliverables">${trust.source_transparency_standards.map(st => `<li>${st}</li>`).join('')}</ul>
+    <p class="mc-bar-note">Page-level sourcing live: ${s.page_sourcing_live ? 'yes' : 'no'}</p>
+    <h2 class="mc-section-title">Fact Review Process</h2>
+    <table class="mc-table"><thead><tr><th>Stage</th><th>Step</th><th>Status</th></tr></thead>
+      <tbody>${reviewRows}</tbody></table>
+    <h2 class="mc-section-title">Transparency Panels</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Panel</th><th>Purpose</th><th>Status</th></tr></thead>
+      <tbody>${panelRows}</tbody></table>
+    <h2 class="mc-section-title">Trust Dashboard Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Public Accountability</h2>
+    <table class="mc-table"><thead><tr><th>Page</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${accountabilityRows}</tbody></table>
+    <h2 class="mc-section-title">Database Decision (v2)</h2>
+    <p class="mc-bar-note"><strong>v1:</strong> ${db.v1_current.storage} (${db.v1_current.status})</p>
+    <p class="mc-bar-note"><strong>Rule:</strong> ${db.governing_rule}</p>
+    <table class="mc-table"><thead><tr><th>Provider</th><th>Type</th><th>Status</th><th>Rationale</th></tr></thead>
+      <tbody>${trialRows}</tbody></table>
+    <p class="mc-bar-note"><strong>Deferred:</strong> ${db.v2_full_when_needed.provider} — ${db.v2_full_when_needed.rationale}</p>
+    <h2 class="mc-section-title">Long-Term Goal</h2>
+    <p class="mc-bar-note">${trust.long_term_goal}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${trust.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${trust.recommended_next_build.number} — ${trust.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${trust.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/PUBLIC_TRUST_OPERATING_SYSTEM.md">PUBLIC_TRUST_OPERATING_SYSTEM.md</a> ·
+      <a href="/data/trust-framework.json">JSON</a> ·
+      <a href="/data/facts-registry.json">Facts</a> ·
+      <a href="/data/evidence-registry.json">Evidence</a> ·
+      <a href="/mission-control/database.html">Database Schema</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -3543,4 +3649,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initEncyclopediaKnowledgeLibrary();
   initNarrativeArchitecture();
   initMasterCurriculum();
+  initTrustFramework();
 });

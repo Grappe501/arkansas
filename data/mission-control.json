@@ -1,6 +1,6 @@
 {
-  "version": "1.39.0",
-  "build": 35,
+  "version": "1.40.0",
+  "build": 36,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,21 +9,21 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 35,
+    "overall_completion": 36,
     "current_build": {
-      "number": 35,
-      "title": "Citizens United Facts Master Curriculum & Learning Standards"
-    },
-    "active_phase": "Educational Framework \u2014 Six-Tier Master Curriculum",
-    "last_completed": "Storytelling & Narrative Architecture",
-    "next_build": {
       "number": 36,
+      "title": "Citizens United Facts Evidence, Transparency & Trust Framework"
+    },
+    "active_phase": "Public Trust \u2014 Evidence, Transparency & Verification",
+    "last_completed": "Master Curriculum & Learning Standards",
+    "next_build": {
+      "number": 37,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
     "content_readiness": 26,
-    "research_readiness": 24,
+    "research_readiness": 26,
     "data_viz_readiness": 4,
     "signup_funnel_readiness": 22,
     "civic_action_readiness": 32,
@@ -31,11 +31,11 @@
     "data_model_readiness": 38,
     "route_inventory_readiness": 18,
     "component_registry_readiness": 22,
-    "facts_framework_readiness": 12,
+    "facts_framework_readiness": 14,
     "knowledge_atlas_readiness": 20,
     "platform_architecture_readiness": 20,
     "repository_structure_readiness": 28,
-    "database_schema_readiness": 35,
+    "database_schema_readiness": 36,
     "wireframe_readiness": 38,
     "contact_intelligence_readiness": 31,
     "mc2_readiness": 33,
@@ -49,6 +49,7 @@
     "encyclopedia_readiness": 19,
     "narrative_readiness": 24,
     "curriculum_readiness": 26,
+    "trust_readiness": 24,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -56,8 +57,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 35,
-      "note": "Curriculum live \u2014 6 tiers, 16/34 lessons, understanding before opinion."
+      "value": 36,
+      "note": "Trust OS live \u2014 8/13 facts verified, show don't tell."
     },
     {
       "id": "constitution",
@@ -326,6 +327,13 @@
       "value": 26,
       "max": 100,
       "note": "Avg tier 30% \u2014 enrollment tracking not live."
+    },
+    {
+      "id": "trust",
+      "label": "Trust Framework",
+      "value": 24,
+      "max": 100,
+      "note": "12% citation coverage \u2014 transparency panels planned."
     }
   ],
   "public_readiness": {
@@ -828,6 +836,12 @@
       "id": "curriculum",
       "label": "Master Curriculum",
       "href": "/mission-control/curriculum.html",
+      "status": "complete"
+    },
+    {
+      "id": "trust",
+      "label": "Trust Framework",
+      "href": "/mission-control/trust.html",
       "status": "complete"
     }
   ],
@@ -1854,6 +1868,57 @@
     }
   ],
   "builds": [
+    {
+      "number": 36,
+      "title": "Citizens United Facts Evidence, Transparency & Trust Framework",
+      "version": "1.40.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Public Trust Operating System v1.0 \u2014 trust as measurable objective",
+      "summary": "5-level trust pyramid, 4 evidence levels, 8 trust metrics; v2 DB: Netlify or Neon; 24% readiness.",
+      "files_created": [
+        "data/trust-framework.json",
+        "docs/PUBLIC_TRUST_OPERATING_SYSTEM.md",
+        "builds/036-evidence-transparency-trust.md",
+        "mission-control/trust.html",
+        "scripts/gen-trust-framework.py",
+        "scripts/update-mc-build36.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "data/database-schema.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/trust.html"
+      ],
+      "decisions_made": [
+        "Trust philosophy: show verification, do not ask for blind trust",
+        "5-level trust pyramid + 4 evidence levels (A\u2013D)",
+        "6-stage fact review process + 3 transparency panel types",
+        "v1: static JSON + Netlify Forms (unchanged)",
+        "v2 trial: Netlify Database OR Neon (Postgres)",
+        "Supabase deferred until auth/RLS/participant profiles needed",
+        "24% honest readiness \u2014 panels and page sourcing not live"
+      ],
+      "open_questions": [
+        "Correction policy page timing?",
+        "When to provision Netlify Database trial?"
+      ],
+      "risks": [
+        "12% citation coverage",
+        "0 academic Level C sources",
+        "Transparency panels not on halls"
+      ],
+      "next_recommended": 37,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/trust.html",
+      "review_status": "complete"
+    },
     {
       "number": 35,
       "title": "Citizens United Facts Master Curriculum & Learning Standards",
@@ -3486,20 +3551,19 @@
     }
   ],
   "briefing": {
-    "what_built": "Curriculum v1.0 \u2014 6 tiers, 6 paths, 4 reading levels, 9-system integration",
-    "building_now": "Master curriculum \u2014 halls as interim tier content",
+    "what_built": "Trust OS v1.0 \u2014 pyramid, evidence levels, trust dashboard, database v2 decision",
+    "building_now": "Public trust architecture \u2014 verify don't believe",
     "blocked": [
-      "Enrollment not tracked",
-      "Assessments not built",
-      "Canonical lesson routes not built"
+      "Transparency panels not on pages",
+      "Reader feedback workflow",
+      "Correction policy page"
     ],
     "ready_public": [
-      "Curriculum MC dashboard",
-      "Tier architecture",
-      "Learning paths",
-      "Academy alignment"
+      "Trust MC dashboard",
+      "Evidence A\u2013D taxonomy",
+      "Database decision documented"
     ],
-    "next": "Build #36 \u2014 Component specifications with props/states"
+    "next": "Build #37 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -3892,5 +3956,18 @@
     },
     "enrollment_tracking_live": false,
     "assessments_live": false
+  },
+  "trust_framework": "/data/trust-framework.json",
+  "trust_dashboard": "/mission-control/trust.html",
+  "trust_inventory": {
+    "readiness_score": 24,
+    "trust_pyramid_levels": 5,
+    "facts_verified": 8,
+    "facts_total": 13,
+    "evidence_total": 14,
+    "citation_coverage_pct": 12,
+    "transparency_panels_live": 0,
+    "page_sourcing_live": false,
+    "database_decision": "Stay on v1 until real signups; trial Postgres via Netlify Database or Neon; adopt Supabase when auth/RLS required."
   }
 }

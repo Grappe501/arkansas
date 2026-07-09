@@ -253,7 +253,7 @@ out = {
         '0 coalition participants — Tier 6 civic application untested',
     ],
     'recommended_next_build': {
-        'number': 36,
+        'number': 37,
         'title': 'Component Specifications with Props/States',
         'note': 'Map curriculum tiers, learning paths, and reading levels to COMP-* from Build #17.',
     },

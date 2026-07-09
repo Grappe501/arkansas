@@ -1,0 +1,419 @@
+{
+  "version": "1.0",
+  "build": 36,
+  "updated": "2026-07-09",
+  "title": "Evidence, Transparency & Trust Framework v1.0",
+  "subtitle": "Public Trust Operating System",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/trust.html",
+  "constitution": "/docs/PUBLIC_TRUST_OPERATING_SYSTEM.md",
+  "purpose": "Public trust as measurable objective \u2014 accuracy, transparency, intellectual honesty.",
+  "trust_philosophy": "Don't ask readers to trust us. Show them why they can verify what we present.",
+  "governing_principle": "Earn trust through transparency \u2014 tools to investigate, not pressure to believe.",
+  "long_term_goal": "Every claim on the platform \u2014 readers can examine evidence, context, and reasoning.",
+  "trust_pyramid": [
+    {
+      "id": "TRUST-P1",
+      "level": 1,
+      "title": "Clear Language",
+      "status": "partial",
+      "requirements": [
+        "Plain-language explanations",
+        "Jargon accompanied by definitions"
+      ]
+    },
+    {
+      "id": "TRUST-P2",
+      "level": 2,
+      "title": "Transparent Sources",
+      "status": "partial",
+      "requirements": [
+        "Source origin",
+        "Publication date",
+        "Producer",
+        "Primary vs secondary"
+      ]
+    },
+    {
+      "id": "TRUST-P3",
+      "level": 3,
+      "title": "Evidence Before Conclusions",
+      "status": "partial",
+      "requirements": [
+        "Historical record first",
+        "Court opinions",
+        "Datasets",
+        "Statutes",
+        "Then explanation"
+      ]
+    },
+    {
+      "id": "TRUST-P4",
+      "level": 4,
+      "title": "Honest Context",
+      "status": "partial",
+      "requirements": [
+        "Established facts",
+        "Legal holdings",
+        "Interpretations",
+        "Empirical findings",
+        "Disagreement areas"
+      ]
+    },
+    {
+      "id": "TRUST-P5",
+      "level": 5,
+      "title": "Continuous Review",
+      "status": "planned",
+      "requirements": [
+        "Scheduled review cycles",
+        "MC identifies materials due for review"
+      ]
+    }
+  ],
+  "source_transparency_standards": [
+    "Last reviewed date",
+    "Primary sources used",
+    "Supporting references",
+    "Citation count",
+    "Related documents",
+    "Version history"
+  ],
+  "evidence_levels": [
+    {
+      "id": "TRUST-EV-A",
+      "level": "A",
+      "title": "Primary legal materials",
+      "status": "partial",
+      "examples": [
+        "Supreme Court opinions",
+        "Federal statutes",
+        "Arkansas statutes",
+        "Official government publications"
+      ],
+      "count": 3
+    },
+    {
+      "id": "TRUST-EV-B",
+      "level": "B",
+      "title": "Official public records and datasets",
+      "status": "partial",
+      "examples": [
+        "Election spending reports",
+        "Government statistics",
+        "Court filings"
+      ],
+      "count": 2
+    },
+    {
+      "id": "TRUST-EV-C",
+      "level": "C",
+      "title": "Peer-reviewed academic scholarship",
+      "status": "planned",
+      "examples": [
+        "Law review articles",
+        "Academic journals",
+        "University publications"
+      ],
+      "count": 0
+    },
+    {
+      "id": "TRUST-EV-D",
+      "level": "D",
+      "title": "Reputable explanatory sources",
+      "status": "partial",
+      "examples": [
+        "Educational organizations",
+        "Major news organizations",
+        "Think tank reports"
+      ],
+      "count": 5,
+      "note": "Supplement, not replace, primary sources"
+    }
+  ],
+  "fact_review_process": [
+    {
+      "stage": 1,
+      "title": "Drafted",
+      "status": "partial"
+    },
+    {
+      "stage": 2,
+      "title": "Supported by evidence",
+      "status": "partial"
+    },
+    {
+      "stage": 3,
+      "title": "Source reviewed",
+      "status": "partial"
+    },
+    {
+      "stage": 4,
+      "title": "Editorial reviewed",
+      "status": "planned"
+    },
+    {
+      "stage": 5,
+      "title": "Published",
+      "status": "partial"
+    },
+    {
+      "stage": 6,
+      "title": "Scheduled for future review",
+      "status": "planned"
+    }
+  ],
+  "transparency_panels": [
+    {
+      "id": "TRUST-TP-01",
+      "title": "How We Know This",
+      "status": "planned",
+      "purpose": "Explains the evidence supporting the page"
+    },
+    {
+      "id": "TRUST-TP-02",
+      "title": "What This Page Does Not Claim",
+      "status": "planned",
+      "purpose": "Clarifies misunderstandings and limits"
+    },
+    {
+      "id": "TRUST-TP-03",
+      "title": "Questions Still Being Studied",
+      "status": "planned",
+      "purpose": "Highlights ongoing research or debate"
+    }
+  ],
+  "version_history": {
+    "title": "Version History",
+    "status": "planned",
+    "fields": [
+      "Publication date",
+      "Major updates",
+      "Reason for updates",
+      "Research revisions"
+    ]
+  },
+  "editorial_independence": {
+    "title": "Editorial Independence",
+    "status": "partial",
+    "note": "Changes documented; significant revisions note why."
+  },
+  "reader_feedback": {
+    "title": "Reader Feedback",
+    "status": "planned",
+    "channels": [
+      "Report factual errors",
+      "Suggest sources",
+      "Recommend clarifications",
+      "Ask educational questions"
+    ],
+    "workflow": "Editorial review before changes published"
+  },
+  "trust_dashboard_metrics": [
+    {
+      "id": "TRUST-M01",
+      "title": "Pages fully sourced",
+      "status": "planned",
+      "current": 0
+    },
+    {
+      "id": "TRUST-M02",
+      "title": "Pages under review",
+      "status": "partial",
+      "current": 4
+    },
+    {
+      "id": "TRUST-M03",
+      "title": "Facts verified",
+      "status": "partial",
+      "current": 8
+    },
+    {
+      "id": "TRUST-M04",
+      "title": "Sources added",
+      "status": "partial",
+      "current": 14
+    },
+    {
+      "id": "TRUST-M05",
+      "title": "Broken citations",
+      "status": "planned",
+      "current": 0
+    },
+    {
+      "id": "TRUST-M06",
+      "title": "Scheduled reviews completed",
+      "status": "planned",
+      "current": 0
+    },
+    {
+      "id": "TRUST-M07",
+      "title": "Reader feedback received",
+      "status": "planned",
+      "current": 0
+    },
+    {
+      "id": "TRUST-M08",
+      "title": "Corrections published",
+      "status": "planned",
+      "current": 0
+    }
+  ],
+  "public_accountability": [
+    {
+      "title": "Editorial standards",
+      "status": "partial",
+      "route": "/builds/002-project-constitution.md"
+    },
+    {
+      "title": "Research methodology",
+      "status": "partial",
+      "route": "/mission-control/research.html"
+    },
+    {
+      "title": "Citation policy",
+      "status": "partial",
+      "route": "/docs/FACTS_CONSTITUTION.md"
+    },
+    {
+      "title": "Review process",
+      "status": "partial",
+      "route": "/mission-control/facts.html"
+    },
+    {
+      "title": "Correction policy",
+      "status": "planned",
+      "route": null
+    },
+    {
+      "title": "Privacy policy",
+      "status": "planned",
+      "route": null
+    },
+    {
+      "title": "Accessibility commitment",
+      "status": "partial",
+      "route": "/mission-control/design.html"
+    }
+  ],
+  "database_decision": {
+    "build": 36,
+    "decided": "2026-07-09",
+    "v1_current": {
+      "storage": "static_json_netlify_forms",
+      "status": "live",
+      "note": "No database deployed \u2014 honest metrics from JSON registries."
+    },
+    "v2_trial_recommended": [
+      {
+        "provider": "Netlify Database",
+        "type": "managed_postgres",
+        "status": "recommended_trial",
+        "rationale": "Already on Netlify; Postgres fits Build #22 schema; preview DB branches; free tier with credit limits.",
+        "caveats": [
+          "DB sleeps on free tier after ~5 min",
+          "300 monthly credits shared across all Netlify usage"
+        ]
+      },
+      {
+        "provider": "Neon",
+        "type": "serverless_postgres",
+        "status": "recommended_alternative",
+        "rationale": "Pure Postgres; scale-to-zero; branching; does not consume Netlify credits.",
+        "caveats": [
+          "Auth and admin built separately",
+          "~512 MB free storage"
+        ]
+      }
+    ],
+    "v2_full_when_needed": {
+      "provider": "Supabase",
+      "type": "postgres_baas",
+      "status": "deferred_until_auth_rls",
+      "rationale": "Best when participant profiles, Education Leader signups, coalition accounts, and RLS become priority.",
+      "triggers": [
+        "Authenticated admin dashboard",
+        "Person/org tables live",
+        "Privacy-first row-level security"
+      ]
+    },
+    "not_recommended": [
+      {
+        "provider": "Turso",
+        "reason": "SQLite \u2014 diverges from Postgres ERD in Build #22"
+      }
+    ],
+    "governing_rule": "Stay on v1 until real signups; trial Postgres via Netlify Database or Neon; adopt Supabase when auth/RLS required."
+  },
+  "related_systems": [
+    {
+      "title": "Facts Framework",
+      "route": "/data/facts-framework.json",
+      "build": 18
+    },
+    {
+      "title": "Facts Registry",
+      "route": "/data/facts-registry.json",
+      "build": 18
+    },
+    {
+      "title": "Evidence Registry",
+      "route": "/data/evidence-registry.json",
+      "build": 10
+    },
+    {
+      "title": "Research Framework",
+      "route": "/mission-control/research.html",
+      "build": 10
+    },
+    {
+      "title": "Content Production Factory",
+      "route": "/mission-control/content-factory.html",
+      "build": 27
+    },
+    {
+      "title": "Database Schema",
+      "route": "/data/database-schema.json",
+      "build": 22
+    }
+  ],
+  "registry_snapshot": {
+    "facts_total": 13,
+    "facts_verified": 8,
+    "facts_under_review": 3,
+    "facts_awaiting_sources": 5,
+    "evidence_total": 14,
+    "evidence_published": 10,
+    "evidence_awaiting_review": 4,
+    "citation_coverage_pct": 12,
+    "fact_completeness_pct": 62
+  },
+  "summary": {
+    "trust_pyramid_levels": 5,
+    "evidence_levels": 4,
+    "fact_review_stages": 6,
+    "transparency_panels": 3,
+    "trust_metrics": 8,
+    "accountability_pages": 7,
+    "transparency_panels_live": 0,
+    "trust_dashboard_live": true,
+    "page_sourcing_live": false,
+    "trust_readiness_pct": 24
+  },
+  "catalog_gaps": [
+    "Transparency panels (How We Know This, etc.) not on major pages",
+    "Last reviewed date and version history not uniform across halls",
+    "Level C academic sources: 0 in evidence registry",
+    "Correction policy and privacy policy pages not published",
+    "Reader feedback workflow not implemented",
+    "Broken citation monitoring not automated",
+    "Scheduled review cycles not in MC calendar",
+    "Only 8/13 facts verified \u2014 12% citation coverage"
+  ],
+  "recommended_next_build": {
+    "number": 37,
+    "title": "Component Specifications with Props/States",
+    "note": "Map trust panels, evidence levels, and transparency standards to COMP-* from Build #17."
+  }
+}

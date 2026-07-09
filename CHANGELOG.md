@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.40.0] - 2026-07-09 — Build #36 Trust Framework
+
+### Public Trust Operating System
+- **Evidence, Transparency & Trust Framework v1.0** — 5-level trust pyramid, evidence A–D
+- Fact review process, transparency panels, trust dashboard metrics
+- **Database v2 decision:** trial via Netlify Database or Neon; Supabase when auth/RLS needed
+- v1 unchanged: static JSON + Netlify Forms
+- 24% honest readiness — 8/13 facts verified, panels not on pages
+- MC dashboard: `/mission-control/trust.html`
+
 ## [1.39.0] - 2026-07-09 — Build #35 Master Curriculum
 
 ### Educational Framework

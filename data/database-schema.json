@@ -523,17 +523,27 @@
     ],
     "v2_future": [
       {
-        "method": "Postgres",
-        "status": "planned"
-      },
-      {
-        "method": "Supabase",
-        "status": "planned",
-        "note": "Auth, RLS, realtime"
+        "method": "Netlify Database",
+        "status": "recommended_trial",
+        "type": "managed_postgres",
+        "note": "Build #36 decision \u2014 same vendor as site; Postgres; preview branches"
       },
       {
         "method": "Neon",
-        "status": "planned"
+        "status": "recommended_alternative",
+        "type": "serverless_postgres",
+        "note": "Build #36 decision \u2014 pure Postgres without Netlify credit limits"
+      },
+      {
+        "method": "Supabase",
+        "status": "deferred_until_auth_rls",
+        "type": "postgres_baas",
+        "note": "When participant profiles, RLS, and admin auth become priority"
+      },
+      {
+        "method": "Postgres",
+        "status": "planned",
+        "note": "Generic target \u2014 provider per decision above"
       },
       {
         "method": "Serverless API routes",
@@ -692,19 +702,71 @@
     "entities_stub": 2,
     "database_deployed": false,
     "schema_readiness_pct": 35,
-    "migration_target": "supabase_postgres",
-    "v1_storage": "static_json_netlify_forms"
+    "migration_target": "postgres_v2_netlify_or_neon",
+    "v1_storage": "static_json_netlify_forms",
+    "v2_database_decision": "Stay on v1 until real signups; trial Postgres via Netlify Database or Neon; adopt Supabase when auth/RLS required."
   },
   "catalog_gaps": [
-    "No Postgres/Supabase instance deployed",
     "Join tables exist only as schema \u2014 no DB tables",
     "Referral and packet share entities not implemented",
     "Public officials directory not populated",
-    "Form submissions not synced to person/signup tables"
+    "Form submissions not synced to person/signup tables",
+    "No Postgres instance deployed \u2014 v2 trial: Netlify Database or Neon (Build #36)",
+    "Supabase deferred until auth/RLS required"
   ],
   "recommended_next_build": {
     "number": 24,
     "title": "Component Specifications with Props/States",
     "note": "Map wireframe sections to component props before framework build."
+  },
+  "open_questions": [],
+  "database_decision": {
+    "build": 36,
+    "decided": "2026-07-09",
+    "v1_current": {
+      "storage": "static_json_netlify_forms",
+      "status": "live",
+      "note": "No database deployed \u2014 honest metrics from JSON registries."
+    },
+    "v2_trial_recommended": [
+      {
+        "provider": "Netlify Database",
+        "type": "managed_postgres",
+        "status": "recommended_trial",
+        "rationale": "Already on Netlify; Postgres fits Build #22 schema; preview DB branches; free tier with credit limits.",
+        "caveats": [
+          "DB sleeps on free tier after ~5 min",
+          "300 monthly credits shared across all Netlify usage"
+        ]
+      },
+      {
+        "provider": "Neon",
+        "type": "serverless_postgres",
+        "status": "recommended_alternative",
+        "rationale": "Pure Postgres; scale-to-zero; branching; does not consume Netlify credits.",
+        "caveats": [
+          "Auth and admin built separately",
+          "~512 MB free storage"
+        ]
+      }
+    ],
+    "v2_full_when_needed": {
+      "provider": "Supabase",
+      "type": "postgres_baas",
+      "status": "deferred_until_auth_rls",
+      "rationale": "Best when participant profiles, Education Leader signups, coalition accounts, and RLS become priority.",
+      "triggers": [
+        "Authenticated admin dashboard",
+        "Person/org tables live",
+        "Privacy-first row-level security"
+      ]
+    },
+    "not_recommended": [
+      {
+        "provider": "Turso",
+        "reason": "SQLite \u2014 diverges from Postgres ERD in Build #22"
+      }
+    ],
+    "governing_rule": "Stay on v1 until real signups; trial Postgres via Netlify Database or Neon; adopt Supabase when auth/RLS required."
   }
 }

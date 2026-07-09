@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.39.0 · **Curriculum:** [/mission-control/curriculum.html](/mission-control/curriculum.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #35:** ✅ Curriculum · **Build #34:** ✅ Narrative · **Build #33:** ✅ Encyclopedia  
+**Current version:** 1.40.0 · **Trust OS:** [/mission-control/trust.html](/mission-control/trust.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #36:** ✅ Trust Framework · **Build #35:** ✅ Curriculum · **Build #34:** ✅ Narrative  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -193,7 +193,7 @@ Become a Leader · Join the Network · Share · Invite Friends · Draft a Law ·
 | # | Step | Status |
 |---|------|--------|
 | 98 | Test production: deploy, forms, Action Hub, share | 🟡 |
-| 99 | Participant profile backend decision (Supabase/etc.) | ⬜ |
+| 99 | Participant profile backend decision (Supabase/etc.) | ✅ Build #36 — Netlify DB or Neon trial; Supabase when auth/RLS |
 | 100 | Launch + continuous content + civic action expansion | 🟡 |
 
 ---
@@ -274,11 +274,29 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **36** | **Trust Framework** | **✅ v1.40.0** |
 | **35** | **Master Curriculum** | **✅ v1.39.0** |
 | **34** | **Narrative Architecture** | **✅ v1.38.0** |
-| **33** | **Encyclopedia & Knowledge Library** | **✅ v1.37.0** |
 
-**Next:** Build #36 — Component specifications with props/states.
+**Next:** Build #37 — Component specifications with props/states.
+
+---
+
+## Phase 36 — Trust Framework (Build #36) ★ NEW
+
+*Public trust as measurable objective.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| T1 | Public Trust OS Blueprint v1.0 | ✅ | `data/trust-framework.json` |
+| T2 | 5-level trust pyramid + evidence A–D | ✅ | Show verification, not blind trust |
+| T3 | Fact review + transparency panels | ✅ | Panels planned |
+| T4 | Trust dashboard metrics (8) | ✅ | MC tracking |
+| T5 | Database v2 decision documented | ✅ | Netlify DB or Neon trial; Supabase deferred |
+| T6 | Public accountability pages | 🟡 | Partial |
+| T7 | MC trust dashboard | ✅ | `/mission-control/trust.html` |
+
+**Database v2 (Build #36):** v1 = JSON + Netlify Forms · trial = **Netlify Database** or **Neon** · full = **Supabase** when auth/RLS needed.
 
 ---
 
@@ -505,7 +523,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | D7 | Canonical model extension | ✅ | 10 → 15 entities |
 | D8 | MC database dashboard | ✅ | `/mission-control/database.html` |
 
-**Note:** No database deployed — schema blueprint only (35% readiness).
+**Note:** No database deployed — v2 trial: Netlify Database or Neon (Build #36). Supabase when auth/RLS required.
 
 ---
 
@@ -667,7 +685,8 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#33**~~ | ~~Research Encyclopedia & Knowledge Library~~ ✅ Done |
 | ~~**#34**~~ | ~~Storytelling & Narrative Architecture~~ ✅ Done |
 | ~~**#35**~~ | ~~Master Curriculum & Learning Standards~~ ✅ Done |
-| **#36** | **Component specifications with props/states** |
+| ~~**#36**~~ | ~~Evidence, Transparency & Trust Framework~~ ✅ Done |
+| **#37** | **Component specifications with props/states** |
 
 ---
 

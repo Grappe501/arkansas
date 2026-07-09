@@ -57,6 +57,6 @@ Equip Arkansans with historical knowledge, constitutional understanding, and res
 
 ---
 
-## Recommended Next: Build #36 — Component Specifications with Props/States
+## Recommended Next: Build #37 — Component Specifications with Props/States
 
 Map curriculum tiers, learning paths, and reading levels to COMP-* from Build #17.
