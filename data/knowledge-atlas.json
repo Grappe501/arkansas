@@ -1007,9 +1007,9 @@
     }
   ],
   "recommended_next_build": {
-    "number": 20,
-    "title": "Brand & Identity System",
-    "note": "Logo, color, typography, voice, messaging \u2014 before mass district content."
+    "number": 21,
+    "title": "Repository & Folder Structure",
+    "note": "Implementation artifacts wave — folder layout before production code."
   },
   "catalog_gaps": [
     "Learning Compass UI not deployed on public pages",

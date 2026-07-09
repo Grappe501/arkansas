@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.23.0 · **Atlas:** [/mission-control/atlas.html](/mission-control/atlas.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #19:** ✅ Knowledge Atlas · **Build #18:** ✅ Facts Framework · **Build #17:** ✅ Component Registry  
+**Current version:** 1.24.0 · **Platform:** [/mission-control/platform.html](/mission-control/platform.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #20:** ✅ Platform Blueprint · **Build #19:** ✅ Knowledge Atlas · **Build #18:** ✅ Facts Framework  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -263,8 +263,29 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **17** | **Component Registry** | **✅ v1.21.0** |
 | **18** | **Facts Framework** | **✅ v1.22.0** |
 | **19** | **Knowledge Atlas** | **✅ v1.23.0** |
+| **20** | **Platform Blueprint** | **✅ v1.24.0** |
 
-**Next:** Build #20 — Brand & Identity System (logo, color, typography, voice, messaging).
+**Next:** Build #21 — Repository & folder structure *(implementation artifacts wave)*.
+
+---
+
+## Phase 20 — Platform Blueprint (Build #20) ★ NEW
+
+*Version 1 system architecture — technical foundation before production code.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| P1 | Platform Architecture v1.0 | ✅ | `data/platform-architecture.json` |
+| P2 | Technology stack documented | ✅ | GitHub, Netlify, FE, DS, Search |
+| P3 | Content & data architecture | ✅ | MRID, canonical objects |
+| P4 | Platform modules (coalition, contact, organizing, solutions) | ✅ | Honest capability status |
+| P5 | Security & performance standards | ✅ | Requirements listed |
+| P6 | V1 success criteria | ✅ | 9 criteria with honest % |
+| P7 | Development workflow (10 stages) | ✅ | MC-tracked |
+| P8 | Implementation roadmap #21–#25 | ✅ | Implementation artifacts |
+| P9 | MC platform dashboard | ✅ | `/mission-control/platform.html` |
+
+**Philosophy:** Build once. Expand forever.
 
 ---
 
@@ -371,10 +392,12 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#17**~~ | ~~Component inventory~~ ✅ Done |
 | ~~**#18**~~ | ~~Citizens United Facts Framework~~ ✅ Done |
 | ~~**#19**~~ | ~~Knowledge Atlas & Learning Paths~~ ✅ Done |
-| **#20** | **Brand & Identity System** (logo, color, typography, voice, messaging) |
-| **#21** | Database schema and entity relationships |
-| **#22** | UX wireframes for desktop, tablet, and mobile |
-| **#23** | GitHub repository structure and Netlify deployment blueprint |
+| ~~**#20**~~ | ~~Master Platform Blueprint & Technical Architecture~~ ✅ Done |
+| **#21** | **Repository & folder structure** |
+| **#22** | **Database schema and entity-relationship model** |
+| **#23** | **Wireframes for every major screen** |
+| **#24** | **Component specifications with props/states** |
+| **#25** | **GitHub issues, milestones, and sprint roadmap** |
 
 ---
 

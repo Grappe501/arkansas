@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#20** | **Platform Blueprint** | **1.24.0** | **✅ Complete** | [020](020-master-platform-blueprint.md) · [/mission-control/platform.html](../mission-control/platform.html) |
 | **#19** | **Knowledge Atlas** | **1.23.0** | **✅ Complete** | [019](019-knowledge-atlas.md) · [/mission-control/atlas.html](../mission-control/atlas.html) |
 | **#18** | **Facts Framework** | **1.22.0** | **✅ Complete** | [018](018-citizens-united-facts-framework.md) · [/mission-control/facts.html](../mission-control/facts.html) |
 | **#17** | **Component Registry** | **1.21.0** | **✅ Complete** | [017](017-component-architecture.md) · [/mission-control/components.html](../mission-control/components.html) |
@@ -19,12 +20,13 @@
 | **#5** | **Site Architecture** | **1.9.0** | **✅ Complete** | [005](005-master-site-architecture.md) |
 | **#4** | **Phase Registry** | **1.8.0** | **✅ Complete** | [004](004-master-phase-registry.md) |
 
-## Platform Stack (Builds #4–#19)
+## Platform Stack (Builds #4–#20)
 
 | Layer | Route | Focus |
 |-------|-------|-------|
 | Phase Registry | `/mission-control/phases.html` | Project phases |
-| Site Architecture | `/mission-control/architecture.html` | Destinations + platform layers |
+| Site Architecture | `/mission-control/architecture.html` | Information architecture (IA) |
+| **Platform Blueprint** | `/mission-control/platform.html` | **Technical architecture · v1 system** |
 | **Route Registry** | `/mission-control/routes.html` | **81 routes · v1 map** |
 | **Component Registry** | `/mission-control/components.html` | **42 components · A–G** |
 | **Facts Framework** | `/mission-control/facts.html` | **Canonical facts · FACT-1000–6000** |
@@ -45,7 +47,7 @@ Every route answers one reader question. 81 routes inventoried — honest live/r
 
 ## Data Model Rule (Build #15)
 
-Everything is connected. 10 canonical objects, 20 relationship types. **Next:** Brand & Identity System (Build #20).
+Everything is connected. 10 canonical objects, 20 relationship types. **Next:** Implementation wave Builds #21–#25.
 
 ## Arkansas Rule (Build #12)
 

@@ -1,6 +1,6 @@
 {
-  "version": "1.23.0",
-  "build": 19,
+  "version": "1.24.0",
+  "build": 20,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,16 +9,16 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 19,
+    "overall_completion": 20,
     "current_build": {
-      "number": 19,
-      "title": "Citizens United Knowledge Atlas & Learning Path System"
-    },
-    "active_phase": "Educational Architecture \u2014 Knowledge Atlas",
-    "last_completed": "Citizens United Facts Framework",
-    "next_build": {
       "number": 20,
-      "title": "Brand & Identity System (logo, color, typography, voice, messaging)"
+      "title": "Master Platform Blueprint & Technical Architecture"
+    },
+    "active_phase": "Technical Architecture \u2014 Platform Blueprint",
+    "last_completed": "Citizens United Knowledge Atlas & Learning Path System",
+    "next_build": {
+      "number": 21,
+      "title": "Repository & folder structure"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
@@ -33,15 +33,16 @@
     "component_registry_readiness": 22,
     "facts_framework_readiness": 12,
     "knowledge_atlas_readiness": 18,
-    "public_launch_readiness": 7,
+    "platform_architecture_readiness": 20,
+    "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
   "progress_bars": [
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 19,
-      "note": "Knowledge Atlas live \u2014 7 worlds, 51 districts, 40% educational readiness."
+      "value": 20,
+      "note": "Platform blueprint live \u2014 60% arch readiness, v1 success 48%. Implementation wave #21\u2013#25 next."
     },
     {
       "id": "constitution",
@@ -198,6 +199,13 @@
       "value": 18,
       "max": 100,
       "note": "6 live, 29 partial districts \u2014 6 knowledge trails defined."
+    },
+    {
+      "id": "platform",
+      "label": "Platform Architecture",
+      "value": 20,
+      "max": 100,
+      "note": "Stack 2 live / 2 partial \u2014 honest v1 criteria at 48%."
     }
   ],
   "public_readiness": {
@@ -604,6 +612,12 @@
       "id": "atlas",
       "label": "Knowledge Atlas",
       "href": "/mission-control/atlas.html",
+      "status": "complete"
+    },
+    {
+      "id": "platform",
+      "label": "Platform Blueprint",
+      "href": "/mission-control/platform.html",
       "status": "complete"
     }
   ],
@@ -1631,6 +1645,52 @@
   ],
   "builds": [
     {
+      "number": 20,
+      "title": "Master Platform Blueprint & Technical Architecture",
+      "version": "1.24.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Version 1 System Architecture \u2014 stack, data, security, v1 success, implementation roadmap",
+      "summary": "5 objectives, 5 stack layers, 4 platform modules, v1 success 48%; Builds #21\u2013#25 implementation artifacts defined.",
+      "files_created": [
+        "data/platform-architecture.json",
+        "docs/PLATFORM_ARCHITECTURE.md",
+        "builds/020-master-platform-blueprint.md",
+        "mission-control/platform.html",
+        "scripts/gen-platform-architecture.py",
+        "scripts/update-mc-build20.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/platform.html"
+      ],
+      "decisions_made": [
+        "Build once. Expand forever.",
+        "Static HTML/CSS/JS interim stack documented honestly",
+        "Database deferred to Build #22",
+        "Implementation wave: #21 repo structure, #22 DB, #23 wireframes, #24 component specs, #25 GitHub roadmap",
+        "Brand deferred \u2014 ACEI working title retained"
+      ],
+      "open_questions": [
+        "Frontend framework selection?",
+        "Supabase vs alternatives for Build #22?"
+      ],
+      "risks": [
+        "v1 success at 48% \u2014 most criteria partial or planned"
+      ],
+      "next_recommended": 21,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/platform.html",
+      "review_status": "complete"
+    },
+    {
       "number": 19,
       "title": "Citizens United Knowledge Atlas & Learning Path System",
       "version": "1.23.0",
@@ -2446,18 +2506,19 @@
     }
   ],
   "briefing": {
-    "what_built": "Knowledge Atlas v1.0 \u2014 7 worlds, 51 districts, 6 trails",
-    "building_now": "Educational architecture \u2014 Brand & Identity System next (Build #20)",
+    "what_built": "Platform Blueprint v1.0 \u2014 complete technical architecture before production code",
+    "building_now": "Constitutional foundation complete (Builds 1\u201320) \u2014 implementation artifacts next (#21\u2013#25)",
     "blocked": [
-      "Learning Compass UI not on public pages",
-      "34+ districts need content"
+      "No database",
+      "No frontend framework",
+      "Public official sharing automation"
     ],
     "ready_public": [
-      "Atlas MC dashboard",
-      "Knowledge trails",
-      "Educational completion metrics"
+      "Platform MC dashboard",
+      "v1 success criteria",
+      "Implementation roadmap"
     ],
-    "next": "Build #20 \u2014 Brand & Identity System"
+    "next": "Build #21 \u2014 Repository & folder structure"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -2604,5 +2665,18 @@
     "atlas_completion_pct": 40,
     "educational_readiness": 40,
     "learning_compass_status": "partial"
+  },
+  "platform_architecture": "/data/platform-architecture.json",
+  "platform_dashboard": "/mission-control/platform.html",
+  "platform_blueprint": {
+    "readiness_score": 20,
+    "architecture_readiness_pct": 60,
+    "v1_success_avg_pct": 48,
+    "stack_live": 2,
+    "stack_partial": 2,
+    "objectives_avg": 18,
+    "mc_systems_live": 6,
+    "philosophy": "Build once. Expand forever.",
+    "next_implementation_builds": "21\u201325"
   }
 }

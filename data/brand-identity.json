@@ -24,8 +24,8 @@
     "legacy_note": "Formerly Arkansas Citizens United Coalition Operating System — renamed to avoid endorsement ambiguity."
   },
   "recommended_next": {
-    "build": 20,
-    "title": "Brand & Identity System",
+    "build": 21,
+    "title": "Repository & Folder Structure",
     "scope": ["Permanent project name", "Logo philosophy", "Color system", "Typography", "Voice", "Messaging"]
   },
   "candidates_considered": [

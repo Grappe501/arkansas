@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Platform Architecture <a href="/mission-control/platform.html" class="mc-inline-link">Technical Blueprint →</a></h2>
+    <p class="mc-bar-note">Build #20 — Stack, data, security, v1 success criteria, implementation roadmap (#21–#25).</p>
     <h2 class="mc-section-title">Knowledge Atlas <a href="/mission-control/atlas.html" class="mc-inline-link">Learning Worlds →</a></h2>
     <p class="mc-bar-note">Build #19 — 7 learning worlds, 51 districts, 6 knowledge trails, Learning Compass schema.</p>
     <h2 class="mc-section-title">Facts Framework <a href="/mission-control/facts.html" class="mc-inline-link">Canonical Facts →</a></h2>
@@ -1892,6 +1894,107 @@ async function initKnowledgeAtlasBlueprint() {
   initDevConsole(mc);
 }
 
+async function initPlatformArchitectureBlueprint() {
+  const root = document.getElementById('mc-platform-root');
+  if (!root) return;
+
+  const [archRes, mcRes] = await Promise.all([
+    fetch('/data/platform-architecture.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const arch = await archRes.json();
+  const mc = await mcRes.json();
+  const s = arch.summary;
+
+  const stackRows = arch.technology_stack.map(l => `
+    <tr class="${l.status === 'live' ? 'mc-table__row--approved' : ''}">
+      <td>${l.title}</td>
+      <td>${l.status}</td>
+      <td>${l.current_implementation || '—'}</td>
+    </tr>`).join('');
+
+  const objRows = arch.objectives.map(o => `
+    <tr><td>${o.title}</td><td>${o.status}</td><td>${o.readiness_pct}%</td></tr>`).join('');
+
+  const moduleSections = arch.platform_modules.map(m => {
+    const caps = m.capabilities.map(c => `<li>${c.cap} — <em>${c.status}</em></li>`).join('');
+    return `<div class="mc-card"><h3>${m.title}</h3><ul class="mc-deliverables">${caps}</ul><p class="mc-bar-note"><a href="${m.route}">${m.route}</a></p></div>`;
+  }).join('');
+
+  const v1Rows = arch.v1_success_criteria.map(c => `
+    <tr class="${c.status === 'live' ? 'mc-table__row--approved' : ''}">
+      <td>${c.criterion}</td><td>${c.status}</td><td>${c.pct}%</td>
+    </tr>`).join('');
+
+  const roadmapRows = arch.implementation_roadmap.map(r => `
+    <tr><td>#${r.build}</td><td>${r.title}</td><td>${r.status}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Platform Architecture</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #20 · ${arch.title}</p>
+      <h1>Master Platform Blueprint</h1>
+      <p class="mc-header__question"><strong>${arch.philosophy}</strong></p>
+    </header>
+    <section class="mc-card">
+      <h3>Platform Identity</h3>
+      <p class="mc-bar-note"><strong>${arch.platform}</strong></p>
+      <p class="mc-bar-note">${arch.organization} <em>(${arch.organization_note})</em></p>
+      <p class="mc-bar-note">${arch.governing_principle}</p>
+    </section>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Stack layers</div><div class="mc-stat__value">${s.stack_layers}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Live</div><div class="mc-stat__value">${s.stack_live}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Partial</div><div class="mc-stat__value">${s.stack_partial}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Architecture readiness</div><div class="mc-stat__value">${s.architecture_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">V1 success avg</div><div class="mc-stat__value">${s.v1_success_avg_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">MC systems live</div><div class="mc-stat__value">${s.mc_systems_live}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Objectives avg</div><div class="mc-stat__value">${s.objectives_avg_readiness}%</div></div>
+    </div>
+    <h2 class="mc-section-title">Platform Objectives</h2>
+    <table class="mc-table"><thead><tr><th>Objective</th><th>Status</th><th>Readiness</th></tr></thead><tbody>${objRows}</tbody></table>
+    <h2 class="mc-section-title">Technology Stack</h2>
+    <table class="mc-table"><thead><tr><th>Layer</th><th>Status</th><th>Current</th></tr></thead><tbody>${stackRows}</tbody></table>
+    <p class="mc-bar-note">Technical philosophy: ${arch.technical_philosophy.join(' · ')}</p>
+    <h2 class="mc-section-title">Content &amp; Data Architecture</h2>
+    <p class="mc-bar-note">Page metadata: ${arch.content_architecture.page_metadata.join(', ')}</p>
+    <ul class="mc-deliverables">${arch.content_architecture.trackers.map(t => `<li><strong>${t.system}</strong> (Build #${t.build}) — <a href="${t.route}">${t.route}</a></li>`).join('')}</ul>
+    <p class="mc-bar-note">Canonical objects (${arch.data_architecture.canonical_objects.length}): ${arch.data_architecture.canonical_objects.join(', ')} · Database: ${arch.data_architecture.database.status} (Build #${arch.data_architecture.database.build})</p>
+    <h2 class="mc-section-title">Mission Control Systems</h2>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${arch.mission_control_systems.map(m => `<tr><td>${m.label}</td><td>${m.status}</td><td><a href="${m.route}">${m.route}</a></td></tr>`).join('')}</tbody></table>
+    <h2 class="mc-section-title">Platform Modules</h2>
+    <div class="mc-grid-2">${moduleSections}</div>
+    <h2 class="mc-section-title">Security Principles</h2>
+    <table class="mc-table"><thead><tr><th>Requirement</th><th>Status</th><th>Note</th></tr></thead>
+      <tbody>${arch.security_principles.map(x => `<tr><td>${x.req}</td><td>${x.status}</td><td>${x.note || ''}</td></tr>`).join('')}</tbody></table>
+    <h2 class="mc-section-title">Performance Standards</h2>
+    <ul class="mc-deliverables">${arch.performance_standards.map(p => `<li><strong>${p.std}</strong> — ${p.status}${p.note ? ' (' + p.note + ')' : ''}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Development Workflow</h2>
+    <div class="mc-dep-map">${arch.development_workflow.map((w, i) => `
+      <span class="mc-dep-map__node"><span class="mc-dep-map__num">${w.stage}</span><span class="mc-dep-map__label">${w.title}</span></span>
+      ${i < arch.development_workflow.length - 1 ? '<span class="mc-dep-map__arrow">→</span>' : ''}`).join('')}</div>
+    <h2 class="mc-section-title">Version 1 Success Criteria</h2>
+    <table class="mc-table"><thead><tr><th>Criterion</th><th>Status</th><th>Progress</th></tr></thead><tbody>${v1Rows}</tbody></table>
+    <h2 class="mc-section-title">Implementation Roadmap (Builds #21–#25)</h2>
+    <table class="mc-table"><thead><tr><th>Build</th><th>Title</th><th>Status</th></tr></thead><tbody>${roadmapRows}</tbody></table>
+    <h2 class="mc-section-title">Scalability Targets</h2>
+    <ul class="mc-deliverables">${arch.scalability_targets.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${arch.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Related Architecture</h2>
+    <ul class="mc-deliverables">${arch.integrations.map(i => `<li><strong>${i.system}</strong> (Build #${i.build}) — <a href="${i.route}">${i.route}</a>${i.note ? ' — ' + i.note : ''}</li>`).join('')}</ul>
+    <p class="mc-bar-note">
+      <a href="/docs/PLATFORM_ARCHITECTURE.md">PLATFORM_ARCHITECTURE.md</a> ·
+      <a href="/data/platform-architecture.json">JSON</a> ·
+      <a href="/mission-control/architecture.html">Site IA</a> ·
+      <a href="/mission-control/data-model.html">Data Model</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -1910,4 +2013,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initComponentRegistryBlueprint();
   initFactsFrameworkBlueprint();
   initKnowledgeAtlasBlueprint();
+  initPlatformArchitectureBlueprint();
 });

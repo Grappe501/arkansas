@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.24.0] - 2026-07-09 — Build #20 Platform Blueprint
+
+### Master Platform Blueprint & Technical Architecture
+- **Version 1 System Architecture** — stack, objectives, modules, security, performance
+- Honest interim stack: static HTML/CSS/JS, GitHub + Netlify live
+- V1 success criteria (48% avg), platform modules with capability status
+- Implementation roadmap Builds #21–#25 (repo, DB, wireframes, component specs, GitHub sprint)
+- MC dashboard: `/mission-control/platform.html`
+
 ## [1.23.0] - 2026-07-09 — Build #19 Knowledge Atlas
 
 ### Citizens United Knowledge Atlas & Learning Path System

@@ -1,0 +1,616 @@
+{
+  "version": "1.0",
+  "build": 20,
+  "updated": "2026-07-09",
+  "title": "Master Platform Blueprint & Technical Architecture v1.0",
+  "organization": "Arkansas Civic Education Initiative",
+  "organization_note": "Working title until branding finalized (Build deferred)",
+  "platform": "Citizens United Education Platform",
+  "route": "/mission-control/platform.html",
+  "constitution": "/docs/PLATFORM_ARCHITECTURE.md",
+  "philosophy": "Build once. Expand forever.",
+  "technical_philosophy": [
+    "speed",
+    "simplicity",
+    "reliability",
+    "accessibility",
+    "transparency",
+    "searchability",
+    "scalability"
+  ],
+  "governing_principle": "Built with enterprise discipline, academic credibility, museum clarity, and library accessibility.",
+  "objectives": [
+    {
+      "id": "OBJ-1",
+      "title": "Arkansas's definitive Citizens United educational resource",
+      "status": "partial",
+      "readiness_pct": 18
+    },
+    {
+      "id": "OBJ-2",
+      "title": "Develop informed community educators",
+      "status": "partial",
+      "readiness_pct": 22
+    },
+    {
+      "id": "OBJ-3",
+      "title": "Statewide coalition of civic education organizations",
+      "status": "partial",
+      "readiness_pct": 12
+    },
+    {
+      "id": "OBJ-4",
+      "title": "Transparent research with primary sources",
+      "status": "partial",
+      "readiness_pct": 20
+    },
+    {
+      "id": "OBJ-5",
+      "title": "Sustainable expanding educational institution",
+      "status": "partial",
+      "readiness_pct": 19
+    }
+  ],
+  "technology_stack": [
+    {
+      "id": "SRC",
+      "title": "Source Control \u2014 GitHub",
+      "purpose": "Version control, branches, PRs, issues, docs",
+      "status": "live",
+      "requirements": [
+        "Version control",
+        "Branch management",
+        "Pull requests",
+        "Issue tracking"
+      ],
+      "current_implementation": "https://github.com/Grappe501/arkansas \u2014 main branch, numbered builds",
+      "future": null,
+      "route": null
+    },
+    {
+      "id": "DEPLOY",
+      "title": "Deployment \u2014 Netlify",
+      "purpose": "CI/CD, SSL, CDN, forms",
+      "status": "live",
+      "requirements": [
+        "Continuous deployment",
+        "Deploy previews",
+        "SSL",
+        "CDN",
+        "Form handling"
+      ],
+      "current_implementation": "https://arkansas-facts.netlify.app \u2014 static publish, Netlify Forms on educate/",
+      "future": null,
+      "route": null
+    },
+    {
+      "id": "FE",
+      "title": "Frontend",
+      "purpose": "User-facing application layer",
+      "status": "partial",
+      "requirements": [
+        "Static-first rendering",
+        "Responsive",
+        "Accessible",
+        "Progressive enhancement",
+        "SEO"
+      ],
+      "current_implementation": "Static HTML/CSS/JS \u2014 no framework yet; 81 routes inventoried",
+      "future": "Component-based framework TBD (Build #24 specs)",
+      "route": null
+    },
+    {
+      "id": "STYLE",
+      "title": "Styling \u2014 Design System",
+      "purpose": "Centralized visual language",
+      "status": "partial",
+      "requirements": [
+        "Reusable components",
+        "Mobile-first",
+        "Accessible",
+        "Dark/light ready",
+        "Print-friendly"
+      ],
+      "current_implementation": "Build #9 design-system.json, 14 ds-* components, /design-system/ showcase",
+      "future": null,
+      "route": "/mission-control/design.html"
+    },
+    {
+      "id": "SEARCH",
+      "title": "Search",
+      "purpose": "Content discovery",
+      "status": "planned",
+      "requirements": [
+        "v1 client-side",
+        "Future full index"
+      ],
+      "current_implementation": "No client-side search UI yet",
+      "future": "Indexed search: articles, cases, timeline, research, glossary, coalition",
+      "route": null
+    }
+  ],
+  "content_architecture": {
+    "page_metadata": [
+      "mrid",
+      "page_id",
+      "version",
+      "status",
+      "review_state",
+      "citation_completeness",
+      "educational_readiness"
+    ],
+    "trackers": [
+      {
+        "system": "Content Inventory",
+        "build": 6,
+        "route": "/mission-control/inventory.html"
+      },
+      {
+        "system": "MRID Registry",
+        "build": 7,
+        "route": "/mission-control/mrid.html"
+      },
+      {
+        "system": "Route Registry",
+        "build": 16,
+        "route": "/mission-control/routes.html"
+      },
+      {
+        "system": "Facts Framework",
+        "build": 18,
+        "route": "/mission-control/facts.html"
+      },
+      {
+        "system": "Knowledge Atlas",
+        "build": 19,
+        "route": "/mission-control/atlas.html"
+      }
+    ],
+    "status": "live"
+  },
+  "data_architecture": {
+    "canonical_objects": [
+      "person",
+      "organization",
+      "county",
+      "event",
+      "educational_resource",
+      "research_object",
+      "public_official",
+      "model_law",
+      "ballot_initiative_concept",
+      "topic"
+    ],
+    "relationship_types": 20,
+    "registry": "/data/canonical-data-model.json",
+    "database": {
+      "status": "planned",
+      "build": 22,
+      "note": "Schema not yet implemented \u2014 JSON files v0"
+    },
+    "status": "partial"
+  },
+  "mission_control_systems": [
+    {
+      "id": "content",
+      "label": "Content progress",
+      "route": "/mission-control/inventory.html",
+      "status": "live"
+    },
+    {
+      "id": "research",
+      "label": "Research progress",
+      "route": "/mission-control/research.html",
+      "status": "live"
+    },
+    {
+      "id": "coalition",
+      "label": "Coalition growth",
+      "route": "/mission-control/coalition.html",
+      "status": "live"
+    },
+    {
+      "id": "education",
+      "label": "Educational readiness",
+      "route": "/mission-control/atlas.html",
+      "status": "live"
+    },
+    {
+      "id": "deployment",
+      "label": "Deployment health",
+      "route": "/mission-control/",
+      "status": "partial"
+    },
+    {
+      "id": "forms",
+      "label": "Form activity",
+      "route": "/educate/",
+      "status": "partial"
+    },
+    {
+      "id": "county",
+      "label": "County participation",
+      "route": "/mission-control/civic-ecosystem.html",
+      "status": "live"
+    },
+    {
+      "id": "sources",
+      "label": "Source completeness",
+      "route": "/mission-control/research.html",
+      "status": "live"
+    }
+  ],
+  "platform_modules": [
+    {
+      "id": "coalition",
+      "title": "Coalition Platform",
+      "capabilities": [
+        {
+          "cap": "Create profiles",
+          "status": "stub"
+        },
+        {
+          "cap": "Join coalition",
+          "status": "live"
+        },
+        {
+          "cap": "Download resources",
+          "status": "partial"
+        },
+        {
+          "cap": "Register events",
+          "status": "stub"
+        },
+        {
+          "cap": "Request speakers",
+          "status": "planned"
+        },
+        {
+          "cap": "Submit educational materials",
+          "status": "planned"
+        }
+      ],
+      "route": "/coalition/"
+    },
+    {
+      "id": "contact_network",
+      "title": "Contact Network",
+      "capabilities": [
+        {
+          "cap": "Create profiles",
+          "status": "partial"
+        },
+        {
+          "cap": "Save progress",
+          "status": "live"
+        },
+        {
+          "cap": "Download resources",
+          "status": "partial"
+        },
+        {
+          "cap": "Join newsletters",
+          "status": "partial"
+        },
+        {
+          "cap": "Become education leaders",
+          "status": "live"
+        },
+        {
+          "cap": "Join county teams",
+          "status": "partial"
+        }
+      ],
+      "route": "/educate/"
+    },
+    {
+      "id": "relational_organizing",
+      "title": "Relational Organizing",
+      "capabilities": [
+        {
+          "cap": "Invite family and friends",
+          "status": "live"
+        },
+        {
+          "cap": "Share educational pages",
+          "status": "live"
+        },
+        {
+          "cap": "Recommend resources",
+          "status": "partial"
+        },
+        {
+          "cap": "Host conversations",
+          "status": "live"
+        },
+        {
+          "cap": "Introduce organizations",
+          "status": "partial"
+        }
+      ],
+      "route": "/action/"
+    },
+    {
+      "id": "solutions_center",
+      "title": "Solutions Center",
+      "capabilities": [
+        {
+          "cap": "Federal legislative concepts",
+          "status": "partial"
+        },
+        {
+          "cap": "Arkansas legislative concepts",
+          "status": "planned"
+        },
+        {
+          "cap": "Model law workspace",
+          "status": "stub"
+        },
+        {
+          "cap": "Ballot initiative lab",
+          "status": "stub"
+        },
+        {
+          "cap": "Share with U.S. Representatives",
+          "status": "planned"
+        },
+        {
+          "cap": "Share with U.S. Senators",
+          "status": "planned"
+        },
+        {
+          "cap": "Share with Arkansas General Assembly",
+          "status": "planned"
+        }
+      ],
+      "route": "/solutions/"
+    }
+  ],
+  "security_principles": [
+    {
+      "req": "HTTPS everywhere",
+      "status": "live",
+      "note": "Netlify SSL"
+    },
+    {
+      "req": "Secure environment variables",
+      "status": "planned",
+      "note": "No secrets in repo"
+    },
+    {
+      "req": "Spam protection",
+      "status": "partial",
+      "note": "Netlify Forms honeypot"
+    },
+    {
+      "req": "Form validation",
+      "status": "partial"
+    },
+    {
+      "req": "Role-based administration",
+      "status": "planned"
+    },
+    {
+      "req": "Audit logging",
+      "status": "planned"
+    },
+    {
+      "req": "Regular dependency updates",
+      "status": "partial",
+      "note": "Minimal npm deps"
+    }
+  ],
+  "performance_standards": [
+    {
+      "std": "Fast page loads",
+      "status": "live",
+      "note": "Static site"
+    },
+    {
+      "std": "Mobile optimization",
+      "status": "partial"
+    },
+    {
+      "std": "Efficient images",
+      "status": "partial"
+    },
+    {
+      "std": "Lazy loading",
+      "status": "planned"
+    },
+    {
+      "std": "Search engine optimization",
+      "status": "partial"
+    },
+    {
+      "std": "Accessible navigation",
+      "status": "partial"
+    }
+  ],
+  "development_workflow": [
+    {
+      "stage": 1,
+      "title": "Master Build Plan",
+      "status": "live"
+    },
+    {
+      "stage": 2,
+      "title": "Architecture",
+      "status": "live"
+    },
+    {
+      "stage": 3,
+      "title": "Research",
+      "status": "live"
+    },
+    {
+      "stage": 4,
+      "title": "Content",
+      "status": "partial"
+    },
+    {
+      "stage": 5,
+      "title": "Components",
+      "status": "partial"
+    },
+    {
+      "stage": 6,
+      "title": "Development",
+      "status": "planned"
+    },
+    {
+      "stage": 7,
+      "title": "Testing",
+      "status": "planned"
+    },
+    {
+      "stage": 8,
+      "title": "Review",
+      "status": "partial"
+    },
+    {
+      "stage": 9,
+      "title": "Deployment",
+      "status": "live"
+    },
+    {
+      "stage": 10,
+      "title": "Continuous Improvement",
+      "status": "live"
+    }
+  ],
+  "v1_success_criteria": [
+    {
+      "criterion": "Educational core complete",
+      "status": "partial",
+      "pct": 40
+    },
+    {
+      "criterion": "Research transparent",
+      "status": "partial",
+      "pct": 20
+    },
+    {
+      "criterion": "Mission Control operational",
+      "status": "live",
+      "pct": 95
+    },
+    {
+      "criterion": "Coalition onboarding functional",
+      "status": "partial",
+      "pct": 35
+    },
+    {
+      "criterion": "Community education resources available",
+      "status": "partial",
+      "pct": 45
+    },
+    {
+      "criterion": "Contact Network active",
+      "status": "partial",
+      "pct": 30
+    },
+    {
+      "criterion": "Organizations can join coalition",
+      "status": "live",
+      "pct": 70
+    },
+    {
+      "criterion": "Share materials with Arkansas public officials",
+      "status": "planned",
+      "pct": 5
+    },
+    {
+      "criterion": "GitHub and Netlify reliable",
+      "status": "live",
+      "pct": 90
+    }
+  ],
+  "scalability_targets": [
+    "Additional educational topics",
+    "Expanded Arkansas civic education resources",
+    "AI-assisted educational search",
+    "Interactive learning experiences",
+    "Advanced coalition management",
+    "Enhanced analytics"
+  ],
+  "implementation_roadmap": [
+    {
+      "build": 21,
+      "title": "Repository & folder structure",
+      "status": "planned"
+    },
+    {
+      "build": 22,
+      "title": "Database schema and entity-relationship model",
+      "status": "planned"
+    },
+    {
+      "build": 23,
+      "title": "Wireframes for every major screen",
+      "status": "planned"
+    },
+    {
+      "build": 24,
+      "title": "Component specifications with props/states",
+      "status": "planned"
+    },
+    {
+      "build": 25,
+      "title": "GitHub issues, milestones, and sprint roadmap",
+      "status": "planned"
+    }
+  ],
+  "integrations": [
+    {
+      "system": "Site Architecture",
+      "build": 5,
+      "route": "/mission-control/architecture.html",
+      "note": "Information architecture (IA)"
+    },
+    {
+      "system": "Canonical Data Model",
+      "build": 15,
+      "route": "/mission-control/data-model.html"
+    },
+    {
+      "system": "Component Registry",
+      "build": 17,
+      "route": "/mission-control/components.html"
+    },
+    {
+      "system": "Facts Framework",
+      "build": 18,
+      "route": "/mission-control/facts.html"
+    },
+    {
+      "system": "Knowledge Atlas",
+      "build": 19,
+      "route": "/mission-control/atlas.html"
+    }
+  ],
+  "summary": {
+    "stack_layers": 5,
+    "stack_live": 2,
+    "stack_partial": 2,
+    "stack_planned": 1,
+    "objectives_avg_readiness": 18,
+    "v1_success_avg_pct": 48,
+    "mc_systems_live": 6,
+    "implementation_builds_planned": 5,
+    "architecture_readiness_pct": 60
+  },
+  "catalog_gaps": [
+    "Frontend framework not selected",
+    "Database schema deferred to Build #22",
+    "Client-side search not implemented",
+    "Public official sharing automation planned",
+    "Role-based admin and audit logging planned",
+    "Brand & Identity System deferred \u2014 working titles in use"
+  ],
+  "recommended_next_build": {
+    "number": 21,
+    "title": "Repository & Folder Structure",
+    "note": "Implementation artifacts wave \u2014 folder layout before production code."
+  }
+}
