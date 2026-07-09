@@ -20,7 +20,7 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Volunteer first (10 functions); financial independence; Arkansas citizen support preferred
 - Transparency, no special access, stewardship philosophy, volunteer recognition
 - Extends Sustainability & Stewardship (#66) with constitutional foundation
-- Honest: 0 volunteers · 0 funding sources · adherence not monitored · ~43% readiness
+- Honest: 0 volunteers · 0 funding sources · adherence not monitored · ~45% readiness
 - MC dashboard: `/mission-control/volunteer-funding-constitution.html`
 
 ## [1.78.0] - 2026-07-09 — Build #74 Civic Innovation & Reform Center

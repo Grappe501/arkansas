@@ -32,7 +32,7 @@ Build #75 establishes the **Institutional Independence Charter** — founding pr
 
 | Metric | Value |
 |--------|-------|
-| Constitution readiness | **43%** |
+| Constitution readiness | **45%** |
 | Active volunteers | **0** |
 | Volunteer hours reported | **0** |
 | Funding sources | **0** |

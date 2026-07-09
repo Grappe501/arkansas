@@ -83,7 +83,7 @@ Education remains independent, transparent, evidence-based, and rooted in volunt
 
 | Metric | Value |
 |--------|-------|
-| Constitution readiness | **~43%** (constitution only) |
+| Constitution readiness | **~45%** (constitution only) |
 | Active volunteers | **0** |
 | Volunteer hours reported | **0** |
 | Funding sources | **0** |

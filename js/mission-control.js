@@ -233,7 +233,7 @@ async function initMissionControl() {
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
     <h2 class="mc-section-title">Volunteer & Funding <a href="/mission-control/volunteer-funding-constitution.html" class="mc-inline-link">Independence Charter #75 →</a></h2>
-    <p class="mc-bar-note">Build #75 — Volunteer & Funding Constitution. All-volunteer institution, financial independence, no special access. Educate first always. 0 volunteers · 0 funding sources. ~43% readiness.</p>
+    <p class="mc-bar-note">Build #75 — Volunteer & Funding Constitution. All-volunteer institution, financial independence, no special access. Educate first always. 0 volunteers · 0 funding sources. ~45% readiness.</p>
     <h2 class="mc-section-title">Reform Center <a href="/mission-control/arkansas-civic-innovation-reform.html" class="mc-inline-link">Civic Solutions #74 →</a></h2>
     <p class="mc-bar-note">Build #74 — Civic Innovation & Reform Center. Eight reform libraries, proposal framework, solution builder. Center explains; citizens decide. 0 analyses · 0/8 libraries. ~44% readiness.</p>
     <h2 class="mc-section-title">Research Institute <a href="/mission-control/arkansas-research-institute.html" class="mc-inline-link">Policy Lab #73 →</a></h2>
