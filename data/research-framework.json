@@ -1,0 +1,192 @@
+{
+  "version": "1.0",
+  "build": 10,
+  "updated": "2026-07-09",
+  "title": "Research Constitution v1.0",
+  "route": "/mission-control/research.html",
+  "evidence_registry": "/data/evidence-registry.json",
+  "claims_ledger": "/data/claims-ledger.json",
+  "source_library": "/library/",
+  "principle": "The credibility of the platform depends not on how much information it contains, but on how confidently readers can verify that information for themselves.",
+  "philosophy": [
+    {
+      "id": "primary-first",
+      "title": "Primary Sources First",
+      "description": "Original documents are the foundation — Supreme Court opinions, FEC records, legislative text, official datasets. Secondary sources supplement, never replace."
+    },
+    {
+      "id": "multiple-sources",
+      "title": "Multiple Independent Sources",
+      "description": "Important claims supported by more than one reliable source when practical. Shows consensus and legitimate disagreement."
+    },
+    {
+      "id": "transparency",
+      "title": "Transparency",
+      "description": "Readers can answer: where did this come from, when published, who produced it, primary or secondary, can I verify it?"
+    },
+    {
+      "id": "fact-vs-interpretation",
+      "title": "Distinguish Fact from Interpretation",
+      "description": "Clearly separate verified facts, legal holdings, historical events, statistics, scholarly analysis, policy arguments, and editorial interpretation."
+    },
+    {
+      "id": "continuous-review",
+      "title": "Continuous Review",
+      "description": "Research evolves as courts decide, scholarship publishes, spending changes, reforms pass, and primary materials emerge."
+    }
+  ],
+  "source_tiers": [
+    {
+      "tier": 1,
+      "id": "foundational",
+      "title": "Foundational Sources",
+      "authority": "Highest",
+      "examples": [
+        "Supreme Court opinions",
+        "U.S. Constitution",
+        "Federal statutes",
+        "State constitutions",
+        "Official court records",
+        "Official election data",
+        "Official legislative text"
+      ]
+    },
+    {
+      "tier": 2,
+      "id": "government",
+      "title": "Government & Institutional Sources",
+      "authority": "High",
+      "examples": [
+        "Federal Election Commission",
+        "Congressional Research Service",
+        "Government Accountability Office",
+        "State election offices",
+        "Legislative research agencies"
+      ]
+    },
+    {
+      "tier": 3,
+      "id": "academic",
+      "title": "Academic Sources",
+      "authority": "Scholarly",
+      "examples": [
+        "Peer-reviewed journals",
+        "University presses",
+        "Academic books",
+        "Law reviews",
+        "Research institutes with transparent methodologies"
+      ]
+    },
+    {
+      "tier": 4,
+      "id": "journalism",
+      "title": "Credible Journalism",
+      "authority": "Contextual",
+      "examples": [
+        "National investigative reporting",
+        "Major newspapers",
+        "Public broadcasting",
+        "Specialized legal reporting"
+      ],
+      "note": "Valuable context but should not substitute for primary documents."
+    },
+    {
+      "tier": 5,
+      "id": "supplemental",
+      "title": "Supplemental Commentary",
+      "authority": "Interpretive",
+      "examples": [
+        "Advocacy organizations",
+        "Think tanks",
+        "Public commentary",
+        "Educational organizations"
+      ],
+      "note": "Identified as interpretive rather than foundational evidence."
+    }
+  ],
+  "evidence_id_format": "EV-{6-digit zero-padded}",
+  "evidence_fields": [
+    "ev_id",
+    "title",
+    "author",
+    "publisher",
+    "publication_date",
+    "source_type",
+    "jurisdiction",
+    "topic",
+    "url",
+    "archive_url",
+    "tier",
+    "summary",
+    "related_mrids",
+    "related_content_ids",
+    "related_claims",
+    "review_status",
+    "workflow_stage"
+  ],
+  "citation_standards": {
+    "page_requirements": [
+      "Inline citations where appropriate",
+      "Reference section",
+      "Links to primary documents when available",
+      "Publication and update dates",
+      "Notes on significant source disagreements"
+    ],
+    "rule": "Clarity over citation density while remaining fully traceable."
+  },
+  "claim_verification_statuses": [
+    { "id": "verified", "label": "Verified", "description": "Claim confirmed against reliable source(s)." },
+    { "id": "multiple_sources", "label": "Multiple Independent Sources", "description": "Two or more independent sources agree." },
+    { "id": "primary_confirmed", "label": "Primary Source Confirmed", "description": "Directly supported by Tier 1 primary document." },
+    { "id": "requires_review", "label": "Requires Review", "description": "Source aging, dispute, or incomplete verification." },
+    { "id": "pending_update", "label": "Pending Update", "description": "New information available; update scheduled." },
+    { "id": "under_revision", "label": "Under Revision", "description": "Active editorial revision in progress." }
+  ],
+  "review_workflow": [
+    { "stage": 1, "id": "identified", "title": "Identified" },
+    { "stage": 2, "id": "collected", "title": "Collected" },
+    { "stage": 3, "id": "cataloged", "title": "Cataloged" },
+    { "stage": 4, "id": "summarized", "title": "Summarized" },
+    { "stage": 5, "id": "cross_checked", "title": "Cross-Checked" },
+    { "stage": 6, "id": "reviewed", "title": "Reviewed" },
+    { "stage": 7, "id": "approved", "title": "Approved" },
+    { "stage": 8, "id": "published", "title": "Published" },
+    { "stage": 9, "id": "scheduled_review", "title": "Scheduled for Future Review" }
+  ],
+  "source_library_browse": [
+    "Topic",
+    "Date",
+    "Court",
+    "State",
+    "Source type",
+    "Institution",
+    "Author",
+    "Publication",
+    "Related platform content"
+  ],
+  "dashboard_metrics": [
+    "total_sources_collected",
+    "primary_sources",
+    "government_sources",
+    "academic_sources",
+    "journalism_sources",
+    "awaiting_review",
+    "needing_updates",
+    "citation_coverage_pct",
+    "evidence_completeness_pct",
+    "research_gaps"
+  ],
+  "future_expansion": [
+    "New Supreme Court decisions",
+    "Additional campaign finance litigation",
+    "New state ballot initiatives",
+    "Updated political spending data",
+    "Emerging academic scholarship",
+    "Comparative international research"
+  ],
+  "governance": {
+    "rule": "Every factual claim must be traceable to an Evidence ID or documented as pending.",
+    "claims_ledger": "/data/claims-ledger.json",
+    "citation_guide": "/docs/CITATION_GUIDE.md"
+  }
+}

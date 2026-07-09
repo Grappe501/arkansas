@@ -1,5 +1,5 @@
 /**
- * Citizens United Mission Control v1.13.0 — Build #9
+ * Citizens United Mission Control v1.14.0 — Build #10
  */
 
 const isAdmin = () =>
@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Research Framework <a href="/mission-control/research.html" class="mc-inline-link">Evidence Registry →</a></h2>
+    <p class="mc-bar-note">Build #10 — Research Constitution v1.0, Evidence IDs, 5-tier source hierarchy, claim verification.</p>
     <h2 class="mc-section-title">Design System <a href="/mission-control/design.html" class="mc-inline-link">Design Language →</a></h2>
     <p class="mc-bar-note">Build #9 — institutional tokens, 14 components, <a href="/design-system/">showcase</a>.</p>
     <h2 class="mc-section-title">Citizen Journey <a href="/mission-control/journey.html" class="mc-inline-link">UX blueprint →</a></h2>
@@ -875,6 +877,158 @@ async function initDesignBlueprint() {
   initDevConsole(mc);
 }
 
+function renderEvidenceRow(item) {
+  const url = item.url
+    ? (item.url.startsWith('http') ? `<a href="${item.url}" target="_blank" rel="noopener">↗</a>` : `<a href="${item.url}">↗</a>`)
+    : '';
+  const mrids = item.related_mrids?.length
+    ? item.related_mrids.map(m => `<a href="/mission-control/mrid.html#${m}">${m}</a>`).join(', ')
+    : '—';
+  return `
+    <tr class="mc-table__row--${item.review_status}" id="${item.ev_id}" data-ev="${item.ev_id}">
+      <td><code>${item.ev_id}</code></td>
+      <td>T${item.tier}</td>
+      <td>${item.source_type}</td>
+      <td>${item.title}</td>
+      <td>${item.jurisdiction || '—'}</td>
+      <td>${item.review_status}</td>
+      <td>${item.workflow_stage}</td>
+      <td>${mrids}</td>
+      <td>${url}</td>
+    </tr>`;
+}
+
+function initEvidenceFilters(items, onFilter) {
+  const root = document.getElementById('mc-ev-filters');
+  if (!root) return;
+  const tiers = [...new Set(items.map(i => i.tier))].sort((a, b) => a - b);
+  const types = [...new Set(items.map(i => i.source_type))].sort();
+  const statuses = [...new Set(items.map(i => i.review_status))].sort();
+
+  root.innerHTML = `
+    <label>Tier <select id="mc-ev-tier"><option value="">All</option>
+      ${tiers.map(t => `<option value="${t}">Tier ${t}</option>`).join('')}</select></label>
+    <label>Type <select id="mc-ev-type"><option value="">All</option>
+      ${types.map(t => `<option value="${t}">${t}</option>`).join('')}</select></label>
+    <label>Review <select id="mc-ev-review"><option value="">All</option>
+      ${statuses.map(s => `<option value="${s}">${s}</option>`).join('')}</select></label>
+    <label>Search <input type="search" id="mc-ev-search" placeholder="EV-ID or title…"></label>`;
+
+  const apply = () => {
+    const tier = root.querySelector('#mc-ev-tier').value;
+    const type = root.querySelector('#mc-ev-type').value;
+    const review = root.querySelector('#mc-ev-review').value;
+    const q = root.querySelector('#mc-ev-search').value.toLowerCase();
+    const filtered = items.filter(i => {
+      if (tier && String(i.tier) !== tier) return false;
+      if (type && i.source_type !== type) return false;
+      if (review && i.review_status !== review) return false;
+      if (q && !i.ev_id.toLowerCase().includes(q) && !i.title.toLowerCase().includes(q) && !i.topic?.toLowerCase().includes(q)) return false;
+      return true;
+    });
+    onFilter(filtered);
+  };
+
+  root.querySelectorAll('select, input').forEach(el => {
+    el.addEventListener('input', apply);
+    el.addEventListener('change', apply);
+  });
+}
+
+async function initResearchBlueprint() {
+  const root = document.getElementById('mc-research-root');
+  if (!root) return;
+
+  const [rfRes, evRes, mcRes] = await Promise.all([
+    fetch('/data/research-framework.json'),
+    fetch('/data/evidence-registry.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const rf = await rfRes.json();
+  const ev = await evRes.json();
+  const mc = await mcRes.json();
+  const s = ev.summary;
+
+  const renderTable = (items) => {
+    const el = document.getElementById('mc-ev-table-body');
+    if (!el) return;
+    el.innerHTML = items.map(renderEvidenceRow).join('');
+    const count = document.getElementById('mc-ev-count');
+    if (count) count.textContent = `${items.length} of ${ev.items.length} sources`;
+  };
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Research Dashboard</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #10 · ${rf.title}</p>
+      <h1>Research &amp; Evidence Framework</h1>
+      <p class="mc-header__question">${rf.principle}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Total Sources</div><div class="mc-stat__value">${s.total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Tier 1 Primary</div><div class="mc-stat__value">${s.primary_sources}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Government</div><div class="mc-stat__value">${s.government_sources}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Academic</div><div class="mc-stat__value">${s.academic_sources}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Awaiting Review</div><div class="mc-stat__value">${s.awaiting_review}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">V1 Target</div><div class="mc-stat__value">~${s.v1_target}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Citation Coverage</div><div class="mc-stat__value">${s.citation_coverage_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Evidence Complete</div><div class="mc-stat__value">${s.evidence_completeness_pct}%</div></div>
+    </div>
+    <section class="mc-card">
+      <h3>Research Philosophy</h3>
+      <ul class="mc-deliverables">${rf.philosophy.map(p => `<li><strong>${p.title}</strong> — ${p.description}</li>`).join('')}</ul>
+    </section>
+    <h2 class="mc-section-title">Source Hierarchy (5 Tiers)</h2>
+    <div class="mc-card">
+      <table class="mc-table">
+        <thead><tr><th>Tier</th><th>Category</th><th>Authority</th><th>Examples</th></tr></thead>
+        <tbody>${rf.source_tiers.map(t => `
+          <tr><td>${t.tier}</td><td>${t.title}</td><td>${t.authority}</td>
+          <td>${t.examples.slice(0, 3).join('; ')}${t.note ? ` <em>(${t.note})</em>` : ''}</td></tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+    <h2 class="mc-section-title">Review Workflow</h2>
+    <div class="mc-dep-map">
+      ${rf.review_workflow.map((w, i) => `
+        <span class="mc-dep-map__node"><span class="mc-dep-map__num">${w.stage}</span><span class="mc-dep-map__label">${w.title}</span></span>
+        ${i < rf.review_workflow.length - 1 ? '<span class="mc-dep-map__arrow">→</span>' : ''}`).join('')}
+    </div>
+    <h2 class="mc-section-title">Claim Verification Statuses</h2>
+    <ul class="mc-deliverables">${rf.claim_verification_statuses.map(v => `<li><strong>${v.label}</strong> — ${v.description}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Research Gaps</h2>
+    <ul class="mc-deliverables">${s.research_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Evidence Registry</h2>
+    <div class="mc-inv-filters" id="mc-ev-filters"></div>
+    <p class="mc-bar-note" id="mc-ev-count">${ev.items.length} sources</p>
+    <div class="mc-card mc-inv-table-wrap">
+      <table class="mc-table mc-inv-table">
+        <thead><tr><th>EV-ID</th><th>Tier</th><th>Type</th><th>Title</th><th>Jurisdiction</th><th>Review</th><th>Workflow</th><th>MRIDs</th><th>URL</th></tr></thead>
+        <tbody id="mc-ev-table-body"></tbody>
+      </table>
+    </div>
+    <p class="mc-bar-note">
+      <a href="/docs/RESEARCH_CONSTITUTION.md">RESEARCH_CONSTITUTION.md</a> ·
+      <a href="/data/evidence-registry.json">Evidence JSON</a> ·
+      <a href="/data/claims-ledger.json">Claims ledger</a> ·
+      <a href="/library/">Source Library</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  renderTable(ev.items);
+  initEvidenceFilters(ev.items, renderTable);
+  initDevConsole(mc);
+
+  const hash = window.location.hash.slice(1);
+  if (hash) {
+    const row = document.getElementById(hash);
+    if (row) {
+      row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      row.classList.add('mc-inv-highlight');
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -884,4 +1038,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initMridDashboard();
   initJourneyBlueprint();
   initDesignBlueprint();
+  initResearchBlueprint();
 });

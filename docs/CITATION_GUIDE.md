@@ -1,5 +1,7 @@
 # Citation & Source Guide
 
+**Research Constitution:** [RESEARCH_CONSTITUTION.md](RESEARCH_CONSTITUTION.md) · **Evidence Registry:** `data/evidence-registry.json` · **Dashboard:** [/mission-control/research.html](/mission-control/research.html)
+
 ## Standard
 
 Every L4 research file and claims-ledger entry must include:
@@ -12,14 +14,14 @@ Every L4 research file and claims-ledger entry must include:
 
 ## Source Type Tags
 
-| Tag | Examples |
-|-----|----------|
-| `court` | Supreme Court opinions, lower court rulings |
-| `government` | FEC, Secretary of State, Congress.gov |
-| `news` | AP, major outlets |
-| `academic` | Law reviews, peer-reviewed studies |
-| `ngo` | Ballotpedia, OpenSecrets, American Promise |
-| `primary` | Statutes, initiative text, legislative acts |
+| Tag | Tier | Examples |
+|-----|------|----------|
+| `court` | 1 | Supreme Court opinions, lower court rulings |
+| `primary` | 1 | Statutes, initiative text, legislative acts |
+| `government` | 2 | FEC, Secretary of State, Congress.gov |
+| `academic` | 3 | Law reviews, peer-reviewed studies |
+| `news` / `journalism` | 4 | AP, major outlets |
+| `ngo` | 5 | Ballotpedia, OpenSecrets, American Promise |
 
 ## Preferred Sources
 
@@ -40,9 +42,13 @@ Major factual claims are tracked in `data/claims-ledger.json` with:
 
 - `claim_id`
 - `claim_text`
+- `evidence_ids[]` — links to Evidence Registry (`EV-000001`, …)
 - `sources[]`
+- `verification_status`
 - `last_verified`
 - `hall` / `topic`
+
+Register new sources in `data/evidence-registry.json` before citing.
 
 ## Live Research (Ernie Entries)
 

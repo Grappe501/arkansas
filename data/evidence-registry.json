@@ -1,0 +1,400 @@
+{
+  "version": "1.0",
+  "build": 10,
+  "updated": "2026-07-09",
+  "title": "Evidence Registry",
+  "data_file": "/data/evidence-registry.json",
+  "id_format": "EV-{6-digit}",
+  "principle": "Every research asset receives a permanent Evidence ID. Nothing cited without traceability.",
+  "summary": {
+    "total": 14,
+    "by_tier": {
+      "1": 2,
+      "2": 7,
+      "4": 1,
+      "5": 4
+    },
+    "by_type": {
+      "court": 1,
+      "primary": 1,
+      "government": 2,
+      "ngo": 4,
+      "journalism": 1,
+      "platform": 5
+    },
+    "primary_sources": 2,
+    "government_sources": 2,
+    "academic_sources": 0,
+    "journalism_sources": 1,
+    "awaiting_review": 4,
+    "needing_updates": 4,
+    "published": 10,
+    "citation_coverage_pct": 12,
+    "evidence_completeness_pct": 3,
+    "v1_target": 500,
+    "research_gaps": [
+      "Buckley v. Valeo primary opinion",
+      "McConnell v. FEC materials",
+      "FEC spending datasets (2010-present)",
+      "Peer-reviewed campaign finance scholarship",
+      "Oral argument transcripts (Citizens United)",
+      "State reform legislative text beyond MT/HI"
+    ]
+  },
+  "browse_axes": [
+    "topic",
+    "date",
+    "court",
+    "state",
+    "source_type",
+    "institution",
+    "author",
+    "publication",
+    "related_content"
+  ],
+  "items": [
+    {
+      "ev_id": "EV-000001",
+      "title": "Citizens United v. Federal Election Commission \u00e2\u20ac\u201d Opinion of the Court",
+      "author": "Anthony M. Kennedy (majority)",
+      "publisher": "Supreme Court of the United States",
+      "publication_date": "2010-01-21",
+      "source_type": "court",
+      "jurisdiction": "Federal",
+      "topic": "Citizens United case",
+      "url": "https://www.supremecourt.gov/opinions/09pdf/08-205.pdf",
+      "archive_url": null,
+      "tier": 1,
+      "summary": "Foundational Supreme Court opinion holding that independent political spending by corporations and unions is protected speech.",
+      "related_mrids": [
+        "CASE-001",
+        "CASE-002"
+      ],
+      "related_content_ids": [
+        "CASE-001"
+      ],
+      "related_claims": [
+        "claim-001"
+      ],
+      "review_status": "approved",
+      "workflow_stage": "published",
+      "verification": "primary_confirmed"
+    },
+    {
+      "ev_id": "EV-000002",
+      "title": "U.S. Constitution",
+      "author": null,
+      "publisher": "United States Government",
+      "publication_date": "1789-06-21",
+      "source_type": "primary",
+      "jurisdiction": "Federal",
+      "topic": "Constitutional principles",
+      "url": "https://www.archives.gov/founding-docs/constitution",
+      "archive_url": null,
+      "tier": 1,
+      "summary": "Foundational document for First Amendment and corporate-personhood analysis.",
+      "related_mrids": [
+        "CONST-001"
+      ],
+      "related_content_ids": [],
+      "related_claims": [],
+      "review_status": "approved",
+      "workflow_stage": "published",
+      "verification": "primary_confirmed"
+    },
+    {
+      "ev_id": "EV-000003",
+      "title": "Federal Election Commission \u00e2\u20ac\u201d Official Website",
+      "author": null,
+      "publisher": "Federal Election Commission",
+      "publication_date": null,
+      "source_type": "government",
+      "jurisdiction": "Federal",
+      "topic": "Campaign finance data",
+      "url": "https://www.fec.gov/",
+      "archive_url": null,
+      "tier": 2,
+      "summary": "Official federal campaign finance disclosure and enforcement agency.",
+      "related_mrids": [
+        "MONEY-001",
+        "DATA-001"
+      ],
+      "related_content_ids": [],
+      "related_claims": [],
+      "review_status": "approved",
+      "workflow_stage": "published",
+      "verification": "verified"
+    },
+    {
+      "ev_id": "EV-000004",
+      "title": "Montana Secretary of State \u00e2\u20ac\u201d Petition Signatures for Proposed Ballot Issues",
+      "author": null,
+      "publisher": "Montana Secretary of State",
+      "publication_date": "2026-06-01",
+      "source_type": "government",
+      "jurisdiction": "Montana",
+      "topic": "Montana Initiative 194",
+      "url": "https://sosmt.gov/petition-signatures-for-proposed-statewide-ballot-issues-submitted-to-montana-counties-election-officials-to-verify-and-certify/",
+      "archive_url": null,
+      "tier": 2,
+      "summary": "Official state record of Initiative 194 signature submission and county verification process.",
+      "related_mrids": [
+        "REFORM-001"
+      ],
+      "related_content_ids": [
+        "LAND-001"
+      ],
+      "related_claims": [
+        "claim-002"
+      ],
+      "review_status": "approved",
+      "workflow_stage": "published",
+      "verification": "verified"
+    },
+    {
+      "ev_id": "EV-000005",
+      "title": "Montana Initiative 194 \u00e2\u20ac\u201d Exclude Political Spending from Artificial Persons' Charter Powers",
+      "author": null,
+      "publisher": "Ballotpedia",
+      "publication_date": "2026-01-01",
+      "source_type": "ngo",
+      "jurisdiction": "Montana",
+      "topic": "Montana Initiative 194",
+      "url": "https://ballotpedia.org/Montana_Initiative_194%2C_Exclude_Political_Spending_from_Artificial_Persons%E2%80%99_Charter_Powers_Initiative_%282026%29",
+      "archive_url": null,
+      "tier": 5,
+      "summary": "Secondary reference for initiative text, status, and procedural history. Cross-check against state filings.",
+      "related_mrids": [
+        "REFORM-001"
+      ],
+      "related_content_ids": [
+        "LAND-001"
+      ],
+      "related_claims": [
+        "claim-002"
+      ],
+      "review_status": "reviewed",
+      "workflow_stage": "published",
+      "verification": "verified"
+    },
+    {
+      "ev_id": "EV-000006",
+      "title": "Hawaii corporate influence law \u00e2\u20ac\u201d Act 11 coverage",
+      "author": "Associated Press",
+      "publisher": "AP News",
+      "publication_date": "2026-05-15",
+      "source_type": "journalism",
+      "jurisdiction": "Hawaii",
+      "topic": "Hawaii Act 11",
+      "url": "https://apnews.com/article/71a28bc7e8f6e0279b31e999f222519a",
+      "archive_url": null,
+      "tier": 4,
+      "summary": "Journalistic account of Hawaii Act 11 corporate charter restrictions. Requires legislative text confirmation.",
+      "related_mrids": [
+        "REFORM-002"
+      ],
+      "related_content_ids": [
+        "LAND-001"
+      ],
+      "related_claims": [
+        "claim-003"
+      ],
+      "review_status": "requires_review",
+      "workflow_stage": "cross_checked",
+      "verification": "requires_review"
+    },
+    {
+      "ev_id": "EV-000007",
+      "title": "OpenSecrets \u00e2\u20ac\u201d Center for Responsive Politics",
+      "author": null,
+      "publisher": "OpenSecrets (CRP)",
+      "publication_date": null,
+      "source_type": "ngo",
+      "jurisdiction": "Federal",
+      "topic": "Political spending data",
+      "url": "https://www.opensecrets.org/",
+      "archive_url": null,
+      "tier": 5,
+      "summary": "Aggregated campaign finance data derived from FEC filings. Supplemental to official FEC records.",
+      "related_mrids": [
+        "MONEY-001",
+        "DATA-001"
+      ],
+      "related_content_ids": [],
+      "related_claims": [],
+      "review_status": "approved",
+      "workflow_stage": "published",
+      "verification": "verified"
+    },
+    {
+      "ev_id": "EV-000008",
+      "title": "Ballotpedia \u00e2\u20ac\u201d Election and ballot measure reference",
+      "author": null,
+      "publisher": "Ballotpedia",
+      "publication_date": null,
+      "source_type": "ngo",
+      "jurisdiction": "Multi-state",
+      "topic": "Ballot initiatives",
+      "url": "https://ballotpedia.org/",
+      "archive_url": null,
+      "tier": 5,
+      "summary": "Encyclopedic secondary reference for ballot measures and election procedures.",
+      "related_mrids": [
+        "REFORM-001"
+      ],
+      "related_content_ids": [],
+      "related_claims": [],
+      "review_status": "approved",
+      "workflow_stage": "published",
+      "verification": "verified"
+    },
+    {
+      "ev_id": "EV-000009",
+      "title": "American Promise \u00e2\u20ac\u201d Constitutional amendment advocacy",
+      "author": null,
+      "publisher": "American Promise",
+      "publication_date": null,
+      "source_type": "ngo",
+      "jurisdiction": "Federal",
+      "topic": "Constitutional amendment reform",
+      "url": "https://americanpromise.net/",
+      "archive_url": null,
+      "tier": 5,
+      "summary": "Advocacy organization perspective on federal amendment path. Interpretive, not foundational.",
+      "related_mrids": [
+        "REFORM-003",
+        "ACTION-001"
+      ],
+      "related_content_ids": [],
+      "related_claims": [],
+      "review_status": "reviewed",
+      "workflow_stage": "published",
+      "verification": "verified"
+    },
+    {
+      "ev_id": "EV-000010",
+      "title": "Legal case inventory",
+      "author": "Citizens Facts editorial",
+      "publisher": "Citizens Facts",
+      "publication_date": "2026-07-09",
+      "source_type": "platform",
+      "jurisdiction": "Federal",
+      "topic": "Case law inventory",
+      "url": "/data/inventories/cases.json",
+      "archive_url": null,
+      "tier": 2,
+      "summary": "Platform-maintained inventory of relevant cases with links to primary opinions.",
+      "related_mrids": [
+        "CASE-001",
+        "DATA-002"
+      ],
+      "related_content_ids": [],
+      "related_claims": [],
+      "review_status": "under_revision",
+      "workflow_stage": "summarized",
+      "verification": "pending_update"
+    },
+    {
+      "ev_id": "EV-000011",
+      "title": "Claims ledger",
+      "author": "Citizens Facts editorial",
+      "publisher": "Citizens Facts",
+      "publication_date": "2026-07-09",
+      "source_type": "platform",
+      "jurisdiction": "Multi-state",
+      "topic": "Claim verification",
+      "url": "/data/claims-ledger.json",
+      "archive_url": null,
+      "tier": 2,
+      "summary": "Machine-readable ledger of verified factual claims with source links.",
+      "related_mrids": [
+        "GOV-003"
+      ],
+      "related_content_ids": [],
+      "related_claims": [
+        "claim-001",
+        "claim-002",
+        "claim-003"
+      ],
+      "review_status": "approved",
+      "workflow_stage": "published",
+      "verification": "verified"
+    },
+    {
+      "ev_id": "EV-000012",
+      "title": "Historical timeline inventory",
+      "author": "Citizens Facts editorial",
+      "publisher": "Citizens Facts",
+      "publication_date": "2026-07-09",
+      "source_type": "platform",
+      "jurisdiction": "Federal",
+      "topic": "Campaign finance history",
+      "url": "/data/inventories/timeline.json",
+      "archive_url": null,
+      "tier": 2,
+      "summary": "Structured timeline events awaiting full primary-source citation per event.",
+      "related_mrids": [
+        "HIST-001",
+        "HIST-002"
+      ],
+      "related_content_ids": [
+        "HIST-001"
+      ],
+      "related_claims": [],
+      "review_status": "requires_review",
+      "workflow_stage": "cataloged",
+      "verification": "requires_review"
+    },
+    {
+      "ev_id": "EV-000013",
+      "title": "Political spending data plan",
+      "author": "Citizens Facts editorial",
+      "publisher": "Citizens Facts",
+      "publication_date": "2026-07-09",
+      "source_type": "platform",
+      "jurisdiction": "Federal",
+      "topic": "Spending visualization",
+      "url": "/data/inventories/spending.json",
+      "archive_url": null,
+      "tier": 2,
+      "summary": "Data visualization schema and source plan. Charts not yet built.",
+      "related_mrids": [
+        "MONEY-001",
+        "DATA-001"
+      ],
+      "related_content_ids": [],
+      "related_claims": [],
+      "review_status": "identified",
+      "workflow_stage": "identified",
+      "verification": "pending_update"
+    },
+    {
+      "ev_id": "EV-000014",
+      "title": "Entry 001 \u00e2\u20ac\u201d Montana & Hawaii live research file",
+      "author": "Ernie",
+      "publisher": "Citizens Facts",
+      "publication_date": "2026-07-09",
+      "source_type": "platform",
+      "jurisdiction": "Montana, Hawaii",
+      "topic": "State reform comparison",
+      "url": "/content/entries/001-montana-hawaii-citizens-united.json",
+      "archive_url": null,
+      "tier": 2,
+      "summary": "Canonical structured research for Montana Initiative 194 and Hawaii Act 11 comparison.",
+      "related_mrids": [
+        "REFORM-001",
+        "REFORM-002"
+      ],
+      "related_content_ids": [
+        "LAND-001"
+      ],
+      "related_claims": [
+        "claim-002",
+        "claim-003"
+      ],
+      "review_status": "reviewed",
+      "workflow_stage": "published",
+      "verification": "multiple_sources"
+    }
+  ]
+}

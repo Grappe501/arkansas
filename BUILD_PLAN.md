@@ -4,11 +4,11 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.13.0 · **Design:** [/design-system/](/design-system/) · **OS:** [Mission Control](/mission-control/)  
-**Build #9:** ✅ Design System · **Build #8:** ✅ UX Journey · **Build #7:** ✅ MRID  
+**Current version:** 1.14.0 · **Research:** [/mission-control/research.html](/mission-control/research.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #10:** ✅ Research Framework · **Build #9:** ✅ Design System · **Build #8:** ✅ UX Journey  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
-> **Five registries + UX + Design:** Phase · Architecture · Content · MRID · Citizen Journey · **Design Language**
+> **Seven registries + UX + Design + Research:** Phase · Architecture · Content · MRID · Citizen Journey · Design Language · **Research Constitution**
 
 ---
 

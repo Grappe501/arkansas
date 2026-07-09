@@ -32,4 +32,4 @@ Tokens and components are **live**. Interactive experiences and full trust-bar i
 
 ## Next Recommended Build
 
-**Build #10 — First Deep Content** — L2 articles using design system components and MRIDs.
+**Build #11 — First Deep Content** — L2 articles using design system components, Evidence IDs, and MRIDs (`HIST-002`, `CASE-002`).

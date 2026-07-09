@@ -1,12 +1,14 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.0",
   "claims": [
     {
       "id": "claim-001",
       "claim_text": "Citizens United held that government may not restrict independent political spending by corporations and unions.",
       "hall": "what-court-decided",
+      "evidence_ids": ["EV-000001"],
+      "verification_status": "primary_confirmed",
       "sources": [
-        { "type": "court", "title": "Citizens United v. FEC, 558 U.S. 310 (2010)", "url": "https://www.supremecourt.gov/opinions/09pdf/08-205.pdf" }
+        { "type": "court", "title": "Citizens United v. FEC, 558 U.S. 310 (2010)", "url": "https://www.supremecourt.gov/opinions/09pdf/08-205.pdf", "ev_id": "EV-000001" }
       ],
       "last_verified": "2026-07-09"
     },
@@ -14,8 +16,11 @@
       "id": "claim-002",
       "claim_text": "Montana Initiative 194 would prohibit artificial persons from contributing to campaigns, ballot measures, or political parties.",
       "hall": "montana-hawaii",
+      "evidence_ids": ["EV-000004", "EV-000005"],
+      "verification_status": "multiple_sources",
       "sources": [
-        { "type": "ngo", "title": "Ballotpedia — Montana Initiative 194", "url": "https://ballotpedia.org/Montana_Initiative_194%2C_Exclude_Political_Spending_from_Artificial_Persons%E2%80%99_Charter_Powers_Initiative_%282026%29" }
+        { "type": "ngo", "title": "Ballotpedia — Montana Initiative 194", "url": "https://ballotpedia.org/Montana_Initiative_194%2C_Exclude_Political_Spending_from_Artificial_Persons%E2%80%99_Charter_Powers_Initiative_%282026%29", "ev_id": "EV-000005" },
+        { "type": "government", "title": "Montana SOS — Petition Signatures", "url": "https://sosmt.gov/petition-signatures-for-proposed-statewide-ballot-issues-submitted-to-montana-counties-election-officials-to-verify-and-certify/", "ev_id": "EV-000004" }
       ],
       "last_verified": "2026-07-09"
     },
@@ -23,8 +28,10 @@
       "id": "claim-003",
       "claim_text": "Hawaii Act 11 restricts corporate election spending; effective July 1, 2027.",
       "hall": "montana-hawaii",
+      "evidence_ids": ["EV-000006", "EV-000014"],
+      "verification_status": "requires_review",
       "sources": [
-        { "type": "news", "title": "AP News — Hawaii corporate influence law", "url": "https://apnews.com/article/71a28bc7e8f6e0279b31e999f222519a" }
+        { "type": "news", "title": "AP News — Hawaii corporate influence law", "url": "https://apnews.com/article/71a28bc7e8f6e0279b31e999f222519a", "ev_id": "EV-000006" }
       ],
       "last_verified": "2026-07-09"
     }

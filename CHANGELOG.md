@@ -13,6 +13,14 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.14.0] - 2026-07-09 — Build #10 Complete
+
+### Build #10: Master Research & Evidence Framework
+- **Research Constitution v1.0** — 5 principles, 5-tier source hierarchy, claim verification
+- `data/research-framework.json` + `data/evidence-registry.json` (14 Evidence IDs)
+- `docs/RESEARCH_CONSTITUTION.md` · Research dashboard at `/mission-control/research.html`
+- Claims ledger cross-linked to Evidence IDs · Source Library trust bar
+
 ## [1.13.0] - 2026-07-09 — Build #9 Complete
 
 ### Build #9: Visual Design System & Experience Blueprint
