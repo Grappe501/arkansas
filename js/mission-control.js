@@ -233,7 +233,7 @@ async function initMissionControl() {
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
     <h2 class="mc-section-title">Arkansas Communications <a href="/mission-control/arkansas-communications.html" class="mc-inline-link">One Voice #72 →</a></h2>
-    <p class="mc-bar-note">Build #72 — Communications & Public Education System. One institutional voice, content pyramid, editorial calendar. Education before persuasion. 0 articles · 0 videos · 0 emails. ~41% readiness.</p>
+    <p class="mc-bar-note">Build #72 — Communications & Public Education System. One institutional voice, content pyramid, editorial calendar. Education before persuasion. 0 articles · 0 videos · 0 emails. ~42% readiness.</p>
     <h2 class="mc-section-title">Community Listening <a href="/mission-control/arkansas-community-listening.html" class="mc-inline-link">Listening Network #71 →</a></h2>
     <p class="mc-bar-note">Build #71 — Community Intelligence & Listening System. Six sources, question observatory, pulse reports. Learn from Arkansas. 0 questions · 0 leader reports · 0 pulse reports. ~41% readiness.</p>
     <h2 class="mc-section-title">Arkansas Command Strategy <a href="/mission-control/arkansas-command-strategy.html" class="mc-inline-link">Statewide Execution #70 →</a></h2>

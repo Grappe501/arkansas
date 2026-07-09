@@ -20,7 +20,7 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Education before persuasion; five objectives: Explain, Connect, Invite, Equip, Strengthen
 - Ten channels, nine-layer content pyramid, editorial calendar, six-step review process
 - Institutional voice: calm, evidence-based, transparent, welcoming
-- Honest: 0 articles · 0 videos · 0 emails · calendar not live · review not operational · ~41% readiness
+- Honest: 0 articles · 0 videos · 0 emails · calendar not live · review not operational · ~42% readiness
 - MC dashboard: `/mission-control/arkansas-communications.html`
 
 ## [1.75.0] - 2026-07-09 — Build #71 Arkansas Community Listening

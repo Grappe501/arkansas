@@ -31,7 +31,7 @@ Build #72 establishes the **Communications & Public Education System** — one v
 
 | Metric | Value |
 |--------|-------|
-| Communications readiness | **41%** |
+| Communications readiness | **42%** |
 | Articles published (tracked) | **0** |
 | Videos released | **0** |
 | Emails sent | **0** |

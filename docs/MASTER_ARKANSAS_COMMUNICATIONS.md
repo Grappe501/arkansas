@@ -114,7 +114,7 @@ That is how a communications strategy becomes a public service. That is how a pu
 
 | Metric | Value |
 |--------|-------|
-| Communications system readiness | **~41%** (constitution only) |
+| Communications system readiness | **~42%** (constitution only) |
 | Articles published (tracked) | **0** |
 | Videos released | **0** |
 | Emails sent | **0** |
