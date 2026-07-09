@@ -26,7 +26,7 @@ tl = cip.get('master_timeline', {})
 
 
 
-mc['version'] = '2.05.29'
+mc['version'] = '2.05.30'
 
 mc['updated'] = '2026-07-09'
 
@@ -96,21 +96,21 @@ for bar in mc['progress_bars']:
 
 mc['briefing'] = {
 
-    'what_built': 'IMP-01–29 documented — sustainability, knowledge transfer & continuity (58%)',
+    'what_built': 'IMP-01–30 documented — statewide launch strategy (60% MILESTONE)',
 
-    'building_now': 'IMP-30 Launch Strategy & Statewide Rollout next; Sprint Zero pending',
+    'building_now': 'IMP-31 AI Orchestration & Agent Collaboration next; Sprint Zero pending',
 
     'blocked': ['Sprint Zero not complete', '0/50 code-implemented', f"{s.get('days_to_software', 0)} days to software target"],
 
     'ready_public': [
 
-        'Sustainability & Continuity', 'sustainability-continuity-manifest.json', 'Succession & playbooks',
+        'Launch Strategy', 'launch-strategy-manifest.json', 'Four-phase rollout plan',
 
-        'Governance & PMO', 'Oct 1 county sustainability objective',
+        'Statewide readiness certification', 'County-by-county launch framework',
 
     ],
 
-    'next': 'IMP-30 — Master Launch Strategy, Statewide Rollout, Adoption Campaign & January 2027 Operational Readiness',
+    'next': 'IMP-31 — Master AI Orchestration, Agent Collaboration & Autonomous Institutional Assistance',
 
 }
 

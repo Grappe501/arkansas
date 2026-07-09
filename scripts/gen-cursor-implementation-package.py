@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 29  # IMP-01 through IMP-29 (doctrinal)
+steps_documented = 30  # IMP-01 through IMP-30 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3335,7 +3335,7 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'institutional_analytics', 'institutional_automation', 'public_digital_experience',
     'mobile_field_operations', 'institutional_digital_library',
     'institutional_integration_platform', 'institutional_security_trust',
-    'institutional_governance_pmo', 'institutional_sustainability_continuity',
+    'institutional_sustainability_continuity', 'institutional_launch_strategy',
 ]
 
 RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
@@ -5323,6 +5323,188 @@ SUSTAINABILITY_CONTINUITY_MANIFEST = {
     'implemented': False,
 }
 
+LAUNCH_PHILOSOPHY_VALUES = [
+    'launch_deliberately', 'launch_confidently', 'launch_measurably',
+    'launch_county_by_county', 'build_momentum_not_headlines', 'adoption_not_publicity',
+]
+
+LAUNCH_PHASES = [
+    {
+        'id': 'phase_1_software_complete',
+        'title': 'Software Complete',
+        'target_date': software_completion_date,
+        'objectives': [
+            'production_deployment', 'infrastructure_validation', 'mission_control_operational',
+            'localbrains_operational', 'knowledge_platform_operational', 'academy_operational',
+            'county_systems_live', 'software_stable',
+        ],
+    },
+    {
+        'id': 'phase_2_county_expansion',
+        'title': 'County Expansion',
+        'target_range': f'{software_completion_date} through {county_milestone_date}',
+        'objectives': [
+            '75_counties_represented', '75_counties_with_partnerships', 'education_leaders',
+            'community_conversations', 'volunteer_onboarding', 'county_academy_launch',
+            'county_dashboards', 'mission_control_daily_monitoring',
+        ],
+    },
+    {
+        'id': 'phase_3_community_growth',
+        'title': 'Community Growth',
+        'target_range': f'{county_milestone_date} through 2026-12-31',
+        'objectives': [
+            'expand_leadership', 'grow_academy_participation', 'increase_volunteer_activity',
+            'increase_organization_participation', 'expand_community_conversations',
+            'increase_public_awareness', 'move_toward_15pct_participation',
+        ],
+    },
+    {
+        'id': 'phase_4_institutional_readiness',
+        'title': 'Institutional Readiness',
+        'target_date': organizational_readiness_date,
+        'objectives': [
+            'statewide_operational_consistency', 'leadership_confidence', 'volunteer_maturity',
+            'research_maturity', 'mission_control_optimization', 'executive_readiness',
+            'institutional_certification', 'institution_fully_operational',
+        ],
+    },
+]
+
+COUNTY_LAUNCH_FRAMEWORK = [
+    'county_dashboard', 'education_leader', 'organization_partners', 'volunteer_onboarding',
+    'community_calendar', 'academy_resources', 'research_profile', 'community_conversation',
+    'mission_control_certification',
+]
+
+CITY_LAUNCH_FRAMEWORK = [
+    'leadership_team', 'volunteer_network', 'neighborhood_mapping', 'academy',
+    'community_conversations', 'organizations', 'local_communications', 'mission_control_metrics',
+]
+
+ORGANIZATION_ONBOARDING_PARTNER_TYPES = [
+    'libraries', 'historical_societies', 'community_colleges', 'universities',
+    'community_organizations', 'educational_nonprofits', 'youth_organizations',
+    'civic_organizations',
+]
+
+EDUCATION_LEADER_DEPLOYMENT_PRIORITIES = [
+    'complete_certification', 'county_assignment', 'presentation_scheduling', 'mentorship',
+    'volunteer_recruitment', 'community_conversations', 'leadership_coaching',
+]
+
+VOLUNTEER_ACTIVATION_ITEMS = [
+    'orientation', 'academy_enrollment', 'mentor', 'county_assignment',
+    'initial_project', 'community_invitation', 'ai_assistant',
+]
+
+PUBLIC_AWARENESS_EMPHASIS = [
+    'learning', 'community', 'research', 'trust', 'local_participation',
+    'community_conversations', 'educational_opportunities',
+]
+
+LAUNCH_SUCCESS_METRICS = [
+    'software_stability', 'county_representation', 'organization_partnerships',
+    'education_leaders', 'volunteer_growth', 'academy_participation',
+    'community_conversations', 'website_engagement', '15pct_participation',
+    '200000_connected_arkansans', 'executive_readiness',
+]
+
+DAILY_EXECUTIVE_BRIEFING_ITEMS = [
+    'county_progress', 'volunteer_growth', 'partnership_growth',
+    'education_leader_deployment', 'technology_status', 'upcoming_milestones',
+    'risks', 'recommended_actions',
+]
+
+STATEWIDE_READINESS_CERTIFICATION = [
+    'software_complete', 'mission_control_healthy', '75_counties_represented',
+    '75_counties_with_organizational_partnerships', 'county_dashboards_operational',
+    'academy_functioning_statewide', 'volunteer_network_active',
+    'communications_functioning', 'knowledge_platform_populated', 'security_validated',
+    'quality_certification_completed', 'executive_approval',
+]
+
+LAUNCH_CELEBRATION_MILESTONES = [
+    'first_county_launched', '25_counties', '50_counties', '75_counties',
+    '100_education_leaders', '1000_volunteers', '100000_connected_arkansans',
+    '200000_connected_arkansans',
+]
+
+LAUNCH_STRATEGY_SYSTEM_CHAIN = [
+    'mission_control', 'governance', 'pmo', 'knowledge_platform', 'research_institute',
+    'community_education_academy', 'volunteer_network', 'coalition_network',
+    'county_operating_system', 'city_operating_system', 'neighborhood_operating_system',
+    'communications', 'ai_localbrains',
+]
+
+LAUNCH_STRATEGY_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-30',
+    'updated': today,
+    'title': 'Master Launch Strategy, Statewide Rollout, Adoption Campaign & January 2027 Operational Readiness',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_30_LAUNCH_STRATEGY.md',
+    'source_registries': {
+        'qa_launch_readiness': '/data/qa-launch-readiness-manifest.json',
+        'sustainability_continuity': '/data/sustainability-continuity-manifest.json',
+        'governance_pmo': '/data/governance-pmo-manifest.json',
+        'institutional_launch_certification': '/data/institutional-launch-certification.json',
+        'master_launch_plan': '/data/master-launch-plan.json',
+    },
+    'philosophy': 'Success is measured by adoption, not publicity — launch county by county with measurable momentum',
+    'governing_principle': (
+        'Software is complete when it runs; an institution is complete when people use it '
+        'together with confidence across Arkansas'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'launch_philosophy_values': LAUNCH_PHILOSOPHY_VALUES,
+    'launch_phases': LAUNCH_PHASES,
+    'launch_phase_count': len(LAUNCH_PHASES),
+    'county_launch_framework': COUNTY_LAUNCH_FRAMEWORK,
+    'county_launch_framework_count': len(COUNTY_LAUNCH_FRAMEWORK),
+    'city_launch_framework': CITY_LAUNCH_FRAMEWORK,
+    'city_launch_framework_count': len(CITY_LAUNCH_FRAMEWORK),
+    'organization_onboarding_partner_types': ORGANIZATION_ONBOARDING_PARTNER_TYPES,
+    'organization_onboarding_partner_type_count': len(ORGANIZATION_ONBOARDING_PARTNER_TYPES),
+    'education_leader_deployment_priorities': EDUCATION_LEADER_DEPLOYMENT_PRIORITIES,
+    'education_leader_deployment_priority_count': len(EDUCATION_LEADER_DEPLOYMENT_PRIORITIES),
+    'volunteer_activation_items': VOLUNTEER_ACTIVATION_ITEMS,
+    'volunteer_activation_item_count': len(VOLUNTEER_ACTIVATION_ITEMS),
+    'public_awareness_emphasis': PUBLIC_AWARENESS_EMPHASIS,
+    'public_awareness_emphasis_count': len(PUBLIC_AWARENESS_EMPHASIS),
+    'launch_success_metrics': LAUNCH_SUCCESS_METRICS,
+    'launch_success_metric_count': len(LAUNCH_SUCCESS_METRICS),
+    'daily_executive_briefing_items': DAILY_EXECUTIVE_BRIEFING_ITEMS,
+    'daily_executive_briefing_item_count': len(DAILY_EXECUTIVE_BRIEFING_ITEMS),
+    'statewide_readiness_certification': STATEWIDE_READINESS_CERTIFICATION,
+    'statewide_readiness_certification_count': len(STATEWIDE_READINESS_CERTIFICATION),
+    'launch_celebration_milestones': LAUNCH_CELEBRATION_MILESTONES,
+    'launch_celebration_milestone_count': len(LAUNCH_CELEBRATION_MILESTONES),
+    'organizational_goals': {
+        'counties_total': 75,
+        'counties_with_partnerships_goal': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'launch_strategy_system_chain': LAUNCH_STRATEGY_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/launch-strategy.html',
+    'sixty_pct_milestone': True,
+    'packages_completed': 30,
+    'packages_total': 50,
+    'packages_complete_pct': 60,
+    'engineering_note': 'Doctrinal IMP-30 Launch Strategy; engineering IMP-30 is Coalition partner intake',
+    'status': 'documented',
+    'implemented': False,
+}
+
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -5468,7 +5650,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D30', 'indicator': 'DevOps & Production Ops (IMP-27)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D31', 'indicator': 'Governance & PMO (IMP-28)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D32', 'indicator': 'Sustainability & Continuity (IMP-29)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D33', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D33', 'indicator': 'Launch Strategy (IMP-30)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D34', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -6224,6 +6407,34 @@ out = {
             'number': 30,
             'id': 'IMP-30',
             'title': 'Master Launch Strategy, Statewide Rollout, Adoption Campaign & January 2027 Operational Readiness',
+            'status': 'documented',
+        },
+    },
+    'launch_strategy': {
+        'title': 'Master Launch Strategy, Statewide Rollout, Adoption Campaign & January 2027 Operational Readiness',
+        'package': 'Implementation Package 30 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_30_LAUNCH_STRATEGY.md',
+        'manifest': '/data/launch-strategy-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': LAUNCH_STRATEGY_MANIFEST['philosophy'],
+        'launch_phase_count': LAUNCH_STRATEGY_MANIFEST['launch_phase_count'],
+        'county_launch_framework_count': LAUNCH_STRATEGY_MANIFEST['county_launch_framework_count'],
+        'statewide_readiness_certification_count': LAUNCH_STRATEGY_MANIFEST['statewide_readiness_certification_count'],
+        'launch_success_metric_count': LAUNCH_STRATEGY_MANIFEST['launch_success_metric_count'],
+        'launch_celebration_milestone_count': LAUNCH_STRATEGY_MANIFEST['launch_celebration_milestone_count'],
+        'sixty_pct_milestone': LAUNCH_STRATEGY_MANIFEST['sixty_pct_milestone'],
+        'packages_completed': LAUNCH_STRATEGY_MANIFEST['packages_completed'],
+        'packages_complete_pct': LAUNCH_STRATEGY_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': LAUNCH_STRATEGY_MANIFEST['mc_dashboard'],
+        'engineering_note': LAUNCH_STRATEGY_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 31,
+            'id': 'IMP-31',
+            'title': 'Master AI Orchestration, Agent Collaboration & Autonomous Institutional Assistance',
             'status': 'specified',
         },
     },
@@ -6432,6 +6643,10 @@ with open(root / 'data/governance-pmo-manifest.json', 'w', newline='\n') as f:
 
 with open(root / 'data/sustainability-continuity-manifest.json', 'w', newline='\n') as f:
     json.dump(SUSTAINABILITY_CONTINUITY_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/launch-strategy-manifest.json', 'w', newline='\n') as f:
+    json.dump(LAUNCH_STRATEGY_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(
