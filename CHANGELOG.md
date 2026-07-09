@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.30.0] - 2026-07-09 — Build #26 AI Knowledge Engine
+
+### Citizens United Facts AI Knowledge & Research Engine
+- **Educational Intelligence Architecture v1.0** — Arkansas Civic Librarian persona
+- 5 learning modes, evidence-first response schema, 9 seed questions
+- 10 capabilities: research, event, coalition, MC intelligence assistants
+- 5 guardrails — verified knowledge base only, no invented citations
+- 14% honest readiness — architecture only, no chat UI or RAG pipeline
+- MC dashboard: `/mission-control/ai-knowledge.html`
+
 ## [1.29.0] - 2026-07-09 — Build #25 Mission Control 2.0
 
 ### Mission Control 2.0 & Executive Command Center

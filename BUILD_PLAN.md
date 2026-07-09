@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.29.0 · **Executive Command Center:** [/mission-control/executive.html](/mission-control/executive.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #25:** ✅ MC 2.0 · **Build #24:** ✅ Contact Intelligence · **Build #23:** ✅ Wireframes  
+**Current version:** 1.30.0 · **AI Knowledge Engine:** [/mission-control/ai-knowledge.html](/mission-control/ai-knowledge.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #26:** ✅ AI Engine · **Build #25:** ✅ MC 2.0 · **Build #24:** ✅ Contact Intelligence  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -269,8 +269,25 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **23** | **Wireframes** | **✅ v1.27.0** |
 | **24** | **Contact Intelligence** | **✅ v1.28.0** |
 | **25** | **Mission Control 2.0** | **✅ v1.29.0** |
+| **26** | **AI Knowledge Engine** | **✅ v1.30.0** |
 
-**Next:** Build #26 — Component specifications with props/states.
+**Next:** Build #27 — Component specifications with props/states.
+
+---
+
+## Phase 26 — AI Knowledge Engine (Build #26) ★ NEW
+
+*Educational Intelligence Architecture — Arkansas Civic Librarian.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| A1 | AI Knowledge Engine Blueprint v1.0 | ✅ | `data/ai-knowledge-engine.json` |
+| A2 | Arkansas Civic Librarian persona | ✅ | 7 traits documented |
+| A3 | 5 learning modes | ✅ | Quick Answer → Primary Source Explorer |
+| A4 | Evidence-first response schema | ✅ | 6 required fields |
+| A5 | 9 example questions + fact types | ✅ | Fact / legal / proposal distinction |
+| A6 | 10 capabilities + guardrails | ✅ | Research, event, coalition, MC assistants |
+| A7 | MC AI dashboard | ✅ | `/mission-control/ai-knowledge.html` |
 
 ---
 
@@ -489,7 +506,8 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#23**~~ | ~~Wireframes for every major screen~~ ✅ Done |
 | ~~**#24**~~ | ~~Contact Intelligence & Community Relationship Architecture~~ ✅ Done |
 | ~~**#25**~~ | ~~Mission Control 2.0 & Executive Command Center~~ ✅ Done |
-| **#26** | **Component specifications with props/states** |
+| ~~**#26**~~ | ~~AI Knowledge & Research Engine~~ ✅ Done |
+| **#27** | **Component specifications with props/states** |
 
 ---
 

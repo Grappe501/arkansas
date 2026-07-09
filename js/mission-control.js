@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">AI Knowledge Engine <a href="/mission-control/ai-knowledge.html" class="mc-inline-link">Educational Intelligence →</a></h2>
+    <p class="mc-bar-note">Build #26 — Arkansas Civic Librarian, 5 learning modes, evidence-first responses, guardrails. Architecture only — 14% readiness.</p>
     <h2 class="mc-section-title">Executive Command Center <a href="/mission-control/executive.html" class="mc-inline-link">MC 2.0 →</a></h2>
     <p class="mc-bar-note">Build #25 — 9 workspaces, health indicators, smart alerts, build timeline, Arkansas readiness map.</p>
     <h2 class="mc-section-title">Contact Intelligence <a href="/mission-control/contact-intelligence.html" class="mc-inline-link">Relationship Network →</a></h2>
@@ -2531,6 +2533,103 @@ async function initExecutiveCommandCenter() {
   initDevConsole(mc);
 }
 
+async function initAiKnowledgeEngine() {
+  const root = document.getElementById('mc-ai-knowledge-root');
+  if (!root) return;
+
+  const [aiRes, mcRes] = await Promise.all([
+    fetch('/data/ai-knowledge-engine.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ai = await aiRes.json();
+  const mc = await mcRes.json();
+  const s = ai.summary;
+
+  const modeRows = ai.learning_modes.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.description}</td><td>${m.status}</td></tr>`).join('');
+
+  const capRows = ai.capabilities.map(c => `
+    <tr class="${c.implementation_status === 'partial' ? 'mc-table__row--approved' : ''}">
+      <td><code>${c.id}</code></td><td><strong>${c.title}</strong></td>
+      <td>${c.feature_count}</td><td>${c.implementation_status}</td></tr>`).join('');
+
+  const questionRows = ai.example_questions.map(q => `
+    <tr><td>${q.q}</td><td>${q.category}</td><td>${q.fact_type}</td></tr>`).join('');
+
+  const sourceRows = ai.knowledge_sources.map(ks => `
+    <tr><td>${ks.title}</td><td><a href="${ks.route}">JSON</a></td>
+      <td>${ks.records || '—'}</td><td>${ks.status}</td></tr>`).join('');
+
+  const capCards = ai.capabilities.map(c => `
+    <div class="mc-card"><h3>${c.id} — ${c.title}</h3>
+      <p class="mc-bar-note">${c.purpose || c.notes || ''}</p>
+      <ul class="mc-deliverables">${c.features.map(f =>
+        `<li>${typeof f === 'string' ? f : (f.q || f.title || JSON.stringify(f))}</li>`
+      ).join('')}</ul>
+      ${c.notes ? `<p class="mc-bar-note"><em>${c.notes}</em></p>` : ''}</div>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → AI Knowledge Engine</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #26 · ${ai.title}</p>
+      <h1>Educational Intelligence Architecture</h1>
+      <p class="mc-header__question">${ai.governing_principle}</p>
+      <p class="mc-bar-note"><strong>Arkansas Civic Librarian</strong> — ${ai.persona.role}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">AI readiness</div><div class="mc-stat__value">${s.ai_engine_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Capabilities</div><div class="mc-stat__value">${s.capabilities}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Learning modes</div><div class="mc-stat__value">${s.learning_modes}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Example Qs</div><div class="mc-stat__value">${s.example_questions}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Knowledge sources</div><div class="mc-stat__value">${s.knowledge_sources}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Chat UI</div><div class="mc-stat__value">${s.chat_ui_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Core Principles</h2>
+    <ul class="mc-deliverables">${ai.core_principles.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Arkansas Civic Librarian</h2>
+    <ul class="mc-deliverables">${ai.persona.traits.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Learning Modes</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Mode</th><th>Description</th><th>Status</th></tr></thead>
+      <tbody>${modeRows}</tbody></table>
+    <h2 class="mc-section-title">Evidence-First Response Schema</h2>
+    <ul class="mc-deliverables">${ai.response_schema.map(f => `<li>${f.replace(/_/g, ' ')}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Example Questions</h2>
+    <table class="mc-table"><thead><tr><th>Question</th><th>Category</th><th>Fact type</th></tr></thead>
+      <tbody>${questionRows}</tbody></table>
+    <h2 class="mc-section-title">Capabilities</h2>
+    <div class="mc-card mc-inv-table-wrap">
+      <table class="mc-table"><thead><tr><th>ID</th><th>Capability</th><th>Features</th><th>Status</th></tr></thead>
+        <tbody>${capRows}</tbody></table>
+    </div>
+    <h2 class="mc-section-title">Verified Knowledge Sources</h2>
+    <table class="mc-table"><thead><tr><th>Source</th><th>Registry</th><th>Records</th><th>Status</th></tr></thead>
+      <tbody>${sourceRows}</tbody></table>
+    <h2 class="mc-section-title">Guardrails</h2>
+    <ul class="mc-deliverables">${ai.guardrails.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Technical Requirements</h2>
+    <ul class="mc-deliverables">${Object.entries(ai.technical_requirements).map(([k, v]) =>
+      `<li><strong>${k.replace(/_/g, ' ')}</strong>: ${v}</li>`
+    ).join('')}</ul>
+    <h2 class="mc-section-title">Capability Details</h2>
+    <div class="mc-grid-2">${capCards}</div>
+    <h2 class="mc-section-title">Future Vision</h2>
+    <p class="mc-bar-note">${ai.future_vision.role}</p>
+    <ul class="mc-deliverables">${ai.future_vision.destinations.map(d => `<li>${d}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ai.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ai.recommended_next_build.number} — ${ai.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ai.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/AI_KNOWLEDGE_ENGINE.md">AI_KNOWLEDGE_ENGINE.md</a> ·
+      <a href="/data/ai-knowledge-engine.json">JSON</a> ·
+      <a href="/mission-control/knowledge-graph.html">Knowledge Graph</a> ·
+      <a href="/mission-control/research.html">Research</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -2555,4 +2654,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initWireframeBlueprint();
   initContactIntelligenceBlueprint();
   initExecutiveCommandCenter();
+  initAiKnowledgeEngine();
 });

@@ -1,0 +1,478 @@
+{
+  "version": "1.0",
+  "build": 26,
+  "updated": "2026-07-09",
+  "title": "AI Knowledge & Research Engine v1.0",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/ai-knowledge.html",
+  "constitution": "/docs/AI_KNOWLEDGE_ENGINE.md",
+  "purpose": "Help people understand \u2014 not persuade. Guide toward primary sources, context, and verified evidence.",
+  "persona": {
+    "name": "Arkansas Civic Librarian",
+    "traits": [
+      "Patient",
+      "Curious",
+      "Neutral in tone",
+      "Evidence-focused",
+      "Encouraging",
+      "Clear",
+      "Respectful"
+    ],
+    "role": "Help visitors understand complex topics, not debate them"
+  },
+  "core_principles": [
+    "Explain",
+    "Teach",
+    "Connect",
+    "Clarify",
+    "Cite",
+    "Encourage exploration"
+  ],
+  "learning_modes": [
+    {
+      "id": "AI-LM-01",
+      "title": "Quick Answer",
+      "description": "One-minute explanation for first-time visitors",
+      "status": "planned"
+    },
+    {
+      "id": "AI-LM-02",
+      "title": "Guided Lesson",
+      "description": "Step-by-step educational walkthrough",
+      "status": "planned"
+    },
+    {
+      "id": "AI-LM-03",
+      "title": "Deep Research",
+      "description": "Detailed explanations with evidence links",
+      "status": "planned"
+    },
+    {
+      "id": "AI-LM-04",
+      "title": "Compare Perspectives",
+      "description": "Multiple viewpoints with supporting evidence for each",
+      "status": "planned"
+    },
+    {
+      "id": "AI-LM-05",
+      "title": "Primary Source Explorer",
+      "description": "Direct to original documents",
+      "status": "planned"
+    }
+  ],
+  "example_questions": [
+    {
+      "q": "What was Citizens United actually about?",
+      "category": "case",
+      "fact_type": "established_fact"
+    },
+    {
+      "q": "Why did the Supreme Court rule the way it did?",
+      "category": "legal_analysis",
+      "fact_type": "legal_analysis"
+    },
+    {
+      "q": "What is an independent expenditure?",
+      "category": "terminology",
+      "fact_type": "established_fact"
+    },
+    {
+      "q": "What is the difference between a PAC and a Super PAC?",
+      "category": "terminology",
+      "fact_type": "established_fact"
+    },
+    {
+      "q": "How did campaign finance law evolve before 2010?",
+      "category": "history",
+      "fact_type": "established_fact"
+    },
+    {
+      "q": "What reforms have been proposed since the decision?",
+      "category": "reform",
+      "fact_type": "current_proposal"
+    },
+    {
+      "q": "What options could Congress consider?",
+      "category": "federal_policy",
+      "fact_type": "current_proposal"
+    },
+    {
+      "q": "What options are available to Arkansas lawmakers?",
+      "category": "arkansas",
+      "fact_type": "current_proposal"
+    },
+    {
+      "q": "What is the ballot initiative process in Arkansas?",
+      "category": "arkansas",
+      "fact_type": "established_fact"
+    }
+  ],
+  "response_schema": [
+    "plain_language_explanation",
+    "supporting_facts",
+    "relevant_cases",
+    "historical_context",
+    "primary_source_links",
+    "suggested_next_lessons"
+  ],
+  "guardrails": [
+    "Identify when summarizing versus quoting",
+    "Encourage primary source consultation for important legal questions",
+    "Distinguish educational explanations from policy proposals",
+    "Acknowledge uncertainty when evidence is incomplete or evolving",
+    "Never invent citations or factual claims"
+  ],
+  "capabilities": [
+    {
+      "id": "AI-CAP-01",
+      "title": "Core Principles",
+      "purpose": "Educational intelligence purpose",
+      "feature_count": 6,
+      "features": [
+        "Explain",
+        "Teach",
+        "Connect",
+        "Clarify",
+        "Cite",
+        "Encourage exploration"
+      ],
+      "implementation_status": "defined",
+      "notes": null,
+      "integration": null
+    },
+    {
+      "id": "AI-CAP-02",
+      "title": "Arkansas Civic Librarian",
+      "purpose": "AI persona and tone",
+      "feature_count": 7,
+      "features": [
+        "Patient",
+        "Curious",
+        "Neutral in tone",
+        "Evidence-focused",
+        "Encouraging",
+        "Clear",
+        "Respectful"
+      ],
+      "implementation_status": "defined",
+      "notes": "Persona documented; no chat interface yet",
+      "integration": null
+    },
+    {
+      "id": "AI-CAP-03",
+      "title": "Learning Modes",
+      "purpose": "Visitor-selected learning depth",
+      "feature_count": 5,
+      "features": [
+        "Quick Answer",
+        "Guided Lesson",
+        "Deep Research",
+        "Compare Perspectives",
+        "Primary Source Explorer"
+      ],
+      "implementation_status": "planned",
+      "notes": "5 modes defined; UI not built",
+      "integration": null
+    },
+    {
+      "id": "AI-CAP-04",
+      "title": "Example Question Bank",
+      "purpose": "Seed questions with fact-type distinction",
+      "feature_count": 9,
+      "features": [
+        {
+          "q": "What was Citizens United actually about?",
+          "category": "case",
+          "fact_type": "established_fact"
+        },
+        {
+          "q": "Why did the Supreme Court rule the way it did?",
+          "category": "legal_analysis",
+          "fact_type": "legal_analysis"
+        },
+        {
+          "q": "What is an independent expenditure?",
+          "category": "terminology",
+          "fact_type": "established_fact"
+        },
+        {
+          "q": "What is the difference between a PAC and a Super PAC?",
+          "category": "terminology",
+          "fact_type": "established_fact"
+        },
+        {
+          "q": "How did campaign finance law evolve before 2010?",
+          "category": "history",
+          "fact_type": "established_fact"
+        },
+        {
+          "q": "What reforms have been proposed since the decision?",
+          "category": "reform",
+          "fact_type": "current_proposal"
+        },
+        {
+          "q": "What options could Congress consider?",
+          "category": "federal_policy",
+          "fact_type": "current_proposal"
+        },
+        {
+          "q": "What options are available to Arkansas lawmakers?",
+          "category": "arkansas",
+          "fact_type": "current_proposal"
+        },
+        {
+          "q": "What is the ballot initiative process in Arkansas?",
+          "category": "arkansas",
+          "fact_type": "established_fact"
+        }
+      ],
+      "implementation_status": "defined",
+      "notes": "9 questions with fact/legal/proposal tags",
+      "integration": null
+    },
+    {
+      "id": "AI-CAP-05",
+      "title": "Evidence-First Responses",
+      "purpose": "Required response structure",
+      "feature_count": 6,
+      "features": [
+        "plain_language_explanation",
+        "supporting_facts",
+        "relevant_cases",
+        "historical_context",
+        "primary_source_links",
+        "suggested_next_lessons"
+      ],
+      "implementation_status": "defined",
+      "notes": "Schema defined; no response generator",
+      "integration": null
+    },
+    {
+      "id": "AI-CAP-06",
+      "title": "Intelligent Learning Paths",
+      "purpose": "Activity-based recommendations",
+      "feature_count": 6,
+      "features": [
+        "Next lessons",
+        "Related constitutional concepts",
+        "Historical background",
+        "Spending data",
+        "Community education resources",
+        "Coalition opportunities"
+      ],
+      "implementation_status": "partial",
+      "notes": "Knowledge Atlas trails + KG Explore Further exist; AI routing not built",
+      "integration": "/data/knowledge-atlas.json"
+    },
+    {
+      "id": "AI-CAP-07",
+      "title": "Research Assistant",
+      "purpose": "Source finding and legal terminology",
+      "feature_count": 6,
+      "features": [
+        "Find related sources",
+        "Explain legal terminology",
+        "Summarize lengthy opinions",
+        "Compare historical developments",
+        "Organize research materials",
+        "Identify knowledge gaps"
+      ],
+      "implementation_status": "planned",
+      "notes": "Research framework + evidence registry scaffold only",
+      "integration": null
+    },
+    {
+      "id": "AI-CAP-08",
+      "title": "Educational Event Assistant",
+      "purpose": "Help Education Leaders prepare presentations",
+      "feature_count": 5,
+      "features": [
+        "Discussion questions",
+        "Handout recommendations",
+        "Relevant charts",
+        "Presentation outlines",
+        "Audience-specific learning plans"
+      ],
+      "implementation_status": "planned",
+      "notes": "User review required before use \u2014 not built",
+      "integration": null
+    },
+    {
+      "id": "AI-CAP-09",
+      "title": "Coalition Assistant",
+      "purpose": "Resource discovery for organizations",
+      "feature_count": 5,
+      "features": [
+        "Locate educational resources",
+        "Find presentation materials",
+        "Community conversation guides",
+        "Upcoming events",
+        "Coalition participation"
+      ],
+      "implementation_status": "planned",
+      "notes": "Coalition hub exists; AI layer not built",
+      "integration": null
+    },
+    {
+      "id": "AI-CAP-10",
+      "title": "Mission Control Intelligence",
+      "purpose": "Admin decision support",
+      "feature_count": 5,
+      "features": [
+        "Research areas needing updates",
+        "Counties with limited activity",
+        "FAQs lacking coverage",
+        "Pages with incomplete citations",
+        "Resources needing revision"
+      ],
+      "implementation_status": "partial",
+      "notes": "MC2 future_intelligence layer documented; no AI integration",
+      "integration": "/data/mc2-executive.json"
+    }
+  ],
+  "capability_count": 10,
+  "knowledge_sources": [
+    {
+      "id": "KS-01",
+      "title": "Facts Framework",
+      "route": "/data/facts-registry.json",
+      "build": 18,
+      "status": "partial",
+      "records": 13
+    },
+    {
+      "id": "KS-02",
+      "title": "Evidence Registry",
+      "route": "/data/evidence-registry.json",
+      "build": 10,
+      "status": "partial",
+      "records": 14
+    },
+    {
+      "id": "KS-03",
+      "title": "Knowledge Graph",
+      "route": "/data/kg-registry.json",
+      "build": 11,
+      "status": "partial",
+      "records": 38
+    },
+    {
+      "id": "KS-04",
+      "title": "Knowledge Atlas",
+      "route": "/data/knowledge-atlas.json",
+      "build": 19,
+      "status": "partial",
+      "records": 51
+    },
+    {
+      "id": "KS-05",
+      "title": "Content Inventory",
+      "route": "/data/content-inventory.json",
+      "build": 6,
+      "status": "partial"
+    },
+    {
+      "id": "KS-06",
+      "title": "Research Framework",
+      "route": "/data/research-framework.json",
+      "build": 10,
+      "status": "partial"
+    },
+    {
+      "id": "KS-07",
+      "title": "Canonical Data Model",
+      "route": "/data/canonical-data-model.json",
+      "build": 15,
+      "status": "schema_ready"
+    }
+  ],
+  "learning_path_recommendations": [
+    "Next lessons",
+    "Related constitutional concepts",
+    "Historical background",
+    "Spending data",
+    "Community education resources",
+    "Coalition opportunities"
+  ],
+  "future_vision": {
+    "destinations": [
+      "Relevant lessons",
+      "Historical timelines",
+      "Supreme Court opinions",
+      "Research papers",
+      "Arkansas-specific materials",
+      "Coalition resources",
+      "Community conversation guides"
+    ],
+    "role": "Doorway into platform knowledge \u2014 not a replacement for it"
+  },
+  "governing_principle": "Success measured by evidence discovery and continued learning \u2014 not question volume.",
+  "technical_requirements": {
+    "rag_pipeline": "planned",
+    "verified_knowledge_base_only": true,
+    "citation_required": true,
+    "human_review_for_generated_materials": true,
+    "api_provider": "undecided",
+    "chat_ui_route": "planned",
+    "embedding_store": "planned"
+  },
+  "related_registries": [
+    {
+      "title": "Knowledge Graph",
+      "route": "/mission-control/knowledge-graph.html",
+      "rule": "AI must cite verified knowledge base"
+    },
+    {
+      "title": "Facts Framework",
+      "route": "/mission-control/facts.html"
+    },
+    {
+      "title": "Research Framework",
+      "route": "/mission-control/research.html"
+    },
+    {
+      "title": "Knowledge Atlas",
+      "route": "/mission-control/atlas.html"
+    },
+    {
+      "title": "MC2 Future Intelligence",
+      "route": "/mission-control/executive.html"
+    }
+  ],
+  "summary": {
+    "capabilities": 10,
+    "learning_modes": 5,
+    "example_questions": 9,
+    "guardrails": 5,
+    "knowledge_sources": 7,
+    "response_schema_fields": 6,
+    "by_status": {
+      "defined": 4,
+      "planned": 4,
+      "partial": 2,
+      "learning_mode_planned": 5
+    },
+    "implementation_defined": 4,
+    "implementation_partial": 2,
+    "implementation_planned": 9,
+    "ai_engine_readiness_pct": 14,
+    "chat_ui_live": false,
+    "rag_pipeline_live": false
+  },
+  "catalog_gaps": [
+    "No chat UI or AI learning assistant route",
+    "No RAG pipeline or embedding store",
+    "No API provider selected or integrated",
+    "Learning modes defined but not selectable",
+    "Evidence-first response generator not built",
+    "Research/Event/Coalition assistants not operational",
+    "MC intelligence recommendations not AI-powered",
+    "Knowledge base too sparse for reliable answers (~13 facts, 14 evidence IDs)"
+  ],
+  "recommended_next_build": {
+    "number": 27,
+    "title": "Component Specifications with Props/States",
+    "note": "Map wireframes to components; prepare Ask-a-Question UI shell for future AI integration."
+  }
+}

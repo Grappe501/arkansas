@@ -1,6 +1,6 @@
 {
-  "version": "1.29.0",
-  "build": 25,
+  "version": "1.30.0",
+  "build": 26,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 25,
+    "overall_completion": 26,
     "current_build": {
-      "number": 25,
-      "title": "Mission Control 2.0 & Executive Command Center"
-    },
-    "active_phase": "Executive Operating System \u2014 Mission Control 2.0",
-    "last_completed": "Contact Intelligence & Community Relationship Architecture",
-    "next_build": {
       "number": 26,
+      "title": "Citizens United Facts AI Knowledge & Research Engine"
+    },
+    "active_phase": "Educational Intelligence \u2014 AI Knowledge Engine",
+    "last_completed": "Mission Control 2.0 & Executive Command Center",
+    "next_build": {
+      "number": 27,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
@@ -39,6 +39,7 @@
     "wireframe_readiness": 38,
     "contact_intelligence_readiness": 31,
     "mc2_readiness": 33,
+    "ai_engine_readiness": 14,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -46,8 +47,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 25,
-      "note": "MC2 executive command center live \u2014 9 workspaces, 25% project health."
+      "value": 26,
+      "note": "AI Knowledge Engine architecture live \u2014 5 learning modes, Arkansas Civic Librarian persona. No chat UI yet."
     },
     {
       "id": "constitution",
@@ -246,6 +247,13 @@
       "value": 33,
       "max": 100,
       "note": "6 workspaces partial, 0 alerts automated \u2014 architecture defined."
+    },
+    {
+      "id": "ai_engine",
+      "label": "AI Knowledge Engine",
+      "value": 14,
+      "max": 100,
+      "note": "Architecture + guardrails defined; RAG pipeline and chat UI not built."
     }
   ],
   "public_readiness": {
@@ -688,6 +696,12 @@
       "id": "mc2_executive",
       "label": "Executive Command Center",
       "href": "/mission-control/executive.html",
+      "status": "complete"
+    },
+    {
+      "id": "ai_knowledge",
+      "label": "AI Knowledge Engine",
+      "href": "/mission-control/ai-knowledge.html",
       "status": "complete"
     }
   ],
@@ -1714,6 +1728,55 @@
     }
   ],
   "builds": [
+    {
+      "number": 26,
+      "title": "Citizens United Facts AI Knowledge & Research Engine",
+      "version": "1.30.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Educational Intelligence Architecture v1.0 \u2014 help people understand, not persuade",
+      "summary": "10 capabilities, 5 modes, 9 seed questions; 14% readiness.",
+      "files_created": [
+        "data/ai-knowledge-engine.json",
+        "docs/AI_KNOWLEDGE_ENGINE.md",
+        "builds/026-ai-knowledge-engine.md",
+        "mission-control/ai-knowledge.html",
+        "scripts/gen-ai-knowledge-engine.py",
+        "scripts/update-mc-build26.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/ai-knowledge.html"
+      ],
+      "decisions_made": [
+        "Arkansas Civic Librarian persona \u2014 patient, neutral, evidence-focused",
+        "5 learning modes: Quick Answer through Primary Source Explorer",
+        "Evidence-first response schema with fact/legal/proposal distinction",
+        "7 verified knowledge sources mapped; RAG must cite platform data only",
+        "14% honest readiness \u2014 no chat UI, API, or RAG pipeline",
+        "Human review required for generated presentation materials"
+      ],
+      "open_questions": [
+        "API provider selection?",
+        "When to build Ask-a-Question UI?",
+        "Minimum knowledge base size before launch?"
+      ],
+      "risks": [
+        "14% readiness \u2014 architecture only",
+        "Sparse knowledge base (~13 facts, 14 evidence IDs)"
+      ],
+      "next_recommended": 27,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/ai-knowledge.html",
+      "review_status": "complete"
+    },
     {
       "number": 25,
       "title": "Mission Control 2.0 & Executive Command Center",
@@ -2811,20 +2874,20 @@
     }
   ],
   "briefing": {
-    "what_built": "MC2 Executive Command Center \u2014 9 workspaces, health scores, build timeline",
-    "building_now": "Executive OS \u2014 component specs and alert automation next",
+    "what_built": "AI Knowledge Engine v1.0 \u2014 10 capabilities, Arkansas Civic Librarian, evidence-first architecture",
+    "building_now": "Educational intelligence architecture \u2014 component specs and Ask UI shell next",
     "blocked": [
-      "Smart alerts not automated",
-      "Executive reports not generatable",
-      "Communications Center no analytics"
+      "No chat UI",
+      "No RAG pipeline",
+      "Knowledge base too sparse for reliable answers"
     ],
     "ready_public": [
-      "Executive dashboard",
-      "Workspace map",
-      "Health indicators",
-      "Build timeline"
+      "AI architecture MC dashboard",
+      "Learning modes + guardrails",
+      "Example question bank",
+      "Knowledge source map"
     ],
-    "next": "Build #26 \u2014 Component specifications with props/states"
+    "next": "Build #27 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -3054,5 +3117,23 @@
     "builds_in_timeline": 24,
     "workspace_partial": 6,
     "workspace_planned": 2
+  },
+  "ai_knowledge_engine": "/data/ai-knowledge-engine.json",
+  "ai_knowledge_dashboard": "/mission-control/ai-knowledge.html",
+  "ai_engine_inventory": {
+    "readiness_score": 14,
+    "capabilities": 10,
+    "learning_modes": 5,
+    "example_questions": 9,
+    "knowledge_sources": 7,
+    "guardrails": 5,
+    "chat_ui_live": false,
+    "rag_pipeline_live": false,
+    "by_status": {
+      "defined": 4,
+      "planned": 4,
+      "partial": 2,
+      "learning_mode_planned": 5
+    }
   }
 }
