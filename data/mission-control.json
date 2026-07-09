@@ -1,6 +1,6 @@
 {
-  "version": "1.66.0",
-  "build": 62,
+  "version": "1.67.0",
+  "build": 63,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,24 +9,24 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 62,
+    "overall_completion": 63,
     "current_build": {
-      "number": 62,
-      "title": "Citizens United Facts Master Citizen Action Center & Civic Engagement Hub v1.0"
-    },
-    "active_phase": "Citizen Action Center \u2192 Implementation Translation",
-    "last_completed": "Coalition & Civic Alliance Network",
-    "next_build": {
       "number": 63,
+      "title": "Citizens United Facts Master Campaign Finance Data Observatory v1.0"
+    },
+    "active_phase": "Campaign Finance Observatory \u2192 Implementation Translation",
+    "last_completed": "Citizen Action Center & Civic Engagement Hub",
+    "next_build": {
+      "number": 64,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
     "content_readiness": 28,
-    "research_readiness": 25,
-    "data_viz_readiness": 8,
+    "research_readiness": 26,
+    "data_viz_readiness": 12,
     "signup_funnel_readiness": 22,
-    "civic_action_readiness": 38,
+    "civic_action_readiness": 28,
     "coalition_readiness": 44,
     "data_model_readiness": 54,
     "route_inventory_readiness": 18,
@@ -42,6 +42,7 @@
     "institutional_ai_readiness": 42,
     "coalition_network_readiness": 44,
     "citizen_action_center_readiness": 42,
+    "campaign_finance_observatory_readiness": 36,
     "mc2_readiness": 33,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
@@ -61,9 +62,9 @@
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 25,
-    "institutional_maturity_pct": 49,
+    "institutional_maturity_pct": 50,
     "current_institutional_version": "V1",
-    "systems_integration_readiness": 36,
+    "systems_integration_readiness": 37,
     "production_matrix_readiness": 39,
     "visitor_journey_readiness": 40,
     "technical_architecture_readiness": 38,
@@ -90,8 +91,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 62,
-      "note": "Build #62 \u2014 Citizen Action Center."
+      "value": 63,
+      "note": "Build #63 \u2014 Campaign Finance Data Observatory."
     },
     {
       "id": "constitution",
@@ -315,9 +316,9 @@
     {
       "id": "observatory",
       "label": "Research Observatory",
-      "value": 18,
+      "value": 20,
       "max": 100,
-      "note": "2 divisions partial \u2014 SCOTUS/AR legislature monitors not automated."
+      "note": "8 divisions defined \u00b7 0 charts \u00b7 0 datasets."
     },
     {
       "id": "outreach",
@@ -420,9 +421,9 @@
     {
       "id": "institutional_maturity",
       "label": "Institutional Maturity (V1\u2013V10)",
-      "value": 49,
+      "value": 50,
       "max": 100,
-      "note": "Learn \u2192 Participate bridge \u2014 0 registered citizens."
+      "note": "Flagship data observatory \u2014 0 charts, 0 datasets."
     },
     {
       "id": "systems_integration",
@@ -549,6 +550,13 @@
       "value": 42,
       "max": 100,
       "note": "6 pathways \u00b7 0 registered."
+    },
+    {
+      "id": "campaign_finance_observatory",
+      "label": "Campaign Finance Observatory",
+      "value": 36,
+      "max": 100,
+      "note": "8 divisions \u00b7 0 charts \u00b7 0 datasets."
     }
   ],
   "public_readiness": {
@@ -1213,6 +1221,12 @@
       "id": "citizen_action_center",
       "label": "Citizen Action Center",
       "href": "/mission-control/citizen-action-center.html",
+      "status": "complete"
+    },
+    {
+      "id": "campaign_finance_observatory",
+      "label": "Campaign Finance Observatory",
+      "href": "/mission-control/campaign-finance-observatory.html",
       "status": "complete"
     }
   ],
@@ -2239,6 +2253,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 63,
+      "title": "Citizens United Facts Master Campaign Finance Data Observatory v1.0",
+      "version": "1.67.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Campaign Finance Data Observatory \u2014 answer \"What actually changed?\" with transparent evidence",
+      "summary": "8 research divisions; Before & After Explorer; data integrity standards; 36% readiness. 0 datasets \u00b7 0 charts.",
+      "files_created": [
+        "data/campaign-finance-observatory.json",
+        "docs/MASTER_CAMPAIGN_FINANCE_OBSERVATORY.md",
+        "builds/063-campaign-finance-observatory.md",
+        "mission-control/campaign-finance-observatory.html",
+        "scripts/gen-campaign-finance-observatory.py",
+        "scripts/update-mc-build63.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/campaign-finance-observatory.html"
+      ],
+      "decisions_made": [
+        "Flagship educational system \u2014 replaces speculation with understanding",
+        "8 divisions from Historical Spending to FAQ \u2014 all planned, 0 live charts",
+        "Before & After Explorer \u2014 educational comparison, not unsupported causation",
+        "Data integrity: source, date, review, methodology, version on every chart",
+        "Distinct from Research Observatory (#29) \u2014 monitor vs spending data",
+        "Integrates Research Library, Evidence Ledger, Knowledge Graph chain",
+        "36% readiness \u2014 constitution only, no data feeds"
+      ],
+      "open_questions": [
+        "FEC vs OpenSecrets vs Arkansas SOS \u2014 primary data source priority?",
+        "Public /observatory/ route vs MC-only dashboard?",
+        "Unify navigation with Research Observatory (#29)?",
+        "Inflation adjustment methodology \u2014 which CPI series?"
+      ],
+      "risks": [
+        "0 datasets published \u2014 no FEC, OpenSecrets, or Arkansas SOS data feeds integrated",
+        "0 charts completed \u2014 Data Visualization Studio not built",
+        "0 research notes \u2014 methodology pages specified but not implemented",
+        "Before & After Explorer not built \u2014 no interactive comparison views"
+      ],
+      "next_recommended": 64,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/campaign-finance-observatory.html",
+      "review_status": "complete"
+    },
     {
       "number": 62,
       "title": "Citizens United Facts Master Citizen Action Center & Civic Engagement Hub v1.0",
@@ -5311,21 +5378,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Citizen Action Center v1.0 \u2014 6 pathways, learn-to-participate bridge",
-    "building_now": "62 builds specified \u2014 implementation translation next",
+    "what_built": "Campaign Finance Data Observatory v1.0 \u2014 8 divisions, transparent evidence",
+    "building_now": "63 builds specified \u2014 implementation translation next",
     "blocked": [
-      "Citizen dashboard",
-      "Packet builder",
-      "Share visualization",
-      "Registration"
+      "FEC data feeds",
+      "Chart library",
+      "Before & After Explorer",
+      "Arkansas datasets"
     ],
     "ready_public": [
-      "6 pathways",
-      "Guiding philosophy",
-      "County action spec",
-      "MC citizen metrics"
+      "8 divisions",
+      "Methodology standards",
+      "Data integrity spec",
+      "MC observatory metrics"
     ],
-    "next": "Build #63 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #64 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -6003,5 +6070,14 @@
     "registered_participants": 0,
     "action_hub_items_live": 2,
     "bridge_learning_to_participation": true
+  },
+  "campaign_finance_observatory": "/data/campaign-finance-observatory.json",
+  "campaign_finance_observatory_dashboard": "/mission-control/campaign-finance-observatory.html",
+  "campaign_finance_observatory_inventory": {
+    "readiness_score": 36,
+    "divisions_total": 8,
+    "datasets_published": 0,
+    "charts_completed": 0,
+    "flagship_system": true
   }
 }

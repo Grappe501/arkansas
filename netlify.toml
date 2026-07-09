@@ -477,6 +477,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/campaign-finance-observatory"
+  to = "/mission-control/campaign-finance-observatory.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301

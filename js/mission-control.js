@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Campaign Finance Observatory <a href="/mission-control/campaign-finance-observatory.html" class="mc-inline-link">Follow the Money #63 →</a></h2>
+    <p class="mc-bar-note">Build #63 — Campaign Finance Data Observatory. 8 divisions, Before & After Explorer, data integrity standards. Flagship system. 0 datasets · 0 charts. ~36% readiness.</p>
     <h2 class="mc-section-title">Citizen Action Center <a href="/mission-control/citizen-action-center.html" class="mc-inline-link">Learn to Participate #62 →</a></h2>
     <p class="mc-bar-note">Build #62 — Citizen Action Center. 6 pathways, learn→participate bridge. Not advocacy. 0 registered · 2 action hub items. ~42% readiness.</p>
     <h2 class="mc-section-title">Coalition Network <a href="/mission-control/coalition-network.html" class="mc-inline-link">Building Arkansas #61 →</a></h2>
@@ -5175,6 +5177,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initInstitutionalAi();
   initCoalitionNetwork();
   initCitizenActionCenter();
+  initCampaignFinanceObservatory();
 });
 
 async function initUxArchitecture() {
@@ -6463,7 +6466,100 @@ async function initCitizenActionCenter() {
       <a href="/docs/MASTER_CITIZEN_ACTION_CENTER.md">MASTER_CITIZEN_ACTION_CENTER.md</a> ·
       <a href="/data/citizen-action-center.json">JSON</a> ·
       <a href="/mission-control/civic-action-lab.html">Civic Action Lab</a> ·
-      <a href="/mission-control/coalition-network.html">Coalition Network</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initCampaignFinanceObservatory() {
+  const root = document.getElementById('mc-campaign-finance-observatory-root');
+  if (!root) return;
+
+  const [cfoRes, mcRes] = await Promise.all([
+    fetch('/data/campaign-finance-observatory.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const cfo = await cfoRes.json();
+  const mc = await mcRes.json();
+  const s = cfo.summary;
+
+  const divisionRows = cfo.eight_divisions.map(d => `
+    <tr><td>${d.number}</td><td><code>${d.id}</code></td><td>${d.title}</td>
+      <td>${d.status}</td></tr>`).join('');
+
+  const metricRows = cfo.mc_observatory_dashboard.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.metric}</td><td>${m.current}</td>
+      <td>${m.target ?? '—'}</td><td>${m.status}</td></tr>`).join('');
+
+  const systemRows = cfo.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td>${sys.route ? `<a href="${sys.route}">→</a>` : '—'}</td>
+      <td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  const stageRows = cfo.before_after_explorer.stages.map(st => `
+    <tr><td>${st.stage}</td><td>${st.status}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Campaign Finance Observatory</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #63 · ${cfo.title}</p>
+      <h1>The Arkansas Campaign Finance Intelligence Center</h1>
+      <p class="mc-header__question">${cfo.governing_principle}</p>
+      <p class="mc-bar-note">${cfo.purpose}</p>
+      <p class="mc-bar-note"><strong>Flagship system:</strong> ${cfo.flagship_system ? 'Yes' : 'No'} · <strong>Distinct from:</strong> ${cfo.distinct_from.system} (${cfo.distinct_from.difference})</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Observatory readiness</div><div class="mc-stat__value">${s.campaign_finance_observatory_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Divisions</div><div class="mc-stat__value">${s.divisions_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Datasets</div><div class="mc-stat__value">${s.datasets_published}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Charts</div><div class="mc-stat__value">${s.charts_completed}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Research notes</div><div class="mc-stat__value">${s.research_notes_completed}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Arkansas charts</div><div class="mc-stat__value">${s.arkansas_charts}</div></div>
+    </div>
+    <h2 class="mc-section-title">Mission Questions</h2>
+    <ul class="mc-deliverables">${cfo.mission_questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Eight Research Divisions</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Division</th><th>Status</th></tr></thead>
+      <tbody>${divisionRows}</tbody></table>
+    ${cfo.eight_divisions.map(d => `
+      <h3 class="mc-subsection-title">${d.title}</h3>
+      <p class="mc-bar-note">${d.focus}</p>
+      <ul class="mc-deliverables">${(d.topics || d.fields || d.examples || []).map(t => `<li>${t}</li>`).join('')}</ul>
+      ${d.goal ? `<p class="mc-bar-note">${d.goal}</p>` : ''}
+      ${d.note ? `<p class="mc-bar-note">${d.note}</p>` : ''}
+      ${d.per_page ? `<p class="mc-bar-note">Per page: ${d.per_page}</p>` : ''}`).join('')}
+    <h2 class="mc-section-title">${cfo.before_after_explorer.title}</h2>
+    <p class="mc-bar-note">${cfo.before_after_explorer.emphasis} · ${cfo.before_after_explorer.status}</p>
+    <table class="mc-table"><thead><tr><th>Stage</th><th>Status</th></tr></thead>
+      <tbody>${stageRows}</tbody></table>
+    <h2 class="mc-section-title">${cfo.methodology_pages.title}</h2>
+    <p class="mc-bar-note">Required per chart: ${cfo.methodology_pages.required_per_chart ? 'Yes' : 'No'} · ${cfo.methodology_pages.status}</p>
+    <ul class="mc-deliverables">${cfo.methodology_pages.questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cfo.data_integrity_standards.title}</h2>
+    <p class="mc-bar-note">${cfo.data_integrity_standards.status}</p>
+    <ul class="mc-deliverables">${cfo.data_integrity_standards.required_fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cfo.mc_observatory_dashboard.title}</h2>
+    <p class="mc-bar-note">Living research program: ${cfo.mc_observatory_dashboard.living_research_program ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Target</th><th>Status</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${cfo.integration.chain}</p>
+    <p class="mc-bar-note">${cfo.integration.principle}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${cfo.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${cfo.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${cfo.recommended_next_build.number} — ${cfo.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${cfo.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_CAMPAIGN_FINANCE_OBSERVATORY.md">MASTER_CAMPAIGN_FINANCE_OBSERVATORY.md</a> ·
+      <a href="/data/campaign-finance-observatory.json">JSON</a> ·
+      <a href="/mission-control/evidence-ledger.html">Evidence Ledger</a> ·
+      <a href="/mission-control/research-library.html">Research Library</a> ·
+      <a href="/mission-control/research-observatory.html">Research Observatory</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

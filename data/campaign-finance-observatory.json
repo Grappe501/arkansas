@@ -1,0 +1,345 @@
+{
+  "version": "1.0",
+  "build": 63,
+  "updated": "2026-07-09",
+  "title": "Master Campaign Finance Data Observatory v1.0",
+  "subtitle": "The Arkansas Campaign Finance Intelligence Center \u2014 Following the Money Through Facts, Data & Transparency",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/campaign-finance-observatory.html",
+  "constitution": "/docs/MASTER_CAMPAIGN_FINANCE_OBSERVATORY.md",
+  "purpose": "Answer \"What actually changed?\" using publicly available information, historical records, documented research, and transparent data visualizations.",
+  "governing_principle": "Replace speculation with understanding. Teach citizens how to read the data \u2014 not merely how to react to it.",
+  "flagship_system": true,
+  "distinct_from": {
+    "system": "Research Observatory (#29)",
+    "route": "/mission-control/research-observatory.html",
+    "difference": "Research Observatory monitors developments; Campaign Finance Observatory explains spending data"
+  },
+  "mission_questions": [
+    "How has campaign spending changed over time?",
+    "What trends appear before and after Citizens United?",
+    "What types of political spending exist?",
+    "Where does publicly reported campaign finance information come from?",
+    "What are the limitations of the available data?"
+  ],
+  "eight_divisions": [
+    {
+      "id": "CFO-DIV-1",
+      "number": 1,
+      "title": "Historical Spending Explorer",
+      "focus": "Long-term spending trends and campaign finance milestones",
+      "topics": [
+        "Election cycles",
+        "Federal campaign spending",
+        "Historical comparisons",
+        "Inflation-adjusted views",
+        "Major campaign finance milestones"
+      ],
+      "goal": "Place Citizens United within a broader historical timeline",
+      "status": "planned"
+    },
+    {
+      "id": "CFO-DIV-2",
+      "number": 2,
+      "title": "Independent Expenditure Explorer",
+      "focus": "Educational explanations supported by publicly available data",
+      "topics": [
+        "Independent expenditures",
+        "Reported spending over time",
+        "Reporting requirements",
+        "Major trends",
+        "Frequently asked questions"
+      ],
+      "note": "Distinguish publicly reported expenditures from other legal reporting frameworks",
+      "status": "planned"
+    },
+    {
+      "id": "CFO-DIV-3",
+      "number": 3,
+      "title": "Political Committee Explorer",
+      "focus": "Organizational structures in campaign finance",
+      "topics": [
+        "Candidate committees",
+        "Party committees",
+        "Political action committees (PACs)",
+        "Super PACs",
+        "Other organizations involved in campaign finance"
+      ],
+      "per_page": "Legal concepts, reporting requirements, historical development",
+      "status": "planned"
+    },
+    {
+      "id": "CFO-DIV-4",
+      "number": 4,
+      "title": "Election Cycle Dashboard",
+      "focus": "Compare election cycles with sourced methodologies",
+      "topics": [
+        "Presidential elections",
+        "Midterm elections",
+        "Spending trends",
+        "Participation trends",
+        "Historical context"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "CFO-DIV-5",
+      "number": 5,
+      "title": "Arkansas Campaign Finance Center",
+      "focus": "Arkansas-focused civic education on state campaign finance",
+      "topics": [
+        "Arkansas campaign finance reporting",
+        "Relevant state agencies",
+        "Arkansas election finance laws",
+        "Public reporting systems",
+        "Historical Arkansas developments"
+      ],
+      "note": "Connects national concepts to Arkansas civic education",
+      "status": "planned"
+    },
+    {
+      "id": "CFO-DIV-6",
+      "number": 6,
+      "title": "Data Visualization Studio",
+      "focus": "Interactive educational graphics with methodology links",
+      "topics": [
+        "Spending timelines",
+        "Comparative charts",
+        "Flow diagrams",
+        "Geographic maps",
+        "Trend analyses",
+        "Historical comparisons"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "CFO-DIV-7",
+      "number": 7,
+      "title": "Research Notes",
+      "focus": "Data quality and civic literacy for every major dataset",
+      "fields": [
+        "Data source",
+        "Collection methodology",
+        "Date range",
+        "Definitions",
+        "Limitations",
+        "Frequently asked questions"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "CFO-DIV-8",
+      "number": 8,
+      "title": "Frequently Asked Questions",
+      "focus": "Evidence-linked answers to common campaign finance questions",
+      "examples": [
+        "Did campaign spending increase after Citizens United?",
+        "What is an independent expenditure?",
+        "Where does this data come from?",
+        "What data is publicly available?",
+        "What questions remain debated among researchers?"
+      ],
+      "status": "planned"
+    }
+  ],
+  "before_after_explorer": {
+    "title": "Before & After Explorer",
+    "stages": [
+      {
+        "stage": "Before Citizens United",
+        "status": "planned"
+      },
+      {
+        "stage": "Immediately After",
+        "status": "planned"
+      },
+      {
+        "stage": "Subsequent Election Cycles",
+        "status": "planned"
+      },
+      {
+        "stage": "Current Trends",
+        "status": "planned"
+      }
+    ],
+    "emphasis": "Educational comparison \u2014 not unsupported causal conclusions",
+    "status": "planned"
+  },
+  "methodology_pages": {
+    "title": "Methodology Transparency",
+    "questions": [
+      "What is being measured?",
+      "Where did the data originate?",
+      "How was it collected?",
+      "What does the chart not show?",
+      "What are the known limitations?"
+    ],
+    "required_per_chart": true,
+    "status": "planned"
+  },
+  "data_integrity_standards": {
+    "title": "Data Integrity Standards",
+    "required_fields": [
+      "Source",
+      "Date",
+      "Review status",
+      "Methodology",
+      "Version",
+      "Related research",
+      "Related lessons"
+    ],
+    "status": "specified"
+  },
+  "mc_observatory_dashboard": {
+    "title": "Mission Control Observatory Dashboard",
+    "metrics": [
+      {
+        "id": "CFO-M1",
+        "metric": "Datasets published",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CFO-M2",
+        "metric": "Charts completed",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CFO-M3",
+        "metric": "Research notes completed",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CFO-M4",
+        "metric": "Historical coverage",
+        "current": "partial",
+        "status": "partial"
+      },
+      {
+        "id": "CFO-M5",
+        "metric": "Arkansas coverage",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CFO-M6",
+        "metric": "Methodology reviews",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CFO-M7",
+        "metric": "Broken data links",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CFO-M8",
+        "metric": "Scheduled dataset updates",
+        "current": 0,
+        "status": "planned"
+      }
+    ],
+    "living_research_program": true,
+    "status": "partial"
+  },
+  "integration": {
+    "chain": "Research Library \u2192 Evidence Ledger \u2192 Claims Registry \u2192 Knowledge Graph \u2192 Curriculum \u2192 Media Studio \u2192 Learning Laboratory \u2192 Mission Control",
+    "systems": [
+      {
+        "system": "Research Library (#37)",
+        "route": "/mission-control/research-library.html",
+        "status": "partial",
+        "note": "14 documents archived"
+      },
+      {
+        "system": "Evidence Ledger (#41)",
+        "route": "/mission-control/evidence-ledger.html",
+        "status": "partial",
+        "note": "14 evidence records"
+      },
+      {
+        "system": "Claims Registry",
+        "route": "/mission-control/evidence-ledger.html",
+        "status": "partial"
+      },
+      {
+        "system": "Knowledge Graph",
+        "route": "/mission-control/knowledge-graph.html",
+        "status": "planned"
+      },
+      {
+        "system": "Curriculum (#33)",
+        "route": "/mission-control/curriculum.html",
+        "status": "planned"
+      },
+      {
+        "system": "Media Studio (#36)",
+        "route": "/mission-control/media-studio.html",
+        "status": "planned"
+      },
+      {
+        "system": "Learning Laboratory (#38)",
+        "route": "/mission-control/learning-lab.html",
+        "status": "planned"
+      },
+      {
+        "system": "Research Observatory (#29)",
+        "route": "/mission-control/research-observatory.html",
+        "status": "partial",
+        "note": "Monitor vs data \u2014 complementary"
+      },
+      {
+        "system": "Citizen Action Center (#62)",
+        "route": "/mission-control/citizen-action-center.html",
+        "status": "live"
+      },
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      }
+    ],
+    "principle": "Every chart becomes part of the larger educational ecosystem"
+  },
+  "long_term_vision": "Arkansas's most comprehensive public educational resource for understanding campaign finance through documented evidence \u2014 confidence in reading reports, interpreting trends, and recognizing data limits.",
+  "summary": {
+    "divisions_total": 8,
+    "divisions_partial_or_live": 0,
+    "datasets_published": 0,
+    "charts_completed": 0,
+    "research_notes_completed": 0,
+    "methodology_reviews": 0,
+    "broken_data_links": 0,
+    "scheduled_updates": 0,
+    "arkansas_charts": 0,
+    "evidence_foundation_items": 14,
+    "library_documents": 14,
+    "campaign_finance_observatory_readiness_pct": 36,
+    "data_viz_readiness_pct": 12,
+    "observatory_readiness_pct": 20,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "0 datasets published \u2014 no FEC, OpenSecrets, or Arkansas SOS data feeds integrated",
+    "0 charts completed \u2014 Data Visualization Studio not built",
+    "0 research notes \u2014 methodology pages specified but not implemented",
+    "Before & After Explorer not built \u2014 no interactive comparison views",
+    "Arkansas Campaign Finance Center \u2014 0 Arkansas-specific charts or datasets",
+    "Political Committee Explorer pages not created \u2014 0 committee type explainers live",
+    "Build #63 Campaign Finance Observatory vs Build #29 Research Observatory \u2014 distinct roles, unify navigation?",
+    "No automated dataset update schedule \u2014 scheduled_updates = 0",
+    "Charts do not yet display required integrity fields (source, date, review, version)",
+    "Knowledge Graph integration planned \u2014 campaign finance nodes not wired",
+    "Evidence foundation exists (14 records) but not linked to observatory charts",
+    "Public-facing /observatory/ route not built \u2014 MC dashboard only"
+  ],
+  "recommended_next_build": {
+    "number": 64,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "FEC/OpenSecrets data pipeline spec, chart component library, methodology page templates, route inventory, COMP-* specs, GitHub issue backlog."
+  }
+}

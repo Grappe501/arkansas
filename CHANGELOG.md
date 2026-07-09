@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.67.0] - 2026-07-09 — Build #63 Campaign Finance Data Observatory
+
+### The Arkansas Campaign Finance Intelligence Center
+- **Master Campaign Finance Data Observatory v1.0** — answer "What actually changed?" with transparent evidence
+- 8 research divisions: Historical Spending through FAQ
+- Before & After Explorer, methodology pages, data integrity standards
+- Integrates Research Library, Evidence Ledger, Knowledge Graph chain
+- Distinct from Research Observatory (#29) — spending data vs development monitor
+- Honest: 0 datasets · 0 charts · ~36% readiness
+- MC dashboard: `/mission-control/campaign-finance-observatory.html`
+
 ## [1.66.0] - 2026-07-09 — Build #62 Citizen Action Center & Civic Engagement Hub
 
 ### The Arkansas Citizen Action Center
