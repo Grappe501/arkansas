@@ -1,5 +1,5 @@
 {
-  "version": "2.05.33",
+  "version": "2.05.34",
   "build": 101,
   "updated": "2026-07-09",
   "identity": {
@@ -121,7 +121,7 @@
     "connected_citizen_goal_pct": 15,
     "implementation_steps_total": 50,
     "implementation_steps_implemented": 0,
-    "implementation_steps_documented": 33,
+    "implementation_steps_documented": 34,
     "overall_completion": 101,
     "current_build": {
       "number": 101,
@@ -7814,21 +7814,21 @@
     }
   ],
   "briefing": {
-    "what_built": "IMP-01\u201333 documented \u2014 engineering standards & development handbook (66%)",
-    "building_now": "IMP-34 Executive Cockpit & MC Command Environment next; Sprint Zero pending",
+    "what_built": "IMP-01\u201334 documented \u2014 executive cockpit & MC command environment (68%)",
+    "building_now": "IMP-35 Research Intelligence & Policy Observatory next; Sprint Zero pending",
     "blocked": [
       "Sprint Zero not complete",
       "0/50 code-implemented",
       "2 days to software target"
     ],
     "ready_public": [
+      "Executive Cockpit",
+      "executive-cockpit-manifest.json",
+      "Arkansas operations map & briefing center",
       "Engineering Standards",
-      "engineering-standards-manifest.json",
-      "Repository governance & coding conventions",
-      "Implementation Roadmap",
-      "Engineering constitution for all contributors"
+      "Unified command environment for statewide coordination"
     ],
-    "next": "IMP-34 \u2014 Master Operations Center, Executive Cockpit & Mission Control Command Environment"
+    "next": "IMP-35 \u2014 Master Research Intelligence, Public Policy Observatory & Arkansas Civic Insights Center"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8847,7 +8847,7 @@
     "readiness_score": 100,
     "steps_total": 50,
     "steps_implemented": 0,
-    "steps_documented": 33,
+    "steps_documented": 34,
     "bands_total": 5,
     "sprint_zero_started": false,
     "cursor_master_prompt_ready": true

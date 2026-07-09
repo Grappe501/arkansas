@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 33  # IMP-01 through IMP-33 (doctrinal)
+steps_documented = 34  # IMP-01 through IMP-34 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3335,7 +3335,7 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'institutional_analytics', 'institutional_automation', 'public_digital_experience',
     'mobile_field_operations', 'institutional_digital_library',
     'institutional_integration_platform', 'institutional_security_trust',
-    'institutional_implementation_roadmap', 'institutional_engineering_standards',
+    'institutional_engineering_standards', 'institutional_executive_cockpit',
 ]
 
 RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
@@ -6079,6 +6079,193 @@ ENGINEERING_STANDARDS_MANIFEST = {
     'implemented': False,
 }
 
+EXECUTIVE_PHILOSOPHY_SURFACES = [
+    'requires_attention', 'working_well', 'at_risk', 'should_happen_next',
+]
+
+EXECUTIVE_COCKPIT_COMPONENTS = [
+    'institution_health', 'county_status', 'city_status', 'organization_growth',
+    'volunteer_activity', 'education_leader_pipeline', 'community_conversations',
+    'research_activity', 'academy_progress', 'technology_health', 'ai_operations',
+    'strategic_risks', 'executive_calendar',
+]
+
+MISSION_CONTROL_WALL_DISPLAYS = [
+    'arkansas_county_map', 'operational_heat_maps', 'community_conversations',
+    'volunteer_growth', 'organization_partnerships', 'education_leader_coverage',
+    'upcoming_events', 'critical_alerts', 'institutional_health_index',
+]
+
+ARKANSAS_OPERATIONS_MAP_INDICATORS = [
+    'leadership', 'volunteer_strength', 'organization_partnerships',
+    'community_conversations', 'academy_participation', 'research_resources',
+    '15pct_participation_progress', 'county_certification',
+]
+
+EXECUTIVE_BRIEFING_ITEMS = [
+    'morning_briefing', 'daily_operational_summary', 'county_highlights',
+    'emerging_risks', 'upcoming_milestones', 'volunteer_growth',
+    'community_activity', 'strategic_recommendations',
+]
+
+LIVE_INSTITUTIONAL_METRICS = [
+    'users_online', 'volunteer_activity', 'county_events', 'community_conversations',
+    'research_publications', 'academy_enrollments', 'organization_activity',
+    'technology_status', 'communication_activity', 'ai_utilization',
+]
+
+COUNTY_OPERATIONS_CENTER_DISPLAYS = [
+    'county_dashboard', 'education_leaders', 'organizations', 'volunteers',
+    'academy', 'community_calendar', 'community_conversations', 'open_action_items',
+    'growth_recommendations',
+]
+
+ORGANIZATION_OPERATIONS_CENTER_DISPLAYS = [
+    'partner_organizations', 'partnership_health', 'shared_events', 'joint_initiatives',
+    'volunteer_collaboration', 'educational_activities', 'communication_history',
+]
+
+EXECUTIVE_ALERT_SEVERITIES = [
+    'critical', 'high', 'medium', 'informational',
+]
+
+EXECUTIVE_ALERT_EXAMPLES = [
+    'county_leadership_vacancy', 'technology_outage', 'community_opportunity',
+    'volunteer_milestone', 'organization_onboarding', 'research_publication',
+]
+
+INSTITUTIONAL_FORECAST_ITEMS = [
+    'county_readiness', 'leadership_growth', 'volunteer_trends',
+    'academy_participation', 'organization_expansion', 'technology_capacity',
+    'community_engagement',
+]
+
+SITUATION_ROOM_USE_CASES = [
+    'major_statewide_initiatives', 'research_projects', 'special_campaigns',
+    'launch_coordination', 'community_response_efforts', 'cross_department_collaboration',
+]
+
+DECISION_SUPPORT_ELEMENTS = [
+    'evidence', 'historical_trends', 'related_decisions', 'relevant_documents',
+    'affected_counties', 'affected_organizations', 'ai_recommendations',
+]
+
+STRATEGIC_PLANNING_WORKSPACE_ITEMS = [
+    'quarterly_plans', 'annual_plans', 'county_priorities', 'growth_objectives',
+    'organization_strategies', 'volunteer_initiatives',
+]
+
+EXECUTIVE_COMMUNICATIONS_INTEGRATIONS = [
+    'announcements', 'leadership_messages', 'pmo_updates', 'research_briefings',
+    'meeting_agendas', 'decision_logs',
+]
+
+MC_EXECUTIVE_METRICS = [
+    'institution_health_index', 'community_health_index', 'county_certification',
+    'organization_partnerships', 'volunteer_growth', 'education_leader_development',
+    '15pct_participation', '200000_connection_goal', 'research_production',
+    'technology_performance',
+]
+
+OCTOBER_EXECUTIVE_READINESS_SCOPE = [
+    '75_counties', 'county_organizational_partnerships', 'education_leaders',
+    'volunteer_network', 'academy', 'research', 'technology', 'communications',
+]
+
+EXECUTIVE_COCKPIT_DELIVERABLES = [
+    'executive_cockpit', 'mission_control_command_center', 'arkansas_operations_map',
+    'executive_briefing_center', 'county_operations_center',
+    'organization_operations_center', 'situation_room', 'executive_alert_framework',
+    'strategic_planning_workspace', 'mission_control_metrics_dashboard',
+    'executive_decision_support_system',
+]
+
+EXECUTIVE_COCKPIT_SYSTEM_CHAIN = [
+    'knowledge_platform', 'research_institute', 'community_education_academy',
+    'volunteer_network', 'coalition_network', 'county_operating_system',
+    'city_operating_system', 'neighborhood_operating_system', 'communications',
+    'calendar_brain', 'relationship_intelligence', 'analytics', 'automation',
+    'ai_localbrains', 'production_operations',
+]
+
+EXECUTIVE_COCKPIT_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-34',
+    'updated': today,
+    'title': 'Master Operations Center, Executive Cockpit & Mission Control Command Environment',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_34_EXECUTIVE_COCKPIT.md',
+    'source_registries': {
+        'mission_control_architecture': '/data/mission-control-architecture-manifest.json',
+        'governance_pmo': '/data/governance-pmo-manifest.json',
+        'institutional_analytics': '/data/institutional-analytics-manifest.json',
+        'launch_strategy': '/data/launch-strategy-manifest.json',
+        'local_operating_systems': '/data/local-operating-systems-manifest.json',
+    },
+    'philosophy': 'Mission Control is the operational heartbeat — leadership understands the institution within minutes',
+    'governing_principle': (
+        'Transform thousands of independent activities into one coherent operational picture '
+        'so leaders see the entire institution, not isolated departments'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'executive_philosophy_surfaces': EXECUTIVE_PHILOSOPHY_SURFACES,
+    'executive_cockpit_components': EXECUTIVE_COCKPIT_COMPONENTS,
+    'executive_cockpit_component_count': len(EXECUTIVE_COCKPIT_COMPONENTS),
+    'mission_control_wall_displays': MISSION_CONTROL_WALL_DISPLAYS,
+    'mission_control_wall_display_count': len(MISSION_CONTROL_WALL_DISPLAYS),
+    'arkansas_operations_map_indicators': ARKANSAS_OPERATIONS_MAP_INDICATORS,
+    'arkansas_operations_map_indicator_count': len(ARKANSAS_OPERATIONS_MAP_INDICATORS),
+    'executive_briefing_items': EXECUTIVE_BRIEFING_ITEMS,
+    'executive_briefing_item_count': len(EXECUTIVE_BRIEFING_ITEMS),
+    'live_institutional_metrics': LIVE_INSTITUTIONAL_METRICS,
+    'live_institutional_metric_count': len(LIVE_INSTITUTIONAL_METRICS),
+    'county_operations_center_displays': COUNTY_OPERATIONS_CENTER_DISPLAYS,
+    'county_operations_center_display_count': len(COUNTY_OPERATIONS_CENTER_DISPLAYS),
+    'organization_operations_center_displays': ORGANIZATION_OPERATIONS_CENTER_DISPLAYS,
+    'organization_operations_center_display_count': len(ORGANIZATION_OPERATIONS_CENTER_DISPLAYS),
+    'executive_alert_severities': EXECUTIVE_ALERT_SEVERITIES,
+    'executive_alert_examples': EXECUTIVE_ALERT_EXAMPLES,
+    'institutional_forecast_items': INSTITUTIONAL_FORECAST_ITEMS,
+    'institutional_forecast_item_count': len(INSTITUTIONAL_FORECAST_ITEMS),
+    'situation_room_use_cases': SITUATION_ROOM_USE_CASES,
+    'situation_room_use_case_count': len(SITUATION_ROOM_USE_CASES),
+    'decision_support_elements': DECISION_SUPPORT_ELEMENTS,
+    'decision_support_element_count': len(DECISION_SUPPORT_ELEMENTS),
+    'strategic_planning_workspace_items': STRATEGIC_PLANNING_WORKSPACE_ITEMS,
+    'executive_communications_integrations': EXECUTIVE_COMMUNICATIONS_INTEGRATIONS,
+    'mc_executive_metrics': MC_EXECUTIVE_METRICS,
+    'mc_executive_metric_count': len(MC_EXECUTIVE_METRICS),
+    'executive_cockpit_deliverables': EXECUTIVE_COCKPIT_DELIVERABLES,
+    'executive_cockpit_deliverable_count': len(EXECUTIVE_COCKPIT_DELIVERABLES),
+    'october_executive_readiness': {
+        'target_date': county_milestone_date,
+        'scope': OCTOBER_EXECUTIVE_READINESS_SCOPE,
+        'label': 'Statewide situational awareness for executive leadership by October 1',
+    },
+    'organizational_goals': {
+        'counties_total': 75,
+        'counties_with_partnerships_goal': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'executive_cockpit_system_chain': EXECUTIVE_COCKPIT_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/executive.html',
+    'packages_completed': 34,
+    'packages_total': 50,
+    'packages_complete_pct': 68,
+    'engineering_note': 'Doctrinal IMP-34 Executive Cockpit; engineering IMP-34 is County dashboard template',
+    'status': 'documented',
+    'implemented': False,
+}
+
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -6228,7 +6415,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D34', 'indicator': 'AI Orchestration (IMP-31)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D35', 'indicator': 'Implementation Roadmap (IMP-32)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D36', 'indicator': 'Engineering Standards (IMP-33)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D37', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D37', 'indicator': 'Executive Cockpit (IMP-34)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D38', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -7093,6 +7281,33 @@ out = {
             'number': 34,
             'id': 'IMP-34',
             'title': 'Master Operations Center, Executive Cockpit & Mission Control Command Environment',
+            'status': 'documented',
+        },
+    },
+    'executive_cockpit': {
+        'title': 'Master Operations Center, Executive Cockpit & Mission Control Command Environment',
+        'package': 'Implementation Package 34 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_34_EXECUTIVE_COCKPIT.md',
+        'manifest': '/data/executive-cockpit-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': EXECUTIVE_COCKPIT_MANIFEST['philosophy'],
+        'executive_cockpit_component_count': EXECUTIVE_COCKPIT_MANIFEST['executive_cockpit_component_count'],
+        'arkansas_operations_map_indicator_count': EXECUTIVE_COCKPIT_MANIFEST['arkansas_operations_map_indicator_count'],
+        'executive_briefing_item_count': EXECUTIVE_COCKPIT_MANIFEST['executive_briefing_item_count'],
+        'executive_cockpit_deliverable_count': EXECUTIVE_COCKPIT_MANIFEST['executive_cockpit_deliverable_count'],
+        'mc_executive_metric_count': EXECUTIVE_COCKPIT_MANIFEST['mc_executive_metric_count'],
+        'packages_completed': EXECUTIVE_COCKPIT_MANIFEST['packages_completed'],
+        'packages_complete_pct': EXECUTIVE_COCKPIT_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': EXECUTIVE_COCKPIT_MANIFEST['mc_dashboard'],
+        'engineering_note': EXECUTIVE_COCKPIT_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 35,
+            'id': 'IMP-35',
+            'title': 'Master Research Intelligence, Public Policy Observatory & Arkansas Civic Insights Center',
             'status': 'specified',
         },
     },
@@ -7317,6 +7532,10 @@ with open(root / 'data/implementation-roadmap-manifest.json', 'w', newline='\n')
 
 with open(root / 'data/engineering-standards-manifest.json', 'w', newline='\n') as f:
     json.dump(ENGINEERING_STANDARDS_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/executive-cockpit-manifest.json', 'w', newline='\n') as f:
+    json.dump(EXECUTIVE_COCKPIT_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

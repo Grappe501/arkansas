@@ -26,7 +26,7 @@ tl = cip.get('master_timeline', {})
 
 
 
-mc['version'] = '2.05.33'
+mc['version'] = '2.05.34'
 
 mc['updated'] = '2026-07-09'
 
@@ -96,21 +96,21 @@ for bar in mc['progress_bars']:
 
 mc['briefing'] = {
 
-    'what_built': 'IMP-01–33 documented — engineering standards & development handbook (66%)',
+    'what_built': 'IMP-01–34 documented — executive cockpit & MC command environment (68%)',
 
-    'building_now': 'IMP-34 Executive Cockpit & MC Command Environment next; Sprint Zero pending',
+    'building_now': 'IMP-35 Research Intelligence & Policy Observatory next; Sprint Zero pending',
 
     'blocked': ['Sprint Zero not complete', '0/50 code-implemented', f"{s.get('days_to_software', 0)} days to software target"],
 
     'ready_public': [
 
-        'Engineering Standards', 'engineering-standards-manifest.json', 'Repository governance & coding conventions',
+        'Executive Cockpit', 'executive-cockpit-manifest.json', 'Arkansas operations map & briefing center',
 
-        'Implementation Roadmap', 'Engineering constitution for all contributors',
+        'Engineering Standards', 'Unified command environment for statewide coordination',
 
     ],
 
-    'next': 'IMP-34 — Master Operations Center, Executive Cockpit & Mission Control Command Environment',
+    'next': 'IMP-35 — Master Research Intelligence, Public Policy Observatory & Arkansas Civic Insights Center',
 
 }
 
