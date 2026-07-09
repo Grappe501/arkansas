@@ -1,0 +1,418 @@
+{
+  "version": "1.0",
+  "build": 71,
+  "updated": "2026-07-09",
+  "title": "Master Arkansas Community Intelligence & Listening System v1.0",
+  "subtitle": "Listening Before Leading \u2014 The Statewide Civic Listening Network",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/arkansas-community-listening.html",
+  "constitution": "/docs/MASTER_ARKANSAS_COMMUNITY_LISTENING.md",
+  "purpose": "Collect questions, misunderstandings, educational needs, and suggestions from Arkansans \u2014 and use that information to improve the institution.",
+  "governing_principle": "Never become an institution that only speaks. Listen just as carefully as you teach. Curiosity begins with questions. Questions begin with listening.",
+  "operating_principle": "We do not begin with answers. We begin by listening.",
+  "listening_as_important_as_publishing": true,
+  "learn_from_arkansas": true,
+  "listening_sources": {
+    "title": "The Arkansas Listening Network",
+    "sources_total": 6,
+    "sources": [
+      {
+        "id": "ACL-S1",
+        "number": 1,
+        "title": "Individual Learners",
+        "channels": [
+          "Website",
+          "AI Guide",
+          "Community conversations",
+          "Academy",
+          "Educational events"
+        ],
+        "mc_identifies_recurring": true,
+        "submissions": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-S2",
+        "number": 2,
+        "title": "Education Leaders",
+        "reports": [
+          "Questions people ask",
+          "Areas of confusion",
+          "Successful teaching approaches",
+          "Resource requests",
+          "New educational needs"
+        ],
+        "role": "Institution's eyes and ears throughout Arkansas",
+        "reports_submitted": 0,
+        "leaders_reporting": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-S3",
+        "number": 3,
+        "title": "Coalition Organizations",
+        "feedback_areas": [
+          "Community interests",
+          "Educational challenges",
+          "Resource needs",
+          "Event opportunities",
+          "Research requests"
+        ],
+        "items_received": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-S4",
+        "number": 4,
+        "title": "Community Conversations",
+        "outputs": [
+          "Questions asked",
+          "Topics discussed",
+          "Frequently misunderstood concepts",
+          "Recommended improvements",
+          "Future discussion topics"
+        ],
+        "privacy_respecting": true,
+        "analyses_completed": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-S5",
+        "number": 5,
+        "title": "Research Community",
+        "suggestions": [
+          "New studies",
+          "Updated sources",
+          "Emerging legal developments",
+          "Historical materials",
+          "Data improvements"
+        ],
+        "recommendations_received": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-S6",
+        "number": 6,
+        "title": "Public Feedback",
+        "submission_types": [
+          "Corrections",
+          "Questions",
+          "Suggestions",
+          "Additional sources",
+          "Requests for clarification"
+        ],
+        "structured_review": true,
+        "submissions": 0,
+        "status": "planned"
+      }
+    ]
+  },
+  "question_observatory": {
+    "title": "The Question Observatory",
+    "living_inventory": true,
+    "live": false,
+    "categories": [
+      {
+        "id": "ACL-Q1",
+        "category": "Most Frequently Asked Questions",
+        "count": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-Q2",
+        "category": "Most Difficult Questions",
+        "count": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-Q3",
+        "category": "Emerging Questions",
+        "count": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-Q4",
+        "category": "Unanswered Questions",
+        "count": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-Q5",
+        "category": "Recently Answered Questions",
+        "count": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-Q6",
+        "category": "Questions Requiring Additional Research",
+        "count": 0,
+        "status": "planned"
+      }
+    ],
+    "total_questions": 0,
+    "questions_become_content": true,
+    "status": "planned"
+  },
+  "educational_needs_mapping": {
+    "title": "Educational Needs Mapping",
+    "patterns": [
+      "Counties requesting presentations",
+      "Cities asking similar questions",
+      "Topics receiving increased attention",
+      "Curriculum areas needing expansion",
+      "Research gaps"
+    ],
+    "prioritizes_resources": true,
+    "status": "planned"
+  },
+  "community_listening_dashboard": {
+    "title": "Community Listening Dashboard",
+    "live": false,
+    "indicators": [
+      {
+        "id": "ACL-D1",
+        "indicator": "Questions received",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-D2",
+        "indicator": "Topics trending",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-D3",
+        "indicator": "Educational requests",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-D4",
+        "indicator": "Resource requests",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-D5",
+        "indicator": "Presentation requests",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-D6",
+        "indicator": "Community feedback",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-D7",
+        "indicator": "Research recommendations",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-D8",
+        "indicator": "Coalition observations",
+        "current": 0,
+        "status": "planned"
+      }
+    ],
+    "status": "planned"
+  },
+  "listening_to_action_workflow": {
+    "title": "Listening-to-Action Workflow",
+    "principle": "Nothing disappears into a black hole",
+    "steps": [
+      {
+        "step": 1,
+        "id": "received",
+        "title": "Question Received",
+        "items": 0,
+        "status": "planned"
+      },
+      {
+        "step": 2,
+        "id": "categorized",
+        "title": "Categorized",
+        "items": 0,
+        "status": "planned"
+      },
+      {
+        "step": 3,
+        "id": "reviewed",
+        "title": "Reviewed",
+        "items": 0,
+        "status": "planned"
+      },
+      {
+        "step": 4,
+        "id": "research_assigned",
+        "title": "Research Assigned",
+        "items": 0,
+        "status": "planned"
+      },
+      {
+        "step": 5,
+        "id": "content_updated",
+        "title": "Educational Content Updated",
+        "items": 0,
+        "status": "planned"
+      },
+      {
+        "step": 6,
+        "id": "closed",
+        "title": "Mission Control Closed",
+        "items": 0,
+        "status": "planned"
+      }
+    ],
+    "status": "planned"
+  },
+  "community_pulse_reports": {
+    "title": "Community Pulse Reports",
+    "report_types": [
+      {
+        "id": "ACL-P1",
+        "type": "Monthly",
+        "reports_generated": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-P2",
+        "type": "Quarterly",
+        "reports_generated": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACL-P3",
+        "type": "Annual",
+        "reports_generated": 0,
+        "status": "planned"
+      }
+    ],
+    "content_areas": [
+      "Questions",
+      "Needs",
+      "Educational trends",
+      "Research priorities",
+      "Community observations"
+    ],
+    "reports_generated": 0,
+    "guides_planning": true,
+    "status": "planned"
+  },
+  "arkansas_civic_listening_tour": {
+    "title": "The Arkansas Civic Listening Tour",
+    "purpose": "Not to lecture \u2014 to learn",
+    "hosted_by": "Education Leaders",
+    "sessions_hosted": 0,
+    "topics": [
+      "What remains confusing?",
+      "What resources are missing?",
+      "What would help your community?",
+      "How can the institution better serve Arkansas?"
+    ],
+    "strengthens_trust": true,
+    "status": "planned"
+  },
+  "integration": {
+    "chain": "Mission Control \u2192 Research Observatory \u2192 Evidence Ledger \u2192 Curriculum \u2192 Education Academy \u2192 Coalition Network \u2192 Citizen Action Center \u2192 Civic Atlas",
+    "systems": [
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      },
+      {
+        "system": "Research Observatory (#29)",
+        "route": "/mission-control/research-observatory.html",
+        "status": "live"
+      },
+      {
+        "system": "Evidence Ledger (#41)",
+        "route": "/mission-control/evidence-ledger.html",
+        "status": "live"
+      },
+      {
+        "system": "Master Curriculum (#35)",
+        "route": "/mission-control/curriculum.html",
+        "status": "live"
+      },
+      {
+        "system": "Community Education Academy (#28)",
+        "route": "/mission-control/education-academy.html",
+        "status": "partial"
+      },
+      {
+        "system": "Coalition Network (#61)",
+        "route": "/mission-control/coalition-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Citizen Action Center (#62)",
+        "route": "/mission-control/citizen-action-center.html",
+        "status": "live"
+      },
+      {
+        "system": "Arkansas Civic Atlas (#58)",
+        "route": "/mission-control/civic-atlas.html",
+        "status": "live"
+      },
+      {
+        "system": "Citizen Leadership Academy (#68)",
+        "route": "/mission-control/citizen-leadership-academy.html",
+        "status": "live",
+        "note": "Leader reporting"
+      },
+      {
+        "system": "Arkansas Command Strategy (#70)",
+        "route": "/mission-control/arkansas-command-strategy.html",
+        "status": "live"
+      }
+    ],
+    "improves_every_system": true
+  },
+  "long_term_vision": "Mission Control displays Arkansas's questions \u2014 what citizens want to understand, where confusion remains, which counties need resources. Institution evolves through listening.",
+  "summary": {
+    "listening_sources": 6,
+    "questions_received": 0,
+    "education_leader_reports": 0,
+    "coalition_feedback_items": 0,
+    "conversation_analyses": 0,
+    "research_recommendations": 0,
+    "public_feedback_submissions": 0,
+    "pulse_reports_generated": 0,
+    "listening_sessions_hosted": 0,
+    "workflow_items_closed": 0,
+    "question_observatory_live": false,
+    "listening_dashboard_live": false,
+    "education_leaders_available": 0,
+    "coalition_orgs": 0,
+    "arkansas_community_listening_readiness_pct": 41,
+    "research_observatory_readiness_pct": 20,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "0 questions received \u2014 no feedback intake forms wired",
+    "0 education leader reports \u2014 leader reporting tool not built",
+    "0 coalition feedback items \u2014 organizational listening workflow missing",
+    "0 community conversation analyses \u2014 post-conversation capture not implemented",
+    "0 public feedback submissions \u2014 structured review queue not built",
+    "Question Observatory specified \u2014 not live; 0 questions in inventory",
+    "Listening-to-action workflow specified \u2014 0 items in pipeline",
+    "0 pulse reports generated \u2014 monthly/quarterly/annual generator not built",
+    "0 listening tour sessions \u2014 session registration and notes not implemented",
+    "Educational needs mapping planned \u2014 no pattern detection engine",
+    "Build #71 vs Research Observatory (#29) \u2014 reconcile listening vs research roles?",
+    "Build #71 vs Citizen Action Center (#62) \u2014 unify feedback channels?",
+    "0/0 leaders to report \u2014 no leaders enrolled",
+    "Privacy model for conversation analysis not specified in UI"
+  ],
+  "recommended_next_build": {
+    "number": 72,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "Feedback forms, question observatory UI, listening workflow tracker, pulse report generator, leader reporting tools, needs mapping, COMP-* specs, GitHub backlog."
+  }
+}

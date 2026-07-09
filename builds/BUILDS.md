@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#71** | **Arkansas Community Intelligence & Listening** | **1.75.0** | **✅ Complete** | [071](071-arkansas-community-listening.md) · [/mission-control/arkansas-community-listening.html](../mission-control/arkansas-community-listening.html) |
 | **#70** | **Arkansas Command Strategy** | **1.74.0** | **✅ Complete** | [070](070-arkansas-command-strategy.md) · [/mission-control/arkansas-command-strategy.html](../mission-control/arkansas-command-strategy.html) |
 | **#69** | **Relational Organizing & Arkansas Growth Engine** | **1.73.0** | **✅ Complete** | [069](069-relational-organizing-growth-engine.md) · [/mission-control/relational-organizing-growth-engine.html](../mission-control/relational-organizing-growth-engine.html) |
 | **#68** | **Citizen Leadership Academy** | **1.72.0** | **✅ Complete** | [068](068-citizen-leadership-academy.md) · [/mission-control/citizen-leadership-academy.html](../mission-control/citizen-leadership-academy.html) |

@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Community Listening <a href="/mission-control/arkansas-community-listening.html" class="mc-inline-link">Listening Network #71 →</a></h2>
+    <p class="mc-bar-note">Build #71 — Community Intelligence & Listening System. Six sources, question observatory, pulse reports. Learn from Arkansas. 0 questions · 0 leader reports · 0 pulse reports. ~41% readiness.</p>
     <h2 class="mc-section-title">Arkansas Command Strategy <a href="/mission-control/arkansas-command-strategy.html" class="mc-inline-link">Statewide Execution #70 →</a></h2>
     <p class="mc-bar-note">Build #70 — Arkansas Command Strategy. 75 counties · 250 cities · 200K connected. Five phases, readiness models, flywheel. Phase 1 in progress. 0/75 · 0/250 · 0/200K. ~39% readiness.</p>
     <h2 class="mc-section-title">Relational Growth Engine <a href="/mission-control/relational-organizing-growth-engine.html" class="mc-inline-link">Network Effect #69 →</a></h2>
@@ -5199,6 +5201,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCitizenLeadershipAcademy();
   initRelationalOrganizingGrowthEngine();
   initArkansasCommandStrategy();
+  initArkansasCommunityListening();
 });
 
 async function initUxArchitecture() {
@@ -7360,6 +7363,116 @@ async function initArkansasCommandStrategy() {
       <a href="/mission-control/statewide-growth.html">Statewide Growth</a> ·
       <a href="/mission-control/civic-atlas.html">Civic Atlas</a> ·
       <a href="/mission-control/arkansas-action-network.html">Action Network</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initArkansasCommunityListening() {
+  const root = document.getElementById('mc-arkansas-community-listening-root');
+  if (!root) return;
+
+  const [aclRes, mcRes] = await Promise.all([
+    fetch('/data/arkansas-community-listening.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const acl = await aclRes.json();
+  const mc = await mcRes.json();
+  const s = acl.summary;
+
+  const sourceRows = acl.listening_sources.sources.map(src => `
+    <tr><td>${src.number}</td><td><code>${src.id}</code></td><td>${src.title}</td>
+      <td>${src.submissions ?? src.reports_submitted ?? src.items_received ?? src.analyses_completed ?? src.recommendations_received ?? 0}</td>
+      <td>${src.status}</td></tr>`).join('');
+
+  const observatoryRows = acl.question_observatory.categories.map(c => `
+    <tr><td><code>${c.id}</code></td><td>${c.category}</td><td>${c.count}</td><td>${c.status}</td></tr>`).join('');
+
+  const dashRows = acl.community_listening_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td><td>${d.current}</td><td>${d.status}</td></tr>`).join('');
+
+  const workflowRows = acl.listening_to_action_workflow.steps.map(st => `
+    <tr><td>${st.step}</td><td>${st.title}</td><td>${st.items}</td><td>${st.status}</td></tr>`).join('');
+
+  const pulseRows = acl.community_pulse_reports.report_types.map(p => `
+    <tr><td><code>${p.id}</code></td><td>${p.type}</td><td>${p.reports_generated}</td><td>${p.status}</td></tr>`).join('');
+
+  const systemRows = acl.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td><td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Arkansas Community Listening</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #71 · ${acl.title}</p>
+      <h1>Listening Before Leading — The Statewide Civic Listening Network</h1>
+      <p class="mc-header__question">${acl.governing_principle}</p>
+      <p class="mc-bar-note">${acl.purpose}</p>
+      <p class="mc-bar-note"><strong>Operating principle:</strong> ${acl.operating_principle}</p>
+      <p class="mc-bar-note"><strong>Listening as important as publishing:</strong> ${acl.listening_as_important_as_publishing ? 'Yes' : 'No'} · <strong>Learn from Arkansas:</strong> ${acl.learn_from_arkansas ? 'Yes' : 'No'}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Listening readiness</div><div class="mc-stat__value">${s.arkansas_community_listening_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Questions</div><div class="mc-stat__value">${s.questions_received}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Leader reports</div><div class="mc-stat__value">${s.education_leader_reports}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Public feedback</div><div class="mc-stat__value">${s.public_feedback_submissions}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Pulse reports</div><div class="mc-stat__value">${s.pulse_reports_generated}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Listening sessions</div><div class="mc-stat__value">${s.listening_sessions_hosted}</div></div>
+    </div>
+    <h2 class="mc-section-title">${acl.listening_sources.title}</h2>
+    <p class="mc-bar-note">${acl.listening_sources.sources_total} primary sources</p>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Source</th><th>Submissions</th><th>Status</th></tr></thead>
+      <tbody>${sourceRows}</tbody></table>
+    ${acl.listening_sources.sources.map(src => `
+      <h3 class="mc-subsection-title">Source ${src.number}: ${src.title}</h3>
+      ${src.channels ? `<ul class="mc-deliverables">${src.channels.map(c => `<li>${c}</li>`).join('')}</ul>` : ''}
+      ${src.reports ? `<ul class="mc-deliverables">${src.reports.map(r => `<li>${r}</li>`).join('')}</ul>` : ''}
+      ${src.feedback_areas ? `<ul class="mc-deliverables">${src.feedback_areas.map(f => `<li>${f}</li>`).join('')}</ul>` : ''}
+      ${src.outputs ? `<ul class="mc-deliverables">${src.outputs.map(o => `<li>${o}</li>`).join('')}</ul>` : ''}
+      ${src.suggestions ? `<ul class="mc-deliverables">${src.suggestions.map(sg => `<li>${sg}</li>`).join('')}</ul>` : ''}
+      ${src.submission_types ? `<ul class="mc-deliverables">${src.submission_types.map(t => `<li>${t}</li>`).join('')}</ul>` : ''}
+      ${src.role ? `<p class="mc-bar-note">${src.role}</p>` : ''}`).join('')}
+    <h2 class="mc-section-title">${acl.question_observatory.title}</h2>
+    <p class="mc-bar-note">Live: ${acl.question_observatory.live ? 'Yes' : 'No'} · Total questions: ${acl.question_observatory.total_questions} · Questions become content: ${acl.question_observatory.questions_become_content ? 'Yes' : 'No'} · ${acl.question_observatory.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Category</th><th>Count</th><th>Status</th></tr></thead>
+      <tbody>${observatoryRows}</tbody></table>
+    <h2 class="mc-section-title">${acl.educational_needs_mapping.title}</h2>
+    <p class="mc-bar-note">Prioritizes resources: ${acl.educational_needs_mapping.prioritizes_resources ? 'Yes' : 'No'} · ${acl.educational_needs_mapping.status}</p>
+    <ul class="mc-deliverables">${acl.educational_needs_mapping.patterns.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acl.community_listening_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${acl.community_listening_dashboard.live ? 'Yes' : 'No'} · ${acl.community_listening_dashboard.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">${acl.listening_to_action_workflow.title}</h2>
+    <p class="mc-bar-note">${acl.listening_to_action_workflow.principle} · ${acl.listening_to_action_workflow.status}</p>
+    <table class="mc-table"><thead><tr><th>Step</th><th>Stage</th><th>Items</th><th>Status</th></tr></thead>
+      <tbody>${workflowRows}</tbody></table>
+    <h2 class="mc-section-title">${acl.community_pulse_reports.title}</h2>
+    <p class="mc-bar-note">Reports generated: ${acl.community_pulse_reports.reports_generated} · Guides planning: ${acl.community_pulse_reports.guides_planning ? 'Yes' : 'No'} · ${acl.community_pulse_reports.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Type</th><th>Generated</th><th>Status</th></tr></thead>
+      <tbody>${pulseRows}</tbody></table>
+    <ul class="mc-deliverables">${acl.community_pulse_reports.content_areas.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acl.arkansas_civic_listening_tour.title}</h2>
+    <p class="mc-bar-note">${acl.arkansas_civic_listening_tour.purpose} · Hosted by: ${acl.arkansas_civic_listening_tour.hosted_by} · Sessions: ${acl.arkansas_civic_listening_tour.sessions_hosted} · ${acl.arkansas_civic_listening_tour.status}</p>
+    <ul class="mc-deliverables">${acl.arkansas_civic_listening_tour.topics.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${acl.integration.chain}</p>
+    <p class="mc-bar-note">Improves every system: ${acl.integration.improves_every_system ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${acl.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${acl.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${acl.recommended_next_build.number} — ${acl.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${acl.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_ARKANSAS_COMMUNITY_LISTENING.md">MASTER_ARKANSAS_COMMUNITY_LISTENING.md</a> ·
+      <a href="/data/arkansas-community-listening.json">JSON</a> ·
+      <a href="/mission-control/research-observatory.html">Research Observatory</a> ·
+      <a href="/mission-control/evidence-ledger.html">Evidence Ledger</a> ·
+      <a href="/mission-control/citizen-action-center.html">Citizen Action Center</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

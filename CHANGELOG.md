@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.75.0] - 2026-07-09 — Build #71 Arkansas Community Listening
+
+### Listening Before Leading — The Statewide Civic Listening Network
+- **Community Intelligence & Listening System v1.0** — learn from Arkansas, not only teach
+- Operating principle: begin by listening, not with answers
+- Six sources: learners, leaders, coalition, conversations, research, public feedback
+- Question Observatory, educational needs mapping, listening-to-action workflow
+- Community Pulse Reports (monthly/quarterly/annual); Arkansas Civic Listening Tour
+- Honest: 0 questions · 0 leader reports · 0 pulse reports · observatory not live · ~41% readiness
+- MC dashboard: `/mission-control/arkansas-community-listening.html`
+
 ## [1.74.0] - 2026-07-09 — Build #70 Arkansas Command Strategy
 
 ### The Road to 75 Counties, 250 Cities & 200,000 Arkansans

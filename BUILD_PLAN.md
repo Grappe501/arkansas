@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.74.0 · **Arkansas Command Strategy:** [/mission-control/arkansas-command-strategy.html](/mission-control/arkansas-command-strategy.html) · **Relational Growth Engine:** [/mission-control/relational-organizing-growth-engine.html](/mission-control/relational-organizing-growth-engine.html)  
-**Statewide execution** — 75 counties · 250 cities · 200K connected · five phases · **Next:** Build #71 Implementation Translation Layer  
+**Current version:** 1.75.0 · **Community Listening:** [/mission-control/arkansas-community-listening.html](/mission-control/arkansas-community-listening.html) · **Command Strategy:** [/mission-control/arkansas-command-strategy.html](/mission-control/arkansas-command-strategy.html)  
+**Listening network** — six sources · question observatory · learn from Arkansas · **Next:** Build #72 Implementation Translation Layer  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **71** | **Arkansas Community Intelligence & Listening** | **✅ v1.75.0** |
 | **70** | **Arkansas Command Strategy** | **✅ v1.74.0** |
 | **69** | **Relational Organizing & Arkansas Growth Engine** | **✅ v1.73.0** |
 | **68** | **Citizen Leadership Academy** | **✅ v1.72.0** |
