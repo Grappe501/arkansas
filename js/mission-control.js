@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">LocalBrain Architecture <a href="/mission-control/localbrain-architecture.html" class="mc-inline-link">Distributed Intelligence #92 →</a></h2>
+    <p class="mc-bar-note">Build #92 — Master LocalBrain Architecture. Federation of 20 specialized brains — memory, calendar, tasks, AI per domain. MC = executive layer. 0/20 online · inter-brain not live. ~60% readiness.</p>
     <h2 class="mc-section-title">AI Institution <a href="/mission-control/ai-institution.html" class="mc-inline-link">Every Volunteer Has a Partner #91 →</a></h2>
     <p class="mc-bar-note">Build #91 — Master AI Institution. AI amplifies volunteers, does not replace them. 21 specialists, personal workbench, institutional knowledge grounding. 0/21 deployed · workbench not live. ~57% readiness.</p>
     <h2 class="mc-section-title">Operating Manual <a href="/mission-control/institutional-operating-manual.html" class="mc-inline-link">Institutional Continuity #90 →</a></h2>
@@ -5262,6 +5264,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPmoExecutionOffice();
   initInstitutionalOperatingManual();
   initAiInstitution();
+  initLocalbrainArchitecture();
 });
 
 async function initUxArchitecture() {
@@ -9638,6 +9641,118 @@ async function initAiInstitution() {
       <a href="/data/ai-institution.json">JSON</a> ·
       <a href="/mission-control/institutional-ai.html">Institutional AI (#60)</a> ·
       <a href="/mission-control/institutional-operating-manual.html">Operating Manual (#90)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initLocalbrainArchitecture() {
+  const root = document.getElementById('mc-localbrain-architecture-root');
+  if (!root) return;
+
+  const [lbRes, mcRes] = await Promise.all([
+    fetch('/data/localbrain-architecture.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const lb = await lbRes.json();
+  const mc = await mcRes.json();
+  const s = lb.summary;
+
+  const brainRows = lb.core_localbrains.brains.map(b => `
+    <tr><td><code>${b.id}</code></td><td>${b.name}</td><td>${b.domain}</td>
+      <td>${b.online ? 'Yes' : 'No'}</td><td>${b.health}</td>
+      <td><a href="${b.route}">→</a></td></tr>`).join('');
+
+  const flowRows = lb.cross_brain_communication.flow_example.map(f => `
+    <tr><td>${f.step}</td><td>${f.brain}</td><td>${f.action}</td></tr>`).join('');
+
+  const dashRows = lb.executive_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td>
+      <td>${typeof d.current === 'number' ? d.current.toLocaleString() : d.current}${d.unit ? d.unit : ''}${d.target ? ` / ${d.target}` : ''}</td>
+      <td>${d.status}</td></tr>`).join('');
+
+  const systemRows = lb.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  const contains = lb.every_localbrain_contains;
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → LocalBrain Architecture</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #92 · ${lb.title}</p>
+      <h1>${lb.subtitle}</h1>
+      <p class="mc-header__question">${lb.governing_principle}</p>
+      <p class="mc-bar-note">${lb.purpose}</p>
+      <p class="mc-bar-note"><strong>${lb.tagline}</strong> · ${s.days_remaining} days to ${lb.completion_target_date}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Architecture readiness</div><div class="mc-stat__value">${s.localbrain_architecture_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">LocalBrains online</div><div class="mc-stat__value">${s.localbrains_online}/${s.localbrains_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Exec dashboard</div><div class="mc-stat__value">${s.executive_dashboard_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Calendar merged</div><div class="mc-stat__value">${s.executive_calendar_merged ? 'Yes' : 'No'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Inter-brain comm</div><div class="mc-stat__value">${s.inter_brain_communication ? 'Live' : 'No'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Memory entries</div><div class="mc-stat__value">${s.memory_entries_total}</div></div>
+    </div>
+    <h2 class="mc-section-title">${lb.institutional_philosophy.title}</h2>
+    <p class="mc-bar-note">Living organization · MC connects: ${lb.institutional_philosophy.mission_control_connects ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${lb.institutional_philosophy.every_department_has.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${lb.localbrain_principle.title}</h2>
+    <p class="mc-bar-note">${lb.localbrain_principle.stack.join(' → ')}</p>
+    <p class="mc-bar-note">Miniature institution: ${lb.localbrain_principle.miniature_institution ? 'Yes' : 'No'} · Independently intelligent: ${lb.localbrain_principle.independently_intelligent ? 'Yes' : 'No'}</p>
+    <h2 class="mc-section-title">${lb.core_localbrains.title}</h2>
+    <p class="mc-bar-note">Online: ${lb.core_localbrains.brains_online}/${lb.core_localbrains.brains_total} · Modular expansion: ${lb.core_localbrains.modular_expansion ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Brain</th><th>Domain</th><th>Online</th><th>Health</th><th>Route</th></tr></thead>
+      <tbody>${brainRows}</tbody></table>
+    <h2 class="mc-section-title">${contains.title}</h2>
+    <h3 class="mc-section-title">${contains.memory.title}</h3>
+    <ul class="mc-deliverables">${contains.memory.items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h3 class="mc-section-title">${contains.calendar.title}</h3>
+    <ul class="mc-deliverables">${contains.calendar.items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h3 class="mc-section-title">${contains.ai_team.title}</h3>
+    <ul class="mc-deliverables">${contains.ai_team.items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h3 class="mc-section-title">${contains.task_engine.title}</h3>
+    <ul class="mc-deliverables">${contains.task_engine.items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h3 class="mc-section-title">${contains.knowledge_base.title}</h3>
+    <ul class="mc-deliverables">${contains.knowledge_base.items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${lb.mission_control_integration.title}</h2>
+    <p class="mc-bar-note">Executive coordination layer: ${lb.mission_control_integration.executive_coordination_layer ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${lb.mission_control_integration.visibility.map(v => `<li>${v}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${lb.cross_brain_communication.title}</h2>
+    <p class="mc-bar-note">Automatic: ${lb.cross_brain_communication.automatic ? 'Yes' : 'No'} · Knowledge flows: ${lb.cross_brain_communication.knowledge_flows_automatically ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>Step</th><th>Brain</th><th>Action</th></tr></thead>
+      <tbody>${flowRows}</tbody></table>
+    <h2 class="mc-section-title">${lb.institutional_calendar.title}</h2>
+    <p class="mc-bar-note">Merged executive calendar: ${lb.institutional_calendar.executive_calendar_merged ? 'Yes' : 'No'} · Nothing in isolation: ${lb.institutional_calendar.nothing_operates_in_isolation ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${lb.institutional_calendar.executive_views.map(v => `<li>${v}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${lb.institutional_memory.title}</h2>
+    <p class="mc-bar-note">Entries: ${lb.institutional_memory.entries_total} · Inherit immediately: ${lb.institutional_memory.future_volunteers_inherit_immediately ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${lb.institutional_memory.preserves.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${lb.executive_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${lb.executive_dashboard.live ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">${lb.expansion.title}</h2>
+    <p class="mc-bar-note">Modular by design: ${lb.expansion.modular_by_design ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${lb.expansion.future_localbrains.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Founder's Principle</h2>
+    <p class="mc-bar-note">${lb.founders_principle}</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${lb.integration.chain}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${lb.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${lb.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${lb.recommended_next_build.number} — ${lb.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${lb.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_LOCALBRAIN_ARCHITECTURE.md">MASTER_LOCALBRAIN_ARCHITECTURE.md</a> ·
+      <a href="/data/localbrain-architecture.json">JSON</a> ·
+      <a href="/mission-control/ai-institution.html">AI Institution (#91)</a> ·
+      <a href="/mission-control/institutional-digital-twin.html">Digital Twin (#81)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

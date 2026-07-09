@@ -1,6 +1,6 @@
 {
-  "version": "1.95.0",
-  "build": 91,
+  "version": "1.96.0",
+  "build": 92,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 91,
+    "overall_completion": 92,
     "current_build": {
-      "number": 91,
-      "title": "Citizens United Facts Master AI Institution v1.0"
-    },
-    "active_phase": "AI Institution \u2192 War Room",
-    "last_completed": "Institutional Operating Manual",
-    "next_build": {
       "number": 92,
+      "title": "Citizens United Facts Master LocalBrain Architecture v1.0"
+    },
+    "active_phase": "LocalBrain Architecture \u2192 War Room",
+    "last_completed": "AI Institution",
+    "next_build": {
+      "number": 93,
       "title": "Executive war room & countdown dashboard components"
     },
     "github_status": "connected",
@@ -41,6 +41,7 @@
     "relationship_os_readiness": 54,
     "institutional_ai_readiness": 57,
     "ai_institution_readiness": 57,
+    "localbrain_architecture_readiness": 60,
     "coalition_network_readiness": 44,
     "citizen_action_center_readiness": 42,
     "campaign_finance_observatory_readiness": 38,
@@ -72,7 +73,7 @@
     "pmo_execution_office_readiness": 60,
     "institutional_operating_manual_readiness": 60,
     "mc2_readiness": 42,
-    "ai_engine_readiness": 57,
+    "ai_engine_readiness": 60,
     "content_factory_readiness": 30,
     "education_academy_readiness": 26,
     "observatory_readiness": 43,
@@ -124,8 +125,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 91,
-      "note": "Build #91 \u2014 AI Institution. 176 days to Jan 2027."
+      "value": 92,
+      "note": "Build #92 \u2014 LocalBrain Architecture. 176 days to Jan 2027."
     },
     {
       "id": "constitution",
@@ -785,7 +786,14 @@
       "label": "AI Institution",
       "value": 57,
       "max": 100,
-      "note": "0/21 specialists \u00b7 workbench planned."
+      "note": "AI Institution \u00b7 0/20 LocalBrains online."
+    },
+    {
+      "id": "localbrain_architecture",
+      "label": "LocalBrain Architecture",
+      "value": 60,
+      "max": 100,
+      "note": "0/20 brains \u00b7 exec dashboard planned."
     }
   ],
   "public_readiness": {
@@ -1624,6 +1632,12 @@
       "id": "ai_institution",
       "label": "AI Institution",
       "href": "/mission-control/ai-institution.html",
+      "status": "complete"
+    },
+    {
+      "id": "localbrain_architecture",
+      "label": "LocalBrain Architecture",
+      "href": "/mission-control/localbrain-architecture.html",
       "status": "complete"
     }
   ],
@@ -2650,6 +2664,58 @@
     }
   ],
   "builds": [
+    {
+      "number": 92,
+      "title": "Citizens United Facts Master LocalBrain Architecture v1.0",
+      "version": "1.96.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Federation of specialized LocalBrains \u2014 distributed institutional intelligence",
+      "summary": "20 core LocalBrains, cross-brain communication, executive calendar, institutional memory, executive dashboard. 60% readiness \u00b7 0/20 online \u00b7 inter-brain not live.",
+      "files_created": [
+        "data/localbrain-architecture.json",
+        "docs/MASTER_LOCALBRAIN_ARCHITECTURE.md",
+        "builds/092-localbrain-architecture.md",
+        "mission-control/localbrain-architecture.html",
+        "scripts/gen-localbrain-architecture.py",
+        "scripts/update-mc-build92.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/localbrain-architecture.html"
+      ],
+      "decisions_made": [
+        "Federation of LocalBrains \u2014 no single AI/DB carries institution",
+        "20 core LocalBrains with memory, calendar, tasks, knowledge, AI agents",
+        "Mission Control = executive coordination layer above all brains",
+        "Cross-brain automatic knowledge flow",
+        "Modular expansion \u2014 future brains addable",
+        "60% readiness \u2014 blueprint only"
+      ],
+      "open_questions": [
+        "LocalBrain data store \u2014 per-brain DB or unified with partitions?",
+        "Inter-brain messaging \u2014 event bus or MC webhooks?",
+        "Executive calendar merge \u2014 real-time sync?",
+        "When does a MC dashboard become a true LocalBrain node?"
+      ],
+      "risks": [
+        "0/20 LocalBrains online \u2014 architecture blueprint only",
+        "Executive dashboard not live",
+        "Executive calendar not merged from brain calendars",
+        "Inter-brain communication not operational"
+      ],
+      "next_recommended": 93,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/localbrain-architecture.html",
+      "review_status": "complete"
+    },
     {
       "number": 91,
       "title": "Citizens United Facts Master AI Institution v1.0",
@@ -7535,21 +7601,21 @@
     }
   ],
   "briefing": {
-    "what_built": "AI Institution v1.0 \u2014 Every Volunteer Has an AI Partner",
-    "building_now": "91 builds \u2014 executive war room next",
+    "what_built": "LocalBrain Architecture v1.0 \u2014 Distributed Institutional Intelligence",
+    "building_now": "92 builds \u2014 executive war room next",
     "blocked": [
-      "AI workbench UI",
-      "Specialist deployment",
-      "RAG grounding",
-      "AI dashboard"
+      "LocalBrain nodes",
+      "Executive dashboard",
+      "Calendar merge",
+      "Inter-brain messaging"
     ],
     "ready_public": [
-      "21 specialist model",
-      "Safety rules",
-      "Knowledge sources",
-      "Philosophy layers"
+      "20 brain registry",
+      "Cross-brain flow",
+      "Principle stack",
+      "Expansion model"
     ],
-    "next": "Build #92 \u2014 Executive war room & countdown dashboard components"
+    "next": "Build #93 \u2014 Executive war room & countdown dashboard components"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8478,5 +8544,14 @@
     "volunteers_with_ai_partner": 0,
     "ai_dashboard_live": false,
     "personal_workbench_live": false
+  },
+  "localbrain_architecture": "/data/localbrain-architecture.json",
+  "localbrain_architecture_dashboard": "/mission-control/localbrain-architecture.html",
+  "localbrain_architecture_inventory": {
+    "readiness_score": 60,
+    "localbrains_online": 0,
+    "localbrains_total": 20,
+    "executive_dashboard_live": false,
+    "inter_brain_communication": false
   }
 }

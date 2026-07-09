@@ -622,6 +622,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/localbrain-architecture"
+  to = "/mission-control/localbrain-architecture.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301

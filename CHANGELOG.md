@@ -13,6 +13,18 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.96.0] - 2026-07-09 — Build #92 Master LocalBrain Architecture
+
+### The Distributed Institutional Intelligence System
+- **Master LocalBrain Architecture v1.0** — federation of specialized LocalBrains, MC as executive layer
+- 10-layer LocalBrain principle stack; 20 core LocalBrains (memory, calendar, tasks, knowledge, AI per domain)
+- Mission Control integration, cross-brain communication flow, institutional calendar merge, institutional memory
+- Executive dashboard (9 indicators), 7 future expansion brains
+- Integrates AI Institution (#91), Operating Manual (#90), Digital Twin (#81), Knowledge Graph
+- Locally informed, globally coordinated — modular by design
+- Honest: 0/20 brains online · exec dashboard not live · calendar not merged · inter-brain not live · ~60% readiness
+- MC dashboard: `/mission-control/localbrain-architecture.html`
+
 ## [1.95.0] - 2026-07-09 — Build #91 Master AI Institution
 
 ### Every Volunteer Has an AI Partner

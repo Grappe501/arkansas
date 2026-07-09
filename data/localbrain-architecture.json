@@ -1,0 +1,501 @@
+{
+  "version": "1.0",
+  "build": 92,
+  "updated": "2026-07-09",
+  "completion_target_date": "2027-01-01",
+  "title": "Master LocalBrain Architecture v1.0",
+  "subtitle": "The Distributed Institutional Intelligence System",
+  "tagline": "Federation of Specialized LocalBrains",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/localbrain-architecture.html",
+  "constitution": "/docs/MASTER_LOCALBRAIN_ARCHITECTURE.md",
+  "purpose": "Federation of specialized LocalBrains \u2014 no single AI, database, or dashboard carries the entire institution. Each LocalBrain owns one domain while remaining connected through Mission Control as the executive coordination layer.",
+  "governing_principle": "Locally informed. Globally coordinated. Every LocalBrain masters its own domain. Mission Control unifies them into one living institution capable of serving Arkansas with clarity, consistency, intelligence, and purpose for generations.",
+  "founders_principle": "No volunteer should wonder where a document is, who knows the answer, what happened last year, or what to work on today. Every department remembers, every AI assists, every calendar coordinates, and every volunteer contributes from day one.",
+  "institutional_philosophy": {
+    "title": "Institutional Philosophy",
+    "living_organization": true,
+    "every_department_has": [
+      "Its own memory",
+      "Its own calendar",
+      "Its own tasks",
+      "Its own documents",
+      "Its own AI assistants",
+      "Its own dashboards"
+    ],
+    "mission_control_connects": true
+  },
+  "localbrain_principle": {
+    "title": "The LocalBrain Principle",
+    "stack": [
+      "Knowledge",
+      "Memory",
+      "Calendar",
+      "Projects",
+      "Documents",
+      "AI Agents",
+      "Tasks",
+      "Dashboards",
+      "Relationships",
+      "Reports"
+    ],
+    "miniature_institution": true,
+    "independently_intelligent": true
+  },
+  "core_localbrains": {
+    "title": "Core LocalBrains",
+    "brains": [
+      {
+        "id": "LB-01",
+        "name": "Mission Control Brain",
+        "domain": "Executive",
+        "route": "/mission-control/",
+        "online": false,
+        "health": "planned"
+      },
+      {
+        "id": "LB-02",
+        "name": "Research Brain",
+        "domain": "Research",
+        "route": "/mission-control/arkansas-research-institute.html",
+        "online": false,
+        "health": "planned"
+      },
+      {
+        "id": "LB-03",
+        "name": "Evidence Brain",
+        "domain": "Evidence",
+        "route": "/mission-control/evidence-ledger.html",
+        "online": false,
+        "health": "planned"
+      },
+      {
+        "id": "LB-04",
+        "name": "Claims Brain",
+        "domain": "Claims",
+        "route": "/mission-control/facts.html",
+        "online": false,
+        "health": "planned"
+      },
+      {
+        "id": "LB-05",
+        "name": "Knowledge Graph Brain",
+        "domain": "Knowledge",
+        "route": "/mission-control/knowledge-graph.html",
+        "online": false,
+        "health": "partial"
+      },
+      {
+        "id": "LB-06",
+        "name": "Community Education Academy Brain",
+        "domain": "Academy",
+        "route": "/mission-control/education-academy.html",
+        "online": false,
+        "health": "planned"
+      },
+      {
+        "id": "LB-07",
+        "name": "County Operations Brain",
+        "domain": "County",
+        "route": "/mission-control/arkansas-county-operating-system.html",
+        "online": false,
+        "health": "planned"
+      },
+      {
+        "id": "LB-08",
+        "name": "City Operations Brain",
+        "domain": "City",
+        "route": "/mission-control/arkansas-city-operating-system.html",
+        "online": false,
+        "health": "planned"
+      },
+      {
+        "id": "LB-09",
+        "name": "Neighborhood Operations Brain",
+        "domain": "Neighborhood",
+        "route": "/mission-control/arkansas-neighborhood-operating-system.html",
+        "online": false,
+        "health": "planned"
+      },
+      {
+        "id": "LB-10",
+        "name": "Volunteer Brain",
+        "domain": "Volunteers",
+        "route": "/mission-control/volunteer-funding-constitution.html",
+        "online": false,
+        "health": "planned"
+      },
+      {
+        "id": "LB-11",
+        "name": "Coalition Brain",
+        "domain": "Coalition",
+        "route": "/mission-control/coalition-network.html",
+        "online": false,
+        "health": "planned"
+      },
+      {
+        "id": "LB-12",
+        "name": "Communications Brain",
+        "domain": "Communications",
+        "route": "/mission-control/arkansas-communications.html",
+        "online": false,
+        "health": "planned"
+      },
+      {
+        "id": "LB-13",
+        "name": "Media Brain",
+        "domain": "Media",
+        "route": "/mission-control/media-studio.html",
+        "online": false,
+        "health": "planned"
+      },
+      {
+        "id": "LB-14",
+        "name": "Technology Brain",
+        "domain": "Technology",
+        "route": "/mission-control/technical-architecture.html",
+        "online": false,
+        "health": "partial"
+      },
+      {
+        "id": "LB-15",
+        "name": "AI Operations Brain",
+        "domain": "AI",
+        "route": "/mission-control/ai-institution.html",
+        "online": false,
+        "health": "partial"
+      },
+      {
+        "id": "LB-16",
+        "name": "Governance Brain",
+        "domain": "Governance",
+        "route": "/mission-control/governance.html",
+        "online": false,
+        "health": "partial"
+      },
+      {
+        "id": "LB-17",
+        "name": "Project Management Office Brain",
+        "domain": "PMO",
+        "route": "/mission-control/pmo-execution-office.html",
+        "online": false,
+        "health": "partial"
+      },
+      {
+        "id": "LB-18",
+        "name": "Relationship Brain",
+        "domain": "Relationships",
+        "route": "/mission-control/relationship-os.html",
+        "online": false,
+        "health": "planned"
+      },
+      {
+        "id": "LB-19",
+        "name": "Campaign Finance Observatory Brain",
+        "domain": "Campaign Finance",
+        "route": "/mission-control/campaign-finance-observatory.html",
+        "online": false,
+        "health": "planned"
+      },
+      {
+        "id": "LB-20",
+        "name": "Civic Innovation Brain",
+        "domain": "Innovation",
+        "route": "/mission-control/arkansas-civic-innovation-reform.html",
+        "online": false,
+        "health": "planned"
+      }
+    ],
+    "brains_total": 20,
+    "brains_online": 0,
+    "modular_expansion": true,
+    "status": "planned"
+  },
+  "every_localbrain_contains": {
+    "title": "Every LocalBrain Contains",
+    "memory": {
+      "title": "Memory",
+      "items": [
+        "Institutional history",
+        "Notes",
+        "Decisions",
+        "Context",
+        "Lessons learned"
+      ]
+    },
+    "calendar": {
+      "title": "Calendar",
+      "items": [
+        "Department calendar",
+        "Milestones",
+        "Meetings",
+        "Review dates",
+        "Publication schedules",
+        "Volunteer activities"
+      ]
+    },
+    "ai_team": {
+      "title": "AI Team",
+      "items": [
+        "Specialized AI agents",
+        "Research assistants",
+        "Planning assistants",
+        "Writing assistants",
+        "Review assistants"
+      ]
+    },
+    "task_engine": {
+      "title": "Task Engine",
+      "items": [
+        "Current work",
+        "Backlog",
+        "Dependencies",
+        "Assignments",
+        "Deadlines"
+      ]
+    },
+    "knowledge_base": {
+      "title": "Knowledge Base",
+      "items": [
+        "Documents",
+        "Research",
+        "Policies",
+        "Templates",
+        "Media",
+        "References"
+      ]
+    },
+    "permanent_department_memory": true
+  },
+  "mission_control_integration": {
+    "title": "Mission Control Integration",
+    "executive_coordination_layer": true,
+    "visibility": [
+      "Department health",
+      "Project status",
+      "Calendar conflicts",
+      "Shared resources",
+      "Cross-department dependencies",
+      "Institutional readiness"
+    ],
+    "status": "partial"
+  },
+  "cross_brain_communication": {
+    "title": "Cross-Brain Communication",
+    "automatic": false,
+    "flow_example": [
+      {
+        "step": 1,
+        "brain": "Research Brain",
+        "action": "Publishes new research"
+      },
+      {
+        "step": 2,
+        "brain": "Communications Brain",
+        "action": "Prepares educational content"
+      },
+      {
+        "step": 3,
+        "brain": "Academy Brain",
+        "action": "Updates lessons"
+      },
+      {
+        "step": 4,
+        "brain": "Mission Control Brain",
+        "action": "Updates readiness"
+      },
+      {
+        "step": 5,
+        "brain": "County Brain",
+        "action": "Distributes local resources"
+      },
+      {
+        "step": 6,
+        "brain": "Volunteer Brain",
+        "action": "Notifies Education Leaders"
+      }
+    ],
+    "knowledge_flows_automatically": true,
+    "status": "planned"
+  },
+  "institutional_calendar": {
+    "title": "Institutional Calendar",
+    "each_brain_own_calendar": true,
+    "executive_calendar_merged": false,
+    "executive_views": [
+      "Research deadlines",
+      "Volunteer events",
+      "Community conversations",
+      "Coalition meetings",
+      "Academy schedules",
+      "Technology releases",
+      "Annual reviews"
+    ],
+    "nothing_operates_in_isolation": true,
+    "status": "planned"
+  },
+  "institutional_memory": {
+    "title": "Institutional Memory",
+    "preserves": [
+      "Meeting notes",
+      "Project history",
+      "Major decisions",
+      "Lessons learned",
+      "Revision history"
+    ],
+    "entries_total": 0,
+    "future_volunteers_inherit_immediately": true,
+    "status": "planned"
+  },
+  "executive_dashboard": {
+    "title": "Executive Dashboard",
+    "indicators": [
+      {
+        "id": "LB-D01",
+        "indicator": "LocalBrains online",
+        "current": 0,
+        "target": 20,
+        "status": "planned"
+      },
+      {
+        "id": "LB-D02",
+        "indicator": "LocalBrain health",
+        "current": 0,
+        "unit": "%",
+        "status": "planned"
+      },
+      {
+        "id": "LB-D03",
+        "indicator": "Knowledge growth",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "LB-D04",
+        "indicator": "Memory growth",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "LB-D05",
+        "indicator": "Calendar conflicts",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "LB-D06",
+        "indicator": "Task completion",
+        "current": 0,
+        "unit": "%",
+        "status": "planned"
+      },
+      {
+        "id": "LB-D07",
+        "indicator": "AI activity",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "LB-D08",
+        "indicator": "Inter-Brain communication",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "LB-D09",
+        "indicator": "Institutional synchronization",
+        "current": 0,
+        "unit": "%",
+        "status": "planned"
+      }
+    ],
+    "live": false,
+    "leadership_always_understands_status": true,
+    "status": "planned"
+  },
+  "expansion": {
+    "title": "Expansion",
+    "future_localbrains": [
+      "Arkansas legislative tracking",
+      "Ballot initiative education",
+      "Federal policy education",
+      "Media monitoring",
+      "Historical archives",
+      "Public records",
+      "Research collaborations"
+    ],
+    "modular_by_design": true,
+    "status": "specified"
+  },
+  "integration": {
+    "chain": "Mission Control \u2192 Digital Twin \u2192 AI Institution \u2192 Operating Manual \u2192 Knowledge Graph \u2192 Community Education Academy \u2192 County OS \u2192 Relationship OS",
+    "every_capability_specialized_intelligence_node": true,
+    "systems": [
+      {
+        "system": "AI Institution (#91)",
+        "route": "/mission-control/ai-institution.html",
+        "status": "live"
+      },
+      {
+        "system": "Operating Manual (#90)",
+        "route": "/mission-control/institutional-operating-manual.html",
+        "status": "live"
+      },
+      {
+        "system": "Digital Twin (#81)",
+        "route": "/mission-control/institutional-digital-twin.html",
+        "status": "live"
+      },
+      {
+        "system": "Knowledge Graph",
+        "route": "/mission-control/knowledge-graph.html",
+        "status": "partial"
+      },
+      {
+        "system": "PMO (#89)",
+        "route": "/mission-control/pmo-execution-office.html",
+        "status": "live"
+      },
+      {
+        "system": "Relationship OS (#59)",
+        "route": "/mission-control/relationship-os.html",
+        "status": "live"
+      }
+    ]
+  },
+  "long_term_vision": "By January 2027, Citizens United Facts operates as a network of cooperating institutional intelligences. Every department knows its mission. Every AI knows its domain. Every volunteer has immediate access to institutional knowledge. Mission Control provides executive awareness. Intelligence is distributed \u2014 faster, more organized, more resilient.",
+  "summary": {
+    "completion_target_date": "2027-01-01",
+    "days_remaining": 176,
+    "localbrain_architecture_readiness_pct": 60,
+    "ai_institution_readiness_pct": 57,
+    "operating_manual_readiness_pct": 60,
+    "localbrains_online": 0,
+    "localbrains_total": 20,
+    "executive_dashboard_live": false,
+    "executive_calendar_merged": false,
+    "inter_brain_communication": false,
+    "memory_entries_total": 0,
+    "calendar_conflicts": 0,
+    "institutional_completion_pct": 92
+  },
+  "catalog_gaps": [
+    "0/20 LocalBrains online \u2014 architecture blueprint only",
+    "Executive dashboard not live",
+    "Executive calendar not merged from brain calendars",
+    "Inter-brain communication not operational",
+    "No per-brain memory/calendar/task stores",
+    "Cross-brain flow example specified \u2014 not automated",
+    "LocalBrain health scores not computed",
+    "Institutional synchronization 0%",
+    "Future expansion LocalBrains not provisioned",
+    "MC dashboards partial \u2014 not true LocalBrain nodes yet",
+    "AI Operations Brain links to #91 \u2014 specialists not deployed per brain"
+  ],
+  "recommended_next_build": {
+    "number": 93,
+    "title": "Executive War Room & Countdown Dashboard Components",
+    "note": "War room UI, LocalBrain registry, executive calendar merge, inter-brain messaging, health dashboard, COMP-* specs."
+  }
+}

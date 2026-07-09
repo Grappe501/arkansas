@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.95.0 · **AI Institution:** [/mission-control/ai-institution.html](/mission-control/ai-institution.html) · **91 builds complete**  
-**AI amplifies volunteers** — 21 specialists · personal workbench · institutional grounding · **Next:** Build #92 War Room Components  
+**Current version:** 1.96.0 · **LocalBrain Architecture:** [/mission-control/localbrain-architecture.html](/mission-control/localbrain-architecture.html) · **92 builds complete**  
+**Distributed intelligence** — 20 LocalBrains · MC executive layer · cross-brain flow · **Next:** Build #93 War Room Components  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **92** | **Master LocalBrain Architecture** | **✅ v1.96.0** |
 | **91** | **Master AI Institution** | **✅ v1.95.0** |
 | **90** | **Master Institutional Operating Manual** | **✅ v1.94.0** |
 | **89** | **Master PMO & Execution Office** | **✅ v1.93.0** |
