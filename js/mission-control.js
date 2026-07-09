@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Route Registry <a href="/mission-control/routes.html" class="mc-inline-link">Complete Inventory →</a></h2>
+    <p class="mc-bar-note">Build #16 — 81 routes across 9 groups, Action Hub links, launch priorities.</p>
     <h2 class="mc-section-title">Canonical Data Model <a href="/mission-control/data-model.html" class="mc-inline-link">Relationship Architecture →</a></h2>
     <p class="mc-bar-note">Build #15 — 10 canonical objects, 20 relationship types, geographic &amp; timeline intelligence. Everything connected.</p>
     <h2 class="mc-section-title">ACUCOS <a href="/mission-control/coalition.html" class="mc-inline-link">Coalition Operating System →</a></h2>
@@ -1526,6 +1528,83 @@ async function initDataModelBlueprint() {
   initDevConsole(mc);
 }
 
+async function initRouteRegistryBlueprint() {
+  const root = document.getElementById('mc-routes-root');
+  if (!root) return;
+
+  const [routesRes, mcRes] = await Promise.all([
+    fetch('/data/route-registry.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const reg = await routesRes.json();
+  const mc = await mcRes.json();
+  const s = reg.summary;
+
+  const statusBadge = (st) => {
+    const colors = { live: 'approved', redirect: 'building', stub: 'coming', planned: 'planning' };
+    return colors[st] || 'coming';
+  };
+
+  const groupSections = reg.groups.map(g => {
+    const rows = g.routes.map(rt => `
+      <tr class="${rt.status === 'live' ? 'mc-table__row--approved' : ''}">
+        <td><code>${rt.path}</code></td>
+        <td>${rt.title}</td>
+        <td>${rt.status}</td>
+        <td>${rt.launch_priority}</td>
+        <td>${rt.current_destination ? `<a href="${rt.current_destination}">${rt.current_destination}</a>` : '—'}</td>
+      </tr>`).join('');
+    return `
+      <h2 class="mc-section-title">${g.number}. ${g.title} (${g.routes.length})</h2>
+      <div class="mc-card mc-inv-table-wrap" style="max-height:240px;overflow-y:auto;margin-bottom:1.5rem">
+        <table class="mc-table mc-inv-table">
+          <thead><tr><th>Path</th><th>Title</th><th>Status</th><th>Priority</th><th>Destination</th></tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>`;
+  }).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Route Registry</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #16 · ${reg.title}</p>
+      <h1>Complete Page &amp; Route Inventory</h1>
+      <p class="mc-header__question">${reg.principle}</p>
+    </header>
+    <section class="mc-card">
+      <h3>Route Purposes</h3>
+      <ul class="mc-deliverables">${reg.purposes.map(p => `<li><strong>${p.title}</strong></li>`).join('')}</ul>
+    </section>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Total routes</div><div class="mc-stat__value">${s.total_routes}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Live</div><div class="mc-stat__value">${s.live}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Redirect</div><div class="mc-stat__value">${s.redirect}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Stub</div><div class="mc-stat__value">${s.stub}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Planned</div><div class="mc-stat__value">${s.planned}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Must launch</div><div class="mc-stat__value">${s.must_launch}</div></div>
+    </div>
+    <h2 class="mc-section-title">Required Action Hub Links (${reg.action_hub_links.length})</h2>
+    <table class="mc-table">
+      <thead><tr><th>Link</th><th>Path</th><th>Status</th></tr></thead>
+      <tbody>${reg.action_hub_links.map(l => `
+        <tr><td>${l.title}</td><td><a href="${l.path}">${l.path}</a></td><td>${l.status}</td></tr>`).join('')}
+      </tbody>
+    </table>
+    <h2 class="mc-section-title">Launch Priorities</h2>
+    <p class="mc-bar-note"><strong>Must launch:</strong> ${reg.launch_priorities.must_launch.join(' · ')}</p>
+    <p class="mc-bar-note"><strong>Stub OK:</strong> ${reg.launch_priorities.stub_ok.join(' · ')}</p>
+    <p class="mc-bar-note"><strong>Later:</strong> ${reg.launch_priorities.later.join(' · ')}</p>
+    ${groupSections}
+    <p class="mc-bar-note">
+      <a href="/docs/ROUTE_REGISTRY.md">ROUTE_REGISTRY.md</a> ·
+      <a href="/data/route-registry.json">JSON</a> ·
+      <a href="/explore/">Public site map</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -1540,4 +1619,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initCivicEcosystemBlueprint();
   initCoalitionBlueprint();
   initDataModelBlueprint();
+  initRouteRegistryBlueprint();
 });

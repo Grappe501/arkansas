@@ -13,6 +13,14 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.20.0] - 2026-07-09 — Build #16 Route Inventory
+
+### Complete Page & Route Inventory
+- **Route Registry v1.0** — 81 routes, 9 groups, launch priorities, Action Hub links
+- Hub pages: `/start-here/`, `/arkansas/`, `/join/`
+- 35+ canonical redirects in `netlify.toml`
+- MC dashboard: `/mission-control/routes.html`
+
 ## [1.19.0] - 2026-07-09 — Build #15 Canonical Data Model
 
 ### Master Data Model & Relationship Architecture

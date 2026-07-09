@@ -1,6 +1,6 @@
 {
-  "version": "1.19.0",
-  "build": 15,
+  "version": "1.20.0",
+  "build": 16,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,35 +9,36 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 15,
+    "overall_completion": 16,
     "current_build": {
-      "number": 15,
-      "title": "Arkansas Citizens United Platform Master Data Model & Relationship Architecture"
-    },
-    "active_phase": "Canonical Data Model",
-    "last_completed": "Arkansas Citizens United Coalition Operating System (ACUCOS)",
-    "next_build": {
       "number": 16,
-      "title": "Complete page inventory (every screen and route)"
+      "title": "Complete Page & Route Inventory"
+    },
+    "active_phase": "Product Design \u2014 Route Inventory",
+    "last_completed": "Master Data Model & Relationship Architecture",
+    "next_build": {
+      "number": 17,
+      "title": "Component inventory (cards, timelines, Action Hub, dashboards, forms)"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
-    "content_readiness": 10,
+    "content_readiness": 12,
     "research_readiness": 18,
     "data_viz_readiness": 2,
     "signup_funnel_readiness": 14,
     "civic_action_readiness": 22,
     "coalition_readiness": 12,
     "data_model_readiness": 8,
-    "public_launch_readiness": 5,
+    "route_inventory_readiness": 18,
+    "public_launch_readiness": 6,
     "public_launch_label": "Early Foundation"
   },
   "progress_bars": [
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 15,
-      "note": "Canonical data model live. Pivot to concrete product: page inventory (Build #16)."
+      "value": 16,
+      "note": "Route registry live \u2014 81 routes inventoried. Component inventory next."
     },
     {
       "id": "constitution",
@@ -166,6 +167,13 @@
       "value": 8,
       "max": 100,
       "note": "10 objects, 20 relationship types, 0 edges \u2014 schema ready for Build #18 database."
+    },
+    {
+      "id": "routes",
+      "label": "Route Inventory",
+      "value": 18,
+      "max": 100,
+      "note": "11 live, 37 redirect, 22 planned \u2014 honest v1 map."
     }
   ],
   "public_readiness": {
@@ -548,6 +556,12 @@
       "id": "data_model",
       "label": "Data Model",
       "href": "/mission-control/data-model.html",
+      "status": "complete"
+    },
+    {
+      "id": "routes",
+      "label": "Route Registry",
+      "href": "/mission-control/routes.html",
       "status": "complete"
     }
   ],
@@ -1575,6 +1589,55 @@
   ],
   "builds": [
     {
+      "number": 16,
+      "title": "Complete Page & Route Inventory",
+      "version": "1.20.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Route Registry v1.0 \u2014 every screen and canonical path for Arkansas v1",
+      "summary": "81 routes, 9 groups, Action Hub links, launch priorities, hub pages, netlify redirects.",
+      "files_created": [
+        "data/route-registry.json",
+        "docs/ROUTE_REGISTRY.md",
+        "builds/016-page-route-inventory.md",
+        "mission-control/routes.html",
+        "start-here/index.html",
+        "arkansas/index.html",
+        "join/index.html",
+        "scripts/gen-route-registry.py",
+        "scripts/update-mc-build16.py"
+      ],
+      "files_modified": [
+        "netlify.toml",
+        "js/mission-control.js",
+        "BUILD_PLAN.md"
+      ],
+      "pages_created": [
+        "/mission-control/routes.html",
+        "/start-here/",
+        "/arkansas/",
+        "/join/"
+      ],
+      "decisions_made": [
+        "Canonical paths redirect to current destinations until dedicated pages ship",
+        "Honest status: live / redirect / stub / planned per route",
+        "Pivot continues: Build #17 component inventory"
+      ],
+      "open_questions": [
+        "Dedicated pages for deep-dive routes?",
+        "Glossary and FAQ routes?"
+      ],
+      "risks": [
+        "22 planned routes \u2014 not hidden, documented"
+      ],
+      "next_recommended": 17,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/routes.html",
+      "review_status": "complete"
+    },
+    {
       "number": 15,
       "title": "Arkansas Citizens United Platform Master Data Model & Relationship Architecture",
       "version": "1.19.0",
@@ -2196,19 +2259,20 @@
     }
   ],
   "briefing": {
-    "what_built": "Canonical Data Constitution \u2014 10 objects, 20 relationships, everything connected",
-    "building_now": "Planning complete for core architecture \u2014 pivot to page inventory (Build #16)",
+    "what_built": "Route Registry v1.0 \u2014 81 routes inventoried with honest status",
+    "building_now": "Product design phase \u2014 component inventory next (Build #17)",
     "blocked": [
-      "Relationship edge storage",
-      "Search intelligence backend",
-      "AI layer"
+      "22 planned routes need content",
+      "Admin dashboards"
     ],
     "ready_public": [
-      "Data model MC dashboard",
-      "Relationship registry schema",
-      "Platform integration map"
+      "Route MC dashboard",
+      "Start Here",
+      "Arkansas hub",
+      "Join hub",
+      "Canonical redirects"
     ],
-    "next": "Build #16 \u2014 Complete page inventory (every screen and route)"
+    "next": "Build #17 \u2014 Component inventory"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -2295,5 +2359,17 @@
     "initiative_concepts": 0,
     "packets_shared": 0,
     "edges_recorded": 0
+  },
+  "route_registry": "/data/route-registry.json",
+  "routes_dashboard": "/mission-control/routes.html",
+  "route_inventory": {
+    "readiness_score": 18,
+    "total_routes": 81,
+    "live": 11,
+    "redirect": 37,
+    "stub": 11,
+    "planned": 22,
+    "must_launch": 40,
+    "action_hub_links": 10
   }
 }

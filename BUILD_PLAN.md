@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.19.0 · **Data Model:** [/mission-control/data-model.html](/mission-control/data-model.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #15:** ✅ Canonical Data Model · **Build #14:** ✅ ACUCOS · **Build #12:** ✅ Arkansas Civic  
+**Current version:** 1.20.0 · **Routes:** [/mission-control/routes.html](/mission-control/routes.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #16:** ✅ Route Inventory · **Build #15:** ✅ Data Model · **Build #14:** ✅ ACUCOS  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
 > **Arkansas pilot (v1):** All civic action frameworks scoped to Arkansas first — modular for future states.
@@ -258,12 +258,31 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **13** | **Coalition & Outreach** | **✅ v1.17.0** |
 | **14** | **ACUCOS** | **✅ v1.18.0** |
 | **15** | **Canonical Data Model** | **✅ v1.19.0** |
+| **16** | **Route Inventory** | **✅ v1.20.0** |
 
-**Next:** Build #16 — Complete page inventory (every screen and route). **Pivot:** Builds #16–#20 focus on concrete product design, not constitutions.
+**Next:** Build #17 — Component inventory (cards, timelines, Action Hub, dashboards, forms).
 
 ---
 
-## Phase 15 — Canonical Data Model (Build #15) ★ NEW
+## Phase 16 — Route Inventory (Build #16) ★ NEW
+
+*Complete page & route registry for Arkansas v1.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| R1 | Route Registry v1.0 | ✅ | `data/route-registry.json` |
+| R2 | 9 route groups documented | ✅ | 81 routes total |
+| R3 | Launch priorities (must / stub / later) | ✅ | MC dashboard |
+| R4 | Action Hub link registry (10 links) | ✅ | Verified |
+| R5 | Hub pages: Start Here, Arkansas, Join | ✅ | `/start-here/` `/arkansas/` `/join/` |
+| R6 | Canonical netlify redirects | ✅ | `netlify.toml` |
+| R7 | MC routes dashboard | ✅ | `/mission-control/routes.html` |
+
+**Route principle:** Every route answers one reader question — educate, trust, civic, or mission control.
+
+---
+
+## Implementation Pivot — Builds #17–#20
 
 *Master data model & relationship architecture — everything connected.*
 
@@ -289,7 +308,7 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 
 | Build | Title |
 |-------|-------|
-| **#16** | Complete page inventory (every screen and route) |
+| ~~**#16**~~ | ~~Complete page inventory~~ ✅ Done |
 | **#17** | Component inventory (cards, timelines, Action Hub, dashboards, forms) |
 | **#18** | Database schema and entity relationships |
 | **#19** | UX wireframes for desktop, tablet, and mobile |

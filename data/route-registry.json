@@ -1,0 +1,1183 @@
+{
+  "version": "1.0",
+  "build": 16,
+  "updated": "2026-07-09",
+  "title": "Route Registry v1.0",
+  "scope": "arkansas",
+  "route": "/mission-control/routes.html",
+  "constitution": "/docs/ROUTE_REGISTRY.md",
+  "principle": "Every route should answer one clear reader question. If a page does not educate, build trust, support civic participation, or help manage the project, it should not exist in Version 1.",
+  "purposes": [
+    {
+      "id": "educate",
+      "title": "Educate the public"
+    },
+    {
+      "id": "trust",
+      "title": "Build trust through evidence"
+    },
+    {
+      "id": "civic",
+      "title": "Move readers into community education"
+    },
+    {
+      "id": "mission_control",
+      "title": "Track project progress"
+    }
+  ],
+  "launch_priorities": {
+    "must_launch": [
+      "Homepage",
+      "Start Here",
+      "What Is Citizens United",
+      "Why It Matters",
+      "The Story",
+      "The Case",
+      "The Impact",
+      "Solutions",
+      "Arkansas",
+      "Teach",
+      "Join",
+      "Coalition",
+      "Mission Control",
+      "Source Library"
+    ],
+    "stub_ok": [
+      "Model Law Workspace",
+      "Ballot Initiative Lab",
+      "Partner Directory",
+      "Referral Progress",
+      "Advanced Spending Data",
+      "Admin Dashboards"
+    ],
+    "later": [
+      "Full interactive data tools",
+      "AI learning assistant",
+      "Live GitHub/Netlify dashboard",
+      "Full county coalition map",
+      "Public official sharing automation"
+    ]
+  },
+  "summary": {
+    "total_routes": 81,
+    "live": 11,
+    "redirect": 37,
+    "stub": 11,
+    "planned": 22,
+    "must_launch": 40,
+    "stub_ok": 36,
+    "later": 5
+  },
+  "groups": [
+    {
+      "id": "public_education",
+      "number": 1,
+      "title": "Public Education Routes",
+      "routes": [
+        {
+          "path": "/",
+          "title": "Homepage",
+          "reader_question": "How did one Supreme Court decision change American politics?",
+          "purposes": [
+            "educate",
+            "civic"
+          ],
+          "status": "live",
+          "current_destination": "/",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/start-here",
+          "title": "Start Here",
+          "reader_question": "Where should I begin?",
+          "purposes": [
+            "educate"
+          ],
+          "status": "live",
+          "current_destination": "/start-here/",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/what-is-citizens-united",
+          "title": "What Is Citizens United",
+          "reader_question": "What is Citizens United?",
+          "purposes": [
+            "educate"
+          ],
+          "status": "redirect",
+          "current_destination": "/start-here/",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/why-it-matters",
+          "title": "Why It Matters",
+          "reader_question": "Why does this still matter?",
+          "purposes": [
+            "educate"
+          ],
+          "status": "redirect",
+          "current_destination": "/",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/the-story",
+          "title": "The Story",
+          "reader_question": "How did we get here?",
+          "purposes": [
+            "educate",
+            "trust"
+          ],
+          "status": "redirect",
+          "current_destination": "/halls/story-before.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/the-case",
+          "title": "The Case",
+          "reader_question": "What actually happened?",
+          "purposes": [
+            "educate",
+            "trust"
+          ],
+          "status": "redirect",
+          "current_destination": "/halls/the-case.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/the-constitution",
+          "title": "The Constitution",
+          "reader_question": "Why did the Court rule this way?",
+          "purposes": [
+            "educate",
+            "trust"
+          ],
+          "status": "redirect",
+          "current_destination": "/halls/what-court-decided.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/the-impact",
+          "title": "The Impact",
+          "reader_question": "What changed after 2010?",
+          "purposes": [
+            "educate",
+            "trust"
+          ],
+          "status": "redirect",
+          "current_destination": "/halls/after-2010.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/follow-the-money",
+          "title": "Follow the Money",
+          "reader_question": "How does political money flow?",
+          "purposes": [
+            "educate",
+            "trust"
+          ],
+          "status": "redirect",
+          "current_destination": "/halls/money-map.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/the-debate",
+          "title": "The Debate",
+          "reader_question": "What are the strongest arguments?",
+          "purposes": [
+            "educate",
+            "trust"
+          ],
+          "status": "redirect",
+          "current_destination": "/halls/debate.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/solutions",
+          "title": "Solutions",
+          "reader_question": "What can be done?",
+          "purposes": [
+            "educate",
+            "civic"
+          ],
+          "status": "redirect",
+          "current_destination": "/solutions/",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/arkansas",
+          "title": "Arkansas Hub",
+          "reader_question": "What does this mean for Arkansas?",
+          "purposes": [
+            "educate",
+            "civic"
+          ],
+          "status": "live",
+          "current_destination": "/arkansas/",
+          "launch_priority": "must_launch",
+          "group": null
+        }
+      ]
+    },
+    {
+      "id": "deep_dive",
+      "number": 2,
+      "title": "Deep-Dive Routes",
+      "routes": [
+        {
+          "path": "/the-story/timeline",
+          "title": "Full Timeline",
+          "reader_question": "What is the full historical timeline?",
+          "purposes": [
+            "educate",
+            "trust"
+          ],
+          "status": "planned",
+          "current_destination": null,
+          "launch_priority": "later",
+          "group": null
+        },
+        {
+          "path": "/the-story/before-2010",
+          "title": "Before 2010",
+          "reader_question": "What was political spending like before 2010?",
+          "purposes": [
+            "educate"
+          ],
+          "status": "redirect",
+          "current_destination": "/halls/story-before.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/the-case/majority-opinion",
+          "title": "Majority Opinion",
+          "reader_question": "What did the majority say?",
+          "purposes": [
+            "educate",
+            "trust"
+          ],
+          "status": "planned",
+          "current_destination": "/halls/what-court-decided.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/the-case/dissent",
+          "title": "Dissent",
+          "reader_question": "What did the dissent argue?",
+          "purposes": [
+            "educate",
+            "trust"
+          ],
+          "status": "planned",
+          "current_destination": "/halls/what-court-decided.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/the-case/oral-arguments",
+          "title": "Oral Arguments",
+          "reader_question": "What happened at oral argument?",
+          "purposes": [
+            "educate"
+          ],
+          "status": "planned",
+          "current_destination": "/halls/the-case.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/the-constitution/first-amendment",
+          "title": "First Amendment",
+          "reader_question": "How does the First Amendment apply?",
+          "purposes": [
+            "educate"
+          ],
+          "status": "planned",
+          "current_destination": "/halls/what-court-decided.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/the-constitution/corporate-speech",
+          "title": "Corporate Speech",
+          "reader_question": "What is corporate political speech?",
+          "purposes": [
+            "educate"
+          ],
+          "status": "planned",
+          "current_destination": "/halls/what-court-decided.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/the-impact/spending-data",
+          "title": "Spending Data",
+          "reader_question": "What do the numbers show?",
+          "purposes": [
+            "educate",
+            "trust"
+          ],
+          "status": "planned",
+          "current_destination": "/halls/after-2010.html",
+          "launch_priority": "later",
+          "group": null
+        },
+        {
+          "path": "/the-impact/super-pacs",
+          "title": "Super PACs",
+          "reader_question": "How did Super PACs grow?",
+          "purposes": [
+            "educate"
+          ],
+          "status": "redirect",
+          "current_destination": "/halls/after-2010.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/the-impact/dark-money",
+          "title": "Dark Money",
+          "reader_question": "What is dark money?",
+          "purposes": [
+            "educate"
+          ],
+          "status": "redirect",
+          "current_destination": "/halls/money-map.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/follow-the-money/money-flow-map",
+          "title": "Money Flow Map",
+          "reader_question": "How does money move in politics?",
+          "purposes": [
+            "educate"
+          ],
+          "status": "redirect",
+          "current_destination": "/halls/money-map.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        }
+      ]
+    },
+    {
+      "id": "solutions_policy",
+      "number": 3,
+      "title": "Solutions & Policy Routes",
+      "routes": [
+        {
+          "path": "/solutions/federal",
+          "title": "Federal Options",
+          "reader_question": "What federal reforms exist?",
+          "purposes": [
+            "educate"
+          ],
+          "status": "stub",
+          "current_destination": "/solutions/#federal",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/solutions/congress",
+          "title": "Congress",
+          "reader_question": "What could Congress do?",
+          "purposes": [
+            "educate",
+            "civic"
+          ],
+          "status": "stub",
+          "current_destination": "/action/contact-legislators.html#federal",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/solutions/state",
+          "title": "State Options",
+          "reader_question": "What can states do?",
+          "purposes": [
+            "educate"
+          ],
+          "status": "stub",
+          "current_destination": "/solutions/#state",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/solutions/arkansas-general-assembly",
+          "title": "Arkansas Legislature",
+          "reader_question": "What can Arkansas do?",
+          "purposes": [
+            "educate",
+            "civic"
+          ],
+          "status": "stub",
+          "current_destination": "/solutions/#arkansas",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/solutions/model-laws",
+          "title": "Model Law Workspace",
+          "reader_question": "How do we explore model legislation?",
+          "purposes": [
+            "educate",
+            "civic"
+          ],
+          "status": "stub",
+          "current_destination": "/action/draft-laws.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/solutions/ballot-initiative-lab",
+          "title": "Ballot Initiative Lab",
+          "reader_question": "How do ballot initiatives work?",
+          "purposes": [
+            "educate",
+            "civic"
+          ],
+          "status": "stub",
+          "current_destination": "/action/ballot-lab.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/solutions/montana",
+          "title": "Montana Case Study",
+          "reader_question": "What is Montana doing?",
+          "purposes": [
+            "educate",
+            "trust"
+          ],
+          "status": "redirect",
+          "current_destination": "/halls/montana-hawaii.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/solutions/hawaii",
+          "title": "Hawaii Case Study",
+          "reader_question": "What is Hawaii doing?",
+          "purposes": [
+            "educate",
+            "trust"
+          ],
+          "status": "redirect",
+          "current_destination": "/halls/montana-hawaii.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        }
+      ]
+    },
+    {
+      "id": "civic_action",
+      "number": 4,
+      "title": "Arkansas Civic Action Routes",
+      "routes": [
+        {
+          "path": "/teach",
+          "title": "Teach Your Community",
+          "reader_question": "How can I teach my community?",
+          "purposes": [
+            "educate",
+            "civic"
+          ],
+          "status": "redirect",
+          "current_destination": "/educate/",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/teach/conversation-guide",
+          "title": "Conversation Guide",
+          "reader_question": "How do I host a conversation?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "redirect",
+          "current_destination": "/action/community-conversation.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/teach/presentation-toolkit",
+          "title": "Presentation Toolkit",
+          "reader_question": "Where are presentation materials?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "redirect",
+          "current_destination": "/educate/#toolkit",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/teach/faith-community-toolkit",
+          "title": "Faith Community Toolkit",
+          "reader_question": "Resources for faith communities?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "planned",
+          "current_destination": "/educate/",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/teach/campus-toolkit",
+          "title": "Campus Toolkit",
+          "reader_question": "Resources for campuses?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "planned",
+          "current_destination": "/educate/",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/teach/civic-org-toolkit",
+          "title": "Civic Org Toolkit",
+          "reader_question": "Resources for civic organizations?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "planned",
+          "current_destination": "/educate/",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/join",
+          "title": "Join Hub",
+          "reader_question": "How do I get involved?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "live",
+          "current_destination": "/join/",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/join/education-leader",
+          "title": "Education Leader",
+          "reader_question": "How do I become an education leader?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "redirect",
+          "current_destination": "/educate/",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/join/contact-network",
+          "title": "Contact Network",
+          "reader_question": "How do I join the network?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "redirect",
+          "current_destination": "/action/join-network.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/join/research-volunteer",
+          "title": "Research Volunteer",
+          "reader_question": "How do I help with research?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "planned",
+          "current_destination": "/action/ideas.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/join/event-host",
+          "title": "Event Host",
+          "reader_question": "How do I host an event?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "redirect",
+          "current_destination": "/coalition/events.html#submit",
+          "launch_priority": "must_launch",
+          "group": null
+        }
+      ]
+    },
+    {
+      "id": "coalition",
+      "number": 5,
+      "title": "Coalition Routes",
+      "routes": [
+        {
+          "path": "/coalition",
+          "title": "Coalition Landing",
+          "reader_question": "How can my organization partner?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "redirect",
+          "current_destination": "/coalition/",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/coalition/sign-on",
+          "title": "Organization Sign-On",
+          "reader_question": "How do we sign on?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "redirect",
+          "current_destination": "/coalition/join.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/coalition/partners",
+          "title": "Partner Directory",
+          "reader_question": "Who is in the coalition?",
+          "purposes": [
+            "civic",
+            "trust"
+          ],
+          "status": "stub",
+          "current_destination": "/coalition/",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/coalition/resources",
+          "title": "Resource Portal",
+          "reader_question": "What resources do partners get?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "redirect",
+          "current_destination": "/coalition/resources.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/coalition/events",
+          "title": "Event Calendar",
+          "reader_question": "What events are happening?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "redirect",
+          "current_destination": "/coalition/events.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/coalition/county-map",
+          "title": "County Coalition Map",
+          "reader_question": "Where are partners across Arkansas?",
+          "purposes": [
+            "civic",
+            "mission_control"
+          ],
+          "status": "redirect",
+          "current_destination": "/coalition/counties.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        }
+      ]
+    },
+    {
+      "id": "relational",
+      "number": 6,
+      "title": "Relational Organizing Routes",
+      "routes": [
+        {
+          "path": "/share",
+          "title": "Share Hub",
+          "reader_question": "How do I share this with others?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "redirect",
+          "current_destination": "/action/share.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/share/friends-family",
+          "title": "Friends & Family",
+          "reader_question": "How do I share with people I know?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "redirect",
+          "current_destination": "/action/share.html#invite",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/share/resources",
+          "title": "Shareable Resources",
+          "reader_question": "What can I share?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "redirect",
+          "current_destination": "/action/share.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/invite",
+          "title": "Invite",
+          "reader_question": "How do I invite someone to learn?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "redirect",
+          "current_destination": "/action/share.html#invite",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/referrals",
+          "title": "Referral Progress",
+          "reader_question": "How are my referrals doing?",
+          "purposes": [
+            "civic"
+          ],
+          "status": "stub",
+          "current_destination": "/action/share.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        }
+      ]
+    },
+    {
+      "id": "sources_research",
+      "number": 7,
+      "title": "Source & Research Routes",
+      "routes": [
+        {
+          "path": "/sources",
+          "title": "Source Library",
+          "reader_question": "Where are the primary sources?",
+          "purposes": [
+            "educate",
+            "trust"
+          ],
+          "status": "redirect",
+          "current_destination": "/library/",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/sources/supreme-court",
+          "title": "Supreme Court Docs",
+          "reader_question": "Where are court documents?",
+          "purposes": [
+            "trust"
+          ],
+          "status": "stub",
+          "current_destination": "/library/",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/sources/fec",
+          "title": "FEC Materials",
+          "reader_question": "Where is FEC data?",
+          "purposes": [
+            "trust"
+          ],
+          "status": "planned",
+          "current_destination": "/library/",
+          "launch_priority": "later",
+          "group": null
+        },
+        {
+          "path": "/sources/spending-data",
+          "title": "Spending Data",
+          "reader_question": "Where is spending data?",
+          "purposes": [
+            "trust"
+          ],
+          "status": "planned",
+          "current_destination": "/halls/money-map.html",
+          "launch_priority": "later",
+          "group": null
+        },
+        {
+          "path": "/sources/academic",
+          "title": "Academic Research",
+          "reader_question": "Where is academic research?",
+          "purposes": [
+            "trust"
+          ],
+          "status": "planned",
+          "current_destination": "/library/",
+          "launch_priority": "later",
+          "group": null
+        },
+        {
+          "path": "/sources/state-reforms",
+          "title": "State Reforms",
+          "reader_question": "Where are state reform documents?",
+          "purposes": [
+            "trust"
+          ],
+          "status": "stub",
+          "current_destination": "/solutions/#state",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/glossary",
+          "title": "Glossary",
+          "reader_question": "What do these terms mean?",
+          "purposes": [
+            "educate"
+          ],
+          "status": "planned",
+          "current_destination": null,
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/faq",
+          "title": "FAQ",
+          "reader_question": "Frequently asked questions?",
+          "purposes": [
+            "educate"
+          ],
+          "status": "planned",
+          "current_destination": null,
+          "launch_priority": "stub_ok",
+          "group": null
+        }
+      ]
+    },
+    {
+      "id": "mission_control",
+      "number": 8,
+      "title": "Mission Control Routes",
+      "routes": [
+        {
+          "path": "/mission-control",
+          "title": "Mission Control",
+          "reader_question": "How is the project progressing?",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "live",
+          "current_destination": "/mission-control/",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/mission-control/phases",
+          "title": "Phases",
+          "reader_question": "What phases are complete?",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "live",
+          "current_destination": "/mission-control/phases.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/mission-control/builds",
+          "title": "Builds",
+          "reader_question": "What has been built?",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "redirect",
+          "current_destination": "/builds/",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/mission-control/research",
+          "title": "Research Progress",
+          "reader_question": "How is research progressing?",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "live",
+          "current_destination": "/mission-control/research.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/mission-control/content",
+          "title": "Content Progress",
+          "reader_question": "What content exists?",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "redirect",
+          "current_destination": "/mission-control/inventory.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/mission-control/civic-action",
+          "title": "Civic Action Progress",
+          "reader_question": "How is civic action progressing?",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "redirect",
+          "current_destination": "/mission-control/civic-ecosystem.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/mission-control/coalition",
+          "title": "Coalition Progress",
+          "reader_question": "How is the coalition growing?",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "live",
+          "current_destination": "/mission-control/coalition.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/mission-control/deployment",
+          "title": "Deployment",
+          "reader_question": "Is the site deployed?",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "stub",
+          "current_destination": "/mission-control/",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/mission-control/routes",
+          "title": "Route Registry",
+          "reader_question": "What routes exist?",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "live",
+          "current_destination": "/mission-control/routes.html",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/mission-control/data-model",
+          "title": "Data Model",
+          "reader_question": "How is data connected?",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "live",
+          "current_destination": "/mission-control/data-model.html",
+          "launch_priority": "must_launch",
+          "group": null
+        }
+      ]
+    },
+    {
+      "id": "admin",
+      "number": 9,
+      "title": "Admin Routes",
+      "routes": [
+        {
+          "path": "/admin",
+          "title": "Admin Home",
+          "reader_question": "Internal administration",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "redirect",
+          "current_destination": "/admin/mission-control/",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/admin/mission-control",
+          "title": "Internal MC",
+          "reader_question": "Internal mission control",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "live",
+          "current_destination": "/admin/mission-control/",
+          "launch_priority": "must_launch",
+          "group": null
+        },
+        {
+          "path": "/admin/signups",
+          "title": "Signup Review",
+          "reader_question": "Review signups",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "planned",
+          "current_destination": null,
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/admin/coalition",
+          "title": "Coalition Review",
+          "reader_question": "Review coalition applications",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "planned",
+          "current_destination": null,
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/admin/events",
+          "title": "Event Review",
+          "reader_question": "Review events",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "planned",
+          "current_destination": null,
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/admin/resources",
+          "title": "Resource Management",
+          "reader_question": "Manage resources",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "planned",
+          "current_destination": null,
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/admin/model-laws",
+          "title": "Model Law Submissions",
+          "reader_question": "Review model laws",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "planned",
+          "current_destination": "/action/draft-laws.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/admin/ballot-lab",
+          "title": "Ballot Lab Submissions",
+          "reader_question": "Review ballot concepts",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "planned",
+          "current_destination": "/action/ballot-lab.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/admin/content",
+          "title": "Content Registry",
+          "reader_question": "Content administration",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "redirect",
+          "current_destination": "/mission-control/inventory.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        },
+        {
+          "path": "/admin/research",
+          "title": "Research Registry",
+          "reader_question": "Research administration",
+          "purposes": [
+            "mission_control"
+          ],
+          "status": "redirect",
+          "current_destination": "/mission-control/research.html",
+          "launch_priority": "stub_ok",
+          "group": null
+        }
+      ]
+    }
+  ],
+  "action_hub_links": [
+    {
+      "title": "Become an Education Leader",
+      "path": "/educate/",
+      "status": "live"
+    },
+    {
+      "title": "Join the Contact Network",
+      "path": "/action/join-network.html",
+      "status": "live"
+    },
+    {
+      "title": "Share This Page",
+      "path": "/action/share.html",
+      "status": "live"
+    },
+    {
+      "title": "Invite Friends & Family",
+      "path": "/action/share.html#invite",
+      "status": "live"
+    },
+    {
+      "title": "Organization Sign-On",
+      "path": "/coalition/join.html",
+      "status": "live"
+    },
+    {
+      "title": "Draft a Model Law",
+      "path": "/action/draft-laws.html",
+      "status": "stub"
+    },
+    {
+      "title": "Explore the Ballot Initiative Lab",
+      "path": "/action/ballot-lab.html",
+      "status": "stub"
+    },
+    {
+      "title": "Share With Public Officials",
+      "path": "/action/contact-legislators.html",
+      "status": "stub"
+    },
+    {
+      "title": "Ask a Question",
+      "path": "/action/ideas.html",
+      "status": "live"
+    },
+    {
+      "title": "Give Feedback",
+      "path": "/action/ideas.html#feedback",
+      "status": "live"
+    }
+  ]
+}

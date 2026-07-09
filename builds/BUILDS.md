@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#16** | **Route Inventory** | **1.20.0** | **✅ Complete** | [016](016-page-route-inventory.md) · [/mission-control/routes.html](../mission-control/routes.html) |
 | **#15** | **Canonical Data Model** | **1.19.0** | **✅ Complete** | [015](015-canonical-data-model.md) · [/mission-control/data-model.html](../mission-control/data-model.html) |
 | **#14** | **ACUCOS** | **1.18.0** | **✅ Complete** | [014](014-acucos.md) · [/mission-control/coalition.html](../mission-control/coalition.html) |
 | **#13** | **Coalition & Outreach** | **1.17.0** | **✅ Complete** | [013](013-coalition-outreach.md) · [/coalition/](../coalition/) |
@@ -15,12 +16,13 @@
 | **#5** | **Site Architecture** | **1.9.0** | **✅ Complete** | [005](005-master-site-architecture.md) |
 | **#4** | **Phase Registry** | **1.8.0** | **✅ Complete** | [004](004-master-phase-registry.md) |
 
-## Platform Stack (Builds #4–#15)
+## Platform Stack (Builds #4–#16)
 
 | Layer | Route | Focus |
 |-------|-------|-------|
 | Phase Registry | `/mission-control/phases.html` | Project phases |
 | Site Architecture | `/mission-control/architecture.html` | Destinations + platform layers |
+| **Route Registry** | `/mission-control/routes.html` | **81 routes · v1 map** |
 | Content Inventory | `/mission-control/inventory.html` | Content assets |
 | MRID System | `/mission-control/mrid.html` | Requirement IDs |
 | Citizen Journey | `/mission-control/journey.html` | People & UX |
@@ -30,6 +32,10 @@
 | **Civic Ecosystem** | `/mission-control/civic-ecosystem.html` | Arkansas leadership & counties |
 | **ACUCOS** | `/mission-control/coalition.html` | Coalition Operating System |
 | **Canonical Data Model** | `/mission-control/data-model.html` | **Everything connected** |
+
+## Route Rule (Build #16)
+
+Every route answers one reader question. 81 routes inventoried — honest live/redirect/stub/planned status.
 
 ## Data Model Rule (Build #15)
 

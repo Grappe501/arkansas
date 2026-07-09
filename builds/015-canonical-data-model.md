@@ -42,4 +42,4 @@ Schema **live**. Relationship edges **0** until backend. Research objects count 
 
 ## Next Recommended Build
 
-**Build #16 — Complete Page Inventory** — every screen and route documented.
+**Build #17 — Component Inventory** — cards, timelines, Action Hub, dashboards, forms.

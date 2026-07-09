@@ -110,6 +110,197 @@
   to = "/coalition/"
   status = 301
 
+# Build #16 — Route Registry canonical paths
+[[redirects]]
+  from = "/start-here"
+  to = "/start-here/"
+  status = 301
+
+[[redirects]]
+  from = "/arkansas"
+  to = "/arkansas/"
+  status = 301
+
+[[redirects]]
+  from = "/join"
+  to = "/join/"
+  status = 301
+
+[[redirects]]
+  from = "/what-is-citizens-united"
+  to = "/start-here/"
+  status = 301
+
+[[redirects]]
+  from = "/why-it-matters"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/join/education-leader"
+  to = "/educate/"
+  status = 301
+
+[[redirects]]
+  from = "/join/contact-network"
+  to = "/action/join-network.html"
+  status = 301
+
+[[redirects]]
+  from = "/join/event-host"
+  to = "/coalition/events.html#submit"
+  status = 301
+
+[[redirects]]
+  from = "/join/research-volunteer"
+  to = "/action/ideas.html"
+  status = 301
+
+[[redirects]]
+  from = "/coalition/sign-on"
+  to = "/coalition/join.html"
+  status = 301
+
+[[redirects]]
+  from = "/coalition/partners"
+  to = "/coalition/"
+  status = 301
+
+[[redirects]]
+  from = "/coalition/resources"
+  to = "/coalition/resources.html"
+  status = 301
+
+[[redirects]]
+  from = "/coalition/events"
+  to = "/coalition/events.html"
+  status = 301
+
+[[redirects]]
+  from = "/coalition/county-map"
+  to = "/coalition/counties.html"
+  status = 301
+
+[[redirects]]
+  from = "/share"
+  to = "/action/share.html"
+  status = 301
+
+[[redirects]]
+  from = "/share/friends-family"
+  to = "/action/share.html#invite"
+  status = 301
+
+[[redirects]]
+  from = "/share/resources"
+  to = "/action/share.html"
+  status = 301
+
+[[redirects]]
+  from = "/invite"
+  to = "/action/share.html#invite"
+  status = 301
+
+[[redirects]]
+  from = "/referrals"
+  to = "/action/share.html"
+  status = 301
+
+[[redirects]]
+  from = "/teach/conversation-guide"
+  to = "/action/community-conversation.html"
+  status = 301
+
+[[redirects]]
+  from = "/teach/presentation-toolkit"
+  to = "/educate/#toolkit"
+  status = 301
+
+[[redirects]]
+  from = "/mission-control/builds"
+  to = "/builds/"
+  status = 301
+
+[[redirects]]
+  from = "/mission-control/content"
+  to = "/mission-control/inventory.html"
+  status = 301
+
+[[redirects]]
+  from = "/mission-control/civic-action"
+  to = "/mission-control/civic-ecosystem.html"
+  status = 301
+
+[[redirects]]
+  from = "/mission-control/coalition"
+  to = "/mission-control/coalition.html"
+  status = 301
+
+[[redirects]]
+  from = "/mission-control/routes"
+  to = "/mission-control/routes.html"
+  status = 301
+
+[[redirects]]
+  from = "/mission-control/data-model"
+  to = "/mission-control/data-model.html"
+  status = 301
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin/mission-control/"
+  status = 301
+
+[[redirects]]
+  from = "/admin/content"
+  to = "/mission-control/inventory.html"
+  status = 301
+
+[[redirects]]
+  from = "/admin/research"
+  to = "/mission-control/research.html"
+  status = 301
+
+[[redirects]]
+  from = "/solutions/model-laws"
+  to = "/action/draft-laws.html"
+  status = 301
+
+[[redirects]]
+  from = "/solutions/ballot-initiative-lab"
+  to = "/action/ballot-lab.html"
+  status = 301
+
+[[redirects]]
+  from = "/solutions/montana"
+  to = "/halls/montana-hawaii.html"
+  status = 301
+
+[[redirects]]
+  from = "/solutions/hawaii"
+  to = "/halls/montana-hawaii.html"
+  status = 301
+
+[[redirects]]
+  from = "/the-impact/super-pacs"
+  to = "/halls/after-2010.html"
+  status = 301
+
+[[redirects]]
+  from = "/the-impact/dark-money"
+  to = "/halls/money-map.html"
+  status = 301
+
+[[redirects]]
+  from = "/follow-the-money/money-flow-map"
+  to = "/halls/money-map.html"
+  status = 301
+
+[[redirects]]
+  from = "/the-story/before-2010"
+  to = "/halls/story-before.html"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]
