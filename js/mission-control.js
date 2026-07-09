@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Launch Plan 2027 <a href="/mission-control/master-launch-plan.html" class="mc-inline-link">Jan 2027 Readiness #85 →</a></h2>
+    <p class="mc-bar-note">Build #85 — Master Launch Plan. January 2027 operational readiness blueprint. 36 checklist items, 11 categories, launch map, governance certs. 3/36 complete · dashboard not live. ~54% readiness.</p>
     <h2 class="mc-section-title">Strategic Plan 2035 <a href="/mission-control/arkansas-strategic-plan-2035.html" class="mc-inline-link">Decade Roadmap #84 →</a></h2>
     <p class="mc-bar-note">Build #84 — Master Arkansas Strategic Plan 2035. Accomplishment roadmap to statewide civic education institution. 7 goals, 10 metrics, 5yr/10yr milestones, annual review. 0/75 counties · 0/200K · scorecard not live. ~55% readiness.</p>
     <h2 class="mc-section-title">Civic Ecosystem <a href="/mission-control/arkansas-civic-ecosystem.html" class="mc-inline-link">Connected Network #83 →</a></h2>
@@ -5241,6 +5243,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPublicTrustInstitutionalCredibility();
   initArkansasCivicEcosystem();
   initArkansasStrategicPlan2035();
+  initMasterLaunchPlan();
 });
 
 async function initUxArchitecture() {
@@ -8879,6 +8882,107 @@ async function initArkansasStrategicPlan2035() {
       <a href="/BUILD_PLAN.md">Master Build Plan</a> ·
       <a href="/mission-control/arkansas-civic-ecosystem.html">Civic Ecosystem (#83)</a> ·
       <a href="/mission-control/arkansas-civic-institution-roadmap.html">Legacy Roadmap (#80)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initMasterLaunchPlan() {
+  const root = document.getElementById('mc-master-launch-plan-root');
+  if (!root) return;
+
+  const [lpRes, mcRes] = await Promise.all([
+    fetch('/data/master-launch-plan.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const lp = await lpRes.json();
+  const mc = await mcRes.json();
+  const s = lp.summary;
+
+  const objectiveSections = lp.launch_objectives.areas.map(area => {
+    const rows = area.deliverables.map(d => `
+      <tr><td><code>${d.id}</code></td><td>${d.item}</td>
+        <td>${d.complete ? 'Yes' : 'No'}</td><td>${d.status}</td></tr>`).join('');
+    return `
+      <h3 class="mc-section-title">${area.title}</h3>
+      <table class="mc-table"><thead><tr><th>ID</th><th>Deliverable</th><th>Complete</th><th>Status</th></tr></thead>
+        <tbody>${rows}</tbody></table>`;
+  }).join('');
+
+  const readinessRows = lp.launch_readiness_dashboard.categories.map(c => `
+    <tr><td><code>${c.id}</code></td><td>${c.category}</td>
+      <td>${c.readiness_pct}%</td><td>${c.status}</td></tr>`).join('');
+
+  const mapRows = lp.arkansas_launch_map.items.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.item}</td>
+      <td>${typeof m.current === 'number' ? m.current.toLocaleString() : m.current}${m.target ? ` / ${m.target.toLocaleString()}` : ''}</td></tr>`).join('');
+
+  const certRows = lp.launch_governance.certifications.map(c => `
+    <tr><td><code>${c.id}</code></td><td>${c.certification}</td>
+      <td>${c.certified ? 'Yes' : 'No'}</td><td>${c.status ?? 'planned'}</td></tr>`).join('');
+
+  const systemRows = lp.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Master Launch Plan</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #85 · ${lp.title}</p>
+      <h1>${lp.subtitle}</h1>
+      <p class="mc-header__question">${lp.governing_principle}</p>
+      <p class="mc-bar-note">${lp.purpose}</p>
+      <p class="mc-bar-note"><strong>Launch date:</strong> ${lp.launch_date} · <strong>Tagline:</strong> ${lp.tagline}</p>
+      <p class="mc-bar-note"><strong>This plan:</strong> ${lp.distinct_from.this_plan_focus}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Launch plan readiness</div><div class="mc-stat__value">${s.master_launch_plan_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Checklist</div><div class="mc-stat__value">${s.checklist_items_complete}/${s.checklist_items_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Dashboard live</div><div class="mc-stat__value">${s.launch_readiness_dashboard_live ? 'Yes' : 'No'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Launch map</div><div class="mc-stat__value">${s.arkansas_launch_map_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Governance certs</div><div class="mc-stat__value">${s.governance_certs_complete}/${s.governance_certs_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Counties</div><div class="mc-stat__value">${s.counties_represented}/75</div></div>
+    </div>
+    <h2 class="mc-section-title">${lp.launch_mission.title}</h2>
+    <p class="mc-bar-note">Target: ${lp.launch_mission.date} · Built by Arkansans: ${lp.launch_mission.built_by_arkansans_for_arkansans ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${lp.launch_mission.topics.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${lp.launch_objectives.title}</h2>
+    <p class="mc-bar-note">Operational checklist: ${lp.launch_objectives.operational_checklist ? 'Yes' : 'No'} · ${s.checklist_items_complete}/${s.checklist_items_total} complete</p>
+    ${objectiveSections}
+    <h2 class="mc-section-title">${lp.launch_readiness_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${lp.launch_readiness_dashboard.live ? 'Yes' : 'No'} · Overall: ${s.overall_launch_readiness_pct}%</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Category</th><th>Readiness</th><th>Status</th></tr></thead>
+      <tbody>${readinessRows}</tbody></table>
+    <h2 class="mc-section-title">${lp.arkansas_launch_map.title}</h2>
+    <p class="mc-bar-note">Live: ${lp.arkansas_launch_map.live ? 'Yes' : 'No'} · Public symbol: ${lp.arkansas_launch_map.public_symbol_of_growth ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Item</th><th>Current</th></tr></thead>
+      <tbody>${mapRows}</tbody></table>
+    <h2 class="mc-section-title">${lp.launch_success_metrics.title}</h2>
+    <p class="mc-bar-note">Launch is beginning, not finish line: ${lp.launch_success_metrics.launch_is_beginning_not_finish_line ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${lp.launch_success_metrics.metrics.map(m => `<li>${m}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${lp.first_year_priorities.title}</h2>
+    <ul class="mc-deliverables">${lp.first_year_priorities.priorities.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${lp.launch_governance.title}</h2>
+    <p class="mc-bar-note">Certified: ${lp.launch_governance.certified_count}/${lp.launch_governance.certifications_total} · Trust begins day one: ${lp.launch_governance.trust_begins_day_one ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Certification</th><th>Certified</th><th>Status</th></tr></thead>
+      <tbody>${certRows}</tbody></table>
+    <h2 class="mc-section-title">${lp.public_launch_message.title}</h2>
+    <blockquote class="mc-bar-note"><em>${lp.public_launch_message.promise}</em></blockquote>
+    <h2 class="mc-section-title">System Integration</h2>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${lp.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${lp.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${lp.recommended_next_build.number} — ${lp.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${lp.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_LAUNCH_PLAN.md">MASTER_LAUNCH_PLAN.md</a> ·
+      <a href="/data/master-launch-plan.json">JSON</a> ·
+      <a href="/mission-control/launch-strategy.html">Launch Strategy (#53)</a> ·
+      <a href="/mission-control/arkansas-strategic-plan-2035.html">Strategic Plan (#84)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

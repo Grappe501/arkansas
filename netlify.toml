@@ -587,6 +587,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/master-launch-plan"
+  to = "/mission-control/master-launch-plan.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301

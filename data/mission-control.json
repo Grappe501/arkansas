@@ -1,6 +1,6 @@
 {
-  "version": "1.88.0",
-  "build": 84,
+  "version": "1.89.0",
+  "build": 85,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,16 +9,16 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 84,
+    "overall_completion": 85,
     "current_build": {
-      "number": 84,
-      "title": "Citizens United Facts Master Arkansas Strategic Plan 2035 v1.0"
-    },
-    "active_phase": "Strategic Plan \u2192 Scorecard",
-    "last_completed": "Arkansas Civic Ecosystem",
-    "next_build": {
       "number": 85,
-      "title": "Strategic scorecard & annual review components"
+      "title": "Citizens United Facts Master Launch Plan v1.0"
+    },
+    "active_phase": "Launch Plan \u2192 Readiness Dashboard",
+    "last_completed": "Arkansas Strategic Plan 2035",
+    "next_build": {
+      "number": 86,
+      "title": "Launch readiness dashboard & certification components"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
@@ -64,6 +64,7 @@
     "public_trust_institutional_credibility_readiness": 50,
     "arkansas_civic_ecosystem_readiness": 54,
     "arkansas_strategic_plan_2035_readiness": 55,
+    "master_launch_plan_readiness": 54,
     "mc2_readiness": 42,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
@@ -93,7 +94,7 @@
     "build_bible_readiness": 49,
     "data_architecture_readiness": 41,
     "ux_architecture_readiness": 39,
-    "launch_strategy_readiness": 39,
+    "launch_strategy_readiness": 44,
     "pmo_readiness": 46,
     "master_plan_readiness": 56,
     "statewide_growth_readiness": 48,
@@ -104,17 +105,18 @@
     "planning_phase_complete": true,
     "planning_constitution_complete": true,
     "eighty_builds_complete": true,
-    "implementation_phase": "strategic_scorecard_next",
+    "implementation_phase": "launch_readiness_dashboard_next",
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation",
-    "public_launch_recommended": false
+    "public_launch_recommended": false,
+    "launch_target_date": "2027-01-01"
   },
   "progress_bars": [
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 84,
-      "note": "Build #84 \u2014 Arkansas Strategic Plan 2035."
+      "value": 85,
+      "note": "Build #85 \u2014 Master Launch Plan (Jan 2027)."
     },
     {
       "id": "constitution",
@@ -726,6 +728,13 @@
       "value": 55,
       "max": 100,
       "note": "0/200000 counties/participants \u00b7 scorecard planned."
+    },
+    {
+      "id": "master_launch_plan",
+      "label": "Launch Plan 2027",
+      "value": 54,
+      "max": 100,
+      "note": "0/7 certs \u00b7 dashboard planned."
     }
   ],
   "public_readiness": {
@@ -1522,6 +1531,12 @@
       "id": "arkansas_strategic_plan_2035",
       "label": "Strategic Plan 2035",
       "href": "/mission-control/arkansas-strategic-plan-2035.html",
+      "status": "complete"
+    },
+    {
+      "id": "master_launch_plan",
+      "label": "Launch Plan 2027",
+      "href": "/mission-control/master-launch-plan.html",
       "status": "complete"
     }
   ],
@@ -2548,6 +2563,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 85,
+      "title": "Citizens United Facts Master Launch Plan v1.0",
+      "version": "1.89.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "January 2027 operational readiness blueprint for launch",
+      "summary": "36 checklist items, 11 readiness categories, launch map, governance certs, 54% readiness. 3/36 complete \u00b7 launch 2027-01-01.",
+      "files_created": [
+        "data/master-launch-plan.json",
+        "docs/MASTER_LAUNCH_PLAN.md",
+        "builds/085-master-launch-plan.md",
+        "mission-control/master-launch-plan.html",
+        "scripts/gen-master-launch-plan.py",
+        "scripts/update-mc-build85.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/master-launch-plan.html"
+      ],
+      "decisions_made": [
+        "January 2027 launch target \u2014 operational checklist not wish list",
+        "6 launch objective areas \u00b7 36 deliverables",
+        "11-category launch readiness dashboard",
+        "Arkansas Launch Map \u2014 public symbol of growth",
+        "7 governance certifications before launch",
+        "Distinct from Launch Strategy (#53) and Strategic Plan (#84)",
+        "54% readiness \u2014 blueprint only"
+      ],
+      "open_questions": [
+        "Build #85 vs Launch Strategy (#53) \u2014 merge dashboards?",
+        "Checklist completion \u2014 auto-detect from MC or manual?",
+        "Launch date Jan 2027 \u2014 hard gate or target?",
+        "Governance certification \u2014 who signs off?"
+      ],
+      "risks": [
+        "Launch readiness dashboard not live \u2014 11 categories at 0%",
+        "Arkansas Launch Map not live \u2014 public growth symbol missing",
+        "Only 3/36 checklist items complete",
+        "Launch governance not certified \u2014 0/7 certifications"
+      ],
+      "next_recommended": 86,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/master-launch-plan.html",
+      "review_status": "complete"
+    },
     {
       "number": 84,
       "title": "Citizens United Facts Master Arkansas Strategic Plan 2035 v1.0",
@@ -6997,21 +7065,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Arkansas Strategic Plan 2035 v1.0 \u2014 decade accomplishment roadmap",
-    "building_now": "84 builds \u2014 strategic scorecard next",
+    "what_built": "Master Launch Plan v1.0 \u2014 January 2027 readiness blueprint",
+    "building_now": "85 builds \u2014 launch readiness dashboard next",
     "blocked": [
-      "Strategic scorecard",
-      "Annual review workflow",
-      "Milestone tracking",
-      "Risk dashboard"
+      "Launch readiness dashboard",
+      "Arkansas Launch Map",
+      "Checklist tracker",
+      "Governance certification"
     ],
     "ready_public": [
-      "7 strategic goals",
-      "10 metrics",
-      "5yr/10yr milestones",
-      "Founder's commitment"
+      "36-item checklist",
+      "11 categories",
+      "Launch message",
+      "First-year priorities"
     ],
-    "next": "Build #85 \u2014 Strategic scorecard & annual review components"
+    "next": "Build #86 \u2014 Launch readiness dashboard & certification components"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -7875,5 +7943,14 @@
     "strategic_goals": 7,
     "horizon_year": 2035,
     "strategic_scorecard_live": false
+  },
+  "master_launch_plan": "/data/master-launch-plan.json",
+  "master_launch_plan_dashboard": "/mission-control/master-launch-plan.html",
+  "master_launch_plan_inventory": {
+    "readiness_score": 54,
+    "launch_date": "2027-01-01",
+    "checklist_complete": 3,
+    "checklist_total": 36,
+    "launch_readiness_dashboard_live": false
   }
 }

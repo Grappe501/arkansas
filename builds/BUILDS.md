@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#85** | **Master Launch Plan (January 2027)** | **1.89.0** | **✅ Complete** | [085](085-master-launch-plan.md) · [/mission-control/master-launch-plan.html](../mission-control/master-launch-plan.html) |
 | **#84** | **Arkansas Strategic Plan 2035** | **1.88.0** | **✅ Complete** | [084](084-arkansas-strategic-plan-2035.md) · [/mission-control/arkansas-strategic-plan-2035.html](../mission-control/arkansas-strategic-plan-2035.html) |
 | **#83** | **Arkansas Civic Ecosystem** | **1.87.0** | **✅ Complete** | [083](083-arkansas-civic-ecosystem.md) · [/mission-control/arkansas-civic-ecosystem.html](../mission-control/arkansas-civic-ecosystem.html) |
 | **#82** | **Public Trust & Institutional Credibility Framework** | **1.86.0** | **✅ Complete** | [082](082-public-trust-institutional-credibility.md) · [/mission-control/public-trust-institutional-credibility.html](../mission-control/public-trust-institutional-credibility.html) |

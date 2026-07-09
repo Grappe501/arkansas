@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.88.0 · **Strategic Plan 2035:** [/mission-control/arkansas-strategic-plan-2035.html](/mission-control/arkansas-strategic-plan-2035.html) · **84 builds complete**  
-**Decade roadmap** — 7 strategic goals · 10 metrics · 5yr/10yr milestones · annual review · **Next:** Build #85 Strategic Scorecard  
+**Current version:** 1.89.0 · **Launch Plan 2027:** [/mission-control/master-launch-plan.html](/mission-control/master-launch-plan.html) · **85 builds complete**  
+**January 2027 readiness** — 36 checklist items · 11 categories · launch map · governance certs · **Next:** Build #86 Launch Readiness Dashboard  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **85** | **Master Launch Plan (January 2027)** | **✅ v1.89.0** |
 | **84** | **Arkansas Strategic Plan 2035** | **✅ v1.88.0** |
 | **83** | **Arkansas Civic Ecosystem** | **✅ v1.87.0** |
 | **82** | **Public Trust & Institutional Credibility Framework** | **✅ v1.86.0** |
