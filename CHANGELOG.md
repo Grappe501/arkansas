@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.87.0] - 2026-07-09 — Build #83 Arkansas Civic Ecosystem
+
+### One Institution. One State. One Connected Civic Network
+- **Master Arkansas Civic Ecosystem v1.0** — every component strengthens every other component
+- 12 permanently connected living systems; 4 reinforcing ecosystem loops
+- Arkansas Learning Loop, Ecosystem Health Score (10 dimensions), positive network effects
+- Executive Ecosystem Dashboard — one screen summarizes entire institution
+- Extends Civic Ecosystem (#12) county layer; unifies institutional systems Builds #36–#82
+- Honest: health score not live · 0/12 instrumented · 0 imbalances · 0/200K participants · ~54% readiness
+- MC dashboard: `/mission-control/arkansas-civic-ecosystem.html`
+
 ## [1.86.0] - 2026-07-09 — Build #82 Public Trust & Institutional Credibility Framework
 
 ### Trust Is the Product

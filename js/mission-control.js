@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Civic Ecosystem <a href="/mission-control/arkansas-civic-ecosystem.html" class="mc-inline-link">Connected Network #83 →</a></h2>
+    <p class="mc-bar-note">Build #83 — Master Arkansas Civic Ecosystem. One institution, one state, one connected network. 12 living systems, 4 loops, health score, executive dashboard. 0/12 instrumented · health score not live. ~54% readiness.</p>
     <h2 class="mc-section-title">Public Trust <a href="/mission-control/public-trust-institutional-credibility.html" class="mc-inline-link">Trust Architecture #82 →</a></h2>
     <p class="mc-bar-note">Build #82 — Public Trust & Institutional Credibility. Trust is the product. 7-layer pyramid, trust dashboard, annual audit, founder standard. 0 corrections · audit not conducted. ~50% readiness.</p>
     <h2 class="mc-section-title">Digital Twin <a href="/mission-control/institutional-digital-twin.html" class="mc-inline-link">Executive Simulation #81 →</a></h2>
@@ -5235,6 +5237,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initArkansasCivicInstitutionRoadmap();
   initInstitutionalDigitalTwin();
   initPublicTrustInstitutionalCredibility();
+  initArkansasCivicEcosystem();
 });
 
 async function initUxArchitecture() {
@@ -8668,9 +8671,106 @@ async function initPublicTrustInstitutionalCredibility() {
     <p class="mc-bar-note">
       <a href="/docs/MASTER_PUBLIC_TRUST_INSTITUTIONAL_CREDIBILITY.md">MASTER_PUBLIC_TRUST_INSTITUTIONAL_CREDIBILITY.md</a> ·
       <a href="/data/public-trust-institutional-credibility.json">JSON</a> ·
-      <a href="/mission-control/trust.html">Trust Framework (#36)</a> ·
-      <a href="/mission-control/evidence-ledger.html">Evidence Ledger (#41)</a> ·
       <a href="/mission-control/governance.html">Governance (#49)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initArkansasCivicEcosystem() {
+  const root = document.getElementById('mc-arkansas-civic-ecosystem-root');
+  if (!root) return;
+
+  const [ecoRes, mcRes] = await Promise.all([
+    fetch('/data/arkansas-civic-ecosystem.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const eco = await ecoRes.json();
+  const mc = await mcRes.json();
+  const s = eco.summary;
+
+  const systemCards = eco.living_systems.systems.map(sys => `
+    <div class="mc-card"><h3>System ${sys.system}: ${sys.title}</h3>
+      <p class="mc-bar-note"><strong>Role:</strong> ${sys.role} · Status: ${sys.status}</p>
+      <p class="mc-bar-note"><a href="${sys.route}">Dashboard →</a>${sys.note ? ` · ${sys.note}` : ''}</p>
+      <p class="mc-bar-note"><strong>Feeds:</strong></p>
+      <ul class="mc-deliverables">${sys.feeds.map(f => `<li>${f}</li>`).join('')}</ul></div>`).join('');
+
+  const loopCards = eco.ecosystem_loops.loops.map(loop => `
+    <div class="mc-card"><h3>${loop.title}</h3>
+      <p class="mc-bar-note">${loop.outcome}</p>
+      <ol class="mc-deliverables">${loop.steps.map(step => `<li>${step}</li>`).join('')}</ol></div>`).join('');
+
+  const healthRows = eco.ecosystem_health_score.dimensions.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.dimension}</td>
+      <td>${d.score}</td><td>${d.status}</td></tr>`).join('');
+
+  const dashPanels = eco.executive_ecosystem_dashboard.panels.map(p => `<li>${p}</li>`).join('');
+
+  const systemRows = eco.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td><td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Arkansas Civic Ecosystem</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #83 · ${eco.title}</p>
+      <h1>${eco.subtitle}</h1>
+      <p class="mc-header__question">${eco.governing_principle}</p>
+      <p class="mc-bar-note">${eco.purpose}</p>
+      <p class="mc-bar-note"><strong>Core question:</strong> ${eco.ecosystem_philosophy.core_question}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Ecosystem readiness</div><div class="mc-stat__value">${s.arkansas_civic_ecosystem_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Living systems</div><div class="mc-stat__value">${s.living_systems_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Instrumented</div><div class="mc-stat__value">${s.living_systems_instrumented}/${s.living_systems_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Health score</div><div class="mc-stat__value">${s.ecosystem_health_score_live ? s.overall_ecosystem_health : 'Not live'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Participants</div><div class="mc-stat__value">${s.participants_connected.toLocaleString()}/${s.participants_target.toLocaleString()}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Imbalances</div><div class="mc-stat__value">${s.imbalances_detected}</div></div>
+    </div>
+    <h2 class="mc-section-title">${eco.ecosystem_philosophy.title}</h2>
+    <p class="mc-bar-note">Departments → ecosystems: ${eco.ecosystem_philosophy.departments_to_ecosystems ? 'Yes' : 'No'}</p>
+    <h2 class="mc-section-title">${eco.living_systems.title}</h2>
+    <p class="mc-bar-note">Permanently connected: ${eco.living_systems.permanently_connected ? 'Yes' : 'No'} · Nothing in isolation: ${eco.living_systems.nothing_in_isolation ? 'Yes' : 'No'}</p>
+    <div class="mc-grid-2">${systemCards}</div>
+    <h2 class="mc-section-title">${eco.ecosystem_loops.title}</h2>
+    <div class="mc-grid-2">${loopCards}</div>
+    <h2 class="mc-section-title">${eco.arkansas_learning_loop.title}</h2>
+    <ol class="mc-deliverables">${eco.arkansas_learning_loop.steps.map(step => `<li>${step}</li>`).join('')}</ol>
+    <p class="mc-bar-note">Permanently adaptive: ${eco.arkansas_learning_loop.permanently_adaptive ? 'Yes' : 'No'}</p>
+    <h2 class="mc-section-title">${eco.ecosystem_health_score.title}</h2>
+    <p class="mc-bar-note">Live: ${eco.ecosystem_health_score.live ? 'Yes' : 'No'} · Computed: ${eco.ecosystem_health_score.computed ? 'Yes' : 'No'} · Overall: ${eco.ecosystem_health_score.overall_score}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Dimension</th><th>Score</th><th>Status</th></tr></thead>
+      <tbody>${healthRows}</tbody></table>
+    <h2 class="mc-section-title">${eco.positive_network_effects.title}</h2>
+    <p class="mc-bar-note"><strong>Example:</strong> ${eco.positive_network_effects.example}</p>
+    <ol class="mc-deliverables">${eco.positive_network_effects.chain.map(step => `<li>${step}</li>`).join('')}</ol>
+    <h2 class="mc-section-title">${eco.ecosystem_balance.title}</h2>
+    <p class="mc-bar-note">Imbalances detected: ${eco.ecosystem_balance.imbalances_detected}</p>
+    <ul class="mc-deliverables">${eco.ecosystem_balance.examples.map(e => `<li>${e}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${eco.executive_ecosystem_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${eco.executive_ecosystem_dashboard.live ? 'Yes' : 'No'} · One screen: ${eco.executive_ecosystem_dashboard.one_screen_summarizes_institution ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${dashPanels}</ul>
+    <h2 class="mc-section-title">${eco.founders_vision.title}</h2>
+    <p class="mc-bar-note">${eco.founders_vision.text}</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${eco.integration.chain}</p>
+    <p class="mc-bar-note"><strong>Extends:</strong> ${eco.integration.extends} · <strong>Unifies:</strong> Builds ${eco.integration.unifies_builds}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${eco.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${eco.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${eco.recommended_next_build.number} — ${eco.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${eco.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_ARKANSAS_CIVIC_ECOSYSTEM.md">MASTER_ARKANSAS_CIVIC_ECOSYSTEM.md</a> ·
+      <a href="/data/arkansas-civic-ecosystem.json">JSON</a> ·
+      <a href="/mission-control/civic-ecosystem.html">Civic Ecosystem (#12)</a> ·
+      <a href="/mission-control/systems-integration.html">Systems Integration (#45)</a> ·
+      <a href="/mission-control/public-trust-institutional-credibility.html">Public Trust (#82)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

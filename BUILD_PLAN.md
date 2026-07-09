@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.86.0 · **Public Trust:** [/mission-control/public-trust-institutional-credibility.html](/mission-control/public-trust-institutional-credibility.html) · **82 builds complete**  
-**Trust architecture** — 7-layer pyramid · trust dashboard · annual audit · founder standard · **Next:** Build #83 Trust Dashboard  
+**Current version:** 1.87.0 · **Civic Ecosystem:** [/mission-control/arkansas-civic-ecosystem.html](/mission-control/arkansas-civic-ecosystem.html) · **83 builds complete**  
+**Connected network** — 12 living systems · ecosystem loops · health score · executive dashboard · **Next:** Build #84 Ecosystem Health Dashboard  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **83** | **Arkansas Civic Ecosystem** | **✅ v1.87.0** |
 | **82** | **Public Trust & Institutional Credibility Framework** | **✅ v1.86.0** |
 | **81** | **Institutional Digital Twin & Executive Simulation** | **✅ v1.85.0** |
 | **80** | **Arkansas Civic Institution Roadmap** | **✅ v1.84.0** |

@@ -577,6 +577,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/arkansas-civic-ecosystem"
+  to = "/mission-control/arkansas-civic-ecosystem.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301
