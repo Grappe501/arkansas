@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Citizen Leadership Academy <a href="/mission-control/citizen-leadership-academy.html" class="mc-inline-link">Human Engine #68 →</a></h2>
+    <p class="mc-bar-note">Build #68 — Citizen Leadership Academy. 6 certification levels, Learn→Multiply. Teachers not spokespeople. Highest priority. 0 learners · 0 graduates. ~34% readiness.</p>
     <h2 class="mc-section-title">Impact Measurement <a href="/mission-control/impact-measurement.html" class="mc-inline-link">Civic Scorecard #67 →</a></h2>
     <p class="mc-bar-note">Build #67 — Impact Measurement & Arkansas Civic Scorecard. 5 pillars, measure understanding not traffic. Overall civic score 0 · 0 leaders. ~31% readiness.</p>
     <h2 class="mc-section-title">Sustainability & Stewardship <a href="/mission-control/sustainability-stewardship.html" class="mc-inline-link">Institution That Lasts #66 →</a></h2>
@@ -5190,6 +5192,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCivicIntelligenceCommandCenter();
   initSustainabilityStewardship();
   initImpactMeasurement();
+  initCitizenLeadershipAcademy();
 });
 
 async function initUxArchitecture() {
@@ -7016,6 +7019,108 @@ async function initImpactMeasurement() {
       <a href="/mission-control/civic-atlas.html">Civic Atlas</a> ·
       <a href="/mission-control/arkansas-action-network.html">Action Network</a> ·
       <a href="/mission-control/visitor-journey.html">Visitor Journey</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initCitizenLeadershipAcademy() {
+  const root = document.getElementById('mc-citizen-leadership-academy-root');
+  if (!root) return;
+
+  const [claRes, mcRes] = await Promise.all([
+    fetch('/data/citizen-leadership-academy.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const cla = await claRes.json();
+  const mc = await mcRes.json();
+  const s = cla.summary;
+
+  const levelRows = cla.six_certification_levels.map(l => `
+    <tr><td>${l.level}</td><td><code>${l.id}</code></td><td>${l.title}</td>
+      <td>${l.outcome}</td><td>${l.enrolled}</td><td>${l.status}</td>
+      <td>${l.route ? `<a href="${l.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  const stageRows = cla.academy_philosophy.stages.map(st => `
+    <tr><td>${st.stage}</td><td>${st.status}</td></tr>`).join('');
+
+  const metricRows = cla.academy_dashboard.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.metric}</td><td>${m.current}${m.unit ? ` ${m.unit}` : ''}</td><td>${m.status}</td></tr>`).join('');
+
+  const systemRows = cla.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td><td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Citizen Leadership Academy</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #68 · ${cla.title}</p>
+      <h1>Developing Arkansas's Civic Education Leaders</h1>
+      <p class="mc-header__question">${cla.governing_principle}</p>
+      <p class="mc-bar-note">${cla.purpose}</p>
+      <p class="mc-bar-note"><strong>Human engine:</strong> ${cla.human_engine ? 'Yes' : 'No'} · <strong>Highest priority:</strong> ${cla.highest_strategic_priority ? 'Yes' : 'No'} · <strong>Teachers not spokespeople:</strong> ${cla.produces_teachers_not_spokespeople ? 'Yes' : 'No'}</p>
+      <p class="mc-bar-note"><a href="${cla.legacy_academy_route}">Community Education Academy (#28) →</a></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Academy readiness</div><div class="mc-stat__value">${s.citizen_leadership_academy_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Levels</div><div class="mc-stat__value">${s.certification_levels}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Learners</div><div class="mc-stat__value">${s.current_learners}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Graduates</div><div class="mc-stat__value">${s.graduates_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Education Leaders</div><div class="mc-stat__value">${s.education_leaders}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Mentorships</div><div class="mc-stat__value">${s.mentorship_relationships}</div></div>
+    </div>
+    <h2 class="mc-section-title">Academy Mission</h2>
+    <ul class="mc-deliverables">${cla.academy_mission.map(m => `<li>${m}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Academy Philosophy</h2>
+    <p class="mc-bar-note">${cla.academy_philosophy.progression} · Every graduate develops future leaders: ${cla.academy_philosophy.every_graduate_develops_future_leaders ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>Stage</th><th>Status</th></tr></thead>
+      <tbody>${stageRows}</tbody></table>
+    <h2 class="mc-section-title">Six Certification Levels</h2>
+    <table class="mc-table"><thead><tr><th>Level</th><th>ID</th><th>Title</th><th>Outcome</th><th>Enrolled</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${levelRows}</tbody></table>
+    ${cla.six_certification_levels.map(l => `
+      <h3 class="mc-subsection-title">Level ${l.level}: ${l.title}</h3>
+      <p class="mc-bar-note">${l.purpose}</p>
+      <ul class="mc-deliverables">${(l.topics || l.skills || []).map(t => `<li>${t}</li>`).join('')}</ul>
+      <p class="mc-bar-note"><strong>Outcome:</strong> ${l.outcome}</p>`).join('')}
+    <h2 class="mc-section-title">${cla.learning_model.title}</h2>
+    <p class="mc-bar-note">Active not passive: ${cla.learning_model.active_not_passive ? 'Yes' : 'No'} · ${cla.learning_model.status}</p>
+    <ul class="mc-deliverables">${cla.learning_model.steps.map(step => `<li>${step}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cla.leadership_competencies.title}</h2>
+    <p class="mc-bar-note">Tracked over time: ${cla.leadership_competencies.tracked_over_time ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${cla.leadership_competencies.competencies.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cla.leadership_portfolio.title}</h2>
+    <p class="mc-bar-note">Living portfolio: ${cla.leadership_portfolio.living_portfolio ? 'Yes' : 'No'} · ${cla.leadership_portfolio.portfolios_live} live · ${cla.leadership_portfolio.status}</p>
+    <ul class="mc-deliverables">${cla.leadership_portfolio.contents.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cla.leadership_mentorship.title}</h2>
+    <p class="mc-bar-note">Every graduate mentors: ${cla.leadership_mentorship.every_graduate_mentors ? 'Yes' : 'No'} · ${cla.leadership_mentorship.relationships} relationships · ${cla.leadership_mentorship.status}</p>
+    <h2 class="mc-section-title">${cla.continuing_education.title}</h2>
+    <p class="mc-bar-note">Never ends: ${cla.continuing_education.never_ends ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${cla.continuing_education.offerings.map(o => `<li>${o}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cla.academy_dashboard.title}</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">${cla.graduation_commitment.title}</h2>
+    <p class="mc-bar-note">Voluntary: ${cla.graduation_commitment.voluntary ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${cla.graduation_commitment.statements.map(st => `<li>${st}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${cla.integration.chain}</p>
+    <p class="mc-bar-note">Extends: ${cla.integration.extends}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${cla.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${cla.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${cla.recommended_next_build.number} — ${cla.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${cla.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_CITIZEN_LEADERSHIP_ACADEMY.md">MASTER_CITIZEN_LEADERSHIP_ACADEMY.md</a> ·
+      <a href="/data/citizen-leadership-academy.json">JSON</a> ·
+      <a href="/mission-control/education-academy.html">Education Academy (#28)</a> ·
+      <a href="/mission-control/arkansas-action-network.html">Action Network</a> ·
+      <a href="/mission-control/impact-measurement.html">Impact Measurement</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

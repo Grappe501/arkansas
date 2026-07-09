@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#68** | **Citizen Leadership Academy** | **1.72.0** | **✅ Complete** | [068](068-citizen-leadership-academy.md) · [/mission-control/citizen-leadership-academy.html](../mission-control/citizen-leadership-academy.html) |
 | **#67** | **Impact Measurement & Arkansas Civic Scorecard** | **1.71.0** | **✅ Complete** | [067](067-impact-measurement.md) · [/mission-control/impact-measurement.html](../mission-control/impact-measurement.html) |
 | **#66** | **Sustainability, Funding & Institutional Stewardship** | **1.70.0** | **✅ Complete** | [066](066-sustainability-stewardship.md) · [/mission-control/sustainability-stewardship.html](../mission-control/sustainability-stewardship.html) |
 | **#65** | **Civic Intelligence Command Center** | **1.69.0** | **✅ Complete** | [065](065-civic-intelligence-command-center.md) · [/mission-control/civic-intelligence-command-center.html](../mission-control/civic-intelligence-command-center.html) |

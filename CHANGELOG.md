@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.72.0] - 2026-07-09 — Build #68 Citizen Leadership Academy
+
+### Developing Arkansas's Civic Education Leaders
+- **Citizen Leadership Academy v1.0** — human engine, highest strategic priority
+- 6 certification levels: Civic Learner through Arkansas Civic Fellow
+- Philosophy: Learn → Practice → Teach → Lead → Mentor → Multiply
+- Leadership portfolios, mentorship, continuing education, graduation commitment
+- Extends Education Academy (#28) — teachers not spokespeople
+- Honest: 0 learners · 0 graduates · 0 leaders · ~34% readiness
+- MC dashboard: `/mission-control/citizen-leadership-academy.html`
+
 ## [1.71.0] - 2026-07-09 — Build #67 Impact Measurement & Arkansas Civic Scorecard
 
 ### Measuring What Actually Matters

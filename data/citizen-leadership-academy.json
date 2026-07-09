@@ -1,0 +1,395 @@
+{
+  "version": "1.0",
+  "build": 68,
+  "updated": "2026-07-09",
+  "title": "Master Citizen Leadership Academy v1.0",
+  "subtitle": "Developing Arkansas's Next Generation of Civic Education Leaders",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/citizen-leadership-academy.html",
+  "constitution": "/docs/MASTER_CITIZEN_LEADERSHIP_ACADEMY.md",
+  "legacy_academy_route": "/mission-control/education-academy.html",
+  "purpose": "Identify, educate, mentor, certify, and support Arkansans as trusted civic education leaders \u2014 the human engine of the institution.",
+  "governing_principle": "People educate people. Prepare ordinary Arkansans to become extraordinary civic education leaders through patience, scholarship, transparency, and lifelong learning.",
+  "highest_strategic_priority": true,
+  "human_engine": true,
+  "produces_teachers_not_spokespeople": true,
+  "academy_mission": [
+    "Explain Citizens United accurately",
+    "Teach constitutional concepts clearly",
+    "Lead respectful community discussions",
+    "Use evidence responsibly",
+    "Build local educational networks",
+    "Mentor future Education Leaders"
+  ],
+  "academy_philosophy": {
+    "progression": "Learn \u2192 Practice \u2192 Teach \u2192 Lead \u2192 Mentor \u2192 Multiply",
+    "stages": [
+      {
+        "stage": "Learn",
+        "status": "partial"
+      },
+      {
+        "stage": "Practice",
+        "status": "planned"
+      },
+      {
+        "stage": "Teach",
+        "status": "planned"
+      },
+      {
+        "stage": "Lead",
+        "status": "planned"
+      },
+      {
+        "stage": "Mentor",
+        "status": "planned"
+      },
+      {
+        "stage": "Multiply",
+        "status": "planned"
+      }
+    ],
+    "every_graduate_develops_future_leaders": true
+  },
+  "six_certification_levels": [
+    {
+      "level": 1,
+      "id": "CLA-L1",
+      "title": "Civic Learner",
+      "purpose": "Build foundational knowledge",
+      "topics": [
+        "Citizens United basics",
+        "Campaign finance history",
+        "Constitutional foundations",
+        "Arkansas civic processes",
+        "Platform navigation"
+      ],
+      "outcome": "Confident learner",
+      "enrolled": 0,
+      "status": "partial",
+      "route": "/start-here/"
+    },
+    {
+      "level": 2,
+      "id": "CLA-L2",
+      "title": "Community Ambassador",
+      "purpose": "Comfortably share educational resources",
+      "skills": [
+        "Answer common questions",
+        "Recommend learning paths",
+        "Share educational materials",
+        "Invite others into learning"
+      ],
+      "outcome": "Trusted community resource",
+      "enrolled": 0,
+      "status": "planned"
+    },
+    {
+      "level": 3,
+      "id": "CLA-L3",
+      "title": "Education Leader",
+      "purpose": "Teach small groups",
+      "skills": [
+        "Facilitation",
+        "Discussion leadership",
+        "Presentation fundamentals",
+        "Evidence-based teaching",
+        "Handling difficult questions respectfully"
+      ],
+      "outcome": "Certified Education Leader",
+      "enrolled": 0,
+      "status": "planned"
+    },
+    {
+      "level": 4,
+      "id": "CLA-L4",
+      "title": "City Education Coordinator",
+      "purpose": "Support education across an entire city",
+      "skills": [
+        "Volunteer coordination",
+        "Event planning",
+        "Community partnerships",
+        "Local resource development",
+        "Leadership coaching"
+      ],
+      "outcome": "City leadership certification",
+      "enrolled": 0,
+      "status": "planned"
+    },
+    {
+      "level": 5,
+      "id": "CLA-L5",
+      "title": "County Education Director",
+      "purpose": "Lead county-wide educational infrastructure",
+      "skills": [
+        "Strategic planning",
+        "Coalition development",
+        "Leadership recruitment",
+        "Mentorship",
+        "Community expansion"
+      ],
+      "outcome": "County education leadership",
+      "enrolled": 0,
+      "status": "planned",
+      "route": "/mission-control/county-os.html"
+    },
+    {
+      "level": 6,
+      "id": "CLA-L6",
+      "title": "Arkansas Civic Fellow",
+      "purpose": "Develop statewide institutional leaders",
+      "skills": [
+        "Advanced constitutional literacy",
+        "Research interpretation",
+        "Public presentations",
+        "Leadership development",
+        "Institutional stewardship",
+        "Academy instruction"
+      ],
+      "outcome": "Statewide mentor and institutional steward",
+      "enrolled": 0,
+      "status": "planned"
+    }
+  ],
+  "learning_model": {
+    "title": "Active Learning Model",
+    "steps": [
+      "Reading",
+      "Interactive learning",
+      "Video instruction",
+      "Knowledge checks",
+      "Community practice",
+      "Reflection",
+      "Mentorship",
+      "Certification"
+    ],
+    "active_not_passive": true,
+    "status": "planned"
+  },
+  "leadership_competencies": {
+    "title": "Leadership Competencies",
+    "competencies": [
+      "Historical understanding",
+      "Constitutional literacy",
+      "Research skills",
+      "Communication",
+      "Facilitation",
+      "Critical thinking",
+      "Community leadership",
+      "Ethical stewardship"
+    ],
+    "tracked_over_time": true,
+    "status": "planned"
+  },
+  "leadership_portfolio": {
+    "title": "Leadership Portfolio",
+    "living_portfolio": true,
+    "contents": [
+      "Completed lessons",
+      "Certificates",
+      "Presentations delivered",
+      "Community conversations",
+      "Educational reflections",
+      "Mentorship activity",
+      "Research contributions"
+    ],
+    "portfolios_live": 0,
+    "status": "planned"
+  },
+  "leadership_mentorship": {
+    "title": "Leadership Mentorship",
+    "every_graduate_mentors": true,
+    "visualize_networks": true,
+    "relationships": 0,
+    "status": "planned"
+  },
+  "continuing_education": {
+    "title": "Continuing Education",
+    "offerings": [
+      "New research briefings",
+      "Updated lesson modules",
+      "Legal developments",
+      "Historical discoveries",
+      "Presentation improvements",
+      "Annual refresher opportunities"
+    ],
+    "never_ends": true,
+    "status": "planned"
+  },
+  "academy_dashboard": {
+    "title": "Academy Dashboard",
+    "metrics": [
+      {
+        "id": "CLA-M1",
+        "metric": "Current learners",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CLA-M2",
+        "metric": "Graduates",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CLA-M3",
+        "metric": "Education Leaders",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CLA-M4",
+        "metric": "City Coordinators",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CLA-M5",
+        "metric": "County Directors",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CLA-M6",
+        "metric": "Arkansas Civic Fellows",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CLA-M7",
+        "metric": "Mentorship relationships",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "CLA-M8",
+        "metric": "Course completion",
+        "current": 0,
+        "unit": "percent",
+        "status": "planned"
+      },
+      {
+        "id": "CLA-M9",
+        "metric": "Certification trends",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "CLA-M10",
+        "metric": "Leadership pipeline health",
+        "current": "empty",
+        "status": "planned"
+      }
+    ],
+    "measurable_pipeline": true,
+    "status": "partial"
+  },
+  "graduation_commitment": {
+    "title": "Graduation Commitment",
+    "voluntary": true,
+    "statements": [
+      "I will pursue truth through evidence.",
+      "I will teach with humility.",
+      "I will welcome sincere questions.",
+      "I will distinguish facts from opinion.",
+      "I will encourage respectful dialogue.",
+      "I will continue learning.",
+      "I will help strengthen civic understanding in Arkansas."
+    ],
+    "status": "specified"
+  },
+  "integration": {
+    "chain": "Curriculum \u2192 Research Library \u2192 Knowledge Graph \u2192 Community Education \u2192 Coalition Network \u2192 Citizen Action Center \u2192 Civic Atlas \u2192 Mission Control",
+    "systems": [
+      {
+        "system": "Community Education Academy (#28)",
+        "route": "/mission-control/education-academy.html",
+        "status": "partial",
+        "note": "4-stage foundation"
+      },
+      {
+        "system": "Curriculum (#33)",
+        "route": "/mission-control/curriculum.html",
+        "status": "partial"
+      },
+      {
+        "system": "Research Library (#37)",
+        "route": "/mission-control/research-library.html",
+        "status": "partial"
+      },
+      {
+        "system": "Knowledge Graph",
+        "route": "/mission-control/knowledge-graph.html",
+        "status": "planned"
+      },
+      {
+        "system": "Arkansas Action Network (#64)",
+        "route": "/mission-control/arkansas-action-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Citizen Action Center (#62)",
+        "route": "/mission-control/citizen-action-center.html",
+        "status": "live"
+      },
+      {
+        "system": "Coalition Network (#61)",
+        "route": "/mission-control/coalition-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Civic Atlas (#58)",
+        "route": "/mission-control/civic-atlas.html",
+        "status": "live"
+      },
+      {
+        "system": "Impact Measurement (#67)",
+        "route": "/mission-control/impact-measurement.html",
+        "status": "live"
+      },
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      }
+    ],
+    "extends": "Community Education Academy (#28) with 6-level certification system"
+  },
+  "long_term_vision": "Thousands of graduates active statewide. Every county has mentors. Every major city has a leadership team. New generations teach with integrity, curiosity, and respect for evidence.",
+  "summary": {
+    "certification_levels": 6,
+    "levels_partial_or_live": 1,
+    "current_learners": 0,
+    "graduates_total": 0,
+    "education_leaders": 0,
+    "city_coordinators": 0,
+    "county_directors": 0,
+    "civic_fellows": 0,
+    "mentorship_relationships": 0,
+    "certifications_issued": 0,
+    "portfolios_live": 0,
+    "citizen_leadership_academy_readiness_pct": 34,
+    "education_academy_readiness_pct": 24,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "0 current learners \u2014 no enrollment or LMS integration",
+    "0 graduates at all 6 certification levels",
+    "0 Education Leaders certified \u2014 Level 3 empty",
+    "Learning model specified \u2014 no knowledge checks, video, or certification workflow",
+    "Leadership portfolios not built \u2014 0 living portfolios",
+    "Mentorship network visualization not implemented \u2014 0 relationships",
+    "Build #68 Citizen Leadership Academy vs Build #28 Education Academy \u2014 unify routes?",
+    "6 certification levels vs Action Network (#64) 8-level pyramid \u2014 mapping needed",
+    "Graduation commitment specified \u2014 no public ceremony or badge system",
+    "Continuing education modules not created \u2014 no refresher content",
+    "Competency tracking not wired \u2014 8 competencies planned only",
+    "Academy instruction role (Level 6) \u2014 no instructor certification path"
+  ],
+  "recommended_next_build": {
+    "number": 69,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "LMS schema, certification workflow, portfolio UI, mentorship graph, competency tracking, level routing, route inventory, COMP-* specs, GitHub backlog."
+  }
+}
