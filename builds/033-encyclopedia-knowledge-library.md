@@ -27,7 +27,7 @@ People · Court Cases · Laws · Constitutional Principles · Organizations · H
 
 | Metric | Value |
 |--------|-------|
-| Encyclopedia readiness | **26%** |
+| Encyclopedia readiness | **19%** |
 | Entries published / planned | **38 / 400** |
 | Catalog completion | **9.5%** |
 | Fully sourced entries | **7** |

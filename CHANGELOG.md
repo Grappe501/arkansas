@@ -20,7 +20,7 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Completion score: planned, published, sourced, cross-links, reading-level
 - Aligned to KG registry (38 nodes), facts registry, evidence registry
 - Canonical `/encyclopedia/[category]/[slug]` defined — not built
-- 26% honest readiness — 38/400 entries, Category 700 empty
+- 19% honest readiness — 38/400 entries, Category 700 empty
 - MC dashboard: `/mission-control/encyclopedia.html`
 
 ## [1.36.0] - 2026-07-09 — Build #32 Educational Campaign Operating System

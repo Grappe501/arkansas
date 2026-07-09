@@ -1858,6 +1858,55 @@
         "Completion score tracks planned, published, sourced, cross-links",
         "KG registry (38 nodes) as interim published entry source",
         "Canonical /encyclopedia/[category]/[slug] defined \u2014 not built",
+        "19% honest readiness \u2014 architecture live, 9.5% catalog published"
+      ],
+      "open_questions": [
+        "When to migrate KG nodes to canonical encyclopedia routes?",
+        "Glossary scale for Category 700?"
+      ],
+      "risks": [
+        "Category 700 empty",
+        "Only 7 entries fully sourced",
+        "Search not implemented"
+      ],
+      "next_recommended": 34,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/encyclopedia.html",
+      "review_status": "complete"
+    },
+    {
+      "number": 33,
+      "title": "Citizens United Facts Research Encyclopedia & Knowledge Library",
+      "version": "1.37.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Encyclopedia Architecture v1.0 \u2014 living reference connected through knowledge graph",
+      "summary": "9 categories, 38/400 entries; 19% readiness.",
+      "files_created": [
+        "data/encyclopedia-knowledge-library.json",
+        "docs/ENCYCLOPEDIA_ARCHITECTURE.md",
+        "builds/033-encyclopedia-knowledge-library.md",
+        "mission-control/encyclopedia.html",
+        "scripts/gen-encyclopedia-knowledge-library.py",
+        "scripts/update-mc-build33.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/encyclopedia.html"
+      ],
+      "decisions_made": [
+        "9 encyclopedia categories (100\u2013900) aligned to KG node types",
+        "9-section entry structure for every encyclopedia page",
+        "Completion score tracks planned, published, sourced, cross-links",
+        "KG registry (38 nodes) as interim published entry source",
+        "Canonical /encyclopedia/[category]/[slug] defined \u2014 not built",
         "26% honest readiness \u2014 architecture live, 7.6% catalog published"
       ],
       "open_questions": [

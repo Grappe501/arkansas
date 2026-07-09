@@ -103,7 +103,7 @@ mc['builds'].insert(0, {
         'Completion score tracks planned, published, sourced, cross-links',
         'KG registry (38 nodes) as interim published entry source',
         'Canonical /encyclopedia/[category]/[slug] defined — not built',
-        '26% honest readiness — architecture live, 7.6% catalog published'
+        '19% honest readiness — architecture live, 9.5% catalog published'
     ],
     'open_questions': ['When to migrate KG nodes to canonical encyclopedia routes?', 'Glossary scale for Category 700?'],
     'risks': ['Category 700 empty', 'Only 7 entries fully sourced', 'Search not implemented'],

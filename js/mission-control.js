@@ -233,7 +233,7 @@ async function initMissionControl() {
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
     <h2 class="mc-section-title">Encyclopedia & Knowledge Library <a href="/mission-control/encyclopedia.html" class="mc-inline-link">9 Categories →</a></h2>
-    <p class="mc-bar-note">Build #33 — Living encyclopedia, 9-section entry structure, completion score, KG relationship graph. 26% encyclopedia readiness.</p>
+    <p class="mc-bar-note">Build #33 — Living encyclopedia, 9-section entry structure, completion score, KG relationship graph. 19% encyclopedia readiness.</p>
     <h2 class="mc-section-title">Educational Campaign OS <a href="/mission-control/campaign-os.html" class="mc-inline-link">4 Horizons →</a></h2>
     <p class="mc-bar-note">Build #32 — Multi-year strategic growth blueprint, annual cycle, quarterly reviews, innovation pipeline. Horizon One active.</p>
     <h2 class="mc-section-title">County Operating System <a href="/mission-control/county-os.html" class="mc-inline-link">75 Counties →</a></h2>
