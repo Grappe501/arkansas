@@ -549,9 +549,36 @@
     "mc_dashboard": "/mission-control/contact-intelligence.html",
     "engineering_note": "Doctrinal IMP-18 Relationship Intelligence; engineering IMP-18 is COMP-06\u201310 interactive specs",
     "next_package": {
-      "number": 19,
-      "id": "IMP-19",
-      "title": "Master Analytics, Institutional Intelligence & Predictive Insights Engine",
+      "number": 20,
+      "id": "IMP-20",
+      "title": "Master Automation Engine, Workflow Orchestration & Institutional Process Management",
+      "status": "specified"
+    }
+  },
+  "institutional_analytics": {
+    "title": "Master Analytics, Institutional Intelligence & Predictive Insights Engine",
+    "package": "Implementation Package 19 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_19_INSTITUTIONAL_ANALYTICS.md",
+    "manifest": "/data/institutional-analytics-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Measure only what helps improve the mission \u2014 every metric answers a meaningful question",
+    "intelligence_layer_count": 5,
+    "executive_scorecard_count": 11,
+    "community_health_indicator_count": 8,
+    "institutional_health_component_count": 12,
+    "predictive_analytics_count": 7,
+    "packages_completed": 19,
+    "packages_complete_pct": 38,
+    "county_milestone_date": "2026-10-01",
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000,
+    "mc_dashboard": "/mission-control/impact-measurement.html",
+    "engineering_note": "Doctrinal IMP-19 Institutional Analytics; engineering IMP-19 is page templates",
+    "next_package": {
+      "number": 20,
+      "id": "IMP-20",
+      "title": "Master Automation Engine, Workflow Orchestration & Institutional Process Management",
       "status": "specified"
     }
   },
@@ -1954,7 +1981,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 18,
+        "current": 19,
         "status": "partial"
       },
       {
@@ -2073,6 +2100,12 @@
       },
       {
         "id": "CIP-D22",
+        "indicator": "Institutional Analytics (IMP-19)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D23",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -2125,9 +2158,9 @@
     "arkansans_connected_goal": 200000,
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "implementation_package_readiness_pct": 96,
+    "implementation_package_readiness_pct": 98,
     "steps_total": 50,
-    "steps_documented": 18,
+    "steps_documented": 19,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

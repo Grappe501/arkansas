@@ -1,0 +1,344 @@
+{
+  "version": "1.0",
+  "build": 101,
+  "package": "IMP-19",
+  "updated": "2026-07-09",
+  "title": "Master Analytics, Institutional Intelligence & Predictive Insights Engine",
+  "constitution": "/docs/IMPLEMENTATION_PACKAGE_19_INSTITUTIONAL_ANALYTICS.md",
+  "source_registries": {
+    "impact_measurement": "/data/impact-measurement.json",
+    "civic_intelligence": "/data/civic-intelligence.json",
+    "civic_intelligence_command_center": "/data/civic-intelligence-command-center.json",
+    "relationship_intelligence": "/data/relationship-intelligence-manifest.json",
+    "local_operating_systems": "/data/local-operating-systems-manifest.json",
+    "volunteer_network": "/data/volunteer-network-manifest.json",
+    "time_intelligence": "/data/time-intelligence-manifest.json"
+  },
+  "philosophy": "Measure only what helps improve the mission \u2014 every metric answers a meaningful question",
+  "governing_principle": "Institutional intelligence exists to support human judgment\u2014not replace it",
+  "master_timeline": {
+    "phase_one": {
+      "id": "software_completion",
+      "title": "Software Completion",
+      "target_date": "2026-07-11",
+      "days_remaining": 2,
+      "scope": [
+        "Public website",
+        "Mission Control",
+        "LocalBrains",
+        "Community Education Academy",
+        "Knowledge Platform",
+        "Research system",
+        "Volunteer system",
+        "Coalition system",
+        "County, City, and Neighborhood systems",
+        "AI infrastructure",
+        "Administrative tools"
+      ]
+    },
+    "phase_two": {
+      "id": "county_milestone",
+      "title": "75 Counties by October 1",
+      "target_date": "2026-10-01",
+      "days_remaining": 84,
+      "scope": [
+        "Completed county profile for all 75 counties",
+        "Education Leader or active recruitment contact per county",
+        "County dashboard operational in Mission Control",
+        "Initial local resource information",
+        "Development plan for continued growth per county"
+      ]
+    },
+    "phase_three": {
+      "id": "organizational_readiness",
+      "title": "Organizational Readiness",
+      "target_date": "2027-01-01",
+      "days_remaining": 176,
+      "focus": [
+        "Recruiting Education Leaders",
+        "Expanding county coverage",
+        "Growing city leadership",
+        "Coalition development",
+        "Volunteer training",
+        "Community conversations",
+        "Research expansion",
+        "Public testing",
+        "User feedback",
+        "System refinement",
+        "Launch certification",
+        "City and neighborhood systems mature",
+        "Statewide volunteer development expanded"
+      ]
+    },
+    "sequence": "Software Complete (Jul 11, 2026) \u2192 75 Counties (Oct 1, 2026) \u2192 Organizational Readiness (Jan 2027)",
+    "build_out_months_approx": 6,
+    "county_milestone": {
+      "target_date": "2026-10-01",
+      "counties_total": 75,
+      "days_remaining": 84,
+      "label": "75-by-October-1 Milestone"
+    }
+  },
+  "software_completion_date": "2026-07-11",
+  "county_milestone_date": "2026-10-01",
+  "organizational_readiness_date": "2027-01-01",
+  "days_to_software": 2,
+  "days_to_county_milestone": 84,
+  "days_to_organizational": 176,
+  "intelligence_layers": {
+    "layer_1_activity": {
+      "title": "Activity",
+      "question": "What happened?",
+      "examples": [
+        "new_volunteers",
+        "course_completions",
+        "community_conversations",
+        "research_publications",
+        "website_usage",
+        "organization_growth"
+      ]
+    },
+    "layer_2_performance": {
+      "title": "Performance",
+      "question": "How well are we doing?",
+      "examples": [
+        "county_progress",
+        "volunteer_retention",
+        "research_quality",
+        "academy_completion",
+        "coalition_participation",
+        "community_engagement"
+      ]
+    },
+    "layer_3_trends": {
+      "title": "Trends",
+      "question": "How are we changing?",
+      "examples": [
+        "monthly_volunteer_growth",
+        "county_participation_trends",
+        "research_productivity",
+        "leadership_development",
+        "relationship_growth",
+        "community_health"
+      ]
+    },
+    "layer_4_forecasting": {
+      "title": "Forecasting",
+      "question": "What is likely to happen?",
+      "examples": [
+        "county_readiness",
+        "leadership_shortages",
+        "volunteer_burnout_risk",
+        "recruitment_projections",
+        "timeline_confidence",
+        "engagement_forecasts"
+      ]
+    },
+    "layer_5_recommendations": {
+      "title": "Recommendations",
+      "question": "What should we do next?",
+      "examples": [
+        "prioritized_recommendations_supported_by_data"
+      ]
+    }
+  },
+  "intelligence_layer_count": 5,
+  "executive_scorecards": [
+    "institution",
+    "research",
+    "academy",
+    "volunteer_network",
+    "coalition",
+    "county_operations",
+    "city_operations",
+    "neighborhood_operations",
+    "communications",
+    "technology",
+    "governance"
+  ],
+  "executive_scorecard_count": 11,
+  "scorecard_fields": [
+    "current_performance",
+    "trend",
+    "target",
+    "risk",
+    "recommended_actions"
+  ],
+  "county_intelligence_metrics": [
+    "volunteer_growth",
+    "leadership_pipeline",
+    "academy_participation",
+    "community_conversations",
+    "organization_density",
+    "research_resources",
+    "public_engagement",
+    "participation_progress_15pct",
+    "county_health_score",
+    "mc_recommendations"
+  ],
+  "city_intelligence_metrics": [
+    "participation_score",
+    "education_leader_status",
+    "volunteer_activity",
+    "community_health",
+    "neighborhood_development",
+    "event_participation",
+    "growth_forecasts"
+  ],
+  "community_health_index_indicators": [
+    "learning_participation",
+    "volunteer_engagement",
+    "leadership_development",
+    "coalition_strength",
+    "community_conversations",
+    "educational_events",
+    "relationship_growth",
+    "resource_availability"
+  ],
+  "community_health_indicator_count": 8,
+  "institutional_health_index_components": [
+    "research",
+    "technology",
+    "knowledge_platform",
+    "mission_control",
+    "academy",
+    "volunteer_network",
+    "coalition",
+    "county_readiness",
+    "city_readiness",
+    "communications",
+    "governance",
+    "ai_systems"
+  ],
+  "institutional_health_component_count": 12,
+  "goal_tracking_targets": [
+    {
+      "id": "software_completion",
+      "target_date": "2026-07-11",
+      "label": "Software complete"
+    },
+    {
+      "id": "county_milestone",
+      "target_date": "2026-10-01",
+      "label": "75 counties represented"
+    },
+    {
+      "id": "city_leadership",
+      "target": 250,
+      "label": "250 largest cities leadership development"
+    },
+    {
+      "id": "engagement",
+      "target_pct": 15,
+      "label": "15% participation per county/city"
+    },
+    {
+      "id": "arkansans_connected",
+      "target": 200000,
+      "label": "200,000 Arkansans connected"
+    },
+    {
+      "id": "organizational_readiness",
+      "target_date": "2027-01-01",
+      "label": "Organizational readiness"
+    }
+  ],
+  "predictive_analytics": [
+    "volunteer_recruitment_needs",
+    "education_leader_pipeline",
+    "county_readiness_probability",
+    "project_completion_confidence",
+    "community_growth",
+    "resource_demand",
+    "training_requirements"
+  ],
+  "predictive_analytics_count": 7,
+  "ai_recommendation_types": [
+    "counties_needing_support",
+    "cities_ready_for_expansion",
+    "high_performing_educational_resources",
+    "volunteer_recognition_opportunities",
+    "research_priorities",
+    "coalition_opportunities",
+    "scheduling_conflicts"
+  ],
+  "executive_report_types": [
+    "daily_executive_brief",
+    "weekly_operational_report",
+    "monthly_institutional_report",
+    "quarterly_strategic_review",
+    "annual_institutional_assessment"
+  ],
+  "benchmarking_comparisons": [
+    "month_over_month",
+    "quarter_over_quarter",
+    "year_over_year",
+    "county_vs_statewide",
+    "city_vs_statewide",
+    "department_vs_target"
+  ],
+  "analytics_visualizations": [
+    "executive_scorecards",
+    "heat_maps",
+    "trend_lines",
+    "progress_gauges",
+    "forecast_charts",
+    "county_maps",
+    "relationship_graphs",
+    "leadership_pipelines"
+  ],
+  "mc_analytics_dashboard": [
+    "institutional_health_index",
+    "community_health_index",
+    "county_rankings",
+    "city_rankings",
+    "goal_completion",
+    "volunteer_forecasts",
+    "education_forecasts",
+    "research_activity",
+    "coalition_growth",
+    "strategic_risks",
+    "executive_priorities"
+  ],
+  "organizational_goals": {
+    "counties_total": 75,
+    "target_cities": 250,
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000
+  },
+  "analytics_system_chain": [
+    "mission_control",
+    "knowledge_platform",
+    "research_institute",
+    "community_education_academy",
+    "volunteer_network",
+    "coalition_network",
+    "county_operating_system",
+    "city_operating_system",
+    "neighborhood_operating_system",
+    "relationship_intelligence",
+    "ai_localbrains"
+  ],
+  "institutional_systems": [
+    "technical_foundation",
+    "mission_control",
+    "localbrains",
+    "knowledge_platform",
+    "research_institute",
+    "community_education_academy",
+    "volunteer_network",
+    "coalition_network",
+    "local_operating_systems",
+    "communication_platform",
+    "institutional_time_intelligence",
+    "institutional_relationship_intelligence",
+    "institutional_analytics"
+  ],
+  "mc_dashboard": "/mission-control/impact-measurement.html",
+  "packages_completed": 19,
+  "packages_total": 50,
+  "packages_complete_pct": 38,
+  "engineering_note": "Doctrinal IMP-19 Institutional Analytics; engineering IMP-19 is page templates",
+  "status": "documented",
+  "implemented": false
+}

@@ -26,7 +26,7 @@ tl = cip.get('master_timeline', {})
 
 
 
-mc['version'] = '2.05.18'
+mc['version'] = '2.05.19'
 
 mc['updated'] = '2026-07-09'
 
@@ -96,21 +96,21 @@ for bar in mc['progress_bars']:
 
 mc['briefing'] = {
 
-    'what_built': 'IMP-01–18 documented — institutional relationship intelligence (36%)',
+    'what_built': 'IMP-01–19 documented — institutional analytics & predictive insights (38%)',
 
-    'building_now': 'IMP-19 Analytics & Predictive Insights next; Sprint Zero pending',
+    'building_now': 'IMP-20 Automation Engine & Workflow Orchestration next; Sprint Zero pending',
 
     'blocked': ['Sprint Zero not complete', '0/50 code-implemented', f"{s.get('days_to_software', 0)} days to software target"],
 
     'ready_public': [
 
-        'Relationship Intelligence', 'relationship-intelligence-manifest.json', 'Community Graph architecture',
+        'Institutional Analytics', 'institutional-analytics-manifest.json', 'Executive scorecards',
 
-        'Time Intelligence', 'Communication Platform', 'Local Operating Systems', 'Oct 1 coordination',
+        'Relationship Intelligence', 'Time Intelligence', 'Oct 1 goal tracking',
 
     ],
 
-    'next': 'IMP-19 — Master Analytics, Institutional Intelligence & Predictive Insights Engine',
+    'next': 'IMP-20 — Master Automation Engine, Workflow Orchestration & Institutional Process Management',
 
 }
 

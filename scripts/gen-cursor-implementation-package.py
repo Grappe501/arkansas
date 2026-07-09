@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 18  # IMP-01 through IMP-18 (doctrinal)
+steps_documented = 19  # IMP-01 through IMP-19 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3332,6 +3332,7 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'research_institute', 'community_education_academy', 'volunteer_network',
     'coalition_network', 'local_operating_systems', 'communication_platform',
     'institutional_time_intelligence', 'institutional_relationship_intelligence',
+    'institutional_analytics',
 ]
 
 RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
@@ -3488,6 +3489,192 @@ RELATIONSHIP_INTELLIGENCE_MANIFEST = {
     'implemented': False,
 }
 
+ANALYTICS_INTELLIGENCE_LAYERS = {
+    'layer_1_activity': {
+        'title': 'Activity',
+        'question': 'What happened?',
+        'examples': [
+            'new_volunteers', 'course_completions', 'community_conversations',
+            'research_publications', 'website_usage', 'organization_growth',
+        ],
+    },
+    'layer_2_performance': {
+        'title': 'Performance',
+        'question': 'How well are we doing?',
+        'examples': [
+            'county_progress', 'volunteer_retention', 'research_quality',
+            'academy_completion', 'coalition_participation', 'community_engagement',
+        ],
+    },
+    'layer_3_trends': {
+        'title': 'Trends',
+        'question': 'How are we changing?',
+        'examples': [
+            'monthly_volunteer_growth', 'county_participation_trends',
+            'research_productivity', 'leadership_development', 'relationship_growth',
+            'community_health',
+        ],
+    },
+    'layer_4_forecasting': {
+        'title': 'Forecasting',
+        'question': 'What is likely to happen?',
+        'examples': [
+            'county_readiness', 'leadership_shortages', 'volunteer_burnout_risk',
+            'recruitment_projections', 'timeline_confidence', 'engagement_forecasts',
+        ],
+    },
+    'layer_5_recommendations': {
+        'title': 'Recommendations',
+        'question': 'What should we do next?',
+        'examples': ['prioritized_recommendations_supported_by_data'],
+    },
+}
+
+EXECUTIVE_SCORECARDS = [
+    'institution', 'research', 'academy', 'volunteer_network', 'coalition',
+    'county_operations', 'city_operations', 'neighborhood_operations',
+    'communications', 'technology', 'governance',
+]
+
+SCORECARD_FIELDS = ['current_performance', 'trend', 'target', 'risk', 'recommended_actions']
+
+COUNTY_INTELLIGENCE_METRICS = [
+    'volunteer_growth', 'leadership_pipeline', 'academy_participation',
+    'community_conversations', 'organization_density', 'research_resources',
+    'public_engagement', 'participation_progress_15pct', 'county_health_score',
+    'mc_recommendations',
+]
+
+CITY_INTELLIGENCE_METRICS = [
+    'participation_score', 'education_leader_status', 'volunteer_activity',
+    'community_health', 'neighborhood_development', 'event_participation',
+    'growth_forecasts',
+]
+
+COMMUNITY_HEALTH_INDEX_INDICATORS = [
+    'learning_participation', 'volunteer_engagement', 'leadership_development',
+    'coalition_strength', 'community_conversations', 'educational_events',
+    'relationship_growth', 'resource_availability',
+]
+
+INSTITUTIONAL_HEALTH_INDEX_COMPONENTS = [
+    'research', 'technology', 'knowledge_platform', 'mission_control', 'academy',
+    'volunteer_network', 'coalition', 'county_readiness', 'city_readiness',
+    'communications', 'governance', 'ai_systems',
+]
+
+GOAL_TRACKING_TARGETS = [
+    {'id': 'software_completion', 'target_date': software_completion_date, 'label': 'Software complete'},
+    {'id': 'county_milestone', 'target_date': county_milestone_date, 'label': '75 counties represented'},
+    {'id': 'city_leadership', 'target': target_cities, 'label': '250 largest cities leadership development'},
+    {'id': 'engagement', 'target_pct': engagement_goal_pct, 'label': '15% participation per county/city'},
+    {'id': 'arkansans_connected', 'target': arkansans_connected_goal, 'label': '200,000 Arkansans connected'},
+    {'id': 'organizational_readiness', 'target_date': organizational_readiness_date, 'label': 'Organizational readiness'},
+]
+
+PREDICTIVE_ANALYTICS = [
+    'volunteer_recruitment_needs', 'education_leader_pipeline', 'county_readiness_probability',
+    'project_completion_confidence', 'community_growth', 'resource_demand',
+    'training_requirements',
+]
+
+AI_RECOMMENDATION_TYPES = [
+    'counties_needing_support', 'cities_ready_for_expansion',
+    'high_performing_educational_resources', 'volunteer_recognition_opportunities',
+    'research_priorities', 'coalition_opportunities', 'scheduling_conflicts',
+]
+
+EXECUTIVE_REPORT_TYPES = [
+    'daily_executive_brief', 'weekly_operational_report', 'monthly_institutional_report',
+    'quarterly_strategic_review', 'annual_institutional_assessment',
+]
+
+BENCHMARKING_COMPARISONS = [
+    'month_over_month', 'quarter_over_quarter', 'year_over_year',
+    'county_vs_statewide', 'city_vs_statewide', 'department_vs_target',
+]
+
+ANALYTICS_VISUALIZATIONS = [
+    'executive_scorecards', 'heat_maps', 'trend_lines', 'progress_gauges',
+    'forecast_charts', 'county_maps', 'relationship_graphs', 'leadership_pipelines',
+]
+
+MC_ANALYTICS_DASHBOARD = [
+    'institutional_health_index', 'community_health_index', 'county_rankings',
+    'city_rankings', 'goal_completion', 'volunteer_forecasts', 'education_forecasts',
+    'research_activity', 'coalition_growth', 'strategic_risks', 'executive_priorities',
+]
+
+ANALYTICS_SYSTEM_CHAIN = [
+    'mission_control', 'knowledge_platform', 'research_institute',
+    'community_education_academy', 'volunteer_network', 'coalition_network',
+    'county_operating_system', 'city_operating_system', 'neighborhood_operating_system',
+    'relationship_intelligence', 'ai_localbrains',
+]
+
+INSTITUTIONAL_ANALYTICS_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-19',
+    'updated': today,
+    'title': 'Master Analytics, Institutional Intelligence & Predictive Insights Engine',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_19_INSTITUTIONAL_ANALYTICS.md',
+    'source_registries': {
+        'impact_measurement': '/data/impact-measurement.json',
+        'civic_intelligence': '/data/civic-intelligence.json',
+        'civic_intelligence_command_center': '/data/civic-intelligence-command-center.json',
+        'relationship_intelligence': '/data/relationship-intelligence-manifest.json',
+        'local_operating_systems': '/data/local-operating-systems-manifest.json',
+        'volunteer_network': '/data/volunteer-network-manifest.json',
+        'time_intelligence': '/data/time-intelligence-manifest.json',
+    },
+    'philosophy': 'Measure only what helps improve the mission — every metric answers a meaningful question',
+    'governing_principle': (
+        'Institutional intelligence exists to support human judgment—not replace it'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'intelligence_layers': ANALYTICS_INTELLIGENCE_LAYERS,
+    'intelligence_layer_count': len(ANALYTICS_INTELLIGENCE_LAYERS),
+    'executive_scorecards': EXECUTIVE_SCORECARDS,
+    'executive_scorecard_count': len(EXECUTIVE_SCORECARDS),
+    'scorecard_fields': SCORECARD_FIELDS,
+    'county_intelligence_metrics': COUNTY_INTELLIGENCE_METRICS,
+    'city_intelligence_metrics': CITY_INTELLIGENCE_METRICS,
+    'community_health_index_indicators': COMMUNITY_HEALTH_INDEX_INDICATORS,
+    'community_health_indicator_count': len(COMMUNITY_HEALTH_INDEX_INDICATORS),
+    'institutional_health_index_components': INSTITUTIONAL_HEALTH_INDEX_COMPONENTS,
+    'institutional_health_component_count': len(INSTITUTIONAL_HEALTH_INDEX_COMPONENTS),
+    'goal_tracking_targets': GOAL_TRACKING_TARGETS,
+    'predictive_analytics': PREDICTIVE_ANALYTICS,
+    'predictive_analytics_count': len(PREDICTIVE_ANALYTICS),
+    'ai_recommendation_types': AI_RECOMMENDATION_TYPES,
+    'executive_report_types': EXECUTIVE_REPORT_TYPES,
+    'benchmarking_comparisons': BENCHMARKING_COMPARISONS,
+    'analytics_visualizations': ANALYTICS_VISUALIZATIONS,
+    'mc_analytics_dashboard': MC_ANALYTICS_DASHBOARD,
+    'organizational_goals': {
+        'counties_total': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'analytics_system_chain': ANALYTICS_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/impact-measurement.html',
+    'packages_completed': 19,
+    'packages_total': 50,
+    'packages_complete_pct': 38,
+    'engineering_note': 'Doctrinal IMP-19 Institutional Analytics; engineering IMP-19 is page templates',
+    'status': 'documented',
+    'implemented': False,
+}
+
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -3622,11 +3809,12 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D19', 'indicator': 'Communication Platform (IMP-16)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D20', 'indicator': 'Time Intelligence (IMP-17)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D21', 'indicator': 'Relationship Intelligence (IMP-18)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D22', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D22', 'indicator': 'Institutional Analytics (IMP-19)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D23', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
-    96,
+    98,
     14
     + len(IMPLEMENTATION_STEPS) // 2
     + len(BANDS) * 2
@@ -4076,9 +4264,36 @@ out = {
         'mc_dashboard': RELATIONSHIP_INTELLIGENCE_MANIFEST['mc_dashboard'],
         'engineering_note': RELATIONSHIP_INTELLIGENCE_MANIFEST['engineering_note'],
         'next_package': {
-            'number': 19,
-            'id': 'IMP-19',
-            'title': 'Master Analytics, Institutional Intelligence & Predictive Insights Engine',
+            'number': 20,
+            'id': 'IMP-20',
+            'title': 'Master Automation Engine, Workflow Orchestration & Institutional Process Management',
+            'status': 'specified',
+        },
+    },
+    'institutional_analytics': {
+        'title': 'Master Analytics, Institutional Intelligence & Predictive Insights Engine',
+        'package': 'Implementation Package 19 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_19_INSTITUTIONAL_ANALYTICS.md',
+        'manifest': '/data/institutional-analytics-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': INSTITUTIONAL_ANALYTICS_MANIFEST['philosophy'],
+        'intelligence_layer_count': INSTITUTIONAL_ANALYTICS_MANIFEST['intelligence_layer_count'],
+        'executive_scorecard_count': INSTITUTIONAL_ANALYTICS_MANIFEST['executive_scorecard_count'],
+        'community_health_indicator_count': INSTITUTIONAL_ANALYTICS_MANIFEST['community_health_indicator_count'],
+        'institutional_health_component_count': INSTITUTIONAL_ANALYTICS_MANIFEST['institutional_health_component_count'],
+        'predictive_analytics_count': INSTITUTIONAL_ANALYTICS_MANIFEST['predictive_analytics_count'],
+        'packages_completed': INSTITUTIONAL_ANALYTICS_MANIFEST['packages_completed'],
+        'packages_complete_pct': INSTITUTIONAL_ANALYTICS_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': INSTITUTIONAL_ANALYTICS_MANIFEST['mc_dashboard'],
+        'engineering_note': INSTITUTIONAL_ANALYTICS_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 20,
+            'id': 'IMP-20',
+            'title': 'Master Automation Engine, Workflow Orchestration & Institutional Process Management',
             'status': 'specified',
         },
     },
@@ -4243,6 +4458,10 @@ with open(root / 'data/time-intelligence-manifest.json', 'w', newline='\n') as f
 
 with open(root / 'data/relationship-intelligence-manifest.json', 'w', newline='\n') as f:
     json.dump(RELATIONSHIP_INTELLIGENCE_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/institutional-analytics-manifest.json', 'w', newline='\n') as f:
+    json.dump(INSTITUTIONAL_ANALYTICS_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(
