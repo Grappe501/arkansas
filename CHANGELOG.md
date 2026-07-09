@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.71.0] - 2026-07-09 — Build #67 Impact Measurement & Arkansas Civic Scorecard
+
+### Measuring What Actually Matters
+- **Impact Measurement Framework v1.0** — measure understanding, not activity
+- 5 impact pillars: Knowledge, Leadership, Community, Institutional, Arkansas
+- Arkansas Civic Scorecard — 10 indicators + composite score
+- County, city, and leadership scorecards; outcomes over outputs
+- Honest: overall civic score 0 · 0 leaders · 0 learning paths · ~31% readiness
+- MC dashboard: `/mission-control/impact-measurement.html`
+
 ## [1.70.0] - 2026-07-09 — Build #66 Sustainability, Funding & Institutional Stewardship
 
 ### Building an Institution That Lasts

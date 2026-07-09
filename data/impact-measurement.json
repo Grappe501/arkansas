@@ -1,0 +1,444 @@
+{
+  "version": "1.0",
+  "build": 67,
+  "updated": "2026-07-09",
+  "title": "Master Impact Measurement & Arkansas Civic Scorecard v1.0",
+  "subtitle": "Measuring What Actually Matters \u2014 The Institutional Impact Framework",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/impact-measurement.html",
+  "constitution": "/docs/MASTER_IMPACT_MEASUREMENT.md",
+  "purpose": "Evaluate whether the institution truly strengthens civic literacy \u2014 measure understanding, not just activity.",
+  "governing_principle": "Success measured by quality of civic understanding created. Ordinary Arkansans better equipped to understand, explain, discuss, and teach.",
+  "core_philosophy": "Do not celebrate traffic, impressions, or page views unless they deepen understanding. Primary question: Are more Arkansans able to understand, explain, and teach than before?",
+  "measures_understanding_not_traffic": true,
+  "five_impact_pillars": [
+    {
+      "id": "IMP-P1",
+      "number": 1,
+      "pillar": "Knowledge Impact",
+      "question": "Are people learning?",
+      "tracks": [
+        "Learning path completion",
+        "Curriculum progress",
+        "Encyclopedia usage",
+        "Research Library usage",
+        "Video completion",
+        "Returning learners"
+      ],
+      "primary_kpi": "Growth in completed educational journeys",
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "id": "IMP-P2",
+      "number": 2,
+      "pillar": "Leadership Impact",
+      "question": "Are we developing educators?",
+      "tracks": [
+        "Education Leaders",
+        "County Leaders",
+        "City Leaders",
+        "Mentors",
+        "Academy graduates",
+        "Leadership retention"
+      ],
+      "primary_kpi": "Growth in active educational leadership",
+      "current": 0,
+      "status": "planned",
+      "route": "/mission-control/arkansas-action-network.html"
+    },
+    {
+      "id": "IMP-P3",
+      "number": 3,
+      "pillar": "Community Impact",
+      "question": "Is learning spreading into communities?",
+      "tracks": [
+        "Community conversations",
+        "Educational events",
+        "Libraries participating",
+        "Coalition organizations",
+        "Neighborhood participation",
+        "County activity"
+      ],
+      "primary_kpi": "Growth in local civic education activity",
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "id": "IMP-P4",
+      "number": 4,
+      "pillar": "Institutional Impact",
+      "question": "Is the institution becoming stronger?",
+      "tracks": [
+        "Research growth",
+        "Claims verified",
+        "Sources added",
+        "Educational assets",
+        "Technology readiness",
+        "Governance completion"
+      ],
+      "primary_kpi": "Institutional maturity",
+      "current": 32,
+      "unit": "percent",
+      "status": "partial",
+      "route": "/mission-control/civic-intelligence-command-center.html"
+    },
+    {
+      "id": "IMP-P5",
+      "number": 5,
+      "pillar": "Arkansas Impact",
+      "question": "Is statewide educational capacity improving?",
+      "tracks": [
+        "Counties represented",
+        "Cities represented",
+        "Neighborhood participation",
+        "200,000 participant progress",
+        "Coalition growth",
+        "Geographic coverage"
+      ],
+      "primary_kpi": "Educational reach across Arkansas",
+      "current": 0,
+      "target": 75,
+      "status": "planned",
+      "route": "/mission-control/civic-atlas.html"
+    }
+  ],
+  "arkansas_civic_scorecard": {
+    "title": "Arkansas Civic Scorecard",
+    "indicators": [
+      {
+        "id": "ACS-1",
+        "indicator": "Research Score",
+        "current": 26,
+        "unit": "percent",
+        "status": "partial"
+      },
+      {
+        "id": "ACS-2",
+        "indicator": "Education Score",
+        "current": 26,
+        "unit": "percent",
+        "status": "partial"
+      },
+      {
+        "id": "ACS-3",
+        "indicator": "Leadership Score",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-4",
+        "indicator": "County Coverage Score",
+        "current": 0,
+        "target": 75,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-5",
+        "indicator": "City Coverage Score",
+        "current": 0,
+        "target": 250,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-6",
+        "indicator": "Coalition Score",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "ACS-7",
+        "indicator": "Community Conversation Score",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-8",
+        "indicator": "Knowledge Growth Score",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-9",
+        "indicator": "Institutional Health Score",
+        "current": 51,
+        "unit": "percent",
+        "status": "partial"
+      },
+      {
+        "id": "ACS-10",
+        "indicator": "Overall Arkansas Civic Education Score",
+        "current": 0,
+        "unit": "composite",
+        "status": "planned"
+      }
+    ],
+    "overall_score": 0,
+    "published": false,
+    "status": "partial"
+  },
+  "county_scorecards": {
+    "title": "County Scorecards",
+    "counties_total": 75,
+    "scorecards_live": 0,
+    "fields": [
+      "Education Leaders",
+      "Academy graduates",
+      "Community conversations",
+      "Coalition organizations",
+      "Educational events",
+      "Participant growth",
+      "Resource usage",
+      "Coverage score"
+    ],
+    "route": "/mission-control/civic-atlas.html",
+    "status": "planned"
+  },
+  "city_scorecards": {
+    "title": "City Scorecards",
+    "cities_target": 250,
+    "scorecards_live": 0,
+    "fields": [
+      "Leadership score",
+      "Community participation",
+      "Educational events",
+      "Coalition participation",
+      "Learning engagement",
+      "Growth trend"
+    ],
+    "compare_over_time_not_between": true,
+    "status": "planned"
+  },
+  "leadership_scorecards": {
+    "title": "Leadership Scorecards",
+    "personal_growth_not_competition": true,
+    "scorecards_live": 0,
+    "fields": [
+      "Learning completed",
+      "Presentations delivered",
+      "Community conversations",
+      "Resources shared",
+      "Mentorship activity",
+      "Volunteer development"
+    ],
+    "status": "planned"
+  },
+  "annual_institutional_benchmarks": {
+    "title": "Annual Institutional Benchmarks",
+    "periods": [
+      {
+        "period": "Current year",
+        "status": "partial"
+      },
+      {
+        "period": "Previous year",
+        "status": "planned"
+      },
+      {
+        "period": "Five-year trend",
+        "status": "planned"
+      },
+      {
+        "period": "Ten-year trend",
+        "status": "planned"
+      }
+    ],
+    "long_term_perspective": true,
+    "status": "planned"
+  },
+  "outcomes_over_outputs": {
+    "title": "Outcomes Over Outputs",
+    "principle": "Continually distinguish activity from impact",
+    "examples": [
+      {
+        "output": "50 presentations delivered",
+        "outcome": "More communities now understand Citizens United"
+      },
+      {
+        "output": "100 videos published",
+        "outcome": "Learners complete more educational pathways"
+      }
+    ],
+    "status": "live"
+  },
+  "community_feedback": {
+    "title": "Community Feedback",
+    "types": [
+      "Visitor reflections",
+      "Education Leader observations",
+      "Community conversation summaries",
+      "Coalition feedback",
+      "Suggestions for improvement"
+    ],
+    "collected": 0,
+    "qualitative_impact": true,
+    "status": "planned"
+  },
+  "impact_dashboard": {
+    "title": "Mission Control Impact Dashboard",
+    "institutional_report_card": true,
+    "widgets": [
+      {
+        "id": "IMD-W1",
+        "widget": "Knowledge Growth",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "IMD-W2",
+        "widget": "Leadership Growth",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "IMD-W3",
+        "widget": "County Progress",
+        "current": "0/75",
+        "status": "planned"
+      },
+      {
+        "id": "IMD-W4",
+        "widget": "City Progress",
+        "current": "0/250",
+        "status": "planned"
+      },
+      {
+        "id": "IMD-W5",
+        "widget": "Neighborhood Growth",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "IMD-W6",
+        "widget": "Participant Growth",
+        "current": "0/200000",
+        "status": "live"
+      },
+      {
+        "id": "IMD-W7",
+        "widget": "Coalition Health",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "IMD-W8",
+        "widget": "Research Growth",
+        "current": 2,
+        "status": "partial"
+      },
+      {
+        "id": "IMD-W9",
+        "widget": "Institutional Readiness",
+        "current": 32,
+        "unit": "percent",
+        "status": "partial"
+      },
+      {
+        "id": "IMD-W10",
+        "widget": "Arkansas Civic Score",
+        "current": 0,
+        "status": "planned"
+      }
+    ],
+    "status": "partial"
+  },
+  "public_accountability": {
+    "title": "Annual Arkansas Civic Education Report",
+    "sections": [
+      "Institutional accomplishments",
+      "Research expansion",
+      "Leadership development",
+      "Community education",
+      "Coalition growth",
+      "Future priorities"
+    ],
+    "live": false,
+    "status": "planned"
+  },
+  "integration": {
+    "systems": [
+      {
+        "system": "Civic Atlas (#58)",
+        "route": "/mission-control/civic-atlas.html",
+        "status": "live",
+        "note": "Educational Coverage Score"
+      },
+      {
+        "system": "Arkansas Action Network (#64)",
+        "route": "/mission-control/arkansas-action-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Command Center (#65)",
+        "route": "/mission-control/civic-intelligence-command-center.html",
+        "status": "live"
+      },
+      {
+        "system": "Evidence Ledger (#41)",
+        "route": "/mission-control/evidence-ledger.html",
+        "status": "partial"
+      },
+      {
+        "system": "Visitor Journey (#47)",
+        "route": "/mission-control/visitor-journey.html",
+        "status": "partial"
+      },
+      {
+        "system": "Coalition Network (#61)",
+        "route": "/mission-control/coalition-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Sustainability Stewardship (#66)",
+        "route": "/mission-control/sustainability-stewardship.html",
+        "status": "live"
+      },
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      }
+    ],
+    "ecs_from": "Civic Atlas Educational Coverage Score"
+  },
+  "long_term_vision": "Twenty years after launch: measurable improvements in civic education infrastructure \u2014 more understand, teach, participate, collaborate; stronger learning ecosystem statewide.",
+  "summary": {
+    "pillars_total": 5,
+    "pillars_partial_or_live": 1,
+    "scorecard_indicators": 10,
+    "overall_arkansas_civic_score": 0,
+    "learning_paths_completed": 0,
+    "education_leaders": 0,
+    "community_conversations": 0,
+    "counties_represented": 0,
+    "cities_represented": 0,
+    "connected_arkansans": 0,
+    "connected_target": 200000,
+    "claims_verified": 2,
+    "county_scorecards_live": 0,
+    "impact_measurement_readiness_pct": 31,
+    "civic_atlas_readiness_pct": 52,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "Overall Arkansas Civic Education Score = 0 \u2014 composite formula not implemented",
+    "0 learning paths completed \u2014 no learner tracking pipeline",
+    "0 Education Leaders \u2014 leadership impact pillar empty",
+    "0 community conversations \u2014 community impact not measured",
+    "0/75 county scorecards live \u2014 Civic Atlas ECS=0 for all counties",
+    "0/250 city scorecards \u2014 city progress not tracked",
+    "Leadership personal dashboards not built \u2014 no competition policy enforced in UI",
+    "Annual benchmarks \u2014 no year-over-year data stored",
+    "Community feedback collection not implemented \u2014 0 qualitative records",
+    "Annual Arkansas Civic Education Report not published",
+    "Build #67 Impact vs Visitor Journey (#47) metrics \u2014 unify funnel?",
+    "Traffic/analytics explicitly deprioritized \u2014 no GA integration by design",
+    "Outcome vs output distinction documented \u2014 not automated in MC widgets"
+  ],
+  "recommended_next_build": {
+    "number": 68,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "Scorecard composite formula, county/city scorecard schema, learner tracking, impact widget components, annual report generator, route inventory, GitHub backlog."
+  }
+}

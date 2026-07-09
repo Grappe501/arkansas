@@ -1,6 +1,6 @@
 {
-  "version": "1.70.0",
-  "build": 66,
+  "version": "1.71.0",
+  "build": 67,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 66,
+    "overall_completion": 67,
     "current_build": {
-      "number": 66,
-      "title": "Citizens United Facts Master Sustainability, Funding & Institutional Stewardship Blueprint v1.0"
-    },
-    "active_phase": "Sustainability Stewardship \u2192 Implementation Translation",
-    "last_completed": "Civic Intelligence Command Center",
-    "next_build": {
       "number": 67,
+      "title": "Citizens United Facts Master Impact Measurement & Arkansas Civic Scorecard v1.0"
+    },
+    "active_phase": "Impact Measurement \u2192 Implementation Translation",
+    "last_completed": "Sustainability, Funding & Institutional Stewardship",
+    "next_build": {
+      "number": 68,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
@@ -46,7 +46,8 @@
     "arkansas_action_network_readiness": 38,
     "civic_intelligence_command_center_readiness": 43,
     "sustainability_stewardship_readiness": 38,
-    "mc2_readiness": 39,
+    "impact_measurement_readiness": 31,
+    "mc2_readiness": 40,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
     "education_academy_readiness": 26,
@@ -61,13 +62,13 @@
     "library_readiness": 22,
     "learning_lab_readiness": 22,
     "media_studio_readiness": 18,
-    "civic_intelligence_readiness": 35,
+    "civic_intelligence_readiness": 36,
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 25,
     "institutional_maturity_pct": 32,
     "current_institutional_version": "V1",
-    "systems_integration_readiness": 41,
+    "systems_integration_readiness": 42,
     "production_matrix_readiness": 39,
     "visitor_journey_readiness": 40,
     "technical_architecture_readiness": 38,
@@ -94,8 +95,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 66,
-      "note": "Build #66 \u2014 Sustainability & Stewardship."
+      "value": 67,
+      "note": "Build #67 \u2014 Impact Measurement & Civic Scorecard."
     },
     {
       "id": "constitution",
@@ -426,7 +427,7 @@
       "label": "Institutional Maturity (V1\u2013V10)",
       "value": 32,
       "max": 100,
-      "note": "Long-term institution \u2014 0 funding sources."
+      "note": "Impact framework \u2014 civic score 0."
     },
     {
       "id": "systems_integration",
@@ -581,6 +582,13 @@
       "value": 38,
       "max": 100,
       "note": "5 principles \u00b7 67 builds documented."
+    },
+    {
+      "id": "impact_measurement",
+      "label": "Impact Measurement",
+      "value": 31,
+      "max": 100,
+      "note": "5 pillars \u00b7 score 0 \u00b7 understanding not traffic."
     }
   ],
   "public_readiness": {
@@ -1269,6 +1277,12 @@
       "id": "sustainability_stewardship",
       "label": "Sustainability & Stewardship",
       "href": "/mission-control/sustainability-stewardship.html",
+      "status": "complete"
+    },
+    {
+      "id": "impact_measurement",
+      "label": "Impact Measurement",
+      "href": "/mission-control/impact-measurement.html",
       "status": "complete"
     }
   ],
@@ -2295,6 +2309,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 67,
+      "title": "Citizens United Facts Master Impact Measurement & Arkansas Civic Scorecard v1.0",
+      "version": "1.71.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Impact Measurement \u2014 measure understanding, not activity; Arkansas Civic Scorecard",
+      "summary": "5 impact pillars; statewide scorecard; county/city/leader scorecards; 31% readiness. Overall civic score 0 \u00b7 0 leaders.",
+      "files_created": [
+        "data/impact-measurement.json",
+        "docs/MASTER_IMPACT_MEASUREMENT.md",
+        "builds/067-impact-measurement.md",
+        "mission-control/impact-measurement.html",
+        "scripts/gen-impact-measurement.py",
+        "scripts/update-mc-build67.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/impact-measurement.html"
+      ],
+      "decisions_made": [
+        "Measure understanding \u2014 not traffic, impressions, or page views",
+        "5 impact pillars: Knowledge, Leadership, Community, Institutional, Arkansas",
+        "Arkansas Civic Scorecard \u2014 10 indicators + composite score",
+        "Outcomes over outputs \u2014 activity vs impact distinction",
+        "County/city/leadership scorecards \u2014 progress over time, not competition",
+        "Integrates Civic Atlas ECS, Action Network, Command Center",
+        "31% readiness \u2014 framework only, score=0"
+      ],
+      "open_questions": [
+        "Composite civic score weighting across 10 indicators?",
+        "Public scorecard page vs MC-only?",
+        "Learner tracking without compromising privacy?",
+        "Unify with Sustainability annual report (#66)?"
+      ],
+      "risks": [
+        "Overall Arkansas Civic Education Score = 0 \u2014 composite formula not implemented",
+        "0 learning paths completed \u2014 no learner tracking pipeline",
+        "0 Education Leaders \u2014 leadership impact pillar empty",
+        "0 community conversations \u2014 community impact not measured"
+      ],
+      "next_recommended": 68,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/impact-measurement.html",
+      "review_status": "complete"
+    },
     {
       "number": 66,
       "title": "Citizens United Facts Master Sustainability, Funding & Institutional Stewardship Blueprint v1.0",
@@ -5579,21 +5646,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Sustainability & Stewardship v1.0 \u2014 institution that lasts",
-    "building_now": "66 builds specified \u2014 implementation translation next",
+    "what_built": "Impact Measurement v1.0 \u2014 Arkansas Civic Scorecard, 5 pillars",
+    "building_now": "67 builds specified \u2014 implementation translation next",
     "blocked": [
-      "Funding registry",
-      "Volunteer tracking",
-      "Annual report",
-      "Reserve policy"
+      "Composite score",
+      "County scorecards",
+      "Learner tracking",
+      "Annual civic report"
     ],
     "ready_public": [
-      "5 principles",
-      "Funding portfolio spec",
-      "Knowledge preservation",
-      "Sustainability dashboard"
+      "5 pillars",
+      "Scorecard spec",
+      "Outcomes framework",
+      "Impact dashboard widgets"
     ],
-    "next": "Build #67 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #68 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -6307,5 +6374,13 @@
     "volunteers_onboarded": 0,
     "annual_report_live": false,
     "long_term_institution": true
+  },
+  "impact_measurement": "/data/impact-measurement.json",
+  "impact_measurement_dashboard": "/mission-control/impact-measurement.html",
+  "impact_measurement_inventory": {
+    "readiness_score": 31,
+    "pillars_total": 5,
+    "overall_arkansas_civic_score": 0,
+    "measures_understanding": true
   }
 }

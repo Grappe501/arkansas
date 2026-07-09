@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Impact Measurement <a href="/mission-control/impact-measurement.html" class="mc-inline-link">Civic Scorecard #67 →</a></h2>
+    <p class="mc-bar-note">Build #67 — Impact Measurement & Arkansas Civic Scorecard. 5 pillars, measure understanding not traffic. Overall civic score 0 · 0 leaders. ~31% readiness.</p>
     <h2 class="mc-section-title">Sustainability & Stewardship <a href="/mission-control/sustainability-stewardship.html" class="mc-inline-link">Institution That Lasts #66 →</a></h2>
     <p class="mc-bar-note">Build #66 — Sustainability, Funding & Institutional Stewardship. 5 principles, funding portfolio, volunteer stewardship. Never compromise integrity. 0 funding sources · 0 volunteers. ~38% readiness.</p>
     <h2 class="mc-section-title">Civic Intelligence Command Center <a href="/mission-control/civic-intelligence-command-center.html" class="mc-inline-link">Executive MC #65 →</a></h2>
@@ -5187,6 +5189,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initArkansasActionNetwork();
   initCivicIntelligenceCommandCenter();
   initSustainabilityStewardship();
+  initImpactMeasurement();
 });
 
 async function initUxArchitecture() {
@@ -6908,6 +6911,111 @@ async function initSustainabilityStewardship() {
       <a href="/mission-control/governance.html">Governance</a> ·
       <a href="/mission-control/pmo.html">PMO</a> ·
       <a href="/mission-control/civic-intelligence-command-center.html">Command Center</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initImpactMeasurement() {
+  const root = document.getElementById('mc-impact-measurement-root');
+  if (!root) return;
+
+  const [imRes, mcRes] = await Promise.all([
+    fetch('/data/impact-measurement.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const im = await imRes.json();
+  const mc = await mcRes.json();
+  const s = im.summary;
+  const scorecard = im.arkansas_civic_scorecard;
+
+  const pillarRows = im.five_impact_pillars.map(p => `
+    <tr><td>${p.number}</td><td><code>${p.id}</code></td><td>${p.pillar}</td>
+      <td>${p.primary_kpi}</td><td>${p.current}${p.unit ? ` ${p.unit}` : ''}</td><td>${p.status}</td>
+      <td>${p.route ? `<a href="${p.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  const scoreRows = scorecard.indicators.map(ind => `
+    <tr><td><code>${ind.id}</code></td><td>${ind.indicator}</td><td>${ind.current}${ind.unit ? ` ${ind.unit}` : ''}</td>
+      <td>${ind.target ?? '—'}</td><td>${ind.status}</td></tr>`).join('');
+
+  const widgetRows = im.impact_dashboard.widgets.map(w => `
+    <tr><td><code>${w.id}</code></td><td>${w.widget}</td><td>${w.current}${w.unit ? ` ${w.unit}` : ''}</td><td>${w.status}</td></tr>`).join('');
+
+  const systemRows = im.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td><td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Impact Measurement</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #67 · ${im.title}</p>
+      <h1>Measuring What Actually Matters</h1>
+      <p class="mc-header__question">${im.governing_principle}</p>
+      <p class="mc-bar-note">${im.purpose}</p>
+      <p class="mc-bar-note"><strong>Core philosophy:</strong> ${im.core_philosophy}</p>
+      <p class="mc-bar-note"><strong>Measures understanding:</strong> ${im.measures_understanding_not_traffic ? 'Yes — not traffic' : 'No'}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Impact readiness</div><div class="mc-stat__value">${s.impact_measurement_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Arkansas Civic Score</div><div class="mc-stat__value">${s.overall_arkansas_civic_score}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Pillars</div><div class="mc-stat__value">${s.pillars_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Leaders</div><div class="mc-stat__value">${s.education_leaders}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Counties</div><div class="mc-stat__value">${s.counties_represented}/75</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Connected</div><div class="mc-stat__value">${s.connected_arkansans}/${s.connected_target}</div></div>
+    </div>
+    <h2 class="mc-section-title">Five Impact Pillars</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Pillar</th><th>Primary KPI</th><th>Current</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${pillarRows}</tbody></table>
+    ${im.five_impact_pillars.map(p => `
+      <h3 class="mc-subsection-title">${p.pillar}</h3>
+      <p class="mc-bar-note"><strong>Question:</strong> ${p.question}</p>
+      <ul class="mc-deliverables">${p.tracks.map(t => `<li>${t}</li>`).join('')}</ul>`).join('')}
+    <h2 class="mc-section-title">${scorecard.title}</h2>
+    <p class="mc-bar-note">Overall score: <strong>${scorecard.overall_score}</strong> · published: ${scorecard.published ? 'Yes' : 'No'} · ${scorecard.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Target</th><th>Status</th></tr></thead>
+      <tbody>${scoreRows}</tbody></table>
+    <h2 class="mc-section-title">${im.county_scorecards.title}</h2>
+    <p class="mc-bar-note">${im.county_scorecards.scorecards_live}/${im.county_scorecards.counties_total} live · <a href="${im.county_scorecards.route}">Civic Atlas</a></p>
+    <ul class="mc-deliverables">${im.county_scorecards.fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${im.city_scorecards.title}</h2>
+    <p class="mc-bar-note">${im.city_scorecards.scorecards_live}/${im.city_scorecards.cities_target} · compare over time: ${im.city_scorecards.compare_over_time_not_between ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${im.city_scorecards.fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${im.leadership_scorecards.title}</h2>
+    <p class="mc-bar-note">Personal growth, not competition: ${im.leadership_scorecards.personal_growth_not_competition ? 'Yes' : 'No'} · ${im.leadership_scorecards.scorecards_live} live</p>
+    <ul class="mc-deliverables">${im.leadership_scorecards.fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${im.annual_institutional_benchmarks.title}</h2>
+    <ul class="mc-deliverables">${im.annual_institutional_benchmarks.periods.map(p => `<li>${p.period} — ${p.status}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${im.outcomes_over_outputs.title}</h2>
+    <p class="mc-bar-note">${im.outcomes_over_outputs.principle}</p>
+    ${im.outcomes_over_outputs.examples.map(e => `
+      <p class="mc-bar-note"><strong>Output:</strong> ${e.output}<br><strong>Outcome:</strong> ${e.outcome}</p>`).join('')}
+    <h2 class="mc-section-title">${im.community_feedback.title}</h2>
+    <p class="mc-bar-note">${im.community_feedback.collected} collected · ${im.community_feedback.status}</p>
+    <ul class="mc-deliverables">${im.community_feedback.types.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${im.impact_dashboard.title}</h2>
+    <p class="mc-bar-note">Institutional report card: ${im.impact_dashboard.institutional_report_card ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Widget</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${widgetRows}</tbody></table>
+    <h2 class="mc-section-title">${im.public_accountability.title}</h2>
+    <p class="mc-bar-note">Live: ${im.public_accountability.live ? 'Yes' : 'No'} · ${im.public_accountability.status}</p>
+    <ul class="mc-deliverables">${im.public_accountability.sections.map(sec => `<li>${sec}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">ECS from: ${im.integration.ecs_from}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${im.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${im.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${im.recommended_next_build.number} — ${im.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${im.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_IMPACT_MEASUREMENT.md">MASTER_IMPACT_MEASUREMENT.md</a> ·
+      <a href="/data/impact-measurement.json">JSON</a> ·
+      <a href="/mission-control/civic-atlas.html">Civic Atlas</a> ·
+      <a href="/mission-control/arkansas-action-network.html">Action Network</a> ·
+      <a href="/mission-control/visitor-journey.html">Visitor Journey</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

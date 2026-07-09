@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.70.0 · **Sustainability & Stewardship:** [/mission-control/sustainability-stewardship.html](/mission-control/sustainability-stewardship.html) · **Command Center:** [/mission-control/civic-intelligence-command-center.html](/mission-control/civic-intelligence-command-center.html)  
-**Institution that lasts** — 5 principles · diversified funding · **Next:** Build #67 Implementation Translation Layer  
+**Current version:** 1.71.0 · **Impact Measurement:** [/mission-control/impact-measurement.html](/mission-control/impact-measurement.html) · **Sustainability:** [/mission-control/sustainability-stewardship.html](/mission-control/sustainability-stewardship.html)  
+**Measure understanding** — 5 pillars · Arkansas Civic Scorecard · **Next:** Build #68 Implementation Translation Layer  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **67** | **Impact Measurement & Arkansas Civic Scorecard** | **✅ v1.71.0** |
 | **66** | **Sustainability, Funding & Institutional Stewardship** | **✅ v1.70.0** |
 | **65** | **Civic Intelligence Command Center** | **✅ v1.69.0** |
 | **64** | **Arkansas Action Network & Leadership Pipeline** | **✅ v1.68.0** |
