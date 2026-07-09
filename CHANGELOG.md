@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.8.0] - 2026-07-09 — Build #4 Complete
+
+### Build #4: Master Phase Registry v1.0
+- Governing **15-phase roadmap** — every feature belongs to exactly one phase
+- `data/phase-registry.json` + `docs/PHASE_REGISTRY.md`
+- Full registry at `/mission-control/phases.html`
+- 100 BUILD_PLAN steps mapped to registry phases in Mission Control
+- Phase dependency map, deliverables, completion criteria per phase
+
 ## [1.7.0] - 2026-07-09 — Build #3 spec locked
 
 ### Build #3: Mission Control Dashboard (governing spec)

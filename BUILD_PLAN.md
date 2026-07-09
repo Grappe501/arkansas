@@ -1,10 +1,37 @@
 # Citizens United Education Website — Master Build Plan
 
-100 steps across **12 phases**. Status: ✅ Done · 🟡 Partial · ⬜ Not started
+100 steps across **12 operational phases**, governed by the **15-phase [Master Phase Registry](/mission-control/phases.html)**.
 
-**Current version:** 1.6.0 · **OS:** [Mission Control](/mission-control/)  
-**Build #3:** ✅ Mission Control · **Build #2:** ✅ Constitution  
+Status: ✅ Done · 🟡 Partial · ⬜ Not started
+
+**Current version:** 1.8.0 · **OS:** [Mission Control](/mission-control/) · **Registry:** [Phase Registry](/mission-control/phases.html)  
+**Build #4:** ✅ Master Phase Registry · **Build #3:** ✅ Mission Control · **Build #2:** ✅ Constitution  
 **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
+
+> **Governing roadmap:** `docs/PHASE_REGISTRY.md` · `data/phase-registry.json`  
+> Every BUILD_PLAN step maps to one registry phase. Update both JSON files every build.
+
+---
+
+## Master Phase Registry (15 phases)
+
+| # | Phase | Registry doc |
+|---|-------|--------------|
+| 1 | Foundation & Governance | [Phase Registry](/mission-control/phases.html) |
+| 2 | Information Architecture | |
+| 3 | Historical Foundation | |
+| 4 | The Case | |
+| 5 | Constitutional Principles | |
+| 6 | Impact Analysis | |
+| 7 | Data & Visualization | |
+| 8 | Debate & Perspectives | |
+| 9 | Reform & Current Developments | |
+| 10 | Civic Action Platform | |
+| 11 | Community Leadership | |
+| 12 | Technical Platform | |
+| 13 | Research Library | |
+| 14 | Quality Assurance | |
+| 15 | Launch & Growth | |
 
 ---
 
@@ -186,4 +213,4 @@ Learn          →  Participate     →  Organize         →  Build Solutions
 | **7** | **Civic Action Layer** | **🟡 Scaffolded v1.4.0** |
 | 8–12 | Forms, tech, launch | 🟡 |
 
-**Next:** Backend for participant profiles (step 99), full collaborative workspaces (59–61), volunteer matching (63).
+**Next:** Build #5 — Historical Foundation (Hall 1 L2–L4 depth). Backend for participant profiles (step 99), full collaborative workspaces (59–61).

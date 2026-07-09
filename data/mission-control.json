@@ -1,6 +1,6 @@
 {
-  "version": "1.7.0",
-  "build": 3,
+  "version": "1.8.0",
+  "build": 4,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,71 +9,303 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 3,
-    "current_build": { "number": 3, "title": "Mission Control Dashboard" },
-    "active_phase": "Project Foundation",
-    "last_completed": "Project Constitution",
-    "next_build": { "number": 4, "title": "Master Phase Registry" },
+    "overall_completion": 4,
+    "current_build": {
+      "number": 4,
+      "title": "Master Phase Registry"
+    },
+    "active_phase": "Foundation & Governance",
+    "last_completed": "Mission Control Dashboard",
+    "next_build": {
+      "number": 5,
+      "title": "Historical Foundation \u2014 Hall 1 Depth"
+    },
     "github_status": "connected",
     "netlify_status": "production_healthy",
     "content_readiness": 5,
     "research_readiness": 3,
     "data_viz_readiness": 0,
     "signup_funnel_readiness": 5,
-    "civic_action_readiness": 5,
+    "civic_action_readiness": 6,
     "public_launch_readiness": 2,
     "public_launch_label": "Early Foundation"
   },
   "progress_bars": [
-    { "id": "overall", "label": "Overall Platform Completion", "value": 3, "note": "Early foundation. Constitution and scaffold exist; vast majority of content, data, and systems remain." },
-    { "id": "constitution", "label": "Project Constitution", "value": 100, "note": "Build #2 complete. Governing document locked." },
-    { "id": "build_plan", "label": "Master Build Plan", "value": 15, "note": "100-step plan documented. Mission Control OS live. Step-level tracking begun." },
-    { "id": "ia", "label": "Information Architecture", "value": 10, "note": "Section routes exist. Most halls are L1 stubs only." },
-    { "id": "content", "label": "Content System", "value": 5, "note": "Inventories and claims ledger started. Deep content largely unwritten." },
-    { "id": "research", "label": "Research System", "value": 3, "note": "Primary research structure exists. Source collection, citation review, and case summaries early." },
-    { "id": "data_viz", "label": "Data Visualization Layer", "value": 0, "note": "Chart definitions only. No static or interactive charts yet." },
-    { "id": "design", "label": "Design System", "value": 8, "note": "Base styles, education CSS, mission control theme. Not a full design system." },
-    { "id": "technical", "label": "Technical Build", "value": 12, "note": "Static site, GitHub, Netlify connected. No backend, APIs, or admin CRM." },
-    { "id": "signup", "label": "Signup Funnel Completion", "value": 5, "note": "Education lead form live. Notifications and pipeline unverified." },
-    { "id": "action_hub", "label": "Floating Action Hub Completion", "value": 5, "note": "Hub UI live. Most workspace actions are stubs." },
-    { "id": "relational", "label": "Relational Organizing Completion", "value": 3, "note": "Share page with local referral stub. No backend tracking." },
-    { "id": "model_law", "label": "Model Law Workspace Completion", "value": 2, "note": "Placeholder page only." },
-    { "id": "ballot_lab", "label": "Ballot Initiative Lab Completion", "value": 2, "note": "Placeholder page only." },
-    { "id": "contact_list", "label": "Contact List Completion", "value": 2, "note": "Join network form live. No CRM or export workflow." },
-    { "id": "legal_history", "label": "Legal History Completion", "value": 5, "note": "Hall 1 L1 only. Timeline preview on homepage." },
-    { "id": "spending_data", "label": "Spending Data Completion", "value": 0, "note": "FEC/OpenSecrets integration not started." },
-    { "id": "testing", "label": "Testing Completion", "value": 5, "note": "Manual smoke tests only. No test suite." },
-    { "id": "public_launch", "label": "Public Launch Readiness", "value": 2, "note": "Not ready for broad public education launch." }
+    {
+      "id": "overall",
+      "label": "Overall Platform Completion",
+      "value": 4,
+      "note": "Foundation and governance strong. Master Phase Registry locked. Educational content and data layers remain early."
+    },
+    {
+      "id": "constitution",
+      "label": "Project Constitution",
+      "value": 100,
+      "note": "Build #2 complete. Governing document locked."
+    },
+    {
+      "id": "build_plan",
+      "label": "Master Build Plan",
+      "value": 22,
+      "note": "100-step plan mapped to 15-phase registry. Full step tracker live in Mission Control."
+    },
+    {
+      "id": "ia",
+      "label": "Information Architecture",
+      "value": 10,
+      "note": "Section routes exist. Most halls are L1 stubs only."
+    },
+    {
+      "id": "content",
+      "label": "Content System",
+      "value": 5,
+      "note": "Inventories and claims ledger started. Deep content largely unwritten."
+    },
+    {
+      "id": "research",
+      "label": "Research System",
+      "value": 3,
+      "note": "Primary research structure exists. Source collection, citation review, and case summaries early."
+    },
+    {
+      "id": "data_viz",
+      "label": "Data Visualization Layer",
+      "value": 0,
+      "note": "Chart definitions only. No static or interactive charts yet."
+    },
+    {
+      "id": "design",
+      "label": "Design System",
+      "value": 8,
+      "note": "Base styles, education CSS, mission control theme. Not a full design system."
+    },
+    {
+      "id": "technical",
+      "label": "Technical Build",
+      "value": 12,
+      "note": "Static site, GitHub, Netlify connected. No backend, APIs, or admin CRM."
+    },
+    {
+      "id": "signup",
+      "label": "Signup Funnel Completion",
+      "value": 5,
+      "note": "Education lead form live. Notifications and pipeline unverified."
+    },
+    {
+      "id": "action_hub",
+      "label": "Floating Action Hub Completion",
+      "value": 5,
+      "note": "Hub UI live. Most workspace actions are stubs."
+    },
+    {
+      "id": "relational",
+      "label": "Relational Organizing Completion",
+      "value": 3,
+      "note": "Share page with local referral stub. No backend tracking."
+    },
+    {
+      "id": "model_law",
+      "label": "Model Law Workspace Completion",
+      "value": 2,
+      "note": "Placeholder page only."
+    },
+    {
+      "id": "ballot_lab",
+      "label": "Ballot Initiative Lab Completion",
+      "value": 2,
+      "note": "Placeholder page only."
+    },
+    {
+      "id": "contact_list",
+      "label": "Contact List Completion",
+      "value": 2,
+      "note": "Join network form live. No CRM or export workflow."
+    },
+    {
+      "id": "legal_history",
+      "label": "Legal History Completion",
+      "value": 5,
+      "note": "Hall 1 L1 only. Timeline preview on homepage."
+    },
+    {
+      "id": "spending_data",
+      "label": "Spending Data Completion",
+      "value": 0,
+      "note": "FEC/OpenSecrets integration not started."
+    },
+    {
+      "id": "testing",
+      "label": "Testing Completion",
+      "value": 5,
+      "note": "Manual smoke tests only. No test suite."
+    },
+    {
+      "id": "public_launch",
+      "label": "Public Launch Readiness",
+      "value": 2,
+      "note": "Not ready for broad public education launch."
+    }
   ],
   "public_readiness": {
     "score": 8,
     "questions": [
-      { "q": "Can a first-time visitor understand the issue?", "ready": true, "pct": 40 },
-      { "q": "Are claims supported by sources?", "ready": false, "pct": 10 },
-      { "q": "Are legal concepts explained clearly?", "ready": false, "pct": 15 },
-      { "q": "Are charts understandable?", "ready": false, "pct": 0 },
-      { "q": "Is mobile experience strong?", "ready": false, "pct": 35 },
-      { "q": "Is the signup path easy?", "ready": true, "pct": 50 },
-      { "q": "Is the leadership invitation compelling?", "ready": true, "pct": 45 },
-      { "q": "Are Montana and Hawaii current?", "ready": true, "pct": 70 },
-      { "q": "Are reform paths explained accurately?", "ready": false, "pct": 15 },
-      { "q": "Can a local volunteer teach others?", "ready": false, "pct": 10 }
+      {
+        "q": "Can a first-time visitor understand the issue?",
+        "ready": true,
+        "pct": 40
+      },
+      {
+        "q": "Are claims supported by sources?",
+        "ready": false,
+        "pct": 10
+      },
+      {
+        "q": "Are legal concepts explained clearly?",
+        "ready": false,
+        "pct": 15
+      },
+      {
+        "q": "Are charts understandable?",
+        "ready": false,
+        "pct": 0
+      },
+      {
+        "q": "Is mobile experience strong?",
+        "ready": false,
+        "pct": 35
+      },
+      {
+        "q": "Is the signup path easy?",
+        "ready": true,
+        "pct": 50
+      },
+      {
+        "q": "Is the leadership invitation compelling?",
+        "ready": true,
+        "pct": 45
+      },
+      {
+        "q": "Are Montana and Hawaii current?",
+        "ready": true,
+        "pct": 70
+      },
+      {
+        "q": "Are reform paths explained accurately?",
+        "ready": false,
+        "pct": 15
+      },
+      {
+        "q": "Can a local volunteer teach others?",
+        "ready": false,
+        "pct": 10
+      }
     ]
   },
   "research_readiness": [
-    { "category": "Supreme Court opinions", "collected": 1, "reviewed": 1, "summarized": 0, "cited": 0, "gaps": "Full CU opinion walkthrough needed" },
-    { "category": "Oral arguments", "collected": 0, "reviewed": 0, "summarized": 0, "cited": 0, "gaps": "Not collected" },
-    { "category": "Case briefs", "collected": 0, "reviewed": 0, "summarized": 0, "cited": 0, "gaps": "Not collected" },
-    { "category": "Campaign finance statutes", "collected": 2, "reviewed": 1, "summarized": 0, "cited": 0, "gaps": "Tillman Act, FECA, BCRA texts" },
-    { "category": "Historical reforms", "collected": 1, "reviewed": 0, "summarized": 0, "cited": 0, "gaps": "Watergate through McCain-Feingold" },
-    { "category": "FEC materials", "collected": 0, "reviewed": 0, "summarized": 0, "cited": 0, "gaps": "Not integrated" },
-    { "category": "Spending datasets", "collected": 0, "reviewed": 0, "summarized": 0, "cited": 0, "gaps": "OpenSecrets/FEC pending" },
-    { "category": "Academic papers", "collected": 0, "reviewed": 0, "summarized": 0, "cited": 0, "gaps": "Not collected" },
-    { "category": "Montana materials", "collected": 2, "reviewed": 2, "summarized": 1, "cited": 1, "gaps": "Initiative text, litigation risks" },
-    { "category": "Hawaii materials", "collected": 2, "reviewed": 2, "summarized": 1, "cited": 1, "gaps": "Act 11 full text" },
-    { "category": "Reform proposals", "collected": 1, "reviewed": 0, "summarized": 0, "cited": 0, "gaps": "American Promise, Maine" },
-    { "category": "Opposition arguments", "collected": 0, "reviewed": 0, "summarized": 0, "cited": 0, "gaps": "Debate hall L2+ needed" },
-    { "category": "Supporter arguments", "collected": 0, "reviewed": 0, "summarized": 0, "cited": 0, "gaps": "Debate hall L2+ needed" }
+    {
+      "category": "Supreme Court opinions",
+      "collected": 1,
+      "reviewed": 1,
+      "summarized": 0,
+      "cited": 0,
+      "gaps": "Full CU opinion walkthrough needed"
+    },
+    {
+      "category": "Oral arguments",
+      "collected": 0,
+      "reviewed": 0,
+      "summarized": 0,
+      "cited": 0,
+      "gaps": "Not collected"
+    },
+    {
+      "category": "Case briefs",
+      "collected": 0,
+      "reviewed": 0,
+      "summarized": 0,
+      "cited": 0,
+      "gaps": "Not collected"
+    },
+    {
+      "category": "Campaign finance statutes",
+      "collected": 2,
+      "reviewed": 1,
+      "summarized": 0,
+      "cited": 0,
+      "gaps": "Tillman Act, FECA, BCRA texts"
+    },
+    {
+      "category": "Historical reforms",
+      "collected": 1,
+      "reviewed": 0,
+      "summarized": 0,
+      "cited": 0,
+      "gaps": "Watergate through McCain-Feingold"
+    },
+    {
+      "category": "FEC materials",
+      "collected": 0,
+      "reviewed": 0,
+      "summarized": 0,
+      "cited": 0,
+      "gaps": "Not integrated"
+    },
+    {
+      "category": "Spending datasets",
+      "collected": 0,
+      "reviewed": 0,
+      "summarized": 0,
+      "cited": 0,
+      "gaps": "OpenSecrets/FEC pending"
+    },
+    {
+      "category": "Academic papers",
+      "collected": 0,
+      "reviewed": 0,
+      "summarized": 0,
+      "cited": 0,
+      "gaps": "Not collected"
+    },
+    {
+      "category": "Montana materials",
+      "collected": 2,
+      "reviewed": 2,
+      "summarized": 1,
+      "cited": 1,
+      "gaps": "Initiative text, litigation risks"
+    },
+    {
+      "category": "Hawaii materials",
+      "collected": 2,
+      "reviewed": 2,
+      "summarized": 1,
+      "cited": 1,
+      "gaps": "Act 11 full text"
+    },
+    {
+      "category": "Reform proposals",
+      "collected": 1,
+      "reviewed": 0,
+      "summarized": 0,
+      "cited": 0,
+      "gaps": "American Promise, Maine"
+    },
+    {
+      "category": "Opposition arguments",
+      "collected": 0,
+      "reviewed": 0,
+      "summarized": 0,
+      "cited": 0,
+      "gaps": "Debate hall L2+ needed"
+    },
+    {
+      "category": "Supporter arguments",
+      "collected": 0,
+      "reviewed": 0,
+      "summarized": 0,
+      "cited": 0,
+      "gaps": "Debate hall L2+ needed"
+    }
   ],
   "deployment": {
     "repository_connected": true,
@@ -110,46 +342,1192 @@
     "readiness_score": 5
   },
   "build_map": [
-    { "id": "landing", "label": "Landing Page", "href": "/", "status": "complete" },
-    { "id": "before", "label": "Before Citizens United", "href": "/halls/story-before.html", "status": "building" },
-    { "id": "case", "label": "The Case", "href": "/halls/the-case.html", "status": "building" },
-    { "id": "decided", "label": "What the Court Decided", "href": "/halls/what-court-decided.html", "status": "building" },
-    { "id": "after", "label": "After 2010", "href": "/halls/after-2010.html", "status": "planning" },
-    { "id": "money", "label": "Follow the Money", "href": "/halls/money-map.html", "status": "planning" },
-    { "id": "debate", "label": "Arguments and Debate", "href": "/halls/debate.html", "status": "planning" },
-    { "id": "reform", "label": "Reform Paths", "href": "/halls/reform.html", "status": "building" },
-    { "id": "mt-hi", "label": "Montana and Hawaii", "href": "/halls/montana-hawaii.html", "status": "complete" },
-    { "id": "teach", "label": "Teach This Locally", "href": "/educate/", "status": "complete" },
-    { "id": "library", "label": "Source Library", "href": "/library/", "status": "building" },
-    { "id": "action-hub", "label": "Floating Action Hub", "href": "/action/share.html", "status": "building" },
-    { "id": "signup", "label": "Signup Form", "href": "/educate/", "status": "complete" },
-    { "id": "contact", "label": "Contact Network", "href": "/action/join-network.html", "status": "building" },
-    { "id": "sharing", "label": "Relational Sharing", "href": "/action/share.html", "status": "building" },
-    { "id": "model-law", "label": "Model Law Workspace", "href": "/action/draft-laws.html", "status": "planning" },
-    { "id": "ballot-lab", "label": "Ballot Initiative Lab", "href": "/action/ballot-lab.html", "status": "planning" },
-    { "id": "admin", "label": "Admin Dashboard", "href": "/admin/mission-control/", "status": "building" },
-    { "id": "github", "label": "GitHub Deployment", "href": "https://github.com/Grappe501/arkansas", "status": "complete" },
-    { "id": "netlify", "label": "Netlify Production", "href": "https://arkansas-facts.netlify.app", "status": "complete" }
+    {
+      "id": "landing",
+      "label": "Landing Page",
+      "href": "/",
+      "status": "complete"
+    },
+    {
+      "id": "before",
+      "label": "Before Citizens United",
+      "href": "/halls/story-before.html",
+      "status": "building"
+    },
+    {
+      "id": "case",
+      "label": "The Case",
+      "href": "/halls/the-case.html",
+      "status": "building"
+    },
+    {
+      "id": "decided",
+      "label": "What the Court Decided",
+      "href": "/halls/what-court-decided.html",
+      "status": "building"
+    },
+    {
+      "id": "after",
+      "label": "After 2010",
+      "href": "/halls/after-2010.html",
+      "status": "planning"
+    },
+    {
+      "id": "money",
+      "label": "Follow the Money",
+      "href": "/halls/money-map.html",
+      "status": "planning"
+    },
+    {
+      "id": "debate",
+      "label": "Arguments and Debate",
+      "href": "/halls/debate.html",
+      "status": "planning"
+    },
+    {
+      "id": "reform",
+      "label": "Reform Paths",
+      "href": "/halls/reform.html",
+      "status": "building"
+    },
+    {
+      "id": "mt-hi",
+      "label": "Montana and Hawaii",
+      "href": "/halls/montana-hawaii.html",
+      "status": "complete"
+    },
+    {
+      "id": "teach",
+      "label": "Teach This Locally",
+      "href": "/educate/",
+      "status": "complete"
+    },
+    {
+      "id": "library",
+      "label": "Source Library",
+      "href": "/library/",
+      "status": "building"
+    },
+    {
+      "id": "action-hub",
+      "label": "Floating Action Hub",
+      "href": "/action/share.html",
+      "status": "building"
+    },
+    {
+      "id": "signup",
+      "label": "Signup Form",
+      "href": "/educate/",
+      "status": "complete"
+    },
+    {
+      "id": "contact",
+      "label": "Contact Network",
+      "href": "/action/join-network.html",
+      "status": "building"
+    },
+    {
+      "id": "sharing",
+      "label": "Relational Sharing",
+      "href": "/action/share.html",
+      "status": "building"
+    },
+    {
+      "id": "model-law",
+      "label": "Model Law Workspace",
+      "href": "/action/draft-laws.html",
+      "status": "planning"
+    },
+    {
+      "id": "ballot-lab",
+      "label": "Ballot Initiative Lab",
+      "href": "/action/ballot-lab.html",
+      "status": "planning"
+    },
+    {
+      "id": "admin",
+      "label": "Admin Dashboard",
+      "href": "/admin/mission-control/",
+      "status": "building"
+    },
+    {
+      "id": "github",
+      "label": "GitHub Deployment",
+      "href": "https://github.com/Grappe501/arkansas",
+      "status": "complete"
+    },
+    {
+      "id": "netlify",
+      "label": "Netlify Production",
+      "href": "https://arkansas-facts.netlify.app",
+      "status": "complete"
+    }
   ],
   "phases": [
-    { "id": 1, "title": "Project Constitution", "status": "complete", "completion": 100, "steps_total": 7, "steps_complete": 7, "active_step": null, "blocked": 0, "updated": "2026-07-09", "notes": "Build #2 locked" },
-    { "id": 0, "title": "Mission Control OS", "status": "live", "completion": 100, "steps_total": 1, "steps_complete": 1, "active_step": null, "blocked": 0, "updated": "2026-07-09", "notes": "Build #3 — operating cockpit" },
-    { "id": 2, "title": "Information Architecture", "status": "building", "completion": 10, "steps_total": 12, "steps_complete": 2, "active_step": "Depth content", "blocked": 0, "updated": "2026-07-09" },
-    { "id": 3, "title": "Depth Model", "status": "building", "completion": 15, "steps_total": 8, "steps_complete": 3, "active_step": "L2–L4 halls", "blocked": 0, "updated": "2026-07-09" },
-    { "id": 4, "title": "Content System", "status": "building", "completion": 5, "steps_total": 10, "steps_complete": 1, "active_step": "Topic expansion", "blocked": 0, "updated": "2026-07-09" },
-    { "id": 5, "title": "Data & Visual Layer", "status": "not_started", "completion": 0, "steps_total": 7, "steps_complete": 0, "active_step": null, "blocked": 0, "updated": "2026-07-09" },
-    { "id": 7, "title": "Civic Action Layer", "status": "building", "completion": 5, "steps_total": 12, "steps_complete": 1, "active_step": "Workspaces", "blocked": 1, "updated": "2026-07-09", "notes": "Blocked: participant backend" }
+    {
+      "id": 1,
+      "title": "Foundation & Governance",
+      "status": "building",
+      "completion": 72,
+      "steps_total": 7,
+      "steps_complete": 6,
+      "active_step": "Success metrics expansion",
+      "blocked": 0,
+      "updated": "2026-07-09",
+      "notes": "Constitution, Mission Control, and Phase Registry locked. Master Build Plan documented but step tracking early."
+    },
+    {
+      "id": 2,
+      "title": "Information Architecture",
+      "status": "building",
+      "completion": 12,
+      "steps_total": 12,
+      "steps_complete": 2,
+      "active_step": "Search strategy",
+      "blocked": 0,
+      "updated": "2026-07-09",
+      "notes": "Hall routes and depth model exist. Formal IA doc and search not started."
+    },
+    {
+      "id": 3,
+      "title": "Historical Foundation",
+      "status": "planning",
+      "completion": 5,
+      "steps_total": 8,
+      "steps_complete": 0,
+      "active_step": "Hall 1 L2 depth",
+      "blocked": 0,
+      "updated": "2026-07-09",
+      "notes": "Hall 1 (Before Citizens United) is L1 stub only. Timeline preview on homepage."
+    },
+    {
+      "id": 4,
+      "title": "The Case",
+      "status": "planning",
+      "completion": 5,
+      "steps_total": 9,
+      "steps_complete": 0,
+      "active_step": "Case narrative L2",
+      "blocked": 0,
+      "updated": "2026-07-09",
+      "notes": "Hall 2 route exists. No oral argument or opinion walkthrough yet."
+    },
+    {
+      "id": 5,
+      "title": "Constitutional Principles",
+      "status": "not_started",
+      "completion": 3,
+      "steps_total": 7,
+      "steps_complete": 0,
+      "active_step": null,
+      "blocked": 0,
+      "updated": "2026-07-09",
+      "notes": "Hall 3 L1 stub. Precedent chain not written."
+    },
+    {
+      "id": 6,
+      "title": "Impact Analysis",
+      "status": "not_started",
+      "completion": 2,
+      "steps_total": 7,
+      "steps_complete": 0,
+      "active_step": null,
+      "blocked": 0,
+      "updated": "2026-07-09",
+      "notes": "Halls 4\u00e2\u20ac\u201c5 are stubs. No FEC/spending data integrated."
+    },
+    {
+      "id": 7,
+      "title": "Data & Visualization",
+      "status": "not_started",
+      "completion": 0,
+      "steps_total": 7,
+      "steps_complete": 0,
+      "active_step": null,
+      "blocked": 0,
+      "updated": "2026-07-09",
+      "notes": "Chart definitions in inventories only. No static or interactive charts."
+    },
+    {
+      "id": 8,
+      "title": "Debate & Perspectives",
+      "status": "not_started",
+      "completion": 2,
+      "steps_total": 6,
+      "steps_complete": 0,
+      "active_step": null,
+      "blocked": 0,
+      "updated": "2026-07-09",
+      "notes": "Debate hall L1 only. Opposition/supporter research not collected."
+    },
+    {
+      "id": 9,
+      "title": "Reform & Current Developments",
+      "status": "building",
+      "completion": 18,
+      "steps_total": 8,
+      "steps_complete": 2,
+      "active_step": "Reform paths L2+",
+      "blocked": 0,
+      "updated": "2026-07-09",
+      "notes": "Montana I-194 and Hawaii Act 11 live in Hall 7. Reform hall mostly stub."
+    },
+    {
+      "id": 10,
+      "title": "Civic Action Platform",
+      "status": "building",
+      "completion": 6,
+      "steps_total": 12,
+      "steps_complete": 2,
+      "active_step": "Collaborative workspaces",
+      "blocked": 1,
+      "updated": "2026-07-09",
+      "notes": "Action Hub and forms live. Workspaces stubbed. Participant backend blocked."
+    },
+    {
+      "id": 11,
+      "title": "Community Leadership",
+      "status": "planning",
+      "completion": 5,
+      "steps_total": 7,
+      "steps_complete": 1,
+      "active_step": "Toolkit materials",
+      "blocked": 0,
+      "updated": "2026-07-09",
+      "notes": "Educate funnel and Teach This Locally page exist. No facilitator handbook."
+    },
+    {
+      "id": 12,
+      "title": "Technical Platform",
+      "status": "building",
+      "completion": 15,
+      "steps_total": 18,
+      "steps_complete": 4,
+      "active_step": "Accessibility audit",
+      "blocked": 0,
+      "updated": "2026-07-09",
+      "notes": "Static site on GitHub/Netlify. No search, security review, or full a11y audit."
+    },
+    {
+      "id": 13,
+      "title": "Research Library",
+      "status": "planning",
+      "completion": 4,
+      "steps_total": 10,
+      "steps_complete": 1,
+      "active_step": "Source collection",
+      "blocked": 0,
+      "updated": "2026-07-09",
+      "notes": "Inventories and claims ledger started. Library page is early scaffold."
+    },
+    {
+      "id": 14,
+      "title": "Quality Assurance",
+      "status": "not_started",
+      "completion": 3,
+      "steps_total": 8,
+      "steps_complete": 0,
+      "active_step": null,
+      "blocked": 0,
+      "updated": "2026-07-09",
+      "notes": "Editorial checklist exists. No systematic QA pass."
+    },
+    {
+      "id": 15,
+      "title": "Launch & Growth",
+      "status": "planning",
+      "completion": 2,
+      "steps_total": 8,
+      "steps_complete": 1,
+      "active_step": "Version planning",
+      "blocked": 0,
+      "updated": "2026-07-09",
+      "notes": "Site is live in early-foundation mode. Not ready for broad public education launch."
+    }
   ],
   "steps": [
-    { "num": 1, "phase": 1, "title": "Define site mission", "status": "complete", "pct": 100 },
-    { "num": 2, "phase": 1, "title": "Conversion goal", "status": "complete", "pct": 100 },
-    { "num": 3, "phase": 1, "title": "Reader journey", "status": "complete", "pct": 100 },
-    { "num": 8, "phase": 2, "title": "Main landing page", "status": "complete", "pct": 100, "pages": ["/"] },
-    { "num": 16, "phase": 2, "title": "Montana and Hawaii", "status": "complete", "pct": 80, "pages": ["/halls/montana-hawaii.html"] },
-    { "num": 54, "phase": 7, "title": "Floating Action Hub", "status": "building", "pct": 30 },
-    { "num": 99, "phase": 12, "title": "Participant profile backend", "status": "blocked", "pct": 0, "notes": "Requires Supabase or equivalent" }
+    {
+      "num": 1,
+      "registry_phase": 1,
+      "build_plan_phase": 1,
+      "title": "Site mission: deep public understanding of Citizens United",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 2,
+      "registry_phase": 1,
+      "build_plan_phase": 1,
+      "title": "Conversion goal: local education leaders",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 3,
+      "registry_phase": 1,
+      "build_plan_phase": 1,
+      "title": "Reader journey: Understand to Lead",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 4,
+      "registry_phase": 1,
+      "build_plan_phase": 1,
+      "title": "Site promise: plain language + deep research",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 5,
+      "registry_phase": 1,
+      "build_plan_phase": 1,
+      "title": "Editorial standard: accurate, sourced, non-hysterical",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 6,
+      "registry_phase": 1,
+      "build_plan_phase": 1,
+      "title": "Primary audience groups",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 7,
+      "registry_phase": 1,
+      "build_plan_phase": 1,
+      "title": "Success metric: education leads + civic participation",
+      "status": "building",
+      "pct": 60
+    },
+    {
+      "num": 8,
+      "registry_phase": 2,
+      "build_plan_phase": 2,
+      "title": "Main landing page",
+      "status": "complete",
+      "pct": 100,
+      "pages": [
+        "/"
+      ]
+    },
+    {
+      "num": 9,
+      "registry_phase": 2,
+      "build_plan_phase": 2,
+      "title": "Before Citizens United hall",
+      "status": "complete",
+      "pct": 100,
+      "pages": [
+        "/halls/story-before.html"
+      ]
+    },
+    {
+      "num": 10,
+      "registry_phase": 2,
+      "build_plan_phase": 2,
+      "title": "The Case hall",
+      "status": "complete",
+      "pct": 100,
+      "pages": [
+        "/halls/the-case.html"
+      ]
+    },
+    {
+      "num": 11,
+      "registry_phase": 2,
+      "build_plan_phase": 2,
+      "title": "What the Court Decided hall",
+      "status": "complete",
+      "pct": 100,
+      "pages": [
+        "/halls/what-court-decided.html"
+      ]
+    },
+    {
+      "num": 12,
+      "registry_phase": 2,
+      "build_plan_phase": 2,
+      "title": "After 2010 hall",
+      "status": "complete",
+      "pct": 100,
+      "pages": [
+        "/halls/after-2010.html"
+      ]
+    },
+    {
+      "num": 13,
+      "registry_phase": 2,
+      "build_plan_phase": 2,
+      "title": "Follow the Money hall",
+      "status": "complete",
+      "pct": 100,
+      "pages": [
+        "/halls/money-map.html"
+      ]
+    },
+    {
+      "num": 14,
+      "registry_phase": 2,
+      "build_plan_phase": 2,
+      "title": "Arguments and Debate hall",
+      "status": "complete",
+      "pct": 100,
+      "pages": [
+        "/halls/debate.html"
+      ]
+    },
+    {
+      "num": 15,
+      "registry_phase": 2,
+      "build_plan_phase": 2,
+      "title": "Reform Paths hall",
+      "status": "complete",
+      "pct": 100,
+      "pages": [
+        "/halls/reform.html"
+      ]
+    },
+    {
+      "num": 16,
+      "registry_phase": 2,
+      "build_plan_phase": 2,
+      "title": "Montana and Hawaii hall",
+      "status": "complete",
+      "pct": 100,
+      "pages": [
+        "/halls/montana-hawaii.html"
+      ]
+    },
+    {
+      "num": 17,
+      "registry_phase": 2,
+      "build_plan_phase": 2,
+      "title": "Teach This Locally",
+      "status": "complete",
+      "pct": 100,
+      "pages": [
+        "/educate/"
+      ]
+    },
+    {
+      "num": 18,
+      "registry_phase": 2,
+      "build_plan_phase": 2,
+      "title": "Source Library",
+      "status": "building",
+      "pct": 40,
+      "pages": [
+        "/library/"
+      ]
+    },
+    {
+      "num": 19,
+      "registry_phase": 2,
+      "build_plan_phase": 2,
+      "title": "Signup form page",
+      "status": "complete",
+      "pct": 100,
+      "pages": [
+        "/educate/"
+      ]
+    },
+    {
+      "num": 20,
+      "registry_phase": 2,
+      "build_plan_phase": 3,
+      "title": "Four depth levels L1-L4",
+      "status": "building",
+      "pct": 25
+    },
+    {
+      "num": 21,
+      "registry_phase": 2,
+      "build_plan_phase": 3,
+      "title": "L1 overview layer",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 22,
+      "registry_phase": 2,
+      "build_plan_phase": 3,
+      "title": "L2 explainer layer",
+      "status": "building",
+      "pct": 15
+    },
+    {
+      "num": 23,
+      "registry_phase": 2,
+      "build_plan_phase": 3,
+      "title": "L3 evidence layer",
+      "status": "not_started",
+      "pct": 0
+    },
+    {
+      "num": 24,
+      "registry_phase": 2,
+      "build_plan_phase": 3,
+      "title": "L4 expert layer",
+      "status": "not_started",
+      "pct": 0
+    },
+    {
+      "num": 25,
+      "registry_phase": 2,
+      "build_plan_phase": 3,
+      "title": "Reusable depth templates",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 26,
+      "registry_phase": 2,
+      "build_plan_phase": 3,
+      "title": "Go deeper navigation",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 27,
+      "registry_phase": 2,
+      "build_plan_phase": 3,
+      "title": "Return to simple L1 toggle",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 28,
+      "registry_phase": 13,
+      "build_plan_phase": 4,
+      "title": "Topic inventories",
+      "status": "complete",
+      "pct": 85
+    },
+    {
+      "num": 29,
+      "registry_phase": 13,
+      "build_plan_phase": 4,
+      "title": "Montana/Hawaii research files",
+      "status": "complete",
+      "pct": 85
+    },
+    {
+      "num": 30,
+      "registry_phase": 13,
+      "build_plan_phase": 4,
+      "title": "Citation standard",
+      "status": "complete",
+      "pct": 85
+    },
+    {
+      "num": 31,
+      "registry_phase": 13,
+      "build_plan_phase": 4,
+      "title": "Claims ledger",
+      "status": "complete",
+      "pct": 85
+    },
+    {
+      "num": 32,
+      "registry_phase": 13,
+      "build_plan_phase": 4,
+      "title": "Content system step 32",
+      "status": "complete",
+      "pct": 85
+    },
+    {
+      "num": 33,
+      "registry_phase": 13,
+      "build_plan_phase": 4,
+      "title": "Content system step 33",
+      "status": "complete",
+      "pct": 85
+    },
+    {
+      "num": 34,
+      "registry_phase": 13,
+      "build_plan_phase": 4,
+      "title": "Content system step 34",
+      "status": "complete",
+      "pct": 85
+    },
+    {
+      "num": 35,
+      "registry_phase": 13,
+      "build_plan_phase": 4,
+      "title": "Content system step 35",
+      "status": "complete",
+      "pct": 85
+    },
+    {
+      "num": 36,
+      "registry_phase": 13,
+      "build_plan_phase": 4,
+      "title": "Content system step 36",
+      "status": "complete",
+      "pct": 85
+    },
+    {
+      "num": 37,
+      "registry_phase": 13,
+      "build_plan_phase": 4,
+      "title": "Content system step 37",
+      "status": "complete",
+      "pct": 85
+    },
+    {
+      "num": 38,
+      "registry_phase": 7,
+      "build_plan_phase": 5,
+      "title": "Define core charts",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 39,
+      "registry_phase": 7,
+      "build_plan_phase": 5,
+      "title": "Static spending chart 1",
+      "status": "not_started",
+      "pct": 0
+    },
+    {
+      "num": 40,
+      "registry_phase": 7,
+      "build_plan_phase": 5,
+      "title": "Static spending chart 2",
+      "status": "not_started",
+      "pct": 0
+    },
+    {
+      "num": 41,
+      "registry_phase": 7,
+      "build_plan_phase": 5,
+      "title": "Chart source links",
+      "status": "not_started",
+      "pct": 0
+    },
+    {
+      "num": 42,
+      "registry_phase": 7,
+      "build_plan_phase": 5,
+      "title": "Chart data notes",
+      "status": "not_started",
+      "pct": 0
+    },
+    {
+      "num": 43,
+      "registry_phase": 7,
+      "build_plan_phase": 5,
+      "title": "Interactive dashboard plan",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 44,
+      "registry_phase": 7,
+      "build_plan_phase": 5,
+      "title": "Chart plain-language explanations",
+      "status": "not_started",
+      "pct": 0
+    },
+    {
+      "num": 45,
+      "registry_phase": 2,
+      "build_plan_phase": 6,
+      "title": "Website experience step 45",
+      "status": "complete",
+      "pct": 90
+    },
+    {
+      "num": 46,
+      "registry_phase": 2,
+      "build_plan_phase": 6,
+      "title": "Website experience step 46",
+      "status": "complete",
+      "pct": 90
+    },
+    {
+      "num": 47,
+      "registry_phase": 2,
+      "build_plan_phase": 6,
+      "title": "Website experience step 47",
+      "status": "complete",
+      "pct": 90
+    },
+    {
+      "num": 48,
+      "registry_phase": 2,
+      "build_plan_phase": 6,
+      "title": "Website experience step 48",
+      "status": "complete",
+      "pct": 90
+    },
+    {
+      "num": 49,
+      "registry_phase": 2,
+      "build_plan_phase": 6,
+      "title": "Website experience step 49",
+      "status": "complete",
+      "pct": 90
+    },
+    {
+      "num": 50,
+      "registry_phase": 2,
+      "build_plan_phase": 6,
+      "title": "Website experience step 50",
+      "status": "complete",
+      "pct": 90
+    },
+    {
+      "num": 51,
+      "registry_phase": 2,
+      "build_plan_phase": 6,
+      "title": "Website experience step 51",
+      "status": "complete",
+      "pct": 90
+    },
+    {
+      "num": 52,
+      "registry_phase": 2,
+      "build_plan_phase": 6,
+      "title": "Website experience step 52",
+      "status": "complete",
+      "pct": 90
+    },
+    {
+      "num": 53,
+      "registry_phase": 2,
+      "build_plan_phase": 6,
+      "title": "Website experience step 53",
+      "status": "complete",
+      "pct": 90
+    },
+    {
+      "num": 54,
+      "registry_phase": 10,
+      "build_plan_phase": 7,
+      "title": "Floating Action Hub",
+      "status": "building",
+      "pct": 30
+    },
+    {
+      "num": 55,
+      "registry_phase": 10,
+      "build_plan_phase": 7,
+      "title": "Education Leader quick signup",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 56,
+      "registry_phase": 10,
+      "build_plan_phase": 7,
+      "title": "Join Contact Network signup",
+      "status": "building",
+      "pct": 40
+    },
+    {
+      "num": 57,
+      "registry_phase": 10,
+      "build_plan_phase": 7,
+      "title": "Share With Friends relational",
+      "status": "building",
+      "pct": 25
+    },
+    {
+      "num": 58,
+      "registry_phase": 10,
+      "build_plan_phase": 7,
+      "title": "Referral tracking",
+      "status": "building",
+      "pct": 15
+    },
+    {
+      "num": 59,
+      "registry_phase": 10,
+      "build_plan_phase": 7,
+      "title": "Draft Better Laws workspace",
+      "status": "building",
+      "pct": 10
+    },
+    {
+      "num": 60,
+      "registry_phase": 10,
+      "build_plan_phase": 7,
+      "title": "Ballot Initiative Lab",
+      "status": "building",
+      "pct": 10
+    },
+    {
+      "num": 61,
+      "registry_phase": 10,
+      "build_plan_phase": 7,
+      "title": "Model Legislation Library",
+      "status": "building",
+      "pct": 10
+    },
+    {
+      "num": 62,
+      "registry_phase": 10,
+      "build_plan_phase": 7,
+      "title": "Community Ideas workspace",
+      "status": "building",
+      "pct": 35
+    },
+    {
+      "num": 63,
+      "registry_phase": 10,
+      "build_plan_phase": 7,
+      "title": "Volunteer directory matching",
+      "status": "blocked",
+      "pct": 0,
+      "notes": "Requires Supabase or equivalent"
+    },
+    {
+      "num": 64,
+      "registry_phase": 10,
+      "build_plan_phase": 7,
+      "title": "Leadership pathway docs",
+      "status": "building",
+      "pct": 40
+    },
+    {
+      "num": 65,
+      "registry_phase": 10,
+      "build_plan_phase": 7,
+      "title": "Admin dashboard CRM",
+      "status": "not_started",
+      "pct": 0
+    },
+    {
+      "num": 66,
+      "registry_phase": 10,
+      "build_plan_phase": 8,
+      "title": "Volunteer role definitions",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 67,
+      "registry_phase": 11,
+      "build_plan_phase": 8,
+      "title": "Teach This Locally page",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 68,
+      "registry_phase": 11,
+      "build_plan_phase": 8,
+      "title": "Starter toolkit request",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 69,
+      "registry_phase": 11,
+      "build_plan_phase": 8,
+      "title": "Core signup form fields",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 70,
+      "registry_phase": 11,
+      "build_plan_phase": 8,
+      "title": "Role checkboxes + experience",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 71,
+      "registry_phase": 11,
+      "build_plan_phase": 8,
+      "title": "Privacy notice + honeypot",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 72,
+      "registry_phase": 11,
+      "build_plan_phase": 8,
+      "title": "Confirmation page",
+      "status": "complete",
+      "pct": 100
+    },
+    {
+      "num": 73,
+      "registry_phase": 11,
+      "build_plan_phase": 8,
+      "title": "Notification + export workflow",
+      "status": "building",
+      "pct": 30
+    },
+    {
+      "num": 74,
+      "registry_phase": 12,
+      "build_plan_phase": 9,
+      "title": "Technical stack step 74",
+      "status": "building",
+      "pct": 40
+    },
+    {
+      "num": 75,
+      "registry_phase": 12,
+      "build_plan_phase": 9,
+      "title": "Technical stack step 75",
+      "status": "building",
+      "pct": 40
+    },
+    {
+      "num": 76,
+      "registry_phase": 12,
+      "build_plan_phase": 9,
+      "title": "Technical stack step 76",
+      "status": "building",
+      "pct": 40
+    },
+    {
+      "num": 77,
+      "registry_phase": 12,
+      "build_plan_phase": 9,
+      "title": "Technical stack step 77",
+      "status": "building",
+      "pct": 40
+    },
+    {
+      "num": 78,
+      "registry_phase": 12,
+      "build_plan_phase": 9,
+      "title": "Technical stack step 78",
+      "status": "building",
+      "pct": 40
+    },
+    {
+      "num": 79,
+      "registry_phase": 12,
+      "build_plan_phase": 9,
+      "title": "Technical stack step 79",
+      "status": "building",
+      "pct": 40
+    },
+    {
+      "num": 80,
+      "registry_phase": 12,
+      "build_plan_phase": 9,
+      "title": "Technical stack step 80",
+      "status": "building",
+      "pct": 40
+    },
+    {
+      "num": 81,
+      "registry_phase": 12,
+      "build_plan_phase": 9,
+      "title": "Technical stack step 81",
+      "status": "building",
+      "pct": 40
+    },
+    {
+      "num": 82,
+      "registry_phase": 12,
+      "build_plan_phase": 9,
+      "title": "Technical stack step 82",
+      "status": "building",
+      "pct": 40
+    },
+    {
+      "num": 83,
+      "registry_phase": 12,
+      "build_plan_phase": 10,
+      "title": "GitHub workflow step 83",
+      "status": "building",
+      "pct": 35
+    },
+    {
+      "num": 84,
+      "registry_phase": 12,
+      "build_plan_phase": 10,
+      "title": "GitHub workflow step 84",
+      "status": "building",
+      "pct": 35
+    },
+    {
+      "num": 85,
+      "registry_phase": 12,
+      "build_plan_phase": 10,
+      "title": "GitHub workflow step 85",
+      "status": "building",
+      "pct": 35
+    },
+    {
+      "num": 86,
+      "registry_phase": 12,
+      "build_plan_phase": 10,
+      "title": "GitHub workflow step 86",
+      "status": "building",
+      "pct": 35
+    },
+    {
+      "num": 87,
+      "registry_phase": 12,
+      "build_plan_phase": 10,
+      "title": "GitHub workflow step 87",
+      "status": "building",
+      "pct": 35
+    },
+    {
+      "num": 88,
+      "registry_phase": 12,
+      "build_plan_phase": 10,
+      "title": "GitHub workflow step 88",
+      "status": "building",
+      "pct": 35
+    },
+    {
+      "num": 89,
+      "registry_phase": 12,
+      "build_plan_phase": 10,
+      "title": "GitHub workflow step 89",
+      "status": "building",
+      "pct": 35
+    },
+    {
+      "num": 90,
+      "registry_phase": 12,
+      "build_plan_phase": 10,
+      "title": "GitHub workflow step 90",
+      "status": "building",
+      "pct": 35
+    },
+    {
+      "num": 91,
+      "registry_phase": 12,
+      "build_plan_phase": 10,
+      "title": "GitHub workflow step 91",
+      "status": "building",
+      "pct": 35
+    },
+    {
+      "num": 92,
+      "registry_phase": 12,
+      "build_plan_phase": 11,
+      "title": "Netlify deployment step 92",
+      "status": "building",
+      "pct": 50
+    },
+    {
+      "num": 93,
+      "registry_phase": 12,
+      "build_plan_phase": 11,
+      "title": "Netlify deployment step 93",
+      "status": "building",
+      "pct": 50
+    },
+    {
+      "num": 94,
+      "registry_phase": 12,
+      "build_plan_phase": 11,
+      "title": "Netlify deployment step 94",
+      "status": "building",
+      "pct": 50
+    },
+    {
+      "num": 95,
+      "registry_phase": 12,
+      "build_plan_phase": 11,
+      "title": "Netlify deployment step 95",
+      "status": "building",
+      "pct": 50
+    },
+    {
+      "num": 96,
+      "registry_phase": 12,
+      "build_plan_phase": 11,
+      "title": "Netlify deployment step 96",
+      "status": "building",
+      "pct": 50
+    },
+    {
+      "num": 97,
+      "registry_phase": 12,
+      "build_plan_phase": 11,
+      "title": "Netlify deployment step 97",
+      "status": "building",
+      "pct": 50
+    },
+    {
+      "num": 98,
+      "registry_phase": 14,
+      "build_plan_phase": 12,
+      "title": "Test production deploy forms Action Hub",
+      "status": "building",
+      "pct": 25
+    },
+    {
+      "num": 99,
+      "registry_phase": 10,
+      "build_plan_phase": 12,
+      "title": "Participant profile backend decision",
+      "status": "blocked",
+      "pct": 0,
+      "notes": "Requires Supabase or equivalent"
+    },
+    {
+      "num": 100,
+      "registry_phase": 15,
+      "build_plan_phase": 12,
+      "title": "Launch + continuous content expansion",
+      "status": "building",
+      "pct": 10
+    }
   ],
   "builds": [
+    {
+      "number": 4,
+      "title": "Master Phase Registry v1.0",
+      "version": "1.8.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Governing 15-phase roadmap \u2014 every feature belongs to exactly one phase",
+      "summary": "Canonical phase registry with missions, deliverables, completion criteria, dependencies. 100 BUILD_PLAN steps mapped to registry phases. Full tracker in Mission Control.",
+      "files_created": [
+        "data/phase-registry.json",
+        "docs/PHASE_REGISTRY.md",
+        "builds/004-master-phase-registry.md",
+        "mission-control/phases.html"
+      ],
+      "files_modified": [
+        "data/mission-control.json",
+        "js/mission-control.js",
+        "css/mission-control.css",
+        "BUILD_PLAN.md",
+        "builds/BUILDS.md"
+      ],
+      "pages_created": [
+        "/mission-control/phases.html"
+      ],
+      "decisions_made": [
+        "15-phase registry is governing roadmap; 100-step BUILD_PLAN is execution tracker",
+        "Honest per-phase completion \u2014 Phase 1 at 72%, not 100%"
+      ],
+      "open_questions": [
+        "Which hall gets L2 depth first \u2014 Hall 1 or Hall 2?",
+        "Participant backend: Supabase timing?"
+      ],
+      "risks": [
+        "Two phase systems require discipline to keep synchronized"
+      ],
+      "next_recommended": 5,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/phases.html",
+      "review_status": "complete"
+    },
     {
       "number": 3,
       "title": "Mission Control Dashboard",
@@ -157,14 +1535,36 @@
       "status": "complete",
       "started": "2026-07-09",
       "completed": "2026-07-09",
-      "purpose": "Project operating cockpit — track phases, steps, readiness, deployment, civic action",
+      "purpose": "Project operating cockpit \u00e2\u20ac\u201d track phases, steps, readiness, deployment, civic action",
       "summary": "Static Mission Control at /mission-control with honest 3% baseline, progress bars, build map, public/admin views",
-      "files_created": ["mission-control/index.html", "data/mission-control.json", "css/mission-control.css", "js/mission-control.js", "admin/mission-control/index.html"],
-      "files_modified": ["BUILD_PLAN.md", "builds/BUILDS.md"],
-      "pages_created": ["/mission-control/", "/admin/mission-control/", "/mission-control/build.html"],
-      "decisions_made": ["Honest progress over inflated metrics", "Static JSON v1, live APIs later", "Public vs admin visibility levels"],
-      "open_questions": ["When to add Supabase for participant profiles?", "GitHub API integration timeline?"],
-      "risks": ["Manual JSON updates may drift from reality without discipline"],
+      "files_created": [
+        "mission-control/index.html",
+        "data/mission-control.json",
+        "css/mission-control.css",
+        "js/mission-control.js",
+        "admin/mission-control/index.html"
+      ],
+      "files_modified": [
+        "BUILD_PLAN.md",
+        "builds/BUILDS.md"
+      ],
+      "pages_created": [
+        "/mission-control/",
+        "/admin/mission-control/",
+        "/mission-control/build.html"
+      ],
+      "decisions_made": [
+        "Honest progress over inflated metrics",
+        "Static JSON v1, live APIs later",
+        "Public vs admin visibility levels"
+      ],
+      "open_questions": [
+        "When to add Supabase for participant profiles?",
+        "GitHub API integration timeline?"
+      ],
+      "risks": [
+        "Manual JSON updates may drift from reality without discipline"
+      ],
       "next_recommended": 4,
       "branch": "main",
       "git_commit": "pending",
@@ -189,16 +1589,35 @@
     }
   ],
   "briefing": {
-    "what_built": "Constitution, IA scaffold, Mission Control, Action Hub shell, MT/HI live research",
-    "building_now": "Mission Control v1 spec alignment, step tracker",
-    "blocked": ["Participant backend", "Spending charts", "Halls L2–L4"],
-    "ready_public": ["Front Door L1", "Montana/Hawaii Hall 7", "Mission Control"],
-    "next": "Build #4 — Master Phase Registry"
+    "what_built": "Constitution, Mission Control, 15-phase Master Phase Registry, 100-step tracker, MT/HI live research",
+    "building_now": "Phase 1 governance wrap-up; Phase 9 reform content; Phase 10 civic workspaces",
+    "blocked": [
+      "Participant backend (step 99)",
+      "Spending charts",
+      "Halls L2-L4 depth"
+    ],
+    "ready_public": [
+      "Front Door L1",
+      "Montana/Hawaii Hall 7",
+      "Mission Control",
+      "Phase Registry"
+    ],
+    "next": "Build #5 \u2014 Historical Foundation (Hall 1 Depth)"
   },
   "admin_only": {
-    "internal_notes": "Update mission-control.json every commit. Never inflate percentages.",
-    "blocked_tasks": ["Supabase participant profiles", "FEC data pipeline", "Netlify form notification verify"],
-    "risks": ["Timeline data", "Spending charts", "Content depth"],
-    "signup_records_note": "View in Netlify Forms dashboard — not yet integrated into MC"
-  }
+    "internal_notes": "Update phase-registry.json and mission-control.json every commit. Two trackers: 15-phase registry + 100-step BUILD_PLAN.",
+    "blocked_tasks": [
+      "Supabase participant profiles",
+      "FEC data pipeline",
+      "Netlify form notification verify"
+    ],
+    "risks": [
+      "Timeline data",
+      "Spending charts",
+      "Content depth"
+    ],
+    "signup_records_note": "View in Netlify Forms dashboard \u00e2\u20ac\u201d not yet integrated into MC"
+  },
+  "phase_registry": "/data/phase-registry.json",
+  "phase_registry_route": "/mission-control/phases.html"
 }

@@ -466,7 +466,97 @@ body.mc-body .action-hub__toggle {
 .mc-phase__status--complete { background: #14532d; color: #bbf7d0; }
 .mc-phase__status--building { background: #422006; color: #fef08a; }
 .mc-phase__status--live { background: #1e3a5f; color: #bfdbfe; }
+.mc-phase__status--planning { background: #1e3a5f; color: #93c5fd; }
 .mc-phase__status--not_started { background: var(--mc-gray); color: #fff; }
+.mc-phase__status--blocked { background: #450a0a; color: #fecaca; }
+.mc-phase__status--review_needed { background: #3b0764; color: #e9d5ff; }
+
+.mc-phase-mission {
+  font-size: 0.9rem;
+  color: var(--mc-text-muted);
+  margin: 0 0 0.75rem;
+  font-style: italic;
+}
+
+.mc-phase-sub {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--mc-text-muted);
+  margin: 0.75rem 0 0.35rem;
+}
+
+.mc-deliverables {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: 0.85rem;
+  color: var(--mc-text-muted);
+}
+
+.mc-deliverables li { margin-bottom: 0.25rem; }
+
+.mc-phase-deps {
+  font-size: 0.82rem;
+  color: var(--mc-text-muted);
+  margin: 0.5rem 0;
+}
+
+.mc-dep-map {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.25rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: var(--mc-surface);
+  border: 1px solid var(--mc-border);
+  border-radius: 6px;
+}
+
+.mc-dep-map__node {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--mc-surface-alt);
+  padding: 0.35rem 0.55rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+}
+
+.mc-dep-map__num {
+  background: var(--mc-accent);
+  color: #fff;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 600;
+}
+
+.mc-dep-map__label { color: var(--mc-text); }
+
+.mc-dep-map__arrow {
+  color: var(--mc-text-muted);
+  font-size: 0.85rem;
+}
+
+.mc-inline-link {
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-left: 0.5rem;
+  color: var(--mc-accent);
+}
+
+.mc-breadcrumb {
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  color: var(--mc-text-muted);
+}
+
+.mc-breadcrumb a { color: var(--mc-accent); }
 
 .mc-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
 .mc-table th, .mc-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--mc-border); text-align: left; }
