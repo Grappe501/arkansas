@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.38.0 · **Narrative:** [/mission-control/narrative.html](/mission-control/narrative.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #34:** ✅ Narrative · **Build #33:** ✅ Encyclopedia · **Build #32:** ✅ Campaign OS  
+**Current version:** 1.39.0 · **Curriculum:** [/mission-control/curriculum.html](/mission-control/curriculum.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #35:** ✅ Curriculum · **Build #34:** ✅ Narrative · **Build #33:** ✅ Encyclopedia  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,11 +274,27 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **35** | **Master Curriculum** | **✅ v1.39.0** |
 | **34** | **Narrative Architecture** | **✅ v1.38.0** |
 | **33** | **Encyclopedia & Knowledge Library** | **✅ v1.37.0** |
-| **32** | **Educational Campaign OS** | **✅ v1.36.0** |
 
-**Next:** Build #35 — Component specifications with props/states.
+**Next:** Build #36 — Component specifications with props/states.
+
+---
+
+## Phase 35 — Master Curriculum (Build #35) ★ NEW
+
+*Educational framework — understanding before opinion.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| C1 | Educational Framework v1.0 | ✅ | `data/master-curriculum.json` |
+| C2 | 6 learning tiers | ✅ | Foundations through Arkansas Civic |
+| C3 | 6 guided learning paths | ✅ | Quick through Public Official |
+| C4 | 4 reading levels + assessments | ✅ | Assessments planned |
+| C5 | 9-system curriculum integration | ✅ | Encyclopedia through Solutions |
+| C6 | Educational outcomes tracking schema | ✅ | Enrollment planned |
+| C7 | MC curriculum dashboard | ✅ | `/mission-control/curriculum.html` |
 
 ---
 
@@ -650,7 +666,8 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#32**~~ | ~~Educational Campaign Operating System~~ ✅ Done |
 | ~~**#33**~~ | ~~Research Encyclopedia & Knowledge Library~~ ✅ Done |
 | ~~**#34**~~ | ~~Storytelling & Narrative Architecture~~ ✅ Done |
-| **#35** | **Component specifications with props/states** |
+| ~~**#35**~~ | ~~Master Curriculum & Learning Standards~~ ✅ Done |
+| **#36** | **Component specifications with props/states** |
 
 ---
 

@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.39.0] - 2026-07-09 — Build #35 Master Curriculum
+
+### Educational Framework
+- **Master Curriculum & Learning Standards v1.0** — 6 tiers, 6 learning paths
+- 4 reading levels, optional assessments, 7 educational outcomes
+- Understanding before opinion — integrated with Academy, Narrative, Encyclopedia
+- 26% honest readiness — 16/34 lessons via halls, no enrollment tracking
+- MC dashboard: `/mission-control/curriculum.html`
+
 ## [1.38.0] - 2026-07-09 — Build #34 Narrative Architecture
 
 ### Educational Narrative System

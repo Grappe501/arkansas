@@ -53,6 +53,6 @@ Guide readers through a coherent story from history through consequences to Arka
 
 ---
 
-## Recommended Next: Build #35 — Component Specifications with Props/States
+## Recommended Next: Build #36 — Component Specifications with Props/States
 
 Map narrative acts, layers, and story components to COMP-* from Build #17.

@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Master Curriculum <a href="/mission-control/curriculum.html" class="mc-inline-link">6 Tiers →</a></h2>
+    <p class="mc-bar-note">Build #35 — Educational framework, 6 learning paths, 4 reading levels. Understanding before opinion. 26% curriculum readiness.</p>
     <h2 class="mc-section-title">Narrative Architecture <a href="/mission-control/narrative.html" class="mc-inline-link">8 Acts →</a></h2>
     <p class="mc-bar-note">Build #34 — Educational narrative system, 4 storytelling layers, documentary museum journey. 24% narrative readiness.</p>
     <h2 class="mc-section-title">Encyclopedia & Knowledge Library <a href="/mission-control/encyclopedia.html" class="mc-inline-link">9 Categories →</a></h2>
@@ -3407,6 +3409,106 @@ async function initNarrativeArchitecture() {
   initDevConsole(mc);
 }
 
+async function initMasterCurriculum() {
+  const root = document.getElementById('mc-curriculum-root');
+  if (!root) return;
+
+  const [currRes, academyRes, mcRes] = await Promise.all([
+    fetch('/data/master-curriculum.json'),
+    fetch('/data/education-academy.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const curr = await currRes.json();
+  const academy = await academyRes.json();
+  const mc = await mcRes.json();
+  const s = curr.summary;
+  const cc = curr.curriculum_completion;
+
+  const tierRows = curr.tiers.map(t => `
+    <tr><td>Tier ${t.tier}</td><td>${t.title}</td><td>${t.estimated_time}</td>
+      <td>${t.lessons_live}/${t.lessons_total}</td><td>${t.completion_pct}%</td>
+      <td><a href="${t.primary_route}">${t.primary_route}</a></td><td>${t.status}</td></tr>`).join('');
+
+  const tierCards = curr.tiers.map(t => `
+    <div class="mc-card"><h3>Tier ${t.tier}: ${t.title}</h3>
+      <p class="mc-bar-note"><strong>Goal:</strong> ${t.learning_goal}</p>
+      <p class="mc-bar-note">${t.estimated_time} · ${t.completion_pct}% · ${t.lessons_live}/${t.lessons_total} lessons</p>
+      <ul class="mc-deliverables">${t.core_lessons.map(l => `<li>${l}</li>`).join('')}</ul>
+      <p class="mc-bar-note">Outcome: ${t.completion_outcome}</p>
+    </div>`).join('');
+
+  const pathRows = curr.learning_paths.map(p => `
+    <tr><td><code>${p.id}</code></td><td>${p.title}</td><td>${p.duration}</td>
+      <td>${p.audience}</td><td>Tiers ${p.tiers.join(', ')}</td><td>${p.status}</td></tr>`).join('');
+
+  const levelRows = curr.reading_levels.map(r => `
+    <tr><td><code>${r.id}</code></td><td>Level ${r.level}: ${r.title}</td><td>${r.status}</td></tr>`).join('');
+
+  const outcomeRows = curr.educational_outcomes.map(o => `
+    <tr><td><code>${o.id}</code></td><td>${o.title}</td><td>${o.status}</td><td>${o.current}</td></tr>`).join('');
+
+  const integrationRows = curr.curriculum_integration.map(i => `
+    <tr><td>${i.title}</td><td><a href="${i.route}">${i.route}</a></td><td>Build #${i.build}</td><td>${i.status}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Master Curriculum</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #35 · ${curr.title}</p>
+      <h1>Master Curriculum & Learning Standards</h1>
+      <p class="mc-header__question">${curr.governing_principle}</p>
+      <blockquote class="mc-bar-note" style="font-style:italic;border-left:3px solid var(--mc-accent);padding-left:1rem">${curr.educational_philosophy}</blockquote>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Curriculum readiness</div><div class="mc-stat__value">${s.curriculum_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Tiers</div><div class="mc-stat__value">${s.tiers_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Avg tier</div><div class="mc-stat__value">${s.avg_tier_completion_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Lessons live</div><div class="mc-stat__value">${s.lessons_live}/${s.lessons_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Learning paths</div><div class="mc-stat__value">${s.learning_paths}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Enrollment</div><div class="mc-stat__value">${s.enrollment_tracking_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Six Learning Tiers</h2>
+    <table class="mc-table"><thead><tr><th>Tier</th><th>Title</th><th>Time</th><th>Lessons</th><th>Complete</th><th>Route</th><th>Status</th></tr></thead>
+      <tbody>${tierRows}</tbody></table>
+    <div class="mc-grid-2">${tierCards}</div>
+    <h2 class="mc-section-title">Learning Paths (${s.learning_paths})</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Path</th><th>Duration</th><th>Audience</th><th>Tiers</th><th>Status</th></tr></thead>
+      <tbody>${pathRows}</tbody></table>
+    <h2 class="mc-section-title">Reading Levels (${s.reading_levels})</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Level</th><th>Status</th></tr></thead>
+      <tbody>${levelRows}</tbody></table>
+    <h2 class="mc-section-title">Learning Assessments</h2>
+    <ul class="mc-deliverables">${curr.assessments.map(a => `<li>${a.title} <em>(${a.status})</em></li>`).join('')}</ul>
+    <p class="mc-bar-note">Optional self-assessments — reinforce learning, not high-stakes tests.</p>
+    <h2 class="mc-section-title">Educational Outcomes</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Outcome</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${outcomeRows}</tbody></table>
+    <h2 class="mc-section-title">Curriculum Integration (${s.integration_systems} systems)</h2>
+    <table class="mc-table"><thead><tr><th>System</th><th>Route</th><th>Build</th><th>Status</th></tr></thead>
+      <tbody>${integrationRows}</tbody></table>
+    <h2 class="mc-section-title">Academy Alignment</h2>
+    <p class="mc-bar-note">${curr.academy_alignment.modules} academy modules · ${curr.academy_alignment.stages} learning stages</p>
+    <p class="mc-bar-note">${curr.academy_alignment.note}</p>
+    <h2 class="mc-section-title">Curriculum Maintenance</h2>
+    <ul class="mc-deliverables">${curr.curriculum_maintenance.triggers.map(t => `<li>${t}</li>`).join('')}</ul>
+    <p class="mc-bar-note">Review schedule live: ${curr.curriculum_maintenance.review_schedule_live ? 'yes' : 'no'}</p>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <ul class="mc-deliverables">${curr.long_term_vision.map(v => `<li>${v}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${curr.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${curr.recommended_next_build.number} — ${curr.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${curr.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_CURRICULUM.md">MASTER_CURRICULUM.md</a> ·
+      <a href="/data/master-curriculum.json">JSON</a> ·
+      <a href="/mission-control/education-academy.html">Education Academy</a> ·
+      <a href="/mission-control/narrative.html">Narrative</a> ·
+      <a href="/start-here/">Tier 1 →</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -3440,4 +3542,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initEducationalCampaignOperatingSystem();
   initEncyclopediaKnowledgeLibrary();
   initNarrativeArchitecture();
+  initMasterCurriculum();
 });

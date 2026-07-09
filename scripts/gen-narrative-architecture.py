@@ -258,7 +258,7 @@ out = {
         'Narrative completion not tracked live in page templates',
     ],
     'recommended_next_build': {
-        'number': 35,
+        'number': 36,
         'title': 'Component Specifications with Props/States',
         'note': 'Map narrative acts, layers, and story components to COMP-* from Build #17.',
     },

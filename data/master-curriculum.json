@@ -1,0 +1,502 @@
+{
+  "version": "1.0",
+  "build": 35,
+  "updated": "2026-07-09",
+  "title": "Master Curriculum & Learning Standards v1.0",
+  "subtitle": "Educational Framework",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/curriculum.html",
+  "canonical_lesson_route": "/learn/tier-[n]/[lesson-slug]",
+  "current_lesson_route": "Halls, start-here, educate \u2014 tier mapping in registry",
+  "constitution": "/docs/MASTER_CURRICULUM.md",
+  "purpose": "Complete educational curriculum \u2014 success measured by knowledge gained, not pages read.",
+  "educational_philosophy": "Understanding comes before opinion.",
+  "governing_principle": "Equip Arkansans with historical knowledge, constitutional understanding, and research skills.",
+  "tiers": [
+    {
+      "id": "CURR-T01",
+      "tier": 1,
+      "title": "Foundations",
+      "learning_goal": "Understand the basic facts.",
+      "core_lessons": [
+        "What is Citizens United?",
+        "Why is it important?",
+        "Key vocabulary",
+        "Basic campaign finance concepts"
+      ],
+      "estimated_time": "30\u201345 minutes",
+      "completion_outcome": "Participants can accurately explain the basic facts to another person.",
+      "primary_route": "/start-here/",
+      "related_routes": [
+        "/start-here/",
+        "/"
+      ],
+      "status": "partial",
+      "completion_pct": 35,
+      "lessons_live": 2,
+      "lessons_total": 4
+    },
+    {
+      "id": "CURR-T02",
+      "tier": 2,
+      "title": "Historical Development",
+      "learning_goal": "Understand how campaign finance law evolved.",
+      "core_lessons": [
+        "Early campaign finance history",
+        "Progressive Era reforms",
+        "Watergate",
+        "Federal Election Campaign Act",
+        "Bipartisan Campaign Reform Act",
+        "Events leading to the lawsuit"
+      ],
+      "estimated_time": "2\u20133 hours",
+      "completion_outcome": "Participants understand that Citizens United developed within a broader historical context.",
+      "primary_route": "/halls/story-before.html",
+      "related_routes": [
+        "/halls/story-before.html",
+        "/halls/the-case.html"
+      ],
+      "status": "partial",
+      "completion_pct": 32,
+      "lessons_live": 3,
+      "lessons_total": 6
+    },
+    {
+      "id": "CURR-T03",
+      "tier": 3,
+      "title": "Constitutional & Legal Analysis",
+      "learning_goal": "Understand the legal reasoning.",
+      "core_lessons": [
+        "First Amendment",
+        "Political speech",
+        "Corporate speech",
+        "Judicial review",
+        "Supreme Court precedent",
+        "Majority opinion",
+        "Dissenting opinions"
+      ],
+      "estimated_time": "4\u20136 hours",
+      "completion_outcome": "Participants can explain the Court's reasoning and the principal legal arguments.",
+      "primary_route": "/halls/what-court-decided.html",
+      "related_routes": [
+        "/halls/what-court-decided.html",
+        "/halls/the-case.html"
+      ],
+      "status": "partial",
+      "completion_pct": 38,
+      "lessons_live": 4,
+      "lessons_total": 7
+    },
+    {
+      "id": "CURR-T04",
+      "tier": 4,
+      "title": "Impact & Data",
+      "learning_goal": "Understand what changed after the decision.",
+      "core_lessons": [
+        "Campaign spending",
+        "Independent expenditures",
+        "Super PACs",
+        "Disclosure",
+        "Election trends",
+        "Empirical research"
+      ],
+      "estimated_time": "3\u20135 hours",
+      "completion_outcome": "Participants can interpret data trends and distinguish documented changes from debates.",
+      "primary_route": "/halls/after-2010.html",
+      "related_routes": [
+        "/halls/after-2010.html",
+        "/halls/money-map.html"
+      ],
+      "status": "partial",
+      "completion_pct": 28,
+      "lessons_live": 3,
+      "lessons_total": 6
+    },
+    {
+      "id": "CURR-T05",
+      "tier": 5,
+      "title": "Public Discussion",
+      "learning_goal": "Understand the range of viewpoints.",
+      "core_lessons": [
+        "Arguments supporting the decision",
+        "Arguments criticizing the decision",
+        "Academic perspectives",
+        "Frequently misunderstood claims",
+        "Media narratives"
+      ],
+      "estimated_time": "3\u20134 hours",
+      "completion_outcome": "Participants can summarize multiple perspectives fairly.",
+      "primary_route": "/halls/debate.html",
+      "related_routes": [
+        "/halls/debate.html"
+      ],
+      "status": "partial",
+      "completion_pct": 26,
+      "lessons_live": 2,
+      "lessons_total": 5
+    },
+    {
+      "id": "CURR-T06",
+      "tier": 6,
+      "title": "Arkansas Civic Education",
+      "learning_goal": "Apply knowledge within Arkansas.",
+      "core_lessons": [
+        "Arkansas legislative process",
+        "Arkansas ballot initiative process",
+        "Community conversations",
+        "Education Leader program",
+        "Coalition participation",
+        "Community resource development"
+      ],
+      "estimated_time": "2\u20133 hours",
+      "completion_outcome": "Participants are prepared to help educate others using platform resources.",
+      "primary_route": "/educate/",
+      "related_routes": [
+        "/educate/",
+        "/coalition/",
+        "/solutions/#arkansas"
+      ],
+      "status": "partial",
+      "completion_pct": 22,
+      "lessons_live": 2,
+      "lessons_total": 6
+    }
+  ],
+  "learning_paths": [
+    {
+      "id": "CURR-LP-01",
+      "title": "Quick Understanding",
+      "duration": "~1 hour",
+      "audience": "First-time visitors",
+      "tiers": [
+        1
+      ],
+      "status": "partial",
+      "route": "/start-here/"
+    },
+    {
+      "id": "CURR-LP-02",
+      "title": "Community Educator",
+      "duration": "Complete curriculum",
+      "audience": "Education Leaders",
+      "tiers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "status": "partial",
+      "route": "/educate/"
+    },
+    {
+      "id": "CURR-LP-03",
+      "title": "Journalist & Researcher",
+      "duration": "Variable",
+      "audience": "Journalists, researchers",
+      "tiers": [
+        2,
+        3,
+        4
+      ],
+      "focus": [
+        "Primary sources",
+        "Timelines",
+        "Data"
+      ],
+      "status": "partial",
+      "route": "/library/"
+    },
+    {
+      "id": "CURR-LP-04",
+      "title": "Student",
+      "duration": "Balanced",
+      "audience": "Students",
+      "tiers": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "focus": [
+        "History",
+        "Law",
+        "Constitutional principles"
+      ],
+      "status": "partial",
+      "route": "/start-here/"
+    },
+    {
+      "id": "CURR-LP-05",
+      "title": "Coalition Partner",
+      "duration": "Variable",
+      "audience": "Coalition organizations",
+      "tiers": [
+        1,
+        5,
+        6
+      ],
+      "focus": [
+        "Educational resources",
+        "Presentations",
+        "Community engagement"
+      ],
+      "status": "partial",
+      "route": "/coalition/"
+    },
+    {
+      "id": "CURR-LP-06",
+      "title": "Public Official Resource Path",
+      "duration": "Variable",
+      "audience": "Legislators and staff",
+      "tiers": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "focus": [
+        "Historical background",
+        "Constitutional framework",
+        "Current legal landscape",
+        "Educational resource packets",
+        "Research summaries"
+      ],
+      "status": "planned",
+      "route": "/solutions/"
+    }
+  ],
+  "reading_levels": [
+    {
+      "id": "CURR-RL-01",
+      "level": 1,
+      "title": "Introductory",
+      "status": "partial"
+    },
+    {
+      "id": "CURR-RL-02",
+      "level": 2,
+      "title": "General public",
+      "status": "partial"
+    },
+    {
+      "id": "CURR-RL-03",
+      "level": 3,
+      "title": "Advanced",
+      "status": "planned"
+    },
+    {
+      "id": "CURR-RL-04",
+      "level": 4,
+      "title": "Research archive",
+      "status": "partial"
+    }
+  ],
+  "assessments": [
+    {
+      "id": "CURR-AS-01",
+      "title": "Knowledge checks",
+      "status": "planned"
+    },
+    {
+      "id": "CURR-AS-02",
+      "title": "Timeline sequencing",
+      "status": "planned"
+    },
+    {
+      "id": "CURR-AS-03",
+      "title": "Vocabulary review",
+      "status": "planned"
+    },
+    {
+      "id": "CURR-AS-04",
+      "title": "Reflection questions",
+      "status": "partial"
+    },
+    {
+      "id": "CURR-AS-05",
+      "title": "Source identification exercises",
+      "status": "planned"
+    }
+  ],
+  "educational_outcomes": [
+    {
+      "id": "CURR-EO-01",
+      "title": "Curriculum enrollment",
+      "status": "planned",
+      "current": 0
+    },
+    {
+      "id": "CURR-EO-02",
+      "title": "Lesson completion",
+      "status": "planned",
+      "current": 0
+    },
+    {
+      "id": "CURR-EO-03",
+      "title": "Learning path completion",
+      "status": "planned",
+      "current": 0
+    },
+    {
+      "id": "CURR-EO-04",
+      "title": "Resource downloads",
+      "status": "planned",
+      "current": 0
+    },
+    {
+      "id": "CURR-EO-05",
+      "title": "Community Educator participation",
+      "status": "partial",
+      "current": 0
+    },
+    {
+      "id": "CURR-EO-06",
+      "title": "Coalition participation",
+      "status": "partial",
+      "current": 0
+    },
+    {
+      "id": "CURR-EO-07",
+      "title": "Continuing education activity",
+      "status": "planned",
+      "current": 0
+    }
+  ],
+  "curriculum_maintenance": {
+    "title": "Curriculum Maintenance",
+    "status": "partial",
+    "triggers": [
+      "Supreme Court decisions",
+      "Federal legislation",
+      "Arkansas legislation",
+      "Ballot initiative developments",
+      "New research",
+      "Updated datasets"
+    ],
+    "review_schedule_live": false
+  },
+  "curriculum_integration": [
+    {
+      "title": "Encyclopedia",
+      "route": "/mission-control/encyclopedia.html",
+      "build": 33,
+      "status": "partial"
+    },
+    {
+      "title": "Source Library",
+      "route": "/library/",
+      "build": 10,
+      "status": "partial"
+    },
+    {
+      "title": "Community Education Academy",
+      "route": "/mission-control/education-academy.html",
+      "build": 28,
+      "status": "partial"
+    },
+    {
+      "title": "Coalition resources",
+      "route": "/coalition/resources.html",
+      "build": 14,
+      "status": "partial"
+    },
+    {
+      "title": "Mission Control",
+      "route": "/mission-control/",
+      "build": 25,
+      "status": "live"
+    },
+    {
+      "title": "Community conversations",
+      "route": "/action/community-conversation.html",
+      "build": 13,
+      "status": "partial"
+    },
+    {
+      "title": "Research Observatory",
+      "route": "/mission-control/research-observatory.html",
+      "build": 29,
+      "status": "partial"
+    },
+    {
+      "title": "Solutions Center",
+      "route": "/solutions/",
+      "build": 9,
+      "status": "partial"
+    },
+    {
+      "title": "Narrative Architecture",
+      "route": "/mission-control/narrative.html",
+      "build": 34,
+      "status": "partial"
+    }
+  ],
+  "long_term_vision": [
+    "Independent learners",
+    "Community organizations",
+    "Libraries",
+    "Colleges",
+    "Journalists",
+    "Public officials",
+    "Education Leaders"
+  ],
+  "academy_alignment": {
+    "registry": "/data/education-academy.json",
+    "modules": 8,
+    "stages": 4,
+    "note": "Academy 4 stages map to curriculum tiers 1\u20136 and learning paths."
+  },
+  "narrative_alignment": {
+    "registry": "/data/narrative-architecture.json",
+    "acts": 8,
+    "note": "Narrative acts I\u2013VI align to tiers 2\u20136; Tier 1 precedes Act I."
+  },
+  "curriculum_completion": {
+    "tiers_total": 6,
+    "tiers_with_primary_route": 6,
+    "avg_tier_completion_pct": 30,
+    "lessons_live": 16,
+    "lessons_total": 34,
+    "lesson_coverage_pct": 47,
+    "learning_paths": 6,
+    "learning_paths_partial": 5,
+    "reading_levels_partial": 3,
+    "assessments_live": 1,
+    "enrollment_tracking_live": false,
+    "path_progress_live": false,
+    "academy_modules_aligned": 8
+  },
+  "summary": {
+    "tiers_total": 6,
+    "learning_paths": 6,
+    "reading_levels": 4,
+    "assessments": 5,
+    "educational_outcomes": 7,
+    "integration_systems": 9,
+    "avg_tier_completion_pct": 30,
+    "lessons_live": 16,
+    "lessons_total": 34,
+    "enrollment_tracking_live": false,
+    "assessments_live": false,
+    "curriculum_readiness_pct": 26
+  },
+  "catalog_gaps": [
+    "Canonical /learn/tier-[n]/[lesson-slug] routes not built",
+    "Curriculum enrollment and lesson completion not tracked",
+    "Learning path progress not persisted \u2014 no learner accounts",
+    "5/5 assessment types planned or partial only \u2014 no interactive checks",
+    "Reading Level 3 (Advanced) not uniform across lessons",
+    "Public Official Resource Path planned only",
+    "16/34 core lessons have interim content",
+    "Curriculum maintenance review schedule not automated in MC",
+    "0 coalition participants \u2014 Tier 6 civic application untested"
+  ],
+  "recommended_next_build": {
+    "number": 36,
+    "title": "Component Specifications with Props/States",
+    "note": "Map curriculum tiers, learning paths, and reading levels to COMP-* from Build #17."
+  }
+}
