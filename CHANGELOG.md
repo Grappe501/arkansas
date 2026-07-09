@@ -13,6 +13,19 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.20] - 2026-07-09 — IMP-20 Automation Engine & Workflow Orchestration
+
+### Implementation Package 20 of 50 — 40% Blueprint Milestone
+- **Master Automation Engine, Workflow Orchestration & Institutional Process Management**
+- 8-step workflow engine · 6 workflow categories · 38 workflow types
+- Approval framework, automation rules, AI workflow assistance, safety controls
+- Event, calendar, notification, and goal monitoring automation
+- Process library, automation dashboard, PMO Execution Office integration
+- Machine-readable **automation-engine-manifest.json**
+- Institutional OS evolution: 20/50 packages (**40%**)
+- IMP-21 next (doctrinal): Public Website, Digital Experience & Citizen Engagement
+- Honest: 20/50 documented · 0/50 implemented · 100% package readiness
+
 ## [2.05.19] - 2026-07-09 — IMP-19 Institutional Analytics & Predictive Insights
 
 ### Implementation Package 19 of 50

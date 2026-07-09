@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 19  # IMP-01 through IMP-19 (doctrinal)
+steps_documented = 20  # IMP-01 through IMP-20 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3332,7 +3332,7 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'research_institute', 'community_education_academy', 'volunteer_network',
     'coalition_network', 'local_operating_systems', 'communication_platform',
     'institutional_time_intelligence', 'institutional_relationship_intelligence',
-    'institutional_analytics',
+    'institutional_analytics', 'institutional_automation',
 ]
 
 RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
@@ -3675,6 +3675,166 @@ INSTITUTIONAL_ANALYTICS_MANIFEST = {
     'implemented': False,
 }
 
+AUTOMATION_PHILOSOPHY_CHECKS = [
+    'is_repetitive', 'is_rules_based', 'improves_consistency',
+    'reduces_volunteer_workload', 'preserves_human_oversight',
+]
+
+WORKFLOW_ENGINE_STEPS = [
+    'trigger', 'validation', 'ai_assistance', 'task_execution',
+    'human_review', 'notification', 'mission_control_update', 'institutional_memory',
+]
+
+WORKFLOW_CATEGORIES = {
+    'volunteer': [
+        'registration', 'onboarding', 'training_reminders', 'mentor_assignment',
+        'recognition', 'leadership_advancement', 'county_assignment',
+    ],
+    'research': [
+        'research_proposal', 'evidence_review', 'citation_verification',
+        'editorial_review', 'publication_approval', 'scheduled_review', 'archive',
+    ],
+    'academy': [
+        'course_enrollment', 'lesson_completion', 'certificate_issuance',
+        'education_leader_progression', 'continuing_education_reminders',
+        'learning_recommendations',
+    ],
+    'coalition': [
+        'organization_onboarding', 'partnership_review', 'shared_event_approvals',
+        'resource_sharing', 'coalition_communications', 'annual_partnership_review',
+    ],
+    'community': [
+        'community_conversation_creation', 'event_registration', 'attendance_tracking',
+        'follow_up_communication', 'resource_distribution', 'community_feedback',
+    ],
+    'mission_control': [
+        'executive_briefings', 'daily_reports', 'weekly_scorecards', 'risk_alerts',
+        'goal_monitoring', 'county_readiness_updates', 'forecast_generation',
+    ],
+}
+
+APPROVAL_RULE_TYPES = [
+    'public_content', 'research_publication', 'leadership_role_assignment',
+    'organization_onboarding', 'policy_changes', 'system_configuration',
+]
+
+AUTOMATION_RULES = [
+    'welcome_sequence_after_registration', 'recommend_academy_after_onboarding',
+    'assign_mentor_after_training', 'notify_county_leader_new_volunteer',
+    'research_review_deadline_reminders', 'daily_executive_briefing',
+    'publish_approved_content_on_schedule', 'update_mission_control_automatically',
+]
+
+AI_WORKFLOW_ASSISTANCE = [
+    'draft_documents', 'summarize_submissions', 'identify_missing_information',
+    'suggest_next_actions', 'prepare_reports', 'route_requests', 'prioritize_work',
+]
+
+EVENT_AUTOMATION_TASKS = [
+    'invitations', 'reminders', 'attendance_tracking', 'follow_up_emails',
+    'resource_sharing', 'survey_distribution', 'mission_control_updates',
+]
+
+CALENDAR_AUTOMATION = [
+    'recurring_meetings', 'training_reminders', 'review_schedules',
+    'leadership_check_ins', 'annual_planning', 'publication_calendar',
+]
+
+NOTIFICATION_AUTOMATION = [
+    'volunteer_assignments', 'community_events', 'research_updates',
+    'course_reminders', 'leadership_alerts', 'mission_control_warnings',
+]
+
+GOAL_AUTOMATION_MONITORS = [
+    'software_completion', 'county_representation', 'education_leader_development',
+    'city_leadership', 'participation_15pct', 'arkansans_connected_200k',
+]
+
+PROCESS_LIBRARY_FIELDS = [
+    'purpose', 'trigger', 'participants', 'automation_steps',
+    'human_responsibilities', 'mission_control_metrics',
+]
+
+AUTOMATION_DASHBOARD_METRICS = [
+    'active_workflows', 'completed_workflows', 'failed_workflows',
+    'pending_approvals', 'automation_savings', 'volunteer_time_saved',
+    'workflow_bottlenecks', 'system_health',
+]
+
+AUTOMATION_SAFETY_CONTROLS = [
+    'no_independent_policy_changes', 'no_unreviewed_sensitive_publication',
+    'no_permission_alteration', 'no_governance_document_modification',
+    'no_autonomous_leadership_appointments', 'no_unauthorized_restricted_access',
+]
+
+AUTOMATION_SYSTEM_CHAIN = [
+    'mission_control', 'knowledge_platform', 'research_institute',
+    'community_education_academy', 'volunteer_network', 'coalition_network',
+    'county_operating_system', 'city_operating_system', 'calendar_brain',
+    'communications', 'ai_localbrains',
+]
+
+AUTOMATION_ENGINE_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-20',
+    'updated': today,
+    'title': 'Master Automation Engine, Workflow Orchestration & Institutional Process Management',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_20_AUTOMATION_ENGINE.md',
+    'source_registries': {
+        'pmo_execution_office': '/data/pmo-execution-office.json',
+        'execution_schedule': '/data/execution-schedule.json',
+        'institutional_analytics': '/data/institutional-analytics-manifest.json',
+        'time_intelligence': '/data/time-intelligence-manifest.json',
+        'communication_platform': '/data/communication-platform-manifest.json',
+        'volunteer_network': '/data/volunteer-network-manifest.json',
+        'content_management': '/data/content-management-manifest.json',
+    },
+    'philosophy': 'Automation eliminates repetitive admin work—not human relationships',
+    'governing_principle': (
+        'The highest purpose of automation is to return time to people for research, '
+        'education, community conversations, and mentorship'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'automation_philosophy_checks': AUTOMATION_PHILOSOPHY_CHECKS,
+    'workflow_engine_steps': WORKFLOW_ENGINE_STEPS,
+    'workflow_engine_step_count': len(WORKFLOW_ENGINE_STEPS),
+    'workflow_categories': WORKFLOW_CATEGORIES,
+    'workflow_category_count': len(WORKFLOW_CATEGORIES),
+    'workflow_type_count': sum(len(v) for v in WORKFLOW_CATEGORIES.values()),
+    'approval_rule_types': APPROVAL_RULE_TYPES,
+    'automation_rules': AUTOMATION_RULES,
+    'ai_workflow_assistance': AI_WORKFLOW_ASSISTANCE,
+    'event_automation_tasks': EVENT_AUTOMATION_TASKS,
+    'calendar_automation': CALENDAR_AUTOMATION,
+    'notification_automation': NOTIFICATION_AUTOMATION,
+    'goal_automation_monitors': GOAL_AUTOMATION_MONITORS,
+    'process_library_fields': PROCESS_LIBRARY_FIELDS,
+    'automation_dashboard_metrics': AUTOMATION_DASHBOARD_METRICS,
+    'automation_safety_controls': AUTOMATION_SAFETY_CONTROLS,
+    'organizational_goals': {
+        'counties_total': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'automation_system_chain': AUTOMATION_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/pmo-execution-office.html',
+    'packages_completed': 20,
+    'packages_total': 50,
+    'packages_complete_pct': 40,
+    'engineering_note': 'Doctrinal IMP-20 Automation Engine; engineering IMP-20 is accessibility baseline audit',
+    'status': 'documented',
+    'implemented': False,
+}
+
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -3810,11 +3970,12 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D20', 'indicator': 'Time Intelligence (IMP-17)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D21', 'indicator': 'Relationship Intelligence (IMP-18)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D22', 'indicator': 'Institutional Analytics (IMP-19)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D23', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D23', 'indicator': 'Automation Engine (IMP-20)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D24', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
-    98,
+    100,
     14
     + len(IMPLEMENTATION_STEPS) // 2
     + len(BANDS) * 2
@@ -4291,9 +4452,36 @@ out = {
         'mc_dashboard': INSTITUTIONAL_ANALYTICS_MANIFEST['mc_dashboard'],
         'engineering_note': INSTITUTIONAL_ANALYTICS_MANIFEST['engineering_note'],
         'next_package': {
-            'number': 20,
-            'id': 'IMP-20',
-            'title': 'Master Automation Engine, Workflow Orchestration & Institutional Process Management',
+            'number': 21,
+            'id': 'IMP-21',
+            'title': 'Master Public Website, Digital Experience & Citizen Engagement Platform',
+            'status': 'specified',
+        },
+    },
+    'automation_engine': {
+        'title': 'Master Automation Engine, Workflow Orchestration & Institutional Process Management',
+        'package': 'Implementation Package 20 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_20_AUTOMATION_ENGINE.md',
+        'manifest': '/data/automation-engine-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': AUTOMATION_ENGINE_MANIFEST['philosophy'],
+        'workflow_engine_step_count': AUTOMATION_ENGINE_MANIFEST['workflow_engine_step_count'],
+        'workflow_category_count': AUTOMATION_ENGINE_MANIFEST['workflow_category_count'],
+        'workflow_type_count': AUTOMATION_ENGINE_MANIFEST['workflow_type_count'],
+        'approval_rule_count': len(APPROVAL_RULE_TYPES),
+        'automation_rule_count': len(AUTOMATION_RULES),
+        'packages_completed': AUTOMATION_ENGINE_MANIFEST['packages_completed'],
+        'packages_complete_pct': AUTOMATION_ENGINE_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': AUTOMATION_ENGINE_MANIFEST['mc_dashboard'],
+        'engineering_note': AUTOMATION_ENGINE_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 21,
+            'id': 'IMP-21',
+            'title': 'Master Public Website, Digital Experience & Citizen Engagement Platform',
             'status': 'specified',
         },
     },
@@ -4462,6 +4650,10 @@ with open(root / 'data/relationship-intelligence-manifest.json', 'w', newline='\
 
 with open(root / 'data/institutional-analytics-manifest.json', 'w', newline='\n') as f:
     json.dump(INSTITUTIONAL_ANALYTICS_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/automation-engine-manifest.json', 'w', newline='\n') as f:
+    json.dump(AUTOMATION_ENGINE_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

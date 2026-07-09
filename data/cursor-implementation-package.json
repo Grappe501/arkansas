@@ -576,9 +576,36 @@
     "mc_dashboard": "/mission-control/impact-measurement.html",
     "engineering_note": "Doctrinal IMP-19 Institutional Analytics; engineering IMP-19 is page templates",
     "next_package": {
-      "number": 20,
-      "id": "IMP-20",
-      "title": "Master Automation Engine, Workflow Orchestration & Institutional Process Management",
+      "number": 21,
+      "id": "IMP-21",
+      "title": "Master Public Website, Digital Experience & Citizen Engagement Platform",
+      "status": "specified"
+    }
+  },
+  "automation_engine": {
+    "title": "Master Automation Engine, Workflow Orchestration & Institutional Process Management",
+    "package": "Implementation Package 20 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_20_AUTOMATION_ENGINE.md",
+    "manifest": "/data/automation-engine-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Automation eliminates repetitive admin work\u2014not human relationships",
+    "workflow_engine_step_count": 8,
+    "workflow_category_count": 6,
+    "workflow_type_count": 39,
+    "approval_rule_count": 6,
+    "automation_rule_count": 8,
+    "packages_completed": 20,
+    "packages_complete_pct": 40,
+    "county_milestone_date": "2026-10-01",
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000,
+    "mc_dashboard": "/mission-control/pmo-execution-office.html",
+    "engineering_note": "Doctrinal IMP-20 Automation Engine; engineering IMP-20 is accessibility baseline audit",
+    "next_package": {
+      "number": 21,
+      "id": "IMP-21",
+      "title": "Master Public Website, Digital Experience & Citizen Engagement Platform",
       "status": "specified"
     }
   },
@@ -1981,7 +2008,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 19,
+        "current": 20,
         "status": "partial"
       },
       {
@@ -2106,6 +2133,12 @@
       },
       {
         "id": "CIP-D23",
+        "indicator": "Automation Engine (IMP-20)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D24",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -2158,9 +2191,9 @@
     "arkansans_connected_goal": 200000,
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "implementation_package_readiness_pct": 98,
+    "implementation_package_readiness_pct": 100,
     "steps_total": 50,
-    "steps_documented": 19,
+    "steps_documented": 20,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,
