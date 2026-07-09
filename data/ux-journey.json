@@ -1,0 +1,241 @@
+{
+  "version": "1.0",
+  "build": 8,
+  "updated": "2026-07-09",
+  "title": "Citizen Journey Blueprint v1.0",
+  "route": "/mission-control/journey.html",
+  "data_file": "/data/ux-journey.json",
+  "principle": "The best user experience is one in which visitors leave more informed than they arrived—and confident enough to help someone else understand Citizens United.",
+  "design_philosophy": [
+    { "id": "curiosity", "title": "Curiosity First", "description": "Every page should create curiosity rather than information overload." },
+    { "id": "progressive", "title": "Progressive Discovery", "description": "Visitors unlock deeper layers naturally as understanding grows." },
+    { "id": "no-dead-ends", "title": "No Dead Ends", "description": "Every page offers meaningful next steps, related topics, and participation opportunities." },
+    { "id": "evidence", "title": "Evidence Before Opinion", "description": "Educational content always precedes interpretation or civic engagement." },
+    { "id": "education-action", "title": "Education Before Action", "description": "Every civic action invitation should be rooted in understanding." }
+  ],
+  "learning_ladder": [
+    { "stage": 1, "id": "discover", "title": "Discover", "description": "The visitor becomes aware of the issue.", "indicator": "Visited homepage or orientation" },
+    { "stage": 2, "id": "understand", "title": "Understand", "description": "The visitor understands the basics.", "indicator": "Completed 1+ learning hall overview" },
+    { "stage": 3, "id": "explore", "title": "Explore", "description": "Investigates history, law, and evidence.", "indicator": "Visited 3+ halls or source library" },
+    { "stage": 4, "id": "evaluate", "title": "Evaluate", "description": "Considers perspectives and evidence.", "indicator": "Visited debate or reform sections" },
+    { "stage": 5, "id": "discuss", "title": "Discuss", "description": "Begins sharing ideas with others.", "indicator": "Used share or community ideas" },
+    { "stage": 6, "id": "teach", "title": "Teach", "description": "Uses resources to educate others.", "indicator": "Visited teach/community resources" },
+    { "stage": 7, "id": "lead", "title": "Lead", "description": "Joins Education Leader Network.", "indicator": "Education leader signup or toolkit progress" }
+  ],
+  "personas": [
+    {
+      "id": "curious-citizen",
+      "title": "Curious Citizen",
+      "knows": "Little about Citizens United",
+      "goal": "Understand why people still talk about it",
+      "journey": ["Home", "What Changed?", "Why It Matters", "Timeline", "Share"],
+      "entry_url": "/",
+      "recommended_stage": "discover",
+      "mrid": "UX-001"
+    },
+    {
+      "id": "student",
+      "title": "Student",
+      "knows": "Needs reliable educational information",
+      "goal": "Understand history and legal principles",
+      "journey": ["Home", "The Story", "The Case", "Constitution", "Sources"],
+      "entry_url": "/the-story",
+      "recommended_stage": "understand",
+      "mrid": "UX-002"
+    },
+    {
+      "id": "journalist",
+      "title": "Journalist",
+      "knows": "Needs verified facts quickly",
+      "goal": "Find facts, timelines, primary sources, current developments",
+      "journey": ["Search", "Timeline", "Sources", "Data", "Reform"],
+      "entry_url": "/sources",
+      "recommended_stage": "explore",
+      "mrid": "UX-003"
+    },
+    {
+      "id": "teacher",
+      "title": "Teacher",
+      "knows": "Needs classroom-ready materials",
+      "goal": "Teach others",
+      "journey": ["Teach Your Community", "Lesson Resources", "Presentation Materials", "Discussion Guides"],
+      "entry_url": "/teach",
+      "recommended_stage": "teach",
+      "mrid": "UX-004"
+    },
+    {
+      "id": "community-leader",
+      "title": "Community Leader",
+      "knows": "Already understands the issue",
+      "goal": "Educate local residents",
+      "journey": ["Leadership", "Toolkit", "Event Resources", "Signup", "Organizer Network"],
+      "entry_url": "/educate/",
+      "recommended_stage": "lead",
+      "mrid": "UX-005"
+    },
+    {
+      "id": "researcher",
+      "title": "Researcher",
+      "knows": "Needs comprehensive documentation",
+      "goal": "Explore original sources",
+      "journey": ["Source Library", "Case", "Historical Timeline", "Spending Data"],
+      "entry_url": "/sources",
+      "recommended_stage": "explore",
+      "mrid": "UX-006"
+    }
+  ],
+  "milestones": [
+    { "id": "story-complete", "title": "Completed The Story", "section": "the-story", "url": "/the-story", "stage_unlock": "explore", "mrid": "UX-010" },
+    { "id": "case-complete", "title": "Completed The Case", "section": "the-case", "url": "/the-case", "stage_unlock": "understand", "mrid": "UX-011" },
+    { "id": "constitution-complete", "title": "Completed Constitutional Principles", "section": "the-constitution", "url": "/the-constitution", "stage_unlock": "explore", "mrid": "UX-012" },
+    { "id": "impact-complete", "title": "Completed Impact", "section": "the-impact", "url": "/the-impact", "stage_unlock": "evaluate", "mrid": "UX-013" },
+    { "id": "reform-complete", "title": "Completed Reform", "section": "reform", "url": "/reform", "stage_unlock": "evaluate", "mrid": "UX-014" },
+    { "id": "community-education", "title": "Completed Community Education", "section": "teach", "url": "/teach", "stage_unlock": "teach", "mrid": "UX-015" }
+  ],
+  "session_memory": {
+    "storage_prefix": "cf_journey_",
+    "keys": [
+      { "key": "last_page", "description": "Last page visited" },
+      { "key": "stage", "description": "Estimated learning stage" },
+      { "key": "pages_visited", "description": "All pages visited" },
+      { "key": "halls_visited", "description": "Learning halls completed" },
+      { "key": "milestones", "description": "Completion milestones earned" },
+      { "key": "bookmarks", "description": "Bookmarked pages" },
+      { "key": "timeline_events", "description": "Recently viewed timeline events" },
+      { "key": "saved_charts", "description": "Favorite charts" },
+      { "key": "downloads", "description": "Download history" },
+      { "key": "toolkit_progress", "description": "Community toolkit progress" },
+      { "key": "first_visit", "description": "First visit timestamp" },
+      { "key": "visit_count", "description": "Return visit count" }
+    ],
+    "continue_learning": true
+  },
+  "recommendations": {
+    "by_stage": {
+      "discover": [
+        { "title": "Learn what happened before 2010", "url": "/the-story", "reason": "You just learned what Citizens United is." },
+        { "title": "Explore the Supreme Court case", "url": "/the-case", "reason": "Understand what actually happened in court." },
+        { "title": "See how political spending changed", "url": "/the-impact", "reason": "Connect the decision to measurable change." }
+      ],
+      "understand": [
+        { "title": "Why did the Court rule this way?", "url": "/the-constitution", "reason": "Move from facts to constitutional reasoning." },
+        { "title": "Follow the money", "url": "/follow-the-money", "reason": "See where political dollars actually go." },
+        { "title": "Browse primary sources", "url": "/sources", "reason": "Verify claims with original documents." }
+      ],
+      "explore": [
+        { "title": "Compare Montana and Hawaii", "url": "/halls/montana-hawaii.html", "reason": "See live reform efforts side by side." },
+        { "title": "Explore current reform paths", "url": "/reform", "reason": "Understand what people are trying now." },
+        { "title": "Weigh both sides fairly", "url": "/the-debate", "reason": "Evaluate strongest arguments on each side." }
+      ],
+      "evaluate": [
+        { "title": "Share with friends and family", "url": "/action/share.html", "reason": "Start a conversation grounded in evidence." },
+        { "title": "Explore reform comparisons", "url": "/reform", "reason": "Compare amendment, federal, and state paths." },
+        { "title": "Read the source library", "url": "/sources", "reason": "Deepen evaluation with primary evidence." }
+      ],
+      "discuss": [
+        { "title": "Teach your community", "url": "/teach", "reason": "Turn understanding into local education." },
+        { "title": "Join the contact network", "url": "/action/join-network.html", "reason": "Connect with other civic educators." },
+        { "title": "Submit a community idea", "url": "/action/ideas.html", "reason": "Share what your community needs." }
+      ],
+      "teach": [
+        { "title": "Become an Education Leader", "url": "/educate/", "reason": "Get toolkit access and local support." },
+        { "title": "Download presentation materials", "url": "/teach", "reason": "Classroom-ready resources (coming soon)." },
+        { "title": "Host a community conversation", "url": "/teach", "reason": "Facilitator guide (coming soon)." }
+      ],
+      "lead": [
+        { "title": "Draft a model law", "url": "/action/draft-laws.html", "reason": "Build solutions from what you have taught." },
+        { "title": "Explore the Ballot Initiative Lab", "url": "/action/ballot-lab.html", "reason": "State-level initiative pathways." },
+        { "title": "Contact lawmakers", "url": "/action/contact-legislators.html", "reason": "Legislative outreach toolkit." }
+      ]
+    },
+    "by_page": {
+      "/": [
+        { "title": "What changed after 2010?", "url": "/the-impact" },
+        { "title": "How did we get here?", "url": "/the-story" }
+      ],
+      "/the-story": [
+        { "title": "The Supreme Court case", "url": "/the-case" },
+        { "title": "Timeline preview", "url": "/explore/" }
+      ],
+      "/the-case": [
+        { "title": "Constitutional principles", "url": "/the-constitution" },
+        { "title": "Primary sources", "url": "/sources" }
+      ],
+      "/halls/montana-hawaii.html": [
+        { "title": "All reform paths", "url": "/reform" },
+        { "title": "Teach this locally", "url": "/teach" }
+      ]
+    }
+  },
+  "learning_panel": {
+    "enabled": true,
+    "title": "Your Learning Path",
+    "sections": [
+      "Learning progress",
+      "Current stage",
+      "Bookmarked pages",
+      "Recent activity",
+      "Suggested next lesson"
+    ],
+    "mrid": "UX-020"
+  },
+  "action_hub_stages": {
+    "early": {
+      "stages": ["discover", "understand"],
+      "primary_actions": [
+        { "title": "Share This Page", "url": "/action/share.html", "icon": "↗" },
+        { "title": "Save This Page", "url": "#bookmark", "icon": "★", "action": "bookmark" },
+        { "title": "Join the Contact Network", "url": "/action/join-network.html", "icon": "◎" }
+      ],
+      "label": "Learn & Share"
+    },
+    "advanced": {
+      "stages": ["explore", "evaluate", "discuss", "teach", "lead"],
+      "primary_actions": [
+        { "title": "Become an Education Leader", "url": "/educate/", "icon": "★", "primary": true },
+        { "title": "Host a Conversation", "url": "/teach", "icon": "🗣" },
+        { "title": "Draft a Model Law", "url": "/action/draft-laws.html", "icon": "§" },
+        { "title": "Ballot Initiative Lab", "url": "/action/ballot-lab.html", "icon": "✓" },
+        { "title": "Contact Lawmakers", "url": "/action/contact-legislators.html", "icon": "🏛" }
+      ],
+      "label": "Take Action"
+    }
+  },
+  "accessibility": [
+    "Clear language",
+    "Readable typography",
+    "Responsive layouts",
+    "Keyboard accessibility",
+    "Screen reader compatibility",
+    "Captioned multimedia",
+    "High-contrast options",
+    "Adjustable reading widths"
+  ],
+  "success_indicators": [
+    { "id": "basic-path-completion", "title": "Basic learning path completion", "metric": "pct_visitors_basic_path", "target_v1": 15, "status": "planned" },
+    { "id": "avg-learning-depth", "title": "Average learning depth", "metric": "avg_halls_visited", "target_v1": 2.5, "status": "tracking_local" },
+    { "id": "toolkit-downloads", "title": "Toolkit downloads", "metric": "toolkit_downloads", "target_v1": 50, "status": "planned" },
+    { "id": "leader-signups", "title": "Community leader signups", "metric": "education_leader_signups", "target_v1": 25, "status": "tracking_netlify" },
+    { "id": "conversations", "title": "Community conversations initiated", "metric": "conversation_starts", "target_v1": 10, "status": "planned" },
+    { "id": "shares", "title": "Shares with friends and family", "metric": "share_actions", "target_v1": 100, "status": "tracking_local" },
+    { "id": "return-rate", "title": "Returning visitor rate", "metric": "return_visit_pct", "target_v1": 30, "status": "tracking_local" }
+  ],
+  "cross_linking_ux": [
+    "Related Topics",
+    "Previous Topic",
+    "Next Topic",
+    "Go Deeper",
+    "Return to Overview",
+    "Primary Sources",
+    "Share This Page",
+    "Take Action"
+  ],
+  "implementation": {
+    "session": "js/journey.js — localStorage v1",
+    "learning_panel": "js/journey.js — collapsible panel",
+    "recommendations": "js/journey.js — injected next-steps block",
+    "action_hub": "js/action-hub.js — stage-aware menus",
+    "continue_prompt": "index.html — returning visitor banner",
+    "analytics": "Mission Control — success indicators (manual v1)"
+  }
+}

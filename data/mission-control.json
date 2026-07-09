@@ -1,6 +1,6 @@
 {
-  "version": "1.11.0",
-  "build": 7,
+  "version": "1.12.0",
+  "build": 8,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 7,
+    "overall_completion": 8,
     "current_build": {
-      "number": 7,
-      "title": "Master Requirement ID System"
-    },
-    "active_phase": "Foundation & Governance",
-    "last_completed": "Master Content Inventory",
-    "next_build": {
       "number": 8,
+      "title": "User Experience Architecture & Journey System"
+    },
+    "active_phase": "Information Architecture",
+    "last_completed": "Master Requirement ID System",
+    "next_build": {
+      "number": 9,
       "title": "First Deep Content \u2014 Priority MRIDs"
     },
     "github_status": "connected",
@@ -25,17 +25,17 @@
     "content_readiness": 8,
     "research_readiness": 3,
     "data_viz_readiness": 0,
-    "signup_funnel_readiness": 5,
-    "civic_action_readiness": 6,
-    "public_launch_readiness": 2,
+    "signup_funnel_readiness": 8,
+    "civic_action_readiness": 8,
+    "public_launch_readiness": 3,
     "public_launch_label": "Early Foundation"
   },
   "progress_bars": [
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 7,
-      "note": "Four planning registries complete (phases, IA, content, MRID). Traceability framework live. Educational content remains early."
+      "value": 8,
+      "note": "Five registries + UX journey system live. Session memory, learning panel, stage-aware Action Hub. Content depth remains early."
     },
     {
       "id": "constitution",
@@ -52,8 +52,8 @@
     {
       "id": "ia",
       "label": "Information Architecture",
-      "value": 38,
-      "note": "Master IA v1.0: 10 sections, 82 subsections, URL standards, redirects, public site map. Search and glossary planned."
+      "value": 45,
+      "note": "Citizen Journey Blueprint: personas, ladder, milestones, recommendations, accessibility standards."
     },
     {
       "id": "content",
@@ -88,8 +88,8 @@
     {
       "id": "signup",
       "label": "Signup Funnel Completion",
-      "value": 5,
-      "note": "Education lead form live. Notifications and pipeline unverified."
+      "value": 8,
+      "note": "Education funnel integrated with journey stage Lead."
     },
     {
       "id": "action_hub",
@@ -484,6 +484,12 @@
       "id": "mrid",
       "label": "MRID System",
       "href": "/mission-control/mrid.html",
+      "status": "complete"
+    },
+    {
+      "id": "journey",
+      "label": "Citizen Journey",
+      "href": "/mission-control/journey.html",
       "status": "complete"
     }
   ],
@@ -1511,6 +1517,50 @@
   ],
   "builds": [
     {
+      "number": 8,
+      "title": "User Experience Architecture & Journey System",
+      "version": "1.12.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Design around people \u2014 Citizen Journey Blueprint with session memory and adaptive UX",
+      "summary": "6 personas, 7-stage ladder, learning panel, continue-learning prompt, stage-aware Action Hub, success indicators.",
+      "files_created": [
+        "data/ux-journey.json",
+        "docs/UX_JOURNEY.md",
+        "builds/008-user-experience-architecture.md",
+        "mission-control/journey.html",
+        "js/journey.js",
+        "css/journey-panel.css"
+      ],
+      "files_modified": [
+        "js/action-hub.js",
+        "js/layout.js",
+        "js/mission-control.js",
+        "css/action-hub.css"
+      ],
+      "pages_created": [
+        "/mission-control/journey.html"
+      ],
+      "decisions_made": [
+        "localStorage session memory v1",
+        "Education before action \u2014 hub adapts by stage",
+        "No gamification \u2014 milestones encourage without points"
+      ],
+      "open_questions": [
+        "Server-side journey sync when backend exists?",
+        "Persona self-selection on first visit?"
+      ],
+      "risks": [
+        "localStorage-only \u2014 journey resets on clear data"
+      ],
+      "next_recommended": 9,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/journey.html",
+      "review_status": "complete"
+    },
+    {
       "number": 7,
       "title": "Master Requirement ID System & Traceability Framework",
       "version": "1.11.0",
@@ -1745,20 +1795,20 @@
     }
   ],
   "briefing": {
-    "what_built": "Phase Registry, Site Architecture, Content Inventory, MRID traceability (165 requirements)",
-    "building_now": "Registry infrastructure complete \u2014 ready for first deep content against MRIDs",
+    "what_built": "Full planning stack + Citizen Journey UX (panel, recommendations, stage-aware hub)",
+    "building_now": "UX v1 live on all public pages \u2014 ready for deep content with journey cross-links",
     "blocked": [
       "Participant backend",
       "Spending charts",
-      "Search/glossary"
+      "Server analytics"
     ],
     "ready_public": [
-      "Mission Control",
-      "MRID dashboard",
-      "Site map",
-      "Montana/Hawaii"
+      "Learning panel",
+      "Continue learning",
+      "Stage-aware Action Hub",
+      "Journey dashboard"
     ],
-    "next": "Build #8 \u2014 First Deep Content (HIST-002, CASE-002 priority)"
+    "next": "Build #9 \u2014 First Deep Content with MRIDs and journey-aware cross-links"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -1781,5 +1831,7 @@
   "content_inventory": "/data/content-inventory.json",
   "content_inventory_route": "/mission-control/inventory.html",
   "mrid_registry": "/data/mrid-registry.json",
-  "mrid_route": "/mission-control/mrid.html"
+  "mrid_route": "/mission-control/mrid.html",
+  "ux_journey": "/data/ux-journey.json",
+  "ux_journey_route": "/mission-control/journey.html"
 }

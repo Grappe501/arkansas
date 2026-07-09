@@ -1,5 +1,5 @@
 /**
- * Citizens United Mission Control v1.11.0 — Build #7
+ * Citizens United Mission Control v1.12.0 — Build #8
  */
 
 const isAdmin = () =>
@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Citizen Journey <a href="/mission-control/journey.html" class="mc-inline-link">UX blueprint →</a></h2>
+    <p class="mc-bar-note">Build #8 — 6 personas, 7-stage ladder, session memory, stage-aware Action Hub.</p>
     <h2 class="mc-section-title">MRID System <a href="/mission-control/mrid.html" class="mc-inline-link">Traceability →</a></h2>
     <p class="mc-bar-note">Build #7 — permanent requirement IDs across 16 domains. Nothing anonymous.</p>
     <h2 class="mc-section-title">Content Inventory <a href="/mission-control/inventory.html" class="mc-inline-link">Full registry →</a></h2>
@@ -751,6 +753,67 @@ async function initMridDashboard() {
   }
 }
 
+async function initJourneyBlueprint() {
+  const root = document.getElementById('mc-journey-root');
+  if (!root) return;
+
+  const [uxRes, mcRes] = await Promise.all([
+    fetch('/data/ux-journey.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ux = await uxRes.json();
+  const mc = await mcRes.json();
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Citizen Journey</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #8 · ${ux.title}</p>
+      <h1>User Experience Architecture</h1>
+      <p class="mc-header__question">${ux.principle}</p>
+    </header>
+    <section class="mc-card">
+      <h3>Design Philosophy</h3>
+      <ul class="mc-deliverables">${ux.design_philosophy.map(p => `<li><strong>${p.title}</strong> — ${p.description}</li>`).join('')}</ul>
+    </section>
+    <h2 class="mc-section-title">Learning Ladder</h2>
+    <div class="mc-dep-map">
+      ${ux.learning_ladder.map((s, i) => `
+        <span class="mc-dep-map__node"><span class="mc-dep-map__num">${s.stage}</span><span class="mc-dep-map__label">${s.title}</span></span>
+        ${i < ux.learning_ladder.length - 1 ? '<span class="mc-dep-map__arrow">→</span>' : ''}`).join('')}
+    </div>
+    <h2 class="mc-section-title">Visitor Personas (6)</h2>
+    <div class="mc-card">
+      ${ux.personas.map(p => `
+        <div class="mc-phase" style="margin-bottom:0.75rem;padding-bottom:0.75rem;border-bottom:1px solid var(--mc-border)">
+          <strong>${p.title}</strong> <code>${p.mrid}</code>
+          <p class="mc-bar-note">Goal: ${p.goal}</p>
+          <p class="mc-bar-note">Journey: ${p.journey.join(' → ')}</p>
+        </div>`).join('')}
+    </div>
+    <h2 class="mc-section-title">Completion Milestones</h2>
+    <ul class="mc-deliverables">${ux.milestones.map(m => `<li><code>${m.mrid}</code> ${m.title} — <a href="${m.url}">${m.url}</a></li>`).join('')}</ul>
+    <h2 class="mc-section-title">Success Indicators</h2>
+    <table class="mc-table">
+      <thead><tr><th>Metric</th><th>Target v1</th><th>Status</th></tr></thead>
+      <tbody>${ux.success_indicators.map(s => `
+        <tr><td>${s.title}</td><td>${s.target_v1}</td><td>${s.status}</td></tr>`).join('')}</tbody>
+    </table>
+    <h2 class="mc-section-title">v1 Implementation</h2>
+    <div class="mc-card">
+      <ul class="mc-deliverables">${Object.entries(ux.implementation).map(([k, v]) => `<li><strong>${k}:</strong> ${v}</li>`).join('')}</ul>
+    </div>
+    <h2 class="mc-section-title">Accessibility</h2>
+    <ul class="mc-deliverables">${ux.accessibility.map(a => `<li>${a}</li>`).join('')}</ul>
+    <p class="mc-bar-note">
+      <a href="/docs/UX_JOURNEY.md">UX_JOURNEY.md</a> ·
+      <a href="/data/ux-journey.json">JSON</a> ·
+      <a href="/">Try on live site</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -758,4 +821,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initArchitectureBlueprint();
   initContentInventory();
   initMridDashboard();
+  initJourneyBlueprint();
 });

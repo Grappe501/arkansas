@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.12.0] - 2026-07-09 — Build #8 Complete
+
+### Build #8: User Experience Architecture & Journey System
+- **Citizen Journey Blueprint v1.0** — 6 personas, 7-stage learning ladder
+- `data/ux-journey.json` + `docs/UX_JOURNEY.md`
+- Session memory (localStorage), learning panel, Continue Learning prompt
+- Adaptive page recommendations · stage-aware Action Hub
+- Milestone tracking · success indicators dashboard
+
 ## [1.11.0] - 2026-07-09 — Build #7 Complete
 
 ### Build #7: Master Requirement ID System & Traceability Framework

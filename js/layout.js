@@ -1,9 +1,11 @@
 /**
- * Citizens Facts — Shared layout v1.9.0
+ * Citizens Facts — Shared layout v1.12.0
  */
 
 const SITE_CSS = '/css/action-hub.css';
 const SITE_JS = '/js/action-hub.js';
+const JOURNEY_CSS = '/css/journey-panel.css';
+const JOURNEY_JS = '/js/journey.js';
 
 function ensureActionHubAssets() {
   if (!document.querySelector(`link[href="${SITE_CSS}"]`)) {
@@ -11,6 +13,18 @@ function ensureActionHubAssets() {
     link.rel = 'stylesheet';
     link.href = SITE_CSS;
     document.head.appendChild(link);
+  }
+  if (!document.querySelector(`link[href="${JOURNEY_CSS}"]`)) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = JOURNEY_CSS;
+    document.head.appendChild(link);
+  }
+  if (!document.querySelector(`script[src="${JOURNEY_JS}"]`)) {
+    const journey = document.createElement('script');
+    journey.src = JOURNEY_JS;
+    journey.defer = true;
+    document.body.appendChild(journey);
   }
   if (!document.querySelector(`script[src="${SITE_JS}"]`)) {
     const script = document.createElement('script');
@@ -52,9 +66,9 @@ function renderSiteFooter() {
   return `
   <footer class="site-footer">
     <p>
-      Citizens Facts · v<span data-site-version>1.11.0</span> ·
+      Citizens Facts · v<span data-site-version>1.12.0</span> ·
       <a href="/explore/">Site Map</a> ·
-      <a href="/mission-control/mrid.html">MRIDs</a> ·
+      <a href="/mission-control/journey.html">Journey</a> ·
       <a href="/mission-control/">Mission Control</a> ·
       <a href="/mission-control/phases.html">Phase Registry</a> ·
       <a href="/mission-control/architecture.html">Architecture</a> ·

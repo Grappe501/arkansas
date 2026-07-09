@@ -4,11 +4,11 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.11.0 · **MRID:** [Requirement IDs](/mission-control/mrid.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #7:** ✅ MRID System · **Build #6:** ✅ Content Inventory · **Build #5:** ✅ Site Architecture  
+**Current version:** 1.12.0 · **Journey:** [Citizen UX](/mission-control/journey.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #8:** ✅ UX Journey · **Build #7:** ✅ MRID · **Build #6:** ✅ Content Inventory  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
-> **Four registries:** `PHASE_REGISTRY.md` · `SITE_ARCHITECTURE.md` · `CONTENT_INVENTORY.md` · `MRID_SYSTEM.md`
+> **Five registries + UX:** Phase · Architecture · Content · MRID · **Citizen Journey**
 
 ---
 
@@ -212,4 +212,4 @@ Learn          →  Participate     →  Organize         →  Build Solutions
 | **7** | **Civic Action Layer** | **🟡 Scaffolded v1.4.0** |
 | 8–12 | Forms, tech, launch | 🟡 |
 
-**Next:** Build #8 — First Deep Content against priority MRIDs (`HIST-002`, `CASE-002`).
+**Next:** Build #9 — First Deep Content with MRIDs and journey-aware cross-links.

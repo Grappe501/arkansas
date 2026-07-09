@@ -6,6 +6,7 @@
     "path": ["Discover", "Understand", "Explore", "Evaluate", "Discuss", "Teach", "Lead"],
     "architecture": "/data/site-architecture.json",
     "site_map": "/explore/",
+    "ux_journey": "/data/ux-journey.json",
     "governance_test": [
       "Increase public understanding",
       "Deepen evidence-based learning",

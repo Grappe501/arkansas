@@ -102,6 +102,16 @@
   color: #fff;
 }
 
+.action-hub__link--bookmark {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
 /* Hide legacy sticky CTA when action hub present */
 .sticky-cta {
   display: none;
