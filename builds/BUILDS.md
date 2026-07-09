@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#40** | **Master Knowledge Graph & Civic Intelligence** | **1.44.0** | **✅ Complete** | [040](040-master-knowledge-graph-civic-intelligence.md) · [/mission-control/civic-intelligence.html](../mission-control/civic-intelligence.html) |
 | **#39** | **Documentary Experience & Media Studio** | **1.43.0** | **✅ Complete** | [039](039-documentary-experience-media-studio.md) · [/mission-control/media-studio.html](../mission-control/media-studio.html) |
 | **#38** | **Interactive Learning Laboratory** | **1.42.0** | **✅ Complete** | [038](038-interactive-learning-laboratory.md) · [/mission-control/learning-lab.html](../mission-control/learning-lab.html) |
 | **#37** | **Master Research Library** | **1.41.0** | **✅ Complete** | [037](037-master-research-library.md) · [/mission-control/research-library.html](../mission-control/research-library.html) |
@@ -62,6 +63,7 @@
 | **Master Research Library** | `/mission-control/research-library.html` | **7 collections A–G · digital archive** |
 | **Interactive Learning Laboratory** | `/mission-control/learning-lab.html` | **10 labs · civic discovery** |
 | **Documentary Experience & Media Studio** | `/mission-control/media-studio.html` | **8 divisions · multimedia learning** |
+| **Institutional Brain & Civic Intelligence** | `/mission-control/civic-intelligence.html` | **17 node types · 7 intelligence layers** |
 | Phase Registry | `/mission-control/phases.html` | Project phases |
 | Site Architecture | `/mission-control/architecture.html` | Information architecture (IA) |
 | **Platform Blueprint** | `/mission-control/platform.html` | **Technical architecture · v1 system** |

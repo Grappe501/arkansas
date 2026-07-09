@@ -362,6 +362,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/civic-intelligence"
+  to = "/mission-control/civic-intelligence.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301

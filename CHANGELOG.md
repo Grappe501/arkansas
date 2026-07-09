@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.44.0] - 2026-07-09 — Build #40 Master Knowledge Graph & Civic Intelligence Engine
+
+### Institutional Brain Architecture
+- **Master Knowledge Graph & Civic Intelligence Engine v1.0** — 17 node types, 7 intelligence layers
+- Educational, research, community, legislative, and timeline intelligence maps
+- Extends Build #11 KG (38 nodes, 40 edges) — not a replacement
+- 24% honest readiness — no brain visualization or question engine
+- MC dashboard: `/mission-control/civic-intelligence.html`
+
 ## [1.43.0] - 2026-07-09 — Build #39 Documentary Experience & Media Studio
 
 ### Multimedia Learning Architecture

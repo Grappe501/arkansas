@@ -1,0 +1,640 @@
+{
+  "version": "1.0",
+  "build": 40,
+  "updated": "2026-07-09",
+  "title": "Master Knowledge Graph & Civic Intelligence Engine v1.0",
+  "subtitle": "Institutional Brain Architecture",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/civic-intelligence.html",
+  "canonical_brain_route": "/brain/[node-id]",
+  "current_brain_route": "KG registry + explore-further \u2014 no public interactive brain viz",
+  "constitution": "/docs/INSTITUTIONAL_BRAIN.md",
+  "purpose": "The Institutional Brain \u2014 everything connected, nothing stands alone.",
+  "vision": "Visible threads between every idea \u2014 touch one and see what came before, what followed, and what Arkansas teaches it.",
+  "governing_principle": "A living civic knowledge institution where every fact, source, lesson, county, educator, and organization strengthens every other part.",
+  "long_term_vision": "Invisible intelligence layer \u2014 visitors see content, Mission Control sees relationships and gaps.",
+  "node_types": [
+    {
+      "id": "case",
+      "title": "Court Cases",
+      "prefix": "KG-CASE",
+      "kg_type": "case",
+      "status": "live",
+      "nodes_live": 7
+    },
+    {
+      "id": "justice",
+      "title": "Supreme Court Justices",
+      "prefix": "KG-JUSTICE",
+      "kg_type": null,
+      "status": "planned",
+      "nodes_live": 0
+    },
+    {
+      "id": "principle",
+      "title": "Constitutional Principles",
+      "prefix": "KG-PRIN",
+      "kg_type": "principle",
+      "status": "live",
+      "nodes_live": 5
+    },
+    {
+      "id": "event",
+      "title": "Historical Events",
+      "prefix": "KG-EVENT",
+      "kg_type": "event",
+      "status": "live",
+      "nodes_live": 8
+    },
+    {
+      "id": "federal_law",
+      "title": "Federal Laws",
+      "prefix": "KG-LAW",
+      "kg_type": "law",
+      "status": "partial",
+      "nodes_live": 4,
+      "note": "KG law nodes \u2014 Arkansas laws not yet separated"
+    },
+    {
+      "id": "arkansas_law",
+      "title": "Arkansas Laws",
+      "prefix": "KG-ARLAW",
+      "kg_type": null,
+      "status": "planned",
+      "nodes_live": 0
+    },
+    {
+      "id": "official",
+      "title": "Public Officials",
+      "prefix": "KG-OFFICIAL",
+      "kg_type": null,
+      "status": "planned",
+      "nodes_live": 0
+    },
+    {
+      "id": "ballot",
+      "title": "Ballot Initiative Concepts",
+      "prefix": "KG-BALLOT",
+      "kg_type": null,
+      "status": "planned",
+      "nodes_live": 0
+    },
+    {
+      "id": "model_law",
+      "title": "Model Law Concepts",
+      "prefix": "KG-MODEL",
+      "kg_type": null,
+      "status": "partial",
+      "nodes_live": 6,
+      "note": "Reform nodes in KG \u2014 model law taxonomy not split"
+    },
+    {
+      "id": "lesson",
+      "title": "Educational Lessons",
+      "prefix": "KG-LESSON",
+      "kg_type": null,
+      "status": "planned",
+      "nodes_live": 0
+    },
+    {
+      "id": "encyclopedia",
+      "title": "Encyclopedia Entries",
+      "prefix": "KG-ENC",
+      "kg_type": null,
+      "status": "planned",
+      "nodes_live": 0
+    },
+    {
+      "id": "source",
+      "title": "Research Sources",
+      "prefix": "EV",
+      "kg_type": null,
+      "status": "partial",
+      "nodes_live": 14,
+      "note": "Evidence Registry EV-* \u2014 not yet KG-linked as nodes"
+    },
+    {
+      "id": "dataset",
+      "title": "Data Sets",
+      "prefix": "KG-DATA",
+      "kg_type": "data",
+      "status": "live",
+      "nodes_live": 2
+    },
+    {
+      "id": "conversation",
+      "title": "Community Conversations",
+      "prefix": "KG-CONV",
+      "kg_type": null,
+      "status": "planned",
+      "nodes_live": 0
+    },
+    {
+      "id": "coalition",
+      "title": "Coalition Organizations",
+      "prefix": "KG-ORG",
+      "kg_type": "organization",
+      "status": "partial",
+      "nodes_live": 4
+    },
+    {
+      "id": "county",
+      "title": "Arkansas Counties",
+      "prefix": "AR-COUNTY",
+      "kg_type": null,
+      "status": "partial",
+      "nodes_live": 75,
+      "note": "75 counties in arkansas-counties.json \u2014 0 KG edges to counties"
+    },
+    {
+      "id": "educator",
+      "title": "Education Leaders",
+      "prefix": "KG-EDU",
+      "kg_type": null,
+      "status": "planned",
+      "nodes_live": 0
+    },
+    {
+      "id": "person",
+      "title": "People",
+      "prefix": "KG-PERSON",
+      "kg_type": "person",
+      "status": "live",
+      "nodes_live": 2
+    }
+  ],
+  "relationship_types": [
+    {
+      "id": "precedes",
+      "title": "PRECEDES",
+      "status": "partial",
+      "edges_live": 4,
+      "kg_alias": "precursor"
+    },
+    {
+      "id": "follows",
+      "title": "FOLLOWS",
+      "status": "partial",
+      "edges_live": 0,
+      "kg_alias": "aftermath"
+    },
+    {
+      "id": "cites",
+      "title": "CITES",
+      "status": "live",
+      "edges_live": 0
+    },
+    {
+      "id": "supports",
+      "title": "SUPPORTS",
+      "status": "live",
+      "edges_live": 1
+    },
+    {
+      "id": "references",
+      "title": "REFERENCES",
+      "status": "partial",
+      "edges_live": 0,
+      "note": "Relationship registry schema \u2014 0 edges"
+    },
+    {
+      "id": "explains",
+      "title": "EXPLAINS",
+      "status": "planned",
+      "edges_live": 0
+    },
+    {
+      "id": "modifies",
+      "title": "MODIFIES",
+      "status": "planned",
+      "edges_live": 0
+    },
+    {
+      "id": "overrules",
+      "title": "OVERRULES",
+      "status": "partial",
+      "edges_live": 1,
+      "kg_alias": "overturned_by"
+    },
+    {
+      "id": "related_to",
+      "title": "RELATED_TO",
+      "status": "live",
+      "edges_live": 9
+    },
+    {
+      "id": "part_of",
+      "title": "PART_OF",
+      "status": "planned",
+      "edges_live": 0
+    },
+    {
+      "id": "taught_in",
+      "title": "TAUGHT_IN",
+      "status": "planned",
+      "edges_live": 0
+    },
+    {
+      "id": "used_by",
+      "title": "USED_BY",
+      "status": "planned",
+      "edges_live": 0
+    },
+    {
+      "id": "hosted_by",
+      "title": "HOSTED_BY",
+      "status": "planned",
+      "edges_live": 0
+    },
+    {
+      "id": "represents",
+      "title": "REPRESENTS",
+      "status": "planned",
+      "edges_live": 0
+    },
+    {
+      "id": "located_in",
+      "title": "LOCATED_IN",
+      "status": "partial",
+      "edges_live": 0,
+      "note": "Relationship registry defined \u2014 0 edges"
+    },
+    {
+      "id": "contributes_to",
+      "title": "CONTRIBUTES_TO",
+      "status": "planned",
+      "edges_live": 0
+    },
+    {
+      "id": "mentors",
+      "title": "MENTORS",
+      "status": "planned",
+      "edges_live": 0
+    },
+    {
+      "id": "shares",
+      "title": "SHARES",
+      "status": "planned",
+      "edges_live": 0
+    },
+    {
+      "id": "referred",
+      "title": "REFERRED",
+      "status": "planned",
+      "edges_live": 0
+    }
+  ],
+  "intelligence_layers": [
+    {
+      "id": "CI-01",
+      "title": "Knowledge Graph",
+      "slug": "knowledge-graph",
+      "purpose": "Every object a node \u2014 court cases through education leaders.",
+      "status": "partial",
+      "readiness_pct": 28,
+      "route": "/mission-control/knowledge-graph.html",
+      "registry": "/data/kg-registry.json",
+      "build": 11,
+      "note": "38 nodes, 40 edges \u2014 v1 target 500"
+    },
+    {
+      "id": "CI-02",
+      "title": "Educational Dependency Map",
+      "slug": "educational-dependency",
+      "purpose": "Curriculum concepts depend on prior concepts.",
+      "status": "partial",
+      "readiness_pct": 22,
+      "route": "/mission-control/curriculum.html",
+      "note": "Master Curriculum tiers \u2014 no automated dependency graph"
+    },
+    {
+      "id": "CI-03",
+      "title": "Research Dependency Map",
+      "slug": "research-dependency",
+      "purpose": "Sources support, challenge, expand, update, and supersede one another.",
+      "status": "partial",
+      "readiness_pct": 18,
+      "route": "/mission-control/research.html",
+      "note": "14 evidence items \u2014 no dependency edges"
+    },
+    {
+      "id": "CI-04",
+      "title": "Community Intelligence Graph",
+      "slug": "community-intelligence",
+      "purpose": "Education leaders, counties, organizations, presentations, conversations.",
+      "status": "planned",
+      "readiness_pct": 8,
+      "route": "/mission-control/county-os.html",
+      "note": "0 county participation edges \u2014 forms not integrated"
+    },
+    {
+      "id": "CI-05",
+      "title": "Legislative Intelligence Graph",
+      "slug": "legislative-intelligence",
+      "purpose": "Proposals connect to laws, constitutional provisions, and court decisions.",
+      "status": "partial",
+      "readiness_pct": 20,
+      "route": "/mission-control/research-observatory.html",
+      "note": "Reform KG nodes + observatory \u2014 no lineage visualization"
+    },
+    {
+      "id": "CI-06",
+      "title": "Timeline Intelligence",
+      "slug": "timeline-intelligence",
+      "purpose": "Every object understands created, decided, enacted, reviewed, published.",
+      "status": "partial",
+      "readiness_pct": 16,
+      "route": "/halls/story-before.html",
+      "note": "Event nodes have years \u2014 no unified timeline engine"
+    },
+    {
+      "id": "CI-07",
+      "title": "Question Engine",
+      "slug": "question-engine",
+      "purpose": "Answer questions from stored relationships.",
+      "status": "planned",
+      "readiness_pct": 4,
+      "route": "/mission-control/ai-knowledge.html",
+      "note": "AI Knowledge Engine planned \u2014 no graph query layer"
+    }
+  ],
+  "educational_dependency_chain": [
+    {
+      "id": "DEP-01",
+      "title": "Campaign Finance",
+      "level": 1
+    },
+    {
+      "id": "DEP-02",
+      "title": "Federal Election Campaign Act",
+      "level": 2,
+      "depends_on": "DEP-01"
+    },
+    {
+      "id": "DEP-03",
+      "title": "Bipartisan Campaign Reform Act",
+      "level": 3,
+      "depends_on": "DEP-02"
+    },
+    {
+      "id": "DEP-04",
+      "title": "Citizens United",
+      "level": 4,
+      "depends_on": "DEP-03",
+      "kg_id": "KG-CASE-000003"
+    },
+    {
+      "id": "DEP-05",
+      "title": "Independent Expenditures",
+      "level": 5,
+      "depends_on": "DEP-04"
+    },
+    {
+      "id": "DEP-06",
+      "title": "Super PACs",
+      "level": 6,
+      "depends_on": "DEP-05",
+      "kg_id": "KG-CASE-000006"
+    },
+    {
+      "id": "DEP-07",
+      "title": "Disclosure Debates",
+      "level": 7,
+      "depends_on": "DEP-06"
+    }
+  ],
+  "research_dependency_types": [
+    "Supports",
+    "Challenges",
+    "Expands",
+    "Updates",
+    "Supersedes",
+    "Historical Context"
+  ],
+  "community_intelligence_chain": [
+    "Education Leader",
+    "County",
+    "Organization",
+    "Presentation",
+    "Resources Used",
+    "Community Conversation",
+    "New Participants",
+    "New Organizations",
+    "New Counties"
+  ],
+  "timeline_attributes": [
+    "Created",
+    "Modified",
+    "Decided",
+    "Introduced",
+    "Enacted",
+    "Repealed",
+    "Updated",
+    "Reviewed",
+    "Published"
+  ],
+  "sample_questions": [
+    "What Supreme Court decisions influenced Citizens United?",
+    "What Arkansas educational resources explain independent expenditures?",
+    "Which historical laws preceded the Bipartisan Campaign Reform Act?",
+    "Which encyclopedia articles cite this source?",
+    "What lessons should I study before reading the majority opinion?"
+  ],
+  "knowledge_navigation": [
+    "What this connects to",
+    "What influenced it",
+    "What it influenced",
+    "What should be learned next",
+    "What evidence supports it",
+    "Who is involved",
+    "What Arkansas resources relate to it"
+  ],
+  "future_ai_integration": [
+    "Suggesting new educational pathways",
+    "Finding missing research",
+    "Building presentation packets",
+    "Connecting volunteers",
+    "Identifying underserved counties",
+    "Explaining complex legal relationships",
+    "Generating personalized reading plans"
+  ],
+  "mc_integration": {
+    "title": "Mission Control Institutional Brain Metrics",
+    "status": "partial",
+    "metrics": [
+      {
+        "id": "CI-M01",
+        "title": "Knowledge graph growth",
+        "status": "partial",
+        "current": 38,
+        "target": 500
+      },
+      {
+        "id": "CI-M02",
+        "title": "Relationship count",
+        "status": "partial",
+        "current": 40
+      },
+      {
+        "id": "CI-M03",
+        "title": "Unconnected topics",
+        "status": "partial",
+        "current": 4
+      },
+      {
+        "id": "CI-M04",
+        "title": "Missing sources",
+        "status": "planned",
+        "current": 0
+      },
+      {
+        "id": "CI-M05",
+        "title": "Research gaps",
+        "status": "planned",
+        "current": 0
+      },
+      {
+        "id": "CI-M06",
+        "title": "Learning dependencies",
+        "status": "partial",
+        "current": 7
+      },
+      {
+        "id": "CI-M07",
+        "title": "County relationships",
+        "status": "planned",
+        "current": 0
+      },
+      {
+        "id": "CI-M08",
+        "title": "Coalition connections",
+        "status": "planned",
+        "current": 0
+      },
+      {
+        "id": "CI-M09",
+        "title": "Curriculum coverage",
+        "status": "partial",
+        "current": 0
+      }
+    ],
+    "visualization_live": false
+  },
+  "kg_foundation": {
+    "build": 11,
+    "registry": "/data/kg-registry.json",
+    "constitution": "/data/knowledge-graph.json",
+    "dashboard": "/mission-control/knowledge-graph.html",
+    "hub_node": "KG-CASE-000003",
+    "summary": {
+      "total_nodes": 38,
+      "total_edges": 40,
+      "by_type": {
+        "case": 7,
+        "event": 8,
+        "principle": 5,
+        "organization": 4,
+        "person": 2,
+        "law": 4,
+        "data": 2,
+        "reform": 6
+      },
+      "by_cluster": {
+        "cases": 12,
+        "history": 4,
+        "impact": 1,
+        "solutions": 9,
+        "constitution": 6,
+        "law": 4,
+        "money": 2
+      },
+      "avg_completion_pct": 15,
+      "fully_connected_hub": true,
+      "orphan_nodes": 4,
+      "v1_target_nodes": 500
+    }
+  },
+  "related_systems": [
+    {
+      "title": "Knowledge Graph (Build #11)",
+      "route": "/data/kg-registry.json",
+      "build": 11
+    },
+    {
+      "title": "Relationship Registry",
+      "route": "/data/relationship-registry.json",
+      "build": 15
+    },
+    {
+      "title": "Evidence Registry",
+      "route": "/data/evidence-registry.json",
+      "build": 10
+    },
+    {
+      "title": "Encyclopedia",
+      "route": "/data/encyclopedia-knowledge-library.json",
+      "build": 33
+    },
+    {
+      "title": "Master Curriculum",
+      "route": "/data/master-curriculum.json",
+      "build": 35
+    },
+    {
+      "title": "County OS",
+      "route": "/data/arkansas-counties.json",
+      "build": 31
+    },
+    {
+      "title": "AI Knowledge Engine",
+      "route": "/data/ai-knowledge-engine.json",
+      "build": 26
+    },
+    {
+      "title": "Learning Laboratory",
+      "route": "/data/learning-laboratory.json",
+      "build": 38
+    }
+  ],
+  "summary": {
+    "node_types_total": 18,
+    "node_types_live": 5,
+    "node_types_partial": 5,
+    "node_types_planned": 8,
+    "relationship_types_total": 19,
+    "relationship_types_with_edges": 4,
+    "intelligence_layers_total": 7,
+    "intelligence_layers_partial": 5,
+    "kg_nodes": 38,
+    "kg_edges": 40,
+    "kg_orphan_nodes": 4,
+    "kg_v1_target_nodes": 500,
+    "kg_growth_pct": 8,
+    "evidence_sources": 14,
+    "relationship_registry_edges": 0,
+    "arkansas_counties": 75,
+    "counties_with_participants": 0,
+    "question_engine_live": false,
+    "brain_visualization_live": false,
+    "avg_layer_readiness_pct": 17,
+    "civic_intelligence_readiness_pct": 24
+  },
+  "catalog_gaps": [
+    "KG at 38/500 nodes (8%) \u2014 Institutional Brain incomplete",
+    "4 orphan nodes \u2014 unconnected topics remain",
+    "9 of 17 node types planned \u2014 justices, lessons, encyclopedia, educators not in KG",
+    "Relationship registry has 0 edges \u2014 community/coalition graph not populated",
+    "No public interactive brain visualization \u2014 explore-further only",
+    "Question engine not built \u2014 sample questions unanswered automatically",
+    "County nodes exist but 0 KG edges to 75 Arkansas counties",
+    "Research dependency edges not recorded \u2014 evidence items not linked as graph",
+    "Educational dependency chain defined \u2014 not wired to curriculum paths",
+    "Timeline intelligence partial \u2014 no unified temporal query layer"
+  ],
+  "recommended_next_build": {
+    "number": 41,
+    "title": "Component Specifications with Props/States",
+    "note": "Map brain visualization shells, node panels, relationship edges, and explore-further widgets to COMP-* from Build #17."
+  }
+}

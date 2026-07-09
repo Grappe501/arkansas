@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.43.0 · **Media Studio:** [/mission-control/media-studio.html](/mission-control/media-studio.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #39:** ✅ Media Studio · **Build #38:** ✅ Learning Lab · **Build #37:** ✅ Research Library · **Build #36:** ✅ Trust Framework  
+**Current version:** 1.44.0 · **Civic Intelligence:** [/mission-control/civic-intelligence.html](/mission-control/civic-intelligence.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #40:** ✅ Institutional Brain · **Build #39:** ✅ Media Studio · **Build #38:** ✅ Learning Lab · **Build #37:** ✅ Research Library  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,12 +274,29 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **40** | **Master Knowledge Graph & Civic Intelligence** | **✅ v1.44.0** |
 | **39** | **Documentary Experience & Media Studio** | **✅ v1.43.0** |
 | **38** | **Interactive Learning Laboratory** | **✅ v1.42.0** |
 | **37** | **Master Research Library** | **✅ v1.41.0** |
 | **36** | **Trust Framework** | **✅ v1.40.0** |
 
-**Next:** Build #40 — Component specifications with props/states.
+**Next:** Build #41 — Component specifications with props/states.
+
+---
+
+## Phase 40 — Master Knowledge Graph & Civic Intelligence (Build #40) ★ NEW
+
+*Institutional Brain — everything connected.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| B1 | Institutional Brain Blueprint v1.0 | ✅ | `data/civic-intelligence.json` |
+| B2 | 17 node types + 19 relationship types | ✅ | Extends KG Build #11 |
+| B3 | 7 intelligence layers | ✅ | KG through Question Engine |
+| B4 | Educational dependency chain | ✅ | Campaign finance → disclosure |
+| B5 | KG registry as foundation | 🟡 | 38/500 nodes, 4 orphans |
+| B6 | MC brain metrics (9) | ✅ | Tracking partial |
+| B7 | MC civic intelligence dashboard | ✅ | `/mission-control/civic-intelligence.html` |
 
 ---
 

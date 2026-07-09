@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Institutional Brain <a href="/mission-control/civic-intelligence.html" class="mc-inline-link">Civic Intelligence →</a></h2>
+    <p class="mc-bar-note">Build #40 — Master knowledge graph & civic intelligence, 17 node types, 7 layers. 38/500 KG nodes. 24% brain readiness.</p>
     <h2 class="mc-section-title">Media Studio <a href="/mission-control/media-studio.html" class="mc-inline-link">8 Divisions →</a></h2>
     <p class="mc-bar-note">Build #39 — Documentary experience & multimedia learning, 6 chapters, media standards. 0 videos published. 18% media readiness.</p>
     <h2 class="mc-section-title">Interactive Learning Lab <a href="/mission-control/learning-lab.html" class="mc-inline-link">10 Labs →</a></h2>
@@ -3877,6 +3879,94 @@ async function initMediaStudio() {
   initDevConsole(mc);
 }
 
+async function initCivicIntelligence() {
+  const root = document.getElementById('mc-civic-intelligence-root');
+  if (!root) return;
+
+  const [ciRes, mcRes] = await Promise.all([
+    fetch('/data/civic-intelligence.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ci = await ciRes.json();
+  const mc = await mcRes.json();
+  const s = ci.summary;
+
+  const nodeRows = ci.node_types.map(n => `
+    <tr><td>${n.title}</td><td><code>${n.prefix}</code></td><td>${n.nodes_live}</td><td>${n.status}</td></tr>`).join('');
+
+  const relRows = ci.relationship_types.map(r => `
+    <tr><td>${r.title}</td><td>${r.edges_live}</td><td>${r.status}</td></tr>`).join('');
+
+  const layerRows = ci.intelligence_layers.map(l => `
+    <tr><td>${l.title}</td><td>${l.readiness_pct}%</td><td><a href="${l.route}">${l.route}</a></td><td>${l.status}</td></tr>`).join('');
+
+  const layerCards = ci.intelligence_layers.map(l => `
+    <div class="mc-card"><h3>${l.title}</h3>
+      <p class="mc-bar-note">${l.purpose}</p>
+      <p class="mc-bar-note">${l.readiness_pct}% · ${l.status}</p>
+      ${l.note ? `<p class="mc-bar-note">${l.note}</p>` : ''}
+    </div>`).join('');
+
+  const depChain = ci.educational_dependency_chain.map(d => `
+    <li>${'→ '.repeat(d.level - 1)}${d.title}${d.kg_id ? ` <code>${d.kg_id}</code>` : ''}</li>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Civic Intelligence</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #40 · ${ci.title}</p>
+      <h1>Institutional Brain & Civic Intelligence</h1>
+      <p class="mc-header__question">${ci.governing_principle}</p>
+      <p class="mc-bar-note">${ci.vision}</p>
+      <p class="mc-bar-note">Canonical: <code>${ci.canonical_brain_route}</code> · Foundation: <a href="/mission-control/knowledge-graph.html">KG Build #11</a></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Brain readiness</div><div class="mc-stat__value">${s.civic_intelligence_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">KG nodes</div><div class="mc-stat__value">${s.kg_nodes}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">KG edges</div><div class="mc-stat__value">${s.kg_edges}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Orphans</div><div class="mc-stat__value">${s.kg_orphan_nodes}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Growth</div><div class="mc-stat__value">${s.kg_growth_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Brain viz</div><div class="mc-stat__value">${s.brain_visualization_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Node Types (${s.node_types_total})</h2>
+    <table class="mc-table"><thead><tr><th>Type</th><th>Prefix</th><th>Live</th><th>Status</th></tr></thead>
+      <tbody>${nodeRows}</tbody></table>
+    <h2 class="mc-section-title">Relationship Types (${s.relationship_types_total})</h2>
+    <table class="mc-table"><thead><tr><th>Type</th><th>Edges</th><th>Status</th></tr></thead>
+      <tbody>${relRows}</tbody></table>
+    <h2 class="mc-section-title">Intelligence Layers</h2>
+    <table class="mc-table"><thead><tr><th>Layer</th><th>Ready</th><th>Route</th><th>Status</th></tr></thead>
+      <tbody>${layerRows}</tbody></table>
+    <div class="mc-grid-2">${layerCards}</div>
+    <h2 class="mc-section-title">Educational Dependency Chain</h2>
+    <ul class="mc-deliverables">${depChain}</ul>
+    <h2 class="mc-section-title">Community Intelligence Chain</h2>
+    <ul class="mc-deliverables">${ci.community_intelligence_chain.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Knowledge Navigation</h2>
+    <ul class="mc-deliverables">${ci.knowledge_navigation.map(k => `<li>${k}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Sample Questions (Question Engine)</h2>
+    <ul class="mc-deliverables">${ci.sample_questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Institutional Brain Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${ci.mc_integration.metrics.map(m => `
+        <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td>
+          <td>${m.current}${m.target ? ` / ${m.target}` : ''}</td></tr>`).join('')}</tbody></table>
+    <h2 class="mc-section-title">Future AI Integration</h2>
+    <ul class="mc-deliverables">${ci.future_ai_integration.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ci.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ci.recommended_next_build.number} — ${ci.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ci.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/INSTITUTIONAL_BRAIN.md">INSTITUTIONAL_BRAIN.md</a> ·
+      <a href="/data/civic-intelligence.json">JSON</a> ·
+      <a href="/data/kg-registry.json">KG Registry</a> ·
+      <a href="/mission-control/knowledge-graph.html">Knowledge Graph</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -3915,4 +4005,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initMasterResearchLibrary();
   initLearningLaboratory();
   initMediaStudio();
+  initCivicIntelligence();
 });

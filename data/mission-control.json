@@ -1,6 +1,6 @@
 {
-  "version": "1.43.0",
-  "build": 39,
+  "version": "1.44.0",
+  "build": 40,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 39,
+    "overall_completion": 40,
     "current_build": {
-      "number": 39,
-      "title": "Citizens United Facts Documentary Experience & Media Studio"
-    },
-    "active_phase": "Multimedia Learning \u2014 Documentary Experience & Media Studio",
-    "last_completed": "Interactive Learning Laboratory",
-    "next_build": {
       "number": 40,
+      "title": "Citizens United Facts Master Knowledge Graph & Civic Intelligence Engine"
+    },
+    "active_phase": "Institutional Brain \u2014 Master Knowledge Graph & Civic Intelligence",
+    "last_completed": "Documentary Experience & Media Studio",
+    "next_build": {
+      "number": 41,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
@@ -53,6 +53,7 @@
     "library_readiness": 22,
     "learning_lab_readiness": 22,
     "media_studio_readiness": 18,
+    "civic_intelligence_readiness": 24,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -60,8 +61,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 39,
-      "note": "Media Studio live \u2014 8 divisions, 0 videos published."
+      "value": 40,
+      "note": "Institutional Brain live \u2014 38 KG nodes, 40 relationships."
     },
     {
       "id": "constitution",
@@ -84,8 +85,8 @@
     {
       "id": "knowledge_graph",
       "label": "Knowledge Graph",
-      "value": 12,
-      "note": "KG Constitution v1.0: 38 nodes, 62 edges, 10 clusters, Explore Further component. V1 target ~500 nodes."
+      "value": 8,
+      "note": "38/500 nodes \u2014 4 orphans."
     },
     {
       "id": "content",
@@ -357,7 +358,14 @@
       "label": "Documentary Experience & Media Studio",
       "value": 18,
       "max": 100,
-      "note": "4/8 divisions partial \u2014 0 videos published."
+      "note": "Media Studio architecture \u2014 0 videos published."
+    },
+    {
+      "id": "civic_intelligence",
+      "label": "Institutional Brain & Civic Intelligence",
+      "value": 24,
+      "max": 100,
+      "note": "38 nodes, 5/7 layers partial \u2014 no brain viz."
     }
   ],
   "public_readiness": {
@@ -884,6 +892,12 @@
       "id": "media_studio",
       "label": "Documentary Experience & Media Studio",
       "href": "/mission-control/media-studio.html",
+      "status": "complete"
+    },
+    {
+      "id": "civic_intelligence",
+      "label": "Institutional Brain & Civic Intelligence",
+      "href": "/mission-control/civic-intelligence.html",
       "status": "complete"
     }
   ],
@@ -1910,6 +1924,56 @@
     }
   ],
   "builds": [
+    {
+      "number": 40,
+      "title": "Citizens United Facts Master Knowledge Graph & Civic Intelligence Engine",
+      "version": "1.44.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Institutional Brain Architecture v1.0 \u2014 unified civic knowledge intelligence",
+      "summary": "17 node types, 7 intelligence layers, 38 KG nodes; 24% overall.",
+      "files_created": [
+        "data/civic-intelligence.json",
+        "docs/INSTITUTIONAL_BRAIN.md",
+        "builds/040-master-knowledge-graph-civic-intelligence.md",
+        "mission-control/civic-intelligence.html",
+        "scripts/gen-civic-intelligence.py",
+        "scripts/update-mc-build40.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/civic-intelligence.html"
+      ],
+      "decisions_made": [
+        "Institutional Brain extends Build #11 KG \u2014 not a replacement",
+        "17 node types, 19 relationship types, 7 intelligence layers",
+        "Educational dependency chain \u2014 campaign finance through disclosure",
+        "Community intelligence chain \u2014 leader through new counties",
+        "Question engine planned \u2014 grounded in verified graph",
+        "24% honest readiness \u2014 38/500 nodes"
+      ],
+      "open_questions": [
+        "First brain visualization?",
+        "County graph integration timing?",
+        "Question engine vs AI engine?"
+      ],
+      "risks": [
+        "KG at 8% of target",
+        "4 orphan nodes",
+        "0 relationship-registry edges"
+      ],
+      "next_recommended": 41,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/civic-intelligence.html",
+      "review_status": "complete"
+    },
     {
       "number": 39,
       "title": "Citizens United Facts Documentary Experience & Media Studio",
@@ -3741,19 +3805,19 @@
     }
   ],
   "briefing": {
-    "what_built": "Media Studio v1.0 \u2014 8 divisions, 6 documentary chapters, media standards, MC metrics",
-    "building_now": "Multimedia architecture \u2014 halls and educate as interim static media",
+    "what_built": "Institutional Brain v1.0 \u2014 17 node types, 7 intelligence layers, dependency maps, MC metrics",
+    "building_now": "KG registry as foundation \u2014 explore-further interim navigation",
     "blocked": [
-      "No video production",
-      "Transcript/caption workflow",
-      "Media engagement tracking"
+      "No brain visualization",
+      "Question engine",
+      "County/community graph edges"
     ],
     "ready_public": [
-      "Media Studio MC dashboard",
-      "8-division taxonomy",
-      "Documentary chapter mapping"
+      "Civic Intelligence MC dashboard",
+      "Educational dependency chain",
+      "KG foundation link"
     ],
-    "next": "Build #40 \u2014 Component specifications with props/states"
+    "next": "Build #41 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -4192,5 +4256,16 @@
     "chapters_with_video": 0,
     "avg_division_readiness_pct": 15,
     "engagement_tracking_live": false
+  },
+  "civic_intelligence": "/data/civic-intelligence.json",
+  "civic_intelligence_dashboard": "/mission-control/civic-intelligence.html",
+  "civic_intelligence_inventory": {
+    "readiness_score": 24,
+    "kg_nodes": 38,
+    "kg_edges": 40,
+    "kg_orphan_nodes": 4,
+    "intelligence_layers_partial": 5,
+    "question_engine_live": false,
+    "brain_visualization_live": false
   }
 }
