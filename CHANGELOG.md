@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.42.0] - 2026-07-09 — Build #38 Interactive Learning Laboratory
+
+### Civic Discovery & Simulation System
+- **Interactive Learning Laboratory v1.0** — 10 laboratories, accessibility standards
+- Timeline, money flow, SCOTUS, constitutional, debate, KG, education builder
+- Halls mapped as interim — 0 true interactive experiences deployed
+- 22% honest readiness — architecture only, engagement not tracked
+- MC dashboard: `/mission-control/learning-lab.html`
+
 ## [1.41.0] - 2026-07-09 — Build #37 Master Research Library
 
 ### Institutional Knowledge Repository

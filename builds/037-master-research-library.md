@@ -47,6 +47,6 @@ Preserve the record from which the story is told — evidence never hidden behin
 
 ---
 
-## Recommended Next: Build #38 — Component Specifications with Props/States
+## Recommended Next: Build #39 — Component Specifications with Props/States
 
 Map library collections, archive cards, and reading lists to COMP-* from Build #17.

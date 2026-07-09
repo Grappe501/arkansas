@@ -254,7 +254,7 @@ out = {
         'Broken link monitoring not automated',
     ],
     'recommended_next_build': {
-        'number': 38,
+        'number': 39,
         'title': 'Component Specifications with Props/States',
         'note': 'Map library collections, archive cards, and reading lists to COMP-* from Build #17.',
     },

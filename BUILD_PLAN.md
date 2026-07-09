@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.41.0 · **Research Library:** [/mission-control/research-library.html](/mission-control/research-library.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #37:** ✅ Research Library · **Build #36:** ✅ Trust Framework · **Build #35:** ✅ Curriculum  
+**Current version:** 1.42.0 · **Learning Lab:** [/mission-control/learning-lab.html](/mission-control/learning-lab.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #38:** ✅ Learning Lab · **Build #37:** ✅ Research Library · **Build #36:** ✅ Trust Framework  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,11 +274,26 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **38** | **Interactive Learning Laboratory** | **✅ v1.42.0** |
 | **37** | **Master Research Library** | **✅ v1.41.0** |
 | **36** | **Trust Framework** | **✅ v1.40.0** |
-| **35** | **Master Curriculum** | **✅ v1.39.0** |
 
-**Next:** Build #38 — Component specifications with props/states.
+**Next:** Build #39 — Component specifications with props/states.
+
+---
+
+## Phase 38 — Interactive Learning Laboratory (Build #38) ★ NEW
+
+*Civic discovery — comprehension through interaction.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| L1 | Learning Laboratory Blueprint v1.0 | ✅ | `data/learning-laboratory.json` |
+| L2 | 10 laboratories defined | ✅ | Timeline through Education Builder |
+| L3 | 5 accessibility standards | ✅ | Per interactive experience |
+| L4 | Hall pages as interim labs | 🟡 | 0 interactive viz deployed |
+| L5 | MC engagement metrics (7) | ✅ | Tracking planned |
+| L6 | MC learning lab dashboard | ✅ | `/mission-control/learning-lab.html` |
 
 ---
 
@@ -703,7 +718,8 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#35**~~ | ~~Master Curriculum & Learning Standards~~ ✅ Done |
 | ~~**#36**~~ | ~~Evidence, Transparency & Trust Framework~~ ✅ Done |
 | ~~**#37**~~ | ~~Master Research Library & Digital Archive~~ ✅ Done |
-| **#38** | **Component specifications with props/states** |
+| ~~**#38**~~ | ~~Interactive Learning Laboratory~~ ✅ Done |
+| **#39** | **Component specifications with props/states** |
 
 ---
 

@@ -352,6 +352,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/learning-lab"
+  to = "/mission-control/learning-lab.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301

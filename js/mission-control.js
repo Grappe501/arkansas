@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Interactive Learning Lab <a href="/mission-control/learning-lab.html" class="mc-inline-link">10 Labs →</a></h2>
+    <p class="mc-bar-note">Build #38 — Civic discovery & simulation, 10 laboratories, accessibility standards. 0 interactive experiences live. 22% lab readiness.</p>
     <h2 class="mc-section-title">Master Research Library <a href="/mission-control/research-library.html" class="mc-inline-link">7 Collections →</a></h2>
     <p class="mc-bar-note">Build #37 — Digital archive A–G, reading lists, relationship engine. Preserve don't summarize. 22% library readiness.</p>
     <h2 class="mc-section-title">Trust Framework <a href="/mission-control/trust.html" class="mc-inline-link">Public Trust OS →</a></h2>
@@ -3717,6 +3719,77 @@ async function initMasterResearchLibrary() {
   initDevConsole(mc);
 }
 
+async function initLearningLaboratory() {
+  const root = document.getElementById('mc-learning-lab-root');
+  if (!root) return;
+
+  const [labRes, mcRes] = await Promise.all([
+    fetch('/data/learning-laboratory.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const lab = await labRes.json();
+  const mc = await mcRes.json();
+  const s = lab.summary;
+
+  const labRows = lab.laboratories.map(l => `
+    <tr><td>Lab ${l.number}</td><td>${l.title}</td><td>${l.readiness_pct}%</td>
+      <td><a href="${l.interim_route}">${l.interim_route}</a></td>
+      <td>${l.interactive_live ? 'Yes' : 'No'}</td><td>${l.status}</td></tr>`).join('');
+
+  const labCards = lab.laboratories.map(l => `
+    <div class="mc-card"><h3>Lab ${l.number}: ${l.title}</h3>
+      <p class="mc-bar-note">${l.purpose}</p>
+      <p class="mc-bar-note">${l.readiness_pct}% · Interactive: ${l.interactive_live ? 'live' : 'no'} · ${l.status}</p>
+      <ul class="mc-deliverables">${l.features.map(f => `<li>${f}</li>`).join('')}</ul>
+      ${l.note ? `<p class="mc-bar-note">${l.note}</p>` : ''}
+    </div>`).join('');
+
+  const metricRows = lab.mc_integration.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Learning Laboratory</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #38 · ${lab.title}</p>
+      <h1>Interactive Learning Laboratory</h1>
+      <p class="mc-header__question">${lab.governing_principle}</p>
+      <p class="mc-bar-note">${lab.learning_philosophy}</p>
+      <p class="mc-bar-note">Canonical: <code>${lab.canonical_lab_route}</code></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Lab readiness</div><div class="mc-stat__value">${s.learning_lab_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Laboratories</div><div class="mc-stat__value">${s.laboratories_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Avg lab</div><div class="mc-stat__value">${s.avg_lab_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Interactive live</div><div class="mc-stat__value">${s.interactive_experiences_live}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Partial</div><div class="mc-stat__value">${s.laboratories_partial}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Engagement</div><div class="mc-stat__value">${s.engagement_tracking_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Ten Laboratories</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>Laboratory</th><th>Ready</th><th>Interim</th><th>Interactive</th><th>Status</th></tr></thead>
+      <tbody>${labRows}</tbody></table>
+    <div class="mc-grid-2">${labCards}</div>
+    <h2 class="mc-section-title">Accessibility Standards</h2>
+    <ul class="mc-deliverables">${lab.accessibility_standards.map(a => `<li>${a}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Engagement Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Future Expansion</h2>
+    <ul class="mc-deliverables">${lab.future_expansion.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${lab.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${lab.recommended_next_build.number} — ${lab.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${lab.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/INTERACTIVE_LEARNING_LABORATORY.md">INTERACTIVE_LEARNING_LABORATORY.md</a> ·
+      <a href="/data/learning-laboratory.json">JSON</a> ·
+      <a href="/halls/money-map.html">Money Flow →</a> ·
+      <a href="/mission-control/knowledge-graph.html">Knowledge Graph</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -3753,4 +3826,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initMasterCurriculum();
   initTrustFramework();
   initMasterResearchLibrary();
+  initLearningLaboratory();
 });
