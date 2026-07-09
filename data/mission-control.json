@@ -1,6 +1,6 @@
 {
-  "version": "1.82.0",
-  "build": 78,
+  "version": "1.83.0",
+  "build": 79,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 78,
+    "overall_completion": 79,
     "current_build": {
-      "number": 78,
-      "title": "Citizens United Facts Master Arkansas City Operating System (ArCOS) v1.0"
-    },
-    "active_phase": "City Execution \u2192 Implementation Translation",
-    "last_completed": "Arkansas County Operating System",
-    "next_build": {
       "number": 79,
+      "title": "Citizens United Facts Master Arkansas Neighborhood Operating System (ANOS) v1.0"
+    },
+    "active_phase": "Neighborhood Execution \u2192 Implementation Translation",
+    "last_completed": "Arkansas City Operating System",
+    "next_build": {
+      "number": 80,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
@@ -58,6 +58,7 @@
     "organizational_constitution_readiness": 46,
     "arkansas_county_operating_system_readiness": 47,
     "arkansas_city_operating_system_readiness": 48,
+    "arkansas_neighborhood_operating_system_readiness": 47,
     "mc2_readiness": 42,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
@@ -106,8 +107,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 78,
-      "note": "Build #78 \u2014 Master Arkansas City Operating System."
+      "value": 79,
+      "note": "Build #79 \u2014 Master Arkansas Neighborhood Operating System."
     },
     {
       "id": "constitution",
@@ -529,7 +530,7 @@
       "label": "Neighborhood Organizing",
       "value": 50,
       "max": 100,
-      "note": "0 neighborhoods \u00b7 0 leaders \u00b7 map planned."
+      "note": "ANOS final layer \u2014 0 profiles \u00b7 0/200000 connected."
     },
     {
       "id": "civic_atlas",
@@ -677,6 +678,13 @@
       "value": 48,
       "max": 100,
       "note": "0/250 past initial interest \u00b7 health index planned."
+    },
+    {
+      "id": "arkansas_neighborhood_operating_system",
+      "label": "Neighborhood Operating System",
+      "value": 47,
+      "max": 100,
+      "note": "0 leaders \u00b7 health score planned."
     }
   ],
   "public_readiness": {
@@ -1437,6 +1445,12 @@
       "id": "arkansas_city_operating_system",
       "label": "City Operating System",
       "href": "/mission-control/arkansas-city-operating-system.html",
+      "status": "complete"
+    },
+    {
+      "id": "arkansas_neighborhood_operating_system",
+      "label": "Neighborhood Operating System",
+      "href": "/mission-control/arkansas-neighborhood-operating-system.html",
       "status": "complete"
     }
   ],
@@ -2463,6 +2477,112 @@
     }
   ],
   "builds": [
+    {
+      "number": 79,
+      "title": "Citizens United Facts Master Arkansas Neighborhood Operating System (ANOS) v1.0",
+      "version": "1.83.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Master ANOS \u2014 final layer; neighborhood trust foundation",
+      "summary": "Growth cycle, health score, mentorship trees, 200K strategy, 47% readiness. 0 profiles \u00b7 0/200000 connected.",
+      "files_created": [
+        "data/arkansas-neighborhood-operating-system.json",
+        "docs/MASTER_ARKANSAS_NEIGHBORHOOD_OPERATING_SYSTEM.md",
+        "builds/079-arkansas-neighborhood-operating-system.md",
+        "mission-control/arkansas-neighborhood-operating-system.html",
+        "scripts/gen-arkansas-neighborhood-operating-system.py",
+        "scripts/update-mc-build79.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/arkansas-neighborhood-operating-system.html"
+      ],
+      "decisions_made": [
+        "ANOS as final institutional architecture layer",
+        "8-step neighborhood growth cycle",
+        "Privacy: no residential data publicly displayed",
+        "6-role neighborhood leadership team",
+        "200K Arkansan strategy via local relationships",
+        "Extends Neighborhood Organizing (#57)",
+        "47% readiness \u2014 blueprint only"
+      ],
+      "open_questions": [
+        "ANOS vs Neighborhood Organizing (#57) \u2014 single dashboard?",
+        "Neighborhood profile creation workflow?",
+        "Health score weighting formula?",
+        "Mentorship tree data model \u2014 ROS or MC-native?"
+      ],
+      "risks": [
+        "0 neighborhood profiles \u2014 registry empty",
+        "0 neighborhood digital twins operational",
+        "0 neighborhood dashboards live \u2014 local operating center not built",
+        "Neighborhood Health Score not computed \u2014 factors specified only"
+      ],
+      "next_recommended": 80,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-neighborhood-operating-system.html",
+      "review_status": "complete"
+    },
+    {
+      "number": 79,
+      "title": "Citizens United Facts Master Arkansas Neighborhood Operating System (ANOS) v1.0",
+      "version": "1.83.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Master ANOS \u2014 final layer; neighborhood trust foundation",
+      "summary": "Growth cycle, health score, mentorship trees, 200K strategy, 47% readiness. 0 profiles \u00b7 0/200000 connected.",
+      "files_created": [
+        "data/arkansas-neighborhood-operating-system.json",
+        "docs/MASTER_ARKANSAS_NEIGHBORHOOD_OPERATING_SYSTEM.md",
+        "builds/079-arkansas-neighborhood-operating-system.md",
+        "mission-control/arkansas-neighborhood-operating-system.html",
+        "scripts/gen-arkansas-neighborhood-operating-system.py",
+        "scripts/update-mc-build79.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/arkansas-neighborhood-operating-system.html"
+      ],
+      "decisions_made": [
+        "ANOS as final institutional architecture layer",
+        "8-step neighborhood growth cycle",
+        "Privacy: no residential data publicly displayed",
+        "6-role neighborhood leadership team",
+        "200K Arkansan strategy via local relationships",
+        "Extends Neighborhood Organizing (#57)",
+        "47% readiness \u2014 blueprint only"
+      ],
+      "open_questions": [
+        "ANOS vs Neighborhood Organizing (#57) \u2014 single dashboard?",
+        "Neighborhood profile creation workflow?",
+        "Health score weighting formula?",
+        "Mentorship tree data model \u2014 ROS or MC-native?"
+      ],
+      "risks": [
+        "0 neighborhood profiles \u2014 registry empty",
+        "0 neighborhood digital twins operational",
+        "0 neighborhood dashboards live \u2014 local operating center not built",
+        "Neighborhood Health Score not computed \u2014 factors specified only"
+      ],
+      "next_recommended": 80,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-neighborhood-operating-system.html",
+      "review_status": "complete"
+    },
     {
       "number": 78,
       "title": "Citizens United Facts Master Arkansas City Operating System (ArCOS) v1.0",
@@ -6489,21 +6609,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Master ArCOS v1.0 \u2014 250-city execution framework",
-    "building_now": "78 builds specified \u2014 city digital twins next",
+    "what_built": "Master ANOS v1.0 \u2014 final layer, last 500 feet",
+    "building_now": "79 builds specified \u2014 neighborhood profiles next",
     "blocked": [
-      "City digital twins",
-      "City dashboards",
-      "Health index",
-      "Neighborhood integration UI"
+      "Neighborhood profiles",
+      "Growth cycle tracking",
+      "Health score",
+      "Mentorship trees"
     ],
     "ready_public": [
-      "6 readiness levels",
-      "8 digital twin sections",
-      "7 leadership roles",
-      "Integration chain"
+      "8-step growth cycle",
+      "10 profile sections",
+      "6 leadership roles",
+      "200K strategy"
     ],
-    "next": "Build #79 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #80 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -7317,5 +7437,13 @@
     "cities_total": 250,
     "digital_twins_operational": 0,
     "master_arcity": true
+  },
+  "arkansas_neighborhood_operating_system": "/data/arkansas-neighborhood-operating-system.json",
+  "arkansas_neighborhood_operating_system_dashboard": "/mission-control/arkansas-neighborhood-operating-system.html",
+  "arkansas_neighborhood_operating_system_inventory": {
+    "readiness_score": 47,
+    "neighborhood_profiles": 0,
+    "digital_twins_operational": 0,
+    "final_institutional_layer": true
   }
 }

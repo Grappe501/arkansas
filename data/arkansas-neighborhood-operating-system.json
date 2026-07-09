@@ -1,0 +1,413 @@
+{
+  "version": "1.0",
+  "build": 79,
+  "updated": "2026-07-09",
+  "title": "Master Arkansas Neighborhood Operating System (ANOS) v1.0",
+  "subtitle": "The Last 500 Feet",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/arkansas-neighborhood-operating-system.html",
+  "constitution": "/docs/MASTER_ARKANSAS_NEIGHBORHOOD_OPERATING_SYSTEM.md",
+  "purpose": "Final layer of institutional architecture \u2014 repeatable framework for neighborhood-level learning, relationship building, and community leadership across Arkansas.",
+  "governing_principle": "Healthy democracy begins close to home \u2014 around kitchen tables, in libraries, at community centers, among neighbors willing to learn together.",
+  "final_institutional_layer": true,
+  "institutional_philosophy": {
+    "title": "Institutional Philosophy",
+    "life_happens_in_neighborhoods": true,
+    "trusted_relationships": [
+      "Neighbors",
+      "Friends",
+      "Coworkers",
+      "Church members",
+      "Fellow volunteers",
+      "Community leaders"
+    ],
+    "designed_around_trust": true
+  },
+  "neighborhood_mission": {
+    "title": "Neighborhood Mission",
+    "items": [
+      "Neighborhood Education Leader",
+      "Welcoming place for discussion",
+      "Access to educational materials",
+      "Connections to city and county teams",
+      "Pathway into Community Education Academy",
+      "Connection to broader institution"
+    ],
+    "items_total": 6
+  },
+  "neighborhood_profile": {
+    "title": "Neighborhood Identity",
+    "sections_total": 10,
+    "sections": [
+      {
+        "id": "ANOS-PS-01",
+        "section": "Neighborhood name",
+        "status": "specified"
+      },
+      {
+        "id": "ANOS-PS-02",
+        "section": "Associated city",
+        "status": "specified"
+      },
+      {
+        "id": "ANOS-PS-03",
+        "section": "Associated county",
+        "status": "specified"
+      },
+      {
+        "id": "ANOS-PS-04",
+        "section": "General geographic description",
+        "status": "specified"
+      },
+      {
+        "id": "ANOS-PS-05",
+        "section": "Education Leaders",
+        "status": "planned"
+      },
+      {
+        "id": "ANOS-PS-06",
+        "section": "Community partners",
+        "status": "planned"
+      },
+      {
+        "id": "ANOS-PS-07",
+        "section": "Conversation history",
+        "status": "planned"
+      },
+      {
+        "id": "ANOS-PS-08",
+        "section": "Educational events",
+        "status": "planned"
+      },
+      {
+        "id": "ANOS-PS-09",
+        "section": "Resource usage",
+        "status": "planned"
+      },
+      {
+        "id": "ANOS-PS-10",
+        "section": "Growth indicators",
+        "status": "planned"
+      }
+    ],
+    "private_residential_never_public": true,
+    "living_profile": true
+  },
+  "neighborhood_leadership_team": {
+    "title": "Neighborhood Leadership Team",
+    "roles_total": 6,
+    "one_volunteer_multiple_roles_initially": true,
+    "roles": [
+      {
+        "id": "ANOS-LR-01",
+        "role": "Neighborhood Education Leader",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ANOS-LR-02",
+        "role": "Conversation Host",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ANOS-LR-03",
+        "role": "Volunteer Coordinator",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ANOS-LR-04",
+        "role": "Community Connector",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ANOS-LR-05",
+        "role": "Academy Ambassador",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ANOS-LR-06",
+        "role": "Coalition Liaison",
+        "filled": 0,
+        "status": "specified"
+      }
+    ]
+  },
+  "neighborhood_conversation_model": {
+    "title": "Neighborhood Conversation Model",
+    "intentionally_small": true,
+    "thoughtful_discussion_not_rallies": true,
+    "ideal_environments": [
+      "Living rooms",
+      "Libraries",
+      "Coffee shops",
+      "Community centers",
+      "Parks",
+      "Service clubs",
+      "Faith community meeting spaces"
+    ]
+  },
+  "neighborhood_learning_circles": {
+    "title": "Neighborhood Learning Circles",
+    "resources": [
+      "Lesson guides",
+      "Presentation slides",
+      "Fact sheets",
+      "Frequently asked questions",
+      "Source packets",
+      "Videos",
+      "Discussion questions",
+      "QR codes to learning paths"
+    ],
+    "connected_to_verified_resources": true,
+    "status": "specified"
+  },
+  "neighborhood_growth_cycle": {
+    "title": "Neighborhood Growth Cycle",
+    "steps_total": 8,
+    "steps": [
+      {
+        "step": 1,
+        "id": "one_learner",
+        "title": "One learner",
+        "neighborhoods_at_step": 0
+      },
+      {
+        "step": 2,
+        "id": "one_conversation",
+        "title": "One conversation",
+        "neighborhoods_at_step": 0
+      },
+      {
+        "step": 3,
+        "id": "five_learners",
+        "title": "Five learners",
+        "neighborhoods_at_step": 0
+      },
+      {
+        "step": 4,
+        "id": "one_education_leader",
+        "title": "One Education Leader",
+        "neighborhoods_at_step": 0
+      },
+      {
+        "step": 5,
+        "id": "regular_conversations",
+        "title": "Regular conversations",
+        "neighborhoods_at_step": 0
+      },
+      {
+        "step": 6,
+        "id": "new_volunteers",
+        "title": "New volunteers",
+        "neighborhoods_at_step": 0
+      },
+      {
+        "step": 7,
+        "id": "new_leaders",
+        "title": "New leaders",
+        "neighborhoods_at_step": 0
+      },
+      {
+        "step": 8,
+        "id": "healthy_community",
+        "title": "Healthy neighborhood learning community",
+        "neighborhoods_at_step": 0
+      }
+    ],
+    "mc_visualizes_growth": true,
+    "status": "specified"
+  },
+  "neighborhood_dashboard": {
+    "title": "Neighborhood Dashboard",
+    "sections": [
+      "Leadership",
+      "Conversation schedule",
+      "Participant growth",
+      "Learning progress",
+      "Volunteer activity",
+      "Resource requests",
+      "Community questions",
+      "Relationship network"
+    ],
+    "sections_total": 8,
+    "live": false,
+    "local_operating_center": true,
+    "status": "specified"
+  },
+  "neighborhood_health_score": {
+    "title": "Neighborhood Health Score",
+    "factors": [
+      "Leadership",
+      "Learning participation",
+      "Conversation frequency",
+      "Volunteer engagement",
+      "Academy participation",
+      "Resource usage",
+      "Relationship growth",
+      "Mentorship"
+    ],
+    "factors_total": 8,
+    "computed": false,
+    "identifies_support_needs": true,
+    "status": "planned"
+  },
+  "neighborhood_resource_center": {
+    "title": "Neighborhood Resource Center",
+    "items": [
+      "Conversation kits",
+      "Presentation templates",
+      "Printable handouts",
+      "Educational posters",
+      "Shareable graphics",
+      "Videos",
+      "Community discussion guides"
+    ],
+    "items_total": 7,
+    "status": "specified"
+  },
+  "neighborhood_mentorship": {
+    "title": "Neighborhood Mentorship",
+    "experienced_mentors_another": true,
+    "visualizations": [
+      "Mentorship trees",
+      "Leadership succession",
+      "Volunteer development",
+      "Knowledge transfer"
+    ],
+    "trees_live": false,
+    "pairs_active": 0,
+    "multiplication_growth": true,
+    "status": "specified"
+  },
+  "neighborhood_recognition": {
+    "title": "Neighborhood Recognition",
+    "milestones": [
+      "First community conversation",
+      "First Academy graduate",
+      "First coalition partnership",
+      "First neighborhood learning circle",
+      "Volunteer anniversaries",
+      "Leadership achievements"
+    ],
+    "milestones_awarded": 0,
+    "reinforces_service_not_competition": true,
+    "status": "specified"
+  },
+  "two_hundred_k_strategy": {
+    "title": "The 200,000 Arkansan Strategy",
+    "target": 200000,
+    "current_connected": 0,
+    "growth_at_neighborhood_level": true,
+    "leader_questions": [
+      "Who in my own neighborhood would enjoy learning this?",
+      "Who might host a conversation?",
+      "Who could become the next leader?"
+    ],
+    "statewide_sum_of_local_relationships": true
+  },
+  "integration": {
+    "chain": "ArCOS (#78) \u2192 ACOS (#77) \u2192 Education Academy \u2192 Citizen Action Center \u2192 Relationship OS \u2192 Civic Atlas \u2192 Mission Control",
+    "every_neighborhood_connected_node": true,
+    "final_layer_of_architecture": true,
+    "systems": [
+      {
+        "system": "Arkansas City OS (#78)",
+        "route": "/mission-control/arkansas-city-operating-system.html",
+        "status": "live"
+      },
+      {
+        "system": "Arkansas County OS (#77)",
+        "route": "/mission-control/arkansas-county-operating-system.html",
+        "status": "live"
+      },
+      {
+        "system": "Community Education Academy (#68)",
+        "route": "/mission-control/citizen-leadership-academy.html",
+        "status": "live"
+      },
+      {
+        "system": "Citizen Action Center (#62)",
+        "route": "/mission-control/citizen-action-center.html",
+        "status": "live"
+      },
+      {
+        "system": "Relationship Operating System (#59)",
+        "route": "/mission-control/relationship-os.html",
+        "status": "live"
+      },
+      {
+        "system": "Arkansas Civic Atlas (#58)",
+        "route": "/mission-control/civic-atlas.html",
+        "status": "live"
+      },
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      },
+      {
+        "system": "Neighborhood Organizing (#57)",
+        "route": "/mission-control/neighborhood-organizing.html",
+        "status": "live",
+        "note": "Extended by ANOS"
+      },
+      {
+        "system": "Relational Growth Engine (#69)",
+        "route": "/mission-control/relational-organizing-growth-engine.html",
+        "status": "live"
+      },
+      {
+        "system": "Arkansas Command Strategy (#70)",
+        "route": "/mission-control/arkansas-command-strategy.html",
+        "status": "live"
+      }
+    ],
+    "extends": "Neighborhood Organizing (#57)"
+  },
+  "long_term_vision": "Twenty years after launch: thousands of neighborhood conversations; children see respectful civic discussion as normal; neighbors gather to learn rather than argue; Education Leaders become trusted local resources. Institution defined by relationships created throughout Arkansas.",
+  "summary": {
+    "neighborhood_profiles_total": 0,
+    "neighborhoods_with_digital_twin": 0,
+    "neighborhood_dashboards_live": 0,
+    "neighborhoods_with_leader": 0,
+    "growth_cycle_steps": 8,
+    "profile_sections": 10,
+    "leadership_roles": 6,
+    "neighborhood_health_score_computed": false,
+    "mentorship_trees_live": false,
+    "mentorship_pairs": 0,
+    "recognition_milestones_awarded": 0,
+    "connected_arkansans": 0,
+    "participants_target": 200000,
+    "arkansas_neighborhood_operating_system_readiness_pct": 47,
+    "arkansas_city_operating_system_readiness_pct": 48,
+    "arkansas_county_operating_system_readiness_pct": 47,
+    "neighborhood_organizing_readiness_pct": 50,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "0 neighborhood profiles \u2014 registry empty",
+    "0 neighborhood digital twins operational",
+    "0 neighborhood dashboards live \u2014 local operating center not built",
+    "Neighborhood Health Score not computed \u2014 factors specified only",
+    "Mentorship trees not live \u2014 multiplication visualization missing",
+    "0 recognition milestones awarded",
+    "Growth cycle specified \u2014 no per-neighborhood tracking",
+    "Build #79 vs Neighborhood Organizing (#57) \u2014 ANOS extends but does not replace",
+    "Privacy: residential data policy specified \u2014 enforcement not automated",
+    "Learning circle resources \u2014 not per-neighborhood",
+    "200K strategy \u2014 0/200,000 connected",
+    "Conversation model environments \u2014 no venue registry",
+    "Canonical neighborhood routes not built"
+  ],
+  "recommended_next_build": {
+    "number": 80,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "Neighborhood profile pages, growth cycle UI, health score, mentorship trees, recognition milestones, conversation kit delivery, COMP-* specs, GitHub backlog."
+  }
+}

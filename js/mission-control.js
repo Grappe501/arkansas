@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Neighborhood Operating System <a href="/mission-control/arkansas-neighborhood-operating-system.html" class="mc-inline-link">ANOS #79 →</a></h2>
+    <p class="mc-bar-note">Build #79 — Master Arkansas Neighborhood Operating System. Final layer — last 500 feet. Growth cycle, health score, mentorship trees, 200K strategy. Neighborhoods build trust. 0 profiles · 0/200K connected. ~47% readiness.</p>
     <h2 class="mc-section-title">City Operating System <a href="/mission-control/arkansas-city-operating-system.html" class="mc-inline-link">ArCOS #78 →</a></h2>
     <p class="mc-bar-note">Build #78 — Master Arkansas City Operating System. 250 cities, digital twins, 6 readiness levels, neighborhood integration. Counties structure · cities connect · neighborhoods trust. 0/250 digital twins · 0 past initial interest. ~48% readiness.</p>
     <h2 class="mc-section-title">County Operating System <a href="/mission-control/arkansas-county-operating-system.html" class="mc-inline-link">ACOS #77 →</a></h2>
@@ -5223,6 +5225,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initOrganizationalConstitution();
   initArkansasCountyOperatingSystem();
   initArkansasCityOperatingSystem();
+  initArkansasNeighborhoodOperatingSystem();
 });
 
 async function initUxArchitecture() {
@@ -8254,6 +8257,113 @@ async function initArkansasCityOperatingSystem() {
       <a href="/mission-control/arkansas-county-operating-system.html">ACOS (#77)</a> ·
       <a href="/mission-control/neighborhood-organizing.html">Neighborhood (#57)</a> ·
       <a href="/mission-control/arkansas-command-strategy.html">Command Strategy (#70)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initArkansasNeighborhoodOperatingSystem() {
+  const root = document.getElementById('mc-arkansas-neighborhood-operating-system-root');
+  if (!root) return;
+
+  const [anosRes, mcRes] = await Promise.all([
+    fetch('/data/arkansas-neighborhood-operating-system.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const anos = await anosRes.json();
+  const mc = await mcRes.json();
+  const s = anos.summary;
+
+  const profileRows = anos.neighborhood_profile.sections.map(sec => `
+    <tr><td><code>${sec.id}</code></td><td>${sec.section}</td><td>${sec.status}</td></tr>`).join('');
+
+  const roleRows = anos.neighborhood_leadership_team.roles.map(r => `
+    <tr><td><code>${r.id}</code></td><td>${r.role}</td><td>${r.filled}</td><td>${r.status}</td></tr>`).join('');
+
+  const growthRows = anos.neighborhood_growth_cycle.steps.map(step => `
+    <tr><td>${step.step}</td><td><code>${step.id}</code></td><td>${step.title}</td>
+      <td>${step.neighborhoods_at_step}</td></tr>`).join('');
+
+  const systemRows = anos.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td><td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Arkansas Neighborhood Operating System</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #79 · ${anos.title}</p>
+      <h1>${anos.subtitle}</h1>
+      <p class="mc-header__question">${anos.governing_principle}</p>
+      <p class="mc-bar-note">${anos.purpose}</p>
+      <p class="mc-bar-note"><strong>Final institutional layer:</strong> ${anos.final_institutional_layer ? 'Yes' : 'No'} · <strong>Extends:</strong> ${anos.integration.extends}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">ANOS readiness</div><div class="mc-stat__value">${s.arkansas_neighborhood_operating_system_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Profiles</div><div class="mc-stat__value">${s.neighborhood_profiles_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Digital twins</div><div class="mc-stat__value">${s.neighborhoods_with_digital_twin}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">With leaders</div><div class="mc-stat__value">${s.neighborhoods_with_leader}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Connected</div><div class="mc-stat__value">${s.connected_arkansans}/${s.participants_target}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Health score</div><div class="mc-stat__value">${s.neighborhood_health_score_computed ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">${anos.institutional_philosophy.title}</h2>
+    <p class="mc-bar-note">Life happens in neighborhoods: ${anos.institutional_philosophy.life_happens_in_neighborhoods ? 'Yes' : 'No'} · Designed around trust: ${anos.institutional_philosophy.designed_around_trust ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${anos.institutional_philosophy.trusted_relationships.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${anos.neighborhood_mission.title}</h2>
+    <ul class="mc-deliverables">${anos.neighborhood_mission.items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${anos.neighborhood_profile.title}</h2>
+    <p class="mc-bar-note">Private residential never public: ${anos.neighborhood_profile.private_residential_never_public ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Section</th><th>Status</th></tr></thead>
+      <tbody>${profileRows}</tbody></table>
+    <h2 class="mc-section-title">${anos.neighborhood_leadership_team.title}</h2>
+    <p class="mc-bar-note">One volunteer, multiple roles: ${anos.neighborhood_leadership_team.one_volunteer_multiple_roles_initially ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Role</th><th>Filled</th><th>Status</th></tr></thead>
+      <tbody>${roleRows}</tbody></table>
+    <h2 class="mc-section-title">${anos.neighborhood_conversation_model.title}</h2>
+    <p class="mc-bar-note">Intentionally small: ${anos.neighborhood_conversation_model.intentionally_small ? 'Yes' : 'No'} · Thoughtful discussion, not rallies: ${anos.neighborhood_conversation_model.thoughtful_discussion_not_rallies ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${anos.neighborhood_conversation_model.ideal_environments.map(e => `<li>${e}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${anos.neighborhood_learning_circles.title}</h2>
+    <p class="mc-bar-note">Connected to verified resources: ${anos.neighborhood_learning_circles.connected_to_verified_resources ? 'Yes' : 'No'} · ${anos.neighborhood_learning_circles.status}</p>
+    <ul class="mc-deliverables">${anos.neighborhood_learning_circles.resources.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${anos.neighborhood_growth_cycle.title}</h2>
+    <p class="mc-bar-note">MC visualizes growth: ${anos.neighborhood_growth_cycle.mc_visualizes_growth ? 'Yes' : 'No'} · ${anos.neighborhood_growth_cycle.status}</p>
+    <table class="mc-table"><thead><tr><th>Step</th><th>ID</th><th>Stage</th><th>Neighborhoods</th></tr></thead>
+      <tbody>${growthRows}</tbody></table>
+    <h2 class="mc-section-title">${anos.neighborhood_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${anos.neighborhood_dashboard.live ? 'Yes' : 'No'} · Local operating center: ${anos.neighborhood_dashboard.local_operating_center ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${anos.neighborhood_dashboard.sections.map(sec => `<li>${sec}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${anos.neighborhood_health_score.title}</h2>
+    <p class="mc-bar-note">Computed: ${anos.neighborhood_health_score.computed ? 'Yes' : 'No'} · ${anos.neighborhood_health_score.status}</p>
+    <ul class="mc-deliverables">${anos.neighborhood_health_score.factors.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${anos.neighborhood_resource_center.title}</h2>
+    <ul class="mc-deliverables">${anos.neighborhood_resource_center.items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${anos.neighborhood_mentorship.title}</h2>
+    <p class="mc-bar-note">Trees live: ${anos.neighborhood_mentorship.trees_live ? 'Yes' : 'No'} · Pairs: ${anos.neighborhood_mentorship.pairs_active} · Multiplication growth: ${anos.neighborhood_mentorship.multiplication_growth ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${anos.neighborhood_mentorship.visualizations.map(v => `<li>${v}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${anos.neighborhood_recognition.title}</h2>
+    <p class="mc-bar-note">Milestones awarded: ${anos.neighborhood_recognition.milestones_awarded} · Service not competition: ${anos.neighborhood_recognition.reinforces_service_not_competition ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${anos.neighborhood_recognition.milestones.map(m => `<li>${m}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${anos.two_hundred_k_strategy.title}</h2>
+    <p class="mc-bar-note">Connected: ${anos.two_hundred_k_strategy.current_connected}/${anos.two_hundred_k_strategy.target} · Growth at neighborhood level: ${anos.two_hundred_k_strategy.growth_at_neighborhood_level ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${anos.two_hundred_k_strategy.leader_questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${anos.integration.chain}</p>
+    <p class="mc-bar-note"><strong>Every neighborhood connected node:</strong> ${anos.integration.every_neighborhood_connected_node ? 'Yes' : 'No'} · <strong>Final layer:</strong> ${anos.integration.final_layer_of_architecture ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${anos.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${anos.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${anos.recommended_next_build.number} — ${anos.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${anos.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_ARKANSAS_NEIGHBORHOOD_OPERATING_SYSTEM.md">MASTER_ARKANSAS_NEIGHBORHOOD_OPERATING_SYSTEM.md</a> ·
+      <a href="/data/arkansas-neighborhood-operating-system.json">JSON</a> ·
+      <a href="/data/neighborhood-profiles.json">Profiles Registry</a> ·
+      <a href="/mission-control/neighborhood-organizing.html">Neighborhood Organizing (#57)</a> ·
+      <a href="/mission-control/arkansas-city-operating-system.html">ArCOS (#78)</a> ·
+      <a href="/mission-control/relational-organizing-growth-engine.html">Growth Engine (#69)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

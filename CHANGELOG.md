@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.83.0] - 2026-07-09 — Build #79 Arkansas Neighborhood Operating System (ANOS)
+
+### The Last 500 Feet
+- **Master Arkansas Neighborhood Operating System (ANOS) v1.0** — final layer of institutional architecture
+- 8-step growth cycle, 10-section profile (privacy-safe), 6-role leadership team, Neighborhood Health Score
+- Conversation model, learning circles, resource center, mentorship trees, recognition milestones
+- 200,000 Arkansan strategy via local relationships; integrates ArCOS (#78), ACOS (#77), Growth Engine (#69)
+- Extends Neighborhood Organizing (#57)
+- Honest: 0 profiles · 0 digital twins · 0 dashboards · health score not computed · 0/200K connected · ~47% readiness
+- MC dashboard: `/mission-control/arkansas-neighborhood-operating-system.html`
+
 ## [1.82.0] - 2026-07-09 — Build #78 Arkansas City Operating System (ArCOS)
 
 ### Two Hundred Fifty Cities. One Shared Mission.

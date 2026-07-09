@@ -557,6 +557,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/arkansas-neighborhood-operating-system"
+  to = "/mission-control/arkansas-neighborhood-operating-system.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301
