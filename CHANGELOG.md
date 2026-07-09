@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.34.0] - 2026-07-09 — Build #30 Outreach Engine
+
+### Public Engagement & Education Campaign System
+- **Arkansas Outreach Engine v1.0** — 5 pillars, 7 campaigns, 7-step sequence
+- Share toolkit, resource formats, county outreach profiles
+- 10 analytics metrics — educational impact over popularity
+- 22% honest readiness — share/coalition partial, no analytics
+- MC dashboard: `/mission-control/outreach.html`
+
 ## [1.33.0] - 2026-07-09 — Build #29 Research Observatory
 
 ### Citizens United Facts Research Observatory

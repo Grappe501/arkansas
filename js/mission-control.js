@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Outreach Engine <a href="/mission-control/outreach.html" class="mc-inline-link">Arkansas Campaigns →</a></h2>
+    <p class="mc-bar-note">Build #30 — 5 pillars, 7 campaigns, share toolkit, county outreach. 22% outreach readiness.</p>
     <h2 class="mc-section-title">Research Observatory <a href="/mission-control/research-observatory.html" class="mc-inline-link">Early Warning System →</a></h2>
     <p class="mc-bar-note">Build #29 — 6 research divisions, 9-stage workflow, legislative tracking, gap tracker. 18% observatory readiness.</p>
     <h2 class="mc-section-title">Education Academy <a href="/mission-control/education-academy.html" class="mc-inline-link">Leader Development →</a></h2>
@@ -2925,6 +2927,91 @@ async function initResearchObservatory() {
   initDevConsole(mc);
 }
 
+async function initOutreachEngine() {
+  const root = document.getElementById('mc-outreach-root');
+  if (!root) return;
+
+  const [outRes, mcRes] = await Promise.all([
+    fetch('/data/outreach-engine.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const out = await outRes.json();
+  const mc = await mcRes.json();
+  const s = out.summary;
+
+  const pillarCards = out.pillars.map(p => `
+    <div class="mc-card">
+      <h3>Pillar ${p.number}: ${p.title}</h3>
+      <p class="mc-bar-note">${p.purpose}</p>
+      <ul class="mc-deliverables">${(p.destinations || p.content_types || p.venues || p.activities || p.audiences || []).map(i => `<li>${i}</li>`).join('')}</ul>
+      ${p.route ? `<p class="mc-bar-note"><a href="${p.route}">${p.route}</a> · ${p.status}</p>` : `<p class="mc-bar-note">${p.status}</p>`}
+    </div>`).join('');
+
+  const campaignRows = out.campaigns.map(c => `
+    <tr class="${c.status === 'partial' ? 'mc-table__row--approved' : ''}">
+      <td><code>${c.id}</code></td><td>${c.title}</td><td>${c.focus}</td>
+      <td>${c.route ? `<a href="${c.route}">${c.route}</a>` : '—'}</td><td>${c.status}</td></tr>`).join('');
+
+  const analyticsRows = out.analytics_metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td>
+      <td>${m.current !== undefined ? m.current : '—'}</td><td>${m.status}</td></tr>`).join('');
+
+  const panelRows = out.dashboard_panels.map(p => `
+    <tr><td><code>${p.id}</code></td><td>${p.title}</td><td>${p.current}</td><td>${p.status}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Outreach Engine</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #30 · ${out.title}</p>
+      <h1>Arkansas Outreach Engine</h1>
+      <p class="mc-header__question">${out.governing_principle}</p>
+      <p class="mc-bar-note"><strong>Help more Arkansans understand Citizens United.</strong></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Outreach readiness</div><div class="mc-stat__value">${s.outreach_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Pillars</div><div class="mc-stat__value">${s.pillars}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Campaigns</div><div class="mc-stat__value">${s.campaigns}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Campaigns partial</div><div class="mc-stat__value">${s.campaigns_partial}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Analytics live</div><div class="mc-stat__value">${s.analytics_live}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Share toolkit</div><div class="mc-stat__value">${s.share_toolkit_items}</div></div>
+    </div>
+    <h2 class="mc-section-title">Outreach Sequence</h2>
+    <p class="mc-bar-note">${out.outreach_sequence.join(' → ')}</p>
+    <h2 class="mc-section-title">Five Outreach Pillars</h2>
+    <div class="mc-grid-2">${pillarCards}</div>
+    <h2 class="mc-section-title">Outreach Campaigns</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Campaign</th><th>Focus</th><th>Route</th><th>Status</th></tr></thead>
+      <tbody>${campaignRows}</tbody></table>
+    <h2 class="mc-section-title">Resource Distribution</h2>
+    <ul class="mc-deliverables">${out.resource_formats.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Share Toolkit</h2>
+    <ul class="mc-deliverables">${out.share_toolkit.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Outreach Analytics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${analyticsRows}</tbody></table>
+    <p class="mc-bar-note">Educational impact over popularity.</p>
+    <h2 class="mc-section-title">Arkansas County Outreach</h2>
+    <ul class="mc-deliverables">${out.county_outreach_profile.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Outreach Dashboard</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Panel</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${panelRows}</tbody></table>
+    <h2 class="mc-section-title">Continuous Improvement</h2>
+    <ul class="mc-deliverables">${out.continuous_improvement.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${out.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${out.recommended_next_build.number} — ${out.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${out.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/OUTREACH_ENGINE.md">OUTREACH_ENGINE.md</a> ·
+      <a href="/data/outreach-engine.json">JSON</a> ·
+      <a href="/action/share.html">Share</a> ·
+      <a href="/coalition/">Coalition</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -2953,4 +3040,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initContentProductionFactory();
   initEducationAcademy();
   initResearchObservatory();
+  initOutreachEngine();
 });

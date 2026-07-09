@@ -1,6 +1,6 @@
 {
-  "version": "1.33.0",
-  "build": 29,
+  "version": "1.34.0",
+  "build": 30,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 29,
+    "overall_completion": 30,
     "current_build": {
-      "number": 29,
-      "title": "Citizens United Facts Research Observatory"
-    },
-    "active_phase": "Living Research \u2014 Research Observatory",
-    "last_completed": "Community Education Academy",
-    "next_build": {
       "number": 30,
+      "title": "Citizens United Facts Public Engagement & Education Campaign System"
+    },
+    "active_phase": "Arkansas Outreach \u2014 Public Engagement Campaign System",
+    "last_completed": "Research Observatory",
+    "next_build": {
+      "number": 31,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
@@ -25,9 +25,9 @@
     "content_readiness": 20,
     "research_readiness": 22,
     "data_viz_readiness": 2,
-    "signup_funnel_readiness": 20,
-    "civic_action_readiness": 28,
-    "coalition_readiness": 14,
+    "signup_funnel_readiness": 22,
+    "civic_action_readiness": 30,
+    "coalition_readiness": 16,
     "data_model_readiness": 38,
     "route_inventory_readiness": 18,
     "component_registry_readiness": 22,
@@ -43,6 +43,7 @@
     "content_factory_readiness": 28,
     "education_academy_readiness": 24,
     "observatory_readiness": 18,
+    "outreach_readiness": 22,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -50,8 +51,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 29,
-      "note": "Research Observatory live \u2014 6 divisions, early warning system architecture."
+      "value": 30,
+      "note": "Outreach Engine live \u2014 5 pillars, 7 campaigns. Help more Arkansans understand."
     },
     {
       "id": "constitution",
@@ -122,8 +123,8 @@
     {
       "id": "relational",
       "label": "Relational Organizing Completion",
-      "value": 10,
-      "note": "Coalition directory + org referrals planned alongside relational organizing."
+      "value": 14,
+      "note": "Outreach defined \u2014 share page partial; referral tracking not integrated."
     },
     {
       "id": "model_law",
@@ -278,6 +279,13 @@
       "value": 18,
       "max": 100,
       "note": "2 divisions partial \u2014 SCOTUS/AR legislature monitors not automated."
+    },
+    {
+      "id": "outreach",
+      "label": "Outreach Engine",
+      "value": 22,
+      "max": 100,
+      "note": "3 pillars partial \u2014 no analytics or campaign management yet."
     }
   ],
   "public_readiness": {
@@ -744,6 +752,12 @@
       "id": "research_observatory",
       "label": "Research Observatory",
       "href": "/mission-control/research-observatory.html",
+      "status": "complete"
+    },
+    {
+      "id": "outreach_engine",
+      "label": "Outreach Engine",
+      "href": "/mission-control/outreach.html",
       "status": "complete"
     }
   ],
@@ -1770,6 +1784,54 @@
     }
   ],
   "builds": [
+    {
+      "number": 30,
+      "title": "Citizens United Facts Public Engagement & Education Campaign System",
+      "version": "1.34.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Arkansas Outreach Engine v1.0 \u2014 expand understanding, not attention",
+      "summary": "5 pillars, 7 campaigns, 5 share toolkit items; 22% readiness.",
+      "files_created": [
+        "data/outreach-engine.json",
+        "docs/OUTREACH_ENGINE.md",
+        "builds/030-outreach-engine.md",
+        "mission-control/outreach.html",
+        "scripts/gen-outreach-engine.py",
+        "scripts/update-mc-build30.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/outreach.html"
+      ],
+      "decisions_made": [
+        "7-step outreach sequence: Discover through Build Community",
+        "5 pillars: digital, social, conversations, coalition, public officials",
+        "7 campaign types defined",
+        "10 analytics metrics \u2014 educational impact over popularity",
+        "County outreach profiles linked to coalition index",
+        "22% honest readiness \u2014 share/coalition partial, no analytics"
+      ],
+      "open_questions": [
+        "Analytics provider (GA vs Plausible)?",
+        "When to launch first campaign?"
+      ],
+      "risks": [
+        "22% readiness \u2014 campaigns architecture only",
+        "No social content library"
+      ],
+      "next_recommended": 31,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/outreach.html",
+      "review_status": "complete"
+    },
     {
       "number": 29,
       "title": "Citizens United Facts Research Observatory",
@@ -3060,20 +3122,20 @@
     }
   ],
   "briefing": {
-    "what_built": "Research Observatory v1.0 \u2014 6 divisions, early warning system for living research",
-    "building_now": "Legislative intelligence architecture \u2014 component specs next",
+    "what_built": "Outreach Engine v1.0 \u2014 5 pillars, 7 campaigns, Arkansas county outreach",
+    "building_now": "Public engagement architecture \u2014 component specs next",
     "blocked": [
-      "No automated monitoring",
-      "Legislative tracking not live",
-      "0 academic sources"
+      "No analytics integration",
+      "Campaign management not built",
+      "Social library planned"
     ],
     "ready_public": [
-      "Observatory MC dashboard",
-      "Division map",
-      "Workflow + priorities",
-      "Gap tracker"
+      "Outreach MC dashboard",
+      "Pillar + campaign map",
+      "Share toolkit schema",
+      "County outreach profile"
     ],
-    "next": "Build #30 \u2014 Component specifications with props/states"
+    "next": "Build #31 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -3356,5 +3418,15 @@
     "future_alerts_automated": 0,
     "automated_monitoring_live": false,
     "legislative_tracking_live": false
+  },
+  "outreach_engine": "/data/outreach-engine.json",
+  "outreach_dashboard": "/mission-control/outreach.html",
+  "outreach_inventory": {
+    "readiness_score": 22,
+    "pillars": 5,
+    "campaigns": 7,
+    "campaigns_partial": 2,
+    "analytics_live": 0,
+    "campaign_management_live": false
   }
 }

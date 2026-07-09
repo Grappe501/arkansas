@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.33.0 · **Research Observatory:** [/mission-control/research-observatory.html](/mission-control/research-observatory.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #29:** ✅ Research Observatory · **Build #28:** ✅ Education Academy · **Build #27:** ✅ Content Factory  
+**Current version:** 1.34.0 · **Outreach Engine:** [/mission-control/outreach.html](/mission-control/outreach.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #30:** ✅ Outreach Engine · **Build #29:** ✅ Research Observatory · **Build #28:** ✅ Education Academy  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -273,8 +273,25 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **27** | **Content Production Factory** | **✅ v1.31.0** |
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
+| **30** | **Outreach Engine** | **✅ v1.34.0** |
 
-**Next:** Build #30 — Component specifications with props/states.
+**Next:** Build #31 — Component specifications with props/states.
+
+---
+
+## Phase 30 — Outreach Engine (Build #30) ★ NEW
+
+*Arkansas Public Engagement & Education Campaign System.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| O1 | Outreach Engine Blueprint v1.0 | ✅ | `data/outreach-engine.json` |
+| O2 | 5 outreach pillars | ✅ | Digital through public officials |
+| O3 | 7-step outreach sequence | ✅ | Discover → Build Community |
+| O4 | 7 campaign types | ✅ | Awareness through community education |
+| O5 | Share toolkit + analytics schema | ✅ | Educational impact metrics |
+| O6 | County outreach profiles | ✅ | Linked to coalition index |
+| O7 | MC outreach dashboard | ✅ | `/mission-control/outreach.html` |
 
 ---
 
@@ -561,7 +578,8 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#27**~~ | ~~Content Production Factory~~ ✅ Done |
 | ~~**#28**~~ | ~~Community Education Academy~~ ✅ Done |
 | ~~**#29**~~ | ~~Research Observatory~~ ✅ Done |
-| **#30** | **Component specifications with props/states** |
+| ~~**#30**~~ | ~~Public Engagement & Outreach Engine~~ ✅ Done |
+| **#31** | **Component specifications with props/states** |
 
 ---
 

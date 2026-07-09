@@ -1,0 +1,373 @@
+{
+  "version": "1.0",
+  "build": 30,
+  "updated": "2026-07-09",
+  "title": "Public Engagement & Education Campaign System v1.0",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/outreach.html",
+  "constitution": "/docs/OUTREACH_ENGINE.md",
+  "purpose": "Help more Arkansans understand Citizens United \u2014 not rely on accidental discovery.",
+  "outreach_philosophy": "Discover \u2192 Learn \u2192 Understand \u2192 Share \u2192 Discuss \u2192 Teach \u2192 Build Community",
+  "governing_principle": "Expand understanding\u2014not attention. Informed communities over popularity metrics.",
+  "outreach_sequence": [
+    "Discover",
+    "Learn",
+    "Understand",
+    "Share",
+    "Discuss",
+    "Teach",
+    "Build Community"
+  ],
+  "pillars": [
+    {
+      "id": "OUT-P1",
+      "number": 1,
+      "title": "Digital Education",
+      "purpose": "Website as permanent authoritative educational library",
+      "destinations": [
+        "Educational articles",
+        "Interactive timelines",
+        "Research library",
+        "Source documents",
+        "Learning paths"
+      ],
+      "status": "partial",
+      "route": "/"
+    },
+    {
+      "id": "OUT-P2",
+      "number": 2,
+      "title": "Social Media Education",
+      "purpose": "Introduce ideas \u2014 not replace learning",
+      "content_types": [
+        "Short educational videos",
+        "Historical facts",
+        "Timeline graphics",
+        "FAQs",
+        "Myth-versus-fact posts",
+        "Supreme Court excerpts",
+        "Arkansas legislative updates",
+        "Research highlights"
+      ],
+      "status": "planned",
+      "route": "/coalition/resources.html"
+    },
+    {
+      "id": "OUT-P3",
+      "number": 3,
+      "title": "Community Conversations",
+      "purpose": "Education grows through discussion",
+      "venues": [
+        "Library presentations",
+        "Civic clubs",
+        "Neighborhood meetings",
+        "Community centers",
+        "Faith community discussions",
+        "Campus organizations",
+        "Local educational events"
+      ],
+      "status": "partial",
+      "route": "/action/community-conversation.html"
+    },
+    {
+      "id": "OUT-P4",
+      "number": 4,
+      "title": "Coalition Outreach",
+      "purpose": "Partners multiply civic education reach",
+      "activities": [
+        "Share resources",
+        "Host events",
+        "Invite speakers",
+        "Promote learning paths",
+        "Introduce new participants",
+        "Connect additional organizations"
+      ],
+      "status": "partial",
+      "route": "/coalition/"
+    },
+    {
+      "id": "OUT-P5",
+      "number": 5,
+      "title": "Public Official Education",
+      "purpose": "Share organized educational resources with lawmakers",
+      "audiences": [
+        "Arkansas U.S. Representatives",
+        "Arkansas U.S. Senators",
+        "Arkansas General Assembly"
+      ],
+      "status": "planned",
+      "route": "/action/contact-legislators.html"
+    }
+  ],
+  "pillar_count": 5,
+  "campaigns": [
+    {
+      "id": "OUT-C01",
+      "title": "Educational Awareness Campaign",
+      "focus": "Introduce the platform",
+      "status": "planned"
+    },
+    {
+      "id": "OUT-C02",
+      "title": "Learn the History Campaign",
+      "focus": "Campaign finance history",
+      "status": "planned",
+      "world": "WORLD-01"
+    },
+    {
+      "id": "OUT-C03",
+      "title": "Understanding the Decision Campaign",
+      "focus": "Supreme Court case",
+      "status": "planned",
+      "world": "WORLD-02"
+    },
+    {
+      "id": "OUT-C04",
+      "title": "Understanding the Constitution Campaign",
+      "focus": "Constitutional principles",
+      "status": "planned",
+      "world": "WORLD-03"
+    },
+    {
+      "id": "OUT-C05",
+      "title": "Follow the Money Campaign",
+      "focus": "Political spending and data",
+      "status": "planned",
+      "world": "WORLD-04"
+    },
+    {
+      "id": "OUT-C06",
+      "title": "Arkansas Solutions Campaign",
+      "focus": "Federal, state, ballot options",
+      "status": "partial",
+      "world": "WORLD-06",
+      "route": "/solutions/"
+    },
+    {
+      "id": "OUT-C07",
+      "title": "Community Education Campaign",
+      "focus": "Recruit Education Leaders and coalition partners",
+      "status": "partial",
+      "route": "/educate/"
+    }
+  ],
+  "campaign_count": 7,
+  "resource_formats": [
+    "Printable PDFs",
+    "Presentation slides",
+    "One-page summaries",
+    "Infographics",
+    "Short videos",
+    "Community discussion guides",
+    "Frequently asked questions",
+    "Source packets"
+  ],
+  "share_toolkit": [
+    "Copyable summaries",
+    "Downloadable graphics",
+    "Printable handouts",
+    "QR codes linking to full lesson",
+    "Suggested social media captions"
+  ],
+  "analytics_metrics": [
+    {
+      "id": "OUT-AM-01",
+      "title": "Website visits",
+      "status": "planned"
+    },
+    {
+      "id": "OUT-AM-02",
+      "title": "Returning visitors",
+      "status": "planned"
+    },
+    {
+      "id": "OUT-AM-03",
+      "title": "Learning path completion",
+      "status": "planned"
+    },
+    {
+      "id": "OUT-AM-04",
+      "title": "Resource downloads",
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "id": "OUT-AM-05",
+      "title": "Social media referrals",
+      "status": "planned"
+    },
+    {
+      "id": "OUT-AM-06",
+      "title": "Coalition referrals",
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "id": "OUT-AM-07",
+      "title": "Friend and family invitations",
+      "current": 0,
+      "status": "partial",
+      "route": "/action/share.html"
+    },
+    {
+      "id": "OUT-AM-08",
+      "title": "Event attendance",
+      "status": "planned"
+    },
+    {
+      "id": "OUT-AM-09",
+      "title": "Education Leader signups",
+      "current": 0,
+      "status": "partial",
+      "route": "/educate/"
+    },
+    {
+      "id": "OUT-AM-10",
+      "title": "Organization sign-ons",
+      "current": 0,
+      "status": "partial",
+      "route": "/coalition/join.html"
+    }
+  ],
+  "county_outreach_profile": [
+    "Counties with active Education Leaders",
+    "Counties with coalition partners",
+    "Counties hosting events",
+    "Counties needing outreach",
+    "Counties with growing participation"
+  ],
+  "continuous_improvement": [
+    "Which resources are most frequently shared?",
+    "Which learning paths are most often completed?",
+    "Which questions are people asking?",
+    "Which counties need additional resources?",
+    "Which coalition partnerships produce educational activity?"
+  ],
+  "dashboard_panels": [
+    {
+      "id": "OUT-DB-01",
+      "title": "Active outreach campaigns",
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "id": "OUT-DB-02",
+      "title": "Educational reach by county",
+      "current": 75,
+      "status": "partial",
+      "note": "75 county scaffold"
+    },
+    {
+      "id": "OUT-DB-03",
+      "title": "Community conversation activity",
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "id": "OUT-DB-04",
+      "title": "Coalition growth",
+      "current": 0,
+      "status": "partial"
+    },
+    {
+      "id": "OUT-DB-05",
+      "title": "Public official educational outreach",
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "id": "OUT-DB-06",
+      "title": "Resource distribution",
+      "current": 0,
+      "status": "partial",
+      "route": "/action/share.html"
+    },
+    {
+      "id": "OUT-DB-07",
+      "title": "Social media performance",
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "id": "OUT-DB-08",
+      "title": "Referral activity",
+      "current": 0,
+      "status": "partial"
+    },
+    {
+      "id": "OUT-DB-09",
+      "title": "Upcoming events",
+      "current": 0,
+      "status": "partial",
+      "route": "/coalition/events.html"
+    }
+  ],
+  "event_promotion": {
+    "supports": [
+      "Educational events",
+      "Community conversations",
+      "Coalition partner events",
+      "Online sessions"
+    ],
+    "county_discovery": true,
+    "status": "partial",
+    "route": "/coalition/events.html"
+  },
+  "related_systems": [
+    {
+      "title": "Share Page",
+      "route": "/action/share.html",
+      "build": 12
+    },
+    {
+      "title": "Coalition Hub",
+      "route": "/coalition/",
+      "build": 13
+    },
+    {
+      "title": "Education Academy",
+      "route": "/mission-control/education-academy.html",
+      "build": 28
+    },
+    {
+      "title": "Contact Intelligence",
+      "route": "/mission-control/contact-intelligence.html",
+      "build": 24
+    },
+    {
+      "title": "County Coalition Index",
+      "route": "/data/county-coalition-index.json",
+      "build": 14
+    }
+  ],
+  "summary": {
+    "pillars": 5,
+    "campaigns": 7,
+    "resource_formats": 8,
+    "share_toolkit_items": 5,
+    "analytics_metrics": 10,
+    "dashboard_panels": 9,
+    "pillars_partial": 3,
+    "pillars_planned": 2,
+    "campaigns_partial": 2,
+    "analytics_live": 0,
+    "campaign_management_live": false,
+    "outreach_readiness_pct": 22
+  },
+  "catalog_gaps": [
+    "No analytics integration (GA/Netlify Analytics not connected to MC)",
+    "Campaign management system not built \u2014 7 campaigns defined only",
+    "Social media content library mostly planned",
+    "Share toolkit on major pages incomplete",
+    "QR codes and downloadable graphics not standardized",
+    "County outreach profiles not interactive",
+    "Public official share flow stub only",
+    "Referral tracking not integrated with share page"
+  ],
+  "recommended_next_build": {
+    "number": 31,
+    "title": "Component Specifications with Props/States",
+    "note": "Map share toolkit and campaign cards to COMP-* components; wire outreach dashboard to county index."
+  }
+}
