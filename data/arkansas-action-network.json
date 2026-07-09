@@ -1,0 +1,448 @@
+{
+  "version": "1.0",
+  "build": 64,
+  "updated": "2026-07-09",
+  "title": "Arkansas Action Network & Leadership Pipeline v1.0",
+  "subtitle": "Building a Statewide Civic Education Movement \u2014 From One Learner to 200,000 Arkansans",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/arkansas-action-network.html",
+  "constitution": "/docs/MASTER_ARKANSAS_ACTION_NETWORK.md",
+  "purpose": "Structured leadership and growth system transforming learning into sustainable local capacity \u2014 intentional growth from one visitor to 200,000 connected Arkansans.",
+  "governing_principle": "Equip ordinary Arkansans to teach other ordinary Arkansans. Growth measured in people equipped to teach \u2014 not website traffic.",
+  "primary_growth_engine": true,
+  "leadership_pyramid": [
+    {
+      "level": 1,
+      "id": "AAN-L1",
+      "role": "Visitor",
+      "goal": "Learn",
+      "mc_tracks": [
+        "First visit",
+        "Topics explored",
+        "Learning interests"
+      ],
+      "current": 0,
+      "status": "partial"
+    },
+    {
+      "level": 2,
+      "id": "AAN-L2",
+      "role": "Subscriber",
+      "goal": "Stay connected",
+      "mc_tracks": [
+        "Newsletter enrollment",
+        "Learning preferences",
+        "County",
+        "City"
+      ],
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "level": 3,
+      "id": "AAN-L3",
+      "role": "Active Learner",
+      "goal": "Complete learning paths",
+      "mc_tracks": [
+        "Curriculum completion",
+        "Saved resources",
+        "Videos watched",
+        "Research explored"
+      ],
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "level": 4,
+      "id": "AAN-L4",
+      "role": "Community Participant",
+      "goal": "Begin participating locally",
+      "examples": [
+        "Attend conversations",
+        "Volunteer occasionally",
+        "Share resources"
+      ],
+      "mc_tracks": [
+        "Community participation history"
+      ],
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "level": 5,
+      "id": "AAN-L5",
+      "role": "Neighborhood Education Leader",
+      "goal": "Help educate neighbors",
+      "responsibilities": [
+        "Host conversations",
+        "Share materials",
+        "Recruit learners",
+        "Identify organizations"
+      ],
+      "mc_tracks": [
+        "Neighborhood activity"
+      ],
+      "current": 0,
+      "status": "planned",
+      "route": "/mission-control/neighborhood-organizing.html"
+    },
+    {
+      "level": 6,
+      "id": "AAN-L6",
+      "role": "City Education Leader",
+      "goal": "Coordinate educational efforts within a city",
+      "responsibilities": [
+        "Support neighborhood leaders",
+        "Coordinate events",
+        "Develop partnerships"
+      ],
+      "mc_tracks": [
+        "City educational capacity"
+      ],
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "level": 7,
+      "id": "AAN-L7",
+      "role": "County Education Director",
+      "goal": "Coordinate county-wide civic education",
+      "responsibilities": [
+        "Recruit leaders",
+        "Mentor volunteers",
+        "Strengthen coalition",
+        "Expand reach"
+      ],
+      "mc_tracks": [
+        "County readiness"
+      ],
+      "current": 0,
+      "status": "planned",
+      "route": "/mission-control/county-os.html"
+    },
+    {
+      "level": 8,
+      "id": "AAN-L8",
+      "role": "Regional Mentor",
+      "goal": "Strengthen multiple counties",
+      "responsibilities": [
+        "Mentor county leaders",
+        "Share best practices",
+        "Support expansion"
+      ],
+      "mc_tracks": [
+        "Regional development"
+      ],
+      "current": 0,
+      "status": "planned"
+    }
+  ],
+  "growth_objectives": [
+    {
+      "id": "AAN-OBJ-1",
+      "title": "75 County Education Teams",
+      "current": 0,
+      "target": 75,
+      "status": "scaffolded"
+    },
+    {
+      "id": "AAN-OBJ-2",
+      "title": "250 City Education Teams",
+      "current": 0,
+      "target": 250,
+      "status": "scaffolded"
+    },
+    {
+      "id": "AAN-OBJ-3",
+      "title": "Neighborhood Leaders statewide",
+      "current": 0,
+      "target": null,
+      "status": "scaffolded"
+    },
+    {
+      "id": "AAN-OBJ-4",
+      "title": "200,000 Connected Arkansans",
+      "current": 0,
+      "target": 200000,
+      "status": "scaffolded"
+    },
+    {
+      "id": "AAN-OBJ-5",
+      "title": "Self-sustaining civic education network",
+      "current": "not achieved",
+      "target": "organic growth",
+      "status": "planned"
+    }
+  ],
+  "invitation_engine": {
+    "title": "Context-Appropriate Invitations",
+    "principle": "Invitation always matches visitor stage of development",
+    "stages": [
+      {
+        "stage": "Continue Learning",
+        "audience": "Visitor / early learner",
+        "status": "partial"
+      },
+      {
+        "stage": "Join the Contact Network",
+        "audience": "Subscriber",
+        "status": "planned"
+      },
+      {
+        "stage": "Attend a Community Conversation",
+        "audience": "Active learner",
+        "status": "planned"
+      },
+      {
+        "stage": "Become an Education Leader",
+        "audience": "Community participant",
+        "status": "planned"
+      },
+      {
+        "stage": "Start a Neighborhood Discussion",
+        "audience": "Neighborhood leader candidate",
+        "status": "planned"
+      },
+      {
+        "stage": "Help Build Your County Team",
+        "audience": "City / county leader",
+        "status": "planned"
+      },
+      {
+        "stage": "Invite Friends and Family",
+        "audience": "All stages",
+        "status": "planned"
+      }
+    ],
+    "per_page": true,
+    "status": "planned"
+  },
+  "leadership_academy": {
+    "title": "Leadership Academy Pathways",
+    "pathways": [
+      {
+        "level": "Neighborhood Leaders",
+        "topics": [
+          "Facilitation",
+          "Resource sharing",
+          "Community conversations"
+        ],
+        "route": "/mission-control/education-academy.html",
+        "status": "planned"
+      },
+      {
+        "level": "City Leaders",
+        "topics": [
+          "Coordination",
+          "Event planning",
+          "Partnership building"
+        ],
+        "status": "planned"
+      },
+      {
+        "level": "County Leaders",
+        "topics": [
+          "Strategic planning",
+          "Volunteer development",
+          "Coalition leadership"
+        ],
+        "status": "planned"
+      }
+    ],
+    "continuous_growth": true,
+    "status": "planned"
+  },
+  "arkansas_progress_map": {
+    "title": "Statewide Progress Map",
+    "layers": [
+      "Education Leaders",
+      "Neighborhood coverage",
+      "City leadership",
+      "County teams",
+      "Coalition organizations",
+      "Community conversations",
+      "Participant growth"
+    ],
+    "visual_heartbeat": true,
+    "status": "planned",
+    "route": "/mission-control/civic-atlas.html"
+  },
+  "community_recognition": {
+    "title": "Community Recognition",
+    "types": [
+      "First Education Leader in a county",
+      "First community conversation in a city",
+      "County reaching leadership targets",
+      "Coalition milestones",
+      "Volunteer anniversaries",
+      "Major educational accomplishments"
+    ],
+    "status": "planned"
+  },
+  "leadership_succession": {
+    "title": "Leadership Succession",
+    "principle": "Every role identifies and mentors future leaders",
+    "metrics": [
+      {
+        "id": "AAN-S1",
+        "metric": "Mentors assigned",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "AAN-S2",
+        "metric": "Future leaders identified",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "AAN-S3",
+        "metric": "Training completed",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "AAN-S4",
+        "metric": "Leadership transitions",
+        "current": 0,
+        "status": "planned"
+      }
+    ],
+    "status": "planned"
+  },
+  "growth_analytics": {
+    "title": "Growth Analytics",
+    "focus": "Leadership development \u2014 not raw traffic",
+    "questions": [
+      {
+        "id": "AAN-G1",
+        "question": "How many visitors became learners?",
+        "status": "planned"
+      },
+      {
+        "id": "AAN-G2",
+        "question": "How many learners became volunteers?",
+        "status": "planned"
+      },
+      {
+        "id": "AAN-G3",
+        "question": "How many volunteers became Education Leaders?",
+        "status": "planned"
+      },
+      {
+        "id": "AAN-G4",
+        "question": "Which counties are growing?",
+        "status": "planned"
+      },
+      {
+        "id": "AAN-G5",
+        "question": "Which cities need support?",
+        "status": "planned"
+      },
+      {
+        "id": "AAN-G6",
+        "question": "Where are new leaders emerging?",
+        "status": "planned"
+      }
+    ],
+    "status": "planned"
+  },
+  "integration": {
+    "chain": "Education Academy \u2192 Civic Atlas \u2192 Relationship OS \u2192 Coalition Network \u2192 Mission Control \u2192 Knowledge Graph \u2192 Citizen Action Center \u2192 Contact Network",
+    "systems": [
+      {
+        "system": "Education Academy (#28)",
+        "route": "/mission-control/education-academy.html",
+        "status": "partial"
+      },
+      {
+        "system": "Civic Atlas (#58)",
+        "route": "/mission-control/civic-atlas.html",
+        "status": "live"
+      },
+      {
+        "system": "Relationship OS (#59)",
+        "route": "/mission-control/relationship-os.html",
+        "status": "live"
+      },
+      {
+        "system": "Coalition Network (#61)",
+        "route": "/mission-control/coalition-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Statewide Growth (#56)",
+        "route": "/mission-control/statewide-growth.html",
+        "status": "live",
+        "note": "Growth objectives unified"
+      },
+      {
+        "system": "Neighborhood Organizing (#57)",
+        "route": "/mission-control/neighborhood-organizing.html",
+        "status": "live"
+      },
+      {
+        "system": "Citizen Action Center (#62)",
+        "route": "/mission-control/citizen-action-center.html",
+        "status": "live"
+      },
+      {
+        "system": "Knowledge Graph",
+        "route": "/mission-control/knowledge-graph.html",
+        "status": "planned"
+      },
+      {
+        "system": "Contact Network",
+        "route": "/mission-control/contact-intelligence.html",
+        "status": "partial"
+      },
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      }
+    ],
+    "unifies": "Statewide Growth (#56) objectives into operational growth engine"
+  },
+  "long_term_vision": "Every county with an active education team; every major city with trained leaders; neighborhood discussions regularly; 200,000 Arkansans sharing civic education through trusted relationships \u2014 organic growth as local leaders develop new local leaders.",
+  "summary": {
+    "pyramid_levels": 8,
+    "county_teams": 0,
+    "county_teams_target": 75,
+    "city_teams": 0,
+    "city_teams_target": 250,
+    "neighborhood_leaders": 0,
+    "city_leaders": 0,
+    "county_directors": 0,
+    "regional_mentors": 0,
+    "connected_arkansans": 0,
+    "connected_target": 200000,
+    "coalition_orgs": 0,
+    "active_relationships": 0,
+    "progress_map_live": false,
+    "invitation_engine_wired": false,
+    "arkansas_action_network_readiness_pct": 38,
+    "statewide_growth_readiness_pct": 48,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "0 county teams \u00b7 0/75 \u2014 County Education Director pipeline not operational",
+    "0 city teams \u00b7 0/250 \u2014 City Education Leader coordination not built",
+    "0 neighborhood leaders \u2014 Level 5 pyramid empty",
+    "0/200,000 connected Arkansans \u2014 no registration or contact network integration",
+    "Invitation engine specified but not wired per-page across educational content",
+    "Arkansas Progress Map planned \u2014 Civic Atlas map not live",
+    "Leadership Academy pathways per level not implemented \u2014 Education Academy partial",
+    "Growth analytics funnel (visitor\u2192learner\u2192volunteer\u2192leader) not tracked",
+    "Build #64 Action Network vs Build #56 Statewide Growth \u2014 unified here, reconcile dashboards?",
+    "Leadership succession metrics all zero \u2014 mentor assignment workflow missing",
+    "Community recognition system not built \u2014 no achievement tracking",
+    "8-level pyramid vs other participation level schemas \u2014 mapping needed"
+  ],
+  "recommended_next_build": {
+    "number": 65,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "Leader registry schema, invitation component, progress map wiring, funnel analytics, Academy pathway routes, route inventory, COMP-* specs, GitHub issue backlog."
+  }
+}

@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Arkansas Action Network <a href="/mission-control/arkansas-action-network.html" class="mc-inline-link">200K Arkansans #64 →</a></h2>
+    <p class="mc-bar-note">Build #64 — Arkansas Action Network & Leadership Pipeline. 8-level pyramid, invitation engine, progress map. Primary growth engine. 0 county teams · 0/200K connected. ~38% readiness.</p>
     <h2 class="mc-section-title">Campaign Finance Observatory <a href="/mission-control/campaign-finance-observatory.html" class="mc-inline-link">Follow the Money #63 →</a></h2>
     <p class="mc-bar-note">Build #63 — Campaign Finance Data Observatory. 8 divisions, Before & After Explorer, data integrity standards. Flagship system. 0 datasets · 0 charts. ~36% readiness.</p>
     <h2 class="mc-section-title">Citizen Action Center <a href="/mission-control/citizen-action-center.html" class="mc-inline-link">Learn to Participate #62 →</a></h2>
@@ -5178,6 +5180,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCoalitionNetwork();
   initCitizenActionCenter();
   initCampaignFinanceObservatory();
+  initArkansasActionNetwork();
 });
 
 async function initUxArchitecture() {
@@ -6559,7 +6562,116 @@ async function initCampaignFinanceObservatory() {
       <a href="/data/campaign-finance-observatory.json">JSON</a> ·
       <a href="/mission-control/evidence-ledger.html">Evidence Ledger</a> ·
       <a href="/mission-control/research-library.html">Research Library</a> ·
-      <a href="/mission-control/research-observatory.html">Research Observatory</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initArkansasActionNetwork() {
+  const root = document.getElementById('mc-arkansas-action-network-root');
+  if (!root) return;
+
+  const [aanRes, mcRes] = await Promise.all([
+    fetch('/data/arkansas-action-network.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const aan = await aanRes.json();
+  const mc = await mcRes.json();
+  const s = aan.summary;
+
+  const pyramidRows = aan.leadership_pyramid.map(l => `
+    <tr><td>${l.level}</td><td><code>${l.id}</code></td><td>${l.role}</td>
+      <td>${l.goal}</td><td>${l.current}</td><td>${l.status}</td>
+      <td>${l.route ? `<a href="${l.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  const objectiveRows = aan.growth_objectives.map(o => `
+    <tr><td><code>${o.id}</code></td><td>${o.title}</td><td>${o.current}</td>
+      <td>${o.target ?? '—'}</td><td>${o.status}</td></tr>`).join('');
+
+  const invitationRows = aan.invitation_engine.stages.map(st => `
+    <tr><td>${st.stage}</td><td>${st.audience}</td><td>${st.status}</td></tr>`).join('');
+
+  const successionRows = aan.leadership_succession.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.metric}</td><td>${m.current}</td><td>${m.status}</td></tr>`).join('');
+
+  const analyticsRows = aan.growth_analytics.questions.map(q => `
+    <tr><td><code>${q.id}</code></td><td>${q.question}</td><td>${q.status}</td></tr>`).join('');
+
+  const systemRows = aan.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td>${sys.route ? `<a href="${sys.route}">→</a>` : '—'}</td>
+      <td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Arkansas Action Network</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #64 · ${aan.title}</p>
+      <h1>Building a Statewide Civic Education Movement</h1>
+      <p class="mc-header__question">${aan.governing_principle}</p>
+      <p class="mc-bar-note">${aan.purpose}</p>
+      <p class="mc-bar-note"><strong>Primary growth engine:</strong> ${aan.primary_growth_engine ? 'Yes' : 'No'} · <strong>Unifies:</strong> ${aan.integration.unifies}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Network readiness</div><div class="mc-stat__value">${s.arkansas_action_network_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Pyramid levels</div><div class="mc-stat__value">${s.pyramid_levels}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">County teams</div><div class="mc-stat__value">${s.county_teams}/${s.county_teams_target}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">City teams</div><div class="mc-stat__value">${s.city_teams}/${s.city_teams_target}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Connected</div><div class="mc-stat__value">${s.connected_arkansans}/${s.connected_target}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Neighborhood leaders</div><div class="mc-stat__value">${s.neighborhood_leaders}</div></div>
+    </div>
+    <h2 class="mc-section-title">Arkansas Leadership Pyramid</h2>
+    <table class="mc-table"><thead><tr><th>Level</th><th>ID</th><th>Role</th><th>Goal</th><th>Current</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${pyramidRows}</tbody></table>
+    ${aan.leadership_pyramid.map(l => `
+      <h3 class="mc-subsection-title">Level ${l.level}: ${l.role}</h3>
+      <p class="mc-bar-note">Goal: ${l.goal}</p>
+      <p class="mc-bar-note"><strong>MC tracks:</strong> ${l.mc_tracks.join(' · ')}</p>
+      ${l.examples ? `<ul class="mc-deliverables">${l.examples.map(e => `<li>${e}</li>`).join('')}</ul>` : ''}
+      ${l.responsibilities ? `<ul class="mc-deliverables">${l.responsibilities.map(r => `<li>${r}</li>`).join('')}</ul>` : ''}`).join('')}
+    <h2 class="mc-section-title">Growth Objectives</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Objective</th><th>Current</th><th>Target</th><th>Status</th></tr></thead>
+      <tbody>${objectiveRows}</tbody></table>
+    <h2 class="mc-section-title">${aan.invitation_engine.title}</h2>
+    <p class="mc-bar-note">${aan.invitation_engine.principle} · per-page: ${aan.invitation_engine.per_page ? 'Yes' : 'No'} · ${aan.invitation_engine.status}</p>
+    <table class="mc-table"><thead><tr><th>Invitation</th><th>Audience</th><th>Status</th></tr></thead>
+      <tbody>${invitationRows}</tbody></table>
+    <h2 class="mc-section-title">${aan.leadership_academy.title}</h2>
+    <p class="mc-bar-note">${aan.leadership_academy.status}</p>
+    ${aan.leadership_academy.pathways.map(p => `
+      <h3 class="mc-subsection-title">${p.level}</h3>
+      <ul class="mc-deliverables">${p.topics.map(t => `<li>${t}</li>`).join('')}</ul>
+      ${p.route ? `<p class="mc-bar-note"><a href="${p.route}">Education Academy →</a></p>` : ''}`).join('')}
+    <h2 class="mc-section-title">${aan.arkansas_progress_map.title}</h2>
+    <p class="mc-bar-note">Visual heartbeat: ${aan.arkansas_progress_map.visual_heartbeat ? 'Yes' : 'No'} · ${aan.arkansas_progress_map.status} · <a href="${aan.arkansas_progress_map.route}">Civic Atlas</a></p>
+    <ul class="mc-deliverables">${aan.arkansas_progress_map.layers.map(l => `<li>${l}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${aan.community_recognition.title}</h2>
+    <p class="mc-bar-note">${aan.community_recognition.status}</p>
+    <ul class="mc-deliverables">${aan.community_recognition.types.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${aan.leadership_succession.title}</h2>
+    <p class="mc-bar-note">${aan.leadership_succession.principle}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${successionRows}</tbody></table>
+    <h2 class="mc-section-title">${aan.growth_analytics.title}</h2>
+    <p class="mc-bar-note">${aan.growth_analytics.focus}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Question</th><th>Status</th></tr></thead>
+      <tbody>${analyticsRows}</tbody></table>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${aan.integration.chain}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${aan.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${aan.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${aan.recommended_next_build.number} — ${aan.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${aan.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_ARKANSAS_ACTION_NETWORK.md">MASTER_ARKANSAS_ACTION_NETWORK.md</a> ·
+      <a href="/data/arkansas-action-network.json">JSON</a> ·
+      <a href="/mission-control/statewide-growth.html">Statewide Growth</a> ·
+      <a href="/mission-control/civic-atlas.html">Civic Atlas</a> ·
+      <a href="/mission-control/citizen-action-center.html">Citizen Action Center</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

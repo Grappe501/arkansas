@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.67.0 · **Campaign Finance Observatory:** [/mission-control/campaign-finance-observatory.html](/mission-control/campaign-finance-observatory.html) · **Citizen Action Center:** [/mission-control/citizen-action-center.html](/mission-control/citizen-action-center.html)  
-**Follow the money through facts** — 8 divisions · **Next:** Build #64 Implementation Translation Layer  
+**Current version:** 1.68.0 · **Arkansas Action Network:** [/mission-control/arkansas-action-network.html](/mission-control/arkansas-action-network.html) · **Campaign Finance Observatory:** [/mission-control/campaign-finance-observatory.html](/mission-control/campaign-finance-observatory.html)  
+**Primary growth engine** — 8-level pyramid · 200K goal · **Next:** Build #65 Implementation Translation Layer  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **64** | **Arkansas Action Network & Leadership Pipeline** | **✅ v1.68.0** |
 | **63** | **Campaign Finance Data Observatory** | **✅ v1.67.0** |
 | **62** | **Citizen Action Center & Civic Engagement Hub** | **✅ v1.66.0** |
 | **61** | **Coalition & Civic Alliance Network** | **✅ v1.65.0** |

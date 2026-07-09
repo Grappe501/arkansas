@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#64** | **Arkansas Action Network & Leadership Pipeline** | **1.68.0** | **✅ Complete** | [064](064-arkansas-action-network.md) · [/mission-control/arkansas-action-network.html](../mission-control/arkansas-action-network.html) |
 | **#63** | **Campaign Finance Data Observatory** | **1.67.0** | **✅ Complete** | [063](063-campaign-finance-observatory.md) · [/mission-control/campaign-finance-observatory.html](../mission-control/campaign-finance-observatory.html) |
 | **#62** | **Citizen Action Center & Civic Engagement Hub** | **1.66.0** | **✅ Complete** | [062](062-citizen-action-center.md) · [/mission-control/citizen-action-center.html](../mission-control/citizen-action-center.html) |
 | **#61** | **Coalition & Civic Alliance Network** | **1.65.0** | **✅ Complete** | [061](061-coalition-network.md) · [/mission-control/coalition-network.html](../mission-control/coalition-network.html) |

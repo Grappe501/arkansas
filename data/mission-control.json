@@ -1,6 +1,6 @@
 {
-  "version": "1.67.0",
-  "build": 63,
+  "version": "1.68.0",
+  "build": 64,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 63,
+    "overall_completion": 64,
     "current_build": {
-      "number": 63,
-      "title": "Citizens United Facts Master Campaign Finance Data Observatory v1.0"
-    },
-    "active_phase": "Campaign Finance Observatory \u2192 Implementation Translation",
-    "last_completed": "Citizen Action Center & Civic Engagement Hub",
-    "next_build": {
       "number": 64,
+      "title": "Citizens United Facts Arkansas Action Network & Leadership Pipeline v1.0"
+    },
+    "active_phase": "Arkansas Action Network \u2192 Implementation Translation",
+    "last_completed": "Campaign Finance Data Observatory",
+    "next_build": {
+      "number": 65,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
@@ -25,7 +25,7 @@
     "content_readiness": 28,
     "research_readiness": 26,
     "data_viz_readiness": 12,
-    "signup_funnel_readiness": 22,
+    "signup_funnel_readiness": 24,
     "civic_action_readiness": 28,
     "coalition_readiness": 44,
     "data_model_readiness": 54,
@@ -43,12 +43,13 @@
     "coalition_network_readiness": 44,
     "citizen_action_center_readiness": 42,
     "campaign_finance_observatory_readiness": 36,
+    "arkansas_action_network_readiness": 38,
     "mc2_readiness": 33,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
     "education_academy_readiness": 26,
     "observatory_readiness": 20,
-    "outreach_readiness": 22,
+    "outreach_readiness": 24,
     "county_os_readiness": 28,
     "campaign_os_readiness": 34,
     "encyclopedia_readiness": 19,
@@ -62,9 +63,9 @@
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 25,
-    "institutional_maturity_pct": 50,
+    "institutional_maturity_pct": 51,
     "current_institutional_version": "V1",
-    "systems_integration_readiness": 37,
+    "systems_integration_readiness": 38,
     "production_matrix_readiness": 39,
     "visitor_journey_readiness": 40,
     "technical_architecture_readiness": 38,
@@ -91,8 +92,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 63,
-      "note": "Build #63 \u2014 Campaign Finance Data Observatory."
+      "value": 64,
+      "note": "Build #64 \u2014 Arkansas Action Network."
     },
     {
       "id": "constitution",
@@ -421,9 +422,9 @@
     {
       "id": "institutional_maturity",
       "label": "Institutional Maturity (V1\u2013V10)",
-      "value": 50,
+      "value": 51,
       "max": 100,
-      "note": "Flagship data observatory \u2014 0 charts, 0 datasets."
+      "note": "Primary growth engine \u2014 0 leaders \u00b7 0/200K connected."
     },
     {
       "id": "systems_integration",
@@ -557,6 +558,13 @@
       "value": 36,
       "max": 100,
       "note": "8 divisions \u00b7 0 charts \u00b7 0 datasets."
+    },
+    {
+      "id": "arkansas_action_network",
+      "label": "Arkansas Action Network",
+      "value": 38,
+      "max": 100,
+      "note": "8 pyramid levels \u00b7 0/75 county teams."
     }
   ],
   "public_readiness": {
@@ -1227,6 +1235,12 @@
       "id": "campaign_finance_observatory",
       "label": "Campaign Finance Observatory",
       "href": "/mission-control/campaign-finance-observatory.html",
+      "status": "complete"
+    },
+    {
+      "id": "arkansas_action_network",
+      "label": "Arkansas Action Network",
+      "href": "/mission-control/arkansas-action-network.html",
       "status": "complete"
     }
   ],
@@ -2253,6 +2267,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 64,
+      "title": "Citizens United Facts Arkansas Action Network & Leadership Pipeline v1.0",
+      "version": "1.68.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Arkansas Action Network \u2014 primary growth engine from one learner to 200,000 Arkansans",
+      "summary": "8-level leadership pyramid; invitation engine; progress map; growth analytics; 38% readiness. 0 county teams \u00b7 0/200000 connected.",
+      "files_created": [
+        "data/arkansas-action-network.json",
+        "docs/MASTER_ARKANSAS_ACTION_NETWORK.md",
+        "builds/064-arkansas-action-network.md",
+        "mission-control/arkansas-action-network.html",
+        "scripts/gen-arkansas-action-network.py",
+        "scripts/update-mc-build64.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/arkansas-action-network.html"
+      ],
+      "decisions_made": [
+        "Primary growth engine \u2014 people equipped to teach, not traffic",
+        "8-level Arkansas Leadership Pyramid from Visitor to Regional Mentor",
+        "Growth objectives: 75 counties \u2192 250 cities \u2192 200K connected \u2192 self-sustaining",
+        "Invitation engine matches visitor stage \u2014 per-page spec",
+        "Unifies Statewide Growth (#56) into operational leadership pipeline",
+        "Progress map = visual heartbeat via Civic Atlas integration",
+        "38% readiness \u2014 blueprint only, 0 leaders"
+      ],
+      "open_questions": [
+        "8-level pyramid vs ACUCOS participation levels \u2014 mapping table?",
+        "Progress map: Civic Atlas vs dedicated Action Network map?",
+        "Contact Network signup \u2192 pyramid level auto-assignment?",
+        "Recognition badges: public profiles vs MC-only?"
+      ],
+      "risks": [
+        "0 county teams \u00b7 0/75 \u2014 County Education Director pipeline not operational",
+        "0 city teams \u00b7 0/250 \u2014 City Education Leader coordination not built",
+        "0 neighborhood leaders \u2014 Level 5 pyramid empty",
+        "0/200,000 connected Arkansans \u2014 no registration or contact network integration"
+      ],
+      "next_recommended": 65,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-action-network.html",
+      "review_status": "complete"
+    },
     {
       "number": 63,
       "title": "Citizens United Facts Master Campaign Finance Data Observatory v1.0",
@@ -5378,21 +5445,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Campaign Finance Data Observatory v1.0 \u2014 8 divisions, transparent evidence",
-    "building_now": "63 builds specified \u2014 implementation translation next",
+    "what_built": "Arkansas Action Network v1.0 \u2014 8-level pyramid, primary growth engine",
+    "building_now": "64 builds specified \u2014 implementation translation next",
     "blocked": [
-      "FEC data feeds",
-      "Chart library",
-      "Before & After Explorer",
-      "Arkansas datasets"
+      "Progress map",
+      "Invitation engine",
+      "Leader registry",
+      "Funnel analytics"
     ],
     "ready_public": [
-      "8 divisions",
-      "Methodology standards",
-      "Data integrity spec",
-      "MC observatory metrics"
+      "8 pyramid levels",
+      "Growth objectives",
+      "Academy pathways spec",
+      "Succession model"
     ],
-    "next": "Build #64 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #65 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -6079,5 +6146,14 @@
     "datasets_published": 0,
     "charts_completed": 0,
     "flagship_system": true
+  },
+  "arkansas_action_network": "/data/arkansas-action-network.json",
+  "arkansas_action_network_dashboard": "/mission-control/arkansas-action-network.html",
+  "arkansas_action_network_inventory": {
+    "readiness_score": 38,
+    "pyramid_levels": 8,
+    "county_teams": 0,
+    "connected_arkansans": 0,
+    "primary_growth_engine": true
   }
 }

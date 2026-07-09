@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.68.0] - 2026-07-09 — Build #64 Arkansas Action Network & Leadership Pipeline
+
+### Building a Statewide Civic Education Movement
+- **Arkansas Action Network v1.0** — primary growth engine from one learner to 200,000 Arkansans
+- 8-level Leadership Pyramid: Visitor through Regional Mentor
+- Invitation engine, Leadership Academy pathways, Arkansas Progress Map, succession model
+- Unifies Statewide Growth (#56) into operational leadership pipeline
+- Growth measured in people equipped to teach — not traffic
+- Honest: 0 county teams · 0/200K connected · ~38% readiness
+- MC dashboard: `/mission-control/arkansas-action-network.html`
+
 ## [1.67.0] - 2026-07-09 — Build #63 Campaign Finance Data Observatory
 
 ### The Arkansas Campaign Finance Intelligence Center
