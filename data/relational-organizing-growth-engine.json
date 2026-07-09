@@ -1,0 +1,291 @@
+{
+  "version": "1.0",
+  "build": 69,
+  "updated": "2026-07-09",
+  "title": "Master Relational Organizing & Arkansas Growth Engine v1.0",
+  "subtitle": "The Network Effect \u2014 Growing from One Arkansan to 200,000 Through Trusted Relationships",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/relational-organizing-growth-engine.html",
+  "constitution": "/docs/MASTER_RELATIONAL_ORGANIZING_GROWTH_ENGINE.md",
+  "purpose": "Transform individual learning into statewide educational growth through trusted personal relationships \u2014 primary expansion strategy.",
+  "governing_principle": "Strongest civic education shared freely between people who trust one another. Opportunity not obligation. Curiosity not pressure.",
+  "primary_expansion_strategy": true,
+  "not_advertising_seo_social": true,
+  "core_philosophy": {
+    "trust_chain": [
+      "Neighbor",
+      "Friend",
+      "Family",
+      "Coworker",
+      "Church member",
+      "Civic organization member",
+      "Community volunteer",
+      "Local leader"
+    ],
+    "knowledge_spreads_through_relationships": true,
+    "platform_supports_relationships": true
+  },
+  "arkansas_growth_formula": {
+    "question": "Who are five people in my life who would benefit from understanding this better?",
+    "suggested_invitations": 5,
+    "no_pressure": true,
+    "no_quotas": true,
+    "thoughtful_invitations_only": true
+  },
+  "relationship_tree": {
+    "voluntary": true,
+    "example_branch": "Leader \u2192 5 learners \u2192 each 3 more \u2192 some become leaders \u2192 new branches",
+    "visualizes_education_not_recruitment": true,
+    "trees_active": 0,
+    "status": "planned"
+  },
+  "share_hub": {
+    "title": "The Share Hub",
+    "per_page_panel": true,
+    "shareable_items": [
+      "Educational articles",
+      "Timeline entries",
+      "Videos",
+      "Infographics",
+      "Research summaries",
+      "Learning paths",
+      "Community events",
+      "Presentation invitations",
+      "Academy enrollment"
+    ],
+    "emphasis": "I thought you might find this helpful.",
+    "not_emphasis": "You have to agree with this.",
+    "pages_wired": 0,
+    "status": "planned"
+  },
+  "family_learning": {
+    "title": "Family Learning",
+    "resources": [
+      "Family discussion guides",
+      "Conversation starters",
+      "Short educational videos",
+      "Printable timelines",
+      "Frequently asked questions"
+    ],
+    "intergenerational": true,
+    "status": "planned"
+  },
+  "friend_neighbor_circles": {
+    "title": "Friend & Neighbor Circles",
+    "circle_types": [
+      "Book clubs",
+      "Neighborhood gatherings",
+      "Coffee discussions",
+      "Library groups",
+      "Community centers",
+      "Service clubs"
+    ],
+    "active_circles": 0,
+    "local_conversations": true,
+    "status": "planned"
+  },
+  "organizational_referrals": {
+    "title": "Organizational Referrals",
+    "coalition_tools": true,
+    "referrals_tracked": 0,
+    "privacy_respecting": true,
+    "status": "planned"
+  },
+  "education_leader_referral_dashboard": {
+    "title": "Education Leader Referral Dashboard",
+    "fields": [
+      "People invited",
+      "Learning progress",
+      "Academy enrollment",
+      "Community conversations",
+      "New leaders developed",
+      "Recognition milestones"
+    ],
+    "mentorship_not_competition": true,
+    "status": "planned"
+  },
+  "referral_recognition": {
+    "title": "Referral Recognition",
+    "milestones": [
+      "First learner introduced",
+      "First Academy graduate mentored",
+      "First neighborhood discussion",
+      "First coalition referral",
+      "First county leader developed"
+    ],
+    "focus": "Service and education",
+    "milestones_achieved": 0,
+    "status": "planned"
+  },
+  "relationship_health": {
+    "title": "Relationship Health",
+    "indicators": [
+      {
+        "id": "ROG-H1",
+        "indicator": "Learning circle activity",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ROG-H2",
+        "indicator": "Mentorship continuity",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ROG-H3",
+        "indicator": "Returning participants",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ROG-H4",
+        "indicator": "Community engagement",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ROG-H5",
+        "indicator": "Leadership development",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ROG-H6",
+        "indicator": "Referral pathways",
+        "current": 0,
+        "status": "planned"
+      }
+    ],
+    "status": "planned"
+  },
+  "privacy_principles": {
+    "title": "Privacy Principles",
+    "principles": [
+      "Never require invitations",
+      "Allow anonymous browsing",
+      "Clear consent before sharing information",
+      "Participants control communication preferences",
+      "Trust must always outweigh growth"
+    ],
+    "trust_outweighs_growth": true,
+    "status": "live"
+  },
+  "mc_visualization": {
+    "title": "Mission Control Growth Visualization",
+    "layers": [
+      "Relationship trees",
+      "County growth",
+      "City growth",
+      "Neighborhood expansion",
+      "Education Leader mentorship",
+      "Coalition referrals",
+      "Participant milestones",
+      "Progress toward 200,000 connected Arkansans"
+    ],
+    "private_info_protected": true,
+    "status": "planned"
+  },
+  "integration": {
+    "chain": "Contact Network \u2192 Citizen Action Center \u2192 Community Education Academy \u2192 Coalition Network \u2192 Civic Atlas \u2192 Mission Control \u2192 Knowledge Graph",
+    "systems": [
+      {
+        "system": "Contact Network",
+        "route": "/mission-control/contact-intelligence.html",
+        "status": "partial"
+      },
+      {
+        "system": "Citizen Action Center (#62)",
+        "route": "/mission-control/citizen-action-center.html",
+        "status": "live"
+      },
+      {
+        "system": "Citizen Leadership Academy (#68)",
+        "route": "/mission-control/citizen-leadership-academy.html",
+        "status": "live"
+      },
+      {
+        "system": "Community Education Academy (#28)",
+        "route": "/mission-control/education-academy.html",
+        "status": "partial"
+      },
+      {
+        "system": "Coalition Network (#61)",
+        "route": "/mission-control/coalition-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Neighborhood Organizing (#57)",
+        "route": "/mission-control/neighborhood-organizing.html",
+        "status": "live",
+        "note": "Last mile"
+      },
+      {
+        "system": "Relationship OS (#59)",
+        "route": "/mission-control/relationship-os.html",
+        "status": "live"
+      },
+      {
+        "system": "Arkansas Action Network (#64)",
+        "route": "/mission-control/arkansas-action-network.html",
+        "status": "live",
+        "note": "Invitation engine"
+      },
+      {
+        "system": "Civic Atlas (#58)",
+        "route": "/mission-control/civic-atlas.html",
+        "status": "live"
+      },
+      {
+        "system": "Knowledge Graph",
+        "route": "/mission-control/knowledge-graph.html",
+        "status": "planned"
+      },
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      }
+    ],
+    "unifies": "Neighborhood Organizing (#57) + Relationship OS (#59) + Action Network invitation engine"
+  },
+  "long_term_vision": "Education Leaders trace journeys through trusted relationship chains. Knowledge spread person by person. Institution grew because people chose to share \u2014 not because it interrupted.",
+  "summary": {
+    "trust_relationship_types": 8,
+    "relationship_trees": 0,
+    "total_invitations": 0,
+    "learners_invited": 0,
+    "share_hub_pages_wired": 0,
+    "learning_circles": 0,
+    "coalition_referrals": 0,
+    "referral_milestones": 0,
+    "connected_arkansans": 0,
+    "connected_target": 200000,
+    "relationship_edges": 0,
+    "relational_organizing_growth_engine_readiness_pct": 34,
+    "neighborhood_organizing_readiness_pct": 50,
+    "relationship_os_readiness_pct": 54,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "0 relationship trees \u2014 voluntary tree builder not implemented",
+    "0 invitations tracked \u2014 five-people question not wired in UI",
+    "Share hub specified \u2014 0 educational pages with sharing panel",
+    "0 learning circles registered \u2014 friend/neighbor circle tools missing",
+    "0 coalition referrals \u2014 organizational referral workflow not built",
+    "Education Leader referral dashboard not built \u2014 0 leaders to dashboard",
+    "Referral recognition system not implemented \u2014 0 milestones",
+    "Build #69 Growth Engine vs Build #64 Action Network primary growth \u2014 reconcile roles?",
+    "Build #69 vs Build #57 Neighborhood Organizing \u2014 unify relational specs?",
+    "Privacy principles specified \u2014 no consent UI or anonymous browse enforcement audit",
+    "MC visualization planned \u2014 relationship trees not rendered",
+    "No referral codes or tracking \u2014 by design until privacy model approved",
+    "0/200,000 connected \u2014 relational engine has no participants"
+  ],
+  "recommended_next_build": {
+    "number": 70,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "Share hub component, relationship tree schema, referral tracking with privacy, leader dashboard, circle registration, route inventory, COMP-* specs, GitHub backlog."
+  }
+}

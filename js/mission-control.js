@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Relational Growth Engine <a href="/mission-control/relational-organizing-growth-engine.html" class="mc-inline-link">Network Effect #69 →</a></h2>
+    <p class="mc-bar-note">Build #69 — Relational Organizing & Arkansas Growth Engine. Five-people question, share hub, relationship trees. Primary expansion. 0 trees · 0 invitations · 0/200K. ~34% readiness.</p>
     <h2 class="mc-section-title">Citizen Leadership Academy <a href="/mission-control/citizen-leadership-academy.html" class="mc-inline-link">Human Engine #68 →</a></h2>
     <p class="mc-bar-note">Build #68 — Citizen Leadership Academy. 6 certification levels, Learn→Multiply. Teachers not spokespeople. Highest priority. 0 learners · 0 graduates. ~34% readiness.</p>
     <h2 class="mc-section-title">Impact Measurement <a href="/mission-control/impact-measurement.html" class="mc-inline-link">Civic Scorecard #67 →</a></h2>
@@ -5193,6 +5195,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSustainabilityStewardship();
   initImpactMeasurement();
   initCitizenLeadershipAcademy();
+  initRelationalOrganizingGrowthEngine();
 });
 
 async function initUxArchitecture() {
@@ -7121,6 +7124,109 @@ async function initCitizenLeadershipAcademy() {
       <a href="/mission-control/education-academy.html">Education Academy (#28)</a> ·
       <a href="/mission-control/arkansas-action-network.html">Action Network</a> ·
       <a href="/mission-control/impact-measurement.html">Impact Measurement</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initRelationalOrganizingGrowthEngine() {
+  const root = document.getElementById('mc-relational-organizing-growth-engine-root');
+  if (!root) return;
+
+  const [rogRes, mcRes] = await Promise.all([
+    fetch('/data/relational-organizing-growth-engine.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const rog = await rogRes.json();
+  const mc = await mcRes.json();
+  const s = rog.summary;
+
+  const trustRows = rog.core_philosophy.trust_chain.map((t, i) => `
+    <tr><td>${i + 1}</td><td>${t}</td></tr>`).join('');
+
+  const shareRows = rog.share_hub.shareable_items.map(item => `
+    <tr><td>${item}</td><td>${rog.share_hub.status}</td></tr>`).join('');
+
+  const healthRows = rog.relationship_health.indicators.map(h => `
+    <tr><td><code>${h.id}</code></td><td>${h.indicator}</td><td>${h.current}</td><td>${h.status}</td></tr>`).join('');
+
+  const systemRows = rog.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td><td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Relational Organizing Growth Engine</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #69 · ${rog.title}</p>
+      <h1>The Network Effect — Trusted Relationships to 200,000</h1>
+      <p class="mc-header__question">${rog.governing_principle}</p>
+      <p class="mc-bar-note">${rog.purpose}</p>
+      <p class="mc-bar-note"><strong>Primary expansion strategy:</strong> ${rog.primary_expansion_strategy ? 'Yes' : 'No'} · <strong>Not ads/SEO/social:</strong> ${rog.not_advertising_seo_social ? 'Yes' : 'No'}</p>
+      <p class="mc-bar-note"><strong>Arkansas Growth Formula:</strong> "${rog.arkansas_growth_formula.question}"</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Growth engine readiness</div><div class="mc-stat__value">${s.relational_organizing_growth_engine_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Relationship trees</div><div class="mc-stat__value">${s.relationship_trees}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Invitations</div><div class="mc-stat__value">${s.total_invitations}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Share hub pages</div><div class="mc-stat__value">${s.share_hub_pages_wired}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Learning circles</div><div class="mc-stat__value">${s.learning_circles}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Connected</div><div class="mc-stat__value">${s.connected_arkansans}/${s.connected_target.toLocaleString()}</div></div>
+    </div>
+    <h2 class="mc-section-title">Core Philosophy — Trust Chain</h2>
+    <p class="mc-bar-note">Knowledge spreads through relationships. Platform supports relationships: ${rog.core_philosophy.platform_supports_relationships ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>#</th><th>Relationship</th></tr></thead>
+      <tbody>${trustRows}</tbody></table>
+    <h2 class="mc-section-title">Arkansas Growth Formula</h2>
+    <p class="mc-bar-note">Suggested invitations: ${rog.arkansas_growth_formula.suggested_invitations} · No pressure: ${rog.arkansas_growth_formula.no_pressure ? 'Yes' : 'No'} · No quotas: ${rog.arkansas_growth_formula.no_quotas ? 'Yes' : 'No'}</p>
+    <h2 class="mc-section-title">Relationship Tree</h2>
+    <p class="mc-bar-note">Voluntary: ${rog.relationship_tree.voluntary ? 'Yes' : 'No'} · ${rog.relationship_tree.example_branch}</p>
+    <p class="mc-bar-note">Visualizes education not recruitment: ${rog.relationship_tree.visualizes_education_not_recruitment ? 'Yes' : 'No'} · Trees active: ${rog.relationship_tree.trees_active} · ${rog.relationship_tree.status}</p>
+    <h2 class="mc-section-title">${rog.share_hub.title}</h2>
+    <p class="mc-bar-note">Per-page panel: ${rog.share_hub.per_page_panel ? 'Yes' : 'No'} · Pages wired: ${rog.share_hub.pages_wired} · ${rog.share_hub.status}</p>
+    <p class="mc-bar-note"><strong>Emphasis:</strong> "${rog.share_hub.emphasis}" · <strong>Not:</strong> "${rog.share_hub.not_emphasis}"</p>
+    <table class="mc-table"><thead><tr><th>Shareable</th><th>Status</th></tr></thead>
+      <tbody>${shareRows}</tbody></table>
+    <h2 class="mc-section-title">${rog.family_learning.title}</h2>
+    <p class="mc-bar-note">Intergenerational: ${rog.family_learning.intergenerational ? 'Yes' : 'No'} · ${rog.family_learning.status}</p>
+    <ul class="mc-deliverables">${rog.family_learning.resources.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${rog.friend_neighbor_circles.title}</h2>
+    <p class="mc-bar-note">Active circles: ${rog.friend_neighbor_circles.active_circles} · Local conversations: ${rog.friend_neighbor_circles.local_conversations ? 'Yes' : 'No'} · ${rog.friend_neighbor_circles.status}</p>
+    <ul class="mc-deliverables">${rog.friend_neighbor_circles.circle_types.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${rog.organizational_referrals.title}</h2>
+    <p class="mc-bar-note">Coalition tools: ${rog.organizational_referrals.coalition_tools ? 'Yes' : 'No'} · Referrals tracked: ${rog.organizational_referrals.referrals_tracked} · Privacy respecting: ${rog.organizational_referrals.privacy_respecting ? 'Yes' : 'No'} · ${rog.organizational_referrals.status}</p>
+    <h2 class="mc-section-title">${rog.education_leader_referral_dashboard.title}</h2>
+    <p class="mc-bar-note">Mentorship not competition: ${rog.education_leader_referral_dashboard.mentorship_not_competition ? 'Yes' : 'No'} · ${rog.education_leader_referral_dashboard.status}</p>
+    <ul class="mc-deliverables">${rog.education_leader_referral_dashboard.fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${rog.referral_recognition.title}</h2>
+    <p class="mc-bar-note">Focus: ${rog.referral_recognition.focus} · Milestones achieved: ${rog.referral_recognition.milestones_achieved} · ${rog.referral_recognition.status}</p>
+    <ul class="mc-deliverables">${rog.referral_recognition.milestones.map(m => `<li>${m}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${rog.relationship_health.title}</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${healthRows}</tbody></table>
+    <h2 class="mc-section-title">${rog.privacy_principles.title}</h2>
+    <p class="mc-bar-note">Trust outweighs growth: ${rog.privacy_principles.trust_outweighs_growth ? 'Yes' : 'No'} · ${rog.privacy_principles.status}</p>
+    <ul class="mc-deliverables">${rog.privacy_principles.principles.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${rog.mc_visualization.title}</h2>
+    <p class="mc-bar-note">Private info protected: ${rog.mc_visualization.private_info_protected ? 'Yes' : 'No'} · ${rog.mc_visualization.status}</p>
+    <ul class="mc-deliverables">${rog.mc_visualization.layers.map(l => `<li>${l}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${rog.integration.chain}</p>
+    <p class="mc-bar-note"><strong>Unifies:</strong> ${rog.integration.unifies}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${rog.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${rog.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${rog.recommended_next_build.number} — ${rog.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${rog.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_RELATIONAL_ORGANIZING_GROWTH_ENGINE.md">MASTER_RELATIONAL_ORGANIZING_GROWTH_ENGINE.md</a> ·
+      <a href="/data/relational-organizing-growth-engine.json">JSON</a> ·
+      <a href="/mission-control/neighborhood-organizing.html">Neighborhood Organizing</a> ·
+      <a href="/mission-control/relationship-os.html">Relationship OS</a> ·
+      <a href="/mission-control/arkansas-action-network.html">Action Network</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

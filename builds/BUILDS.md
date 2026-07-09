@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#69** | **Relational Organizing & Arkansas Growth Engine** | **1.73.0** | **✅ Complete** | [069](069-relational-organizing-growth-engine.md) · [/mission-control/relational-organizing-growth-engine.html](../mission-control/relational-organizing-growth-engine.html) |
 | **#68** | **Citizen Leadership Academy** | **1.72.0** | **✅ Complete** | [068](068-citizen-leadership-academy.md) · [/mission-control/citizen-leadership-academy.html](../mission-control/citizen-leadership-academy.html) |
 | **#67** | **Impact Measurement & Arkansas Civic Scorecard** | **1.71.0** | **✅ Complete** | [067](067-impact-measurement.md) · [/mission-control/impact-measurement.html](../mission-control/impact-measurement.html) |
 | **#66** | **Sustainability, Funding & Institutional Stewardship** | **1.70.0** | **✅ Complete** | [066](066-sustainability-stewardship.md) · [/mission-control/sustainability-stewardship.html](../mission-control/sustainability-stewardship.html) |

@@ -1,6 +1,6 @@
 {
-  "version": "1.72.0",
-  "build": 68,
+  "version": "1.73.0",
+  "build": 69,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 68,
+    "overall_completion": 69,
     "current_build": {
-      "number": 68,
-      "title": "Citizens United Facts Master Citizen Leadership Academy v1.0"
-    },
-    "active_phase": "Citizen Leadership Academy \u2192 Implementation Translation",
-    "last_completed": "Impact Measurement & Arkansas Civic Scorecard",
-    "next_build": {
       "number": 69,
+      "title": "Citizens United Facts Master Relational Organizing & Arkansas Growth Engine v1.0"
+    },
+    "active_phase": "Relational Organizing Growth Engine \u2192 Implementation Translation",
+    "last_completed": "Citizen Leadership Academy",
+    "next_build": {
+      "number": 70,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
@@ -25,7 +25,7 @@
     "content_readiness": 28,
     "research_readiness": 26,
     "data_viz_readiness": 12,
-    "signup_funnel_readiness": 24,
+    "signup_funnel_readiness": 26,
     "civic_action_readiness": 28,
     "coalition_readiness": 44,
     "data_model_readiness": 54,
@@ -48,18 +48,19 @@
     "sustainability_stewardship_readiness": 38,
     "impact_measurement_readiness": 31,
     "citizen_leadership_academy_readiness": 34,
-    "mc2_readiness": 41,
+    "relational_organizing_growth_engine_readiness": 34,
+    "mc2_readiness": 42,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
     "education_academy_readiness": 26,
     "observatory_readiness": 20,
-    "outreach_readiness": 24,
+    "outreach_readiness": 26,
     "county_os_readiness": 28,
     "campaign_os_readiness": 34,
     "encyclopedia_readiness": 19,
     "narrative_readiness": 24,
     "curriculum_readiness": 26,
-    "trust_readiness": 28,
+    "trust_readiness": 30,
     "library_readiness": 22,
     "learning_lab_readiness": 22,
     "media_studio_readiness": 18,
@@ -69,7 +70,7 @@
     "research_methodology_readiness": 25,
     "institutional_maturity_pct": 32,
     "current_institutional_version": "V1",
-    "systems_integration_readiness": 43,
+    "systems_integration_readiness": 44,
     "production_matrix_readiness": 39,
     "visitor_journey_readiness": 40,
     "technical_architecture_readiness": 38,
@@ -96,8 +97,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 68,
-      "note": "Build #68 \u2014 Citizen Leadership Academy."
+      "value": 69,
+      "note": "Build #69 \u2014 Relational Organizing Growth Engine."
     },
     {
       "id": "constitution",
@@ -597,6 +598,13 @@
       "value": 34,
       "max": 100,
       "note": "6 levels \u00b7 0 graduates \u00b7 0 leaders."
+    },
+    {
+      "id": "relational_organizing_growth_engine",
+      "label": "Relational Growth Engine",
+      "value": 34,
+      "max": 100,
+      "note": "0 trees \u00b7 0 pages with share hub."
     }
   ],
   "public_readiness": {
@@ -1297,6 +1305,12 @@
       "id": "citizen_leadership_academy",
       "label": "Citizen Leadership Academy",
       "href": "/mission-control/citizen-leadership-academy.html",
+      "status": "complete"
+    },
+    {
+      "id": "relational_organizing_growth_engine",
+      "label": "Relational Growth Engine",
+      "href": "/mission-control/relational-organizing-growth-engine.html",
       "status": "complete"
     }
   ],
@@ -2323,6 +2337,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 69,
+      "title": "Citizens United Facts Master Relational Organizing & Arkansas Growth Engine v1.0",
+      "version": "1.73.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Relational Organizing Engine \u2014 primary expansion through trusted relationships to 200K",
+      "summary": "Growth formula, relationship trees, share hub, circles, leader referral dashboard; 34% readiness. 0 trees \u00b7 0 invitations \u00b7 0/200000 connected.",
+      "files_created": [
+        "data/relational-organizing-growth-engine.json",
+        "docs/MASTER_RELATIONAL_ORGANIZING_GROWTH_ENGINE.md",
+        "builds/069-relational-organizing-growth-engine.md",
+        "mission-control/relational-organizing-growth-engine.html",
+        "scripts/gen-relational-organizing-growth-engine.py",
+        "scripts/update-mc-build69.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/relational-organizing-growth-engine.html"
+      ],
+      "decisions_made": [
+        "Primary expansion strategy \u2014 relational, not advertising/SEO/social",
+        "Five-people question \u2014 no pressure, no quotas",
+        "Share hub emphasis: helpful, not agreement-required",
+        "Privacy: trust outweighs growth; never require invitations",
+        "Unifies Neighborhood Organizing (#57) + Relationship OS (#59) + Action Network",
+        "Leader referral dashboard \u2014 mentorship not competition",
+        "34% readiness \u2014 constitution only"
+      ],
+      "open_questions": [
+        "Referral tracking: anonymous counts vs named trees?",
+        "Share hub: single component vs per-content-type?",
+        "Reconcile primary expansion (#69) vs primary growth engine (#64)?",
+        "Public relationship tree opt-in model?"
+      ],
+      "risks": [
+        "0 relationship trees \u2014 voluntary tree builder not implemented",
+        "0 invitations tracked \u2014 five-people question not wired in UI",
+        "Share hub specified \u2014 0 educational pages with sharing panel",
+        "0 learning circles registered \u2014 friend/neighbor circle tools missing"
+      ],
+      "next_recommended": 70,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/relational-organizing-growth-engine.html",
+      "review_status": "complete"
+    },
     {
       "number": 68,
       "title": "Citizens United Facts Master Citizen Leadership Academy v1.0",
@@ -5713,21 +5780,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Citizen Leadership Academy v1.0 \u2014 6 levels, human engine",
-    "building_now": "68 builds specified \u2014 implementation translation next",
+    "what_built": "Relational Organizing Growth Engine v1.0 \u2014 network effect, trusted relationships",
+    "building_now": "69 builds specified \u2014 implementation translation next",
     "blocked": [
-      "LMS",
-      "Certification workflow",
-      "Portfolios",
-      "Mentorship graph"
+      "Share hub",
+      "Relationship trees",
+      "Referral tracking",
+      "Leader dashboard"
     ],
     "ready_public": [
-      "6 levels",
-      "Learning model",
-      "Competencies",
-      "Graduation commitment"
+      "Growth formula",
+      "Privacy principles",
+      "Share hub spec",
+      "Recognition milestones"
     ],
-    "next": "Build #69 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #70 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -6458,5 +6525,13 @@
     "education_leaders": 0,
     "highest_strategic_priority": true,
     "human_engine": true
+  },
+  "relational_organizing_growth_engine": "/data/relational-organizing-growth-engine.json",
+  "relational_organizing_growth_engine_dashboard": "/mission-control/relational-organizing-growth-engine.html",
+  "relational_organizing_growth_engine_inventory": {
+    "readiness_score": 34,
+    "relationship_trees": 0,
+    "connected_arkansans": 0,
+    "primary_expansion_strategy": true
   }
 }

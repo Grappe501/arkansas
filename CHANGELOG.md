@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.73.0] - 2026-07-09 — Build #69 Relational Organizing Growth Engine
+
+### The Network Effect — Trusted Relationships to 200,000
+- **Relational Organizing Growth Engine v1.0** — primary expansion through trusted relationships
+- Arkansas Growth Formula: "Who are five people in my life who would benefit from understanding this better?"
+- Share hub, relationship trees, family learning, friend/neighbor circles, leader referral dashboard
+- Privacy principles: trust outweighs growth; never require invitations
+- Unifies Neighborhood Organizing (#57) + Relationship OS (#59) + Action Network (#64)
+- Honest: 0 trees · 0 invitations · 0 share-hub pages · 0/200,000 connected · ~34% readiness
+- MC dashboard: `/mission-control/relational-organizing-growth-engine.html`
+
 ## [1.72.0] - 2026-07-09 — Build #68 Citizen Leadership Academy
 
 ### Developing Arkansas's Civic Education Leaders
