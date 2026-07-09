@@ -315,10 +315,10 @@ out = {
     ],
     'recommended_next_build': {
         'number': 96,
-        'title': 'Executive War Room & Countdown Dashboard Components',
+        'title': 'Master Arkansas Civic Operating System (ACOS 2.0)',
         'note': (
-            'War room UI, countdown dashboard, action calendar integration, '
-            'Action Center MVP, COMP-* specs.'
+            'One login, personalized civic workspace, role-based permissions, '
+            'AI assistant, smart notifications, platform OS layer.'
         ),
     },
 }

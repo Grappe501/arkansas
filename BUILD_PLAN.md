@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.99.0 · **Master Action Network:** [/mission-control/master-arkansas-action-network.html](/mission-control/master-arkansas-action-network.html) · **95 builds complete**  
-**Educate. Connect. Act.** — civic participation layer · neutral process education · **Next:** Build #96 War Room Components  
+**Current version:** 2.00.0 · **ACOS 2.0:** [/mission-control/arkansas-civic-operating-system.html](/mission-control/arkansas-civic-operating-system.html) · **96 builds complete**  
+**One login. One platform.** — personalized civic workspace · role-based permissions · **Next:** Build #97 War Room Components  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **96** | **Master Arkansas Civic Operating System (ACOS 2.0)** | **✅ v2.00.0** |
 | **95** | **Master Arkansas Action Network** | **✅ v1.99.0** |
 | **94** | **Master Executive Institution** | **✅ v1.98.0** |
 | **93** | **Master Civic Data Warehouse & Knowledge Platform** | **✅ v1.97.0** |

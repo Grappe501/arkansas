@@ -1,0 +1,407 @@
+{
+  "version": "2.0",
+  "build": 96,
+  "prior_county_acos_build": 77,
+  "updated": "2026-07-09",
+  "completion_target_date": "2027-01-01",
+  "title": "Master Arkansas Civic Operating System (ACOS 2.0)",
+  "subtitle": "One Login. One Platform. Everything Connected.",
+  "tagline": "Operating System for Civic Education",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/arkansas-civic-operating-system.html",
+  "constitution": "/docs/MASTER_ARKANSAS_CIVIC_OPERATING_SYSTEM.md",
+  "prior_county_acos_route": "/mission-control/arkansas-county-operating-system.html",
+  "purpose": "By January 2027, Citizens United Facts feels like an operating system for civic education \u2014 not a traditional website. Every account enters a personalized civic workspace. Platform remembers learning, interests, location, organizations, volunteer roles, and goals. Every role works from the same platform with different permissions.",
+  "governing_principle": "The Arkansas Civic Operating System exists to make civic education personal. One institution. One login. One trusted platform. Thousands of individual journeys. Together building a stronger Arkansas through knowledge, volunteer service, community leadership, and lifelong civic learning.",
+  "founders_principle": "People should never wonder where to go next. The platform should always know what they are learning, what they care about, where they serve, who they can learn from, and how they can contribute \u2014 without pressure, without confusion, with clarity, respect, and purpose.",
+  "institutional_philosophy": {
+    "title": "Institutional Philosophy",
+    "built_for_me": true,
+    "adapts_to_individual": true,
+    "one_statewide_institution": true
+  },
+  "personal_civic_workspace": {
+    "title": "The Personal Civic Workspace",
+    "modules": [
+      {
+        "id": "WS-01",
+        "module": "My Learning",
+        "status": "partial"
+      },
+      {
+        "id": "WS-02",
+        "module": "My Community",
+        "status": "planned"
+      },
+      {
+        "id": "WS-03",
+        "module": "My County",
+        "status": "partial"
+      },
+      {
+        "id": "WS-04",
+        "module": "My City",
+        "status": "planned"
+      },
+      {
+        "id": "WS-05",
+        "module": "My Neighborhood",
+        "status": "planned"
+      },
+      {
+        "id": "WS-06",
+        "module": "My Calendar",
+        "status": "planned"
+      },
+      {
+        "id": "WS-07",
+        "module": "My Volunteer Work",
+        "status": "planned"
+      },
+      {
+        "id": "WS-08",
+        "module": "My Coalition Organizations",
+        "status": "planned"
+      },
+      {
+        "id": "WS-09",
+        "module": "My Projects",
+        "status": "planned"
+      },
+      {
+        "id": "WS-10",
+        "module": "My Research",
+        "status": "partial"
+      },
+      {
+        "id": "WS-11",
+        "module": "My AI Assistant",
+        "status": "planned"
+      },
+      {
+        "id": "WS-12",
+        "module": "My Messages",
+        "status": "planned"
+      },
+      {
+        "id": "WS-13",
+        "module": "My Upcoming Events",
+        "status": "planned"
+      },
+      {
+        "id": "WS-14",
+        "module": "My Action Items",
+        "status": "planned"
+      },
+      {
+        "id": "WS-15",
+        "module": "My Progress",
+        "status": "planned"
+      }
+    ],
+    "grows_with_involvement": true,
+    "live": false,
+    "status": "planned"
+  },
+  "personalized_learning": {
+    "title": "Personalized Learning",
+    "tracks": [
+      "Courses completed",
+      "Videos watched",
+      "Articles read",
+      "Presentations attended",
+      "Certificates earned",
+      "Topics of interest",
+      "Recommended next lessons"
+    ],
+    "continuous_not_episodic": true,
+    "status": "partial"
+  },
+  "personalized_community": {
+    "title": "Personalized Community",
+    "connects": [
+      "Their county",
+      "Their city",
+      "Their neighborhood",
+      "Local Education Leaders",
+      "Community conversations",
+      "Nearby educational events",
+      "Relevant coalition organizations"
+    ],
+    "locally_relevant": true,
+    "status": "planned"
+  },
+  "volunteer_workspace": {
+    "title": "Volunteer Workspace",
+    "capabilities": [
+      "Assigned projects",
+      "Volunteer hours (optional)",
+      "Current responsibilities",
+      "Mentorship",
+      "Training",
+      "Leadership pathway",
+      "Team communications",
+      "Resource library"
+    ],
+    "status": "planned"
+  },
+  "education_leader_workspace": {
+    "title": "Education Leader Workspace",
+    "capabilities": [
+      "Presentation resources",
+      "Community conversation kits",
+      "County dashboards",
+      "City dashboards",
+      "Volunteer roster",
+      "Upcoming events",
+      "Local AI Assistant",
+      "Mission Control recommendations"
+    ],
+    "status": "planned"
+  },
+  "coalition_workspace": {
+    "title": "Coalition Workspace",
+    "capabilities": [
+      "Organization profile",
+      "Educational resources",
+      "Shared calendar",
+      "Volunteer opportunities",
+      "Community events",
+      "Partnership tracking",
+      "Communication tools"
+    ],
+    "dedicated_portals": true,
+    "status": "planned"
+  },
+  "executive_workspace": {
+    "title": "Executive Workspace",
+    "capabilities": [
+      "Mission Control",
+      "Digital Twin",
+      "Department dashboards",
+      "Project Management Office",
+      "Strategic planning",
+      "Executive reports",
+      "Institution health",
+      "Statewide maps",
+      "Forecasts"
+    ],
+    "status": "planned"
+  },
+  "user_roles": {
+    "title": "User Roles & Permissions",
+    "roles": [
+      {
+        "role": "Learner",
+        "workspace": "Personal civic workspace",
+        "status": "partial"
+      },
+      {
+        "role": "Volunteer",
+        "workspace": "Volunteer workspace",
+        "status": "planned"
+      },
+      {
+        "role": "Education Leader",
+        "workspace": "Education Leader workspace",
+        "status": "planned"
+      },
+      {
+        "role": "Coalition partner",
+        "workspace": "Coalition workspace",
+        "status": "planned"
+      },
+      {
+        "role": "Researcher",
+        "workspace": "Research modules",
+        "status": "partial"
+      },
+      {
+        "role": "Executive",
+        "workspace": "Executive workspace",
+        "status": "planned"
+      }
+    ],
+    "same_platform_different_permissions": true,
+    "status": "specified"
+  },
+  "ai_personal_assistant": {
+    "title": "AI Personal Assistant",
+    "understands": [
+      "User role",
+      "Learning progress",
+      "Volunteer assignments",
+      "Calendar",
+      "Projects",
+      "Documents",
+      "County",
+      "Organizations",
+      "Institutional knowledge"
+    ],
+    "every_account_receives": true,
+    "live": false,
+    "status": "planned"
+  },
+  "smart_notifications": {
+    "title": "Smart Notifications",
+    "types": [
+      "New research",
+      "County events",
+      "Community conversations",
+      "Legislative education updates",
+      "Academy reminders",
+      "Volunteer assignments",
+      "Project deadlines"
+    ],
+    "matches_interests_and_responsibilities": true,
+    "live": false,
+    "status": "planned"
+  },
+  "mission_control_integration": {
+    "title": "Mission Control Integration",
+    "aggregate_trends": [
+      {
+        "id": "ACOS-A01",
+        "trend": "Learning progress",
+        "status": "planned"
+      },
+      {
+        "id": "ACOS-A02",
+        "trend": "Volunteer engagement",
+        "status": "planned"
+      },
+      {
+        "id": "ACOS-A03",
+        "trend": "County participation",
+        "status": "partial"
+      },
+      {
+        "id": "ACOS-A04",
+        "trend": "City participation",
+        "status": "planned"
+      },
+      {
+        "id": "ACOS-A05",
+        "trend": "Neighborhood growth",
+        "status": "planned"
+      },
+      {
+        "id": "ACOS-A06",
+        "trend": "Coalition activity",
+        "status": "planned"
+      },
+      {
+        "id": "ACOS-A07",
+        "trend": "Platform usage",
+        "status": "planned"
+      },
+      {
+        "id": "ACOS-A08",
+        "trend": "Institutional health",
+        "status": "partial"
+      }
+    ],
+    "anonymous_aggregate": true,
+    "respects_individual_privacy": true,
+    "status": "partial"
+  },
+  "security_privacy": {
+    "title": "Security & Privacy",
+    "user_controls": [
+      "Communication preferences",
+      "Notification settings",
+      "Profile visibility",
+      "Volunteer visibility",
+      "Organization memberships",
+      "Personal information"
+    ],
+    "protects_trust": true,
+    "status": "specified"
+  },
+  "integration": {
+    "chain": "Mission Control \u2192 LocalBrains \u2192 Community Education Academy \u2192 Research Institute \u2192 Knowledge Platform \u2192 Coalition Network \u2192 Volunteer Network \u2192 County/City/Neighborhood OS \u2192 Arkansas Action Network",
+    "unified_experience": true,
+    "systems": [
+      {
+        "system": "County ACOS (#77)",
+        "route": "/mission-control/arkansas-county-operating-system.html",
+        "status": "live"
+      },
+      {
+        "system": "City ArCOS (#78)",
+        "route": "/mission-control/arkansas-city-operating-system.html",
+        "status": "live"
+      },
+      {
+        "system": "Neighborhood ANOS (#79)",
+        "route": "/mission-control/arkansas-neighborhood-operating-system.html",
+        "status": "live"
+      },
+      {
+        "system": "LocalBrain Architecture (#92)",
+        "route": "/mission-control/localbrain-architecture.html",
+        "status": "live"
+      },
+      {
+        "system": "Knowledge Platform (#93)",
+        "route": "/mission-control/civic-knowledge-platform.html",
+        "status": "live"
+      },
+      {
+        "system": "Master Action Network (#95)",
+        "route": "/mission-control/master-arkansas-action-network.html",
+        "status": "live"
+      },
+      {
+        "system": "AI Institution (#91)",
+        "route": "/mission-control/ai-institution.html",
+        "status": "live"
+      },
+      {
+        "system": "Education Academy (#28)",
+        "route": "/mission-control/education-academy.html",
+        "status": "partial"
+      }
+    ]
+  },
+  "long_term_vision": "By January 2027, every Arkansan who creates an account gains a personalized civic workspace \u2014 learn, volunteer, connect, participate, grow into leadership. The platform becomes a daily companion for civic learning, not a site visited only occasionally.",
+  "summary": {
+    "completion_target_date": "2027-01-01",
+    "days_remaining": 176,
+    "arkansas_civic_operating_system_readiness_pct": 59,
+    "county_acos_readiness_pct": 47,
+    "localbrain_architecture_readiness_pct": 60,
+    "knowledge_platform_readiness_pct": 58,
+    "master_action_network_readiness_pct": 50,
+    "platform_live": false,
+    "single_login_live": false,
+    "personal_workspace_live": false,
+    "ai_assistant_live": false,
+    "notifications_live": false,
+    "user_accounts": 0,
+    "workspace_modules": 15,
+    "user_roles": 6,
+    "institutional_completion_pct": 95
+  },
+  "catalog_gaps": [
+    "No single login / user account system",
+    "Personal civic workspace not live",
+    "Role-based permissions not implemented",
+    "AI personal assistant not deployed per account",
+    "Smart notifications not operational",
+    "Learning progress not persisted per user",
+    "Volunteer workspace not connected to assignments",
+    "Coalition partner portals not built",
+    "Executive workspace not unified in platform UI",
+    "MC aggregate trends not instrumented",
+    "Privacy controls not user-configurable",
+    "County ACOS (#77) not integrated into platform OS layer",
+    "No daily-companion mobile or PWA experience"
+  ],
+  "recommended_next_build": {
+    "number": 97,
+    "title": "Executive War Room & Countdown Dashboard Components",
+    "note": "War room UI, countdown dashboard, platform auth MVP, workspace shell, role permissions, COMP-* specs."
+  }
+}

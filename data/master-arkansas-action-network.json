@@ -363,7 +363,7 @@
     "action_center_usage": 0,
     "participation_guides": 13,
     "action_center_questions": 11,
-    "institutional_completion_pct": 94
+    "institutional_completion_pct": 96
   },
   "catalog_gaps": [
     "Action Center not live \u2014 no unified public-facing hub",
@@ -381,7 +381,7 @@
   ],
   "recommended_next_build": {
     "number": 96,
-    "title": "Executive War Room & Countdown Dashboard Components",
-    "note": "War room UI, countdown dashboard, action calendar integration, Action Center MVP, COMP-* specs."
+    "title": "Master Arkansas Civic Operating System (ACOS 2.0)",
+    "note": "One login, personalized civic workspace, role-based permissions, AI assistant, smart notifications, platform OS layer."
   }
 }

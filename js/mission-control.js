@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">ACOS 2.0 <a href="/mission-control/arkansas-civic-operating-system.html" class="mc-inline-link">One Login. One Platform. #96 →</a></h2>
+    <p class="mc-bar-note">Build #96 — Master Arkansas Civic Operating System. Personalized civic workspace, 15 modules, 6 role workspaces, AI assistant, smart notifications. 0 accounts · single login not live. 59% readiness.</p>
     <h2 class="mc-section-title">Master Action Network <a href="/mission-control/master-arkansas-action-network.html" class="mc-inline-link">Educate. Connect. Act. #95 →</a></h2>
     <p class="mc-bar-note">Build #95 — Master Arkansas Action Network. Civic participation layer — Action Center, participation library, legislative resources, community pages. Neutral, not partisan. Action Center not live · calendar not unified. 50% readiness.</p>
     <h2 class="mc-section-title">Executive Institution <a href="/mission-control/executive-institution.html" class="mc-inline-link">Governance & Leadership #94 →</a></h2>
@@ -5274,6 +5276,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCivicKnowledgePlatform();
   initExecutiveInstitution();
   initMasterArkansasActionNetwork();
+  initArkansasCivicOperatingSystem();
 });
 
 async function initUxArchitecture() {
@@ -10093,6 +10096,105 @@ async function initMasterArkansasActionNetwork() {
       <a href="/data/master-arkansas-action-network.json">JSON</a> ·
       <a href="/mission-control/arkansas-action-network.html">Pipeline (#64)</a> ·
       <a href="/mission-control/citizen-action-center.html">Citizen Action Center</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initArkansasCivicOperatingSystem() {
+  const root = document.getElementById('mc-arkansas-civic-operating-system-root');
+  if (!root) return;
+
+  const [acosRes, mcRes] = await Promise.all([
+    fetch('/data/arkansas-civic-operating-system.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const acos = await acosRes.json();
+  const mc = await mcRes.json();
+  const s = acos.summary;
+
+  const moduleRows = acos.personal_civic_workspace.modules.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.module}</td><td>${m.status}</td></tr>`).join('');
+
+  const roleRows = acos.user_roles.roles.map(r => `
+    <tr><td>${r.role}</td><td>${r.workspace}</td><td>${r.status}</td></tr>`).join('');
+
+  const trendRows = acos.mission_control_integration.aggregate_trends.map(t => `
+    <tr><td><code>${t.id}</code></td><td>${t.trend}</td><td>${t.status}</td></tr>`).join('');
+
+  const systemRows = acos.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → ACOS 2.0</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #96 · ${acos.title}</p>
+      <h1>${acos.subtitle}</h1>
+      <p class="mc-header__question">${acos.governing_principle}</p>
+      <p class="mc-bar-note">${acos.purpose}</p>
+      <p class="mc-bar-note"><strong>${acos.tagline}</strong> · ${s.days_remaining} days to ${acos.completion_target_date}</p>
+      <p class="mc-bar-note">County layer: <a href="${acos.prior_county_acos_route}">County ACOS (#77)</a></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">ACOS readiness</div><div class="mc-stat__value">${s.arkansas_civic_operating_system_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Single login</div><div class="mc-stat__value">${s.single_login_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">User accounts</div><div class="mc-stat__value">${s.user_accounts}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Workspace modules</div><div class="mc-stat__value">${s.workspace_modules}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">AI assistant</div><div class="mc-stat__value">${s.ai_assistant_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">County ACOS</div><div class="mc-stat__value">${s.county_acos_readiness_pct}%</div></div>
+    </div>
+    <h2 class="mc-section-title">${acos.institutional_philosophy.title}</h2>
+    <p class="mc-bar-note">Built for me: ${acos.institutional_philosophy.built_for_me ? 'Yes' : 'No'} · Adapts to individual: ${acos.institutional_philosophy.adapts_to_individual ? 'Yes' : 'No'}</p>
+    <h2 class="mc-section-title">${acos.personal_civic_workspace.title}</h2>
+    <p class="mc-bar-note">Live: ${acos.personal_civic_workspace.live ? 'Yes' : 'No'} · Grows with involvement</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Module</th><th>Status</th></tr></thead>
+      <tbody>${moduleRows}</tbody></table>
+    <h2 class="mc-section-title">${acos.personalized_learning.title}</h2>
+    <ul class="mc-deliverables">${acos.personalized_learning.tracks.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acos.personalized_community.title}</h2>
+    <ul class="mc-deliverables">${acos.personalized_community.connects.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acos.volunteer_workspace.title}</h2>
+    <ul class="mc-deliverables">${acos.volunteer_workspace.capabilities.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acos.education_leader_workspace.title}</h2>
+    <ul class="mc-deliverables">${acos.education_leader_workspace.capabilities.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acos.coalition_workspace.title}</h2>
+    <ul class="mc-deliverables">${acos.coalition_workspace.capabilities.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acos.executive_workspace.title}</h2>
+    <ul class="mc-deliverables">${acos.executive_workspace.capabilities.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acos.user_roles.title}</h2>
+    <table class="mc-table"><thead><tr><th>Role</th><th>Workspace</th><th>Status</th></tr></thead>
+      <tbody>${roleRows}</tbody></table>
+    <h2 class="mc-section-title">${acos.ai_personal_assistant.title}</h2>
+    <p class="mc-bar-note">Live: ${acos.ai_personal_assistant.live ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${acos.ai_personal_assistant.understands.map(u => `<li>${u}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acos.smart_notifications.title}</h2>
+    <p class="mc-bar-note">Live: ${acos.smart_notifications.live ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${acos.smart_notifications.types.map(n => `<li>${n}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acos.mission_control_integration.title}</h2>
+    <p class="mc-bar-note">Anonymous aggregate · respects privacy</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Trend</th><th>Status</th></tr></thead>
+      <tbody>${trendRows}</tbody></table>
+    <h2 class="mc-section-title">${acos.security_privacy.title}</h2>
+    <ul class="mc-deliverables">${acos.security_privacy.user_controls.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Founder's Principle</h2>
+    <p class="mc-bar-note">${acos.founders_principle}</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${acos.integration.chain}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${acos.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${acos.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${acos.recommended_next_build.number} — ${acos.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${acos.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_ARKANSAS_CIVIC_OPERATING_SYSTEM.md">MASTER_ARKANSAS_CIVIC_OPERATING_SYSTEM.md</a> ·
+      <a href="/data/arkansas-civic-operating-system.json">JSON</a> ·
+      <a href="/mission-control/arkansas-county-operating-system.html">County ACOS (#77)</a> ·
+      <a href="/mission-control/localbrain-architecture.html">LocalBrain (#92)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

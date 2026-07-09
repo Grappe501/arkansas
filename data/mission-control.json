@@ -1,6 +1,6 @@
 {
-  "version": "1.99.0",
-  "build": 95,
+  "version": "2.00.0",
+  "build": 96,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 95,
+    "overall_completion": 96,
     "current_build": {
-      "number": 95,
-      "title": "Citizens United Facts Master Arkansas Action Network v2.0"
-    },
-    "active_phase": "Action Network \u2192 War Room",
-    "last_completed": "Executive Institution",
-    "next_build": {
       "number": 96,
+      "title": "Citizens United Facts Master Arkansas Civic Operating System (ACOS 2.0)"
+    },
+    "active_phase": "Civic OS \u2192 War Room",
+    "last_completed": "Master Action Network",
+    "next_build": {
+      "number": 97,
       "title": "Executive war room & countdown dashboard components"
     },
     "github_status": "connected",
@@ -33,7 +33,7 @@
     "component_registry_readiness": 22,
     "facts_framework_readiness": 14,
     "knowledge_atlas_readiness": 58,
-    "platform_architecture_readiness": 24,
+    "platform_architecture_readiness": 59,
     "repository_structure_readiness": 28,
     "database_schema_readiness": 42,
     "wireframe_readiness": 38,
@@ -45,6 +45,7 @@
     "civic_knowledge_platform_readiness": 58,
     "executive_institution_readiness": 50,
     "master_arkansas_action_network_readiness": 50,
+    "arkansas_civic_operating_system_readiness": 59,
     "coalition_network_readiness": 44,
     "citizen_action_center_readiness": 42,
     "campaign_finance_observatory_readiness": 38,
@@ -81,7 +82,7 @@
     "education_academy_readiness": 26,
     "observatory_readiness": 43,
     "outreach_readiness": 44,
-    "county_os_readiness": 28,
+    "county_os_readiness": 59,
     "campaign_os_readiness": 47,
     "encyclopedia_readiness": 19,
     "narrative_readiness": 24,
@@ -96,14 +97,14 @@
     "research_methodology_readiness": 29,
     "institutional_maturity_pct": 32,
     "current_institutional_version": "V1",
-    "systems_integration_readiness": 44,
+    "systems_integration_readiness": 59,
     "production_matrix_readiness": 39,
-    "visitor_journey_readiness": 40,
-    "technical_architecture_readiness": 38,
+    "visitor_journey_readiness": 59,
+    "technical_architecture_readiness": 59,
     "governance_readiness": 50,
     "build_bible_readiness": 49,
     "data_architecture_readiness": 58,
-    "ux_architecture_readiness": 39,
+    "ux_architecture_readiness": 59,
     "launch_strategy_readiness": 44,
     "pmo_readiness": 60,
     "master_plan_readiness": 56,
@@ -128,8 +129,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 95,
-      "note": "Build #95 \u2014 Master Action Network. 176 days to Jan 2027."
+      "value": 96,
+      "note": "Build #96 \u2014 ACOS 2.0. 176 days to Jan 2027."
     },
     {
       "id": "constitution",
@@ -817,7 +818,14 @@
       "label": "Master Action Network",
       "value": 50,
       "max": 100,
-      "note": "Action Center planned \u00b7 calendar planned."
+      "note": "Action Network \u00b7 50% readiness."
+    },
+    {
+      "id": "arkansas_civic_operating_system",
+      "label": "ACOS 2.0",
+      "value": 59,
+      "max": 100,
+      "note": "0 accounts \u00b7 workspace planned."
     }
   ],
   "public_readiness": {
@@ -1680,6 +1688,12 @@
       "id": "master_arkansas_action_network",
       "label": "Master Action Network",
       "href": "/mission-control/master-arkansas-action-network.html",
+      "status": "complete"
+    },
+    {
+      "id": "arkansas_civic_operating_system",
+      "label": "ACOS 2.0",
+      "href": "/mission-control/arkansas-civic-operating-system.html",
       "status": "complete"
     }
   ],
@@ -2706,6 +2720,58 @@
     }
   ],
   "builds": [
+    {
+      "number": 96,
+      "title": "Citizens United Facts Master Arkansas Civic Operating System (ACOS 2.0)",
+      "version": "2.00.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "One login \u2014 personalized civic workspace \u2014 platform OS for Arkansas",
+      "summary": "15 workspace modules, 6 user roles, personalized learning/community, volunteer/leader/coalition/executive workspaces, AI assistant, notifications, privacy. 59% readiness \u00b7 0 accounts \u00b7 platform not live.",
+      "files_created": [
+        "data/arkansas-civic-operating-system.json",
+        "docs/MASTER_ARKANSAS_CIVIC_OPERATING_SYSTEM.md",
+        "builds/096-arkansas-civic-operating-system.md",
+        "mission-control/arkansas-civic-operating-system.html",
+        "scripts/gen-arkansas-civic-operating-system.py",
+        "scripts/update-mc-build96.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/arkansas-civic-operating-system.html"
+      ],
+      "decisions_made": [
+        "ACOS 2.0 \u2014 platform OS layer above County ACOS (#77)",
+        "One login, one platform, role-based permissions",
+        "Personal civic workspace \u2014 15 modules growing with involvement",
+        "AI personal assistant per account grounded in institutional knowledge",
+        "MC anonymous aggregate trends \u2014 respects individual privacy",
+        "59% readiness \u2014 blueprint only"
+      ],
+      "open_questions": [
+        "Auth provider \u2014 Supabase Auth vs custom?",
+        "Workspace shell \u2014 SPA vs server-rendered dashboards?",
+        "How does County ACOS (#77) nest inside platform OS?",
+        "PWA / daily companion mobile experience timeline?"
+      ],
+      "risks": [
+        "No single login / user account system",
+        "Personal civic workspace not live",
+        "Role-based permissions not implemented",
+        "AI personal assistant not deployed per account"
+      ],
+      "next_recommended": 97,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-civic-operating-system.html",
+      "review_status": "complete"
+    },
     {
       "number": 95,
       "title": "Citizens United Facts Master Arkansas Action Network v2.0",
@@ -7799,21 +7865,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Master Arkansas Action Network v2.0 \u2014 Educate. Connect. Act.",
-    "building_now": "95 builds \u2014 executive war room next",
+    "what_built": "Master Arkansas Civic Operating System (ACOS 2.0) \u2014 One Login. One Platform.",
+    "building_now": "96 builds \u2014 executive war room next",
     "blocked": [
-      "Action Center",
-      "Participation calendar",
-      "Action dashboard",
-      "Bill tracker"
+      "Single login",
+      "Personal workspace",
+      "AI assistant",
+      "Role permissions"
     ],
     "ready_public": [
-      "Participation library spec",
-      "Action Center questions",
-      "Neutral philosophy",
-      "Community page fields"
+      "Workspace modules spec",
+      "Role workspaces",
+      "Privacy controls",
+      "MC integration model"
     ],
-    "next": "Build #96 \u2014 Executive war room & countdown dashboard components"
+    "next": "Build #97 \u2014 Executive war room & countdown dashboard components"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8778,5 +8844,15 @@
     "participation_calendar_live": false,
     "action_dashboard_live": false,
     "community_pages_enriched": false
+  },
+  "arkansas_civic_operating_system": "/data/arkansas-civic-operating-system.json",
+  "arkansas_civic_operating_system_dashboard": "/mission-control/arkansas-civic-operating-system.html",
+  "arkansas_civic_operating_system_inventory": {
+    "readiness_score": 59,
+    "platform_live": false,
+    "single_login_live": false,
+    "personal_workspace_live": false,
+    "ai_assistant_live": false,
+    "user_accounts": 0
   }
 }

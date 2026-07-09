@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.00.0] - 2026-07-09 — Build #96 Master Arkansas Civic Operating System (ACOS 2.0)
+
+### One Login. One Platform. Everything Connected.
+- **Master ACOS 2.0** — platform-level civic operating system (evolution above County ACOS #77)
+- Personal civic workspace (15 modules), 6 user roles with role-based permissions
+- Personalized learning & community, volunteer/leader/coalition/executive workspaces
+- AI personal assistant per account, smart notifications, privacy controls
+- Mission Control anonymous aggregate trends — respects individual privacy
+- Honest: 0 accounts · single login not live · workspace not live · 59% readiness
+- MC dashboard: `/mission-control/arkansas-civic-operating-system.html`
+
 ## [1.99.0] - 2026-07-09 — Build #95 Master Arkansas Action Network
 
 ### From Learning to Local Civic Participation — Educate. Connect. Act.
