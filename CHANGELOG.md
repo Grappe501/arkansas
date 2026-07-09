@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.38.0] - 2026-07-09 — Build #34 Narrative Architecture
+
+### Educational Narrative System
+- **Storytelling & Narrative Architecture v1.0** — 8 acts, 4 storytelling layers
+- Master narrative, story components, visual storytelling, continuity requirements
+- Acts I–V mapped to hall pages; VI–VIII to solutions/educate
+- 24% honest readiness — avg act 30%, continuity not live
+- MC dashboard: `/mission-control/narrative.html`
+
 ## [1.37.0] - 2026-07-09 — Build #33 Encyclopedia & Knowledge Library
 
 ### Research Encyclopedia Architecture

@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.37.0 · **Encyclopedia:** [/mission-control/encyclopedia.html](/mission-control/encyclopedia.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #33:** ✅ Encyclopedia · **Build #32:** ✅ Campaign OS · **Build #31:** ✅ County OS  
+**Current version:** 1.38.0 · **Narrative:** [/mission-control/narrative.html](/mission-control/narrative.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #34:** ✅ Narrative · **Build #33:** ✅ Encyclopedia · **Build #32:** ✅ Campaign OS  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,11 +274,27 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **34** | **Narrative Architecture** | **✅ v1.38.0** |
 | **33** | **Encyclopedia & Knowledge Library** | **✅ v1.37.0** |
 | **32** | **Educational Campaign OS** | **✅ v1.36.0** |
-| **31** | **County Operating System** | **✅ v1.35.0** |
 
-**Next:** Build #34 — Component specifications with props/states.
+**Next:** Build #35 — Component specifications with props/states.
+
+---
+
+## Phase 34 — Narrative Architecture (Build #34) ★ NEW
+
+*Educational narrative system — documentary museum journey.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| N1 | Narrative System Blueprint v1.0 | ✅ | `data/narrative-architecture.json` |
+| N2 | 8 narrative acts + master narrative | ✅ | Mapped to halls/solutions |
+| N3 | 4 storytelling layers | ✅ | L1 headline through L4 archive |
+| N4 | Story components + visual storytelling | ✅ | 8 components, 6 visual elements |
+| N5 | Narrative continuity requirements | ✅ | Planned — not on all pages |
+| N6 | MC narrative completion tracking | ✅ | Acts, layers, sources |
+| N7 | MC narrative dashboard | ✅ | `/mission-control/narrative.html` |
 
 ---
 
@@ -633,7 +649,8 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#31**~~ | ~~Arkansas County Operating System~~ ✅ Done |
 | ~~**#32**~~ | ~~Educational Campaign Operating System~~ ✅ Done |
 | ~~**#33**~~ | ~~Research Encyclopedia & Knowledge Library~~ ✅ Done |
-| **#34** | **Component specifications with props/states** |
+| ~~**#34**~~ | ~~Storytelling & Narrative Architecture~~ ✅ Done |
+| **#35** | **Component specifications with props/states** |
 
 ---
 

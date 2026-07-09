@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Narrative Architecture <a href="/mission-control/narrative.html" class="mc-inline-link">8 Acts →</a></h2>
+    <p class="mc-bar-note">Build #34 — Educational narrative system, 4 storytelling layers, documentary museum journey. 24% narrative readiness.</p>
     <h2 class="mc-section-title">Encyclopedia & Knowledge Library <a href="/mission-control/encyclopedia.html" class="mc-inline-link">9 Categories →</a></h2>
     <p class="mc-bar-note">Build #33 — Living encyclopedia, 9-section entry structure, completion score, KG relationship graph. 19% encyclopedia readiness.</p>
     <h2 class="mc-section-title">Educational Campaign OS <a href="/mission-control/campaign-os.html" class="mc-inline-link">4 Horizons →</a></h2>
@@ -3308,6 +3310,103 @@ async function initEncyclopediaKnowledgeLibrary() {
   initDevConsole(mc);
 }
 
+async function initNarrativeArchitecture() {
+  const root = document.getElementById('mc-narrative-root');
+  if (!root) return;
+
+  const [narrRes, mcRes] = await Promise.all([
+    fetch('/data/narrative-architecture.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const narr = await narrRes.json();
+  const mc = await mcRes.json();
+  const s = narr.summary;
+  const nc = narr.narrative_completion;
+
+  const actRows = narr.acts.map(a => `
+    <tr><td>Act ${a.roman}</td><td>${a.title}</td><td>${a.question}</td>
+      <td><a href="${a.primary_route}">${a.primary_route}</a></td>
+      <td>${a.narrative_pct}%</td><td>${a.status}</td></tr>`).join('');
+
+  const actCards = narr.acts.map(a => `
+    <div class="mc-card"><h3>Act ${a.roman}: ${a.title}</h3>
+      <p class="mc-bar-note"><strong>${a.question}</strong></p>
+      <p class="mc-bar-note">${a.narrative_pct}% · Layers: ${a.layers_live.join(', ')}</p>
+      <ul class="mc-deliverables">${a.topics.map(t => `<li>${t}</li>`).join('')}</ul>
+      <p class="mc-bar-note">Outcome: ${a.reader_outcome}</p>
+    </div>`).join('');
+
+  const layerRows = narr.narrative_layers.map(l => `
+    <tr><td><code>${l.id}</code></td><td>Layer ${l.layer}: ${l.title}</td>
+      <td>${l.duration}</td><td>${l.status}</td></tr>`).join('');
+
+  const componentRows = narr.story_components.map(c => `
+    <tr><td><code>${c.id}</code></td><td>${c.title}</td><td>${c.status}</td></tr>`).join('');
+
+  const visualRows = narr.visual_storytelling.map(v => `
+    <tr><td><code>${v.id}</code></td><td>${v.title}</td><td>${v.status}</td>
+      <td>${v.route ? `<a href="${v.route}">${v.route}</a>` : '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Narrative Architecture</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #34 · ${narr.title}</p>
+      <h1>Storytelling & Narrative Architecture</h1>
+      <p class="mc-header__question">${narr.governing_principle}</p>
+      <blockquote class="mc-bar-note" style="font-style:italic;border-left:3px solid var(--mc-accent);padding-left:1rem">${narr.master_narrative}</blockquote>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Narrative readiness</div><div class="mc-stat__value">${s.narrative_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Acts</div><div class="mc-stat__value">${s.acts_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Avg act complete</div><div class="mc-stat__value">${s.avg_act_narrative_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Mapped pages</div><div class="mc-stat__value">${s.acts_with_primary_page}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Layers</div><div class="mc-stat__value">${s.narrative_layers}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Continuity</div><div class="mc-stat__value">${s.continuity_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Eight Narrative Acts</h2>
+    <table class="mc-table"><thead><tr><th>Act</th><th>Title</th><th>Question</th><th>Route</th><th>Complete</th><th>Status</th></tr></thead>
+      <tbody>${actRows}</tbody></table>
+    <div class="mc-grid-2">${actCards}</div>
+    <h2 class="mc-section-title">Narrative Layers (${s.narrative_layers})</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Layer</th><th>Duration</th><th>Status</th></tr></thead>
+      <tbody>${layerRows}</tbody></table>
+    <h2 class="mc-section-title">Storytelling Standards</h2>
+    <ul class="mc-deliverables">${narr.storytelling_standards.map(st => `<li>${st}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Story Components</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Component</th><th>Status</th></tr></thead>
+      <tbody>${componentRows}</tbody></table>
+    <h2 class="mc-section-title">Visual Storytelling</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Element</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${visualRows}</tbody></table>
+    <h2 class="mc-section-title">Narrative Continuity</h2>
+    <p class="mc-bar-note">Status: ${narr.narrative_continuity.status}</p>
+    <ul class="mc-deliverables">${narr.narrative_continuity.requirements.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Narrative Completion</h2>
+    <div class="mc-card">
+      <div class="mc-phase-item"><span>Acts with primary page</span><span>${nc.acts_with_primary_page}/${nc.acts_total}</span></div>
+      <div class="mc-phase-item"><span>Layers partial</span><span>${nc.layers_partial}/${nc.layers_defined}</span></div>
+      <div class="mc-phase-item"><span>Visual elements partial</span><span>${nc.visual_elements_partial}/${s.visual_elements}</span></div>
+      <div class="mc-phase-item"><span>KG nodes linked</span><span>${nc.kg_nodes_linked}</span></div>
+      <div class="mc-phase-item"><span>Facts linked</span><span>${nc.facts_linked}</span></div>
+    </div>
+    <h2 class="mc-section-title">Educational Integrity</h2>
+    <p class="mc-bar-note">${narr.educational_integrity.principle}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${narr.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${narr.recommended_next_build.number} — ${narr.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${narr.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/NARRATIVE_ARCHITECTURE.md">NARRATIVE_ARCHITECTURE.md</a> ·
+      <a href="/data/narrative-architecture.json">JSON</a> ·
+      <a href="/mission-control/journey.html">UX Journey</a> ·
+      <a href="/mission-control/encyclopedia.html">Encyclopedia</a> ·
+      <a href="/halls/story-before.html">Act I →</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -3340,4 +3439,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initCountyOperatingSystem();
   initEducationalCampaignOperatingSystem();
   initEncyclopediaKnowledgeLibrary();
+  initNarrativeArchitecture();
 });

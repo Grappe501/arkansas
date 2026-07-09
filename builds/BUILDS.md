@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#34** | **Narrative Architecture** | **1.38.0** | **✅ Complete** | [034](034-narrative-architecture.md) · [/mission-control/narrative.html](../mission-control/narrative.html) |
 | **#33** | **Encyclopedia & Knowledge Library** | **1.37.0** | **✅ Complete** | [033](033-encyclopedia-knowledge-library.md) · [/mission-control/encyclopedia.html](../mission-control/encyclopedia.html) |
 | **#32** | **Educational Campaign OS** | **1.36.0** | **✅ Complete** | [032](032-educational-campaign-operating-system.md) · [/mission-control/campaign-os.html](../mission-control/campaign-os.html) |
 | **#31** | **County Operating System** | **1.35.0** | **✅ Complete** | [031](031-county-operating-system.md) · [/mission-control/county-os.html](../mission-control/county-os.html) |
@@ -50,6 +51,7 @@
 | **County Operating System** | `/mission-control/county-os.html` | **75 counties · education score · regions** |
 | **Educational Campaign OS** | `/mission-control/campaign-os.html` | **4 horizons · annual cycle · master roadmap** |
 | **Encyclopedia & Knowledge Library** | `/mission-control/encyclopedia.html` | **9 categories · completion score · KG graph** |
+| **Narrative Architecture** | `/mission-control/narrative.html` | **8 acts · 4 layers · documentary museum** |
 | Phase Registry | `/mission-control/phases.html` | Project phases |
 | Site Architecture | `/mission-control/architecture.html` | Information architecture (IA) |
 | **Platform Blueprint** | `/mission-control/platform.html` | **Technical architecture · v1 system** |

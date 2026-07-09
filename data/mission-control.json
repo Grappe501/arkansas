@@ -1,6 +1,6 @@
 {
-  "version": "1.37.0",
-  "build": 33,
+  "version": "1.38.0",
+  "build": 34,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,22 +9,22 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 33,
+    "overall_completion": 34,
     "current_build": {
-      "number": 33,
-      "title": "Citizens United Facts Research Encyclopedia & Knowledge Library"
-    },
-    "active_phase": "Knowledge Institution \u2014 Encyclopedia Architecture",
-    "last_completed": "Educational Campaign Operating System",
-    "next_build": {
       "number": 34,
+      "title": "Citizens United Facts Storytelling & Narrative Architecture"
+    },
+    "active_phase": "Educational Narrative \u2014 Eight Acts Documentary Museum",
+    "last_completed": "Research Encyclopedia & Knowledge Library",
+    "next_build": {
+      "number": 35,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
-    "content_readiness": 22,
+    "content_readiness": 24,
     "research_readiness": 24,
-    "data_viz_readiness": 2,
+    "data_viz_readiness": 4,
     "signup_funnel_readiness": 22,
     "civic_action_readiness": 32,
     "coalition_readiness": 18,
@@ -47,6 +47,7 @@
     "county_os_readiness": 28,
     "campaign_os_readiness": 34,
     "encyclopedia_readiness": 19,
+    "narrative_readiness": 24,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -54,8 +55,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 33,
-      "note": "Encyclopedia live \u2014 38/400 entries, 9.5% catalog completion."
+      "value": 34,
+      "note": "Narrative live \u2014 8 acts, avg 30% act completion, documentary museum architecture."
     },
     {
       "id": "constitution",
@@ -310,6 +311,13 @@
       "value": 19,
       "max": 100,
       "note": "6 fully sourced \u2014 9 categories, KG-aligned, search planned."
+    },
+    {
+      "id": "narrative",
+      "label": "Narrative Architecture",
+      "value": 24,
+      "max": 100,
+      "note": "8/8 acts mapped to hall pages \u2014 continuity not live."
     }
   ],
   "public_readiness": {
@@ -800,6 +808,12 @@
       "id": "encyclopedia",
       "label": "Encyclopedia & Knowledge Library",
       "href": "/mission-control/encyclopedia.html",
+      "status": "complete"
+    },
+    {
+      "id": "narrative",
+      "label": "Narrative Architecture",
+      "href": "/mission-control/narrative.html",
       "status": "complete"
     }
   ],
@@ -1826,6 +1840,55 @@
     }
   ],
   "builds": [
+    {
+      "number": 34,
+      "title": "Citizens United Facts Storytelling & Narrative Architecture",
+      "version": "1.38.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Educational Narrative System v1.0 \u2014 eight acts, four layers, documentary museum",
+      "summary": "8 acts, 4 layers, avg act 30%; 24% readiness.",
+      "files_created": [
+        "data/narrative-architecture.json",
+        "docs/NARRATIVE_ARCHITECTURE.md",
+        "builds/034-narrative-architecture.md",
+        "mission-control/narrative.html",
+        "scripts/gen-narrative-architecture.py",
+        "scripts/update-mc-build34.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/narrative.html"
+      ],
+      "decisions_made": [
+        "Master narrative: one Supreme Court decision to civic meaning today",
+        "8 narrative acts mapped to existing hall and solutions pages",
+        "4 storytelling layers (1 min \u2192 research archive)",
+        "8 reusable story components + 6 visual storytelling elements",
+        "Narrative continuity requirements \u2014 not yet on all pages",
+        "24% honest readiness \u2014 acts I\u2013V partial, VI/VIII weakest"
+      ],
+      "open_questions": [
+        "When to migrate to canonical /story/act routes?",
+        "Layer 3 depth per act?"
+      ],
+      "risks": [
+        "Act continuity not live",
+        "Acts VI and VIII thin",
+        "Visual storytelling mostly planned"
+      ],
+      "next_recommended": 35,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/narrative.html",
+      "review_status": "complete"
+    },
     {
       "number": 33,
       "title": "Citizens United Facts Research Encyclopedia & Knowledge Library",
@@ -3360,20 +3423,20 @@
     }
   ],
   "briefing": {
-    "what_built": "Encyclopedia v1.0 \u2014 9 categories, completion score, KG relationship graph",
-    "building_now": "Knowledge library \u2014 38 KG nodes mapped, 400 entries planned",
+    "what_built": "Narrative v1.0 \u2014 8 acts, 4 layers, master narrative, MC completion tracking",
+    "building_now": "Documentary museum journey \u2014 halls mapped as Acts I\u2013V, solutions as VII",
     "blocked": [
-      "Canonical encyclopedia routes not built",
-      "Search not implemented",
-      "Category 700 (Terms) empty"
+      "Act-aware continuity not on pages",
+      "Layer 3 narratives not written",
+      "Canonical act routes not built"
     ],
     "ready_public": [
-      "Encyclopedia MC dashboard",
-      "9-category architecture",
-      "Citation standards",
-      "KG alignment"
+      "Narrative MC dashboard",
+      "8-act architecture",
+      "Story components schema",
+      "Hall page mapping"
     ],
-    "next": "Build #34 \u2014 Component specifications with props/states"
+    "next": "Build #35 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -3714,5 +3777,30 @@
     },
     "canonical_routes_live": false,
     "encyclopedia_search_live": false
+  },
+  "narrative_architecture": "/data/narrative-architecture.json",
+  "narrative_dashboard": "/mission-control/narrative.html",
+  "narrative_inventory": {
+    "readiness_score": 24,
+    "acts_total": 8,
+    "avg_act_narrative_pct": 30,
+    "acts_with_primary_page": 8,
+    "narrative_completion": {
+      "acts_total": 8,
+      "acts_with_primary_page": 8,
+      "acts_narratively_complete": 0,
+      "avg_act_narrative_pct": 30,
+      "layers_defined": 4,
+      "layers_partial": 3,
+      "story_components_partial": 5,
+      "visual_elements_partial": 2,
+      "visual_elements_planned": 4,
+      "continuity_live": false,
+      "act_navigation_live": false,
+      "facts_linked": 13,
+      "kg_nodes_linked": 38
+    },
+    "continuity_live": false,
+    "act_navigation_live": false
   }
 }

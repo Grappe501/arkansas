@@ -332,6 +332,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/narrative"
+  to = "/mission-control/narrative.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301

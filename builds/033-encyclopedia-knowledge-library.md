@@ -45,6 +45,6 @@ Help readers see how history, law, Constitution, spending, reform, and civic edu
 
 ---
 
-## Recommended Next: Build #34 — Component Specifications with Props/States
+## Recommended Next: Build #35 — Component Specifications with Props/States
 
 Map encyclopedia entry structure and category pages to COMP-* components from Build #17.

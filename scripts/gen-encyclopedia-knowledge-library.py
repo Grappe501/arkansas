@@ -271,7 +271,7 @@ out = {
         'Reading-level progression (simple → legal depth) not uniform across entries',
     ],
     'recommended_next_build': {
-        'number': 34,
+        'number': 35,
         'title': 'Component Specifications with Props/States',
         'note': 'Map encyclopedia entry structure and category pages to COMP-* components from Build #17.',
     },
