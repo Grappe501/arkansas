@@ -236,6 +236,8 @@ async function initMissionControl() {
     <p class="mc-bar-note">Build #50 — Master Build Bible. Planning phase complete — 50 builds, 28 systems, 12 pillars. Implementation begins. 49% bible readiness.</p>
     <h2 class="mc-section-title">Data Architecture <a href="/mission-control/data-architecture.html" class="mc-inline-link">Canonical Dictionary →</a></h2>
     <p class="mc-bar-note">Build #51 — Master Data Architecture & Canonical Data Dictionary. 12 domains (100–1200), single source of truth. 0 relationship edges. 41% data architecture readiness.</p>
+    <h2 class="mc-section-title">UX Architecture <a href="/mission-control/ux-architecture.html" class="mc-inline-link">Experience Blueprint →</a></h2>
+    <p class="mc-bar-note">Build #52 — Master User Experience Architecture. 7 emotional stages, Learning + Civic Compass, Action Hub live. 0 delight moments. 39% UX readiness.</p>
     <h2 class="mc-section-title">Governance & Constitution <a href="/mission-control/governance.html" class="mc-inline-link">Institutional Rules →</a></h2>
     <p class="mc-bar-note">Build #49 — Master governance & institutional constitution. 6 values, 7 steward roles. 0 stewards assigned. 44% governance readiness.</p>
     <h2 class="mc-section-title">Technical Architecture <a href="/mission-control/technical-architecture.html" class="mc-inline-link">Production Engineering →</a></h2>
@@ -5142,4 +5144,150 @@ document.addEventListener('DOMContentLoaded', () => {
   initGovernanceConstitution();
   initBuildBible();
   initDataArchitecture();
+  initUxArchitecture();
 });
+
+async function initUxArchitecture() {
+  const root = document.getElementById('mc-ux-architecture-root');
+  if (!root) return;
+
+  const [uxRes, mcRes] = await Promise.all([
+    fetch('/data/ux-architecture.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ux = await uxRes.json();
+  const mc = await mcRes.json();
+  const s = ux.summary;
+
+  const emotionRows = ux.emotional_journey.stages.map(st => `
+    <tr><td>${st.order}</td><td><code>${st.id}</code></td><td>${st.emotion}</td>
+      <td><em>${st.visitor_thought}</em></td><td>${st.status}</td><td>${st.implementation}</td></tr>`).join('');
+
+  const goalRows = ux.first_time_visitor.goals.map(g => `
+    <tr><td>${g.goal}</td><td>${g.status}</td><td>${g.route ? `<a href="${g.route}">${g.route}</a>` : '—'}</td></tr>`).join('');
+
+  const navRows = ux.navigation_philosophy.nav_intents.map(n => `
+    <tr><td>${n.label}</td><td>${n.intent}</td><td>${n.status}</td>
+      <td>${n.route ? `<a href="${n.route}">${n.route}</a>` : '—'}</td><td>${n.note || ''}</td></tr>`).join('');
+
+  const layerRows = ux.progressive_disclosure.layers.map(l => `
+    <tr><td>${l.level}</td><td>${l.title}</td><td>${l.status}</td></tr>`).join('');
+
+  const compassRows = ux.learning_compass.questions.map(q => `
+    <tr><td>${q.question}</td><td>${q.status}</td><td>${q.current}</td></tr>`).join('');
+
+  const civicRows = ux.civic_compass.actions.map(a => `
+    <tr><td>${a.title}</td><td>${a.status}</td><td>${a.route ? `<a href="${a.route}">${a.route}</a>` : '—'}</td><td>${a.note || ''}</td></tr>`).join('');
+
+  const hubRows = ux.floating_action_hub.items.map(i => `
+    <tr><td>${i.title}</td><td>${i.status}</td><td>${i.note || ''}</td></tr>`).join('');
+
+  const trustRows = ux.trust_signals.signals.map(t => `
+    <tr><td>${t.signal}</td><td>${t.status}</td><td>${t.pages_with || ''}</td></tr>`).join('');
+
+  const delightRows = ux.delight_moments.moments.map(d => `
+    <tr><td>${d.moment}</td><td>${d.status}</td></tr>`).join('');
+
+  const metricRows = ux.mc_integration.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('');
+
+  const extendLinks = ux.extends.map(e =>
+    `<a href="${e.route}">Build #${e.build} ${e.title}</a>`).join(' · ');
+
+  const personality = ux.institutional_personality.join(' · ');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → UX Architecture</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #52 · ${ux.title}</p>
+      <h1>Master User Experience Architecture</h1>
+      <p class="mc-header__question">${ux.governing_principle}</p>
+      <p class="mc-bar-note">${ux.purpose}</p>
+      <p class="mc-bar-note">Extends ${extendLinks}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">UX readiness</div><div class="mc-stat__value">${s.ux_architecture_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Emotional stages</div><div class="mc-stat__value">${s.emotional_stages}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Action hub live</div><div class="mc-stat__value">${s.action_hub_live_items}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Search</div><div class="mc-stat__value">${s.search_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Delight moments</div><div class="mc-stat__value">${s.delight_moments_live}/7</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Education Leaders</div><div class="mc-stat__value">${s.education_leaders}</div></div>
+    </div>
+    <h2 class="mc-section-title">Experience Philosophy</h2>
+    <p class="mc-bar-note"><strong>Metaphor:</strong> ${ux.experience_philosophy.metaphor}</p>
+    <ul class="mc-deliverables">${ux.experience_philosophy.qualities.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Emotional Journey</h2>
+    <p class="mc-bar-note">${ux.emotional_journey.note}</p>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Stage</th><th>Visitor thought</th><th>Status</th><th>Implementation</th></tr></thead>
+      <tbody>${emotionRows}</tbody></table>
+    <h2 class="mc-section-title">First-Time Visitor (30 seconds)</h2>
+    <table class="mc-table"><thead><tr><th>Goal</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${goalRows}</tbody></table>
+    <h2 class="mc-section-title">Navigation Philosophy</h2>
+    <p class="mc-bar-note">${ux.navigation_philosophy.principle}</p>
+    <table class="mc-table"><thead><tr><th>Label</th><th>Intent</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${navRows}</tbody></table>
+    <h2 class="mc-section-title">Progressive Disclosure</h2>
+    <p class="mc-bar-note">${ux.progressive_disclosure.principle} · Depth toggle: ${ux.progressive_disclosure.depth_toggle_live}</p>
+    <table class="mc-table"><thead><tr><th>Level</th><th>Layer</th><th>Status</th></tr></thead>
+      <tbody>${layerRows}</tbody></table>
+    <h2 class="mc-section-title">Learning Compass</h2>
+    <p class="mc-bar-note">${ux.learning_compass.component_id} — ${ux.learning_compass.status} · ${ux.learning_compass.schema_fields} schema fields</p>
+    <table class="mc-table"><thead><tr><th>Question</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${compassRows}</tbody></table>
+    <h2 class="mc-section-title">Civic Compass</h2>
+    <p class="mc-bar-note">${ux.civic_compass.principle} · ${ux.civic_compass.implementation}</p>
+    <table class="mc-table"><thead><tr><th>Action</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${civicRows}</tbody></table>
+    <h2 class="mc-section-title">Floating Action Hub</h2>
+    <p class="mc-bar-note">${ux.floating_action_hub.version} — ${ux.floating_action_hub.status} · ${ux.floating_action_hub.pages_with_hub}</p>
+    <table class="mc-table"><thead><tr><th>Item</th><th>Status</th><th>Note</th></tr></thead>
+      <tbody>${hubRows}</tbody></table>
+    <h2 class="mc-section-title">Reading Experience</h2>
+    <ul class="mc-deliverables">${ux.reading_experience.principles.map(p => `<li>${p}</li>`).join('')}</ul>
+    <p class="mc-bar-note">${ux.reading_experience.current}</p>
+    <h2 class="mc-section-title">Visual Identity</h2>
+    <p class="mc-bar-note"><strong>Communicate:</strong> ${ux.visual_identity.communicate.join(', ')}</p>
+    <p class="mc-bar-note"><strong>Never feel like:</strong> ${ux.visual_identity.never_feel_like.join(', ')}</p>
+    <p class="mc-bar-note"><strong>Target:</strong> ${ux.visual_identity.target_feel} — ${ux.visual_identity.current}</p>
+    <h2 class="mc-section-title">Trust Signals</h2>
+    <p class="mc-bar-note">${ux.trust_signals.principle}</p>
+    <table class="mc-table"><thead><tr><th>Signal</th><th>Status</th><th>Pages</th></tr></thead>
+      <tbody>${trustRows}</tbody></table>
+    <h2 class="mc-section-title">Search Experience</h2>
+    <p class="mc-bar-note">${ux.search_experience.status} — ${ux.search_experience.current}</p>
+    <ul class="mc-deliverables">${ux.search_experience.fallbacks.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Mobile Experience</h2>
+    <p class="mc-bar-note">${ux.mobile_experience.status} — ${ux.mobile_experience.current}</p>
+    <h2 class="mc-section-title">Accessibility</h2>
+    <p class="mc-bar-note">${ux.accessibility_experience.status} — ${ux.accessibility_experience.current}</p>
+    <h2 class="mc-section-title">Community Experience</h2>
+    <p class="mc-bar-note">${ux.community_experience.status} — ${ux.community_experience.current}</p>
+    <h2 class="mc-section-title">Mission Control Experience</h2>
+    <p class="mc-bar-note">${ux.mission_control_experience.principle} — ${ux.mission_control_experience.builds_logged} builds logged</p>
+    <h2 class="mc-section-title">Delight Moments</h2>
+    <p class="mc-bar-note">${ux.delight_moments.principle}</p>
+    <table class="mc-table"><thead><tr><th>Moment</th><th>Status</th></tr></thead>
+      <tbody>${delightRows}</tbody></table>
+    <h2 class="mc-section-title">Institutional Personality</h2>
+    <p class="mc-bar-note">${personality}</p>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <ul class="mc-deliverables">${ux.long_term_vision.visitor_quotes.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">UX Architecture Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ux.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ux.recommended_next_build.number} — ${ux.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ux.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_UX_ARCHITECTURE.md">MASTER_UX_ARCHITECTURE.md</a> ·
+      <a href="/data/ux-architecture.json">JSON</a> ·
+      <a href="/mission-control/visitor-journey.html">Visitor Journey (#47)</a> ·
+      <a href="/mission-control/journey.html">Citizen Journey (#8)</a> ·
+      <a href="/mission-control/atlas.html">Knowledge Atlas</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}

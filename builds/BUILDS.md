@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#52** | **Master User Experience Architecture** | **1.56.0** | **✅ Complete** | [052](052-master-ux-architecture.md) · [/mission-control/ux-architecture.html](../mission-control/ux-architecture.html) |
 | **#51** | **Master Data Architecture & Canonical Data Dictionary** | **1.55.0** | **✅ Complete** | [051](051-master-data-architecture.md) · [/mission-control/data-architecture.html](../mission-control/data-architecture.html) |
 | **#50** | **Master Build Bible** ★ | **1.54.0** | **✅ Complete** | [050](050-master-build-bible.md) · [/mission-control/build-bible.html](../mission-control/build-bible.html) |
 | **#49** | **Master Governance & Institutional Constitution** | **1.53.0** | **✅ Complete** | [049](049-master-governance-stewardship-institutional-constitution.md) · [/mission-control/governance.html](../mission-control/governance.html) |

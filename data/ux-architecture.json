@@ -1,0 +1,739 @@
+{
+  "version": "1.0",
+  "build": 52,
+  "updated": "2026-07-09",
+  "title": "Master User Experience Architecture v1.0",
+  "subtitle": "The Institutional Experience Blueprint",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/ux-architecture.html",
+  "constitution": "/docs/MASTER_UX_ARCHITECTURE.md",
+  "purpose": "How every visitor should feel \u2014 welcomed, respected, curious, and empowered to learn.",
+  "governing_principle": "Create one of the finest civic learning experiences ever built for a single Supreme Court decision \u2014 every interaction reduces confusion, increases confidence, and builds trust.",
+  "experience_philosophy": {
+    "metaphor": "Entering one of the world's great museums",
+    "qualities": [
+      "Invited not pressured",
+      "Every room teaches",
+      "Every exhibit connects",
+      "Every answer creates the next question"
+    ]
+  },
+  "extends": [
+    {
+      "title": "Citizen Journey Blueprint",
+      "build": 8,
+      "route": "/data/ux-journey.json"
+    },
+    {
+      "title": "Visitor Journey & Behavioral Architecture",
+      "build": 47,
+      "route": "/data/visitor-journey.json"
+    },
+    {
+      "title": "Knowledge Atlas & Learning Paths",
+      "build": 19,
+      "route": "/data/knowledge-atlas.json"
+    },
+    {
+      "title": "Master Data Architecture",
+      "build": 51,
+      "route": "/data/data-architecture.json"
+    },
+    {
+      "title": "Design System",
+      "build": 9,
+      "route": "/design-system/"
+    }
+  ],
+  "emotional_journey": {
+    "title": "Seven-Stage Emotional Arc",
+    "stages": [
+      {
+        "order": 1,
+        "id": "arrival",
+        "emotion": "Arrival",
+        "visitor_thought": "I've come to the right place.",
+        "status": "partial",
+        "implementation": "Homepage + start-here \u2014 no arrival instrumentation"
+      },
+      {
+        "order": 2,
+        "id": "relief",
+        "emotion": "Relief",
+        "visitor_thought": "This is easier to understand than I expected.",
+        "status": "partial",
+        "implementation": "Plain-language halls \u2014 depth varies by page"
+      },
+      {
+        "order": 3,
+        "id": "curiosity",
+        "emotion": "Curiosity",
+        "visitor_thought": "I didn't know that.",
+        "status": "partial",
+        "implementation": "15 published assets \u2014 limited interactive discovery"
+      },
+      {
+        "order": 4,
+        "id": "discovery",
+        "emotion": "Discovery",
+        "visitor_thought": "Now it's starting to make sense.",
+        "status": "planned",
+        "implementation": "Knowledge graph partial \u2014 connections not surfaced in UX"
+      },
+      {
+        "order": 5,
+        "id": "confidence",
+        "emotion": "Confidence",
+        "visitor_thought": "I think I can explain this.",
+        "status": "planned",
+        "implementation": "No completion or confidence tracking"
+      },
+      {
+        "order": 6,
+        "id": "ownership",
+        "emotion": "Ownership",
+        "visitor_thought": "I want to keep learning.",
+        "status": "planned",
+        "implementation": "localStorage journey only \u2014 no accounts"
+      },
+      {
+        "order": 7,
+        "id": "purpose",
+        "emotion": "Purpose",
+        "visitor_thought": "I want to help others understand.",
+        "status": "planned",
+        "implementation": "0 Education Leaders \u2014 teach funnel empty"
+      }
+    ],
+    "stages_total": 7,
+    "note": "Distinct from Build #47 behavioral stages \u2014 this is felt experience, not funnel metrics"
+  },
+  "first_time_visitor": {
+    "title": "30-Second Orientation",
+    "goals": [
+      {
+        "goal": "What Citizens United is",
+        "status": "partial",
+        "route": "/halls/the-case.html"
+      },
+      {
+        "goal": "Why it matters",
+        "status": "partial",
+        "route": "/halls/after-2010.html"
+      },
+      {
+        "goal": "Why this website exists",
+        "status": "partial",
+        "route": "/start-here/"
+      },
+      {
+        "goal": "How to begin learning",
+        "status": "partial",
+        "route": "/explore/"
+      }
+    ],
+    "competing_goals_prohibited": true
+  },
+  "navigation_philosophy": {
+    "principle": "Answer questions, not list software modules",
+    "nav_intents": [
+      {
+        "label": "Learn",
+        "intent": "Start understanding",
+        "status": "partial",
+        "route": "/educate/"
+      },
+      {
+        "label": "Research",
+        "intent": "Find sources and evidence",
+        "status": "partial",
+        "route": "/library/"
+      },
+      {
+        "label": "Explore",
+        "intent": "Browse the full map",
+        "status": "live",
+        "route": "/explore/"
+      },
+      {
+        "label": "Watch",
+        "intent": "Video and media learning",
+        "status": "planned",
+        "route": "/mission-control/media-studio.html",
+        "note": "0 videos"
+      },
+      {
+        "label": "Teach",
+        "intent": "Educate others",
+        "status": "partial",
+        "route": "/educate/"
+      },
+      {
+        "label": "Arkansas",
+        "intent": "Local civic context",
+        "status": "partial",
+        "route": "/arkansas/"
+      },
+      {
+        "label": "Solutions",
+        "intent": "Policy options",
+        "status": "partial",
+        "route": "/solutions/"
+      },
+      {
+        "label": "Community",
+        "intent": "Coalition and events",
+        "status": "planned",
+        "route": "/coalition/",
+        "note": "0 orgs"
+      },
+      {
+        "label": "Mission Control",
+        "intent": "Institutional operations",
+        "status": "live",
+        "route": "/mission-control/"
+      }
+    ]
+  },
+  "progressive_disclosure": {
+    "principle": "Never overwhelm \u2014 reveal complexity gradually",
+    "layers": [
+      {
+        "level": 1,
+        "id": "sentence",
+        "title": "One-sentence answer",
+        "status": "partial"
+      },
+      {
+        "level": 2,
+        "id": "minute",
+        "title": "One-minute explanation",
+        "status": "partial"
+      },
+      {
+        "level": 3,
+        "id": "lesson",
+        "title": "Five-minute lesson",
+        "status": "planned"
+      },
+      {
+        "level": 4,
+        "id": "article",
+        "title": "Complete article",
+        "status": "partial"
+      },
+      {
+        "level": 5,
+        "id": "sources",
+        "title": "Primary sources",
+        "status": "partial"
+      },
+      {
+        "level": 6,
+        "id": "archive",
+        "title": "Research archive",
+        "status": "partial"
+      }
+    ],
+    "depth_toggle_live": "solutions/index.html only"
+  },
+  "learning_compass": {
+    "title": "Learning Compass",
+    "component_id": "COMP-NAV-004",
+    "questions": [
+      {
+        "id": "where",
+        "question": "Where am I?",
+        "status": "partial",
+        "current": "Journey panel on some pages"
+      },
+      {
+        "id": "learned",
+        "question": "What have I learned?",
+        "status": "planned",
+        "current": "No learning ledger"
+      },
+      {
+        "id": "next",
+        "question": "What comes next?",
+        "status": "partial",
+        "current": "Manual next-step links"
+      },
+      {
+        "id": "depth",
+        "question": "How deep am I?",
+        "status": "partial",
+        "current": "Depth toggle on solutions only"
+      },
+      {
+        "id": "related",
+        "question": "Related topics",
+        "status": "planned",
+        "current": "KG not surfaced in compass UI"
+      },
+      {
+        "id": "time",
+        "question": "Estimated reading time",
+        "status": "planned",
+        "current": "Not calculated site-wide"
+      },
+      {
+        "id": "completion",
+        "question": "Completion status",
+        "status": "planned",
+        "current": "No path completion tracking"
+      }
+    ],
+    "schema_fields": 7,
+    "status": "partial",
+    "route": "/data/knowledge-atlas.json"
+  },
+  "civic_compass": {
+    "title": "Civic Compass",
+    "principle": "Separate from learning \u2014 participation without confusing education",
+    "actions": [
+      {
+        "id": "contact-network",
+        "title": "Join Contact Network",
+        "status": "partial",
+        "route": "/action/join-network.html"
+      },
+      {
+        "id": "education-leader",
+        "title": "Become an Education Leader",
+        "status": "partial",
+        "route": "/educate/"
+      },
+      {
+        "id": "coalition",
+        "title": "Join Coalition",
+        "status": "planned",
+        "route": "/coalition/join.html",
+        "note": "0 orgs"
+      },
+      {
+        "id": "share",
+        "title": "Share this page",
+        "status": "live",
+        "route": "/action/share.html"
+      },
+      {
+        "id": "events",
+        "title": "Attend an event",
+        "status": "planned",
+        "route": "/coalition/events.html"
+      },
+      {
+        "id": "legislative",
+        "title": "Explore legislative resources",
+        "status": "partial",
+        "route": "/action/draft-laws.html"
+      },
+      {
+        "id": "conversation",
+        "title": "Host a conversation",
+        "status": "partial",
+        "route": "/action/community-conversation.html"
+      }
+    ],
+    "status": "partial",
+    "implementation": "Merged into Action Hub \u2014 dedicated Civic Compass UI not built"
+  },
+  "floating_action_hub": {
+    "title": "Floating Action Hub",
+    "version": "v1.16.1",
+    "status": "live",
+    "route": "/js/action-hub.js",
+    "items": [
+      {
+        "id": "ask-ai",
+        "title": "Ask AI",
+        "status": "planned",
+        "note": "AI Knowledge Engine not public"
+      },
+      {
+        "id": "share",
+        "title": "Share",
+        "status": "live"
+      },
+      {
+        "id": "save",
+        "title": "Save",
+        "status": "live",
+        "note": "Bookmark via localStorage"
+      },
+      {
+        "id": "print",
+        "title": "Print",
+        "status": "planned"
+      },
+      {
+        "id": "join",
+        "title": "Join",
+        "status": "partial"
+      },
+      {
+        "id": "teach",
+        "title": "Teach",
+        "status": "partial"
+      },
+      {
+        "id": "feedback",
+        "title": "Give Feedback",
+        "status": "planned"
+      },
+      {
+        "id": "learning-path",
+        "title": "Return to Learning Path",
+        "status": "partial",
+        "note": "Journey panel \u2014 not all pages"
+      }
+    ],
+    "context_aware": true,
+    "pages_with_hub": "Most public pages via layout.js"
+  },
+  "reading_experience": {
+    "principles": [
+      "Wide margins",
+      "Comfortable spacing",
+      "Excellent contrast",
+      "Large headings",
+      "Readable citations",
+      "Minimal distractions"
+    ],
+    "status": "partial",
+    "current": "Design tokens v1.1 Institutional Authority \u2014 reading measure not universal",
+    "design_route": "/design-system/"
+  },
+  "visual_identity": {
+    "communicate": [
+      "Integrity",
+      "Scholarship",
+      "Warmth",
+      "Curiosity",
+      "Precision",
+      "Transparency"
+    ],
+    "never_feel_like": [
+      "Campaign website",
+      "Law firm",
+      "Government portal",
+      "Corporate website"
+    ],
+    "target_feel": "Modern civic institution",
+    "status": "partial",
+    "current": "v1.1 cool institutional palette \u2014 warmth balance evolving",
+    "brand_route": "/data/brand-identity.json"
+  },
+  "trust_signals": {
+    "principle": "Quietly reinforce trust without dominating the page",
+    "signals": [
+      {
+        "signal": "Review date",
+        "status": "partial",
+        "pages_with": "design-system, solutions, library"
+      },
+      {
+        "signal": "Evidence score",
+        "status": "partial",
+        "pages_with": "facts framework partial"
+      },
+      {
+        "signal": "Primary sources",
+        "status": "partial",
+        "pages_with": "library, research halls"
+      },
+      {
+        "signal": "Citation count",
+        "status": "planned"
+      },
+      {
+        "signal": "Related documents",
+        "status": "planned"
+      },
+      {
+        "signal": "Authoring standards",
+        "status": "partial"
+      },
+      {
+        "signal": "Version history",
+        "status": "partial",
+        "pages_with": "build registry, git"
+      }
+    ]
+  },
+  "search_experience": {
+    "status": "planned",
+    "principle": "Conversational \u2014 never dead-end",
+    "fallbacks": [
+      "Related concepts",
+      "Suggested questions",
+      "Similar cases",
+      "Relevant laws",
+      "Learning paths"
+    ],
+    "current": "No site search \u2014 explore map only"
+  },
+  "mobile_experience": {
+    "status": "partial",
+    "principles": [
+      "Thumb navigation",
+      "Quick lessons",
+      "Offline reading (future)",
+      "Audio playback",
+      "Shareable graphics",
+      "Community events"
+    ],
+    "current": "Responsive CSS \u2014 no mobile-specific lesson redesign"
+  },
+  "accessibility_experience": {
+    "status": "partial",
+    "principles": [
+      "Readable layouts",
+      "Keyboard support",
+      "Captions",
+      "Transcripts",
+      "Reduced motion",
+      "Clear navigation"
+    ],
+    "current": "focus-visible tokens, prefers-reduced-motion \u2014 no WCAG audit, no captions",
+    "route": "/mission-control/design.html"
+  },
+  "community_experience": {
+    "status": "planned",
+    "signals": [
+      "County activity",
+      "Upcoming events",
+      "Coalition organizations",
+      "Education Leaders",
+      "Recently added resources",
+      "New research"
+    ],
+    "current": "0 county participation \u00b7 0 orgs \u00b7 0 leaders \u2014 institution feels static"
+  },
+  "mission_control_experience": {
+    "status": "live",
+    "principle": "Executive operations center \u2014 reduce cognitive load",
+    "questions": [
+      "Where are we?",
+      "What's healthy?",
+      "What's behind?",
+      "What needs attention?",
+      "What should we build next?"
+    ],
+    "route": "/mission-control/",
+    "builds_logged": 53
+  },
+  "delight_moments": {
+    "principle": "Memorable without distracting from content",
+    "moments": [
+      {
+        "moment": "Learning milestones",
+        "status": "planned"
+      },
+      {
+        "moment": "Beautiful timeline transitions",
+        "status": "planned"
+      },
+      {
+        "moment": "Knowledge graph animations",
+        "status": "planned"
+      },
+      {
+        "moment": "Historical reveals",
+        "status": "planned"
+      },
+      {
+        "moment": "Progress celebrations",
+        "status": "planned"
+      },
+      {
+        "moment": "Handwritten archival notes",
+        "status": "planned"
+      },
+      {
+        "moment": "Interactive document highlights",
+        "status": "planned"
+      }
+    ],
+    "delight_live": 0
+  },
+  "institutional_personality": [
+    "Patient",
+    "Thoughtful",
+    "Curious",
+    "Well-read",
+    "Fair",
+    "Evidence-driven",
+    "Welcoming",
+    "Never arrogant",
+    "Never sensational",
+    "Never dismissive",
+    "Always ready to teach"
+  ],
+  "long_term_vision": {
+    "visitor_quotes": [
+      "I came here because I had a question.",
+      "I stayed because everything connected.",
+      "I trusted it because I could verify it.",
+      "I came back because nowhere else explains it this well."
+    ],
+    "outcome": "Experience becomes institutional reputation"
+  },
+  "mc_integration": {
+    "title": "Mission Control UX Architecture Metrics",
+    "status": "partial",
+    "metrics": [
+      {
+        "id": "UX-01",
+        "title": "Emotional journey defined",
+        "status": "live",
+        "current": "7 stages"
+      },
+      {
+        "id": "UX-02",
+        "title": "Emotional journey instrumented",
+        "status": "planned",
+        "current": "3 partial, 4 planned"
+      },
+      {
+        "id": "UX-03",
+        "title": "First-time visitor goals",
+        "status": "partial",
+        "current": "4/4 routes exist"
+      },
+      {
+        "id": "UX-04",
+        "title": "Question-based navigation",
+        "status": "partial",
+        "current": "2 live, 5 partial nav intents"
+      },
+      {
+        "id": "UX-05",
+        "title": "Progressive disclosure layers",
+        "status": "partial",
+        "current": "5/6 partial"
+      },
+      {
+        "id": "UX-06",
+        "title": "Learning Compass on all edu pages",
+        "status": "planned",
+        "current": "3/7 questions partial only"
+      },
+      {
+        "id": "UX-07",
+        "title": "Civic Compass (separate UI)",
+        "status": "planned",
+        "current": "Merged into Action Hub"
+      },
+      {
+        "id": "UX-08",
+        "title": "Floating Action Hub",
+        "status": "live",
+        "current": "2 live, 3 partial actions"
+      },
+      {
+        "id": "UX-09",
+        "title": "Trust signals site-wide",
+        "status": "partial",
+        "current": "5/7 partial"
+      },
+      {
+        "id": "UX-10",
+        "title": "Conversational search",
+        "status": "planned",
+        "current": "No search index"
+      },
+      {
+        "id": "UX-11",
+        "title": "Mobile-first lesson design",
+        "status": "planned",
+        "current": "Responsive only"
+      },
+      {
+        "id": "UX-12",
+        "title": "Accessibility WCAG audit",
+        "status": "planned",
+        "current": "Tokens only"
+      },
+      {
+        "id": "UX-13",
+        "title": "Community vitality signals",
+        "status": "planned",
+        "current": "0 orgs, 0 leaders"
+      },
+      {
+        "id": "UX-14",
+        "title": "Delight moments shipped",
+        "status": "planned",
+        "current": "0/7 live"
+      }
+    ],
+    "authoritative_reference": true
+  },
+  "related_blueprints": [
+    {
+      "title": "Visitor Journey (#47)",
+      "route": "/mission-control/visitor-journey.html",
+      "build": 47
+    },
+    {
+      "title": "Citizen Journey (#8)",
+      "route": "/mission-control/journey.html",
+      "build": 8
+    },
+    {
+      "title": "Knowledge Atlas (#19)",
+      "route": "/mission-control/atlas.html",
+      "build": 19
+    },
+    {
+      "title": "Narrative Architecture (#34)",
+      "route": "/mission-control/narrative.html",
+      "build": 34
+    },
+    {
+      "title": "Design Blueprint",
+      "route": "/mission-control/design.html",
+      "build": 7
+    }
+  ],
+  "summary": {
+    "emotional_stages": 7,
+    "emotional_partial": 3,
+    "emotional_planned": 4,
+    "nav_intents": 9,
+    "nav_live": 2,
+    "disclosure_layers": 6,
+    "learning_compass_questions": 7,
+    "action_hub_items": 8,
+    "action_hub_live_items": 2,
+    "trust_signals_partial": 5,
+    "search_live": false,
+    "delight_moments_live": 0,
+    "community_orgs": 0,
+    "education_leaders": 0,
+    "visitor_journey_readiness_pct": 40,
+    "ux_architecture_readiness_pct": 39
+  },
+  "catalog_gaps": [
+    "Learning Compass schema exists \u2014 UI not on all educational pages",
+    "Civic Compass merged into Action Hub \u2014 no dedicated participation panel",
+    "Ask AI, Print, Give Feedback not in Action Hub",
+    "Progressive disclosure depth toggle only on Solutions page",
+    "No site search \u2014 conversational fallbacks not built",
+    "0 delight moments shipped \u2014 milestones and celebrations planned only",
+    "0 coalition orgs, 0 Education Leaders \u2014 community feels static",
+    "Emotional journey (7 stages) vs behavioral journey (8 stages) \u2014 two models coexist",
+    "Mobile responsive but not mobile-first lesson redesign",
+    "WCAG audit not performed \u2014 accessibility tokens only",
+    "Trust signals on handful of pages \u2014 not site-wide quiet reinforcement",
+    "0 videos \u2014 Watch navigation intent leads to empty Media Studio"
+  ],
+  "recommended_next_build": {
+    "number": 53,
+    "title": "Master Implementation Roadmap & Sprint Zero",
+    "note": "COMP-* Learning Compass + Civic Compass widgets, search MVP, first delight moment, Sprint backlog."
+  }
+}

@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.56.0] - 2026-07-09 — Build #52 Master User Experience Architecture
+
+### The Institutional Experience Blueprint
+- **Master UX Architecture v1.0** — how every visitor should feel
+- Museum metaphor, 7-stage emotional journey, Learning + Civic Compass, progressive disclosure
+- Floating Action Hub live; Learning Compass schema only; 0 delight moments, no search
+- Extends Build #8 Citizen Journey · #47 Visitor Journey · #19 Knowledge Atlas
+- Honest: 2 action hub items live, 0 Education Leaders, ~39% UX architecture readiness
+- MC dashboard: `/mission-control/ux-architecture.html`
+
 ## [1.55.0] - 2026-07-09 — Build #51 Master Data Architecture & Canonical Data Dictionary
 
 ### The Institutional Data Constitution

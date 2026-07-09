@@ -1,6 +1,6 @@
 {
-  "version": "1.55.0",
-  "build": 51,
+  "version": "1.56.0",
+  "build": 52,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 51,
+    "overall_completion": 52,
     "current_build": {
-      "number": 51,
-      "title": "Citizens United Facts Master Data Architecture & Canonical Data Dictionary v1.0"
-    },
-    "active_phase": "Implementation \u2014 Data Constitution Established",
-    "last_completed": "Master Build Bible",
-    "next_build": {
       "number": 52,
+      "title": "Citizens United Facts Master User Experience Architecture v1.0"
+    },
+    "active_phase": "Implementation \u2014 Experience Blueprint Established",
+    "last_completed": "Master Data Architecture & Canonical Data Dictionary",
+    "next_build": {
+      "number": 53,
       "title": "Master implementation roadmap & sprint zero"
     },
     "github_status": "connected",
@@ -57,7 +57,7 @@
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 25,
-    "institutional_maturity_pct": 37,
+    "institutional_maturity_pct": 38,
     "current_institutional_version": "V1",
     "systems_integration_readiness": 28,
     "production_matrix_readiness": 39,
@@ -66,8 +66,9 @@
     "governance_readiness": 44,
     "build_bible_readiness": 49,
     "data_architecture_readiness": 41,
+    "ux_architecture_readiness": 39,
     "planning_phase_complete": true,
-    "implementation_phase": "data_constitution_established",
+    "implementation_phase": "experience_blueprint_established",
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -75,8 +76,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 51,
-      "note": "Build #51 \u2014 Master Data Architecture & Canonical Data Dictionary complete."
+      "value": 52,
+      "note": "Build #52 \u2014 Master User Experience Architecture complete."
     },
     {
       "id": "constitution",
@@ -405,9 +406,9 @@
     {
       "id": "institutional_maturity",
       "label": "Institutional Maturity (V1\u2013V10)",
-      "value": 37,
+      "value": 38,
       "max": 100,
-      "note": "12-domain data constitution \u2014 implementation continues."
+      "note": "Experience blueprint \u2014 museum-quality civic learning target."
     },
     {
       "id": "systems_integration",
@@ -457,6 +458,13 @@
       "value": 41,
       "max": 100,
       "note": "1 live + 5 partial domains \u00b7 0 edges."
+    },
+    {
+      "id": "ux_architecture",
+      "label": "Master UX Architecture",
+      "value": 39,
+      "max": 100,
+      "note": "2 action hub items live \u00b7 0 delight moments."
     }
   ],
   "public_readiness": {
@@ -1055,6 +1063,12 @@
       "id": "data_architecture",
       "label": "Master Data Architecture",
       "href": "/mission-control/data-architecture.html",
+      "status": "complete"
+    },
+    {
+      "id": "ux_architecture",
+      "label": "Master UX Architecture",
+      "href": "/mission-control/ux-architecture.html",
       "status": "complete"
     }
   ],
@@ -2081,6 +2095,58 @@
     }
   ],
   "builds": [
+    {
+      "number": 52,
+      "title": "Citizens United Facts Master User Experience Architecture v1.0",
+      "version": "1.56.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Institutional Experience Blueprint \u2014 how every visitor should feel",
+      "summary": "7 emotional stages, Learning + Civic Compass, Action Hub. 39% UX readiness \u2014 search and compasses pending.",
+      "files_created": [
+        "data/ux-architecture.json",
+        "docs/MASTER_UX_ARCHITECTURE.md",
+        "builds/052-master-ux-architecture.md",
+        "mission-control/ux-architecture.html",
+        "scripts/gen-ux-architecture.py",
+        "scripts/update-mc-build52.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/ux-architecture.html"
+      ],
+      "decisions_made": [
+        "Museum metaphor \u2014 invited not pressured civic learning experience",
+        "7-stage emotional journey distinct from Build #47 behavioral funnel",
+        "Question-based navigation \u2014 Learn, Research, Explore, Teach, etc.",
+        "Learning Compass + Civic Compass \u2014 education and participation separated",
+        "Floating Action Hub confirmed as primary participation surface",
+        "39% UX readiness \u2014 Action Hub live, compasses partial"
+      ],
+      "open_questions": [
+        "Unify emotional (7) and behavioral (8) journey models?",
+        "Learning Compass COMP-* implementation priority?",
+        "Search MVP vs Sprint Zero first?",
+        "Mobile-first lesson redesign scope?"
+      ],
+      "risks": [
+        "Three journey models (Build #8, #47, #52) may confuse editors",
+        "Civic Compass not separate UI \u2014 participation buried in hub",
+        "0 community vitality \u2014 experience blueprint exceeds live signals",
+        "Delight moments deferred \u2014 risk of feeling institutional not memorable"
+      ],
+      "next_recommended": 53,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/ux-architecture.html",
+      "review_status": "complete"
+    },
     {
       "number": 51,
       "title": "Citizens United Facts Master Data Architecture & Canonical Data Dictionary v1.0",
@@ -4566,20 +4632,20 @@
     }
   ],
   "briefing": {
-    "what_built": "Data Architecture v1.0 \u2014 12 domains, canonical dictionary, relationship standards, API philosophy",
-    "building_now": "Implementation \u2014 data constitution established; Sprint Zero next",
+    "what_built": "UX Architecture v1.0 \u2014 emotional journey, compasses, progressive disclosure, institutional personality",
+    "building_now": "Implementation \u2014 experience blueprint established; Sprint Zero next",
     "blocked": [
-      "Neon provisioning",
-      "Domain APIs",
-      "Relationship edge population",
-      "Search index"
+      "Learning Compass UI",
+      "Site search",
+      "Delight moments",
+      "Community vitality widgets"
     ],
     "ready_public": [
-      "Data Architecture MC dashboard",
-      "12-domain taxonomy",
-      "Institutional data philosophy"
+      "UX Architecture MC dashboard",
+      "Action Hub live",
+      "Experience philosophy documented"
     ],
-    "next": "Build #52 \u2014 Master implementation roadmap & sprint zero"
+    "next": "Build #53 \u2014 Master implementation roadmap & sprint zero"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -5145,5 +5211,15 @@
     "knowledge_published": 15,
     "evidence_records": 14,
     "database_provisioned": false
+  },
+  "ux_architecture": "/data/ux-architecture.json",
+  "ux_architecture_dashboard": "/mission-control/ux-architecture.html",
+  "ux_architecture_inventory": {
+    "readiness_score": 39,
+    "emotional_stages": 7,
+    "action_hub_live_items": 2,
+    "learning_compass_questions": 7,
+    "search_live": false,
+    "delight_moments_live": 0
   }
 }
