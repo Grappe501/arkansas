@@ -26,7 +26,7 @@ tl = cip.get('master_timeline', {})
 
 
 
-mc['version'] = '2.05.10'
+mc['version'] = '2.05.11'
 
 mc['updated'] = '2026-07-09'
 
@@ -44,9 +44,13 @@ mc['executive'] = {
 
     'software_completion_date': s.get('software_completion_date', '2026-07-11'),
 
+    'county_milestone_date': s.get('county_milestone_date', '2026-10-01'),
+
     'organizational_readiness_date': s.get('organizational_readiness_date', '2027-01-01'),
 
     'days_to_software': s.get('days_to_software', 0),
+
+    'days_to_county_milestone': s.get('days_to_county_milestone', 0),
 
     'days_to_organizational': s.get('days_to_organizational', s.get('days_remaining', 0)),
 
@@ -88,23 +92,21 @@ for bar in mc['progress_bars']:
 
 mc['briefing'] = {
 
-    'what_built': 'IMP-01–10 documented — Band A foundation complete (20%)',
+    'what_built': 'IMP-01–11 documented — Research Institute + 75-by-Oct-1 county milestone',
 
-    'building_now': 'IMP-11 Research Institute & Evidence Ledger next; engineering Sprint Zero (IMP-10 gate) pending',
+    'building_now': 'IMP-12 Community Education Academy next; engineering Sprint Zero (IMP-10 gate) pending',
 
     'blocked': ['Sprint Zero not complete', '0/50 code-implemented', f"{s.get('days_to_software', 0)} days to software target"],
 
     'ready_public': [
 
-        'Content Management', 'content-management-manifest.json',
+        'Research Institute', 'research-institute-manifest.json', '75-by-October-1 Milestone',
 
-        'Knowledge Graph', 'knowledge-graph-manifest.json', 'Master Timeline',
-
-        'LocalBrain Network', 'Mission Control Architecture',
+        'Content Management', 'Knowledge Graph', 'Master Timeline',
 
     ],
 
-    'next': 'IMP-11 — Master Research Institute, Evidence Ledger & Claims Verification System',
+    'next': 'IMP-12 — Master Community Education Academy, Curriculum Factory & Certification System',
 
 }
 

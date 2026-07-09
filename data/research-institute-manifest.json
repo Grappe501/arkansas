@@ -1,0 +1,276 @@
+{
+  "version": "1.0",
+  "build": 101,
+  "package": "IMP-11",
+  "updated": "2026-07-09",
+  "title": "Master Research Institute, Evidence Ledger & Claims Verification System",
+  "constitution": "/docs/IMPLEMENTATION_PACKAGE_11_RESEARCH_INSTITUTE.md",
+  "source_registries": {
+    "research_observatory": "/data/research-observatory.json",
+    "research_framework": "/data/research-framework.json",
+    "research_methodology": "/data/research-methodology.json",
+    "evidence_ledger": "/data/evidence-ledger.json",
+    "evidence_registry": "/data/evidence-registry.json",
+    "content_management": "/data/content-management-manifest.json",
+    "knowledge_graph": "/data/knowledge-graph-manifest.json"
+  },
+  "philosophy": "Questions lead to research; research leads to evidence; evidence supports claims",
+  "governing_principle": "Research creates knowledge; verification creates confidence; education creates understanding; communities create lasting impact",
+  "master_timeline": {
+    "phase_one": {
+      "id": "software_completion",
+      "title": "Software Completion",
+      "target_date": "2026-07-11",
+      "days_remaining": 2,
+      "scope": [
+        "Public website",
+        "Mission Control",
+        "LocalBrains",
+        "Community Education Academy",
+        "Knowledge Platform",
+        "Research system",
+        "Volunteer system",
+        "Coalition system",
+        "County, City, and Neighborhood systems",
+        "AI infrastructure",
+        "Administrative tools"
+      ]
+    },
+    "phase_two": {
+      "id": "county_milestone",
+      "title": "75 Counties by October 1",
+      "target_date": "2026-10-01",
+      "days_remaining": 84,
+      "scope": [
+        "Completed county profile for all 75 counties",
+        "Education Leader or active recruitment contact per county",
+        "County dashboard operational in Mission Control",
+        "Initial local resource information",
+        "Development plan for continued growth per county"
+      ]
+    },
+    "phase_three": {
+      "id": "organizational_readiness",
+      "title": "Organizational Readiness",
+      "target_date": "2027-01-01",
+      "days_remaining": 176,
+      "focus": [
+        "Recruiting Education Leaders",
+        "Expanding county coverage",
+        "Growing city leadership",
+        "Coalition development",
+        "Volunteer training",
+        "Community conversations",
+        "Research expansion",
+        "Public testing",
+        "User feedback",
+        "System refinement",
+        "Launch certification",
+        "City and neighborhood systems mature",
+        "Statewide volunteer development expanded"
+      ]
+    },
+    "sequence": "Software Complete (Jul 11, 2026) \u2192 75 Counties (Oct 1, 2026) \u2192 Organizational Readiness (Jan 2027)",
+    "build_out_months_approx": 6,
+    "county_milestone": {
+      "target_date": "2026-10-01",
+      "counties_total": 75,
+      "days_remaining": 84,
+      "label": "75-by-October-1 Milestone"
+    }
+  },
+  "milestone_timeline": [
+    {
+      "date": "2026-07-11",
+      "title": "Software Completion",
+      "summary": "Software platform substantially complete"
+    },
+    {
+      "date": "2026-10-01",
+      "title": "75 Counties by October 1",
+      "summary": "Representation in all 75 Arkansas counties \u2014 profiles, dashboards, local leadership"
+    },
+    {
+      "date": "2027-01-01",
+      "title": "Organizational Readiness",
+      "summary": "Full organizational readiness; city/neighborhood systems mature"
+    }
+  ],
+  "software_completion_date": "2026-07-11",
+  "county_milestone_date": "2026-10-01",
+  "organizational_readiness_date": "2027-01-01",
+  "days_to_software": 2,
+  "days_to_county_milestone": 84,
+  "days_to_organizational": 176,
+  "research_programs": [
+    "citizens_united",
+    "campaign_finance",
+    "arkansas_government",
+    "federal_government",
+    "constitutional_law",
+    "supreme_court_decisions",
+    "election_administration",
+    "ballot_initiatives",
+    "government_transparency",
+    "civic_participation",
+    "historical_research",
+    "comparative_state_research"
+  ],
+  "research_program_count": 12,
+  "research_lifecycle": [
+    {
+      "stage": "research_question",
+      "title": "Research Question"
+    },
+    {
+      "stage": "research_plan",
+      "title": "Research Plan"
+    },
+    {
+      "stage": "evidence_collection",
+      "title": "Evidence Collection"
+    },
+    {
+      "stage": "source_evaluation",
+      "title": "Source Evaluation"
+    },
+    {
+      "stage": "claim_development",
+      "title": "Claim Development"
+    },
+    {
+      "stage": "evidence_verification",
+      "title": "Evidence Verification"
+    },
+    {
+      "stage": "editorial_review",
+      "title": "Editorial Review"
+    },
+    {
+      "stage": "publication",
+      "title": "Publication"
+    },
+    {
+      "stage": "monitoring",
+      "title": "Monitoring"
+    },
+    {
+      "stage": "periodic_review",
+      "title": "Periodic Review"
+    }
+  ],
+  "lifecycle_stage_count": 10,
+  "evidence_ledger_fields": [
+    "claim",
+    "supporting_evidence",
+    "primary_sources",
+    "secondary_sources",
+    "date_reviewed",
+    "reviewer",
+    "confidence_level",
+    "related_research"
+  ],
+  "claims_registry_fields": [
+    "claim_id",
+    "plain_language_statement",
+    "supporting_evidence",
+    "contrary_evidence",
+    "status",
+    "review_history",
+    "related_educational_resources"
+  ],
+  "source_evaluation_criteria": [
+    "authority",
+    "originality",
+    "reliability",
+    "timeliness",
+    "bias_considerations",
+    "relevance"
+  ],
+  "ai_research_capabilities": [
+    "find_related_materials",
+    "summarize_documents",
+    "identify_missing_evidence",
+    "compare_sources",
+    "draft_literature_reviews",
+    "generate_citation_suggestions",
+    "highlight_conflicting_information"
+  ],
+  "ai_research_rule": "AI accelerates research; judgment remains with human researchers",
+  "peer_review_criteria": [
+    "accuracy",
+    "evidence_quality",
+    "citation_completeness",
+    "clarity",
+    "educational_value"
+  ],
+  "research_workspace_features": [
+    "manage_projects",
+    "organize_evidence",
+    "create_citations",
+    "link_claims",
+    "track_reviews",
+    "peer_collaboration",
+    "ai_assistance"
+  ],
+  "mc_research_metrics": [
+    "active_research",
+    "completed_research",
+    "research_backlog",
+    "claims_awaiting_verification",
+    "sources_awaiting_review",
+    "publication_pipeline",
+    "research_quality_indicators"
+  ],
+  "mc_research_quality_dashboard": [
+    "research_completed",
+    "research_under_review",
+    "evidence_completeness",
+    "claims_verified",
+    "citation_coverage",
+    "county_research_completion",
+    "research_aging",
+    "knowledge_gaps",
+    "institutional_confidence_metrics"
+  ],
+  "county_profile_elements": [
+    "history",
+    "government_structure",
+    "major_communities",
+    "educational_organizations",
+    "libraries",
+    "historical_societies",
+    "community_resources",
+    "local_civic_information"
+  ],
+  "county_milestone": {
+    "target_date": "2026-10-01",
+    "counties_total": 75,
+    "days_remaining": 84,
+    "label": "75-by-October-1 Milestone",
+    "requirements": [
+      "completed_county_profile",
+      "education_leader_or_recruitment_contact",
+      "county_dashboard_in_mission_control",
+      "initial_local_resource_information",
+      "development_plan_for_continued_growth"
+    ],
+    "mc_priority": "highest"
+  },
+  "research_system_chain": [
+    "mission_control",
+    "knowledge_platform",
+    "evidence_ledger",
+    "claims_registry",
+    "community_education_academy",
+    "ai_localbrains",
+    "county_operating_system",
+    "communications"
+  ],
+  "packages_completed": 11,
+  "packages_total": 50,
+  "packages_complete_pct": 22,
+  "engineering_note": "Doctrinal IMP-11 Research Institute; engineering IMP-11 is unified route manifest",
+  "status": "documented",
+  "implemented": false
+}

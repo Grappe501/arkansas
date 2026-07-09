@@ -10657,11 +10657,17 @@ async function initCursorImplementationPackage() {
       <div class="mc-stat"><div class="mc-stat__label">Sprint Zero</div><div class="mc-stat__value">${s.sprint_zero_started ? 'Started' : 'Pending'}</div></div>
       <div class="mc-stat"><div class="mc-stat__label">MVP in scope</div><div class="mc-stat__value">${s.mvp_in_scope_count}</div></div>
       <div class="mc-stat"><div class="mc-stat__label">Days to software</div><div class="mc-stat__value">${s.days_to_software ?? '—'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Days to Oct 1 counties</div><div class="mc-stat__value">${s.days_to_county_milestone ?? '—'}</div></div>
       <div class="mc-stat"><div class="mc-stat__label">Days to Jan 2027</div><div class="mc-stat__value">${s.days_to_organizational ?? s.days_remaining}</div></div>
     </div>
     <h2 class="mc-section-title">Master Timeline</h2>
-    <p class="mc-bar-note"><strong>Software complete:</strong> ${cip.software_completion_date || cip.master_timeline?.phase_one?.target_date || '2026-07-11'} · <strong>Organizational readiness:</strong> ${cip.organizational_readiness_date || cip.master_timeline?.phase_two?.target_date || '2027-01-01'}</p>
-    <p class="mc-bar-note">${cip.master_timeline?.sequence || 'Software Complete → Build-Out → Organizational Readiness'}</p>
+    <p class="mc-bar-note"><strong>Software complete:</strong> ${cip.software_completion_date || '2026-07-11'} · <strong>75 counties:</strong> ${cip.county_milestone_date || '2026-10-01'} · <strong>Organizational readiness:</strong> ${cip.organizational_readiness_date || '2027-01-01'}</p>
+    <p class="mc-bar-note">${cip.master_timeline?.sequence || 'Software Complete → 75 Counties → Organizational Readiness'}</p>
+    <h2 class="mc-section-title">Research Institute (IMP-11)</h2>
+    <p class="mc-bar-note"><strong>${cip.research_institute.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.research_institute.research_program_count} research programs · ${cip.research_institute.lifecycle_stage_count} lifecycle stages · ${cip.research_institute.packages_complete_pct}% complete (${cip.research_institute.packages_completed}/50)</p>
+    <p class="mc-bar-note"><strong>75-by-October-1:</strong> ${cip.research_institute.counties_total} counties · target ${cip.research_institute.county_milestone_date} · ${cip.research_institute.days_to_county_milestone} days remaining</p>
+    <p class="mc-bar-note"><a href="${cip.research_institute.route}">IMPLEMENTATION_PACKAGE_11_RESEARCH_INSTITUTE.md</a> · <a href="${cip.research_institute.manifest}">research-institute-manifest.json</a> · <a href="/mission-control/research-observatory.html">Research Observatory</a></p>
+    <p class="mc-bar-note">${cip.research_institute.philosophy}</p>
     <h2 class="mc-section-title">Content Management (IMP-10)</h2>
     <p class="mc-bar-note"><strong>${cip.content_management.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.content_management.content_type_count} content types · ${cip.content_management.content_class_count} classes · ${cip.content_management.workflow_stage_count} workflow stages · ${cip.content_management.foundation_complete_pct}% foundation (${cip.content_management.packages_completed}/50 packages)</p>
     <p class="mc-bar-note"><a href="${cip.content_management.route}">IMPLEMENTATION_PACKAGE_10_CONTENT_MANAGEMENT.md</a> · <a href="${cip.content_management.manifest}">content-management-manifest.json</a> · <a href="/mission-control/content-factory.html">Content Factory dashboard</a></p>

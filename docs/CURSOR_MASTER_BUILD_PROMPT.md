@@ -26,13 +26,15 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 0h. **LocalBrain Network (IMP-08):** [/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md](/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md) · [/data/localbrain-network-manifest.json](/data/localbrain-network-manifest.json)
 0i. **Knowledge Graph (IMP-09):** [/docs/IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md](/docs/IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md) · [/data/knowledge-graph-manifest.json](/data/knowledge-graph-manifest.json)
 0j. **Content Management (IMP-10):** [/docs/IMPLEMENTATION_PACKAGE_10_CONTENT_MANAGEMENT.md](/docs/IMPLEMENTATION_PACKAGE_10_CONTENT_MANAGEMENT.md) · [/data/content-management-manifest.json](/data/content-management-manifest.json)
+0k. **Research Institute (IMP-11):** [/docs/IMPLEMENTATION_PACKAGE_11_RESEARCH_INSTITUTE.md](/docs/IMPLEMENTATION_PACKAGE_11_RESEARCH_INSTITUTE.md) · [/data/research-institute-manifest.json](/data/research-institute-manifest.json)
 
-## Master timeline (updated IMP-09)
+## Master timeline (updated IMP-11)
 
 | Phase | Target | Focus |
 |-------|--------|-------|
-| **Software complete** | **July 11, 2026** | Feature-complete platform (site, MC, LocalBrains, academy, research, volunteer, coalition, geo systems, AI, admin) |
-| **Organizational readiness** | **January 2027** | Education leaders, county/city coverage, coalition, training, conversations, research, testing, launch certification |
+| **Software complete** | **July 11, 2026** | Feature-complete platform |
+| **75 counties** | **October 1, 2026** | County profiles, dashboards, Education Leaders in all 75 counties |
+| **Organizational readiness** | **January 2027** | Statewide volunteer development, city/neighborhood systems mature, launch certification |
 
 Between the two dates: populate content, train volunteers, expand leadership, validate operations (~6 months build-out).
 1. **Manifesto (#99):** Will this help an ordinary Arkansan understand how self-government works?
@@ -128,7 +130,7 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 
 ## First step to implement
 
-**IMP-01** through **IMP-10** are **documented**:
+**IMP-01** through **IMP-11** are **documented**:
 - [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
 - [Technical Architecture](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
 - [Route Map](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [route-manifest.json](/data/route-manifest.json)
@@ -139,7 +141,8 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 - [LocalBrain Network](/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md) · [localbrain-network-manifest.json](/data/localbrain-network-manifest.json)
 - [Knowledge Graph](/docs/IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md) · [knowledge-graph-manifest.json](/data/knowledge-graph-manifest.json)
 - [Content Management](/docs/IMPLEMENTATION_PACKAGE_10_CONTENT_MANAGEMENT.md) · [content-management-manifest.json](/data/content-management-manifest.json)
+- [Research Institute](/docs/IMPLEMENTATION_PACKAGE_11_RESEARCH_INSTITUTE.md) · [research-institute-manifest.json](/data/research-institute-manifest.json)
 
-**IMP-11** is next (doctrinal): Master Research Institute, Evidence Ledger & Claims Verification System.
+**IMP-12** is next (doctrinal): Master Community Education Academy, Curriculum Factory & Certification System.
 
 Engineering **Sprint Zero (IMP-10 step registry)** is the Band A gate before Band B code slices.

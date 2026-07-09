@@ -13,6 +13,18 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.11] - 2026-07-09 — IMP-11 Research Institute & Evidence Ledger
+
+### Implementation Package 11 of 50
+- **Master Research Institute, Evidence Ledger & Claims Verification System**
+- 12 research programs · 10-stage research lifecycle · Evidence Ledger & Claims Registry
+- Source evaluation, AI research assistant, peer review, county research program
+- **75-by-October-1 Milestone** — all 75 counties with profiles, dashboards, local leadership
+- Three-milestone timeline: Jul 11 2026 software · Oct 1 2026 counties · Jan 2027 org readiness
+- Machine-readable **research-institute-manifest.json**
+- IMP-12 next (doctrinal): Community Education Academy, Curriculum Factory & Certification
+- Honest: 11/50 documented · 0/50 implemented · 82% package readiness
+
 ## [2.05.10] - 2026-07-09 — IMP-10 Content Management & Editorial Workflow
 
 ### Implementation Package 10 of 50

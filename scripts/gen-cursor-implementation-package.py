@@ -9,11 +9,14 @@ from pathlib import Path
 root = Path(__file__).resolve().parents[1]
 today = '2026-07-09'
 software_completion_date = '2026-07-11'
+county_milestone_date = '2026-10-01'
 organizational_readiness_date = '2027-01-01'
 software_completion = date(2026, 7, 11)
+county_milestone = date(2026, 10, 1)
 organizational_readiness = date(2027, 1, 1)
 today_date = date(2026, 7, 9)
 days_to_software = max((software_completion - today_date).days, 0)
+days_to_county_milestone = max((county_milestone - today_date).days, 0)
 days_to_organizational = max((organizational_readiness - today_date).days, 0)
 # Backward-compatible aliases used across registries
 completion_target_date = organizational_readiness_date
@@ -32,6 +35,19 @@ MASTER_TIMELINE = {
         ],
     },
     'phase_two': {
+        'id': 'county_milestone',
+        'title': '75 Counties by October 1',
+        'target_date': county_milestone_date,
+        'days_remaining': days_to_county_milestone,
+        'scope': [
+            'Completed county profile for all 75 counties',
+            'Education Leader or active recruitment contact per county',
+            'County dashboard operational in Mission Control',
+            'Initial local resource information',
+            'Development plan for continued growth per county',
+        ],
+    },
+    'phase_three': {
         'id': 'organizational_readiness',
         'title': 'Organizational Readiness',
         'target_date': organizational_readiness_date,
@@ -40,11 +56,21 @@ MASTER_TIMELINE = {
             'Recruiting Education Leaders', 'Expanding county coverage', 'Growing city leadership',
             'Coalition development', 'Volunteer training', 'Community conversations',
             'Research expansion', 'Public testing', 'User feedback', 'System refinement',
-            'Launch certification',
+            'Launch certification', 'City and neighborhood systems mature',
+            'Statewide volunteer development expanded',
         ],
     },
-    'sequence': 'Software Complete (Jul 11, 2026) → Build-Out → Organizational Readiness (Jan 2027)',
+    'sequence': (
+        'Software Complete (Jul 11, 2026) → 75 Counties (Oct 1, 2026) → '
+        'Organizational Readiness (Jan 2027)'
+    ),
     'build_out_months_approx': 6,
+    'county_milestone': {
+        'target_date': county_milestone_date,
+        'counties_total': 75,
+        'days_remaining': days_to_county_milestone,
+        'label': '75-by-October-1 Milestone',
+    },
 }
 
 
@@ -60,7 +86,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 10  # IMP-01 through IMP-10 (doctrinal Band A foundation)
+steps_documented = 11  # IMP-01 through IMP-11 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -2197,6 +2223,163 @@ CONTENT_MANAGEMENT_MANIFEST = {
     'implemented': False,
 }
 
+RESEARCH_PROGRAMS = [
+    'citizens_united', 'campaign_finance', 'arkansas_government', 'federal_government',
+    'constitutional_law', 'supreme_court_decisions', 'election_administration',
+    'ballot_initiatives', 'government_transparency', 'civic_participation',
+    'historical_research', 'comparative_state_research',
+]
+
+RESEARCH_LIFECYCLE_STAGES = [
+    {'stage': 'research_question', 'title': 'Research Question'},
+    {'stage': 'research_plan', 'title': 'Research Plan'},
+    {'stage': 'evidence_collection', 'title': 'Evidence Collection'},
+    {'stage': 'source_evaluation', 'title': 'Source Evaluation'},
+    {'stage': 'claim_development', 'title': 'Claim Development'},
+    {'stage': 'evidence_verification', 'title': 'Evidence Verification'},
+    {'stage': 'editorial_review', 'title': 'Editorial Review'},
+    {'stage': 'publication', 'title': 'Publication'},
+    {'stage': 'monitoring', 'title': 'Monitoring'},
+    {'stage': 'periodic_review', 'title': 'Periodic Review'},
+]
+
+EVIDENCE_LEDGER_FIELDS = [
+    'claim', 'supporting_evidence', 'primary_sources', 'secondary_sources',
+    'date_reviewed', 'reviewer', 'confidence_level', 'related_research',
+]
+
+CLAIMS_REGISTRY_FIELDS = [
+    'claim_id', 'plain_language_statement', 'supporting_evidence',
+    'contrary_evidence', 'status', 'review_history', 'related_educational_resources',
+]
+
+SOURCE_EVALUATION_CRITERIA = [
+    'authority', 'originality', 'reliability', 'timeliness', 'bias_considerations', 'relevance',
+]
+
+AI_RESEARCH_CAPABILITIES = [
+    'find_related_materials', 'summarize_documents', 'identify_missing_evidence',
+    'compare_sources', 'draft_literature_reviews', 'generate_citation_suggestions',
+    'highlight_conflicting_information',
+]
+
+PEER_REVIEW_CRITERIA = [
+    'accuracy', 'evidence_quality', 'citation_completeness', 'clarity', 'educational_value',
+]
+
+RESEARCH_WORKSPACE_FEATURES = [
+    'manage_projects', 'organize_evidence', 'create_citations', 'link_claims',
+    'track_reviews', 'peer_collaboration', 'ai_assistance',
+]
+
+MC_RESEARCH_METRICS = [
+    'active_research', 'completed_research', 'research_backlog',
+    'claims_awaiting_verification', 'sources_awaiting_review',
+    'publication_pipeline', 'research_quality_indicators',
+]
+
+MC_RESEARCH_QUALITY_DASHBOARD = [
+    'research_completed', 'research_under_review', 'evidence_completeness',
+    'claims_verified', 'citation_coverage', 'county_research_completion',
+    'research_aging', 'knowledge_gaps', 'institutional_confidence_metrics',
+]
+
+COUNTY_PROFILE_ELEMENTS = [
+    'history', 'government_structure', 'major_communities', 'educational_organizations',
+    'libraries', 'historical_societies', 'community_resources', 'local_civic_information',
+]
+
+COUNTY_MILESTONE_REQUIREMENTS = [
+    'completed_county_profile',
+    'education_leader_or_recruitment_contact',
+    'county_dashboard_in_mission_control',
+    'initial_local_resource_information',
+    'development_plan_for_continued_growth',
+]
+
+RESEARCH_SYSTEM_CHAIN = [
+    'mission_control', 'knowledge_platform', 'evidence_ledger', 'claims_registry',
+    'community_education_academy', 'ai_localbrains', 'county_operating_system', 'communications',
+]
+
+MILESTONE_TIMELINE = [
+    {
+        'date': software_completion_date,
+        'title': 'Software Completion',
+        'summary': 'Software platform substantially complete',
+    },
+    {
+        'date': county_milestone_date,
+        'title': '75 Counties by October 1',
+        'summary': 'Representation in all 75 Arkansas counties — profiles, dashboards, local leadership',
+    },
+    {
+        'date': organizational_readiness_date,
+        'title': 'Organizational Readiness',
+        'summary': 'Full organizational readiness; city/neighborhood systems mature',
+    },
+]
+
+RESEARCH_INSTITUTE_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-11',
+    'updated': today,
+    'title': 'Master Research Institute, Evidence Ledger & Claims Verification System',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_11_RESEARCH_INSTITUTE.md',
+    'source_registries': {
+        'research_observatory': '/data/research-observatory.json',
+        'research_framework': '/data/research-framework.json',
+        'research_methodology': '/data/research-methodology.json',
+        'evidence_ledger': '/data/evidence-ledger.json',
+        'evidence_registry': '/data/evidence-registry.json',
+        'content_management': '/data/content-management-manifest.json',
+        'knowledge_graph': '/data/knowledge-graph-manifest.json',
+    },
+    'philosophy': 'Questions lead to research; research leads to evidence; evidence supports claims',
+    'governing_principle': (
+        'Research creates knowledge; verification creates confidence; '
+        'education creates understanding; communities create lasting impact'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'milestone_timeline': MILESTONE_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'research_programs': RESEARCH_PROGRAMS,
+    'research_program_count': len(RESEARCH_PROGRAMS),
+    'research_lifecycle': RESEARCH_LIFECYCLE_STAGES,
+    'lifecycle_stage_count': len(RESEARCH_LIFECYCLE_STAGES),
+    'evidence_ledger_fields': EVIDENCE_LEDGER_FIELDS,
+    'claims_registry_fields': CLAIMS_REGISTRY_FIELDS,
+    'source_evaluation_criteria': SOURCE_EVALUATION_CRITERIA,
+    'ai_research_capabilities': AI_RESEARCH_CAPABILITIES,
+    'ai_research_rule': 'AI accelerates research; judgment remains with human researchers',
+    'peer_review_criteria': PEER_REVIEW_CRITERIA,
+    'research_workspace_features': RESEARCH_WORKSPACE_FEATURES,
+    'mc_research_metrics': MC_RESEARCH_METRICS,
+    'mc_research_quality_dashboard': MC_RESEARCH_QUALITY_DASHBOARD,
+    'county_profile_elements': COUNTY_PROFILE_ELEMENTS,
+    'county_milestone': {
+        'target_date': county_milestone_date,
+        'counties_total': 75,
+        'days_remaining': days_to_county_milestone,
+        'label': '75-by-October-1 Milestone',
+        'requirements': COUNTY_MILESTONE_REQUIREMENTS,
+        'mc_priority': 'highest',
+    },
+    'research_system_chain': RESEARCH_SYSTEM_CHAIN,
+    'packages_completed': 11,
+    'packages_total': 50,
+    'packages_complete_pct': 22,
+    'engineering_note': 'Doctrinal IMP-11 Research Institute; engineering IMP-11 is unified route manifest',
+    'status': 'documented',
+    'implemented': False,
+}
+
 ROUTE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -2259,11 +2442,12 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D11', 'indicator': 'LocalBrain Network (IMP-08)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D12', 'indicator': 'Knowledge Graph (IMP-09)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D13', 'indicator': 'Content Management (IMP-10)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D14', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D14', 'indicator': 'Research Institute (IMP-11)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D15', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
-    80,
+    82,
     14
     + len(IMPLEMENTATION_STEPS) // 2
     + len(BANDS) * 2
@@ -2280,8 +2464,10 @@ out = {
     'updated': today,
     'completion_target_date': organizational_readiness_date,
     'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
     'organizational_readiness_date': organizational_readiness_date,
     'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
     'days_to_organizational': days_to_organizational,
     'title': 'Cursor Implementation Package v1.0',
     'subtitle': '50 Executable Implementation Steps',
@@ -2526,7 +2712,30 @@ out = {
             'number': 11,
             'id': 'IMP-11',
             'title': 'Master Research Institute, Evidence Ledger & Claims Verification System',
-            'note': 'Doctrinal package 11; engineering IMP-11 is unified route manifest',
+            'status': 'documented',
+        },
+    },
+    'research_institute': {
+        'title': 'Master Research Institute, Evidence Ledger & Claims Verification System',
+        'package': 'Implementation Package 11 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_11_RESEARCH_INSTITUTE.md',
+        'manifest': '/data/research-institute-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': RESEARCH_INSTITUTE_MANIFEST['philosophy'],
+        'research_program_count': RESEARCH_INSTITUTE_MANIFEST['research_program_count'],
+        'lifecycle_stage_count': RESEARCH_INSTITUTE_MANIFEST['lifecycle_stage_count'],
+        'county_milestone_date': county_milestone_date,
+        'counties_total': RESEARCH_INSTITUTE_MANIFEST['county_milestone']['counties_total'],
+        'days_to_county_milestone': days_to_county_milestone,
+        'packages_completed': RESEARCH_INSTITUTE_MANIFEST['packages_completed'],
+        'packages_complete_pct': RESEARCH_INSTITUTE_MANIFEST['packages_complete_pct'],
+        'engineering_note': RESEARCH_INSTITUTE_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 12,
+            'id': 'IMP-12',
+            'title': 'Master Community Education Academy, Curriculum Factory & Certification System',
+            'note': 'Doctrinal package 12; engineering IMP-12 is App Router layout hierarchy',
         },
     },
     'master_timeline': MASTER_TIMELINE,
@@ -2543,7 +2752,9 @@ out = {
     'january_2027_targets': {
         'organizational_readiness_date': organizational_readiness_date,
         'software_completion_date': software_completion_date,
+        'county_milestone_date': county_milestone_date,
         'days_to_software': days_to_software,
+        'days_to_county_milestone': days_to_county_milestone,
         'days_to_organizational': days_to_organizational,
         'counties': 75,
         'cities': 250,
@@ -2577,8 +2788,10 @@ out = {
     },
     'summary': {
         'software_completion_date': software_completion_date,
+        'county_milestone_date': county_milestone_date,
         'organizational_readiness_date': organizational_readiness_date,
         'days_to_software': days_to_software,
+        'days_to_county_milestone': days_to_county_milestone,
         'days_to_organizational': days_to_organizational,
         'completion_target_date': organizational_readiness_date,
         'days_remaining': days_to_organizational,
@@ -2652,6 +2865,10 @@ with open(root / 'data/knowledge-graph-manifest.json', 'w', newline='\n') as f:
 
 with open(root / 'data/content-management-manifest.json', 'w', newline='\n') as f:
     json.dump(CONTENT_MANAGEMENT_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/research-institute-manifest.json', 'w', newline='\n') as f:
+    json.dump(RESEARCH_INSTITUTE_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

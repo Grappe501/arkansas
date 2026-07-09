@@ -35,6 +35,19 @@
       ]
     },
     "phase_two": {
+      "id": "county_milestone",
+      "title": "75 Counties by October 1",
+      "target_date": "2026-10-01",
+      "days_remaining": 84,
+      "scope": [
+        "Completed county profile for all 75 counties",
+        "Education Leader or active recruitment contact per county",
+        "County dashboard operational in Mission Control",
+        "Initial local resource information",
+        "Development plan for continued growth per county"
+      ]
+    },
+    "phase_three": {
       "id": "organizational_readiness",
       "title": "Organizational Readiness",
       "target_date": "2027-01-01",
@@ -50,11 +63,19 @@
         "Public testing",
         "User feedback",
         "System refinement",
-        "Launch certification"
+        "Launch certification",
+        "City and neighborhood systems mature",
+        "Statewide volunteer development expanded"
       ]
     },
-    "sequence": "Software Complete (Jul 11, 2026) \u2192 Build-Out \u2192 Organizational Readiness (Jan 2027)",
-    "build_out_months_approx": 6
+    "sequence": "Software Complete (Jul 11, 2026) \u2192 75 Counties (Oct 1, 2026) \u2192 Organizational Readiness (Jan 2027)",
+    "build_out_months_approx": 6,
+    "county_milestone": {
+      "target_date": "2026-10-01",
+      "counties_total": 75,
+      "days_remaining": 84,
+      "label": "75-by-October-1 Milestone"
+    }
   },
   "software_completion_date": "2026-07-11",
   "organizational_readiness_date": "2027-01-01",

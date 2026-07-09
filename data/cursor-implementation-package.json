@@ -4,8 +4,10 @@
   "updated": "2026-07-09",
   "completion_target_date": "2027-01-01",
   "software_completion_date": "2026-07-11",
+  "county_milestone_date": "2026-10-01",
   "organizational_readiness_date": "2027-01-01",
   "days_to_software": 2,
+  "days_to_county_milestone": 84,
   "days_to_organizational": 176,
   "title": "Cursor Implementation Package v1.0",
   "subtitle": "50 Executable Implementation Steps",
@@ -362,7 +364,30 @@
       "number": 11,
       "id": "IMP-11",
       "title": "Master Research Institute, Evidence Ledger & Claims Verification System",
-      "note": "Doctrinal package 11; engineering IMP-11 is unified route manifest"
+      "status": "documented"
+    }
+  },
+  "research_institute": {
+    "title": "Master Research Institute, Evidence Ledger & Claims Verification System",
+    "package": "Implementation Package 11 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_11_RESEARCH_INSTITUTE.md",
+    "manifest": "/data/research-institute-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Questions lead to research; research leads to evidence; evidence supports claims",
+    "research_program_count": 12,
+    "lifecycle_stage_count": 10,
+    "county_milestone_date": "2026-10-01",
+    "counties_total": 75,
+    "days_to_county_milestone": 84,
+    "packages_completed": 11,
+    "packages_complete_pct": 22,
+    "engineering_note": "Doctrinal IMP-11 Research Institute; engineering IMP-11 is unified route manifest",
+    "next_package": {
+      "number": 12,
+      "id": "IMP-12",
+      "title": "Master Community Education Academy, Curriculum Factory & Certification System",
+      "note": "Doctrinal package 12; engineering IMP-12 is App Router layout hierarchy"
     }
   },
   "master_timeline": {
@@ -386,6 +411,19 @@
       ]
     },
     "phase_two": {
+      "id": "county_milestone",
+      "title": "75 Counties by October 1",
+      "target_date": "2026-10-01",
+      "days_remaining": 84,
+      "scope": [
+        "Completed county profile for all 75 counties",
+        "Education Leader or active recruitment contact per county",
+        "County dashboard operational in Mission Control",
+        "Initial local resource information",
+        "Development plan for continued growth per county"
+      ]
+    },
+    "phase_three": {
       "id": "organizational_readiness",
       "title": "Organizational Readiness",
       "target_date": "2027-01-01",
@@ -401,11 +439,19 @@
         "Public testing",
         "User feedback",
         "System refinement",
-        "Launch certification"
+        "Launch certification",
+        "City and neighborhood systems mature",
+        "Statewide volunteer development expanded"
       ]
     },
-    "sequence": "Software Complete (Jul 11, 2026) \u2192 Build-Out \u2192 Organizational Readiness (Jan 2027)",
-    "build_out_months_approx": 6
+    "sequence": "Software Complete (Jul 11, 2026) \u2192 75 Counties (Oct 1, 2026) \u2192 Organizational Readiness (Jan 2027)",
+    "build_out_months_approx": 6,
+    "county_milestone": {
+      "target_date": "2026-10-01",
+      "counties_total": 75,
+      "days_remaining": 84,
+      "label": "75-by-October-1 Milestone"
+    }
   },
   "supersedes": {
     "build": 50,
@@ -1718,7 +1764,9 @@
   "january_2027_targets": {
     "organizational_readiness_date": "2027-01-01",
     "software_completion_date": "2026-07-11",
+    "county_milestone_date": "2026-10-01",
     "days_to_software": 2,
+    "days_to_county_milestone": 84,
     "days_to_organizational": 176,
     "counties": 75,
     "cities": 250,
@@ -1741,7 +1789,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 10,
+        "current": 11,
         "status": "partial"
       },
       {
@@ -1812,6 +1860,12 @@
       },
       {
         "id": "CIP-D14",
+        "indicator": "Research Institute (IMP-11)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D15",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -1855,14 +1909,16 @@
   },
   "summary": {
     "software_completion_date": "2026-07-11",
+    "county_milestone_date": "2026-10-01",
     "organizational_readiness_date": "2027-01-01",
     "days_to_software": 2,
+    "days_to_county_milestone": 84,
     "days_to_organizational": 176,
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "implementation_package_readiness_pct": 80,
+    "implementation_package_readiness_pct": 82,
     "steps_total": 50,
-    "steps_documented": 10,
+    "steps_documented": 11,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

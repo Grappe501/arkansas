@@ -1,5 +1,5 @@
 {
-  "version": "2.05.10",
+  "version": "2.05.11",
   "build": 101,
   "updated": "2026-07-09",
   "identity": {
@@ -121,7 +121,7 @@
     "connected_citizen_goal_pct": 15,
     "implementation_steps_total": 50,
     "implementation_steps_implemented": 0,
-    "implementation_steps_documented": 10,
+    "implementation_steps_documented": 11,
     "overall_completion": 101,
     "current_build": {
       "number": 101,
@@ -133,15 +133,17 @@
       "number": 102,
       "title": "Executive war room & countdown dashboard components"
     },
-    "implementation_package_readiness": 80,
-    "cursor_implementation_package_readiness": 80,
+    "implementation_package_readiness": 82,
+    "cursor_implementation_package_readiness": 82,
     "implementation_phase_started": false,
     "sprint_zero_started": false,
     "software_completion_date": "2026-07-11",
     "organizational_readiness_date": "2027-01-01",
     "days_to_software": 2,
     "days_to_organizational": 176,
-    "knowledge_graph_readiness": 55
+    "knowledge_graph_readiness": 55,
+    "county_milestone_date": "2026-10-01",
+    "days_to_county_milestone": 84
   },
   "progress_bars": [
     {
@@ -876,7 +878,7 @@
     {
       "id": "cursor_implementation_package",
       "label": "Implementation Package",
-      "value": 80,
+      "value": 82,
       "max": 100,
       "note": "0/50 steps implemented \u00b7 Sprint Zero pending."
     }
@@ -7810,23 +7812,22 @@
     }
   ],
   "briefing": {
-    "what_built": "IMP-01\u201310 documented \u2014 Band A foundation complete (20%)",
-    "building_now": "IMP-11 Research Institute & Evidence Ledger next; engineering Sprint Zero (IMP-10 gate) pending",
+    "what_built": "IMP-01\u201311 documented \u2014 Research Institute + 75-by-Oct-1 county milestone",
+    "building_now": "IMP-12 Community Education Academy next; engineering Sprint Zero (IMP-10 gate) pending",
     "blocked": [
       "Sprint Zero not complete",
       "0/50 code-implemented",
       "2 days to software target"
     ],
     "ready_public": [
+      "Research Institute",
+      "research-institute-manifest.json",
+      "75-by-October-1 Milestone",
       "Content Management",
-      "content-management-manifest.json",
       "Knowledge Graph",
-      "knowledge-graph-manifest.json",
-      "Master Timeline",
-      "LocalBrain Network",
-      "Mission Control Architecture"
+      "Master Timeline"
     ],
-    "next": "IMP-11 \u2014 Master Research Institute, Evidence Ledger & Claims Verification System"
+    "next": "IMP-12 \u2014 Master Community Education Academy, Curriculum Factory & Certification System"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8842,10 +8843,10 @@
   "cursor_implementation_package": "/data/cursor-implementation-package.json",
   "cursor_implementation_package_dashboard": "/mission-control/cursor-implementation-package.html",
   "cursor_implementation_package_inventory": {
-    "readiness_score": 80,
+    "readiness_score": 82,
     "steps_total": 50,
     "steps_implemented": 0,
-    "steps_documented": 10,
+    "steps_documented": 11,
     "bands_total": 5,
     "sprint_zero_started": false,
     "cursor_master_prompt_ready": true
