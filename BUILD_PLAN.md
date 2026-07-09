@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.22.0 · **Facts:** [/mission-control/facts.html](/mission-control/facts.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #18:** ✅ Facts Framework · **Build #17:** ✅ Component Registry · **Build #16:** ✅ Route Inventory  
+**Current version:** 1.23.0 · **Atlas:** [/mission-control/atlas.html](/mission-control/atlas.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #19:** ✅ Knowledge Atlas · **Build #18:** ✅ Facts Framework · **Build #17:** ✅ Component Registry  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -262,8 +262,28 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **16** | **Route Inventory** | **✅ v1.20.0** |
 | **17** | **Component Registry** | **✅ v1.21.0** |
 | **18** | **Facts Framework** | **✅ v1.22.0** |
+| **19** | **Knowledge Atlas** | **✅ v1.23.0** |
 
-**Next:** Build #19 — Brand & Identity System (logo, color, typography, voice, messaging).
+**Next:** Build #20 — Brand & Identity System (logo, color, typography, voice, messaging).
+
+---
+
+## Phase 19 — Knowledge Atlas (Build #19) ★ NEW
+
+*Seven learning worlds, districts, trails, and Learning Compass — educational backbone.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| K1 | Knowledge Atlas v1.0 | ✅ | `data/knowledge-atlas.json` |
+| K2 | Seven Learning Worlds defined | ✅ | 51 districts |
+| K3 | Six Knowledge Trails | ✅ | Beginner through Research |
+| K4 | Learning Compass schema | ✅ | COMP-NAV-004 linked |
+| K5 | Educational checkpoints | ✅ | 5 checkpoint types |
+| K6 | Atlas map hierarchy | ✅ | Worlds → districts → pages → sources |
+| K7 | Educational completion metrics | ✅ | 8 dimensions |
+| K8 | MC atlas dashboard | ✅ | `/mission-control/atlas.html` |
+
+**Governing principle:** The platform should feel like a civic learning environment — not a website with menus.
 
 ---
 
@@ -350,10 +370,11 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#16**~~ | ~~Complete page inventory~~ ✅ Done |
 | ~~**#17**~~ | ~~Component inventory~~ ✅ Done |
 | ~~**#18**~~ | ~~Citizens United Facts Framework~~ ✅ Done |
-| **#19** | **Brand & Identity System** (logo, color, typography, voice, messaging) |
-| **#20** | Database schema and entity relationships |
-| **#21** | UX wireframes for desktop, tablet, and mobile |
-| **#22** | GitHub repository structure and Netlify deployment blueprint |
+| ~~**#19**~~ | ~~Knowledge Atlas & Learning Paths~~ ✅ Done |
+| **#20** | **Brand & Identity System** (logo, color, typography, voice, messaging) |
+| **#21** | Database schema and entity relationships |
+| **#22** | UX wireframes for desktop, tablet, and mobile |
+| **#23** | GitHub repository structure and Netlify deployment blueprint |
 
 ---
 

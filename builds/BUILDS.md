@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#19** | **Knowledge Atlas** | **1.23.0** | **✅ Complete** | [019](019-knowledge-atlas.md) · [/mission-control/atlas.html](../mission-control/atlas.html) |
 | **#18** | **Facts Framework** | **1.22.0** | **✅ Complete** | [018](018-citizens-united-facts-framework.md) · [/mission-control/facts.html](../mission-control/facts.html) |
 | **#17** | **Component Registry** | **1.21.0** | **✅ Complete** | [017](017-component-architecture.md) · [/mission-control/components.html](../mission-control/components.html) |
 | **#16** | **Route Inventory** | **1.20.0** | **✅ Complete** | [016](016-page-route-inventory.md) · [/mission-control/routes.html](../mission-control/routes.html) |
@@ -18,7 +19,7 @@
 | **#5** | **Site Architecture** | **1.9.0** | **✅ Complete** | [005](005-master-site-architecture.md) |
 | **#4** | **Phase Registry** | **1.8.0** | **✅ Complete** | [004](004-master-phase-registry.md) |
 
-## Platform Stack (Builds #4–#18)
+## Platform Stack (Builds #4–#19)
 
 | Layer | Route | Focus |
 |-------|-------|-------|
@@ -27,6 +28,7 @@
 | **Route Registry** | `/mission-control/routes.html` | **81 routes · v1 map** |
 | **Component Registry** | `/mission-control/components.html` | **42 components · A–G** |
 | **Facts Framework** | `/mission-control/facts.html` | **Canonical facts · FACT-1000–6000** |
+| **Knowledge Atlas** | `/mission-control/atlas.html` | **7 worlds · 51 districts · 6 trails** |
 | Content Inventory | `/mission-control/inventory.html` | Content assets |
 | MRID System | `/mission-control/mrid.html` | Requirement IDs |
 | Citizen Journey | `/mission-control/journey.html` | People & UX |
@@ -43,7 +45,7 @@ Every route answers one reader question. 81 routes inventoried — honest live/r
 
 ## Data Model Rule (Build #15)
 
-Everything is connected. 10 canonical objects, 20 relationship types. **Next:** Brand & Identity System (Build #19), then mass fact cataloging.
+Everything is connected. 10 canonical objects, 20 relationship types. **Next:** Brand & Identity System (Build #20).
 
 ## Arkansas Rule (Build #12)
 

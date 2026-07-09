@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Knowledge Atlas <a href="/mission-control/atlas.html" class="mc-inline-link">Learning Worlds →</a></h2>
+    <p class="mc-bar-note">Build #19 — 7 learning worlds, 51 districts, 6 knowledge trails, Learning Compass schema.</p>
     <h2 class="mc-section-title">Facts Framework <a href="/mission-control/facts.html" class="mc-inline-link">Canonical Facts →</a></h2>
     <p class="mc-bar-note">Build #18 — 6 fact categories (FACT-1000–6000), confidence levels, 4 presentation depths, evidence traceability.</p>
     <h2 class="mc-section-title">Component Registry <a href="/mission-control/components.html" class="mc-inline-link">Master Inventory →</a></h2>
@@ -1795,6 +1797,101 @@ async function initFactsFrameworkBlueprint() {
   initDevConsole(mc);
 }
 
+async function initKnowledgeAtlasBlueprint() {
+  const root = document.getElementById('mc-atlas-root');
+  if (!root) return;
+
+  const [atlasRes, mcRes] = await Promise.all([
+    fetch('/data/knowledge-atlas.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const atlas = await atlasRes.json();
+  const mc = await mcRes.json();
+  const s = atlas.summary;
+  const ec = atlas.educational_completion;
+
+  const worldSections = atlas.worlds.map(w => {
+    const rows = w.districts.map(d => `
+      <tr class="${d.status === 'live' ? 'mc-table__row--approved' : ''}">
+        <td><code>${d.id}</code></td>
+        <td>${d.title}</td>
+        <td>${d.status}</td>
+        <td>${d.completion_pct}%</td>
+        <td>${(d.routes || []).map(r => `<a href="${r}">${r}</a>`).join('<br>') || '—'}</td>
+      </tr>`).join('');
+    return `
+      <h2 class="mc-section-title">World ${w.number} — ${w.title} (${w.completion_pct}%)</h2>
+      <p class="mc-bar-note">${w.purpose}</p>
+      <table class="mc-table">
+        <thead><tr><th>ID</th><th>District</th><th>Status</th><th>Complete</th><th>Routes</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+  }).join('');
+
+  const trailCards = atlas.trails.map(t => `
+    <div class="mc-card">
+      <h3>${t.title}</h3>
+      ${t.duration ? `<p class="mc-bar-note">${t.duration}${t.audience ? ' · ' + t.audience : ''}</p>` : ''}
+      ${t.focus ? `<p class="mc-bar-note">${t.focus}</p>` : ''}
+      <ol class="mc-deliverables">${t.stops.map(st => `<li><a href="${st.route}">${st.title || st.route}</a></li>`).join('')}</ol>
+    </div>`).join('');
+
+  const completionRows = Object.entries(ec)
+    .filter(([k]) => k !== 'overall_educational_readiness')
+    .map(([k, v]) => `<tr><td>${k.replace(/_/g, ' ')}</td><td>${v}%</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Knowledge Atlas</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #19 · ${atlas.title}</p>
+      <h1>Knowledge Atlas &amp; Learning Paths</h1>
+      <p class="mc-header__question"><em>${atlas.core_question}</em></p>
+    </header>
+    <section class="mc-card">
+      <h3>${atlas.organization}</h3>
+      <p class="mc-bar-note"><strong>${atlas.platform}</strong></p>
+      <p class="mc-bar-note">${atlas.governing_principle}</p>
+    </section>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Learning worlds</div><div class="mc-stat__value">${s.worlds}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Districts</div><div class="mc-stat__value">${s.districts}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Live districts</div><div class="mc-stat__value">${s.districts_live}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Partial</div><div class="mc-stat__value">${s.districts_partial}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Planned / stub</div><div class="mc-stat__value">${s.districts_planned + s.districts_stub}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Knowledge trails</div><div class="mc-stat__value">${s.trails}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Mapped routes</div><div class="mc-stat__value">${s.mapped_routes}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Educational readiness</div><div class="mc-stat__value">${ec.overall_educational_readiness}%</div></div>
+    </div>
+    <h2 class="mc-section-title">Educational Completion</h2>
+    <p class="mc-bar-note">Measures institutional maturity — not page count alone.</p>
+    <table class="mc-table"><thead><tr><th>Dimension</th><th>Coverage</th></tr></thead><tbody>${completionRows}</tbody></table>
+    <h2 class="mc-section-title">Atlas Map Hierarchy</h2>
+    <div class="mc-dep-map">${atlas.atlas_map_hierarchy.map((l, i) => `
+      <span class="mc-dep-map__node"><span class="mc-dep-map__num">${l.level}</span><span class="mc-dep-map__label">${l.title}${l.count ? ' (' + l.count + ')' : ''}</span></span>
+      ${i < atlas.atlas_map_hierarchy.length - 1 ? '<span class="mc-dep-map__arrow">↓</span>' : ''}`).join('')}</div>
+    <h2 class="mc-section-title">Learning Compass (${atlas.learning_compass.status})</h2>
+    <p class="mc-bar-note">${atlas.learning_compass.note}</p>
+    <ul class="mc-deliverables">${atlas.learning_compass.fields.map(f => `<li><strong>${f.label}</strong>${f.source ? ' — ' + f.source : ''}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Educational Checkpoints</h2>
+    <ul class="mc-deliverables">${atlas.checkpoints.map(c => `<li>${c.title}</li>`).join('')}</ul>
+    ${worldSections}
+    <h2 class="mc-section-title">Knowledge Trails (${atlas.trails.length})</h2>
+    <div class="mc-grid-2">${trailCards}</div>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${atlas.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${atlas.recommended_next_build.number} — ${atlas.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${atlas.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/KNOWLEDGE_ATLAS.md">KNOWLEDGE_ATLAS.md</a> ·
+      <a href="/data/knowledge-atlas.json">Atlas JSON</a> ·
+      <a href="/mission-control/facts.html">Facts Framework</a> ·
+      <a href="/mission-control/journey.html">UX Journey</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -1812,4 +1909,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initRouteRegistryBlueprint();
   initComponentRegistryBlueprint();
   initFactsFrameworkBlueprint();
+  initKnowledgeAtlasBlueprint();
 });

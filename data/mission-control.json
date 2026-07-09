@@ -1,6 +1,6 @@
 {
-  "version": "1.22.0",
-  "build": 18,
+  "version": "1.23.0",
+  "build": 19,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,20 +9,20 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 18,
+    "overall_completion": 19,
     "current_build": {
-      "number": 18,
-      "title": "Citizens United Facts Framework"
-    },
-    "active_phase": "Content Foundation \u2014 Facts Framework",
-    "last_completed": "Component Architecture & Design System Inventory",
-    "next_build": {
       "number": 19,
+      "title": "Citizens United Knowledge Atlas & Learning Path System"
+    },
+    "active_phase": "Educational Architecture \u2014 Knowledge Atlas",
+    "last_completed": "Citizens United Facts Framework",
+    "next_build": {
+      "number": 20,
       "title": "Brand & Identity System (logo, color, typography, voice, messaging)"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
-    "content_readiness": 14,
+    "content_readiness": 16,
     "research_readiness": 20,
     "data_viz_readiness": 2,
     "signup_funnel_readiness": 14,
@@ -32,15 +32,16 @@
     "route_inventory_readiness": 18,
     "component_registry_readiness": 22,
     "facts_framework_readiness": 12,
-    "public_launch_readiness": 6,
+    "knowledge_atlas_readiness": 18,
+    "public_launch_readiness": 7,
     "public_launch_label": "Early Foundation"
   },
   "progress_bars": [
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 18,
-      "note": "Facts framework live \u2014 13 facts cataloged (8 verified). Brand & Identity next."
+      "value": 19,
+      "note": "Knowledge Atlas live \u2014 7 worlds, 51 districts, 40% educational readiness."
     },
     {
       "id": "constitution",
@@ -190,6 +191,13 @@
       "value": 12,
       "max": 100,
       "note": "13 facts, 8 verified, 3 under review \u2014 honest v1 catalog."
+    },
+    {
+      "id": "atlas",
+      "label": "Knowledge Atlas",
+      "value": 18,
+      "max": 100,
+      "note": "6 live, 29 partial districts \u2014 6 knowledge trails defined."
     }
   ],
   "public_readiness": {
@@ -590,6 +598,12 @@
       "id": "facts",
       "label": "Facts Framework",
       "href": "/mission-control/facts.html",
+      "status": "complete"
+    },
+    {
+      "id": "atlas",
+      "label": "Knowledge Atlas",
+      "href": "/mission-control/atlas.html",
       "status": "complete"
     }
   ],
@@ -1617,6 +1631,52 @@
   ],
   "builds": [
     {
+      "number": 19,
+      "title": "Citizens United Knowledge Atlas & Learning Path System",
+      "version": "1.23.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Educational Architecture v1.0 \u2014 seven learning worlds, districts, trails, Learning Compass",
+      "summary": "7 worlds, 51 districts, 6 trails; 40% educational readiness; honest route mapping.",
+      "files_created": [
+        "data/knowledge-atlas.json",
+        "docs/KNOWLEDGE_ATLAS.md",
+        "builds/019-knowledge-atlas.md",
+        "mission-control/atlas.html",
+        "scripts/gen-knowledge-atlas.py",
+        "scripts/update-mc-build19.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/atlas.html"
+      ],
+      "decisions_made": [
+        "Seven Learning Worlds replace menu-first navigation mental model",
+        "51 districts mapped to honest live/partial/stub/planned status",
+        "Six Knowledge Trails including Beginner (20\u201330 min)",
+        "Learning Compass schema tied to COMP-NAV-004",
+        "Educational completion measured by dimension, not page count"
+      ],
+      "open_questions": [
+        "Interactive atlas visualization?",
+        "Deploy Learning Compass on all halls?"
+      ],
+      "risks": [
+        "16 districts not yet built \u2014 documented"
+      ],
+      "next_recommended": 20,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/atlas.html",
+      "review_status": "complete"
+    },
+    {
       "number": 18,
       "title": "Citizens United Facts Framework",
       "version": "1.22.0",
@@ -2386,18 +2446,18 @@
     }
   ],
   "briefing": {
-    "what_built": "Facts Framework v1.0 \u2014 13 canonical facts with evidence traceability",
-    "building_now": "Content foundation \u2014 Brand & Identity System next (Build #19)",
+    "what_built": "Knowledge Atlas v1.0 \u2014 7 worlds, 51 districts, 6 trails",
+    "building_now": "Educational architecture \u2014 Brand & Identity System next (Build #20)",
     "blocked": [
-      "Hundreds of facts not yet cataloged",
-      "FEC spending data for FACT-4000 series"
+      "Learning Compass UI not on public pages",
+      "34+ districts need content"
     ],
     "ready_public": [
-      "Facts MC dashboard",
-      "FACTS_CONSTITUTION.md",
-      "Claims-to-facts migration"
+      "Atlas MC dashboard",
+      "Knowledge trails",
+      "Educational completion metrics"
     ],
-    "next": "Build #19 \u2014 Brand & Identity System"
+    "next": "Build #20 \u2014 Brand & Identity System"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -2528,5 +2588,21 @@
     "categories": 6,
     "fact_completeness_pct": 62,
     "v1_target": 200
+  },
+  "knowledge_atlas": "/data/knowledge-atlas.json",
+  "atlas_dashboard": "/mission-control/atlas.html",
+  "atlas_inventory": {
+    "readiness_score": 18,
+    "worlds": 7,
+    "districts": 51,
+    "districts_live": 6,
+    "districts_partial": 29,
+    "districts_planned": 13,
+    "districts_stub": 3,
+    "trails": 6,
+    "mapped_routes": 22,
+    "atlas_completion_pct": 40,
+    "educational_readiness": 40,
+    "learning_compass_status": "partial"
   }
 }

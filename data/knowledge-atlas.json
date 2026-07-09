@@ -1,0 +1,1022 @@
+{
+  "version": "1.0",
+  "build": 19,
+  "updated": "2026-07-09",
+  "title": "Citizens United Knowledge Atlas & Learning Path System v1.0",
+  "organization": "Arkansas Civic Education Initiative",
+  "platform": "The Citizens United Education Platform",
+  "route": "/mission-control/atlas.html",
+  "constitution": "/docs/KNOWLEDGE_ATLAS.md",
+  "facts_framework": "/data/facts-framework.json",
+  "knowledge_graph": "/data/kg-registry.json",
+  "route_registry": "/data/route-registry.json",
+  "ux_journey": "/data/ux-journey.json",
+  "core_question": "How did one Supreme Court decision reshape the conversation about money and politics in America?",
+  "principle": "The platform should feel like exploring a living knowledge atlas \u2014 not a website with menus.",
+  "governing_principle": "Every path leads to greater understanding; every topic connects; every visitor can become an informed educator in their Arkansas community.",
+  "learning_compass": {
+    "component_id": "COMP-NAV-004",
+    "fields": [
+      {
+        "id": "current_world",
+        "label": "Current World"
+      },
+      {
+        "id": "current_district",
+        "label": "Current District"
+      },
+      {
+        "id": "reading_time",
+        "label": "Estimated Reading Time"
+      },
+      {
+        "id": "learning_level",
+        "label": "Learning Level",
+        "values": [
+          "L1",
+          "L2",
+          "L3",
+          "L4"
+        ]
+      },
+      {
+        "id": "evidence_strength",
+        "label": "Evidence Strength",
+        "source": "facts-registry"
+      },
+      {
+        "id": "related_topics",
+        "label": "Related Topics",
+        "source": "kg-registry"
+      },
+      {
+        "id": "next_destination",
+        "label": "Next Recommended Destination"
+      }
+    ],
+    "status": "partial",
+    "note": "Schema defined; UI not yet on all pages"
+  },
+  "checkpoints": [
+    {
+      "id": "takeaways",
+      "title": "Key Takeaways"
+    },
+    {
+      "id": "misconceptions",
+      "title": "Common Misconceptions"
+    },
+    {
+      "id": "faq",
+      "title": "Frequently Asked Questions"
+    },
+    {
+      "id": "reflection",
+      "title": "Reflection Questions"
+    },
+    {
+      "id": "resources",
+      "title": "Related Resources"
+    }
+  ],
+  "atlas_map_hierarchy": [
+    {
+      "level": 1,
+      "title": "Seven Learning Worlds",
+      "count": 7
+    },
+    {
+      "level": 2,
+      "title": "Major Districts",
+      "count": 51
+    },
+    {
+      "level": 3,
+      "title": "Individual Pages",
+      "count": 22,
+      "v1_target": 825
+    },
+    {
+      "level": 4,
+      "title": "Primary Sources",
+      "source": "evidence-registry"
+    },
+    {
+      "level": 5,
+      "title": "Educational Resources",
+      "source": "content-inventory"
+    },
+    {
+      "level": 6,
+      "title": "Community Action Opportunities",
+      "source": "civic-ecosystem"
+    }
+  ],
+  "worlds": [
+    {
+      "id": "WORLD-01",
+      "number": 1,
+      "title": "The World Before Citizens United",
+      "purpose": "Help visitors understand the decades of history leading to the case.",
+      "district_count": 7,
+      "districts_live": 0,
+      "districts_partial": 4,
+      "districts_planned": 3,
+      "completion_pct": 26,
+      "districts": [
+        {
+          "id": "W1-D01",
+          "title": "Early Campaign Finance",
+          "status": "planned",
+          "completion_pct": 0,
+          "routes": [],
+          "pages": [],
+          "note": "Pre-20th century regulation \u2014 content not yet written"
+        },
+        {
+          "id": "W1-D02",
+          "title": "Progressive Era",
+          "status": "planned",
+          "completion_pct": 0,
+          "routes": [],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W1-D03",
+          "title": "Watergate",
+          "status": "planned",
+          "completion_pct": 0,
+          "routes": [],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W1-D04",
+          "title": "Reform Movement",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/story-before.html"
+          ],
+          "pages": [
+            "HIST overview in story-before hall"
+          ],
+          "note": null
+        },
+        {
+          "id": "W1-D05",
+          "title": "Supreme Court History",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/story-before.html"
+          ],
+          "pages": [
+            "Buckley and precedent references"
+          ],
+          "note": null
+        },
+        {
+          "id": "W1-D06",
+          "title": "McCain-Feingold",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/story-before.html"
+          ],
+          "pages": [
+            "BCRA context in story-before"
+          ],
+          "note": null
+        },
+        {
+          "id": "W1-D07",
+          "title": "The Political Climate Before 2010",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/story-before.html",
+            "/start-here/"
+          ],
+          "pages": [
+            "Orientation + story-before L1"
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "WORLD-02",
+      "number": 2,
+      "title": "Inside the Case",
+      "purpose": "Allow visitors to experience the case from beginning to end.",
+      "district_count": 9,
+      "districts_live": 0,
+      "districts_partial": 7,
+      "districts_planned": 2,
+      "completion_pct": 35,
+      "districts": [
+        {
+          "id": "W2-D01",
+          "title": "The Movie",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/the-case.html"
+          ],
+          "pages": [
+            "Hillary: The Movie context"
+          ],
+          "note": null
+        },
+        {
+          "id": "W2-D02",
+          "title": "Citizens United",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/the-case.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W2-D03",
+          "title": "The Federal Election Commission",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/the-case.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W2-D04",
+          "title": "Lower Courts",
+          "status": "planned",
+          "completion_pct": 0,
+          "routes": [],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W2-D05",
+          "title": "Supreme Court",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/what-court-decided.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W2-D06",
+          "title": "Oral Arguments",
+          "status": "planned",
+          "completion_pct": 0,
+          "routes": [],
+          "pages": [],
+          "note": "Transcripts not yet in Evidence Registry"
+        },
+        {
+          "id": "W2-D07",
+          "title": "Majority Opinion",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/what-court-decided.html"
+          ],
+          "pages": [
+            "L1\u2013L2 holding summary"
+          ],
+          "note": null
+        },
+        {
+          "id": "W2-D08",
+          "title": "Dissents",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/what-court-decided.html",
+            "/halls/debate.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W2-D09",
+          "title": "Immediate Reactions",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/after-2010.html"
+          ],
+          "pages": [],
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "WORLD-03",
+      "number": 3,
+      "title": "Constitutional Foundations",
+      "purpose": "Teach constitutional concepts without assuming legal training.",
+      "district_count": 7,
+      "districts_live": 0,
+      "districts_partial": 5,
+      "districts_planned": 2,
+      "completion_pct": 32,
+      "districts": [
+        {
+          "id": "W3-D01",
+          "title": "First Amendment",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/what-court-decided.html",
+            "/halls/debate.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W3-D02",
+          "title": "Political Speech",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/debate.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W3-D03",
+          "title": "Corporate Speech",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/debate.html",
+            "/halls/what-court-decided.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W3-D04",
+          "title": "Associations",
+          "status": "planned",
+          "completion_pct": 0,
+          "routes": [],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W3-D05",
+          "title": "Judicial Review",
+          "status": "planned",
+          "completion_pct": 0,
+          "routes": [],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W3-D06",
+          "title": "Constitutional Interpretation",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/debate.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W3-D07",
+          "title": "Important Precedents",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/story-before.html"
+          ],
+          "pages": [
+            "KG-CASE-000001 Buckley referenced"
+          ],
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "WORLD-04",
+      "number": 4,
+      "title": "What Changed?",
+      "purpose": "Document measurable consequences after 2010.",
+      "district_count": 7,
+      "districts_live": 0,
+      "districts_partial": 5,
+      "districts_planned": 2,
+      "completion_pct": 32,
+      "districts": [
+        {
+          "id": "W4-D01",
+          "title": "Campaign Spending",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/money-map.html",
+            "/halls/after-2010.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W4-D02",
+          "title": "Independent Expenditures",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/money-map.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W4-D03",
+          "title": "Super PACs",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/after-2010.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W4-D04",
+          "title": "Disclosure",
+          "status": "planned",
+          "completion_pct": 0,
+          "routes": [],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W4-D05",
+          "title": "Election Trends",
+          "status": "planned",
+          "completion_pct": 0,
+          "routes": [],
+          "pages": [],
+          "note": "FEC datasets not yet integrated"
+        },
+        {
+          "id": "W4-D06",
+          "title": "State Impacts",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/montana-hawaii.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W4-D07",
+          "title": "Public Debate",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/debate.html",
+            "/halls/after-2010.html"
+          ],
+          "pages": [],
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "WORLD-05",
+      "number": 5,
+      "title": "The National Conversation",
+      "purpose": "Present the strongest ideas from across the public debate.",
+      "district_count": 6,
+      "districts_live": 0,
+      "districts_partial": 4,
+      "districts_planned": 2,
+      "completion_pct": 30,
+      "districts": [
+        {
+          "id": "W5-D01",
+          "title": "Arguments Supporting the Decision",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/debate.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W5-D02",
+          "title": "Arguments Criticizing the Decision",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/debate.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W5-D03",
+          "title": "Constitutional Perspectives",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/debate.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W5-D04",
+          "title": "Public Policy Perspectives",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/halls/debate.html",
+            "/solutions/"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W5-D05",
+          "title": "Academic Perspectives",
+          "status": "planned",
+          "completion_pct": 0,
+          "routes": [],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W5-D06",
+          "title": "Frequently Misunderstood Issues",
+          "status": "planned",
+          "completion_pct": 0,
+          "routes": [],
+          "pages": [],
+          "note": "FAQ route planned in Route Registry"
+        }
+      ]
+    },
+    {
+      "id": "WORLD-06",
+      "number": 6,
+      "title": "Arkansas Solutions Center",
+      "purpose": "Connect national understanding with Arkansas civic education.",
+      "district_count": 7,
+      "districts_live": 2,
+      "districts_partial": 1,
+      "districts_planned": 4,
+      "completion_pct": 39,
+      "districts": [
+        {
+          "id": "W6-D01",
+          "title": "Federal Legislative Options",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/solutions/",
+            "/halls/reform.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W6-D02",
+          "title": "Arkansas Legislative Options",
+          "status": "planned",
+          "completion_pct": 0,
+          "routes": [
+            "/arkansas/"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W6-D03",
+          "title": "Educational Policy Concepts",
+          "status": "planned",
+          "completion_pct": 0,
+          "routes": [],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W6-D04",
+          "title": "Model Law Workspace",
+          "status": "stub",
+          "completion_pct": 15,
+          "routes": [
+            "/solutions/"
+          ],
+          "pages": [],
+          "note": "Stub \u2014 workspace not built"
+        },
+        {
+          "id": "W6-D05",
+          "title": "Ballot Initiative Lab",
+          "status": "stub",
+          "completion_pct": 15,
+          "routes": [
+            "/solutions/"
+          ],
+          "pages": [],
+          "note": "Stub \u2014 lab not built"
+        },
+        {
+          "id": "W6-D06",
+          "title": "Community Education",
+          "status": "live",
+          "completion_pct": 100,
+          "routes": [
+            "/educate/",
+            "/start-here/"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W6-D07",
+          "title": "Coalition Building",
+          "status": "live",
+          "completion_pct": 100,
+          "routes": [
+            "/coalition/",
+            "/join/"
+          ],
+          "pages": [],
+          "note": null
+        }
+      ]
+    },
+    {
+      "id": "WORLD-07",
+      "number": 7,
+      "title": "Arkansas Education Network",
+      "purpose": "Grow a statewide civic education movement.",
+      "district_count": 8,
+      "districts_live": 4,
+      "districts_partial": 3,
+      "districts_planned": 1,
+      "completion_pct": 69,
+      "districts": [
+        {
+          "id": "W7-D01",
+          "title": "Become an Education Leader",
+          "status": "live",
+          "completion_pct": 100,
+          "routes": [
+            "/educate/"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W7-D02",
+          "title": "Join the Contact Network",
+          "status": "live",
+          "completion_pct": 100,
+          "routes": [
+            "/educate/",
+            "/action/"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W7-D03",
+          "title": "Coalition Partners",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/coalition/",
+            "/coalition/join.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W7-D04",
+          "title": "County Education Teams",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/coalition/counties.html",
+            "/coalition/county.html"
+          ],
+          "pages": [
+            "75 county scaffold pages"
+          ],
+          "note": null
+        },
+        {
+          "id": "W7-D05",
+          "title": "Community Conversations",
+          "status": "live",
+          "completion_pct": 100,
+          "routes": [
+            "/educate/",
+            "/action/"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W7-D06",
+          "title": "Educational Events",
+          "status": "stub",
+          "completion_pct": 15,
+          "routes": [
+            "/coalition/events.html"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W7-D07",
+          "title": "Resource Library",
+          "status": "partial",
+          "completion_pct": 45,
+          "routes": [
+            "/coalition/resources.html",
+            "/library/"
+          ],
+          "pages": [],
+          "note": null
+        },
+        {
+          "id": "W7-D08",
+          "title": "Mission Control",
+          "status": "live",
+          "completion_pct": 100,
+          "routes": [
+            "/mission-control/"
+          ],
+          "pages": [],
+          "note": null
+        }
+      ]
+    }
+  ],
+  "trails": [
+    {
+      "id": "TRAIL-BEGINNER",
+      "title": "The Beginner Trail",
+      "duration": "20\u201330 minutes",
+      "audience": "First-time visitors",
+      "stops": [
+        {
+          "order": 1,
+          "title": "Start Here",
+          "route": "/start-here/",
+          "world": "WORLD-01"
+        },
+        {
+          "order": 2,
+          "title": "What Is Citizens United?",
+          "route": "/explore/",
+          "world": "WORLD-02"
+        },
+        {
+          "order": 3,
+          "title": "The Story Before",
+          "route": "/halls/story-before.html",
+          "world": "WORLD-01"
+        },
+        {
+          "order": 4,
+          "title": "The Case",
+          "route": "/halls/the-case.html",
+          "world": "WORLD-02"
+        },
+        {
+          "order": 5,
+          "title": "What the Court Decided",
+          "route": "/halls/what-court-decided.html",
+          "world": "WORLD-02"
+        },
+        {
+          "order": 6,
+          "title": "Why It Still Matters",
+          "route": "/halls/after-2010.html",
+          "world": "WORLD-04"
+        }
+      ]
+    },
+    {
+      "id": "TRAIL-HISTORY",
+      "title": "The History Trail",
+      "focus": "Campaign finance history before 2010",
+      "stops": [
+        {
+          "order": 1,
+          "route": "/halls/story-before.html",
+          "world": "WORLD-01"
+        },
+        {
+          "order": 2,
+          "route": "/library/",
+          "world": "WORLD-01"
+        },
+        {
+          "order": 3,
+          "route": "/mission-control/knowledge-graph.html",
+          "world": "WORLD-01",
+          "note": "KG history cluster"
+        }
+      ]
+    },
+    {
+      "id": "TRAIL-LEGAL",
+      "title": "The Legal Trail",
+      "focus": "Supreme Court doctrine and constitutional reasoning",
+      "stops": [
+        {
+          "order": 1,
+          "route": "/halls/the-case.html",
+          "world": "WORLD-02"
+        },
+        {
+          "order": 2,
+          "route": "/halls/what-court-decided.html",
+          "world": "WORLD-02"
+        },
+        {
+          "order": 3,
+          "route": "/halls/debate.html",
+          "world": "WORLD-03"
+        },
+        {
+          "order": 4,
+          "route": "/mission-control/facts.html",
+          "world": "WORLD-03",
+          "note": "FACT-1000 series"
+        }
+      ]
+    },
+    {
+      "id": "TRAIL-DATA",
+      "title": "The Data Trail",
+      "focus": "Political spending and measurable impacts",
+      "stops": [
+        {
+          "order": 1,
+          "route": "/halls/after-2010.html",
+          "world": "WORLD-04"
+        },
+        {
+          "order": 2,
+          "route": "/halls/money-map.html",
+          "world": "WORLD-04"
+        },
+        {
+          "order": 3,
+          "route": "/mission-control/facts.html",
+          "world": "WORLD-04",
+          "note": "FACT-4000 series"
+        }
+      ]
+    },
+    {
+      "id": "TRAIL-ARKANSAS",
+      "title": "The Arkansas Trail",
+      "focus": "Education, coalition building, and state civic engagement",
+      "stops": [
+        {
+          "order": 1,
+          "route": "/arkansas/",
+          "world": "WORLD-06"
+        },
+        {
+          "order": 2,
+          "route": "/educate/",
+          "world": "WORLD-07"
+        },
+        {
+          "order": 3,
+          "route": "/coalition/",
+          "world": "WORLD-07"
+        },
+        {
+          "order": 4,
+          "route": "/join/",
+          "world": "WORLD-06"
+        },
+        {
+          "order": 5,
+          "route": "/coalition/counties.html",
+          "world": "WORLD-07"
+        }
+      ]
+    },
+    {
+      "id": "TRAIL-RESEARCH",
+      "title": "The Research Trail",
+      "focus": "Primary sources, datasets, and academic materials",
+      "stops": [
+        {
+          "order": 1,
+          "route": "/library/",
+          "world": "WORLD-01"
+        },
+        {
+          "order": 2,
+          "route": "/mission-control/research.html",
+          "world": "WORLD-02"
+        },
+        {
+          "order": 3,
+          "route": "/mission-control/facts.html",
+          "world": "WORLD-02"
+        },
+        {
+          "order": 4,
+          "route": "/mission-control/knowledge-graph.html",
+          "world": "WORLD-03"
+        }
+      ]
+    }
+  ],
+  "educational_completion": {
+    "historical_coverage": 26,
+    "case_coverage": 35,
+    "constitutional_coverage": 32,
+    "impact_coverage": 32,
+    "debate_coverage": 30,
+    "solutions_coverage": 39,
+    "arkansas_content": 54,
+    "coalition_resources": 69,
+    "research_completeness": 18,
+    "overall_educational_readiness": 40
+  },
+  "summary": {
+    "worlds": 7,
+    "districts": 51,
+    "districts_live": 6,
+    "districts_partial": 29,
+    "districts_stub": 3,
+    "districts_planned": 13,
+    "mapped_routes": 22,
+    "trails": 6,
+    "atlas_completion_pct": 40,
+    "pages_lit": 6,
+    "pages_partial": 29,
+    "v1_target_districts": 49,
+    "v1_target_pages": 825
+  },
+  "integrations": [
+    {
+      "system": "Facts Framework",
+      "build": 18,
+      "route": "/mission-control/facts.html"
+    },
+    {
+      "system": "Knowledge Graph",
+      "build": 11,
+      "route": "/mission-control/knowledge-graph.html"
+    },
+    {
+      "system": "Route Registry",
+      "build": 16,
+      "route": "/mission-control/routes.html"
+    },
+    {
+      "system": "UX Journey",
+      "build": 8,
+      "route": "/mission-control/journey.html"
+    },
+    {
+      "system": "Component Registry",
+      "build": 17,
+      "route": "/mission-control/components.html"
+    }
+  ],
+  "recommended_next_build": {
+    "number": 20,
+    "title": "Brand & Identity System",
+    "note": "Logo, color, typography, voice, messaging \u2014 before mass district content."
+  },
+  "catalog_gaps": [
+    "Learning Compass UI not deployed on public pages",
+    "34 districts still planned or stub",
+    "Academic Perspectives district (W5-D05) unwritten",
+    "FEC data districts (W4-D04, W4-D05) need datasets",
+    "Oral Arguments district needs transcript EV-IDs",
+    "Interactive atlas map visualization planned"
+  ]
+}

@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.23.0] - 2026-07-09 — Build #19 Knowledge Atlas
+
+### Citizens United Knowledge Atlas & Learning Path System
+- **Educational Architecture v1.0** — 7 learning worlds, 51 districts
+- 6 knowledge trails (Beginner 20–30 min, History, Legal, Data, Arkansas, Research)
+- Learning Compass schema, educational checkpoints, atlas map hierarchy
+- Educational completion metrics (40% honest readiness)
+- MC dashboard: `/mission-control/atlas.html`
+- **Recommended next:** Build #20 Brand & Identity System
+
 ## [1.22.0] - 2026-07-09 — Build #18 Facts Framework
 
 ### Citizens United Facts Framework
