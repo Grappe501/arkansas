@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.4] - 2026-07-09 — IMP-04 Database Schema documented
+
+### Implementation Package 4 of 50
+- **Master Database Schema & Canonical Data Model** — institutional memory before migrations
+- Twelve primary domains, universal record standards, visibility levels, audit and search models
+- Machine-readable **canonical-data-manifest.json** (96 tables across 12 domains)
+- Draft **prisma/schema.prisma** (22 models aligned to database-schema.json)
+- IMP-05 next: Master User Identity, Authentication, Roles & Permissions
+- Honest: 4/50 documented · 0/50 implemented · 66% package readiness
+
 ## [2.05.3] - 2026-07-09 — IMP-03 Route Map documented
 
 ### Implementation Package 3 of 50

@@ -39,9 +39,9 @@ No abstract planning. Each step has deliverables, acceptance criteria, and sourc
 
 | Metric | Value |
 |--------|-------|
-| Implementation package readiness | **63%** |
+| Implementation package readiness | **66%** |
 | Steps specified | **50** |
-| Steps documented | **3** (IMP-01 Constitution, IMP-02 Architecture, IMP-03 Route Map) |
+| Steps documented | **4** (IMP-01 Constitution, IMP-02 Architecture, IMP-03 Route Map, IMP-04 Database Schema) |
 | Steps implemented | **0** |
 | Sprint Zero started | **No** |
 

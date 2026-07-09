@@ -1,0 +1,450 @@
+// Citizens United Facts — Prisma Schema Draft
+// Implementation Package 4 of 50 — Master Database Schema & Canonical Data Model
+// Status: DOCUMENTED (draft — not migrated; IMP-21–23 implement live DB)
+// Source: data/canonical-data-manifest.json · data/database-schema.json
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Universal record standards (IMP-04) ─────────────────────────────────────
+// Every major model: id (UUID), slug?, createdAt, updatedAt, status, ownerId?,
+// version, visibility, lastReviewedAt?, tags[], notes?
+
+enum RecordStatus {
+  active
+  archived
+  deprecated
+  historical
+}
+
+enum VisibilityLevel {
+  public
+  volunteer
+  education_leader
+  organization
+  executive
+  mission_control
+  administrator
+}
+
+enum VerificationStatus {
+  unverified
+  verified
+  disputed
+}
+
+// ─── Domain 1: Identity ──────────────────────────────────────────────────────
+
+model User {
+  id            String          @id @default(uuid())
+  email         String          @unique
+  slug          String?         @unique
+  status        RecordStatus    @default(active)
+  visibility    VisibilityLevel @default(volunteer)
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+  lastReviewedAt DateTime?
+  version       Int             @default(1)
+  tags          String[]
+  notes         String?
+
+  profile       Profile?
+  sessions      Session[]
+  roles         UserRole[]
+  person        Person?
+}
+
+model Profile {
+  id          String   @id @default(uuid())
+  userId      String   @unique
+  user        User     @relation(fields: [userId], references: [id])
+  displayName String?
+  avatarUrl   String?
+  bio         String?
+  countyId    String?
+  cityId      String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model Role {
+  id          String       @id @default(uuid())
+  name        String       @unique
+  description String?
+  permissions Permission[]
+  users       UserRole[]
+}
+
+model Permission {
+  id     String @id @default(uuid())
+  action String
+  resource String
+  roleId String
+  role   Role   @relation(fields: [roleId], references: [id])
+}
+
+model UserRole {
+  userId String
+  roleId String
+  user   User @relation(fields: [userId], references: [id])
+  role   Role @relation(fields: [roleId], references: [id])
+  @@id([userId, roleId])
+}
+
+model Session {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+// ─── Domain 2: Geography ─────────────────────────────────────────────────────
+
+model County {
+  id                    String          @id @default(uuid())
+  slug                  String          @unique
+  name                  String
+  fips                  String?         @unique
+  region                String?
+  population            Int?
+  status                RecordStatus    @default(active)
+  visibility            VisibilityLevel @default(public)
+  educationLeaderCount  Int             @default(0)
+  organizationCount     Int             @default(0)
+  eventCount            Int             @default(0)
+  lastActivityAt        DateTime?
+  createdAt             DateTime        @default(now())
+  updatedAt             DateTime        @updatedAt
+  lastReviewedAt        DateTime?
+  version               Int             @default(1)
+  tags                  String[]
+  notes                 String?
+
+  cities                City[]
+  people                Person[]
+  organizations         Organization[]
+  events                Event[]
+}
+
+model City {
+  id          String          @id @default(uuid())
+  slug        String          @unique
+  name        String
+  countyId    String
+  county      County          @relation(fields: [countyId], references: [id])
+  population  Int?
+  status      RecordStatus    @default(active)
+  visibility  VisibilityLevel @default(public)
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  tags        String[]
+  notes       String?
+
+  neighborhoods Neighborhood[]
+  people        Person[]
+  events        Event[]
+}
+
+model Neighborhood {
+  id        String          @id @default(uuid())
+  slug      String          @unique
+  name      String
+  cityId    String
+  city      City            @relation(fields: [cityId], references: [id])
+  status    RecordStatus    @default(active)
+  visibility VisibilityLevel @default(public)
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+}
+
+// ─── Domain 3: Organizations ───────────────────────────────────────────────
+
+model Organization {
+  id                  String          @id @default(uuid())
+  slug                String?         @unique
+  name                String
+  organizationType    String?
+  website             String?
+  city                String?
+  countyId            String?
+  county              County?         @relation(fields: [countyId], references: [id])
+  serviceArea         String?
+  partnershipLevel    String?
+  publicProfileEnabled Boolean        @default(false)
+  status              RecordStatus    @default(active)
+  visibility          VisibilityLevel @default(public)
+  createdAt           DateTime        @default(now())
+  updatedAt           DateTime        @updatedAt
+  lastReviewedAt      DateTime?
+  version             Int             @default(1)
+  tags                String[]
+  notes               String?
+
+  members             PersonOrganization[]
+  events              OrganizationEvent[]
+  coalitionSignOns    CoalitionSignOn[]
+}
+
+// ─── Domain 4: People ────────────────────────────────────────────────────────
+
+model Person {
+  id               String          @id @default(uuid())
+  userId           String?         @unique
+  user             User?           @relation(fields: [userId], references: [id])
+  firstName        String
+  lastName         String
+  email            String?
+  phone            String?
+  cityId           String?
+  city             City?           @relation(fields: [cityId], references: [id])
+  countyId         String?
+  county           County?         @relation(fields: [countyId], references: [id])
+  roleInterest     String?
+  experienceLevel  String?
+  learningStage    String?
+  signupSource     String?
+  status           RecordStatus    @default(active)
+  visibility       VisibilityLevel @default(volunteer)
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+  tags             String[]
+  notes            String?
+
+  organizations    PersonOrganization[]
+  events           PersonEvent[]
+  signups          Signup[]
+  referrals        Referral[]       @relation("Referrer")
+  hostedEvents     Event[]          @relation("EventHost")
+}
+
+// ─── Domain 5: Research & Evidence ───────────────────────────────────────────
+
+model Source {
+  id              String             @id @default(uuid())
+  evidenceId      String?            @unique
+  slug            String?            @unique
+  title           String
+  author          String?
+  publisher       String?
+  publicationDate DateTime?
+  sourceType      String?
+  sourceTier      String?
+  url             String?
+  archiveUrl      String?
+  summary         String?
+  reviewStatus    VerificationStatus @default(unverified)
+  status          RecordStatus       @default(active)
+  visibility      VisibilityLevel    @default(public)
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+  lastReviewedAt  DateTime?
+  tags            String[]
+
+  facts           FactSource[]
+  resources       ResourceSource[]
+}
+
+model Fact {
+  id                      String             @id @default(uuid())
+  factId                  String?            @unique
+  slug                    String?            @unique
+  shortStatement          String
+  plainLanguageExplanation String?
+  detailedExplanation     String?
+  category                String?
+  verificationStatus      VerificationStatus @default(unverified)
+  status                  RecordStatus       @default(active)
+  visibility              VisibilityLevel    @default(public)
+  lastVerifiedAt          DateTime?
+  createdAt               DateTime           @default(now())
+  updatedAt               DateTime           @updatedAt
+  tags                    String[]
+
+  sources                 FactSource[]
+  resources               ResourceFact[]
+}
+
+// ─── Domain 6 & 11: Education & Content ──────────────────────────────────────
+
+model EducationalResource {
+  id              String          @id @default(uuid())
+  mrid            String?         @unique
+  slug            String?         @unique
+  title           String
+  resourceType    String?
+  parentSection   String?
+  difficultyLevel String?
+  readingTime     Int?
+  downloadUrl     String?
+  publicUrl       String?
+  status          RecordStatus    @default(active)
+  visibility      VisibilityLevel @default(public)
+  sourceCount     Int             @default(0)
+  lastReviewedAt  DateTime?
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  version         Int             @default(1)
+  tags            String[]
+
+  sources         ResourceSource[]
+  facts           ResourceFact[]
+  events          EventResource[]
+}
+
+// ─── Domain 7: Community ─────────────────────────────────────────────────────
+
+model Event {
+  id                  String          @id @default(uuid())
+  slug                String?         @unique
+  title               String
+  eventType           String?
+  hostPersonId        String?
+  hostPerson          Person?         @relation("EventHost", fields: [hostPersonId], references: [id])
+  hostOrganizationId  String?
+  countyId            String?
+  county              County?         @relation(fields: [countyId], references: [id])
+  cityId              String?
+  city                City?           @relation(fields: [cityId], references: [id])
+  location            String?
+  startTime           DateTime?
+  endTime             DateTime?
+  publicEvent         Boolean         @default(true)
+  estimatedAttendance Int?
+  actualAttendance    Int?
+  status              RecordStatus    @default(active)
+  visibility          VisibilityLevel @default(public)
+  createdAt           DateTime        @default(now())
+  updatedAt           DateTime        @updatedAt
+  tags                String[]
+
+  resources           EventResource[]
+  organizations       OrganizationEvent[]
+  attendees           PersonEvent[]
+}
+
+model Signup {
+  id           String       @id @default(uuid())
+  personId     String?
+  person       Person?      @relation(fields: [personId], references: [id])
+  signupType   String
+  interestArea String?
+  message      String?
+  sourcePage   String?
+  status       RecordStatus @default(active)
+  assignedTo   String?
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+}
+
+model Referral {
+  id                 String       @id @default(uuid())
+  referrerPersonId   String
+  referrer           Person       @relation("Referrer", fields: [referrerPersonId], references: [id])
+  referredName       String?
+  referredEmail        String?
+  relationshipType   String?
+  sharedResourceId   String?
+  message            String?
+  status             RecordStatus @default(active)
+  createdAt          DateTime     @default(now())
+}
+
+model CoalitionSignOn {
+  id                     String       @id @default(uuid())
+  organizationId         String
+  organization           Organization @relation(fields: [organizationId], references: [id])
+  contactPersonId        String?
+  participationLevel     String?
+  publicSupportStatement String?
+  resourcesRequested     String?
+  status                 RecordStatus @default(active)
+  createdAt              DateTime     @default(now())
+  updatedAt              DateTime     @updatedAt
+}
+
+// ─── Domain 9: Mission Control ───────────────────────────────────────────────
+
+model McBuildRecord {
+  id                   String   @id @default(uuid())
+  buildNumber          Int      @unique
+  title                String
+  phase                String?
+  status               String?
+  completionPercentage Int?
+  summary              String?
+  filesCreated         String[]
+  filesModified        String[]
+  risks                String[]
+  nextBuild            String?
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+}
+
+// ─── Join Tables (M:N) ───────────────────────────────────────────────────────
+
+model PersonOrganization {
+  personId       String
+  organizationId String
+  person         Person       @relation(fields: [personId], references: [id])
+  organization   Organization @relation(fields: [organizationId], references: [id])
+  @@id([personId, organizationId])
+}
+
+model EventResource {
+  eventId    String
+  resourceId String
+  event      Event               @relation(fields: [eventId], references: [id])
+  resource   EducationalResource @relation(fields: [resourceId], references: [id])
+  @@id([eventId, resourceId])
+}
+
+model ResourceSource {
+  resourceId String
+  sourceId   String
+  resource   EducationalResource @relation(fields: [resourceId], references: [id])
+  source     Source              @relation(fields: [sourceId], references: [id])
+  @@id([resourceId, sourceId])
+}
+
+model FactSource {
+  factId   String
+  sourceId String
+  fact     Fact   @relation(fields: [factId], references: [id])
+  source   Source @relation(fields: [sourceId], references: [id])
+  @@id([factId, sourceId])
+}
+
+model ResourceFact {
+  resourceId String
+  factId     String
+  resource   EducationalResource @relation(fields: [resourceId], references: [id])
+  fact       Fact                @relation(fields: [factId], references: [id])
+  @@id([resourceId, factId])
+}
+
+model PersonEvent {
+  personId String
+  eventId  String
+  person   Person @relation(fields: [personId], references: [id])
+  event    Event  @relation(fields: [eventId], references: [id])
+  @@id([personId, eventId])
+}
+
+model OrganizationEvent {
+  organizationId String
+  eventId        String
+  organization   Organization @relation(fields: [organizationId], references: [id])
+  event          Event        @relation(fields: [eventId], references: [id])
+  @@id([organizationId, eventId])
+}
+
+// ─── Audit Trail (IMP-04) ────────────────────────────────────────────────────
+// Full audit_log table deferred to IMP-21; fields: actorId, entityType, entityId,
+// action, changes (JSON), reason, createdAt

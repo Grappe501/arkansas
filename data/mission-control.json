@@ -1,5 +1,5 @@
 {
-  "version": "2.05.3",
+  "version": "2.05.4",
   "build": 101,
   "updated": "2026-07-09",
   "identity": {
@@ -11,20 +11,20 @@
   "executive": {
     "github_status": "connected",
     "netlify_status": "production_healthy",
-    "content_readiness": 63,
+    "content_readiness": 66,
     "research_readiness": 43,
     "data_viz_readiness": 12,
     "signup_funnel_readiness": 26,
     "civic_action_readiness": 50,
     "coalition_readiness": 44,
     "data_model_readiness": 58,
-    "route_inventory_readiness": 22,
+    "route_inventory_readiness": 28,
     "component_registry_readiness": 26,
     "facts_framework_readiness": 14,
     "knowledge_atlas_readiness": 58,
     "platform_architecture_readiness": 59,
     "repository_structure_readiness": 32,
-    "database_schema_readiness": 44,
+    "database_schema_readiness": 52,
     "wireframe_readiness": 38,
     "contact_intelligence_readiness": 34,
     "relationship_os_readiness": 54,
@@ -121,7 +121,7 @@
     "connected_citizen_goal_pct": 15,
     "implementation_steps_total": 50,
     "implementation_steps_implemented": 0,
-    "implementation_steps_documented": 3,
+    "implementation_steps_documented": 4,
     "overall_completion": 101,
     "current_build": {
       "number": 101,
@@ -133,8 +133,8 @@
       "number": 102,
       "title": "Executive war room & countdown dashboard components"
     },
-    "implementation_package_readiness": 63,
-    "cursor_implementation_package_readiness": 63,
+    "implementation_package_readiness": 66,
+    "cursor_implementation_package_readiness": 66,
     "implementation_phase_started": false,
     "sprint_zero_started": false
   },
@@ -871,7 +871,7 @@
     {
       "id": "cursor_implementation_package",
       "label": "Implementation Package",
-      "value": 63,
+      "value": 66,
       "max": 100,
       "note": "0/50 steps implemented \u00b7 Sprint Zero pending."
     }
@@ -2801,18 +2801,24 @@
     {
       "number": 101,
       "title": "Citizens United Facts Cursor Implementation Package v1.0",
-      "version": "2.05.3",
+      "version": "2.05.4",
       "status": "complete",
       "started": "2026-07-09",
       "completed": "2026-07-09",
       "purpose": "50 executable implementation steps \u2014 blueprint to code",
-      "summary": "50 steps in 5 bands. IMP-01 Constitution + IMP-02 Architecture documented. 63% readiness \u00b7 3/50 documented \u00b7 0 implemented.",
+      "summary": "50 steps in 5 bands. IMP-01\u201304 documented (Constitution, Architecture, Route Map, Database Schema). 66% readiness \u00b7 4/50 documented \u00b7 0 implemented.",
       "files_created": [
         "data/cursor-implementation-package.json",
         "docs/MASTER_CURSOR_IMPLEMENTATION_PACKAGE.md",
         "docs/CURSOR_MASTER_BUILD_PROMPT.md",
         "docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md",
         "docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md",
+        "docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md",
+        "docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md",
+        "data/route-manifest.json",
+        "data/canonical-data-manifest.json",
+        "prisma/schema.prisma",
+        "database/README.md",
         "builds/101-cursor-implementation-package.md",
         "mission-control/cursor-implementation-package.html",
         "scripts/gen-cursor-implementation-package.py",
@@ -2821,6 +2827,7 @@
       "files_modified": [
         "js/mission-control.js",
         "data/site.json",
+        "data/canonical-data-model.json",
         "BUILD_PLAN.md",
         "netlify.toml"
       ],
@@ -2830,14 +2837,15 @@
       "decisions_made": [
         "50 steps \u2014 thorough without drifting into abstract planning",
         "IMP-01 Master Technical Constitution governs all future packages",
-        "IMP-02 Master Technical Architecture defines repository layers and module standards",
+        "IMP-03 Route Map: complete navigation before code",
+        "IMP-04 Database Schema: canonical data model before migrations",
         "Five bands of 10: foundation, presentation, data, operations, knowledge/launch",
         "Supersedes Build Bible v1 as executable engineering layer (Build Bible v2)",
-        "3 documented \u00b7 0 implemented \u2014 honest status",
-        "63% readiness"
+        "4 documented \u00b7 0 implemented \u2014 honest status",
+        "66% readiness"
       ],
       "open_questions": [
-        "IMP-02 architecture and repository \u2014 next package",
+        "IMP-05 identity vs repository migration \u2014 align step registry with package titles",
         "MC read paths public vs auth-gated \u2014 IMP-28 decision",
         "Single source of truth: JSON registries vs DB \u2014 per-entity in IMP-47"
       ],
@@ -7838,20 +7846,23 @@
     }
   ],
   "briefing": {
-    "what_built": "IMP-01 Technical Constitution + IMP-02 Technical Architecture documented",
-    "building_now": "IMP-03 Master Route Map & Application Navigation next",
+    "what_built": "IMP-01\u201304 documented: Constitution, Architecture, Route Map, Database Schema + manifests",
+    "building_now": "IMP-05 Master User Identity, Authentication, Roles & Permissions next",
     "blocked": [
       "Sprint Zero not complete",
-      "0/50 steps code-implemented",
-      "Route map not documented"
+      "0/50 code-implemented",
+      "No live Postgres/Prisma migrations yet"
     ],
     "ready_public": [
       "Technical Constitution",
-      "Technical Architecture blueprint",
-      "50 step registry",
-      "Cursor master prompt"
+      "Technical Architecture",
+      "Route Map",
+      "route-manifest.json",
+      "Database Schema",
+      "canonical-data-manifest.json",
+      "prisma/schema.prisma (draft)"
     ],
-    "next": "IMP-03 \u2014 Master Route Map & Complete Application Navigation"
+    "next": "IMP-05 \u2014 Master User Identity, Authentication, Roles & Permissions"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8867,10 +8878,10 @@
   "cursor_implementation_package": "/data/cursor-implementation-package.json",
   "cursor_implementation_package_dashboard": "/mission-control/cursor-implementation-package.html",
   "cursor_implementation_package_inventory": {
-    "readiness_score": 63,
+    "readiness_score": 66,
     "steps_total": 50,
     "steps_implemented": 0,
-    "steps_documented": 3,
+    "steps_documented": 4,
     "bands_total": 5,
     "sprint_zero_started": false,
     "cursor_master_prompt_ready": true

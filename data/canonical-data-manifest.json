@@ -1,0 +1,364 @@
+{
+  "version": "1.0",
+  "build": 101,
+  "package": "IMP-04",
+  "updated": "2026-07-09",
+  "title": "Master Database Schema & Canonical Data Model",
+  "constitution": "/docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md",
+  "source_registries": {
+    "database_schema": "/data/database-schema.json",
+    "canonical_model": "/data/canonical-data-model.json",
+    "relationship_registry": "/data/relationship-registry.json",
+    "prisma_draft": "/prisma/schema.prisma"
+  },
+  "philosophy": "Every important entity exists once; everything else references it",
+  "governing_principle": "A trustworthy database creates trustworthy systems. A trustworthy system earns public trust.",
+  "universal_record_standards": [
+    "uuid",
+    "public_slug",
+    "created_date",
+    "updated_date",
+    "status",
+    "owner",
+    "version",
+    "visibility",
+    "last_reviewed",
+    "tags",
+    "notes"
+  ],
+  "record_status_values": [
+    "active",
+    "archived",
+    "deprecated",
+    "historical"
+  ],
+  "visibility_levels": [
+    "public",
+    "volunteer",
+    "education_leader",
+    "organization",
+    "executive",
+    "mission_control",
+    "administrator"
+  ],
+  "domains": [
+    {
+      "id": "DOM-01",
+      "name": "Identity",
+      "number": 1,
+      "tables": [
+        "users",
+        "profiles",
+        "roles",
+        "permissions",
+        "sessions",
+        "authentication_providers",
+        "notification_preferences",
+        "privacy_settings"
+      ]
+    },
+    {
+      "id": "DOM-02",
+      "name": "Geography",
+      "number": 2,
+      "tables": [
+        "counties",
+        "cities",
+        "neighborhoods",
+        "legislative_districts",
+        "congressional_districts",
+        "school_districts",
+        "regions",
+        "zip_codes"
+      ]
+    },
+    {
+      "id": "DOM-03",
+      "name": "Organizations",
+      "number": 3,
+      "tables": [
+        "organizations",
+        "coalition_members",
+        "partner_organizations",
+        "libraries",
+        "universities",
+        "community_groups",
+        "historical_societies",
+        "faith_organizations",
+        "organization_contacts"
+      ]
+    },
+    {
+      "id": "DOM-04",
+      "name": "People",
+      "number": 4,
+      "tables": [
+        "education_leaders",
+        "volunteers",
+        "researchers",
+        "authors",
+        "presenters",
+        "mentors",
+        "subject_matter_experts",
+        "staff"
+      ],
+      "note": "Person may hold multiple roles; links to users and people table"
+    },
+    {
+      "id": "DOM-05",
+      "name": "Research",
+      "number": 5,
+      "tables": [
+        "research_articles",
+        "court_cases",
+        "statutes",
+        "constitutional_provisions",
+        "primary_sources",
+        "secondary_sources",
+        "citations",
+        "claims",
+        "evidence_records",
+        "research_reviews"
+      ],
+      "schema_entities": [
+        "source",
+        "fact"
+      ]
+    },
+    {
+      "id": "DOM-06",
+      "name": "Education",
+      "number": 6,
+      "tables": [
+        "courses",
+        "lessons",
+        "modules",
+        "learning_paths",
+        "quizzes",
+        "certificates",
+        "student_progress",
+        "academy_cohorts",
+        "presentation_materials"
+      ],
+      "schema_entities": [
+        "educational_resource"
+      ]
+    },
+    {
+      "id": "DOM-07",
+      "name": "Community",
+      "number": 7,
+      "tables": [
+        "community_conversations",
+        "events",
+        "meeting_notes",
+        "questions",
+        "community_requests",
+        "volunteer_opportunities",
+        "neighborhood_groups",
+        "listening_reports"
+      ],
+      "schema_entities": [
+        "event",
+        "signup",
+        "referral"
+      ]
+    },
+    {
+      "id": "DOM-08",
+      "name": "Operations",
+      "number": 8,
+      "tables": [
+        "projects",
+        "tasks",
+        "milestones",
+        "risks",
+        "dependencies",
+        "departments",
+        "committees",
+        "decision_log",
+        "institutional_calendar"
+      ]
+    },
+    {
+      "id": "DOM-09",
+      "name": "Mission Control",
+      "number": 9,
+      "tables": [
+        "dashboards",
+        "metrics",
+        "kpis",
+        "goals",
+        "county_health",
+        "city_health",
+        "neighborhood_health",
+        "institution_health",
+        "readiness_scores"
+      ],
+      "schema_entities": [
+        "mc_build_record"
+      ],
+      "principle": "MC reads operational data \u2014 does not duplicate"
+    },
+    {
+      "id": "DOM-10",
+      "name": "AI",
+      "number": 10,
+      "tables": [
+        "local_brains",
+        "ai_agents",
+        "prompt_library",
+        "knowledge_retrieval",
+        "conversation_history",
+        "ai_tasks",
+        "ai_recommendations",
+        "ai_feedback"
+      ]
+    },
+    {
+      "id": "DOM-11",
+      "name": "Content",
+      "number": 11,
+      "tables": [
+        "articles",
+        "news",
+        "videos",
+        "media_assets",
+        "faqs",
+        "glossary_terms",
+        "downloads",
+        "infographics",
+        "presentation_decks"
+      ],
+      "schema_entities": [
+        "educational_resource"
+      ]
+    },
+    {
+      "id": "DOM-12",
+      "name": "Governance",
+      "number": 12,
+      "tables": [
+        "policies",
+        "operating_manuals",
+        "constitution",
+        "implementation_packages",
+        "board_decisions",
+        "review_schedules",
+        "version_history",
+        "institutional_standards"
+      ]
+    }
+  ],
+  "domain_count": 12,
+  "total_tables_defined": 103,
+  "relationship_hierarchy": [
+    "county",
+    "cities",
+    "neighborhoods",
+    "education_leaders",
+    "community_conversations",
+    "events",
+    "volunteers",
+    "projects"
+  ],
+  "many_to_many_relationships": [
+    {
+      "from": "volunteer",
+      "to": "organization",
+      "join_table": "volunteer_organizations"
+    },
+    {
+      "from": "volunteer",
+      "to": "county",
+      "join_table": "volunteer_counties"
+    },
+    {
+      "from": "volunteer",
+      "to": "project",
+      "join_table": "volunteer_projects"
+    },
+    {
+      "from": "course",
+      "to": "lesson",
+      "join_table": "course_lessons"
+    },
+    {
+      "from": "research",
+      "to": "court_case",
+      "join_table": "research_court_cases"
+    },
+    {
+      "from": "organization",
+      "to": "event",
+      "join_table": "organization_events"
+    },
+    {
+      "from": "education_leader",
+      "to": "city",
+      "join_table": "leader_cities"
+    },
+    {
+      "from": "community_conversation",
+      "to": "resource",
+      "join_table": "conversation_resources"
+    },
+    {
+      "from": "person",
+      "to": "organization",
+      "join_table": "person_organizations"
+    },
+    {
+      "from": "event",
+      "to": "educational_resource",
+      "join_table": "event_resources"
+    },
+    {
+      "from": "fact",
+      "to": "source",
+      "join_table": "fact_sources"
+    },
+    {
+      "from": "educational_resource",
+      "to": "source",
+      "join_table": "resource_sources"
+    }
+  ],
+  "canonical_identifiers": [
+    "internal_uuid",
+    "public_slug",
+    "human_title",
+    "search_aliases",
+    "legacy_references"
+  ],
+  "search_index_fields": [
+    "title",
+    "summary",
+    "keywords",
+    "categories",
+    "tags",
+    "related_entities",
+    "geographic_references",
+    "publication_status"
+  ],
+  "audit_trail_fields": [
+    "who",
+    "when",
+    "what_changed",
+    "why_optional"
+  ],
+  "ai_knowledge_chain": [
+    "research_article",
+    "court_case",
+    "claim",
+    "evidence",
+    "lesson",
+    "presentation",
+    "community_conversation"
+  ],
+  "mission_control_principle": "Mission Control reads rather than duplicates operational data",
+  "schema_entity_count": 14,
+  "prisma_models_drafted": 22,
+  "status": "documented",
+  "implemented": false
+}

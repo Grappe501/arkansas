@@ -10658,6 +10658,13 @@ async function initCursorImplementationPackage() {
       <div class="mc-stat"><div class="mc-stat__label">MVP in scope</div><div class="mc-stat__value">${s.mvp_in_scope_count}</div></div>
       <div class="mc-stat"><div class="mc-stat__label">Days to Jan 2027</div><div class="mc-stat__value">${s.days_remaining}</div></div>
     </div>
+    <h2 class="mc-section-title">Database Schema (IMP-04)</h2>
+    <p class="mc-bar-note"><strong>${cip.database_schema.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.database_schema.domain_count} domains · ${cip.database_schema.total_tables_defined} tables defined · ${cip.database_schema.prisma_models_drafted} Prisma models drafted</p>
+    <p class="mc-bar-note"><a href="${cip.database_schema.route}">IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md</a> · <a href="${cip.database_schema.manifest}">canonical-data-manifest.json</a> · <a href="${cip.database_schema.prisma_draft}">schema.prisma</a></p>
+    <h3 class="mc-subsection-title">Universal Record Standards</h3>
+    <p class="mc-bar-note">${cip.database_schema.universal_record_standards_count} fields on every major table: UUID, slug, dates, status, owner, version, visibility, review, tags, notes</p>
+    <h3 class="mc-subsection-title">Visibility Levels</h3>
+    <ul class="mc-deliverables">${cip.database_schema.visibility_levels.map(v => `<li>${v}</li>`).join('')}</ul>
     <h2 class="mc-section-title">Route Map (IMP-03)</h2>
     <p class="mc-bar-note"><strong>${cip.route_map.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.route_map.total_routes_defined} routes defined · ${cip.route_map.primary_navigation_count} primary nav items</p>
     <p class="mc-bar-note"><a href="${cip.route_map.route}">IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md</a> · <a href="${cip.route_map.manifest}">route-manifest.json</a></p>

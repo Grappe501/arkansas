@@ -183,7 +183,37 @@
     "next_package": {
       "number": 4,
       "id": "IMP-04",
-      "title": "Master Database Schema & Canonical Data Model"
+      "title": "Master Database Schema & Canonical Data Model",
+      "status": "documented"
+    }
+  },
+  "database_schema": {
+    "title": "Master Database Schema & Canonical Data Model",
+    "package": "Implementation Package 4 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md",
+    "manifest": "/data/canonical-data-manifest.json",
+    "prisma_draft": "/prisma/schema.prisma",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Every important entity exists once; everything else references it",
+    "domain_count": 12,
+    "total_tables_defined": 103,
+    "universal_record_standards_count": 11,
+    "visibility_levels": [
+      "public",
+      "volunteer",
+      "education_leader",
+      "organization",
+      "executive",
+      "mission_control",
+      "administrator"
+    ],
+    "schema_entity_count": 14,
+    "prisma_models_drafted": 22,
+    "next_package": {
+      "number": 5,
+      "id": "IMP-05",
+      "title": "Master User Identity, Authentication, Roles & Permissions"
     }
   },
   "supersedes": {
@@ -354,21 +384,38 @@
       "summary": "Every major entity, table, relationship, identifier, and data contract \u2014 single source of truth",
       "deliverables": [
         "docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md",
+        "data/canonical-data-manifest.json",
         "prisma/schema.prisma (draft from canonical model)",
-        "data/canonical-data-model.json sync"
+        "data/canonical-data-model.json sync",
+        "Canonical Data Model",
+        "Entity Registry",
+        "Relationship Model",
+        "Search Model",
+        "Security Model",
+        "Audit Model",
+        "AI Data Contracts",
+        "Mission Control Data Contracts",
+        "Governance Data Standards"
       ],
       "acceptance_criteria": [
-        "All entities from data/database-schema.json mapped to canonical model",
-        "Relationships and identifiers documented",
-        "Aligns with IMP-02 database/ layer placement",
-        "Privacy and PII fields distinguished"
+        "Database philosophy: every important entity exists once; everything else references it",
+        "Twelve primary domains documented with canonical table homes",
+        "Universal record standards: UUID, slug, dates, status, owner, version, visibility, review, tags, notes",
+        "Relationship hierarchy, M:N join tables, identifiers, search index, audit trail, soft deletes defined",
+        "Security classification levels data-driven; AI and Mission Control integration contracts documented",
+        "All entities from data/database-schema.json mapped; prisma/schema.prisma draft aligned"
       ],
       "source_blueprints": [
         "/data/database-schema.json",
         "/data/canonical-data-model.json",
+        "/data/relationship-registry.json",
         "/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md"
       ],
-      "status": "specified"
+      "constitution": "/docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md",
+      "manifest": "/data/canonical-data-manifest.json",
+      "prisma_draft": "/prisma/schema.prisma",
+      "status": "documented",
+      "documented_date": "2026-07-09"
     },
     {
       "number": 5,
@@ -492,7 +539,7 @@
         "CONTRIBUTING.md"
       ],
       "acceptance_criteria": [
-        "IMP-01 through IMP-03 documented; IMP-05\u201309 engineering criteria verified",
+        "IMP-01 through IMP-04 documented; IMP-05\u201309 engineering criteria verified",
         "CONTRIBUTING.md links to implementation packages and CURSOR_MASTER_BUILD_PROMPT.md",
         "One successful Netlify preview deploy from develop",
         "Executive sign-off field in checklist (manual)"
@@ -1383,7 +1430,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 3,
+        "current": 4,
         "status": "partial"
       },
       {
@@ -1412,6 +1459,12 @@
       },
       {
         "id": "CIP-D07",
+        "indicator": "Database Schema (IMP-04)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D08",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -1456,9 +1509,9 @@
   "summary": {
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "implementation_package_readiness_pct": 63,
+    "implementation_package_readiness_pct": 66,
     "steps_total": 50,
-    "steps_documented": 3,
+    "steps_documented": 4,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

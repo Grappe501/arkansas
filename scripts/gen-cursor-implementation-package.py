@@ -26,7 +26,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 3  # IMP-01, IMP-02, IMP-03
+steps_documented = 4  # IMP-01, IMP-02, IMP-03, IMP-04
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -169,21 +169,32 @@ IMPLEMENTATION_STEPS = [
         'summary': 'Every major entity, table, relationship, identifier, and data contract — single source of truth',
         'deliverables': [
             'docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md',
+            'data/canonical-data-manifest.json',
             'prisma/schema.prisma (draft from canonical model)',
             'data/canonical-data-model.json sync',
+            'Canonical Data Model', 'Entity Registry', 'Relationship Model',
+            'Search Model', 'Security Model', 'Audit Model',
+            'AI Data Contracts', 'Mission Control Data Contracts', 'Governance Data Standards',
         ],
         'acceptance_criteria': [
-            'All entities from data/database-schema.json mapped to canonical model',
-            'Relationships and identifiers documented',
-            'Aligns with IMP-02 database/ layer placement',
-            'Privacy and PII fields distinguished',
+            'Database philosophy: every important entity exists once; everything else references it',
+            'Twelve primary domains documented with canonical table homes',
+            'Universal record standards: UUID, slug, dates, status, owner, version, visibility, review, tags, notes',
+            'Relationship hierarchy, M:N join tables, identifiers, search index, audit trail, soft deletes defined',
+            'Security classification levels data-driven; AI and Mission Control integration contracts documented',
+            'All entities from data/database-schema.json mapped; prisma/schema.prisma draft aligned',
         ],
         'source_blueprints': [
             '/data/database-schema.json',
             '/data/canonical-data-model.json',
+            '/data/relationship-registry.json',
             '/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md',
         ],
-        'status': 'specified',
+        'constitution': '/docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md',
+        'manifest': '/data/canonical-data-manifest.json',
+        'prisma_draft': '/prisma/schema.prisma',
+        'status': 'documented',
+        'documented_date': today,
     },
     {
         'number': 5, 'id': 'IMP-05', 'band': 'A',
@@ -257,7 +268,7 @@ IMPLEMENTATION_STEPS = [
         'summary': 'Gate before Band B — repo ready for first code slice',
         'deliverables': ['docs/SPRINT_ZERO_CHECKLIST.md', 'CONTRIBUTING.md'],
         'acceptance_criteria': [
-            'IMP-01 through IMP-03 documented; IMP-05–09 engineering criteria verified',
+            'IMP-01 through IMP-04 documented; IMP-05–09 engineering criteria verified',
             'CONTRIBUTING.md links to implementation packages and CURSOR_MASTER_BUILD_PROMPT.md',
             'One successful Netlify preview deploy from develop',
             'Executive sign-off field in checklist (manual)',
@@ -861,6 +872,186 @@ NAVIGATION_QUESTIONS = [
     'I want to ask a question…',
 ]
 
+DOMAINS = [
+    {
+        'id': 'DOM-01', 'name': 'Identity', 'number': 1,
+        'tables': [
+            'users', 'profiles', 'roles', 'permissions', 'sessions',
+            'authentication_providers', 'notification_preferences', 'privacy_settings',
+        ],
+    },
+    {
+        'id': 'DOM-02', 'name': 'Geography', 'number': 2,
+        'tables': [
+            'counties', 'cities', 'neighborhoods', 'legislative_districts',
+            'congressional_districts', 'school_districts', 'regions', 'zip_codes',
+        ],
+    },
+    {
+        'id': 'DOM-03', 'name': 'Organizations', 'number': 3,
+        'tables': [
+            'organizations', 'coalition_members', 'partner_organizations', 'libraries',
+            'universities', 'community_groups', 'historical_societies', 'faith_organizations',
+            'organization_contacts',
+        ],
+    },
+    {
+        'id': 'DOM-04', 'name': 'People', 'number': 4,
+        'tables': [
+            'education_leaders', 'volunteers', 'researchers', 'authors', 'presenters',
+            'mentors', 'subject_matter_experts', 'staff',
+        ],
+        'note': 'Person may hold multiple roles; links to users and people table',
+    },
+    {
+        'id': 'DOM-05', 'name': 'Research', 'number': 5,
+        'tables': [
+            'research_articles', 'court_cases', 'statutes', 'constitutional_provisions',
+            'primary_sources', 'secondary_sources', 'citations', 'claims', 'evidence_records',
+            'research_reviews',
+        ],
+        'schema_entities': ['source', 'fact'],
+    },
+    {
+        'id': 'DOM-06', 'name': 'Education', 'number': 6,
+        'tables': [
+            'courses', 'lessons', 'modules', 'learning_paths', 'quizzes', 'certificates',
+            'student_progress', 'academy_cohorts', 'presentation_materials',
+        ],
+        'schema_entities': ['educational_resource'],
+    },
+    {
+        'id': 'DOM-07', 'name': 'Community', 'number': 7,
+        'tables': [
+            'community_conversations', 'events', 'meeting_notes', 'questions',
+            'community_requests', 'volunteer_opportunities', 'neighborhood_groups',
+            'listening_reports',
+        ],
+        'schema_entities': ['event', 'signup', 'referral'],
+    },
+    {
+        'id': 'DOM-08', 'name': 'Operations', 'number': 8,
+        'tables': [
+            'projects', 'tasks', 'milestones', 'risks', 'dependencies', 'departments',
+            'committees', 'decision_log', 'institutional_calendar',
+        ],
+    },
+    {
+        'id': 'DOM-09', 'name': 'Mission Control', 'number': 9,
+        'tables': [
+            'dashboards', 'metrics', 'kpis', 'goals', 'county_health', 'city_health',
+            'neighborhood_health', 'institution_health', 'readiness_scores',
+        ],
+        'schema_entities': ['mc_build_record'],
+        'principle': 'MC reads operational data — does not duplicate',
+    },
+    {
+        'id': 'DOM-10', 'name': 'AI', 'number': 10,
+        'tables': [
+            'local_brains', 'ai_agents', 'prompt_library', 'knowledge_retrieval',
+            'conversation_history', 'ai_tasks', 'ai_recommendations', 'ai_feedback',
+        ],
+    },
+    {
+        'id': 'DOM-11', 'name': 'Content', 'number': 11,
+        'tables': [
+            'articles', 'news', 'videos', 'media_assets', 'faqs', 'glossary_terms',
+            'downloads', 'infographics', 'presentation_decks',
+        ],
+        'schema_entities': ['educational_resource'],
+    },
+    {
+        'id': 'DOM-12', 'name': 'Governance', 'number': 12,
+        'tables': [
+            'policies', 'operating_manuals', 'constitution', 'implementation_packages',
+            'board_decisions', 'review_schedules', 'version_history', 'institutional_standards',
+        ],
+    },
+]
+
+UNIVERSAL_RECORD_STANDARDS = [
+    'uuid', 'public_slug', 'created_date', 'updated_date', 'status', 'owner',
+    'version', 'visibility', 'last_reviewed', 'tags', 'notes',
+]
+
+VISIBILITY_LEVELS = [
+    'public', 'volunteer', 'education_leader', 'organization',
+    'executive', 'mission_control', 'administrator',
+]
+
+RECORD_STATUS_VALUES = ['active', 'archived', 'deprecated', 'historical']
+
+MANY_TO_MANY_RELATIONSHIPS = [
+    {'from': 'volunteer', 'to': 'organization', 'join_table': 'volunteer_organizations'},
+    {'from': 'volunteer', 'to': 'county', 'join_table': 'volunteer_counties'},
+    {'from': 'volunteer', 'to': 'project', 'join_table': 'volunteer_projects'},
+    {'from': 'course', 'to': 'lesson', 'join_table': 'course_lessons'},
+    {'from': 'research', 'to': 'court_case', 'join_table': 'research_court_cases'},
+    {'from': 'organization', 'to': 'event', 'join_table': 'organization_events'},
+    {'from': 'education_leader', 'to': 'city', 'join_table': 'leader_cities'},
+    {'from': 'community_conversation', 'to': 'resource', 'join_table': 'conversation_resources'},
+    {'from': 'person', 'to': 'organization', 'join_table': 'person_organizations'},
+    {'from': 'event', 'to': 'educational_resource', 'join_table': 'event_resources'},
+    {'from': 'fact', 'to': 'source', 'join_table': 'fact_sources'},
+    {'from': 'educational_resource', 'to': 'source', 'join_table': 'resource_sources'},
+]
+
+RELATIONSHIP_HIERARCHY = [
+    'county', 'cities', 'neighborhoods', 'education_leaders',
+    'community_conversations', 'events', 'volunteers', 'projects',
+]
+
+AI_KNOWLEDGE_CHAIN = [
+    'research_article', 'court_case', 'claim', 'evidence',
+    'lesson', 'presentation', 'community_conversation',
+]
+
+SEARCH_INDEX_FIELDS = [
+    'title', 'summary', 'keywords', 'categories', 'tags',
+    'related_entities', 'geographic_references', 'publication_status',
+]
+
+AUDIT_TRAIL_FIELDS = ['who', 'when', 'what_changed', 'why_optional']
+
+total_domain_tables = sum(len(d['tables']) for d in DOMAINS)
+
+CANONICAL_DATA_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-04',
+    'updated': today,
+    'title': 'Master Database Schema & Canonical Data Model',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md',
+    'source_registries': {
+        'database_schema': '/data/database-schema.json',
+        'canonical_model': '/data/canonical-data-model.json',
+        'relationship_registry': '/data/relationship-registry.json',
+        'prisma_draft': '/prisma/schema.prisma',
+    },
+    'philosophy': 'Every important entity exists once; everything else references it',
+    'governing_principle': (
+        'A trustworthy database creates trustworthy systems. '
+        'A trustworthy system earns public trust.'
+    ),
+    'universal_record_standards': UNIVERSAL_RECORD_STANDARDS,
+    'record_status_values': RECORD_STATUS_VALUES,
+    'visibility_levels': VISIBILITY_LEVELS,
+    'domains': DOMAINS,
+    'domain_count': len(DOMAINS),
+    'total_tables_defined': total_domain_tables,
+    'relationship_hierarchy': RELATIONSHIP_HIERARCHY,
+    'many_to_many_relationships': MANY_TO_MANY_RELATIONSHIPS,
+    'canonical_identifiers': ['internal_uuid', 'public_slug', 'human_title', 'search_aliases', 'legacy_references'],
+    'search_index_fields': SEARCH_INDEX_FIELDS,
+    'audit_trail_fields': AUDIT_TRAIL_FIELDS,
+    'ai_knowledge_chain': AI_KNOWLEDGE_CHAIN,
+    'mission_control_principle': 'Mission Control reads rather than duplicates operational data',
+    'schema_entity_count': 14,
+    'prisma_models_drafted': 22,
+    'status': 'documented',
+    'implemented': False,
+}
+
 ROUTE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -916,7 +1107,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D04', 'indicator': 'Technical Constitution (IMP-01)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D05', 'indicator': 'Technical Architecture (IMP-02)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D06', 'indicator': 'Route Map (IMP-03)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D07', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D07', 'indicator': 'Database Schema (IMP-04)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D08', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -1032,6 +1224,28 @@ out = {
             'number': 4,
             'id': 'IMP-04',
             'title': 'Master Database Schema & Canonical Data Model',
+            'status': 'documented',
+        },
+    },
+    'database_schema': {
+        'title': 'Master Database Schema & Canonical Data Model',
+        'package': 'Implementation Package 4 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md',
+        'manifest': '/data/canonical-data-manifest.json',
+        'prisma_draft': '/prisma/schema.prisma',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': 'Every important entity exists once; everything else references it',
+        'domain_count': len(DOMAINS),
+        'total_tables_defined': total_domain_tables,
+        'universal_record_standards_count': len(UNIVERSAL_RECORD_STANDARDS),
+        'visibility_levels': VISIBILITY_LEVELS,
+        'schema_entity_count': CANONICAL_DATA_MANIFEST['schema_entity_count'],
+        'prisma_models_drafted': CANONICAL_DATA_MANIFEST['prisma_models_drafted'],
+        'next_package': {
+            'number': 5,
+            'id': 'IMP-05',
+            'title': 'Master User Identity, Authentication, Roles & Permissions',
         },
     },
     'supersedes': {
@@ -1120,6 +1334,10 @@ with open(root / 'data/cursor-implementation-package.json', 'w', newline='\n') a
 
 with open(root / 'data/route-manifest.json', 'w', newline='\n') as f:
     json.dump(ROUTE_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/canonical-data-manifest.json', 'w', newline='\n') as f:
+    json.dump(CANONICAL_DATA_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(
