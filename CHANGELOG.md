@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.66.0] - 2026-07-09 — Build #62 Citizen Action Center & Civic Engagement Hub
+
+### The Arkansas Citizen Action Center
+- **Master Citizen Action Center v1.0** — bridge from learning to responsible civic participation
+- Guiding sequence: Learn → Understand → Verify → Discuss → Participate
+- 6 citizen pathways: Stay Informed through Research Contributions
+- Public official packets, relational sharing hub, citizen dashboard, county action pages
+- Extends Civic Action Lab (#42) — educational materials, not advocacy scripts
+- Honest: 0 registered · 2 action hub items · ~42% readiness
+- MC dashboard: `/mission-control/citizen-action-center.html`
+
 ## [1.65.0] - 2026-07-09 — Build #61 Coalition & Civic Alliance Network
 
 ### Building Arkansas Together

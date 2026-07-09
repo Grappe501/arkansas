@@ -1,6 +1,6 @@
 {
-  "version": "1.65.0",
-  "build": 61,
+  "version": "1.66.0",
+  "build": 62,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 61,
+    "overall_completion": 62,
     "current_build": {
-      "number": 61,
-      "title": "Citizens United Facts Master Arkansas Coalition & Civic Alliance Network v1.0"
-    },
-    "active_phase": "Coalition Network \u2192 Implementation Translation",
-    "last_completed": "Institutional AI Brain",
-    "next_build": {
       "number": 62,
+      "title": "Citizens United Facts Master Citizen Action Center & Civic Engagement Hub v1.0"
+    },
+    "active_phase": "Citizen Action Center \u2192 Implementation Translation",
+    "last_completed": "Coalition & Civic Alliance Network",
+    "next_build": {
+      "number": 63,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
@@ -26,8 +26,8 @@
     "research_readiness": 25,
     "data_viz_readiness": 8,
     "signup_funnel_readiness": 22,
-    "civic_action_readiness": 28,
-    "coalition_readiness": 40,
+    "civic_action_readiness": 38,
+    "coalition_readiness": 44,
     "data_model_readiness": 54,
     "route_inventory_readiness": 18,
     "component_registry_readiness": 22,
@@ -41,6 +41,7 @@
     "relationship_os_readiness": 54,
     "institutional_ai_readiness": 42,
     "coalition_network_readiness": 44,
+    "citizen_action_center_readiness": 42,
     "mc2_readiness": 33,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
@@ -60,9 +61,9 @@
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 25,
-    "institutional_maturity_pct": 48,
+    "institutional_maturity_pct": 49,
     "current_institutional_version": "V1",
-    "systems_integration_readiness": 34,
+    "systems_integration_readiness": 36,
     "production_matrix_readiness": 39,
     "visitor_journey_readiness": 40,
     "technical_architecture_readiness": 38,
@@ -89,8 +90,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 61,
-      "note": "Build #61 \u2014 Coalition & Civic Alliance Network."
+      "value": 62,
+      "note": "Build #62 \u2014 Citizen Action Center."
     },
     {
       "id": "constitution",
@@ -155,8 +156,8 @@
     {
       "id": "action_hub",
       "label": "Floating Action Hub Completion",
-      "value": 18,
-      "note": "11 Arkansas Action Hub actions gated by education level. civic-profile.js tracks county + signals."
+      "value": 20,
+      "note": "2 action hub items live \u2014 6 pathways defined."
     },
     {
       "id": "relational",
@@ -419,9 +420,9 @@
     {
       "id": "institutional_maturity",
       "label": "Institutional Maturity (V1\u2013V10)",
-      "value": 48,
+      "value": 49,
       "max": 100,
-      "note": "Coalition framework live \u2014 0 orgs, 0/75 counties."
+      "note": "Learn \u2192 Participate bridge \u2014 0 registered citizens."
     },
     {
       "id": "systems_integration",
@@ -541,6 +542,13 @@
       "value": 44,
       "max": 100,
       "note": "0 orgs \u00b7 0/75 counties."
+    },
+    {
+      "id": "citizen_action_center",
+      "label": "Citizen Action Center",
+      "value": 42,
+      "max": 100,
+      "note": "6 pathways \u00b7 0 registered."
     }
   ],
   "public_readiness": {
@@ -1199,6 +1207,12 @@
       "id": "coalition_network",
       "label": "Coalition Network",
       "href": "/mission-control/coalition-network.html",
+      "status": "complete"
+    },
+    {
+      "id": "citizen_action_center",
+      "label": "Citizen Action Center",
+      "href": "/mission-control/citizen-action-center.html",
       "status": "complete"
     }
   ],
@@ -2225,6 +2239,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 62,
+      "title": "Citizens United Facts Master Citizen Action Center & Civic Engagement Hub v1.0",
+      "version": "1.66.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Citizen Action Center \u2014 bridge from learning to responsible civic participation",
+      "summary": "6 citizen pathways; public official packets; relational sharing; 42% readiness. 0 registered \u00b7 2 hub items live.",
+      "files_created": [
+        "data/citizen-action-center.json",
+        "docs/MASTER_CITIZEN_ACTION_CENTER.md",
+        "builds/062-citizen-action-center.md",
+        "mission-control/citizen-action-center.html",
+        "scripts/gen-citizen-action-center.py",
+        "scripts/update-mc-build62.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/citizen-action-center.html"
+      ],
+      "decisions_made": [
+        "Bridge between learning and participation \u2014 not advocacy",
+        "Guiding sequence: Learn \u2192 Understand \u2192 Verify \u2192 Discuss \u2192 Participate",
+        "6 pathways from Stay Informed to Research Contributions",
+        "Public official packets = educational materials, not advocacy scripts",
+        "Measures civic education capacity \u2014 not political influence",
+        "Extends Civic Action Lab (#42) with citizen-facing hub",
+        "42% readiness \u2014 pathways documented, dashboard not built"
+      ],
+      "open_questions": [
+        "Unify Citizen Action Center with Civic Action Lab public routes?",
+        "Citizen dashboard: separate /my/ vs integrated profile?",
+        "Official packet PDF generator vs static templates?",
+        "Share tracking: referral codes vs anonymous counts?"
+      ],
+      "risks": [
+        "0 registered participants \u2014 citizen dashboard not built",
+        "Action hub 2/10 items live \u2014 pathways mostly planned",
+        "Public official packet builder not implemented \u2014 0 packets",
+        "Relational sharing visualization not built"
+      ],
+      "next_recommended": 63,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/citizen-action-center.html",
+      "review_status": "complete"
+    },
     {
       "number": 61,
       "title": "Citizens United Facts Master Arkansas Coalition & Civic Alliance Network v1.0",
@@ -5244,21 +5311,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Coalition Network v1.0 \u2014 6 categories, 4 levels, resource center, collaboration hub",
-    "building_now": "61 builds specified \u2014 implementation translation next",
+    "what_built": "Citizen Action Center v1.0 \u2014 6 pathways, learn-to-participate bridge",
+    "building_now": "62 builds specified \u2014 implementation translation next",
     "blocked": [
-      "Partner signup",
-      "Request workflow",
-      "Collaboration hub",
-      "Recognition archive"
+      "Citizen dashboard",
+      "Packet builder",
+      "Share visualization",
+      "Registration"
     ],
     "ready_public": [
-      "Coalition principles",
-      "Growth metrics",
-      "County dashboard spec",
-      "Resource center index"
+      "6 pathways",
+      "Guiding philosophy",
+      "County action spec",
+      "MC citizen metrics"
     ],
-    "next": "Build #62 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #63 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -5927,5 +5994,14 @@
     "counties_represented": 0,
     "counties_total": 75,
     "strategic_priority": "highest"
+  },
+  "citizen_action_center": "/data/citizen-action-center.json",
+  "citizen_action_center_dashboard": "/mission-control/citizen-action-center.html",
+  "citizen_action_center_inventory": {
+    "readiness_score": 42,
+    "pathways_total": 6,
+    "registered_participants": 0,
+    "action_hub_items_live": 2,
+    "bridge_learning_to_participation": true
   }
 }

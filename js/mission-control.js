@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Citizen Action Center <a href="/mission-control/citizen-action-center.html" class="mc-inline-link">Learn to Participate #62 →</a></h2>
+    <p class="mc-bar-note">Build #62 — Citizen Action Center. 6 pathways, learn→participate bridge. Not advocacy. 0 registered · 2 action hub items. ~42% readiness.</p>
     <h2 class="mc-section-title">Coalition Network <a href="/mission-control/coalition-network.html" class="mc-inline-link">Building Arkansas #61 →</a></h2>
     <p class="mc-bar-note">Build #61 — Master Coalition & Civic Alliance Network. 6 categories, 4 levels, resource center. 0 orgs · 0/75 counties. Highest strategic priority. ~44% coalition readiness.</p>
     <h2 class="mc-section-title">Institutional AI <a href="/mission-control/institutional-ai.html" class="mc-inline-link">Civic Intelligence #60 →</a></h2>
@@ -5172,6 +5174,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initRelationshipOs();
   initInstitutionalAi();
   initCoalitionNetwork();
+  initCitizenActionCenter();
 });
 
 async function initUxArchitecture() {
@@ -6361,7 +6364,106 @@ async function initCoalitionNetwork() {
       <a href="/docs/MASTER_COALITION_NETWORK.md">MASTER_COALITION_NETWORK.md</a> ·
       <a href="/data/coalition-network.json">JSON</a> ·
       <a href="/coalition/">Coalition Hub</a> ·
-      <a href="/data/coalition-directory.json">Directory</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initCitizenActionCenter() {
+  const root = document.getElementById('mc-citizen-action-center-root');
+  if (!root) return;
+
+  const [cacRes, mcRes] = await Promise.all([
+    fetch('/data/citizen-action-center.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const cac = await cacRes.json();
+  const mc = await mcRes.json();
+  const s = cac.summary;
+
+  const stageRows = cac.guiding_philosophy.stages.map(st => `
+    <tr><td>${st.step}</td><td>${st.stage}</td><td>${st.status}</td></tr>`).join('');
+
+  const pathwayRows = cac.six_pathways.map(p => `
+    <tr><td>${p.number}</td><td><code>${p.id}</code></td><td>${p.title}</td>
+      <td>${p.audience}</td><td>${p.status}</td>
+      <td>${p.route ? `<a href="${p.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  const metricRows = cac.mc_citizen_dashboard.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.metric}</td><td>${m.current}</td>
+      <td>${m.target ?? '—'}</td><td>${m.status}</td></tr>`).join('');
+
+  const systemRows = cac.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td>${sys.route ? `<a href="${sys.route}">→</a>` : '—'}</td>
+      <td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Citizen Action Center</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #62 · ${cac.title}</p>
+      <h1>The Arkansas Citizen Action Center</h1>
+      <p class="mc-header__question">${cac.governing_principle}</p>
+      <p class="mc-bar-note">${cac.purpose}</p>
+      <p class="mc-bar-note"><strong>Bridge:</strong> ${cac.bridge_role} · <strong>Not advocacy:</strong> ${cac.not_advocacy ? 'Yes' : 'No'}</p>
+      <p class="mc-bar-note"><strong>Guiding sequence:</strong> ${cac.guiding_philosophy.sequence} — ${cac.guiding_philosophy.rule}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Citizen Action readiness</div><div class="mc-stat__value">${s.citizen_action_center_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Pathways</div><div class="mc-stat__value">${s.pathways_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Registered</div><div class="mc-stat__value">${s.registered_participants}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Action hub live</div><div class="mc-stat__value">${s.action_hub_items_live}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">200K goal</div><div class="mc-stat__value">${s.participants_connected}/${s.participants_target}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Counties active</div><div class="mc-stat__value">${s.counties_with_activity}/75</div></div>
+    </div>
+    <h2 class="mc-section-title">Guiding Philosophy</h2>
+    <table class="mc-table"><thead><tr><th>Step</th><th>Stage</th><th>Status</th></tr></thead>
+      <tbody>${stageRows}</tbody></table>
+    <h2 class="mc-section-title">Six Citizen Pathways</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Pathway</th><th>Audience</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${pathwayRows}</tbody></table>
+    ${cac.six_pathways.map(p => `
+      <h3 class="mc-subsection-title">${p.title}</h3>
+      <ul class="mc-deliverables">${p.options.map(o => `<li>${o}</li>`).join('')}</ul>
+      ${p.emphasis ? `<p class="mc-bar-note">${p.emphasis}</p>` : ''}
+      ${p.mc_tracks ? `<p class="mc-bar-note">MC tracks: ${p.mc_tracks}</p>` : ''}
+      ${p.note ? `<p class="mc-bar-note">${p.note}</p>` : ''}
+      ${p.review ? `<p class="mc-bar-note">${p.review}</p>` : ''}`).join('')}
+    <h2 class="mc-section-title">Public Official Resource Center</h2>
+    <p class="mc-bar-note">${cac.public_official_resource_center.principle} · ${cac.public_official_resource_center.packets_available} packets · ${cac.public_official_resource_center.status}</p>
+    <ul class="mc-deliverables">${cac.public_official_resource_center.sections.map(sec => `<li>${sec}</li>`).join('')}</ul>
+    <p class="mc-bar-note"><strong>Audiences:</strong> ${cac.public_official_resource_center.audiences.join(' · ')}</p>
+    <h2 class="mc-section-title">Relational Sharing Hub</h2>
+    <p class="mc-bar-note">${cac.relational_sharing_hub.title} · per-page tools: ${cac.relational_sharing_hub.per_page_tools ? 'specified' : 'no'} · visualization: ${cac.relational_sharing_hub.visualization_status}</p>
+    <ul class="mc-deliverables">${cac.relational_sharing_hub.audiences.map(a => `<li>${a}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Citizen Dashboard</h2>
+    <p class="mc-bar-note">${cac.citizen_dashboard.title} · ${cac.citizen_dashboard.status} · ${cac.citizen_dashboard.registered_users} registered</p>
+    <ul class="mc-deliverables">${cac.citizen_dashboard.panels.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">County Action Pages</h2>
+    <p class="mc-bar-note">${cac.county_action_pages.counties_with_activity}/${cac.county_action_pages.counties_total} counties · <a href="${cac.county_action_pages.route}">County index</a> · ${cac.county_action_pages.status}</p>
+    <ul class="mc-deliverables">${cac.county_action_pages.fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Mission Control Citizen Dashboard</h2>
+    <p class="mc-bar-note">${cac.mc_citizen_dashboard.measures}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Target</th><th>Status</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${cac.integration.extends}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Future Expansion</h2>
+    <ul class="mc-deliverables">${cac.future_expansion.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${cac.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${cac.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${cac.recommended_next_build.number} — ${cac.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${cac.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_CITIZEN_ACTION_CENTER.md">MASTER_CITIZEN_ACTION_CENTER.md</a> ·
+      <a href="/data/citizen-action-center.json">JSON</a> ·
+      <a href="/mission-control/civic-action-lab.html">Civic Action Lab</a> ·
+      <a href="/mission-control/coalition-network.html">Coalition Network</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 
