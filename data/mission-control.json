@@ -1,6 +1,6 @@
 {
-  "version": "2.04.0",
-  "build": 100,
+  "version": "2.05.0",
+  "build": 101,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,33 +9,22 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 100,
-    "current_build": {
-      "number": 100,
-      "title": "Citizens United Facts Master Founding Charter v1.0"
-    },
-    "active_phase": "Founding Charter Complete \u2192 War Room",
-    "last_completed": "Institutional Manifesto",
-    "next_build": {
-      "number": 101,
-      "title": "Executive war room & countdown dashboard components"
-    },
     "github_status": "connected",
     "netlify_status": "production_healthy",
-    "content_readiness": 56,
+    "content_readiness": 57,
     "research_readiness": 43,
     "data_viz_readiness": 12,
     "signup_funnel_readiness": 26,
     "civic_action_readiness": 50,
     "coalition_readiness": 44,
     "data_model_readiness": 58,
-    "route_inventory_readiness": 18,
-    "component_registry_readiness": 22,
+    "route_inventory_readiness": 22,
+    "component_registry_readiness": 26,
     "facts_framework_readiness": 14,
     "knowledge_atlas_readiness": 58,
     "platform_architecture_readiness": 59,
-    "repository_structure_readiness": 28,
-    "database_schema_readiness": 42,
+    "repository_structure_readiness": 32,
+    "database_schema_readiness": 44,
     "wireframe_readiness": 38,
     "contact_intelligence_readiness": 34,
     "relationship_os_readiness": 54,
@@ -106,7 +95,7 @@
     "visitor_journey_readiness": 59,
     "technical_architecture_readiness": 59,
     "governance_readiness": 50,
-    "build_bible_readiness": 54,
+    "build_bible_readiness": 58,
     "data_architecture_readiness": 58,
     "ux_architecture_readiness": 59,
     "launch_strategy_readiness": 57,
@@ -122,21 +111,38 @@
     "eighty_builds_complete": true,
     "hundred_builds_complete": true,
     "founding_blueprint_complete": true,
-    "implementation_phase": "executive_war_room_next",
+    "implementation_phase": "sprint_zero_next",
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation",
     "public_launch_recommended": false,
     "completion_target_date": "2027-01-01",
     "days_remaining_to_completion": 176,
     "mission_complete_label": "Mission Complete \u2014 January 2027",
-    "connected_citizen_goal_pct": 15
+    "connected_citizen_goal_pct": 15,
+    "overall_completion": 101,
+    "current_build": {
+      "number": 101,
+      "title": "Citizens United Facts Cursor Implementation Package v1.0"
+    },
+    "active_phase": "Implementation Package \u2192 Sprint Zero",
+    "last_completed": "Founding Charter",
+    "next_build": {
+      "number": 102,
+      "title": "Executive war room & countdown dashboard components"
+    },
+    "implementation_package_readiness": 57,
+    "cursor_implementation_package_readiness": 57,
+    "implementation_phase_started": false,
+    "sprint_zero_started": false,
+    "implementation_steps_total": 50,
+    "implementation_steps_implemented": 0
   },
   "progress_bars": [
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 100,
-      "note": "Build #100 \u2014 Founding Charter. 176 days to Jan 2027. Blueprint complete."
+      "value": 101,
+      "note": "Build #101 \u2014 Implementation Package. 0/50 steps \u00b7 176 days to Jan 2027."
     },
     {
       "id": "constitution",
@@ -859,7 +865,14 @@
       "label": "Founding Charter",
       "value": 56,
       "max": 100,
-      "note": "0 acknowledgments \u00b7 blueprint documented."
+      "note": "Founding charter \u00b7 56% readiness."
+    },
+    {
+      "id": "cursor_implementation_package",
+      "label": "Implementation Package",
+      "value": 57,
+      "max": 100,
+      "note": "0/50 steps implemented \u00b7 Sprint Zero pending."
     }
   ],
   "public_readiness": {
@@ -1752,6 +1765,12 @@
       "id": "founding_charter",
       "label": "Founding Charter",
       "href": "/mission-control/founding-charter.html",
+      "status": "complete"
+    },
+    {
+      "id": "cursor_implementation_package",
+      "label": "Implementation Package",
+      "href": "/mission-control/cursor-implementation-package.html",
       "status": "complete"
     }
   ],
@@ -2778,6 +2797,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 101,
+      "title": "Citizens United Facts Cursor Implementation Package v1.0",
+      "version": "2.05.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "50 executable implementation steps \u2014 blueprint to code",
+      "summary": "50 steps in 5 bands (repo \u2192 launch). Cursor master prompt, MVP scope, acceptance criteria per step. 57% readiness \u00b7 0/50 implemented \u00b7 Sprint Zero not started.",
+      "files_created": [
+        "data/cursor-implementation-package.json",
+        "docs/MASTER_CURSOR_IMPLEMENTATION_PACKAGE.md",
+        "docs/CURSOR_MASTER_BUILD_PROMPT.md",
+        "builds/101-cursor-implementation-package.md",
+        "mission-control/cursor-implementation-package.html",
+        "scripts/gen-cursor-implementation-package.py",
+        "scripts/update-mc-build101.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/cursor-implementation-package.html"
+      ],
+      "decisions_made": [
+        "50 steps \u2014 thorough without drifting into abstract planning",
+        "Five bands of 10: foundation, presentation, data, operations, knowledge/launch",
+        "Supersedes Build Bible v1 as executable engineering layer (Build Bible v2)",
+        "IMP-38 War Room specified here; Build #102 extends it",
+        "Zero steps implemented \u2014 honest specification-only status",
+        "57% readiness \u2014 package documented"
+      ],
+      "open_questions": [
+        "Next.js monorepo vs strangler-fig \u2014 resolved in IMP-01",
+        "MC read paths public vs auth-gated \u2014 IMP-28 decision",
+        "Single source of truth: JSON registries vs DB \u2014 per-entity in IMP-47",
+        "Automated step status tracking in MC?"
+      ],
+      "risks": [
+        "Zero implementation steps completed \u2014 package is specification only",
+        "Sprint Zero not started \u2014 no Neon/Prisma in production",
+        "Component specs (IMP-16\u201318) not yet created",
+        "War Room (IMP-38) specified here but Build #102 may extend it"
+      ],
+      "next_recommended": 102,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/cursor-implementation-package.html",
+      "review_status": "complete"
+    },
     {
       "number": 100,
       "title": "Citizens United Facts Master Founding Charter v1.0",
@@ -8133,21 +8205,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Master Founding Charter v1.0 \u2014 The Arkansas Declaration for an Informed Citizenry",
-    "building_now": "100 builds \u2014 founding blueprint complete \u2014 executive war room next",
+    "what_built": "Cursor Implementation Package v1.0 \u2014 50 executable steps",
+    "building_now": "101 builds \u2014 Sprint Zero (IMP-01\u201310) next",
     "blocked": [
-      "Charter acknowledgments",
-      "Public charter page",
-      "Charter dashboard",
-      "War Room UI"
+      "Sprint Zero not started",
+      "0/50 steps implemented",
+      "No Neon/Prisma in production",
+      "War Room not built"
     ],
     "ready_public": [
-      "14 charter sections",
-      "Our Commitments",
-      "Institutional Covenant",
-      "Final governing principle"
+      "50 step specs",
+      "Cursor master prompt",
+      "MVP scope",
+      "5 band structure"
     ],
-    "next": "Build #101 \u2014 Executive war room & countdown dashboard components"
+    "next": "Build #102 \u2014 Executive war room & countdown dashboard components"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -9159,5 +9231,15 @@
     "charter_acknowledgments": 0,
     "founding_blueprint_documented": true,
     "charter_dashboard_live": false
+  },
+  "cursor_implementation_package": "/data/cursor-implementation-package.json",
+  "cursor_implementation_package_dashboard": "/mission-control/cursor-implementation-package.html",
+  "cursor_implementation_package_inventory": {
+    "readiness_score": 57,
+    "steps_total": 50,
+    "steps_implemented": 0,
+    "bands_total": 5,
+    "sprint_zero_started": false,
+    "cursor_master_prompt_ready": true
   }
 }

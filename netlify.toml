@@ -667,6 +667,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/cursor-implementation-package"
+  to = "/mission-control/cursor-implementation-package.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301

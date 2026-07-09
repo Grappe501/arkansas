@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.0] - 2026-07-09 — Build #101 Cursor Implementation Package
+
+### Master Build Bible v2.0 — 50 Executable Steps
+- **Cursor Implementation Package v1.0** — turns 100-build blueprint into ordered coding instructions
+- 5 bands × 10 steps: repo → routes/UI → data/auth → MC/dashboards → content/launch
+- Cursor master prompt, MVP scope, acceptance criteria per step, source blueprint links
+- Supersedes Build Bible #50 for engineering execution
+- Honest: 0/50 steps implemented · Sprint Zero not started · 57% readiness
+- MC dashboard: `/mission-control/cursor-implementation-package.html`
+
 ## [2.04.0] - 2026-07-09 — Build #100 Master Founding Charter
 
 ### The Arkansas Declaration for an Informed Citizenry

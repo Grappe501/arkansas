@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Implementation Package <a href="/mission-control/cursor-implementation-package.html" class="mc-inline-link">50 Steps #101 →</a></h2>
+    <p class="mc-bar-note">Build #101 — Cursor Implementation Package. Blueprint → code: 50 steps in 5 bands, Cursor master prompt, MVP scope. 0/50 implemented · Sprint Zero pending. 57% readiness.</p>
     <h2 class="mc-section-title">Founding Charter <a href="/mission-control/founding-charter.html" class="mc-inline-link">Arkansas Declaration #100 →</a></h2>
     <p class="mc-bar-note">Build #100 — Master Founding Charter. Completion of the founding blueprint — 14 charter sections, 9 commitments, institutional covenant. Knowledge strengthens citizens · Citizens strengthen communities. 0 acknowledgments · blueprint documented. 56% readiness.</p>
     <h2 class="mc-section-title">Institutional Manifesto <a href="/mission-control/institutional-manifesto.html" class="mc-inline-link">Why We Build #99 →</a></h2>
@@ -5289,6 +5291,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initInstitutionalContinuousImprovement();
   initInstitutionalManifesto();
   initFoundingCharter();
+  initCursorImplementationPackage();
 });
 
 async function initUxArchitecture() {
@@ -10603,6 +10606,90 @@ async function initFoundingCharter() {
       <a href="/data/founding-charter.json">JSON</a> ·
       <a href="/mission-control/institutional-manifesto.html">Manifesto (#99)</a> ·
       <a href="/mission-control/organizational-constitution.html">Constitution (#76)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initCursorImplementationPackage() {
+  const root = document.getElementById('mc-cursor-implementation-package-root');
+  if (!root) return;
+
+  const [cipRes, mcRes] = await Promise.all([
+    fetch('/data/cursor-implementation-package.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const cip = await cipRes.json();
+  const mc = await mcRes.json();
+  const s = cip.summary;
+
+  const bandBlocks = cip.bands.map(b => `
+    <h3 class="mc-subsection-title">Band ${b.letter} — ${b.title} (Steps ${b.steps_range})</h3>
+    <p class="mc-bar-note">${b.focus}</p>`).join('');
+
+  const stepRows = cip.implementation_steps.map(st => `
+    <tr><td>${st.number}</td><td><code>${st.id}</code></td><td>${st.title}</td>
+      <td>Band ${st.band}</td><td>${st.status}</td></tr>`).join('');
+
+  const dashRows = cip.package_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td>
+      <td>${typeof d.current === 'number' ? d.current.toLocaleString() : d.current}${d.unit || ''}</td>
+      <td>${d.status}</td></tr>`).join('');
+
+  const sourceRows = cip.integration.source_blueprints.map(sys => `
+    <tr><td>${sys.system}</td><td><a href="${sys.route}">${sys.route}</a></td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Implementation Package</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #101 · ${cip.title}</p>
+      <h1>${cip.subtitle}</h1>
+      <p class="mc-header__question">${cip.governing_principle}</p>
+      <p class="mc-bar-note">${cip.purpose}</p>
+      <p class="mc-bar-note"><strong>${cip.tagline}</strong> · Supersedes <a href="/mission-control/build-bible.html">Build Bible #50</a> for engineering execution</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Package readiness</div><div class="mc-stat__value">${s.implementation_package_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Steps specified</div><div class="mc-stat__value">${s.steps_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Implemented</div><div class="mc-stat__value">${s.steps_implemented}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Sprint Zero</div><div class="mc-stat__value">${s.sprint_zero_started ? 'Started' : 'Pending'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">MVP in scope</div><div class="mc-stat__value">${s.mvp_in_scope_count}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Days to Jan 2027</div><div class="mc-stat__value">${s.days_remaining}</div></div>
+    </div>
+    <h2 class="mc-section-title">Five Bands</h2>
+    ${bandBlocks}
+    <h2 class="mc-section-title">${cip.mvp_scope.title}</h2>
+    <h3 class="mc-subsection-title">In Scope</h3>
+    <ul class="mc-deliverables">${cip.mvp_scope.in_scope.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h3 class="mc-subsection-title">Out of Scope (MVP)</h3>
+    <ul class="mc-deliverables">${cip.mvp_scope.out_of_scope.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">January 2027 Targets</h2>
+    <ul class="mc-deliverables">
+      <li>${cip.january_2027_targets.counties} counties · ${cip.january_2027_targets.cities} cities</li>
+      <li>${cip.january_2027_targets.connected_voter_pct_per_county_city}% connected voters per county/city</li>
+      <li>${cip.january_2027_targets.arkansans_connected_goal.toLocaleString()} Arkansans connected goal</li>
+    </ul>
+    <h2 class="mc-section-title">All 50 Steps</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Title</th><th>Band</th><th>Status</th></tr></thead>
+      <tbody>${stepRows}</tbody></table>
+    <h2 class="mc-section-title">Cursor Master Prompt</h2>
+    <p class="mc-bar-note"><a href="${cip.cursor_master_prompt}">CURSOR_MASTER_BUILD_PROMPT.md</a> — paste-in agent brief for implementation sessions. Start with IMP-01.</p>
+    <h2 class="mc-section-title">${cip.package_dashboard.title}</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">Source Blueprints</h2>
+    <table class="mc-table"><thead><tr><th>System</th><th>Registry</th></tr></thead>
+      <tbody>${sourceRows}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${cip.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${cip.recommended_next_build.number} — ${cip.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${cip.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_CURSOR_IMPLEMENTATION_PACKAGE.md">MASTER_CURSOR_IMPLEMENTATION_PACKAGE.md</a> ·
+      <a href="/data/cursor-implementation-package.json">JSON</a> ·
+      <a href="/mission-control/founding-charter.html">Charter (#100)</a> ·
+      <a href="/mission-control/build-bible.html">Build Bible (#50)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

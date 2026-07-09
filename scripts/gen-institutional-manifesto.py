@@ -307,11 +307,11 @@ out = {
         'Motto not displayed consistently across public site',
     ],
     'recommended_next_build': {
-        'number': 100,
-        'title': 'Master Founding Charter (The Arkansas Declaration for an Informed Citizenry)',
+        'number': 101,
+        'title': 'Cursor Implementation Package (50 Executable Steps)',
         'note': (
-            'Completion of the founding blueprint — permanent charter foundation, '
-            'founding documents bundle, covenant, January 2027 goals, COMP-* specs.'
+            '50 ordered implementation steps, Cursor master prompt, MVP scope, '
+            'Sprint Zero gate, file-level acceptance criteria.'
         ),
     },
 }

@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#101** | **Cursor Implementation Package (50 Steps)** | **2.05.0** | **✅ Complete** | [101](101-cursor-implementation-package.md) · [/mission-control/cursor-implementation-package.html](../mission-control/cursor-implementation-package.html) |
 | **#100** | **Master Founding Charter** | **2.04.0** | **✅ Complete** | [100](100-founding-charter.md) · [/mission-control/founding-charter.html](../mission-control/founding-charter.html) |
 | **#99** | **Master Institutional Manifesto** | **2.03.0** | **✅ Complete** | [099](099-institutional-manifesto.md) · [/mission-control/institutional-manifesto.html](../mission-control/institutional-manifesto.html) |
 | **#98** | **Master Institutional Self-Build & Continuous Improvement** | **2.02.0** | **✅ Complete** | [098](098-institutional-continuous-improvement.md) · [/mission-control/institutional-continuous-improvement.html](../mission-control/institutional-continuous-improvement.html) |

@@ -447,10 +447,10 @@ out = {
     ],
     'recommended_next_build': {
         'number': 101,
-        'title': 'Executive War Room & Countdown Dashboard Components',
+        'title': 'Cursor Implementation Package (50 Executable Steps)',
         'note': (
-            'War room UI, countdown dashboard, founding documents onboarding, '
-            'charter acknowledgment tracker, public charter page, COMP-* specs.'
+            '50 ordered implementation steps, Cursor master prompt, MVP scope, '
+            'Sprint Zero gate, file-level acceptance criteria. Master Build Bible v2.'
         ),
     },
 }

@@ -299,7 +299,7 @@
     "public_manifesto_page_live": false,
     "trust_readiness_pct": 50,
     "governance_readiness_pct": 50,
-    "institutional_completion_pct": 100
+    "institutional_completion_pct": 101
   },
   "catalog_gaps": [
     "Required reading not enforced in onboarding",
@@ -314,8 +314,8 @@
     "Motto not displayed consistently across public site"
   ],
   "recommended_next_build": {
-    "number": 100,
-    "title": "Master Founding Charter (The Arkansas Declaration for an Informed Citizenry)",
-    "note": "Completion of the founding blueprint \u2014 permanent charter foundation, founding documents bundle, covenant, January 2027 goals, COMP-* specs."
+    "number": 101,
+    "title": "Cursor Implementation Package (50 Executable Steps)",
+    "note": "50 ordered implementation steps, Cursor master prompt, MVP scope, Sprint Zero gate, file-level acceptance criteria."
   }
 }

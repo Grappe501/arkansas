@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 2.04.0 · **Founding Charter:** [/mission-control/founding-charter.html](/mission-control/founding-charter.html) · **100 builds complete**  
-**Knowledge strengthens citizens. Citizens strengthen communities. Communities strengthen Arkansas.** — founding blueprint complete · **Next:** Build #101 War Room Components  
+**Current version:** 2.05.0 · **Implementation Package:** [/mission-control/cursor-implementation-package.html](/mission-control/cursor-implementation-package.html) · **101 builds complete**  
+**50 executable steps · Sprint Zero next** — blueprint → code · **Next:** Build #102 War Room Components  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **101** | **Cursor Implementation Package (50 Steps)** | **✅ v2.05.0** |
 | **100** | **Master Founding Charter** | **✅ v2.04.0** |
 | **99** | **Master Institutional Manifesto** | **✅ v2.03.0** |
 | **98** | **Master Institutional Self-Build & Continuous Improvement** | **✅ v2.02.0** |

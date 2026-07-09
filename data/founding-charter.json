@@ -430,7 +430,7 @@
     "founding_blueprint_documented": true,
     "trust_readiness_pct": 50,
     "governance_readiness_pct": 50,
-    "institutional_completion_pct": 99
+    "institutional_completion_pct": 101
   },
   "catalog_gaps": [
     "Charter acknowledgments not tracked in onboarding",
@@ -446,7 +446,7 @@
   ],
   "recommended_next_build": {
     "number": 101,
-    "title": "Executive War Room & Countdown Dashboard Components",
-    "note": "War room UI, countdown dashboard, founding documents onboarding, charter acknowledgment tracker, public charter page, COMP-* specs."
+    "title": "Cursor Implementation Package (50 Executable Steps)",
+    "note": "50 ordered implementation steps, Cursor master prompt, MVP scope, Sprint Zero gate, file-level acceptance criteria. Master Build Bible v2."
   }
 }
