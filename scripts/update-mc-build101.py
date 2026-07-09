@@ -26,7 +26,7 @@ tl = cip.get('master_timeline', {})
 
 
 
-mc['version'] = '2.05.23'
+mc['version'] = '2.05.24'
 
 mc['updated'] = '2026-07-09'
 
@@ -96,21 +96,21 @@ for bar in mc['progress_bars']:
 
 mc['briefing'] = {
 
-    'what_built': 'IMP-01–23 documented — digital library & institutional archive (46%)',
+    'what_built': 'IMP-01–24 documented — integration platform & open API (48%)',
 
-    'building_now': 'IMP-24 Integration Platform & Open API next; Sprint Zero pending',
+    'building_now': 'IMP-25 Security, Privacy & Institutional Trust next; Sprint Zero pending',
 
     'blocked': ['Sprint Zero not complete', '0/50 code-implemented', f"{s.get('days_to_software', 0)} days to software target"],
 
     'ready_public': [
 
-        'Digital Library', 'digital-library-manifest.json', 'DMS & archive architecture',
+        'Integration Platform', 'integration-platform-manifest.json', 'AI gateway & external services',
 
-        'Mobile PWA', 'Public Website', 'Statewide knowledge preservation blueprint',
+        'Digital Library', 'Mobile PWA', 'Independent platform + ecosystem interoperability',
 
     ],
 
-    'next': 'IMP-24 — Master Integration Platform, External Data Services & Open API Architecture',
+    'next': 'IMP-25 — Master Security, Privacy, Compliance & Institutional Trust Framework',
 
 }
 

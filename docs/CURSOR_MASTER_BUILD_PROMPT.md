@@ -39,6 +39,7 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 0u. **Public Website (IMP-21):** [/docs/IMPLEMENTATION_PACKAGE_21_PUBLIC_WEBSITE.md](/docs/IMPLEMENTATION_PACKAGE_21_PUBLIC_WEBSITE.md) · [/data/public-website-manifest.json](/data/public-website-manifest.json)
 0v. **Mobile PWA & Field Ops (IMP-22):** [/docs/IMPLEMENTATION_PACKAGE_22_MOBILE_PWA.md](/docs/IMPLEMENTATION_PACKAGE_22_MOBILE_PWA.md) · [/data/mobile-pwa-manifest.json](/data/mobile-pwa-manifest.json)
 0w. **Digital Library (IMP-23):** [/docs/IMPLEMENTATION_PACKAGE_23_DIGITAL_LIBRARY.md](/docs/IMPLEMENTATION_PACKAGE_23_DIGITAL_LIBRARY.md) · [/data/digital-library-manifest.json](/data/digital-library-manifest.json)
+0x. **Integration Platform (IMP-24):** [/docs/IMPLEMENTATION_PACKAGE_24_INTEGRATION_PLATFORM.md](/docs/IMPLEMENTATION_PACKAGE_24_INTEGRATION_PLATFORM.md) · [/data/integration-platform-manifest.json](/data/integration-platform-manifest.json)
 
 ## Master timeline (updated IMP-11)
 
@@ -144,7 +145,7 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 
 ## First step to implement
 
-**IMP-01** through **IMP-23** are **documented**:
+**IMP-01** through **IMP-24** are **documented**:
 - [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
 - [Technical Architecture](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
 - [Route Map](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [route-manifest.json](/data/route-manifest.json)
@@ -168,7 +169,8 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 - [Public Website](/docs/IMPLEMENTATION_PACKAGE_21_PUBLIC_WEBSITE.md) · [public-website-manifest.json](/data/public-website-manifest.json)
 - [Mobile PWA & Field Ops](/docs/IMPLEMENTATION_PACKAGE_22_MOBILE_PWA.md) · [mobile-pwa-manifest.json](/data/mobile-pwa-manifest.json)
 - [Digital Library](/docs/IMPLEMENTATION_PACKAGE_23_DIGITAL_LIBRARY.md) · [digital-library-manifest.json](/data/digital-library-manifest.json)
+- [Integration Platform](/docs/IMPLEMENTATION_PACKAGE_24_INTEGRATION_PLATFORM.md) · [integration-platform-manifest.json](/data/integration-platform-manifest.json)
 
-**IMP-24** is next (doctrinal): Master Integration Platform, External Data Services & Open API Architecture.
+**IMP-25** is next (doctrinal): Master Security, Privacy, Compliance & Institutional Trust Framework.
 
 Engineering **Sprint Zero (IMP-10 step registry)** is the Band A gate before Band B code slices.

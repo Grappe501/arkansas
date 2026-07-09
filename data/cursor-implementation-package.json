@@ -688,6 +688,33 @@
       "number": 24,
       "id": "IMP-24",
       "title": "Master Integration Platform, External Data Services & Open API Architecture",
+      "status": "documented"
+    }
+  },
+  "integration_platform": {
+    "title": "Master Integration Platform, External Data Services & Open API Architecture",
+    "package": "Implementation Package 24 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_24_INTEGRATION_PLATFORM.md",
+    "manifest": "/data/integration-platform-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "The institution owns its data \u2014 external services provide capabilities",
+    "integration_category_count": 8,
+    "integration_pipeline_step_count": 7,
+    "open_api_use_case_count": 7,
+    "institutional_event_count": 5,
+    "integration_security_standard_count": 7,
+    "packages_completed": 24,
+    "packages_complete_pct": 48,
+    "county_milestone_date": "2026-10-01",
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000,
+    "mc_dashboard": "/mission-control/systems-integration.html",
+    "engineering_note": "Doctrinal IMP-24 Integration Platform; engineering IMP-24 is seed script from JSON registries",
+    "next_package": {
+      "number": 25,
+      "id": "IMP-25",
+      "title": "Master Security, Privacy, Compliance & Institutional Trust Framework",
       "status": "specified"
     }
   },
@@ -2090,7 +2117,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 23,
+        "current": 24,
         "status": "partial"
       },
       {
@@ -2239,6 +2266,12 @@
       },
       {
         "id": "CIP-D27",
+        "indicator": "Integration Platform (IMP-24)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D28",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -2293,7 +2326,7 @@
     "days_remaining": 176,
     "implementation_package_readiness_pct": 100,
     "steps_total": 50,
-    "steps_documented": 23,
+    "steps_documented": 24,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

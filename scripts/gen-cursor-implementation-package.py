@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 23  # IMP-01 through IMP-23 (doctrinal)
+steps_documented = 24  # IMP-01 through IMP-24 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3334,6 +3334,7 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'institutional_time_intelligence', 'institutional_relationship_intelligence',
     'institutional_analytics', 'institutional_automation', 'public_digital_experience',
     'mobile_field_operations', 'institutional_digital_library',
+    'institutional_integration_platform',
 ]
 
 RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
@@ -4298,6 +4299,168 @@ DIGITAL_LIBRARY_MANIFEST = {
     'implemented': False,
 }
 
+INTEGRATION_PIPELINE_STEPS = [
+    'external_service', 'integration_layer', 'validation', 'security_review',
+    'internal_data_model', 'mission_control', 'knowledge_platform',
+]
+
+INTEGRATION_CATEGORIES = {
+    'identity': {
+        'providers': ['google', 'microsoft', 'apple'],
+        'principle': 'institutional_identity_authoritative',
+    },
+    'calendar': {
+        'providers': ['google_calendar', 'microsoft_outlook', 'apple_calendar', 'ics'],
+        'principle': 'optional_per_user_sync',
+    },
+    'email': {
+        'providers': ['google_workspace', 'microsoft_365', 'smtp_compatible'],
+        'capabilities': [
+            'invitations', 'newsletters', 'volunteer_communication', 'research_notifications',
+        ],
+    },
+    'mapping': {
+        'capabilities': [
+            'county_visualization', 'city_maps', 'driving_directions', 'regional_planning',
+            'event_locations', 'volunteer_routing',
+        ],
+    },
+    'video_meetings': {
+        'providers': ['zoom', 'google_meet', 'microsoft_teams', 'future_providers'],
+        'features': [
+            'scheduling', 'registration', 'attendance', 'recording_references', 'calendar_sync',
+        ],
+    },
+    'artificial_intelligence': {
+        'principle': 'ai_gateway_modular_providers',
+        'rule': 'institutional_knowledge_remains_internal',
+    },
+    'government_data': {
+        'sources': [
+            'election_information', 'legislative_information', 'court_information',
+            'census_demographic', 'geographic_data',
+        ],
+        'requirement': 'attributed_and_versioned',
+    },
+    'file_storage': {
+        'asset_types': [
+            'documents', 'videos', 'images', 'presentations', 'downloads',
+        ],
+        'principle': 'indexed_in_institutional_library',
+    },
+}
+
+OPEN_API_USE_CASES = [
+    'county_dashboards', 'organization_integrations', 'educational_resources',
+    'research_search', 'calendar_feeds', 'public_statistics', 'mission_control_summaries',
+]
+
+INTERNAL_API_STANDARDS = [
+    'authentication', 'validation', 'logging', 'error_reporting',
+    'rate_limiting', 'monitoring', 'documentation',
+]
+
+INSTITUTIONAL_EVENTS = [
+    'volunteer_joined', 'course_completed', 'research_published',
+    'community_conversation_scheduled', 'organization_onboarded',
+]
+
+SYNC_PRINCIPLES = [
+    'reliable', 'observable', 'recoverable', 'auditable', 'no_silent_failures',
+]
+
+INSTITUTIONAL_DATA_OWNERSHIP = [
+    'research', 'educational_content', 'volunteer_records', 'organization_records',
+    'knowledge_graph', 'mission_control_metrics', 'analytics',
+]
+
+INTEGRATION_SECURITY_STANDARDS = [
+    'authentication', 'authorization', 'encryption', 'audit_logging',
+    'permission_validation', 'monitoring', 'security_reviews',
+]
+
+AI_GATEWAY_BENEFITS = [
+    'consistent_prompts', 'institutional_memory_access', 'permission_enforcement',
+    'logging', 'future_provider_flexibility',
+]
+
+MC_INTEGRATION_DASHBOARD_METRICS = [
+    'integration_status', 'sync_success', 'failed_synchronizations', 'api_health',
+    'usage_statistics', 'external_dependencies', 'provider_availability',
+]
+
+OCTOBER_INTEGRATION_READINESS = [
+    'calendar_synchronization', 'email_delivery', 'video_meeting_support', 'mapping',
+    'ai_services', 'public_data_ingestion', 'secure_api_infrastructure',
+]
+
+INTEGRATION_SYSTEM_CHAIN = [
+    'mission_control', 'knowledge_platform', 'calendar_brain', 'volunteer_network',
+    'community_education_academy', 'county_operating_system', 'city_operating_system',
+    'neighborhood_operating_system', 'communications', 'document_management',
+    'ai_localbrains', 'external_services',
+]
+
+INTEGRATION_PLATFORM_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-24',
+    'updated': today,
+    'title': 'Master Integration Platform, External Data Services & Open API Architecture',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_24_INTEGRATION_PLATFORM.md',
+    'source_registries': {
+        'technical_architecture': '/data/technical-architecture.json',
+        'systems_integration': '/data/systems-integration.json',
+        'time_intelligence': '/data/time-intelligence-manifest.json',
+        'communication_platform': '/data/communication-platform-manifest.json',
+        'digital_library': '/data/digital-library-manifest.json',
+        'identity_auth': '/data/identity-auth-manifest.json',
+    },
+    'philosophy': 'The institution owns its data — external services provide capabilities',
+    'governing_principle': (
+        'Strong institutions cooperate without becoming dependent; integrations expand '
+        'capabilities while preserving independence and protecting institutional knowledge'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'integration_pipeline_steps': INTEGRATION_PIPELINE_STEPS,
+    'integration_categories': INTEGRATION_CATEGORIES,
+    'integration_category_count': len(INTEGRATION_CATEGORIES),
+    'open_api_use_cases': OPEN_API_USE_CASES,
+    'internal_api_standards': INTERNAL_API_STANDARDS,
+    'institutional_events': INSTITUTIONAL_EVENTS,
+    'sync_principles': SYNC_PRINCIPLES,
+    'institutional_data_ownership': INSTITUTIONAL_DATA_OWNERSHIP,
+    'integration_security_standards': INTEGRATION_SECURITY_STANDARDS,
+    'ai_gateway_benefits': AI_GATEWAY_BENEFITS,
+    'mc_integration_dashboard_metrics': MC_INTEGRATION_DASHBOARD_METRICS,
+    'october_integration_readiness': {
+        'target_date': county_milestone_date,
+        'requirements': OCTOBER_INTEGRATION_READINESS,
+        'label': 'Statewide integration platform operational',
+    },
+    'organizational_goals': {
+        'counties_total': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'integration_system_chain': INTEGRATION_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/systems-integration.html',
+    'packages_completed': 24,
+    'packages_total': 50,
+    'packages_complete_pct': 48,
+    'engineering_note': 'Doctrinal IMP-24 Integration Platform; engineering IMP-24 is seed script from JSON registries',
+    'status': 'documented',
+    'implemented': False,
+}
+
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -4437,7 +4600,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D24', 'indicator': 'Public Website (IMP-21)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D25', 'indicator': 'Mobile PWA & Field Ops (IMP-22)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D26', 'indicator': 'Digital Library (IMP-23)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D27', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D27', 'indicator': 'Integration Platform (IMP-24)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D28', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -5030,6 +5194,33 @@ out = {
             'number': 24,
             'id': 'IMP-24',
             'title': 'Master Integration Platform, External Data Services & Open API Architecture',
+            'status': 'documented',
+        },
+    },
+    'integration_platform': {
+        'title': 'Master Integration Platform, External Data Services & Open API Architecture',
+        'package': 'Implementation Package 24 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_24_INTEGRATION_PLATFORM.md',
+        'manifest': '/data/integration-platform-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': INTEGRATION_PLATFORM_MANIFEST['philosophy'],
+        'integration_category_count': INTEGRATION_PLATFORM_MANIFEST['integration_category_count'],
+        'integration_pipeline_step_count': len(INTEGRATION_PIPELINE_STEPS),
+        'open_api_use_case_count': len(OPEN_API_USE_CASES),
+        'institutional_event_count': len(INSTITUTIONAL_EVENTS),
+        'integration_security_standard_count': len(INTEGRATION_SECURITY_STANDARDS),
+        'packages_completed': INTEGRATION_PLATFORM_MANIFEST['packages_completed'],
+        'packages_complete_pct': INTEGRATION_PLATFORM_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': INTEGRATION_PLATFORM_MANIFEST['mc_dashboard'],
+        'engineering_note': INTEGRATION_PLATFORM_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 25,
+            'id': 'IMP-25',
+            'title': 'Master Security, Privacy, Compliance & Institutional Trust Framework',
             'status': 'specified',
         },
     },
@@ -5214,6 +5405,10 @@ with open(root / 'data/mobile-pwa-manifest.json', 'w', newline='\n') as f:
 
 with open(root / 'data/digital-library-manifest.json', 'w', newline='\n') as f:
     json.dump(DIGITAL_LIBRARY_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/integration-platform-manifest.json', 'w', newline='\n') as f:
+    json.dump(INTEGRATION_PLATFORM_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(
