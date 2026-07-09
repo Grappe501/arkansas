@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Digital Twin <a href="/mission-control/institutional-digital-twin.html" class="mc-inline-link">Executive Simulation #81 →</a></h2>
+    <p class="mc-bar-note">Build #81 — Institutional Digital Twin & Executive Simulation. See entire institution before it happens. What-if scenarios, forecasting, statewide heat map, decision support. MC becomes planning system. 0 simulations · twin not live. ~51% readiness.</p>
     <h2 class="mc-section-title">Civic Institution Roadmap <a href="/mission-control/arkansas-civic-institution-roadmap.html" class="mc-inline-link">Legacy Vision #80 →</a></h2>
     <p class="mc-bar-note">Build #80 — Twenty-Year Vision & Institutional Legacy Plan. 80 builds complete. Four eras, 8 goals, legacy map, founder reflection. Website is beginning; institution is destination. Era 1 Foundation · 1/10 milestones. ~48% readiness.</p>
     <h2 class="mc-section-title">Neighborhood Operating System <a href="/mission-control/arkansas-neighborhood-operating-system.html" class="mc-inline-link">ANOS #79 →</a></h2>
@@ -5229,6 +5231,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initArkansasCityOperatingSystem();
   initArkansasNeighborhoodOperatingSystem();
   initArkansasCivicInstitutionRoadmap();
+  initInstitutionalDigitalTwin();
 });
 
 async function initUxArchitecture() {
@@ -8476,6 +8479,104 @@ async function initArkansasCivicInstitutionRoadmap() {
       <a href="/mission-control/institutional-roadmap.html">Institutional Roadmap (#44)</a> ·
       <a href="/mission-control/organizational-constitution.html">Constitution (#76)</a> ·
       <a href="/mission-control/master-plan.html">Master Plan (#55)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initInstitutionalDigitalTwin() {
+  const root = document.getElementById('mc-institutional-digital-twin-root');
+  if (!root) return;
+
+  const [dtRes, mcRes] = await Promise.all([
+    fetch('/data/institutional-digital-twin.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const dt = await dtRes.json();
+  const mc = await mcRes.json();
+  const s = dt.summary;
+
+  const questionRows = dt.institutional_philosophy.questions.map(q => `
+    <tr><td>${q.question}</td><td>${q.intelligence}</td><td>${q.status}</td></tr>`).join('');
+
+  const systemRows = dt.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td><td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Institutional Digital Twin</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #81 · ${dt.title}</p>
+      <h1>${dt.subtitle}</h1>
+      <p class="mc-header__question">${dt.governing_principle}</p>
+      <p class="mc-bar-note">${dt.purpose}</p>
+      <p class="mc-bar-note"><strong>Reporting → Planning:</strong> ${dt.transforms_mc_to_planning_system ? 'Yes' : 'No'}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Twin readiness</div><div class="mc-stat__value">${s.institutional_digital_twin_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Twin live</div><div class="mc-stat__value">${s.digital_twin_live ? 'Yes' : 'No'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Simulations</div><div class="mc-stat__value">${s.simulations_run}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Heat map</div><div class="mc-stat__value">${s.heat_map_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Decision support</div><div class="mc-stat__value">${s.decision_support_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Real-time mirror</div><div class="mc-stat__value">${s.realtime_mirror ? 'Yes' : 'No'}</div></div>
+    </div>
+    <h2 class="mc-section-title">${dt.institutional_philosophy.title}</h2>
+    <table class="mc-table"><thead><tr><th>Question</th><th>Intelligence</th><th>Status</th></tr></thead>
+      <tbody>${questionRows}</tbody></table>
+    <h2 class="mc-section-title">${dt.institutional_model.title}</h2>
+    <p class="mc-bar-note">${dt.institutional_model.chain}</p>
+    <p class="mc-bar-note">Continuous updates: ${dt.institutional_model.continuous_updates ? 'Yes' : 'No'} · ${dt.institutional_model.status}</p>
+    <ul class="mc-deliverables">${dt.institutional_model.systems.map(sys => `<li>${sys}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${dt.executive_simulation.title}</h2>
+    <p class="mc-bar-note">Run: ${dt.executive_simulation.simulations_run} · ${dt.executive_simulation.status}</p>
+    <ul class="mc-deliverables">${dt.executive_simulation.what_if_scenarios.map(sc => `<li>${sc}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${dt.county_simulation.title}</h2>
+    <p class="mc-bar-note">Twins connected: ${dt.county_simulation.twins_connected} · ${dt.county_simulation.status}</p>
+    <ul class="mc-deliverables">${dt.county_simulation.dimensions.map(d => `<li>${d}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${dt.city_simulation.title}</h2>
+    <p class="mc-bar-note">Twins connected: ${dt.city_simulation.twins_connected} · Predictable: ${dt.city_simulation.predictable_not_reactive ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${dt.city_simulation.dimensions.map(d => `<li>${d}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${dt.neighborhood_simulation.title}</h2>
+    <p class="mc-bar-note">Twins connected: ${dt.neighborhood_simulation.twins_connected}</p>
+    <ul class="mc-deliverables">${dt.neighborhood_simulation.dimensions.map(d => `<li>${d}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${dt.leadership_pipeline_forecasting.title}</h2>
+    <ul class="mc-deliverables">${dt.leadership_pipeline_forecasting.forecasts.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${dt.research_forecasting.title}</h2>
+    <ul class="mc-deliverables">${dt.research_forecasting.monitors.map(m => `<li>${m}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${dt.coalition_forecasting.title}</h2>
+    <ul class="mc-deliverables">${dt.coalition_forecasting.models.map(m => `<li>${m}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${dt.technology_forecasting.title}</h2>
+    <ul class="mc-deliverables">${dt.technology_forecasting.tracks.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${dt.institutional_health_forecast.title}</h2>
+    <p class="mc-bar-note">${dt.institutional_health_forecast.status}</p>
+    <ul class="mc-deliverables">${dt.institutional_health_forecast.indicators.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${dt.arkansas_statewide_heat_map.title}</h2>
+    <p class="mc-bar-note">Flagship view: ${dt.arkansas_statewide_heat_map.flagship_mc_view ? 'Yes' : 'No'} · Live: ${dt.arkansas_statewide_heat_map.live ? 'Yes' : 'No'} · ${dt.arkansas_statewide_heat_map.status}</p>
+    <ul class="mc-deliverables">${dt.arkansas_statewide_heat_map.layers.map(l => `<li>${l}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${dt.decision_support_engine.title}</h2>
+    <p class="mc-bar-note">Live: ${dt.decision_support_engine.live ? 'Yes' : 'No'} · ${dt.decision_support_engine.status}</p>
+    <ul class="mc-deliverables">${dt.decision_support_engine.factors.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${dt.historical_replay.title}</h2>
+    <p class="mc-bar-note">Live: ${dt.historical_replay.live ? 'Yes' : 'No'} · ${dt.historical_replay.status}</p>
+    <ul class="mc-deliverables">${dt.historical_replay.examples.map(e => `<li>${e}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${dt.integration.chain}</p>
+    <p class="mc-bar-note"><strong>Connects everything:</strong> ${dt.integration.institutional_model_connects_everything ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${dt.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${dt.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${dt.recommended_next_build.number} — ${dt.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${dt.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_INSTITUTIONAL_DIGITAL_TWIN.md">MASTER_INSTITUTIONAL_DIGITAL_TWIN.md</a> ·
+      <a href="/data/institutional-digital-twin.json">JSON</a> ·
+      <a href="/mission-control/civic-intelligence-command-center.html">CICC (#65)</a> ·
+      <a href="/mission-control/arkansas-civic-institution-roadmap.html">Legacy Roadmap (#80)</a> ·
+      <a href="/mission-control/civic-atlas.html">Civic Atlas (#58)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

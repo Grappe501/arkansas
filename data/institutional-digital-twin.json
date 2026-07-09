@@ -1,0 +1,340 @@
+{
+  "version": "1.0",
+  "build": 81,
+  "updated": "2026-07-09",
+  "title": "Master Institutional Digital Twin & Executive Simulation System v1.0",
+  "subtitle": "Seeing the Entire Institution Before It Happens",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/institutional-digital-twin.html",
+  "constitution": "/docs/MASTER_INSTITUTIONAL_DIGITAL_TWIN.md",
+  "purpose": "Living digital model mirroring the real institution \u2014 simulate growth, identify bottlenecks, forecast needs, evaluate strategic decisions before making them.",
+  "governing_principle": "Help leadership make wiser decisions. Every forecast strengthens stewardship. Every simulation improves planning. Guided by vision and evidence-based intelligence.",
+  "transforms_mc_to_planning_system": true,
+  "institutional_philosophy": {
+    "title": "Three Questions",
+    "questions": [
+      {
+        "question": "What is happening?",
+        "intelligence": "Current State",
+        "status": "partial"
+      },
+      {
+        "question": "Why is it happening?",
+        "intelligence": "Operational Intelligence",
+        "status": "planned"
+      },
+      {
+        "question": "What is likely to happen next?",
+        "intelligence": "Predictive Intelligence",
+        "status": "planned"
+      }
+    ],
+    "reporting_to_planning": true
+  },
+  "institutional_model": {
+    "title": "Institutional Model",
+    "chain": "Research \u2192 Evidence \u2192 Education \u2192 Academy \u2192 Coalition \u2192 County Operations \u2192 City Operations \u2192 Neighborhood Operations \u2192 Volunteer Network \u2192 Technology \u2192 Mission Control \u2192 Institutional Health",
+    "systems": [
+      "Research",
+      "Evidence",
+      "Education",
+      "Academy",
+      "Coalition",
+      "County Operations",
+      "City Operations",
+      "Neighborhood Operations",
+      "Volunteer Network",
+      "Technology",
+      "Mission Control",
+      "Institutional Health"
+    ],
+    "systems_total": 12,
+    "continuous_updates": true,
+    "status": "specified"
+  },
+  "executive_simulation": {
+    "title": "Executive Simulation",
+    "what_if_scenarios": [
+      "What happens if we recruit 50 new Education Leaders this quarter?",
+      "What happens if we add five new coalition partners in Northwest Arkansas?",
+      "What counties are likely to reach leadership targets first?",
+      "What happens if Academy enrollment doubles?",
+      "What resources will be needed if participation reaches 200,000 Arkansans?"
+    ],
+    "scenarios_total": 5,
+    "simulations_run": 0,
+    "estimates_impacts_before_decisions": true,
+    "status": "specified"
+  },
+  "county_simulation": {
+    "title": "County Simulation",
+    "every_county_digital_twin": true,
+    "dimensions": [
+      "Leadership growth",
+      "Volunteer capacity",
+      "Community conversations",
+      "Coalition development",
+      "Educational demand",
+      "Resource needs"
+    ],
+    "twins_connected": 0,
+    "prioritizes_statewide_support": true,
+    "status": "specified"
+  },
+  "city_simulation": {
+    "title": "City Simulation",
+    "dimensions": [
+      "Education Leader recruitment",
+      "Neighborhood expansion",
+      "Community events",
+      "Academy participation",
+      "Presentation requests",
+      "Coalition partnerships"
+    ],
+    "twins_connected": 0,
+    "predictable_not_reactive": true,
+    "status": "specified"
+  },
+  "neighborhood_simulation": {
+    "title": "Neighborhood Simulation",
+    "dimensions": [
+      "Conversation capacity",
+      "Leadership succession",
+      "Volunteer needs",
+      "Resource distribution",
+      "Community growth"
+    ],
+    "twins_connected": 0,
+    "identifies_mentoring_needs": true,
+    "status": "specified"
+  },
+  "leadership_pipeline_forecasting": {
+    "title": "Leadership Pipeline Forecasting",
+    "forecasts": [
+      "Future Education Leaders",
+      "Future County Directors",
+      "Future City Coordinators",
+      "Future Mentors",
+      "Leadership shortages",
+      "Leadership succession readiness"
+    ],
+    "ensures_continuity": true,
+    "status": "specified"
+  },
+  "research_forecasting": {
+    "title": "Research Forecasting",
+    "monitors": [
+      "Research backlog",
+      "Citation reviews",
+      "Content production",
+      "Editorial workload",
+      "Emerging topics",
+      "Knowledge gaps"
+    ],
+    "allocate_before_bottlenecks": true,
+    "status": "specified"
+  },
+  "coalition_forecasting": {
+    "title": "Coalition Forecasting",
+    "models": [
+      "New organizations",
+      "Regional collaboration",
+      "Community partnerships",
+      "Educational reach",
+      "Volunteer support capacity",
+      "Coalition maturity"
+    ],
+    "intentional_growth": true,
+    "status": "specified"
+  },
+  "technology_forecasting": {
+    "title": "Technology Forecasting",
+    "tracks": [
+      "Infrastructure capacity",
+      "Database growth",
+      "Media storage",
+      "API usage",
+      "Performance trends",
+      "Future technology needs"
+    ],
+    "proactive_planning": true,
+    "status": "specified"
+  },
+  "institutional_health_forecast": {
+    "title": "Institutional Health Forecast",
+    "indicators": [
+      "Research",
+      "Education",
+      "Leadership",
+      "Technology",
+      "Community",
+      "Coalition",
+      "Operations",
+      "Governance",
+      "Volunteer capacity",
+      "Institutional sustainability"
+    ],
+    "highlights_opportunities_and_risks": true,
+    "status": "planned"
+  },
+  "arkansas_statewide_heat_map": {
+    "title": "Arkansas Statewide Heat Map",
+    "flagship_mc_view": true,
+    "layers": [
+      "Educational Coverage",
+      "Leadership Density",
+      "Coalition Strength",
+      "Academy Growth",
+      "Community Activity",
+      "Research Participation",
+      "Volunteer Growth",
+      "Counties and cities needing attention"
+    ],
+    "dynamic_as_institution_evolves": true,
+    "live": false,
+    "status": "planned"
+  },
+  "decision_support_engine": {
+    "title": "Decision Support Engine",
+    "factors": [
+      "Expected benefits",
+      "Possible risks",
+      "Required volunteers",
+      "Technology impact",
+      "Research impact",
+      "Financial implications",
+      "Timeline",
+      "Dependencies"
+    ],
+    "before_major_decisions": true,
+    "live": false,
+    "status": "planned"
+  },
+  "historical_replay": {
+    "title": "Historical Replay",
+    "preserves_history": true,
+    "examples": [
+      "County growth over five years",
+      "Coalition expansion",
+      "Leadership pipeline",
+      "Research development",
+      "Technology evolution"
+    ],
+    "institutional_memory_visual": true,
+    "live": false,
+    "status": "planned"
+  },
+  "integration": {
+    "chain": "Mission Control \u2192 Knowledge Graph \u2192 Relationship OS \u2192 Civic Atlas \u2192 Education Academy \u2192 Observatory \u2192 Research Institute \u2192 Volunteer Network \u2192 Coalition",
+    "institutional_model_connects_everything": true,
+    "systems": [
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      },
+      {
+        "system": "Knowledge Graph",
+        "route": "/mission-control/knowledge-graph.html",
+        "status": "live"
+      },
+      {
+        "system": "Relationship Operating System (#59)",
+        "route": "/mission-control/relationship-os.html",
+        "status": "live"
+      },
+      {
+        "system": "Arkansas Civic Atlas (#58)",
+        "route": "/mission-control/civic-atlas.html",
+        "status": "live"
+      },
+      {
+        "system": "Community Education Academy (#68)",
+        "route": "/mission-control/citizen-leadership-academy.html",
+        "status": "live"
+      },
+      {
+        "system": "Campaign Finance Observatory (#63)",
+        "route": "/mission-control/campaign-finance-observatory.html",
+        "status": "live"
+      },
+      {
+        "system": "Research Institute (#73)",
+        "route": "/mission-control/arkansas-research-institute.html",
+        "status": "live"
+      },
+      {
+        "system": "Coalition Network (#61)",
+        "route": "/mission-control/coalition-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Civic Intelligence Command Center (#65)",
+        "route": "/mission-control/civic-intelligence-command-center.html",
+        "status": "live"
+      },
+      {
+        "system": "ACOS (#77)",
+        "route": "/mission-control/arkansas-county-operating-system.html",
+        "status": "live"
+      },
+      {
+        "system": "ArCOS (#78)",
+        "route": "/mission-control/arkansas-city-operating-system.html",
+        "status": "live"
+      },
+      {
+        "system": "ANOS (#79)",
+        "route": "/mission-control/arkansas-neighborhood-operating-system.html",
+        "status": "live"
+      },
+      {
+        "system": "Civic Institution Roadmap (#80)",
+        "route": "/mission-control/arkansas-civic-institution-roadmap.html",
+        "status": "live"
+      }
+    ]
+  },
+  "long_term_vision": "Twenty years after launch, Mission Control models the institution \u2014 not merely describes it. Leadership explores scenarios, anticipates needs, strengthens communities, prepares leaders, preserves knowledge. Self-aware through disciplined observation, thoughtful planning, continuous learning.",
+  "summary": {
+    "digital_twin_live": false,
+    "realtime_mirror": false,
+    "simulations_run": 0,
+    "forecasts_generated": 0,
+    "heat_map_live": false,
+    "decision_support_live": false,
+    "historical_replay_live": false,
+    "predictive_intelligence_live": false,
+    "operational_intelligence_live": false,
+    "county_twins_connected": 0,
+    "city_twins_connected": 0,
+    "neighborhood_twins_connected": 0,
+    "institutional_model_systems": 12,
+    "executive_scenarios": 5,
+    "institutional_digital_twin_readiness_pct": 51,
+    "civic_institution_roadmap_readiness_pct": 48,
+    "civic_intelligence_command_center_readiness_pct": 43,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "Digital Twin not live \u2014 no real-time institutional mirror",
+    "0 simulations run \u2014 what-if engine not built",
+    "Predictive intelligence not operational",
+    "Operational intelligence partial \u2014 current state only via MC JSON",
+    "Statewide heat map not live \u2014 flagship view missing",
+    "Decision support engine not live \u2014 no pre-decision analysis",
+    "Historical replay not implemented \u2014 no institutional memory timeline",
+    "0 county/city/neighborhood twins connected to institutional model",
+    "Leadership pipeline forecasting \u2014 no forecast data",
+    "Research/coalition/technology forecasting \u2014 monitors specified only",
+    "Build #81 vs Civic Intelligence Command Center (#65) \u2014 unify executive intelligence?",
+    "Build #81 vs county/city/neighborhood OS digital twins \u2014 reconcile layers?",
+    "No simulation data feeds \u2014 all dimensions at zero"
+  ],
+  "recommended_next_build": {
+    "number": 82,
+    "title": "Digital Twin Simulation Engine & Heat Map Components",
+    "note": "Scenario runner, forecast models, statewide heat map UI, decision support checklist, historical replay timeline, COMP-* specs, GitHub backlog."
+  }
+}

@@ -13,6 +13,18 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.85.0] - 2026-07-09 — Build #81 Institutional Digital Twin & Executive Simulation
+
+### Seeing the Entire Institution Before It Happens
+- **Master Institutional Digital Twin & Executive Simulation System v1.0** — living model mirroring the institution
+- Three questions: current state, operational intelligence, predictive intelligence
+- 12-system institutional model; executive what-if simulation; county/city/neighborhood layers
+- Leadership, research, coalition, technology forecasting; health forecast; statewide heat map
+- Decision support engine, historical replay; transforms MC from reporting to planning
+- Integrates CICC (#65), Legacy Roadmap (#80), geographic OS (#77–79), Knowledge Graph, Civic Atlas
+- Honest: twin not live · 0 simulations · heat map not live · decision support not live · ~51% readiness
+- MC dashboard: `/mission-control/institutional-digital-twin.html`
+
 ## [1.84.0] - 2026-07-09 — Build #80 Arkansas Civic Institution Roadmap
 
 ### The Twenty-Year Vision & Institutional Legacy Plan

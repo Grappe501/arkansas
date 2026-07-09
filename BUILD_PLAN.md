@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.84.0 · **Legacy Roadmap:** [/mission-control/arkansas-civic-institution-roadmap.html](/mission-control/arkansas-civic-institution-roadmap.html) · **80 builds complete**  
-**Twenty-year vision** — four eras · legacy map · institution endures · **Next:** Build #81 Implementation Translation Layer  
+**Current version:** 1.85.0 · **Digital Twin:** [/mission-control/institutional-digital-twin.html](/mission-control/institutional-digital-twin.html) · **81 builds complete**  
+**Executive simulation** — what-if · forecasting · heat map · decision support · **Next:** Build #82 Simulation Engine  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **81** | **Institutional Digital Twin & Executive Simulation** | **✅ v1.85.0** |
 | **80** | **Arkansas Civic Institution Roadmap** | **✅ v1.84.0** |
 | **79** | **Arkansas Neighborhood Operating System (ANOS)** | **✅ v1.83.0** |
 | **78** | **Arkansas City Operating System (ArCOS)** | **✅ v1.82.0** |
