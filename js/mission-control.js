@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Civic Atlas <a href="/mission-control/civic-atlas.html" class="mc-inline-link">Geographic Intelligence #58 →</a></h2>
+    <p class="mc-bar-note">Build #58 — Arkansas Civic Atlas. 7-level hierarchy, Educational Coverage Score, 75 counties at ECS=0. 0 communities · map planned. ~52% atlas readiness.</p>
     <h2 class="mc-section-title">Neighborhood Organizing <a href="/mission-control/neighborhood-organizing.html" class="mc-inline-link">Last Mile #57 →</a></h2>
     <p class="mc-bar-note">Build #57 — Neighborhood Organizing & Relational Network. 4 geographic layers, relational organizing, last mile dashboard. 0 neighborhoods · 0 leaders. ~50% last mile readiness.</p>
     <h2 class="mc-section-title">Statewide Growth <a href="/mission-control/statewide-growth.html" class="mc-inline-link">Arkansas Network #56 →</a></h2>
@@ -5160,6 +5162,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMasterPlan();
   initStatewideGrowth();
   initNeighborhoodOrganizing();
+  initCivicAtlas();
 });
 
 async function initUxArchitecture() {
@@ -5914,6 +5917,135 @@ async function initNeighborhoodOrganizing() {
       <a href="/data/neighborhood-organizing.json">JSON</a> ·
       <a href="/data/neighborhood-profiles.json">Profiles</a> ·
       <a href="/mission-control/statewide-growth.html">Statewide Growth (#56)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initCivicAtlas() {
+  const root = document.getElementById('mc-civic-atlas-root');
+  if (!root) return;
+
+  const [caRes, mcRes] = await Promise.all([
+    fetch('/data/civic-atlas.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ca = await caRes.json();
+  const mc = await mcRes.json();
+  const s = ca.summary;
+
+  const hierarchyRows = ca.geographic_hierarchy.levels.map(l => `
+    <tr><td>L${l.level}</td><td><code>${l.id}</code></td><td>${l.title}</td>
+      <td>${l.scope}</td><td>${l.status}</td></tr>`).join('');
+
+  const ecsRows = ca.educational_coverage_score.components.map(c => `
+    <tr><td><code>${c.id}</code></td><td>${c.category}</td><td>${c.weight_pct}%</td>
+      <td>${c.indicators.join(', ')}</td><td>${c.status}</td></tr>`).join('');
+
+  const needsRows = ca.community_needs_assessment.signals.map(n => `
+    <tr><td><code>${n.id}</code></td><td>${n.signal}</td><td>${n.count}</td><td>${n.status}</td></tr>`).join('');
+
+  const assetTypeRows = ca.community_assets_directory.asset_types.map(t => `<li>${t}</li>`).join('');
+
+  const growthRows = ca.community_growth_dashboard.metrics.map(g => `
+    <tr><td><code>${g.id}</code></td><td>${g.metric}</td><td>${g.current}</td><td>${g.status}</td></tr>`).join('');
+
+  const panelRows = ca.mc_integration.panels.map(p => `
+    <tr><td><code>${p.id}</code></td><td>${p.panel}</td><td>${p.status}</td></tr>`).join('');
+
+  const layerRows = ca.map_layers.layers.map(l => `
+    <tr><td><code>${l.id}</code></td><td>${l.layer}</td><td>${l.status}</td></tr>`).join('');
+
+  const regionRows = ca.region_coverage.map(r => `
+    <tr><td><code>${r.id}</code></td><td>${r.title}</td><td>${r.counties_mapped}</td>
+      <td>${r.avg_coverage_score}</td><td>${r.status}</td></tr>`).join('');
+
+  const systemRows = ca.system_connections.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td>${sys.route ? `<a href="${sys.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  const bottomCounties = ca.county_coverage.counties.slice(0, 10).map(c => `
+    <tr><td>${c.name}</td><td>${c.education_coverage_score}</td>
+      <td>${c.education_leaders}</td><td>${c.status}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Civic Atlas</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #58 · ${ca.title}</p>
+      <h1>Arkansas Civic Atlas</h1>
+      <p class="mc-header__question">${ca.governing_principle}</p>
+      <p class="mc-bar-note">${ca.purpose}</p>
+      <p class="mc-bar-note"><strong>Not political targeting:</strong> Educational planning system</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Atlas readiness</div><div class="mc-stat__value">${s.civic_atlas_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Avg ECS score</div><div class="mc-stat__value">${s.statewide_avg_coverage_score}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Counties scored</div><div class="mc-stat__value">${s.counties_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Communities</div><div class="mc-stat__value">${s.communities_joined}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Assets cataloged</div><div class="mc-stat__value">${s.assets_cataloged}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Map</div><div class="mc-stat__value" style="font-size:1.1rem">${s.interactive_map_status}</div></div>
+    </div>
+    <h2 class="mc-section-title">Planning Questions</h2>
+    <ul class="mc-deliverables">${ca.planning_questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Geographic Hierarchy</h2>
+    <p class="mc-bar-note">${ca.geographic_hierarchy.flow}</p>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Level</th><th>Scope</th><th>Status</th></tr></thead>
+      <tbody>${hierarchyRows}</tbody></table>
+    <h2 class="mc-section-title">Educational Coverage Score</h2>
+    <p class="mc-bar-note">${ca.educational_coverage_score.principle} · Scale: ${ca.educational_coverage_score.scale}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Category</th><th>Weight</th><th>Indicators</th><th>Status</th></tr></thead>
+      <tbody>${ecsRows}</tbody></table>
+    <h2 class="mc-section-title">7 Regions</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Region</th><th>Counties mapped</th><th>Avg ECS</th><th>Status</th></tr></thead>
+      <tbody>${regionRows}</tbody></table>
+    <h2 class="mc-section-title">Sample Counties (ECS Baseline)</h2>
+    <table class="mc-table"><thead><tr><th>County</th><th>ECS</th><th>Leaders</th><th>Status</th></tr></thead>
+      <tbody>${bottomCounties}</tbody></table>
+    <h2 class="mc-section-title">Community Assets Directory</h2>
+    <p class="mc-bar-note">${s.assets_cataloged} assets · <a href="${ca.community_assets_directory.registry}">Registry</a></p>
+    <ul class="mc-deliverables">${assetTypeRows}</ul>
+    <h2 class="mc-section-title">Community Needs Assessment</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Signal</th><th>Count</th><th>Status</th></tr></thead>
+      <tbody>${needsRows}</tbody></table>
+    <h2 class="mc-section-title">Arkansas Civic Calendar</h2>
+    <p class="mc-bar-note">${ca.arkansas_civic_calendar.events_scheduled} events · Browse by: ${ca.arkansas_civic_calendar.browse_by.join(', ')}</p>
+    <ul class="mc-deliverables">${ca.arkansas_civic_calendar.event_types.map(e => `<li>${e}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Community Growth Dashboard</h2>
+    <p class="mc-bar-note">Geographic visualization: ${ca.community_growth_dashboard.geographic_visualization}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${growthRows}</tbody></table>
+    <h2 class="mc-section-title">Map Layers</h2>
+    <p class="mc-bar-note">Interactive map: ${ca.map_layers.interactive_map_status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Layer</th><th>Status</th></tr></thead>
+      <tbody>${layerRows}</tbody></table>
+    <h2 class="mc-section-title">Civic Story Archive</h2>
+    <p class="mc-bar-note">${ca.civic_story_archive.stories_documented} stories documented</p>
+    <ul class="mc-deliverables">${ca.civic_story_archive.story_types.map(st => `<li>${st}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Resource Allocation Engine</h2>
+    <ul class="mc-deliverables">${ca.resource_allocation_engine.questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">MC Atlas Dashboard Panels</h2>
+    <p class="mc-bar-note">${ca.mc_integration.panels_live}/${ca.mc_integration.panels.length} panels partial or live</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Panel</th><th>Status</th></tr></thead>
+      <tbody>${panelRows}</tbody></table>
+    <h2 class="mc-section-title">Future Expansion</h2>
+    <ul class="mc-deliverables">${ca.future_expansion.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">System Connections</h2>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <ul class="mc-deliverables">${ca.long_term_vision.map(v => `<li>${v}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ca.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ca.recommended_next_build.number} — ${ca.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ca.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_CIVIC_ATLAS.md">MASTER_CIVIC_ATLAS.md</a> ·
+      <a href="/data/civic-atlas.json">JSON</a> ·
+      <a href="/data/community-profiles.json">Profiles</a> ·
+      <a href="/data/community-assets.json">Assets</a> ·
+      <a href="/mission-control/statewide-growth.html">Statewide Growth</a> ·
+      <a href="/mission-control/neighborhood-organizing.html">Neighborhood (#57)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

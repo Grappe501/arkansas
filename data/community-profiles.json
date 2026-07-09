@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "build": 58,
+  "updated": "2026-07-09",
+  "title": "Community Profiles Registry",
+  "summary": {
+    "communities_total": 0,
+    "with_leaders": 0,
+    "with_events": 0,
+    "with_stories": 0
+  },
+  "profile_schema": {
+    "fields": [
+      "County",
+      "City",
+      "Population (public data)",
+      "Education Leaders",
+      "Coalition partners",
+      "Libraries",
+      "Schools and colleges",
+      "Community organizations",
+      "Faith communities participating (opt-in listing)",
+      "Community conversation history",
+      "Educational events",
+      "Resource requests",
+      "Educational priorities (local)"
+    ]
+  },
+  "communities": []
+}

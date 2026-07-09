@@ -1,6 +1,6 @@
 {
-  "version": "1.61.0",
-  "build": 57,
+  "version": "1.62.0",
+  "build": 58,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,22 +9,22 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 57,
+    "overall_completion": 58,
     "current_build": {
-      "number": 57,
-      "title": "Citizens United Facts Arkansas Neighborhood Organizing & Relational Network v1.0"
-    },
-    "active_phase": "Last Mile Architecture \u2192 Implementation Translation",
-    "last_completed": "Statewide Growth & Leadership Blueprint",
-    "next_build": {
       "number": 58,
+      "title": "Citizens United Facts Arkansas Civic Intelligence & Community Mapping System v1.0"
+    },
+    "active_phase": "Civic Atlas Intelligence \u2192 Implementation Translation",
+    "last_completed": "Neighborhood Organizing & Relational Network",
+    "next_build": {
+      "number": 59,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
     "content_readiness": 28,
     "research_readiness": 25,
-    "data_viz_readiness": 6,
+    "data_viz_readiness": 8,
     "signup_funnel_readiness": 22,
     "civic_action_readiness": 26,
     "coalition_readiness": 18,
@@ -53,11 +53,11 @@
     "library_readiness": 22,
     "learning_lab_readiness": 22,
     "media_studio_readiness": 18,
-    "civic_intelligence_readiness": 24,
+    "civic_intelligence_readiness": 28,
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 25,
-    "institutional_maturity_pct": 44,
+    "institutional_maturity_pct": 45,
     "current_institutional_version": "V1",
     "systems_integration_readiness": 28,
     "production_matrix_readiness": 39,
@@ -72,6 +72,7 @@
     "master_plan_readiness": 56,
     "statewide_growth_readiness": 48,
     "neighborhood_organizing_readiness": 50,
+    "civic_atlas_readiness": 52,
     "rollout_phase": 0,
     "rollout_phase_title": "Private Development",
     "planning_phase_complete": true,
@@ -85,8 +86,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 57,
-      "note": "Build #57 \u2014 Neighborhood Organizing & Relational Network."
+      "value": 58,
+      "note": "Build #58 \u2014 Arkansas Civic Atlas."
     },
     {
       "id": "constitution",
@@ -415,9 +416,9 @@
     {
       "id": "institutional_maturity",
       "label": "Institutional Maturity (V1\u2013V10)",
-      "value": 44,
+      "value": 45,
       "max": 100,
-      "note": "Last mile architecture live \u2014 0 neighborhoods illuminated."
+      "note": "Geographic intelligence layer live \u2014 map planned."
     },
     {
       "id": "systems_integration",
@@ -509,6 +510,13 @@
       "value": 50,
       "max": 100,
       "note": "0 neighborhoods \u00b7 0 leaders \u00b7 map planned."
+    },
+    {
+      "id": "civic_atlas",
+      "label": "Civic Atlas",
+      "value": 52,
+      "max": 100,
+      "note": "75 counties ECS=0 \u00b7 0 assets \u00b7 map planned."
     }
   ],
   "public_readiness": {
@@ -1143,6 +1151,12 @@
       "id": "neighborhood_organizing",
       "label": "Neighborhood Organizing",
       "href": "/mission-control/neighborhood-organizing.html",
+      "status": "complete"
+    },
+    {
+      "id": "civic_atlas",
+      "label": "Civic Atlas",
+      "href": "/mission-control/civic-atlas.html",
       "status": "complete"
     }
   ],
@@ -2169,6 +2183,61 @@
     }
   ],
   "builds": [
+    {
+      "number": 58,
+      "title": "Citizens United Facts Arkansas Civic Intelligence & Community Mapping System v1.0",
+      "version": "1.62.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Arkansas Civic Atlas \u2014 geographic intelligence & community mapping",
+      "summary": "7-level hierarchy; Educational Coverage Score; 75 county scores; 52% atlas readiness. 0 communities \u00b7 map planned.",
+      "files_created": [
+        "data/civic-atlas.json",
+        "data/community-profiles.json",
+        "data/community-assets.json",
+        "docs/MASTER_CIVIC_ATLAS.md",
+        "builds/058-civic-atlas.md",
+        "mission-control/civic-atlas.html",
+        "scripts/gen-civic-atlas.py",
+        "scripts/update-mc-build58.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/civic-atlas.html"
+      ],
+      "decisions_made": [
+        "Educational planning system \u2014 not political targeting",
+        "7-level geographic hierarchy through Education Leader",
+        "Educational Coverage Score: Leadership, Learning, Community, Coalition, Resources",
+        "75 counties scored at 0 \u2014 honest baseline",
+        "Community assets directory: 10 asset types scaffolded",
+        "Integrates #56 statewide, #57 neighborhood, #31 county OS",
+        "52% readiness \u2014 intelligence documented, map not built"
+      ],
+      "open_questions": [
+        "Unify ECS with County OS education score categories?",
+        "Map tech: Leaflet + GeoJSON vs SVG Arkansas?",
+        "Faith community opt-in listing workflow?",
+        "Community asset ingestion: manual vs API?"
+      ],
+      "risks": [
+        "0/75 counties with coverage \u2014 all ECS scores at 0",
+        "0 community profiles \u00b7 0 assets cataloged",
+        "Interactive Arkansas map not built \u2014 MC tables only",
+        "Civic calendar not implemented \u2014 0 events scheduled"
+      ],
+      "next_recommended": 59,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/civic-atlas.html",
+      "review_status": "complete"
+    },
     {
       "number": 57,
       "title": "Citizens United Facts Arkansas Neighborhood Organizing & Relational Network v1.0",
@@ -4974,21 +5043,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Neighborhood Organizing v1.0 \u2014 last mile architecture, relational network, 4 layers",
-    "building_now": "Community growth stack complete (#56+#57) \u2014 implementation translation next",
+    "what_built": "Arkansas Civic Atlas v1.0 \u2014 geographic intelligence, ECS scores, assets directory",
+    "building_now": "Community growth stack complete (#56\u2013#58) \u2014 implementation translation next",
     "blocked": [
-      "Illumination map",
-      "Referral tracking",
-      "Neighborhood profiles DB",
-      "Event calendar"
+      "Interactive map",
+      "Civic calendar",
+      "Asset ingestion",
+      "Story archive"
     ],
     "ready_public": [
-      "Last mile dashboard",
-      "4-layer model",
-      "Resource kit index",
-      "Privacy principles"
+      "75 county ECS baseline",
+      "7 regions",
+      "Planning questions",
+      "Needs assessment"
     ],
-    "next": "Build #58 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #59 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -5617,5 +5686,15 @@
     "participants_target": 200000,
     "participants_current": 0,
     "illumination_map_status": "planned"
+  },
+  "civic_atlas": "/data/civic-atlas.json",
+  "civic_atlas_dashboard": "/mission-control/civic-atlas.html",
+  "civic_atlas_inventory": {
+    "readiness_score": 52,
+    "counties_scored": 75,
+    "statewide_avg_coverage_score": 0,
+    "communities_joined": 0,
+    "assets_cataloged": 0,
+    "interactive_map_status": "planned"
   }
 }

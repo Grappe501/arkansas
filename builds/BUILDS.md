@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#58** | **Arkansas Civic Atlas** | **1.62.0** | **✅ Complete** | [058](058-civic-atlas.md) · [/mission-control/civic-atlas.html](../mission-control/civic-atlas.html) |
 | **#57** | **Neighborhood Organizing & Relational Network** | **1.61.0** | **✅ Complete** | [057](057-neighborhood-organizing.md) · [/mission-control/neighborhood-organizing.html](../mission-control/neighborhood-organizing.html) |
 | **#56** | **Statewide Growth & Leadership Blueprint** | **1.60.0** | **✅ Complete** | [056](056-statewide-growth.md) · [/mission-control/statewide-growth.html](../mission-control/statewide-growth.html) |
 | **#55** | **Master Master Plan** ★ | **1.59.0** | **✅ Complete** | [055](055-master-master-plan.md) · [/mission-control/master-plan.html](../mission-control/master-plan.html) |

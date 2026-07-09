@@ -1,0 +1,1746 @@
+{
+  "version": "1.0",
+  "build": 58,
+  "updated": "2026-07-09",
+  "title": "Arkansas Civic Atlas v1.0",
+  "subtitle": "Civic Intelligence & Community Mapping System",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/civic-atlas.html",
+  "constitution": "/docs/MASTER_CIVIC_ATLAS.md",
+  "purpose": "Living intelligence system mapping communities, civic institutions, educational opportunities, and outreach capacity \u2014 educational planning, not political targeting.",
+  "governing_principle": "Serve every part of Arkansas thoughtfully and equitably. Maps reveal where civic understanding is growing and where opportunities remain.",
+  "not_political_targeting": true,
+  "planning_questions": [
+    "Where are we reaching people?",
+    "Where are we missing people?",
+    "Where should we invest educational resources next?"
+  ],
+  "vision": "A map of Arkansas where every county, city, and community tells an educational story \u2014 leaders, partners, conversations, assets, and gaps visible at a glance.",
+  "geographic_hierarchy": {
+    "title": "Arkansas Geographic Hierarchy",
+    "flow": "State \u2192 Region \u2192 County \u2192 City \u2192 Community \u2192 Neighborhood \u2192 Education Leader",
+    "levels": [
+      {
+        "level": 1,
+        "id": "state",
+        "title": "State",
+        "scope": "Arkansas",
+        "status": "partial"
+      },
+      {
+        "level": 2,
+        "id": "region",
+        "title": "Region",
+        "scope": "7 regions",
+        "status": "defined"
+      },
+      {
+        "level": 3,
+        "id": "county",
+        "title": "County",
+        "scope": "75 counties",
+        "status": "scaffolded"
+      },
+      {
+        "level": 4,
+        "id": "city",
+        "title": "City",
+        "scope": "250 largest cities",
+        "status": "scaffolded"
+      },
+      {
+        "level": 5,
+        "id": "community",
+        "title": "Community",
+        "scope": "Participating communities",
+        "status": "planned"
+      },
+      {
+        "level": 6,
+        "id": "neighborhood",
+        "title": "Neighborhood",
+        "scope": "Last mile",
+        "status": "planned"
+      },
+      {
+        "level": 7,
+        "id": "education_leader",
+        "title": "Education Leader",
+        "scope": "Individual educators",
+        "status": "planned"
+      }
+    ]
+  },
+  "community_profiles": {
+    "title": "Living Community Profiles",
+    "registry": "/data/community-profiles.json",
+    "fields": [
+      "County",
+      "City",
+      "Population (public data)",
+      "Education Leaders",
+      "Coalition partners",
+      "Libraries",
+      "Schools and colleges",
+      "Community organizations",
+      "Faith communities participating (opt-in listing)",
+      "Community conversation history",
+      "Educational events",
+      "Resource requests",
+      "Educational priorities (local)"
+    ],
+    "communities_count": 0,
+    "status": "scaffolded"
+  },
+  "educational_coverage_score": {
+    "title": "Educational Coverage Score",
+    "principle": "Measures educational capacity \u2014 not political activity",
+    "scale": "0\u2013100 per county and community",
+    "components": [
+      {
+        "id": "ECS-LD",
+        "category": "Leadership",
+        "weight_pct": 25,
+        "indicators": [
+          "Education Leaders present",
+          "Leadership depth"
+        ],
+        "status": "scaffolded"
+      },
+      {
+        "id": "ECS-LN",
+        "category": "Learning",
+        "weight_pct": 20,
+        "indicators": [
+          "Active learners",
+          "Curriculum completion"
+        ],
+        "status": "planned"
+      },
+      {
+        "id": "ECS-CM",
+        "category": "Community",
+        "weight_pct": 20,
+        "indicators": [
+          "Conversations held",
+          "Events hosted"
+        ],
+        "status": "planned"
+      },
+      {
+        "id": "ECS-CL",
+        "category": "Coalition",
+        "weight_pct": 20,
+        "indicators": [
+          "Partner organizations",
+          "Organizational diversity"
+        ],
+        "status": "planned"
+      },
+      {
+        "id": "ECS-RS",
+        "category": "Resources",
+        "weight_pct": 15,
+        "indicators": [
+          "Toolkit usage",
+          "Resource downloads"
+        ],
+        "status": "planned"
+      }
+    ],
+    "statewide_avg": 0,
+    "counties_scored": 75,
+    "status": "scaffolded"
+  },
+  "county_coverage": {
+    "counties_total": 75,
+    "counties_with_coverage": 0,
+    "statewide_avg_score": 0,
+    "counties": [
+      {
+        "fips": "05001",
+        "name": "Arkansas",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05003",
+        "name": "Ashley",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05005",
+        "name": "Baxter",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05007",
+        "name": "Benton",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05009",
+        "name": "Boone",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05011",
+        "name": "Bradley",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05013",
+        "name": "Calhoun",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05015",
+        "name": "Carroll",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05017",
+        "name": "Chicot",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05019",
+        "name": "Clark",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05021",
+        "name": "Clay",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05023",
+        "name": "Cleburne",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05025",
+        "name": "Cleveland",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05027",
+        "name": "Columbia",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05029",
+        "name": "Conway",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05031",
+        "name": "Craighead",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05033",
+        "name": "Crawford",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05035",
+        "name": "Crittenden",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05037",
+        "name": "Cross",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05039",
+        "name": "Dallas",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05041",
+        "name": "Desha",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05043",
+        "name": "Drew",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05045",
+        "name": "Faulkner",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05047",
+        "name": "Franklin",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05049",
+        "name": "Fulton",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05051",
+        "name": "Garland",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05053",
+        "name": "Grant",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05055",
+        "name": "Greene",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05057",
+        "name": "Hempstead",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05059",
+        "name": "Hot Spring",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05061",
+        "name": "Howard",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05063",
+        "name": "Independence",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05065",
+        "name": "Izard",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05067",
+        "name": "Jackson",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05069",
+        "name": "Jefferson",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05071",
+        "name": "Johnson",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05073",
+        "name": "Lafayette",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05075",
+        "name": "Lawrence",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05077",
+        "name": "Lee",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05079",
+        "name": "Lincoln",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05081",
+        "name": "Little River",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05083",
+        "name": "Logan",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05085",
+        "name": "Lonoke",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05087",
+        "name": "Madison",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05089",
+        "name": "Marion",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05091",
+        "name": "Miller",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05093",
+        "name": "Mississippi",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05095",
+        "name": "Monroe",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05097",
+        "name": "Montgomery",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05099",
+        "name": "Nevada",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05101",
+        "name": "Newton",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05103",
+        "name": "Ouachita",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05105",
+        "name": "Perry",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05107",
+        "name": "Phillips",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05109",
+        "name": "Pike",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05111",
+        "name": "Poinsett",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05113",
+        "name": "Polk",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05115",
+        "name": "Pope",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05117",
+        "name": "Prairie",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05119",
+        "name": "Pulaski",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05121",
+        "name": "Randolph",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05123",
+        "name": "St. Francis",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05125",
+        "name": "Saline",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05127",
+        "name": "Scott",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05129",
+        "name": "Searcy",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05131",
+        "name": "Sebastian",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05133",
+        "name": "Sevier",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05135",
+        "name": "Sharp",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05137",
+        "name": "Stone",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05139",
+        "name": "Union",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05141",
+        "name": "Van Buren",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05143",
+        "name": "Washington",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05145",
+        "name": "White",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05147",
+        "name": "Woodruff",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      },
+      {
+        "fips": "05149",
+        "name": "Yell",
+        "education_coverage_score": 0,
+        "components": {
+          "leadership": 0,
+          "learning": 0,
+          "community": 0,
+          "coalition": 0,
+          "resources": 0
+        },
+        "education_leaders": 0,
+        "participants": 0,
+        "conversations": 0,
+        "status": "no_coverage"
+      }
+    ]
+  },
+  "region_coverage": [
+    {
+      "id": "COS-RG-01",
+      "title": "Northwest Arkansas",
+      "status": "defined",
+      "counties_mapped": 0,
+      "education_leaders": 0,
+      "avg_coverage_score": 0
+    },
+    {
+      "id": "COS-RG-02",
+      "title": "North Central Arkansas",
+      "status": "defined",
+      "counties_mapped": 0,
+      "education_leaders": 0,
+      "avg_coverage_score": 0
+    },
+    {
+      "id": "COS-RG-03",
+      "title": "Central Arkansas",
+      "status": "defined",
+      "counties_mapped": 0,
+      "education_leaders": 0,
+      "avg_coverage_score": 0
+    },
+    {
+      "id": "COS-RG-04",
+      "title": "River Valley",
+      "status": "defined",
+      "counties_mapped": 0,
+      "education_leaders": 0,
+      "avg_coverage_score": 0
+    },
+    {
+      "id": "COS-RG-05",
+      "title": "Delta",
+      "status": "defined",
+      "counties_mapped": 0,
+      "education_leaders": 0,
+      "avg_coverage_score": 0
+    },
+    {
+      "id": "COS-RG-06",
+      "title": "Southwest Arkansas",
+      "status": "defined",
+      "counties_mapped": 0,
+      "education_leaders": 0,
+      "avg_coverage_score": 0
+    },
+    {
+      "id": "COS-RG-07",
+      "title": "Southeast Arkansas",
+      "status": "defined",
+      "counties_mapped": 0,
+      "education_leaders": 0,
+      "avg_coverage_score": 0
+    }
+  ],
+  "community_assets_directory": {
+    "title": "Civic Education Assets Inventory",
+    "registry": "/data/community-assets.json",
+    "asset_types": [
+      "Public libraries",
+      "Community colleges",
+      "Universities",
+      "Museums",
+      "Historical societies",
+      "Civic clubs",
+      "Veteran organizations",
+      "Community centers",
+      "Nonprofit organizations",
+      "Other participating educational institutions"
+    ],
+    "assets_cataloged": 0,
+    "status": "scaffolded"
+  },
+  "community_needs_assessment": {
+    "title": "Educational Opportunity Signals",
+    "signals": [
+      {
+        "id": "NS-1",
+        "signal": "Counties without Education Leaders",
+        "count": 75,
+        "status": "active"
+      },
+      {
+        "id": "NS-2",
+        "signal": "Cities without coalition partners",
+        "count": 250,
+        "status": "active"
+      },
+      {
+        "id": "NS-3",
+        "signal": "Communities requesting presentations",
+        "count": 0,
+        "status": "planned"
+      },
+      {
+        "id": "NS-4",
+        "signal": "Areas with limited resource usage",
+        "count": 75,
+        "status": "active"
+      },
+      {
+        "id": "NS-5",
+        "signal": "Communities seeking additional materials",
+        "count": 0,
+        "status": "planned"
+      }
+    ],
+    "priority": "Outreach based on educational need"
+  },
+  "arkansas_civic_calendar": {
+    "title": "Statewide Civic Calendar",
+    "event_types": [
+      "Educational events",
+      "Community conversations",
+      "Academy workshops",
+      "Coalition meetings",
+      "Public presentations",
+      "Volunteer opportunities"
+    ],
+    "events_scheduled": 0,
+    "browse_by": [
+      "County",
+      "City"
+    ],
+    "status": "planned"
+  },
+  "community_growth_dashboard": {
+    "title": "Geographic Growth Visualization",
+    "metrics": [
+      {
+        "id": "GD-1",
+        "metric": "New communities joining",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "GD-2",
+        "metric": "New Education Leaders",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "GD-3",
+        "metric": "New coalition organizations",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "GD-4",
+        "metric": "Educational events added",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "GD-5",
+        "metric": "Neighborhood participation",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "GD-6",
+        "metric": "Resource distribution",
+        "current": 0,
+        "status": "planned"
+      }
+    ],
+    "geographic_visualization": "planned",
+    "status": "partial"
+  },
+  "civic_story_archive": {
+    "title": "Community Educational Journey",
+    "story_types": [
+      "First community conversation",
+      "New Education Leader",
+      "Coalition milestones",
+      "Local partnerships",
+      "Educational innovations",
+      "Community success stories"
+    ],
+    "stories_documented": 0,
+    "status": "planned"
+  },
+  "resource_allocation_engine": {
+    "title": "Planning Support",
+    "questions": [
+      "Where should the next workshop be held?",
+      "Which counties need additional Education Leaders?",
+      "Which cities have requested presentations?",
+      "Where should new printed materials be distributed?",
+      "Which coalition partners may mentor nearby communities?"
+    ],
+    "status": "planned",
+    "note": "Thoughtful planning rather than guesswork"
+  },
+  "map_layers": {
+    "title": "Educational Story Map Layers",
+    "interactive_map_status": "planned",
+    "layers": [
+      {
+        "id": "leaders",
+        "layer": "Education Leaders active",
+        "status": "planned"
+      },
+      {
+        "id": "coalition",
+        "layer": "Coalition partners",
+        "status": "planned"
+      },
+      {
+        "id": "conversations",
+        "layer": "Community conversations",
+        "status": "planned"
+      },
+      {
+        "id": "libraries",
+        "layer": "Libraries engaged",
+        "status": "planned"
+      },
+      {
+        "id": "colleges",
+        "layer": "Colleges participating",
+        "status": "planned"
+      },
+      {
+        "id": "civic_orgs",
+        "layer": "Civic organizations helping",
+        "status": "planned"
+      },
+      {
+        "id": "gaps",
+        "layer": "No educational infrastructure",
+        "status": "planned"
+      }
+    ]
+  },
+  "mc_integration": {
+    "title": "Geographic Heartbeat Dashboard",
+    "panels": [
+      {
+        "id": "CAP-1",
+        "panel": "County coverage",
+        "status": "partial"
+      },
+      {
+        "id": "CAP-2",
+        "panel": "City coverage",
+        "status": "partial"
+      },
+      {
+        "id": "CAP-3",
+        "panel": "Community coverage",
+        "status": "planned"
+      },
+      {
+        "id": "CAP-4",
+        "panel": "Neighborhood participation",
+        "status": "planned"
+      },
+      {
+        "id": "CAP-5",
+        "panel": "Education Leader density",
+        "status": "planned"
+      },
+      {
+        "id": "CAP-6",
+        "panel": "Coalition partner locations",
+        "status": "planned"
+      },
+      {
+        "id": "CAP-7",
+        "panel": "Upcoming events",
+        "status": "planned"
+      },
+      {
+        "id": "CAP-8",
+        "panel": "Educational Coverage Scores",
+        "status": "partial"
+      },
+      {
+        "id": "CAP-9",
+        "panel": "Growth trends over time",
+        "status": "planned"
+      }
+    ],
+    "panels_live": 3,
+    "status": "partial"
+  },
+  "future_expansion": [
+    "Regional collaboration networks",
+    "Traveling educational exhibits",
+    "Mobile learning events",
+    "Resource distribution planning",
+    "Historical education trails",
+    "Community-generated educational content (after editorial review)"
+  ],
+  "system_connections": [
+    {
+      "system": "Statewide Growth (#56)",
+      "route": "/mission-control/statewide-growth.html",
+      "status": "live"
+    },
+    {
+      "system": "Neighborhood Organizing (#57)",
+      "route": "/mission-control/neighborhood-organizing.html",
+      "status": "live"
+    },
+    {
+      "system": "County Operating System (#31)",
+      "route": "/mission-control/county-os.html",
+      "status": "partial"
+    },
+    {
+      "system": "Coalition Directory",
+      "route": "/coalition/",
+      "status": "planned"
+    },
+    {
+      "system": "Education Academy",
+      "route": "/mission-control/education-academy.html",
+      "status": "partial"
+    },
+    {
+      "system": "Outreach Engine",
+      "route": "/mission-control/outreach.html",
+      "status": "partial"
+    },
+    {
+      "system": "Civic Intelligence / KG",
+      "route": "/mission-control/civic-intelligence.html",
+      "status": "partial"
+    },
+    {
+      "system": "Mission Control",
+      "route": "/mission-control/",
+      "status": "live"
+    }
+  ],
+  "long_term_vision": [
+    "Living portrait of civic education across Arkansas",
+    "Where learning is flourishing and partnerships are forming",
+    "Where additional support is needed",
+    "How communities connect through shared educational purpose"
+  ],
+  "summary": {
+    "regions_total": 7,
+    "counties_total": 75,
+    "cities_indexed": 250,
+    "communities_joined": 0,
+    "neighborhoods_represented": 0,
+    "education_leaders": 0,
+    "coalition_orgs": 0,
+    "participants": 0,
+    "assets_cataloged": 0,
+    "events_scheduled": 0,
+    "stories_documented": 0,
+    "statewide_avg_coverage_score": 0,
+    "counties_with_coverage": 0,
+    "interactive_map_status": "planned",
+    "civic_atlas_readiness_pct": 52,
+    "statewide_growth_readiness_pct": 48,
+    "neighborhood_organizing_readiness_pct": 50,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "0/75 counties with coverage \u2014 all ECS scores at 0",
+    "0 community profiles \u00b7 0 assets cataloged",
+    "Interactive Arkansas map not built \u2014 MC tables only",
+    "Civic calendar not implemented \u2014 0 events scheduled",
+    "Civic story archive empty \u2014 no community journeys documented",
+    "Resource allocation engine planned \u2014 no query API",
+    "Faith community listings require opt-in \u2014 no listing workflow",
+    "County-to-region mapping incomplete in county scores",
+    "Align ECS with County OS education score (#31) \u2014 two models coexist",
+    "Community assets directory scaffold only \u2014 no library/college ingestion"
+  ],
+  "recommended_next_build": {
+    "number": 59,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "Neon schema for communities, assets, ECS scores, calendar events; map layer API; route inventory, COMP-* specs, API contracts, GitHub issue backlog."
+  }
+}

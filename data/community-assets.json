@@ -1,0 +1,34 @@
+{
+  "version": "1.0",
+  "build": 58,
+  "updated": "2026-07-09",
+  "title": "Community Assets Directory",
+  "asset_types": [
+    "Public libraries",
+    "Community colleges",
+    "Universities",
+    "Museums",
+    "Historical societies",
+    "Civic clubs",
+    "Veteran organizations",
+    "Community centers",
+    "Nonprofit organizations",
+    "Other participating educational institutions"
+  ],
+  "summary": {
+    "assets_cataloged": 0,
+    "by_type": {
+      "Public libraries": 0,
+      "Community colleges": 0,
+      "Universities": 0,
+      "Museums": 0,
+      "Historical societies": 0,
+      "Civic clubs": 0,
+      "Veteran organizations": 0,
+      "Community centers": 0,
+      "Nonprofit organizations": 0,
+      "Other participating educational institutions": 0
+    }
+  },
+  "assets": []
+}

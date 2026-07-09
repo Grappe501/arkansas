@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.62.0] - 2026-07-09 — Build #58 Arkansas Civic Atlas
+
+### Civic Intelligence & Community Mapping System
+- **Arkansas Civic Atlas v1.0** — geographic intelligence for educational planning (not political targeting)
+- 7-level hierarchy; Educational Coverage Score (5 components); 75 county ECS baseline
+- Community profiles, assets directory, needs assessment, civic calendar, story archive
+- Honest: 0 communities · 0 assets · statewide ECS avg 0 · interactive map planned
+- MC dashboard: `/mission-control/civic-atlas.html`
+
 ## [1.61.0] - 2026-07-09 — Build #57 Neighborhood Organizing & Relational Network
 
 ### The Last Mile Architecture
