@@ -10663,6 +10663,11 @@ async function initCursorImplementationPackage() {
     <h2 class="mc-section-title">Master Timeline</h2>
     <p class="mc-bar-note"><strong>Software complete:</strong> ${cip.software_completion_date || '2026-07-11'} · <strong>75 counties:</strong> ${cip.county_milestone_date || '2026-10-01'} · <strong>Organizational readiness:</strong> ${cip.organizational_readiness_date || '2027-01-01'}</p>
     <p class="mc-bar-note">${cip.master_timeline?.sequence || 'Software Complete → 75 Counties → Organizational Readiness'}</p>
+    <h2 class="mc-section-title">Coalition Network (IMP-14)</h2>
+    <p class="mc-bar-note"><strong>${cip.coalition_network.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.coalition_network.organization_type_count} organization types · ${cip.coalition_network.lifecycle_stage_count} partnership stages · ${cip.coalition_network.packages_complete_pct}% complete (${cip.coalition_network.packages_completed}/50)</p>
+    <p class="mc-bar-note"><strong>Oct 1 objective:</strong> active or developing coalition relationship in every county by ${cip.coalition_network.county_milestone_date}</p>
+    <p class="mc-bar-note"><a href="${cip.coalition_network.route}">IMPLEMENTATION_PACKAGE_14_COALITION_NETWORK.md</a> · <a href="${cip.coalition_network.manifest}">coalition-network-manifest.json</a> · <a href="/mission-control/coalition-network.html">Coalition dashboard</a></p>
+    <p class="mc-bar-note">${cip.coalition_network.philosophy}</p>
     <h2 class="mc-section-title">Volunteer Network (IMP-13)</h2>
     <p class="mc-bar-note"><strong>${cip.volunteer_network.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.volunteer_network.journey_stage_count} journey stages · ${cip.volunteer_network.pipeline_stage_count} pipeline stages · ${cip.volunteer_network.role_count} roles · ${cip.volunteer_network.skill_count} skills · ${cip.volunteer_network.cities_tracked} cities tracked · ${cip.volunteer_network.packages_complete_pct}% complete (${cip.volunteer_network.packages_completed}/50)</p>
     <p class="mc-bar-note"><strong>County objective:</strong> Education Leader or pipeline volunteer in all 75 counties by ${cip.volunteer_network.county_milestone_date}</p>

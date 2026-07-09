@@ -86,7 +86,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 13  # IMP-01 through IMP-13 (doctrinal)
+steps_documented = 14  # IMP-01 through IMP-14 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -2717,6 +2717,159 @@ VOLUNTEER_NETWORK_MANIFEST = {
     'implemented': False,
 }
 
+COALITION_PRINCIPLES = [
+    'mutual_respect', 'transparency', 'voluntary_participation', 'shared_educational_goals',
+    'evidence_based_information', 'local_leadership', 'long_term_trust',
+]
+
+ORGANIZATION_TYPES = [
+    'libraries', 'historical_societies', 'universities', 'community_colleges',
+    'civic_organizations', 'neighborhood_associations', 'educational_nonprofits',
+    'youth_organizations', 'veterans_organizations', 'professional_associations',
+    'faith_based_civic_education', 'community_foundations',
+]
+
+ORGANIZATION_PROFILE_FIELDS = [
+    'mission', 'description', 'service_area', 'counties_served', 'cities_served',
+    'programs', 'educational_interests', 'leadership_contacts', 'public_website',
+    'upcoming_events', 'volunteer_opportunities', 'educational_resources',
+]
+
+ORGANIZATION_WORKSPACE_FEATURES = [
+    'dashboard', 'member_directory', 'shared_calendar', 'projects', 'events',
+    'educational_resources', 'volunteer_coordination', 'announcements',
+    'organization_ai_assistant', 'mission_control_metrics',
+]
+
+DIRECTORY_DISCOVERY_DIMENSIONS = [
+    'county', 'city', 'topic', 'mission', 'educational_focus',
+    'volunteer_opportunities', 'youth_programs', 'public_events',
+]
+
+PARTNERSHIP_LIFECYCLE_STAGES = [
+    {'stage': 'prospective_partner', 'title': 'Prospective Partner'},
+    {'stage': 'initial_conversation', 'title': 'Initial Conversation'},
+    {'stage': 'orientation', 'title': 'Orientation'},
+    {'stage': 'resource_sharing', 'title': 'Resource Sharing'},
+    {'stage': 'active_partner', 'title': 'Active Partner'},
+    {'stage': 'collaborative_projects', 'title': 'Collaborative Projects'},
+    {'stage': 'long_term_strategic_partner', 'title': 'Long-Term Strategic Partner'},
+]
+
+SHARED_RESOURCE_LIBRARY = [
+    'presentation_materials', 'research_summaries', 'discussion_guides',
+    'educational_videos', 'infographics', 'lesson_plans',
+    'volunteer_recruitment_resources', 'community_conversation_toolkits',
+]
+
+SHARED_CALENDAR_EVENT_TYPES = [
+    'educational_events', 'community_conversations', 'volunteer_opportunities',
+    'training_sessions', 'public_meetings', 'academy_events',
+]
+
+COALITION_PROJECT_FIELDS = [
+    'purpose', 'participating_organizations', 'timeline', 'resources',
+    'deliverables', 'milestones', 'community_impact',
+]
+
+COALITION_COMMUNICATION_TYPES = [
+    'announcements', 'resource_updates', 'research_releases',
+    'training_invitations', 'collaboration_requests',
+]
+
+GEOGRAPHIC_COVERAGE_METRICS = [
+    'organizations_by_county', 'organizations_by_city', 'educational_gaps',
+    'coalition_density', 'partnership_growth',
+]
+
+ORGANIZATION_AI_CAPABILITIES = [
+    'summarize_research', 'find_educational_resources', 'prepare_presentations',
+    'locate_partnership_opportunities', 'answer_platform_questions',
+    'suggest_community_events', 'onboard_new_volunteers',
+]
+
+MC_COALITION_DASHBOARD = [
+    'organizations_onboarded', 'county_coverage', 'city_coverage',
+    'active_partnerships', 'shared_projects', 'educational_events',
+    'resource_sharing', 'partnership_health', 'growth_trends',
+]
+
+COALITION_OCTOBER_REQUIREMENTS = [
+    'active_or_developing_coalition_relationship',
+    'local_civic_education_resource_directory',
+    'county_specific_partnership_opportunities',
+    'pathway_for_additional_organizations',
+]
+
+COALITION_SYSTEM_CHAIN = [
+    'mission_control', 'community_education_academy', 'volunteer_network',
+    'county_operating_system', 'city_operating_system', 'neighborhood_operating_system',
+    'research_institute', 'knowledge_platform', 'calendar_brain', 'ai_localbrains',
+]
+
+PLATFORM_SYSTEMS_WITH_COALITION = [
+    'technical_architecture', 'mission_control', 'localbrains', 'knowledge_platform',
+    'research_institute', 'community_education_academy', 'volunteer_operating_system',
+    'coalition_operating_system',
+]
+
+COALITION_NETWORK_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-14',
+    'updated': today,
+    'title': 'Master Coalition Network, Organization Portal & Partnership Operating System',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_14_COALITION_NETWORK.md',
+    'source_registries': {
+        'coalition_network': '/data/coalition-network.json',
+        'coalition_directory': '/data/coalition-directory.json',
+        'coalition_ecosystem': '/data/coalition-ecosystem.json',
+        'coalition_events': '/data/coalition-events.json',
+        'county_coalition_index': '/data/county-coalition-index.json',
+        'volunteer_network': '/data/volunteer-network-manifest.json',
+    },
+    'philosophy': 'Connective infrastructure — collaborate without sacrificing organizational independence',
+    'governing_principle': (
+        'Strong statewide institutions are built from strong local communities; '
+        'the platform strengthens existing organizations rather than replacing them'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'coalition_principles': COALITION_PRINCIPLES,
+    'organization_types': ORGANIZATION_TYPES,
+    'organization_type_count': len(ORGANIZATION_TYPES),
+    'organization_profile_fields': ORGANIZATION_PROFILE_FIELDS,
+    'organization_workspace_features': ORGANIZATION_WORKSPACE_FEATURES,
+    'directory_discovery_dimensions': DIRECTORY_DISCOVERY_DIMENSIONS,
+    'partnership_lifecycle': PARTNERSHIP_LIFECYCLE_STAGES,
+    'lifecycle_stage_count': len(PARTNERSHIP_LIFECYCLE_STAGES),
+    'shared_resource_library': SHARED_RESOURCE_LIBRARY,
+    'shared_calendar_event_types': SHARED_CALENDAR_EVENT_TYPES,
+    'coalition_project_fields': COALITION_PROJECT_FIELDS,
+    'coalition_communication_types': COALITION_COMMUNICATION_TYPES,
+    'geographic_coverage_metrics': GEOGRAPHIC_COVERAGE_METRICS,
+    'organization_ai_capabilities': ORGANIZATION_AI_CAPABILITIES,
+    'mc_coalition_dashboard': MC_COALITION_DASHBOARD,
+    'october_county_objective': {
+        'target_date': county_milestone_date,
+        'requirements': COALITION_OCTOBER_REQUIREMENTS,
+        'aligns_with': '75-by-October-1 Milestone',
+    },
+    'coalition_system_chain': COALITION_SYSTEM_CHAIN,
+    'platform_systems': PLATFORM_SYSTEMS_WITH_COALITION,
+    'packages_completed': 14,
+    'packages_total': 50,
+    'packages_complete_pct': 28,
+    'engineering_note': 'Doctrinal IMP-14 Coalition Network; engineering IMP-14 is core layout components',
+    'status': 'documented',
+    'implemented': False,
+}
+
 ROUTE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -2782,11 +2935,12 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D14', 'indicator': 'Research Institute (IMP-11)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D15', 'indicator': 'Education Academy (IMP-12)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D16', 'indicator': 'Volunteer Network (IMP-13)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D17', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D17', 'indicator': 'Coalition Network (IMP-14)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D18', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
-    86,
+    88,
     14
     + len(IMPLEMENTATION_STEPS) // 2
     + len(BANDS) * 2
@@ -3122,7 +3276,28 @@ out = {
             'number': 14,
             'id': 'IMP-14',
             'title': 'Master Coalition Network, Organization Portal & Partnership Operating System',
-            'note': 'Doctrinal package 14; engineering IMP-14 is core layout components',
+            'status': 'documented',
+        },
+    },
+    'coalition_network': {
+        'title': 'Master Coalition Network, Organization Portal & Partnership Operating System',
+        'package': 'Implementation Package 14 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_14_COALITION_NETWORK.md',
+        'manifest': '/data/coalition-network-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': COALITION_NETWORK_MANIFEST['philosophy'],
+        'organization_type_count': COALITION_NETWORK_MANIFEST['organization_type_count'],
+        'lifecycle_stage_count': COALITION_NETWORK_MANIFEST['lifecycle_stage_count'],
+        'packages_completed': COALITION_NETWORK_MANIFEST['packages_completed'],
+        'packages_complete_pct': COALITION_NETWORK_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engineering_note': COALITION_NETWORK_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 15,
+            'id': 'IMP-15',
+            'title': 'Master County Operating System, City Operating System & Neighborhood Operating System',
+            'note': 'Doctrinal package 15; engineering IMP-15 is Mission Control shell layout',
         },
     },
     'master_timeline': MASTER_TIMELINE,
@@ -3264,6 +3439,10 @@ with open(root / 'data/education-academy-manifest.json', 'w', newline='\n') as f
 
 with open(root / 'data/volunteer-network-manifest.json', 'w', newline='\n') as f:
     json.dump(VOLUNTEER_NETWORK_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/coalition-network-manifest.json', 'w', newline='\n') as f:
+    json.dump(COALITION_NETWORK_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

@@ -13,6 +13,18 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.14] - 2026-07-09 — IMP-14 Coalition Network & Partnership OS
+
+### Implementation Package 14 of 50
+- **Master Coalition Network, Organization Portal & Partnership Operating System**
+- 12 organization types · 7 partnership lifecycle stages · organization portal & workspace
+- Shared resource library, statewide calendar, coalition projects, organization AI assistant
+- Oct 1 2026: active/developing coalition relationship in every county
+- Machine-readable **coalition-network-manifest.json**
+- Institutional network: 14/50 packages (**28%**)
+- IMP-15 next (doctrinal): County OS, City OS & Neighborhood Operating System
+- Honest: 14/50 documented · 0/50 implemented · 88% package readiness
+
 ## [2.05.13] - 2026-07-09 — IMP-13 Volunteer Network & Education Leader Pipeline
 
 ### Implementation Package 13 of 50

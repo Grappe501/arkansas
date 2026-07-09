@@ -1,5 +1,5 @@
 {
-  "version": "2.05.13",
+  "version": "2.05.14",
   "build": 101,
   "updated": "2026-07-09",
   "identity": {
@@ -121,7 +121,7 @@
     "connected_citizen_goal_pct": 15,
     "implementation_steps_total": 50,
     "implementation_steps_implemented": 0,
-    "implementation_steps_documented": 13,
+    "implementation_steps_documented": 14,
     "overall_completion": 101,
     "current_build": {
       "number": 101,
@@ -133,8 +133,8 @@
       "number": 102,
       "title": "Executive war room & countdown dashboard components"
     },
-    "implementation_package_readiness": 86,
-    "cursor_implementation_package_readiness": 86,
+    "implementation_package_readiness": 88,
+    "cursor_implementation_package_readiness": 88,
     "implementation_phase_started": false,
     "sprint_zero_started": false,
     "software_completion_date": "2026-07-11",
@@ -878,7 +878,7 @@
     {
       "id": "cursor_implementation_package",
       "label": "Implementation Package",
-      "value": 86,
+      "value": 88,
       "max": 100,
       "note": "0/50 steps implemented \u00b7 Sprint Zero pending."
     }
@@ -7812,22 +7812,22 @@
     }
   ],
   "briefing": {
-    "what_built": "IMP-01\u201313 documented \u2014 volunteer & leadership system (26%)",
-    "building_now": "IMP-14 Coalition Network & Partnership OS next; Sprint Zero pending",
+    "what_built": "IMP-01\u201314 documented \u2014 coalition & partnership OS (28%)",
+    "building_now": "IMP-15 County/City/Neighborhood OS next; Sprint Zero pending",
     "blocked": [
       "Sprint Zero not complete",
       "0/50 code-implemented",
       "2 days to software target"
     ],
     "ready_public": [
+      "Coalition Network",
+      "coalition-network-manifest.json",
+      "Organization Portal",
       "Volunteer Network",
-      "volunteer-network-manifest.json",
-      "Education Leader Pipeline",
       "Education Academy",
-      "Research Institute",
       "75-by-October-1 Milestone"
     ],
-    "next": "IMP-14 \u2014 Master Coalition Network, Organization Portal & Partnership Operating System"
+    "next": "IMP-15 \u2014 Master County OS, City OS & Neighborhood Operating System"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8843,10 +8843,10 @@
   "cursor_implementation_package": "/data/cursor-implementation-package.json",
   "cursor_implementation_package_dashboard": "/mission-control/cursor-implementation-package.html",
   "cursor_implementation_package_inventory": {
-    "readiness_score": 86,
+    "readiness_score": 88,
     "steps_total": 50,
     "steps_implemented": 0,
-    "steps_documented": 13,
+    "steps_documented": 14,
     "bands_total": 5,
     "sprint_zero_started": false,
     "cursor_master_prompt_ready": true

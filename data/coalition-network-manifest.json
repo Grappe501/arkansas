@@ -1,0 +1,277 @@
+{
+  "version": "1.0",
+  "build": 101,
+  "package": "IMP-14",
+  "updated": "2026-07-09",
+  "title": "Master Coalition Network, Organization Portal & Partnership Operating System",
+  "constitution": "/docs/IMPLEMENTATION_PACKAGE_14_COALITION_NETWORK.md",
+  "source_registries": {
+    "coalition_network": "/data/coalition-network.json",
+    "coalition_directory": "/data/coalition-directory.json",
+    "coalition_ecosystem": "/data/coalition-ecosystem.json",
+    "coalition_events": "/data/coalition-events.json",
+    "county_coalition_index": "/data/county-coalition-index.json",
+    "volunteer_network": "/data/volunteer-network-manifest.json"
+  },
+  "philosophy": "Connective infrastructure \u2014 collaborate without sacrificing organizational independence",
+  "governing_principle": "Strong statewide institutions are built from strong local communities; the platform strengthens existing organizations rather than replacing them",
+  "master_timeline": {
+    "phase_one": {
+      "id": "software_completion",
+      "title": "Software Completion",
+      "target_date": "2026-07-11",
+      "days_remaining": 2,
+      "scope": [
+        "Public website",
+        "Mission Control",
+        "LocalBrains",
+        "Community Education Academy",
+        "Knowledge Platform",
+        "Research system",
+        "Volunteer system",
+        "Coalition system",
+        "County, City, and Neighborhood systems",
+        "AI infrastructure",
+        "Administrative tools"
+      ]
+    },
+    "phase_two": {
+      "id": "county_milestone",
+      "title": "75 Counties by October 1",
+      "target_date": "2026-10-01",
+      "days_remaining": 84,
+      "scope": [
+        "Completed county profile for all 75 counties",
+        "Education Leader or active recruitment contact per county",
+        "County dashboard operational in Mission Control",
+        "Initial local resource information",
+        "Development plan for continued growth per county"
+      ]
+    },
+    "phase_three": {
+      "id": "organizational_readiness",
+      "title": "Organizational Readiness",
+      "target_date": "2027-01-01",
+      "days_remaining": 176,
+      "focus": [
+        "Recruiting Education Leaders",
+        "Expanding county coverage",
+        "Growing city leadership",
+        "Coalition development",
+        "Volunteer training",
+        "Community conversations",
+        "Research expansion",
+        "Public testing",
+        "User feedback",
+        "System refinement",
+        "Launch certification",
+        "City and neighborhood systems mature",
+        "Statewide volunteer development expanded"
+      ]
+    },
+    "sequence": "Software Complete (Jul 11, 2026) \u2192 75 Counties (Oct 1, 2026) \u2192 Organizational Readiness (Jan 2027)",
+    "build_out_months_approx": 6,
+    "county_milestone": {
+      "target_date": "2026-10-01",
+      "counties_total": 75,
+      "days_remaining": 84,
+      "label": "75-by-October-1 Milestone"
+    }
+  },
+  "software_completion_date": "2026-07-11",
+  "county_milestone_date": "2026-10-01",
+  "organizational_readiness_date": "2027-01-01",
+  "days_to_software": 2,
+  "days_to_county_milestone": 84,
+  "days_to_organizational": 176,
+  "coalition_principles": [
+    "mutual_respect",
+    "transparency",
+    "voluntary_participation",
+    "shared_educational_goals",
+    "evidence_based_information",
+    "local_leadership",
+    "long_term_trust"
+  ],
+  "organization_types": [
+    "libraries",
+    "historical_societies",
+    "universities",
+    "community_colleges",
+    "civic_organizations",
+    "neighborhood_associations",
+    "educational_nonprofits",
+    "youth_organizations",
+    "veterans_organizations",
+    "professional_associations",
+    "faith_based_civic_education",
+    "community_foundations"
+  ],
+  "organization_type_count": 12,
+  "organization_profile_fields": [
+    "mission",
+    "description",
+    "service_area",
+    "counties_served",
+    "cities_served",
+    "programs",
+    "educational_interests",
+    "leadership_contacts",
+    "public_website",
+    "upcoming_events",
+    "volunteer_opportunities",
+    "educational_resources"
+  ],
+  "organization_workspace_features": [
+    "dashboard",
+    "member_directory",
+    "shared_calendar",
+    "projects",
+    "events",
+    "educational_resources",
+    "volunteer_coordination",
+    "announcements",
+    "organization_ai_assistant",
+    "mission_control_metrics"
+  ],
+  "directory_discovery_dimensions": [
+    "county",
+    "city",
+    "topic",
+    "mission",
+    "educational_focus",
+    "volunteer_opportunities",
+    "youth_programs",
+    "public_events"
+  ],
+  "partnership_lifecycle": [
+    {
+      "stage": "prospective_partner",
+      "title": "Prospective Partner"
+    },
+    {
+      "stage": "initial_conversation",
+      "title": "Initial Conversation"
+    },
+    {
+      "stage": "orientation",
+      "title": "Orientation"
+    },
+    {
+      "stage": "resource_sharing",
+      "title": "Resource Sharing"
+    },
+    {
+      "stage": "active_partner",
+      "title": "Active Partner"
+    },
+    {
+      "stage": "collaborative_projects",
+      "title": "Collaborative Projects"
+    },
+    {
+      "stage": "long_term_strategic_partner",
+      "title": "Long-Term Strategic Partner"
+    }
+  ],
+  "lifecycle_stage_count": 7,
+  "shared_resource_library": [
+    "presentation_materials",
+    "research_summaries",
+    "discussion_guides",
+    "educational_videos",
+    "infographics",
+    "lesson_plans",
+    "volunteer_recruitment_resources",
+    "community_conversation_toolkits"
+  ],
+  "shared_calendar_event_types": [
+    "educational_events",
+    "community_conversations",
+    "volunteer_opportunities",
+    "training_sessions",
+    "public_meetings",
+    "academy_events"
+  ],
+  "coalition_project_fields": [
+    "purpose",
+    "participating_organizations",
+    "timeline",
+    "resources",
+    "deliverables",
+    "milestones",
+    "community_impact"
+  ],
+  "coalition_communication_types": [
+    "announcements",
+    "resource_updates",
+    "research_releases",
+    "training_invitations",
+    "collaboration_requests"
+  ],
+  "geographic_coverage_metrics": [
+    "organizations_by_county",
+    "organizations_by_city",
+    "educational_gaps",
+    "coalition_density",
+    "partnership_growth"
+  ],
+  "organization_ai_capabilities": [
+    "summarize_research",
+    "find_educational_resources",
+    "prepare_presentations",
+    "locate_partnership_opportunities",
+    "answer_platform_questions",
+    "suggest_community_events",
+    "onboard_new_volunteers"
+  ],
+  "mc_coalition_dashboard": [
+    "organizations_onboarded",
+    "county_coverage",
+    "city_coverage",
+    "active_partnerships",
+    "shared_projects",
+    "educational_events",
+    "resource_sharing",
+    "partnership_health",
+    "growth_trends"
+  ],
+  "october_county_objective": {
+    "target_date": "2026-10-01",
+    "requirements": [
+      "active_or_developing_coalition_relationship",
+      "local_civic_education_resource_directory",
+      "county_specific_partnership_opportunities",
+      "pathway_for_additional_organizations"
+    ],
+    "aligns_with": "75-by-October-1 Milestone"
+  },
+  "coalition_system_chain": [
+    "mission_control",
+    "community_education_academy",
+    "volunteer_network",
+    "county_operating_system",
+    "city_operating_system",
+    "neighborhood_operating_system",
+    "research_institute",
+    "knowledge_platform",
+    "calendar_brain",
+    "ai_localbrains"
+  ],
+  "platform_systems": [
+    "technical_architecture",
+    "mission_control",
+    "localbrains",
+    "knowledge_platform",
+    "research_institute",
+    "community_education_academy",
+    "volunteer_operating_system",
+    "coalition_operating_system"
+  ],
+  "packages_completed": 14,
+  "packages_total": 50,
+  "packages_complete_pct": 28,
+  "engineering_note": "Doctrinal IMP-14 Coalition Network; engineering IMP-14 is core layout components",
+  "status": "documented",
+  "implemented": false
+}

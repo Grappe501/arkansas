@@ -435,7 +435,28 @@
       "number": 14,
       "id": "IMP-14",
       "title": "Master Coalition Network, Organization Portal & Partnership Operating System",
-      "note": "Doctrinal package 14; engineering IMP-14 is core layout components"
+      "status": "documented"
+    }
+  },
+  "coalition_network": {
+    "title": "Master Coalition Network, Organization Portal & Partnership Operating System",
+    "package": "Implementation Package 14 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_14_COALITION_NETWORK.md",
+    "manifest": "/data/coalition-network-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Connective infrastructure \u2014 collaborate without sacrificing organizational independence",
+    "organization_type_count": 12,
+    "lifecycle_stage_count": 7,
+    "packages_completed": 14,
+    "packages_complete_pct": 28,
+    "county_milestone_date": "2026-10-01",
+    "engineering_note": "Doctrinal IMP-14 Coalition Network; engineering IMP-14 is core layout components",
+    "next_package": {
+      "number": 15,
+      "id": "IMP-15",
+      "title": "Master County Operating System, City Operating System & Neighborhood Operating System",
+      "note": "Doctrinal package 15; engineering IMP-15 is Mission Control shell layout"
     }
   },
   "master_timeline": {
@@ -1837,7 +1858,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 13,
+        "current": 14,
         "status": "partial"
       },
       {
@@ -1926,6 +1947,12 @@
       },
       {
         "id": "CIP-D17",
+        "indicator": "Coalition Network (IMP-14)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D18",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -1976,9 +2003,9 @@
     "days_to_organizational": 176,
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "implementation_package_readiness_pct": 86,
+    "implementation_package_readiness_pct": 88,
     "steps_total": 50,
-    "steps_documented": 13,
+    "steps_documented": 14,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,
