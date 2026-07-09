@@ -1,0 +1,273 @@
+{
+  "version": "1.0",
+  "build": 101,
+  "package": "IMP-10",
+  "updated": "2026-07-09",
+  "title": "Master Content Management System, Research Publishing & Editorial Workflow",
+  "constitution": "/docs/IMPLEMENTATION_PACKAGE_10_CONTENT_MANAGEMENT.md",
+  "source_registries": {
+    "content_production_factory": "/data/content-production-factory.json",
+    "content_production_matrix": "/data/content-production-matrix.json",
+    "content_inventory": "/data/content-inventory.json",
+    "knowledge_graph": "/data/knowledge-graph-manifest.json",
+    "canonical_data": "/data/canonical-data-manifest.json"
+  },
+  "philosophy": "Institutional Knowledge Publishing System \u2014 not a blogging platform",
+  "governing_principle": "Software makes publication possible; research makes publication valuable; trust is earned one publication at a time",
+  "master_timeline": {
+    "phase_one": {
+      "id": "software_completion",
+      "title": "Software Completion",
+      "target_date": "2026-07-11",
+      "days_remaining": 2,
+      "scope": [
+        "Public website",
+        "Mission Control",
+        "LocalBrains",
+        "Community Education Academy",
+        "Knowledge Platform",
+        "Research system",
+        "Volunteer system",
+        "Coalition system",
+        "County, City, and Neighborhood systems",
+        "AI infrastructure",
+        "Administrative tools"
+      ]
+    },
+    "phase_two": {
+      "id": "organizational_readiness",
+      "title": "Organizational Readiness",
+      "target_date": "2027-01-01",
+      "days_remaining": 176,
+      "focus": [
+        "Recruiting Education Leaders",
+        "Expanding county coverage",
+        "Growing city leadership",
+        "Coalition development",
+        "Volunteer training",
+        "Community conversations",
+        "Research expansion",
+        "Public testing",
+        "User feedback",
+        "System refinement",
+        "Launch certification"
+      ]
+    },
+    "sequence": "Software Complete (Jul 11, 2026) \u2192 Build-Out \u2192 Organizational Readiness (Jan 2027)",
+    "build_out_months_approx": 6
+  },
+  "software_completion_date": "2026-07-11",
+  "organizational_readiness_date": "2027-01-01",
+  "days_to_software": 2,
+  "days_to_organizational": 176,
+  "content_classes": {
+    "research": [
+      "white_papers",
+      "court_case_analysis",
+      "legal_summaries",
+      "historical_research",
+      "arkansas_research",
+      "academic_reviews"
+    ],
+    "education": [
+      "lessons",
+      "courses",
+      "learning_paths",
+      "glossary",
+      "faqs",
+      "study_guides",
+      "discussion_guides",
+      "presentations"
+    ],
+    "public_information": [
+      "articles",
+      "news",
+      "announcements",
+      "reports",
+      "press_releases",
+      "community_updates"
+    ],
+    "institutional": [
+      "policies",
+      "operating_manuals",
+      "implementation_packages",
+      "training_guides",
+      "volunteer_handbook",
+      "governance_documents"
+    ],
+    "media": [
+      "videos",
+      "infographics",
+      "podcasts",
+      "presentations",
+      "images",
+      "downloadable_pdfs",
+      "interactive_timelines"
+    ]
+  },
+  "content_type_count": 33,
+  "content_class_count": 5,
+  "publishing_principles": [
+    "accurate",
+    "verifiable",
+    "understandable",
+    "accessible",
+    "versioned",
+    "reviewable",
+    "searchable",
+    "ai_assisted",
+    "mission_control_aware"
+  ],
+  "editorial_workflow": [
+    {
+      "stage": "draft",
+      "title": "Draft"
+    },
+    {
+      "stage": "ai_review",
+      "title": "AI Review"
+    },
+    {
+      "stage": "editorial_review",
+      "title": "Editorial Review"
+    },
+    {
+      "stage": "evidence_verification",
+      "title": "Evidence Verification"
+    },
+    {
+      "stage": "accessibility_review",
+      "title": "Accessibility Review"
+    },
+    {
+      "stage": "legal_policy_review",
+      "title": "Legal/Policy Review",
+      "optional": true
+    },
+    {
+      "stage": "approval",
+      "title": "Approval"
+    },
+    {
+      "stage": "publication",
+      "title": "Publication"
+    },
+    {
+      "stage": "mc_indexing",
+      "title": "Mission Control Indexing"
+    },
+    {
+      "stage": "periodic_review",
+      "title": "Periodic Review"
+    }
+  ],
+  "workflow_stage_count": 10,
+  "content_metadata_fields": [
+    "title",
+    "summary",
+    "author",
+    "editor",
+    "publication_date",
+    "last_reviewed",
+    "review_schedule",
+    "reading_time",
+    "difficulty_level",
+    "categories",
+    "tags",
+    "geographic_relevance",
+    "related_resources"
+  ],
+  "content_relationship_targets": [
+    "related_research",
+    "related_lessons",
+    "related_counties",
+    "related_organizations",
+    "related_events",
+    "related_court_cases",
+    "related_glossary_terms",
+    "related_faqs"
+  ],
+  "evidence_link_types": [
+    "primary_source",
+    "court_opinion",
+    "government_document",
+    "academic_publication",
+    "historical_record"
+  ],
+  "review_cycle_triggers": [
+    "quarterly",
+    "annually",
+    "major_legal_developments",
+    "new_arkansas_legislation"
+  ],
+  "discovery_dimensions": [
+    "keyword",
+    "topic",
+    "question",
+    "county",
+    "city",
+    "court_case",
+    "organization",
+    "learning_level",
+    "content_type"
+  ],
+  "ai_editorial_capabilities": [
+    "summarize",
+    "proofread",
+    "suggest_citations",
+    "identify_unsupported_claims",
+    "recommend_related_research",
+    "suggest_glossary_links",
+    "generate_faqs",
+    "create_lesson_versions",
+    "prepare_presentation_outlines"
+  ],
+  "ai_publish_rule": "AI assists but never publishes independently",
+  "workspace_features": [
+    "rich_text_editing",
+    "markdown_support",
+    "citation_insertion",
+    "evidence_linking",
+    "ai_writing_assistance",
+    "version_comparison",
+    "reading_level_analysis",
+    "accessibility_suggestions",
+    "related_content_recommendations"
+  ],
+  "public_feedback_actions": [
+    "report_error",
+    "suggest_source",
+    "request_clarification",
+    "recommend_improvements",
+    "ask_questions"
+  ],
+  "mc_publishing_metrics": [
+    "articles_published",
+    "research_completed",
+    "pages_awaiting_review",
+    "citation_completeness",
+    "editorial_backlog",
+    "review_compliance",
+    "most_viewed_resources",
+    "search_success",
+    "knowledge_growth"
+  ],
+  "foundational_architecture": [
+    "institutional_constitution",
+    "technical_architecture",
+    "route_map",
+    "canonical_data_model",
+    "identity_permissions",
+    "design_system",
+    "mission_control",
+    "localbrain_network",
+    "knowledge_graph",
+    "publishing_system"
+  ],
+  "packages_completed": 10,
+  "packages_total": 50,
+  "foundation_complete_pct": 20,
+  "engineering_note": "Doctrinal IMP-10 CMS; engineering IMP-10 in step registry is Sprint Zero gate",
+  "status": "documented",
+  "implemented": false
+}

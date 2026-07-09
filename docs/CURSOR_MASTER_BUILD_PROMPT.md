@@ -25,6 +25,7 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 0g. **Mission Control Architecture (IMP-07):** [/docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md](/docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md) · [/data/mission-control-architecture-manifest.json](/data/mission-control-architecture-manifest.json)
 0h. **LocalBrain Network (IMP-08):** [/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md](/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md) · [/data/localbrain-network-manifest.json](/data/localbrain-network-manifest.json)
 0i. **Knowledge Graph (IMP-09):** [/docs/IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md](/docs/IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md) · [/data/knowledge-graph-manifest.json](/data/knowledge-graph-manifest.json)
+0j. **Content Management (IMP-10):** [/docs/IMPLEMENTATION_PACKAGE_10_CONTENT_MANAGEMENT.md](/docs/IMPLEMENTATION_PACKAGE_10_CONTENT_MANAGEMENT.md) · [/data/content-management-manifest.json](/data/content-management-manifest.json)
 
 ## Master timeline (updated IMP-09)
 
@@ -127,7 +128,7 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 
 ## First step to implement
 
-**IMP-01** through **IMP-09** are **documented**:
+**IMP-01** through **IMP-10** are **documented**:
 - [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
 - [Technical Architecture](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
 - [Route Map](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [route-manifest.json](/data/route-manifest.json)
@@ -137,7 +138,8 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 - [Mission Control Architecture](/docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md) · [mission-control-architecture-manifest.json](/data/mission-control-architecture-manifest.json)
 - [LocalBrain Network](/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md) · [localbrain-network-manifest.json](/data/localbrain-network-manifest.json)
 - [Knowledge Graph](/docs/IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md) · [knowledge-graph-manifest.json](/data/knowledge-graph-manifest.json)
+- [Content Management](/docs/IMPLEMENTATION_PACKAGE_10_CONTENT_MANAGEMENT.md) · [content-management-manifest.json](/data/content-management-manifest.json)
 
-**IMP-10** is next: Master Content Management System, Research Publishing & Editorial Workflow.
+**IMP-11** is next (doctrinal): Master Research Institute, Evidence Ledger & Claims Verification System.
 
-Engineering **Sprint Zero (IMP-10)** follows after Band A doctrine is complete.
+Engineering **Sprint Zero (IMP-10 step registry)** is the Band A gate before Band B code slices.

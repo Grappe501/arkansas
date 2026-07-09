@@ -339,7 +339,30 @@
       "number": 10,
       "id": "IMP-10",
       "title": "Master Content Management System, Research Publishing & Editorial Workflow",
-      "note": "Doctrinal package 10; engineering IMP-10 is Sprint Zero gate"
+      "status": "documented"
+    }
+  },
+  "content_management": {
+    "title": "Master Content Management System, Research Publishing & Editorial Workflow",
+    "package": "Implementation Package 10 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_10_CONTENT_MANAGEMENT.md",
+    "manifest": "/data/content-management-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Institutional Knowledge Publishing System \u2014 not a blogging platform",
+    "content_type_count": 33,
+    "content_class_count": 5,
+    "workflow_stage_count": 10,
+    "packages_completed": 10,
+    "foundation_complete_pct": 20,
+    "software_completion_date": "2026-07-11",
+    "organizational_readiness_date": "2027-01-01",
+    "engineering_note": "Doctrinal IMP-10 CMS; engineering IMP-10 in step registry is Sprint Zero gate",
+    "next_package": {
+      "number": 11,
+      "id": "IMP-11",
+      "title": "Master Research Institute, Evidence Ledger & Claims Verification System",
+      "note": "Doctrinal package 11; engineering IMP-11 is unified route manifest"
     }
   },
   "master_timeline": {
@@ -818,7 +841,7 @@
         "CONTRIBUTING.md"
       ],
       "acceptance_criteria": [
-        "IMP-01 through IMP-09 documented; dual timeline aligned across registries",
+        "IMP-01 through IMP-10 documented; dual timeline aligned across registries",
         "Migration strategy, stack lock, Netlify, Git, CI, env documented and verified",
         "CONTRIBUTING.md links to implementation packages and CURSOR_MASTER_BUILD_PROMPT.md",
         "One successful Netlify preview deploy from develop",
@@ -1718,7 +1741,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 9,
+        "current": 10,
         "status": "partial"
       },
       {
@@ -1783,6 +1806,12 @@
       },
       {
         "id": "CIP-D13",
+        "indicator": "Content Management (IMP-10)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D14",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -1831,9 +1860,9 @@
     "days_to_organizational": 176,
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "implementation_package_readiness_pct": 78,
+    "implementation_package_readiness_pct": 80,
     "steps_total": 50,
-    "steps_documented": 9,
+    "steps_documented": 10,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

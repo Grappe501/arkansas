@@ -60,7 +60,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 9  # IMP-01 through IMP-09
+steps_documented = 10  # IMP-01 through IMP-10 (doctrinal Band A foundation)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -410,7 +410,7 @@ IMPLEMENTATION_STEPS = [
             'docs/SPRINT_ZERO_CHECKLIST.md', 'CONTRIBUTING.md',
         ],
         'acceptance_criteria': [
-            'IMP-01 through IMP-09 documented; dual timeline aligned across registries',
+            'IMP-01 through IMP-10 documented; dual timeline aligned across registries',
             'Migration strategy, stack lock, Netlify, Git, CI, env documented and verified',
             'CONTRIBUTING.md links to implementation packages and CURSOR_MASTER_BUILD_PROMPT.md',
             'One successful Netlify preview deploy from develop',
@@ -2054,6 +2054,149 @@ KNOWLEDGE_GRAPH_MANIFEST = {
     'implemented': False,
 }
 
+CMS_CONTENT_CLASSES = {
+    'research': [
+        'white_papers', 'court_case_analysis', 'legal_summaries', 'historical_research',
+        'arkansas_research', 'academic_reviews',
+    ],
+    'education': [
+        'lessons', 'courses', 'learning_paths', 'glossary', 'faqs', 'study_guides',
+        'discussion_guides', 'presentations',
+    ],
+    'public_information': [
+        'articles', 'news', 'announcements', 'reports', 'press_releases', 'community_updates',
+    ],
+    'institutional': [
+        'policies', 'operating_manuals', 'implementation_packages', 'training_guides',
+        'volunteer_handbook', 'governance_documents',
+    ],
+    'media': [
+        'videos', 'infographics', 'podcasts', 'presentations', 'images',
+        'downloadable_pdfs', 'interactive_timelines',
+    ],
+}
+
+CMS_PUBLISHING_PRINCIPLES = [
+    'accurate', 'verifiable', 'understandable', 'accessible', 'versioned',
+    'reviewable', 'searchable', 'ai_assisted', 'mission_control_aware',
+]
+
+EDITORIAL_WORKFLOW_STAGES = [
+    {'stage': 'draft', 'title': 'Draft'},
+    {'stage': 'ai_review', 'title': 'AI Review'},
+    {'stage': 'editorial_review', 'title': 'Editorial Review'},
+    {'stage': 'evidence_verification', 'title': 'Evidence Verification'},
+    {'stage': 'accessibility_review', 'title': 'Accessibility Review'},
+    {'stage': 'legal_policy_review', 'title': 'Legal/Policy Review', 'optional': True},
+    {'stage': 'approval', 'title': 'Approval'},
+    {'stage': 'publication', 'title': 'Publication'},
+    {'stage': 'mc_indexing', 'title': 'Mission Control Indexing'},
+    {'stage': 'periodic_review', 'title': 'Periodic Review'},
+]
+
+CONTENT_METADATA_FIELDS = [
+    'title', 'summary', 'author', 'editor', 'publication_date', 'last_reviewed',
+    'review_schedule', 'reading_time', 'difficulty_level', 'categories', 'tags',
+    'geographic_relevance', 'related_resources',
+]
+
+CONTENT_RELATIONSHIP_TARGETS = [
+    'related_research', 'related_lessons', 'related_counties', 'related_organizations',
+    'related_events', 'related_court_cases', 'related_glossary_terms', 'related_faqs',
+]
+
+EVIDENCE_LINK_TYPES = [
+    'primary_source', 'court_opinion', 'government_document',
+    'academic_publication', 'historical_record',
+]
+
+REVIEW_CYCLE_TRIGGERS = [
+    'quarterly', 'annually', 'major_legal_developments', 'new_arkansas_legislation',
+]
+
+DISCOVERY_DIMENSIONS = [
+    'keyword', 'topic', 'question', 'county', 'city', 'court_case',
+    'organization', 'learning_level', 'content_type',
+]
+
+AI_EDITORIAL_CAPABILITIES = [
+    'summarize', 'proofread', 'suggest_citations', 'identify_unsupported_claims',
+    'recommend_related_research', 'suggest_glossary_links', 'generate_faqs',
+    'create_lesson_versions', 'prepare_presentation_outlines',
+]
+
+WORKSPACE_FEATURES = [
+    'rich_text_editing', 'markdown_support', 'citation_insertion', 'evidence_linking',
+    'ai_writing_assistance', 'version_comparison', 'reading_level_analysis',
+    'accessibility_suggestions', 'related_content_recommendations',
+]
+
+PUBLIC_FEEDBACK_ACTIONS = [
+    'report_error', 'suggest_source', 'request_clarification',
+    'recommend_improvements', 'ask_questions',
+]
+
+MC_PUBLISHING_METRICS = [
+    'articles_published', 'research_completed', 'pages_awaiting_review',
+    'citation_completeness', 'editorial_backlog', 'review_compliance',
+    'most_viewed_resources', 'search_success', 'knowledge_growth',
+]
+
+FOUNDATIONAL_ARCHITECTURE_PACKAGES = [
+    'institutional_constitution', 'technical_architecture', 'route_map',
+    'canonical_data_model', 'identity_permissions', 'design_system',
+    'mission_control', 'localbrain_network', 'knowledge_graph', 'publishing_system',
+]
+
+CONTENT_MANAGEMENT_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-10',
+    'updated': today,
+    'title': 'Master Content Management System, Research Publishing & Editorial Workflow',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_10_CONTENT_MANAGEMENT.md',
+    'source_registries': {
+        'content_production_factory': '/data/content-production-factory.json',
+        'content_production_matrix': '/data/content-production-matrix.json',
+        'content_inventory': '/data/content-inventory.json',
+        'knowledge_graph': '/data/knowledge-graph-manifest.json',
+        'canonical_data': '/data/canonical-data-manifest.json',
+    },
+    'philosophy': 'Institutional Knowledge Publishing System — not a blogging platform',
+    'governing_principle': (
+        'Software makes publication possible; research makes publication valuable; '
+        'trust is earned one publication at a time'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_organizational': days_to_organizational,
+    'content_classes': CMS_CONTENT_CLASSES,
+    'content_type_count': sum(len(v) for v in CMS_CONTENT_CLASSES.values()),
+    'content_class_count': len(CMS_CONTENT_CLASSES),
+    'publishing_principles': CMS_PUBLISHING_PRINCIPLES,
+    'editorial_workflow': EDITORIAL_WORKFLOW_STAGES,
+    'workflow_stage_count': len(EDITORIAL_WORKFLOW_STAGES),
+    'content_metadata_fields': CONTENT_METADATA_FIELDS,
+    'content_relationship_targets': CONTENT_RELATIONSHIP_TARGETS,
+    'evidence_link_types': EVIDENCE_LINK_TYPES,
+    'review_cycle_triggers': REVIEW_CYCLE_TRIGGERS,
+    'discovery_dimensions': DISCOVERY_DIMENSIONS,
+    'ai_editorial_capabilities': AI_EDITORIAL_CAPABILITIES,
+    'ai_publish_rule': 'AI assists but never publishes independently',
+    'workspace_features': WORKSPACE_FEATURES,
+    'public_feedback_actions': PUBLIC_FEEDBACK_ACTIONS,
+    'mc_publishing_metrics': MC_PUBLISHING_METRICS,
+    'foundational_architecture': FOUNDATIONAL_ARCHITECTURE_PACKAGES,
+    'packages_completed': 10,
+    'packages_total': 50,
+    'foundation_complete_pct': 20,
+    'engineering_note': 'Doctrinal IMP-10 CMS; engineering IMP-10 in step registry is Sprint Zero gate',
+    'status': 'documented',
+    'implemented': False,
+}
+
 ROUTE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -2115,11 +2258,12 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D10', 'indicator': 'Mission Control Architecture (IMP-07)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D11', 'indicator': 'LocalBrain Network (IMP-08)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D12', 'indicator': 'Knowledge Graph (IMP-09)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D13', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D13', 'indicator': 'Content Management (IMP-10)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D14', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
-    78,
+    80,
     14
     + len(IMPLEMENTATION_STEPS) // 2
     + len(BANDS) * 2
@@ -2359,7 +2503,30 @@ out = {
             'number': 10,
             'id': 'IMP-10',
             'title': 'Master Content Management System, Research Publishing & Editorial Workflow',
-            'note': 'Doctrinal package 10; engineering IMP-10 is Sprint Zero gate',
+            'status': 'documented',
+        },
+    },
+    'content_management': {
+        'title': 'Master Content Management System, Research Publishing & Editorial Workflow',
+        'package': 'Implementation Package 10 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_10_CONTENT_MANAGEMENT.md',
+        'manifest': '/data/content-management-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': CONTENT_MANAGEMENT_MANIFEST['philosophy'],
+        'content_type_count': CONTENT_MANAGEMENT_MANIFEST['content_type_count'],
+        'content_class_count': CONTENT_MANAGEMENT_MANIFEST['content_class_count'],
+        'workflow_stage_count': CONTENT_MANAGEMENT_MANIFEST['workflow_stage_count'],
+        'packages_completed': CONTENT_MANAGEMENT_MANIFEST['packages_completed'],
+        'foundation_complete_pct': CONTENT_MANAGEMENT_MANIFEST['foundation_complete_pct'],
+        'software_completion_date': software_completion_date,
+        'organizational_readiness_date': organizational_readiness_date,
+        'engineering_note': CONTENT_MANAGEMENT_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 11,
+            'id': 'IMP-11',
+            'title': 'Master Research Institute, Evidence Ledger & Claims Verification System',
+            'note': 'Doctrinal package 11; engineering IMP-11 is unified route manifest',
         },
     },
     'master_timeline': MASTER_TIMELINE,
@@ -2481,6 +2648,10 @@ with open(root / 'data/localbrain-network-manifest.json', 'w', newline='\n') as 
 
 with open(root / 'data/knowledge-graph-manifest.json', 'w', newline='\n') as f:
     json.dump(KNOWLEDGE_GRAPH_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/content-management-manifest.json', 'w', newline='\n') as f:
+    json.dump(CONTENT_MANAGEMENT_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

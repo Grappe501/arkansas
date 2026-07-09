@@ -13,6 +13,18 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.10] - 2026-07-09 — IMP-10 Content Management & Editorial Workflow
+
+### Implementation Package 10 of 50
+- **Master Content Management System, Research Publishing & Editorial Workflow**
+- 35 content types across 5 classes · 10-stage editorial workflow · AI authoring (assist-only)
+- Evidence integration, metadata standards, version control, editorial calendar, MC publishing metrics
+- Machine-readable **content-management-manifest.json**
+- Band A foundational architecture complete: 10/50 packages (**20%**)
+- IMP-11 next (doctrinal): Research Institute, Evidence Ledger & Claims Verification
+- Engineering Sprint Zero remains IMP-10 in step registry (Band A gate)
+- Honest: 10/50 documented · 0/50 implemented · 80% package readiness
+
 ## [2.05.9] - 2026-07-09 — IMP-09 Knowledge Graph + dual timeline
 
 ### Implementation Package 9 of 50

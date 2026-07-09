@@ -10662,6 +10662,10 @@ async function initCursorImplementationPackage() {
     <h2 class="mc-section-title">Master Timeline</h2>
     <p class="mc-bar-note"><strong>Software complete:</strong> ${cip.software_completion_date || cip.master_timeline?.phase_one?.target_date || '2026-07-11'} · <strong>Organizational readiness:</strong> ${cip.organizational_readiness_date || cip.master_timeline?.phase_two?.target_date || '2027-01-01'}</p>
     <p class="mc-bar-note">${cip.master_timeline?.sequence || 'Software Complete → Build-Out → Organizational Readiness'}</p>
+    <h2 class="mc-section-title">Content Management (IMP-10)</h2>
+    <p class="mc-bar-note"><strong>${cip.content_management.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.content_management.content_type_count} content types · ${cip.content_management.content_class_count} classes · ${cip.content_management.workflow_stage_count} workflow stages · ${cip.content_management.foundation_complete_pct}% foundation (${cip.content_management.packages_completed}/50 packages)</p>
+    <p class="mc-bar-note"><a href="${cip.content_management.route}">IMPLEMENTATION_PACKAGE_10_CONTENT_MANAGEMENT.md</a> · <a href="${cip.content_management.manifest}">content-management-manifest.json</a> · <a href="/mission-control/content-factory.html">Content Factory dashboard</a></p>
+    <p class="mc-bar-note">${cip.content_management.philosophy}</p>
     <h2 class="mc-section-title">Knowledge Graph (IMP-09)</h2>
     <p class="mc-bar-note"><strong>${cip.knowledge_graph.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.knowledge_graph.node_type_count} node types · ${cip.knowledge_graph.relationship_count} relationship patterns · ${cip.knowledge_graph.knowledge_health_metric_count} health metrics</p>
     <p class="mc-bar-note"><a href="${cip.knowledge_graph.route}">IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md</a> · <a href="${cip.knowledge_graph.manifest}">knowledge-graph-manifest.json</a> · <a href="/mission-control/knowledge-graph.html">Knowledge Graph dashboard</a></p>

@@ -1,5 +1,5 @@
 {
-  "version": "2.05.9",
+  "version": "2.05.10",
   "build": 101,
   "updated": "2026-07-09",
   "identity": {
@@ -121,7 +121,7 @@
     "connected_citizen_goal_pct": 15,
     "implementation_steps_total": 50,
     "implementation_steps_implemented": 0,
-    "implementation_steps_documented": 9,
+    "implementation_steps_documented": 10,
     "overall_completion": 101,
     "current_build": {
       "number": 101,
@@ -133,8 +133,8 @@
       "number": 102,
       "title": "Executive war room & countdown dashboard components"
     },
-    "implementation_package_readiness": 78,
-    "cursor_implementation_package_readiness": 78,
+    "implementation_package_readiness": 80,
+    "cursor_implementation_package_readiness": 80,
     "implementation_phase_started": false,
     "sprint_zero_started": false,
     "software_completion_date": "2026-07-11",
@@ -876,7 +876,7 @@
     {
       "id": "cursor_implementation_package",
       "label": "Implementation Package",
-      "value": 78,
+      "value": 80,
       "max": 100,
       "note": "0/50 steps implemented \u00b7 Sprint Zero pending."
     }
@@ -7810,21 +7810,23 @@
     }
   ],
   "briefing": {
-    "what_built": "IMP-01\u201309 documented + dual timeline (Jul 11 2026 software / Jan 2027 org)",
-    "building_now": "IMP-10 Content Management System & Editorial Workflow next",
+    "what_built": "IMP-01\u201310 documented \u2014 Band A foundation complete (20%)",
+    "building_now": "IMP-11 Research Institute & Evidence Ledger next; engineering Sprint Zero (IMP-10 gate) pending",
     "blocked": [
       "Sprint Zero not complete",
       "0/50 code-implemented",
       "2 days to software target"
     ],
     "ready_public": [
+      "Content Management",
+      "content-management-manifest.json",
       "Knowledge Graph",
       "knowledge-graph-manifest.json",
       "Master Timeline",
       "LocalBrain Network",
       "Mission Control Architecture"
     ],
-    "next": "IMP-10 \u2014 Master Content Management System, Research Publishing & Editorial Workflow"
+    "next": "IMP-11 \u2014 Master Research Institute, Evidence Ledger & Claims Verification System"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8840,10 +8842,10 @@
   "cursor_implementation_package": "/data/cursor-implementation-package.json",
   "cursor_implementation_package_dashboard": "/mission-control/cursor-implementation-package.html",
   "cursor_implementation_package_inventory": {
-    "readiness_score": 78,
+    "readiness_score": 80,
     "steps_total": 50,
     "steps_implemented": 0,
-    "steps_documented": 9,
+    "steps_documented": 10,
     "bands_total": 5,
     "sprint_zero_started": false,
     "cursor_master_prompt_ready": true
