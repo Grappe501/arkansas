@@ -232,12 +232,14 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Component Registry <a href="/mission-control/components.html" class="mc-inline-link">Master Inventory →</a></h2>
+    <p class="mc-bar-note">Build #17 — 42 components (A–G), ACEI branding, linked to design system.</p>
     <h2 class="mc-section-title">Route Registry <a href="/mission-control/routes.html" class="mc-inline-link">Complete Inventory →</a></h2>
     <p class="mc-bar-note">Build #16 — 81 routes across 9 groups, Action Hub links, launch priorities.</p>
     <h2 class="mc-section-title">Canonical Data Model <a href="/mission-control/data-model.html" class="mc-inline-link">Relationship Architecture →</a></h2>
     <p class="mc-bar-note">Build #15 — 10 canonical objects, 20 relationship types, geographic &amp; timeline intelligence. Everything connected.</p>
-    <h2 class="mc-section-title">ACUCOS <a href="/mission-control/coalition.html" class="mc-inline-link">Coalition Operating System →</a></h2>
-    <p class="mc-bar-note">Build #14 — ACUCOS v1.0, 75 county pages, 6 participation levels, growth engine, recognition system.</p>
+    <h2 class="mc-section-title">ACEI Coalition <a href="/mission-control/coalition.html" class="mc-inline-link">Coalition System →</a></h2>
+    <p class="mc-bar-note">Build #14 — ACEI Coalition System (formerly ACUCOS), 75 county pages, 6 participation levels.</p>
     <h2 class="mc-section-title">Arkansas Civic Ecosystem <a href="/mission-control/civic-ecosystem.html" class="mc-inline-link">County Dashboard →</a></h2>
     <p class="mc-bar-note">Build #12 — Arkansas Education Ladder (7 levels), 75-county map, Arkansas Action Hub.</p>
     <h2 class="mc-section-title">Knowledge Graph <a href="/mission-control/knowledge-graph.html" class="mc-inline-link">Educational Intelligence →</a></h2>
@@ -1313,7 +1315,7 @@ async function initCoalitionBlueprint() {
   const mc = await mcRes.json();
   const ca = mc.civic_action || {};
   const co = mc.coalition_outreach || {};
-  const acucos = coalition.acucos || {};
+  const acei = coalition.acei_coalition || coalition.acucos || {};
   const levels = coalition.participation_levels || coalition.membership_levels || [];
   const categories = coalition.coalition_categories || coalition.organization_types || [];
   const dashboard = coalition.coalition_dashboard || coalition.growth_dashboard || {};
@@ -1366,10 +1368,10 @@ async function initCoalitionBlueprint() {
       </tr>`).join('');
 
   root.innerHTML = `
-    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → ACUCOS</nav>
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → ACEI Coalition</nav>
     <header class="mc-header">
-      <p class="mc-header__eyebrow">Build #14 · ${acucos.name || coalition.title}</p>
-      <h1>ACUCOS Coalition Dashboard</h1>
+      <p class="mc-header__eyebrow">Build #14 · ${acei.name || coalition.title}</p>
+      <h1>ACEI Coalition Dashboard</h1>
       <p class="mc-header__question">${coalition.governing_principle}</p>
     </header>
     <section class="mc-card">
@@ -1381,7 +1383,7 @@ async function initCoalitionBlueprint() {
     ${renderMetricSection('Event Metrics', dashboard.event_metrics)}
     ${renderMetricSection('Resource Metrics', dashboard.resource_metrics)}
     ${renderMetricSection('Growth Metrics', dashboard.growth_metrics)}
-    <p class="mc-bar-note">ACUCOS readiness: ${co.readiness_score ?? 12}% · All metrics at 0 until organizations join and forms integrate.</p>
+    <p class="mc-bar-note">ACEI Coalition readiness: ${co.readiness_score ?? 12}% · Metrics at 0 until organizations join and forms integrate.</p>
     <h2 class="mc-section-title">Participation Levels (${levels.length})</h2>
     <table class="mc-table"><thead><tr><th>Level</th><th>Role</th><th>Organizations</th></tr></thead><tbody>${levelRows}</tbody></table>
     <h2 class="mc-section-title">Coalition Categories (${categories.length})</h2>
@@ -1409,13 +1411,13 @@ async function initCoalitionBlueprint() {
       <tbody>${(coalition.future_integrations || []).map(i => `<tr><td>${i.title}</td><td><a href="${i.route}">${i.route}</a></td><td>${i.status}</td></tr>`).join('')}</tbody></table>
     <h2 class="mc-section-title">Workspaces</h2>
     <ul class="mc-deliverables">
-      <li><strong>ACUCOS Hub</strong> — <a href="/coalition/">/coalition/</a></li>
+      <li><strong>ACEI Coalition Hub</strong> — <a href="/coalition/">/coalition/</a></li>
       <li><strong>Join</strong> — <a href="/coalition/join.html">/coalition/join.html</a></li>
       <li><strong>${coalition.coalition_resource_portal?.title || 'Resource Portal'}</strong> — <a href="${coalition.coalition_resource_portal?.route || '/coalition/resources.html'}">resources</a></li>
       <li><strong>Event Calendar</strong> — <a href="/coalition/events.html">/coalition/events.html</a></li>
     </ul>
     <p class="mc-bar-note">
-      <a href="/docs/ACUCOS_CONSTITUTION.md">ACUCOS_CONSTITUTION.md</a> ·
+      <a href="/docs/ACUCOS_CONSTITUTION.md">Coalition Constitution</a> ·
       <a href="/data/coalition-ecosystem.json">Blueprint JSON</a> ·
       <a href="/data/county-coalition-index.json">County index</a> ·
       <a href="/mission-control/">← Mission Control</a>
@@ -1605,6 +1607,81 @@ async function initRouteRegistryBlueprint() {
   initDevConsole(mc);
 }
 
+async function initComponentRegistryBlueprint() {
+  const root = document.getElementById('mc-components-root');
+  if (!root) return;
+
+  const [compRes, brandRes, designRes, mcRes] = await Promise.all([
+    fetch('/data/component-registry.json'),
+    fetch('/data/brand-identity.json'),
+    fetch('/data/design-system.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const reg = await compRes.json();
+  const brand = await brandRes.json();
+  const design = await designRes.json();
+  const mc = await mcRes.json();
+  const s = reg.summary;
+
+  const byCat = {};
+  reg.components.forEach(c => {
+    if (!byCat[c.category]) byCat[c.category] = [];
+    byCat[c.category].push(c);
+  });
+
+  const catSections = reg.categories.map(cat => {
+    const items = byCat[cat.id] || [];
+    const rows = items.map(c => `
+      <tr class="${c.status === 'live' ? 'mc-table__row--approved' : ''}">
+        <td><code>${c.id}</code></td>
+        <td>${c.title}</td>
+        <td>${c.status}</td>
+        <td>${c.css_class || '—'}</td>
+        <td>${c.design_system_ref || '—'}</td>
+      </tr>`).join('');
+    return `
+      <h2 class="mc-section-title">Category ${cat.id} — ${cat.title} (${items.length})</h2>
+      <table class="mc-table"><thead><tr><th>ID</th><th>Component</th><th>Status</th><th>CSS</th><th>DSGN</th></tr></thead><tbody>${rows}</tbody></table>`;
+  }).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Component Registry</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #17 · ${reg.title}</p>
+      <h1>Master Component Registry</h1>
+      <p class="mc-header__question">${reg.governing_principle}</p>
+    </header>
+    <section class="mc-card">
+      <h3>${brand.organization.name} (${brand.organization.abbrev})</h3>
+      <p class="mc-bar-note"><strong>${brand.platform.name}</strong> — ${brand.platform.note}</p>
+      <p class="mc-bar-note">Coalition: ${brand.coalition_system.name} <em>(renamed from ${brand.coalition_system.legacy_name})</em></p>
+    </section>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Components</div><div class="mc-stat__value">${s.total_components}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Live</div><div class="mc-stat__value">${s.live}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Partial</div><div class="mc-stat__value">${s.partial}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Stub</div><div class="mc-stat__value">${s.stub}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Planned</div><div class="mc-stat__value">${s.planned}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">DSGN linked</div><div class="mc-stat__value">${s.design_system_linked}</div></div>
+    </div>
+    <h2 class="mc-section-title">Component Principles</h2>
+    <ul class="mc-deliverables">${reg.principles.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Design System (Build #9)</h2>
+    <p class="mc-bar-note">${design.components?.length || 14} legacy <code>ds-*</code> components in <a href="/design-system/">showcase</a></p>
+    ${catSections}
+    <h2 class="mc-section-title">Recommended: Build #${reg.recommended_next_build.number} — ${reg.recommended_next_build.title}</h2>
+    <ul class="mc-deliverables">${reg.recommended_next_build.items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <p class="mc-bar-note">
+      <a href="/docs/COMPONENT_REGISTRY.md">COMPONENT_REGISTRY.md</a> ·
+      <a href="/data/component-registry.json">JSON</a> ·
+      <a href="/data/brand-identity.json">Brand</a> ·
+      <a href="/mission-control/design.html">Design System</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -1620,4 +1697,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initCoalitionBlueprint();
   initDataModelBlueprint();
   initRouteRegistryBlueprint();
+  initComponentRegistryBlueprint();
 });

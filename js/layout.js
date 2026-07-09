@@ -1,5 +1,5 @@
 /**
- * Citizens Facts — Shared layout v1.20.0
+ * Citizens Facts — Shared layout v1.21.0
  */
 
 const SITE_CSS = '/css/action-hub.css';
@@ -61,7 +61,7 @@ function renderSiteHeader(activePath) {
     <div class="site-header__inner">
       <div>
         <h1 class="site-title"><a href="/">Citizens Facts</a></h1>
-        <p class="site-tagline">Discover → Understand → Explore → Teach → Lead</p>
+        <p class="site-tagline">Arkansas Civic Education Initiative · <em>Citizens United</em> Education Platform</p>
       </div>
       <nav class="site-nav" aria-label="Main navigation">
         <a href="/"${activePath === '/' || activePath === '/index.html' ? ' aria-current="page"' : ''}>Home</a>
@@ -93,7 +93,7 @@ function renderSiteFooter() {
       <a href="/docs/CIVIC_ACTION.md">Civic Action</a> ·
       <a href="https://github.com/Grappe501/arkansas" rel="noopener">GitHub</a>
     </p>
-    <p class="site-footer__mission">Discover → Understand → Explore → Evaluate → Discuss → Teach → Lead</p>
+    <p class="site-footer__mission">Arkansas Civic Education Initiative — educating about <em>Citizens United</em>, not endorsing it.</p>
   </footer>`;
 }
 

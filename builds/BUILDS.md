@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#17** | **Component Registry** | **1.21.0** | **✅ Complete** | [017](017-component-architecture.md) · [/mission-control/components.html](../mission-control/components.html) |
 | **#16** | **Route Inventory** | **1.20.0** | **✅ Complete** | [016](016-page-route-inventory.md) · [/mission-control/routes.html](../mission-control/routes.html) |
 | **#15** | **Canonical Data Model** | **1.19.0** | **✅ Complete** | [015](015-canonical-data-model.md) · [/mission-control/data-model.html](../mission-control/data-model.html) |
 | **#14** | **ACUCOS** | **1.18.0** | **✅ Complete** | [014](014-acucos.md) · [/mission-control/coalition.html](../mission-control/coalition.html) |
@@ -16,13 +17,14 @@
 | **#5** | **Site Architecture** | **1.9.0** | **✅ Complete** | [005](005-master-site-architecture.md) |
 | **#4** | **Phase Registry** | **1.8.0** | **✅ Complete** | [004](004-master-phase-registry.md) |
 
-## Platform Stack (Builds #4–#16)
+## Platform Stack (Builds #4–#17)
 
 | Layer | Route | Focus |
 |-------|-------|-------|
 | Phase Registry | `/mission-control/phases.html` | Project phases |
 | Site Architecture | `/mission-control/architecture.html` | Destinations + platform layers |
 | **Route Registry** | `/mission-control/routes.html` | **81 routes · v1 map** |
+| **Component Registry** | `/mission-control/components.html` | **42 components · A–G** |
 | Content Inventory | `/mission-control/inventory.html` | Content assets |
 | MRID System | `/mission-control/mrid.html` | Requirement IDs |
 | Citizen Journey | `/mission-control/journey.html` | People & UX |
@@ -30,7 +32,7 @@
 | Research Constitution | `/mission-control/research.html` | Evidence & sources |
 | **Knowledge Graph** | `/mission-control/knowledge-graph.html` | Connected knowledge |
 | **Civic Ecosystem** | `/mission-control/civic-ecosystem.html` | Arkansas leadership & counties |
-| **ACUCOS** | `/mission-control/coalition.html` | Coalition Operating System |
+| **ACEI Coalition** | `/mission-control/coalition.html` | Coalition System (formerly ACUCOS) |
 | **Canonical Data Model** | `/mission-control/data-model.html` | **Everything connected** |
 
 ## Route Rule (Build #16)
@@ -39,7 +41,7 @@ Every route answers one reader question. 81 routes inventoried — honest live/r
 
 ## Data Model Rule (Build #15)
 
-Everything is connected. 10 canonical objects, 20 relationship types. Value grows through relationships, not page count. **Next:** concrete product (Builds #16–#20).
+Everything is connected. 10 canonical objects, 20 relationship types. Value grows through relationships, not page count. **Next:** Brand & Identity System (Build #18).
 
 ## Arkansas Rule (Build #12)
 

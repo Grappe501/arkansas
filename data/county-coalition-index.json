@@ -1,7 +1,8 @@
 {
   "version": "1.0",
   "build": 14,
-  "acucos": "Arkansas Citizens United Coalition Operating System",
+  "acei_coalition": "ACEI Coalition System",
+  "acucos": "ACEI Coalition System (formerly ACUCOS)",
   "updated": "2026-07-09",
   "counties_total": 75,
   "summary": {

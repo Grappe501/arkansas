@@ -1,4 +1,7 @@
-# Arkansas Citizens United Coalition Operating System (ACUCOS)
+# ACEI Coalition Operating System (formerly ACUCOS)
+
+> **Renamed Build #17:** **ACEI Coalition System** — part of the **Arkansas Civic Education Initiative**.  
+> *Citizens United* is the subject of education, not organizational identity. Legacy filename retained for links.
 
 **Coalition Architecture & Growth Blueprint v1.0** · **Build #14**  
 **Dashboard:** [/mission-control/coalition.html](/mission-control/coalition.html) · **Hub:** [/coalition/](/coalition/)
@@ -7,9 +10,9 @@
 
 ## Purpose
 
-The Arkansas Citizens United Coalition is the **statewide organizational backbone** of the Citizens United Education Platform.
+The **ACEI Coalition** is the **statewide organizational backbone** of the Arkansas Civic Education Initiative's *Citizens United* education platform.
 
-While the website educates individuals, ACUCOS connects organizations, institutions, and community leaders into a coordinated educational network. The coalition is not merely a list of supporters — it is a living ecosystem.
+While the website educates individuals, the ACEI Coalition System connects organizations, institutions, and community leaders into a coordinated educational network. The coalition is not merely a list of supporters — it is a living ecosystem.
 
 Mission Control treats **coalition growth as a primary measure of success**.
 

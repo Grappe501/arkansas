@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "build": 17,
+  "updated": "2026-07-09",
+  "organization": {
+    "name": "Arkansas Civic Education Initiative",
+    "abbrev": "ACEI",
+    "scope": "Arkansas pilot",
+    "description": "Independent civic education organization — not affiliated with or supportive of the Citizens United decision."
+  },
+  "platform": {
+    "name": "The Citizens United Education Platform",
+    "tagline": "Citizens United civic education — Understand → Teach → Lead",
+    "subject": "Citizens United v. FEC and campaign finance",
+    "note": "Citizens United names the subject of education, not the identity of the organization."
+  },
+  "site": {
+    "public_name": "Citizens Facts",
+    "url": "https://arkansas-facts.netlify.app"
+  },
+  "coalition_system": {
+    "name": "ACEI Coalition System",
+    "legacy_name": "ACUCOS",
+    "legacy_note": "Formerly Arkansas Citizens United Coalition Operating System — renamed to avoid endorsement ambiguity."
+  },
+  "recommended_next": {
+    "build": 18,
+    "title": "Brand & Identity System",
+    "scope": ["Permanent project name", "Logo philosophy", "Color system", "Typography", "Voice", "Messaging"]
+  },
+  "candidates_considered": [
+    "Arkansas Campaign Finance Education Project",
+    "Arkansas Civic Education Initiative",
+    "Arkansas Democracy Education Project",
+    "Arkansas Public Education Project",
+    "Arkansas Democracy Institute",
+    "Arkansas Civic Knowledge Project"
+  ]
+}

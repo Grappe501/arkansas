@@ -38,9 +38,9 @@ async function initCountyCoalitionPage() {
   document.title = `${county.name} County Coalition | Citizens Facts`;
 
   root.innerHTML = `
-    <nav class="breadcrumb"><a href="/">Front Door</a> → <a href="/coalition/">ACUCOS</a> → <a href="/coalition/counties.html">Counties</a> → ${county.name}</nav>
+    <nav class="breadcrumb"><a href="/">Front Door</a> → <a href="/coalition/">ACEI Coalition</a> → <a href="/coalition/counties.html">Counties</a> → ${county.name}</nav>
     <header class="hall-header">
-      <span class="ladder-badge">ACUCOS · County Coalition</span>
+      <span class="ladder-badge">ACEI Coalition · County</span>
       <h1>${county.name} County Coalition</h1>
       <p class="hall-purpose">Local educational partners, events, and outreach in ${county.name} County, Arkansas.</p>
       <p><span class="status-badge status-badge--coming">Completeness: ${county.completeness_pct}%</span>

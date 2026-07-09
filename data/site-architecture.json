@@ -53,8 +53,8 @@
     },
     {
       "id": "coalition_outreach",
-      "title": "Coalition & Outreach (ACUCOS)",
-      "description": "Arkansas Citizens United Coalition Operating System — org coalition, county pages, growth engine.",
+      "title": "Coalition & Outreach (ACEI)",
+      "description": "ACEI Coalition System — statewide org coalition, county pages, growth engine. (Formerly ACUCOS.)",
       "routes": ["/coalition/", "/coalition/counties.html"],
       "mission_control": "/mission-control/coalition.html",
       "build": 14,

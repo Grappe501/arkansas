@@ -4,8 +4,9 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.20.0 · **Routes:** [/mission-control/routes.html](/mission-control/routes.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #16:** ✅ Route Inventory · **Build #15:** ✅ Data Model · **Build #14:** ✅ ACUCOS  
+**Current version:** 1.21.0 · **Components:** [/mission-control/components.html](/mission-control/components.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #17:** ✅ Component Registry · **Build #16:** ✅ Route Inventory · **Build #15:** ✅ Data Model  
+**Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
 > **Arkansas pilot (v1):** All civic action frameworks scoped to Arkansas first — modular for future states.
@@ -259,8 +260,26 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **14** | **ACUCOS** | **✅ v1.18.0** |
 | **15** | **Canonical Data Model** | **✅ v1.19.0** |
 | **16** | **Route Inventory** | **✅ v1.20.0** |
+| **17** | **Component Registry** | **✅ v1.21.0** |
 
-**Next:** Build #17 — Component inventory (cards, timelines, Action Hub, dashboards, forms).
+**Next:** Build #18 — Brand & Identity System (logo, color, typography, voice, messaging).
+
+---
+
+## Phase 17 — Component Registry (Build #17) ★ NEW
+
+*Master component inventory + ACEI brand separation.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| C1 | Component Registry v1.0 | ✅ | `data/component-registry.json` |
+| C2 | 7 categories (A–G), 42 components | ✅ | Honest live/partial/stub/planned |
+| C3 | Brand identity scaffold (ACEI) | ✅ | `data/brand-identity.json` |
+| C4 | MC components dashboard | ✅ | `/mission-control/components.html` |
+| C5 | ACEI coalition rebrand (user-facing) | ✅ | Hub pages, layout, coalition docs |
+| C6 | Design system cross-links | ✅ | Build #9 `ds-*` components |
+
+**Component principle:** The platform should feel like one cohesive educational institution.
 
 ---
 
@@ -309,10 +328,11 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | Build | Title |
 |-------|-------|
 | ~~**#16**~~ | ~~Complete page inventory~~ ✅ Done |
-| **#17** | Component inventory (cards, timelines, Action Hub, dashboards, forms) |
-| **#18** | Database schema and entity relationships |
-| **#19** | UX wireframes for desktop, tablet, and mobile |
-| **#20** | GitHub repository structure and Netlify deployment blueprint |
+| ~~**#17**~~ | ~~Component inventory~~ ✅ Done |
+| **#18** | **Brand & Identity System** (logo, color, typography, voice, messaging) |
+| **#19** | Database schema and entity relationships |
+| **#20** | UX wireframes for desktop, tablet, and mobile |
+| **#21** | GitHub repository structure and Netlify deployment blueprint |
 
 ---
 

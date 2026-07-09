@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.21.0] - 2026-07-09 — Build #17 Component Registry
+
+### Component Architecture & ACEI Branding
+- **Master Component Registry v1.0** — 42 components across 7 categories (A–G)
+- Honest status: 22 live, 11 partial, 6 stub, 3 planned
+- **ACEI brand separation** — Arkansas Civic Education Initiative; *Citizens United* as subject, not identity
+- ACEI Coalition System (formerly ACUCOS) on hub pages and coalition docs
+- MC dashboard: `/mission-control/components.html`
+- **Recommended next:** Build #18 Brand & Identity System
+
 ## [1.20.0] - 2026-07-09 — Build #16 Route Inventory
 
 ### Complete Page & Route Inventory

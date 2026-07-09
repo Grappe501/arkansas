@@ -4,12 +4,22 @@
   "updated": "2026-07-09",
   "scope": "arkansas",
   "acucos": {
-    "name": "Arkansas Citizens United Coalition Operating System",
-    "abbrev": "ACUCOS",
+    "name": "ACEI Coalition System",
+    "abbrev": "ACEI-CS",
+    "legacy_name": "ACUCOS",
+    "legacy_abbrev": "ACUCOS",
     "version": "1.0",
     "constitution": "/docs/ACUCOS_CONSTITUTION.md",
     "route": "/mission-control/coalition.html",
     "public_hub": "/coalition/"
+  },
+  "organization": {
+    "name": "Arkansas Civic Education Initiative",
+    "abbrev": "ACEI"
+  },
+  "platform": {
+    "name": "The Citizens United Education Platform",
+    "note": "Citizens United is the subject of education, not organizational identity."
   },
   "title": "Coalition Architecture & Growth Blueprint v1.0",
   "data_file": "/data/coalition-ecosystem.json",
@@ -18,8 +28,8 @@
   "county_index_file": "/data/county-coalition-index.json",
   "schema": "/data/organization-profile-schema.json",
   "legacy_doc": "/docs/COALITION_OUTREACH.md",
-  "purpose": "The Arkansas Citizens United Coalition is the statewide organizational backbone of the Citizens United Education Platform. While the website educates individuals, ACUCOS connects organizations, institutions, and community leaders into a coordinated educational network.",
-  "governing_principle": "The Arkansas Citizens United Coalition exists to strengthen civic education through partnership. Success is measured not by organizational size or influence, but by the coalition's ability to help more Arkansans understand Citizens United, engage thoughtfully with reliable information, and share that knowledge within their own communities.",
+  "purpose": "The ACEI Coalition System is the statewide organizational backbone of the Arkansas Civic Education Initiative. While the platform educates individuals about Citizens United, the coalition connects organizations, institutions, and community leaders into a coordinated educational network.",
+  "governing_principle": "The ACEI coalition exists to strengthen civic education through partnership — not endorsement of the Citizens United decision. Success is measured by the coalition's ability to help more Arkansans understand the case, engage with reliable information, and share knowledge in their communities.",
   "coalition_vision": "Establish at least one active educational partner in every Arkansas county. Each partner contributes according to its mission, capacity, and expertise while maintaining organizational independence. Amplify civic education through collaboration rather than centralization.",
   "platform_pillars": [
     { "id": "education", "title": "Education", "entry": "I'm Here to Learn", "route": "/explore/" },
@@ -222,7 +232,7 @@
     "status": "planned"
   },
   "coalition_dashboard": {
-    "title": "ACUCOS Coalition Dashboard",
+    "title": "ACEI Coalition Dashboard",
     "route": "/mission-control/coalition.html",
     "organization_metrics": [
       { "id": "total_organizations", "title": "Total coalition organizations" },
