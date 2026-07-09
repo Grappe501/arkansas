@@ -26,7 +26,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 4  # IMP-01, IMP-02, IMP-03, IMP-04
+steps_documented = 5  # IMP-01 through IMP-05
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -198,29 +198,60 @@ IMPLEMENTATION_STEPS = [
     },
     {
         'number': 5, 'id': 'IMP-05', 'band': 'A',
-        'title': 'Repository migration and folder scaffold',
-        'summary': 'Strangler-fig migration plan, repo audit, target folder scaffold without breaking static deploy',
-        'deliverables': ['docs/MIGRATION_PLAN.md', 'docs/REPO_AUDIT.md', 'app/README.md', 'database/README.md'],
+        'package_label': 'Implementation Package 5 of 50',
+        'title': 'Master Identity, Authentication, Roles & Permissions',
+        'summary': 'Complete identity and authorization model — one person, one identity, many roles, personalized experience',
+        'deliverables': [
+            'docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md',
+            'data/identity-auth-manifest.json',
+            'Identity Architecture', 'Authentication Model', 'Role Hierarchy',
+            'Permission Framework', 'Geographic Authorization Model',
+            'Organization Authorization Model', 'User Lifecycle',
+            'Onboarding Framework', 'Privacy Standards', 'Security Standards',
+        ],
+        'acceptance_criteria': [
+            'Core philosophy: one person → one identity → many roles → personalized experience',
+            'Nine-role hierarchy documented with additive permissions',
+            'Authentication providers and MFA for elevated roles defined',
+            'Anonymous, registered, and role-scoped capabilities documented',
+            'Geographic and organization permission scoping defined',
+            'Identity lifecycle, onboarding, privacy, security, MC and AI integration documented',
+            'Cursor should never need to invent authorization rules during development',
+        ],
+        'source_blueprints': [
+            '/data/identity-auth-manifest.json',
+            '/data/arkansas-civic-operating-system.json',
+            '/data/canonical-data-manifest.json',
+            '/docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md',
+            '/prisma/schema.prisma',
+        ],
+        'constitution': '/docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md',
+        'manifest': '/data/identity-auth-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+    },
+    {
+        'number': 6, 'id': 'IMP-06', 'band': 'A',
+        'title': 'Repository migration, stack lock, and environment',
+        'summary': 'Strangler-fig migration, repo audit, folder scaffold, pinned stack, service boundaries, env matrix',
+        'deliverables': [
+            'docs/MIGRATION_PLAN.md', 'docs/REPO_AUDIT.md', 'app/README.md',
+            'docs/STACK.md', 'docs/SERVICE_BOUNDARIES.md', 'docs/DEPLOYMENT_TOPOLOGY.md',
+            '.env.example', 'docs/ENVIRONMENT.md',
+        ],
         'acceptance_criteria': [
             'Current tree diffed against IMP-02 repository structure',
             'Migration strategy chosen with rollback plan',
             'Target folders scaffolded; existing static Netlify deploy unchanged',
-            'Safe-edit zones listed for volunteer contributors',
-        ],
-        'source_blueprints': ['/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md', '/data/repository-blueprint.json'],
-        'status': 'specified',
-    },
-    {
-        'number': 6, 'id': 'IMP-06', 'band': 'A',
-        'title': 'Stack lock, service boundaries, and environment',
-        'summary': 'Lock stack versions; service boundaries; .env.example and secrets matrix',
-        'deliverables': ['docs/STACK.md', 'docs/SERVICE_BOUNDARIES.md', 'docs/DEPLOYMENT_TOPOLOGY.md', '.env.example', 'docs/ENVIRONMENT.md'],
-        'acceptance_criteria': [
             'Pinned versions documented with rationale',
             'Public site, MC, API, and admin deployment units defined',
             'All required env vars documented with no secrets committed',
         ],
-        'source_blueprints': ['/data/technical-architecture.json', '/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md'],
+        'source_blueprints': [
+            '/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md',
+            '/data/repository-blueprint.json',
+            '/data/technical-architecture.json',
+        ],
         'status': 'specified',
     },
     {
@@ -268,7 +299,7 @@ IMPLEMENTATION_STEPS = [
         'summary': 'Gate before Band B — repo ready for first code slice',
         'deliverables': ['docs/SPRINT_ZERO_CHECKLIST.md', 'CONTRIBUTING.md'],
         'acceptance_criteria': [
-            'IMP-01 through IMP-04 documented; IMP-05–09 engineering criteria verified',
+            'IMP-01 through IMP-05 documented; IMP-06–09 engineering criteria verified',
             'CONTRIBUTING.md links to implementation packages and CURSOR_MASTER_BUILD_PROMPT.md',
             'One successful Netlify preview deploy from develop',
             'Executive sign-off field in checklist (manual)',
@@ -1052,6 +1083,222 @@ CANONICAL_DATA_MANIFEST = {
     'implemented': False,
 }
 
+ROLES = [
+    {
+        'id': 'public', 'name': 'Public Visitor', 'level': 0,
+        'account_required': False, 'workspace': '/',
+        'capabilities': [
+            'Browse public research', 'Read articles', 'Use search',
+            'Explore counties and cities', 'Read educational materials',
+        ],
+        'acos_mapping': None,
+    },
+    {
+        'id': 'member', 'name': 'Registered Member', 'level': 1,
+        'account_required': True, 'workspace': '/dashboard',
+        'capabilities': [
+            'Personal dashboard', 'Learning progress', 'Bookmarks and saved research',
+            'Event registration', 'Notifications', 'AI assistant', 'Personal calendar',
+            'Community recommendations',
+        ],
+        'acos_mapping': 'Learner',
+    },
+    {
+        'id': 'volunteer', 'name': 'Volunteer', 'level': 2,
+        'account_required': True, 'workspace': '/volunteer',
+        'capabilities': [
+            'Volunteer workspace', 'Assignments', 'Projects', 'Training',
+            'Community conversations',
+        ],
+        'acos_mapping': 'Volunteer',
+    },
+    {
+        'id': 'education_leader', 'name': 'Education Leader', 'level': 3,
+        'account_required': True, 'workspace': '/leader',
+        'capabilities': [
+            'Presentation materials', 'Local leadership tools', 'County and city resources',
+            'Mentoring features', 'Community management',
+        ],
+        'acos_mapping': 'Education Leader',
+    },
+    {
+        'id': 'research_contributor', 'name': 'Research Contributor', 'level': 3,
+        'account_required': True, 'workspace': '/research',
+        'capabilities': [
+            'Research workspace', 'Draft submissions', 'Evidence management',
+            'Citation tools', 'Peer review participation',
+        ],
+        'acos_mapping': 'Researcher',
+    },
+    {
+        'id': 'organization_admin', 'name': 'Organization Administrator', 'level': 4,
+        'account_required': True, 'workspace': '/organization',
+        'capabilities': [
+            'Organization dashboard', 'Member management', 'Shared resources',
+            'Events', 'Coalition reporting',
+        ],
+        'acos_mapping': 'Coalition partner',
+    },
+    {
+        'id': 'department_lead', 'name': 'Department Lead', 'level': 5,
+        'account_required': True, 'workspace': '/executive',
+        'capabilities': [
+            'Department dashboard', 'Project oversight', 'Volunteer coordination',
+            'Mission metrics', 'Reporting',
+        ],
+        'acos_mapping': None,
+    },
+    {
+        'id': 'executive', 'name': 'Executive Leadership', 'level': 6,
+        'account_required': True, 'workspace': '/executive',
+        'capabilities': [
+            'Mission Control', 'Institution dashboards', 'Strategic planning',
+            'Institutional reports', 'Forecasting', 'Executive AI',
+        ],
+        'acos_mapping': 'Executive',
+    },
+    {
+        'id': 'administrator', 'name': 'System Administrator', 'level': 7,
+        'account_required': True, 'workspace': '/admin',
+        'capabilities': [
+            'Platform configuration', 'User management', 'Security', 'Infrastructure',
+            'AI management', 'Deployment tools',
+        ],
+        'acos_mapping': None,
+        'mfa_required': True,
+    },
+]
+
+PERMISSION_CATEGORIES = [
+    {'id': 'read', 'name': 'Read', 'description': 'View content and data within scope'},
+    {'id': 'create', 'name': 'Create', 'description': 'Add new records'},
+    {'id': 'edit', 'name': 'Edit', 'description': 'Modify existing records'},
+    {'id': 'review', 'name': 'Review', 'description': 'Submit for editorial or peer review'},
+    {'id': 'approve', 'name': 'Approve', 'description': 'Approve content or actions'},
+    {'id': 'publish', 'name': 'Publish', 'description': 'Make content publicly visible'},
+    {'id': 'manage', 'name': 'Manage', 'description': 'Oversee users, resources, or projects in scope'},
+    {'id': 'delete', 'name': 'Delete', 'description': 'Rare; soft-delete preferred'},
+    {'id': 'administer', 'name': 'Administer', 'description': 'Platform configuration'},
+    {'id': 'audit', 'name': 'Audit', 'description': 'View change history and security logs'},
+]
+
+AUTH_PROVIDERS = [
+    {'id': 'email_password', 'name': 'Email/password', 'status': 'recommended'},
+    {'id': 'google', 'name': 'Google', 'status': 'recommended'},
+    {'id': 'apple', 'name': 'Apple', 'status': 'recommended'},
+    {'id': 'microsoft', 'name': 'Microsoft', 'status': 'recommended'},
+    {'id': 'enterprise_sso', 'name': 'Enterprise SSO', 'status': 'future'},
+]
+
+GEOGRAPHIC_SCOPES = [
+    {'scope': 'neighborhood', 'role_example': 'Neighborhood Leader', 'assignment': 'Assigned neighborhood'},
+    {'scope': 'city', 'role_example': 'City Education Leader', 'assignment': 'Assigned city'},
+    {'scope': 'county', 'role_example': 'County Education Director', 'assignment': 'Assigned county'},
+    {'scope': 'region', 'role_example': 'Regional Mentor', 'assignment': 'Assigned region'},
+    {'scope': 'statewide', 'role_example': 'Executive', 'assignment': 'All Arkansas'},
+]
+
+IDENTITY_LIFECYCLE = [
+    {'stage': 1, 'id': 'visitor', 'name': 'Visitor', 'account_required': False},
+    {'stage': 2, 'id': 'registered_member', 'name': 'Registered Member', 'account_required': True},
+    {'stage': 3, 'id': 'learner', 'name': 'Learner', 'account_required': True},
+    {'stage': 4, 'id': 'volunteer', 'name': 'Volunteer', 'account_required': True},
+    {'stage': 5, 'id': 'education_leader', 'name': 'Education Leader', 'account_required': True},
+    {'stage': 6, 'id': 'mentor', 'name': 'Mentor', 'account_required': True},
+    {'stage': 7, 'id': 'institutional_leader', 'name': 'Institutional Leader', 'account_required': True},
+]
+
+ONBOARDING_STEPS = [
+    'Welcome', 'Mission introduction', 'Personal interests', 'County selection',
+    'City selection', 'Learning recommendations', 'Volunteer opportunities (optional)',
+    'AI introduction',
+]
+
+PRIVACY_CONTROLS = [
+    'profile_visibility', 'volunteer_visibility', 'communication_preferences',
+    'organization_memberships', 'notification_settings', 'public_facing_information',
+]
+
+SECURITY_PRINCIPLES = [
+    'Least privilege by default',
+    'Multi-factor authentication for elevated roles',
+    'Session expiration',
+    'Audit logging',
+    'Permission review',
+    'No shared administrator accounts',
+]
+
+MC_IDENTITY_METRICS = [
+    'registered_users', 'active_users', 'volunteers', 'education_leaders',
+    'organization_administrators', 'county_leadership', 'city_leadership',
+    'role_distribution', 'growth_trends',
+]
+
+AI_IDENTITY_CONTEXT = [
+    'role', 'permissions', 'projects', 'learning_history',
+    'volunteer_responsibilities', 'calendar', 'institutional_context',
+]
+
+IDENTITY_AUTH_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-05',
+    'updated': today,
+    'title': 'Master Identity, Authentication, Roles & Permissions',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md',
+    'source_registries': {
+        'canonical_data_manifest': '/data/canonical-data-manifest.json',
+        'acos_roles': '/data/arkansas-civic-operating-system.json',
+        'prisma_draft': '/prisma/schema.prisma',
+        'route_manifest': '/data/route-manifest.json',
+    },
+    'philosophy': 'One person → one identity → many roles → personalized experience',
+    'governing_principle': (
+        'Every person should have exactly the access they need to contribute '
+        'confidently, securely, and effectively.'
+    ),
+    'identity_principles': [
+        'permanent_institutional_identity', 'personal_profile', 'role_assignment',
+        'permission_set', 'activity_history', 'learning_history', 'volunteer_history',
+    ],
+    'authentication': {
+        'providers': AUTH_PROVIDERS,
+        'mfa_required_roles': ['administrator', 'executive', 'department_lead'],
+        'session_expiration': True,
+    },
+    'anonymous_access': ROLES[0]['capabilities'],
+    'roles': ROLES,
+    'role_count': len(ROLES),
+    'multi_role_supported': True,
+    'permission_categories': PERMISSION_CATEGORIES,
+    'permission_category_count': len(PERMISSION_CATEGORIES),
+    'geographic_scopes': GEOGRAPHIC_SCOPES,
+    'organization_permissions': {
+        'multi_org_membership': True,
+        'org_specific_permissions': True,
+        'org_entities': ['members', 'roles', 'resources', 'events', 'projects'],
+    },
+    'identity_lifecycle': IDENTITY_LIFECYCLE,
+    'onboarding_steps': ONBOARDING_STEPS,
+    'privacy_controls': PRIVACY_CONTROLS,
+    'security_principles': SECURITY_PRINCIPLES,
+    'mission_control_metrics': MC_IDENTITY_METRICS,
+    'ai_context_fields': AI_IDENTITY_CONTEXT,
+    'account_routes': [
+        '/login', '/register', '/forgot-password', '/profile',
+        '/settings', '/notifications', '/messages', '/dashboard',
+    ],
+    'workspace_routes_by_role': {
+        'volunteer': '/volunteer',
+        'education_leader': '/leader',
+        'organization_admin': '/organization',
+        'executive': '/executive',
+        'administrator': '/admin',
+    },
+    'status': 'documented',
+    'implemented': False,
+}
+
 ROUTE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -1108,7 +1355,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D05', 'indicator': 'Technical Architecture (IMP-02)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D06', 'indicator': 'Route Map (IMP-03)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D07', 'indicator': 'Database Schema (IMP-04)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D08', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D08', 'indicator': 'Identity & Auth (IMP-05)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D09', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -1245,7 +1493,28 @@ out = {
         'next_package': {
             'number': 5,
             'id': 'IMP-05',
-            'title': 'Master User Identity, Authentication, Roles & Permissions',
+            'title': 'Master Identity, Authentication, Roles & Permissions',
+            'status': 'documented',
+        },
+    },
+    'identity_auth': {
+        'title': 'Master Identity, Authentication, Roles & Permissions',
+        'package': 'Implementation Package 5 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md',
+        'manifest': '/data/identity-auth-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': 'One person → one identity → many roles → personalized experience',
+        'role_count': IDENTITY_AUTH_MANIFEST['role_count'],
+        'permission_category_count': IDENTITY_AUTH_MANIFEST['permission_category_count'],
+        'auth_providers': [p['id'] for p in AUTH_PROVIDERS if p['status'] == 'recommended'],
+        'onboarding_step_count': len(ONBOARDING_STEPS),
+        'multi_role_supported': True,
+        'next_package': {
+            'number': 6,
+            'id': 'IMP-06',
+            'title': 'Master Design System, User Experience & Visual Language',
+            'note': 'Doctrinal package 6; engineering IMP-06 is repository migration and stack lock',
         },
     },
     'supersedes': {
@@ -1338,6 +1607,10 @@ with open(root / 'data/route-manifest.json', 'w', newline='\n') as f:
 
 with open(root / 'data/canonical-data-manifest.json', 'w', newline='\n') as f:
     json.dump(CANONICAL_DATA_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/identity-auth-manifest.json', 'w', newline='\n') as f:
+    json.dump(IDENTITY_AUTH_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

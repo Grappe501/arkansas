@@ -20,6 +20,7 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 0b. **Technical Architecture (IMP-02):** [/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
 0c. **Route Map (IMP-03):** [/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [/data/route-manifest.json](/data/route-manifest.json)
 0d. **Database Schema (IMP-04):** [/docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md](/docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md) · [/data/canonical-data-manifest.json](/data/canonical-data-manifest.json) · [/prisma/schema.prisma](/prisma/schema.prisma)
+0e. **Identity & Auth (IMP-05):** [/docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md](/docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md) · [/data/identity-auth-manifest.json](/data/identity-auth-manifest.json)
 1. **Manifesto (#99):** Will this help an ordinary Arkansan understand how self-government works?
 2. **Charter (#100):** Knowledge → Citizens → Communities → Arkansas → self-government.
 3. **Education before advocacy** — present evidence; Arkansans draw conclusions.
@@ -111,12 +112,13 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 
 ## First step to implement
 
-**IMP-01**, **IMP-02**, **IMP-03**, and **IMP-04** are **documented**:
+**IMP-01** through **IMP-05** are **documented**:
 - [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
 - [Technical Architecture](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
 - [Route Map](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [route-manifest.json](/data/route-manifest.json)
 - [Database Schema](/docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md) · [canonical-data-manifest.json](/data/canonical-data-manifest.json) · [schema.prisma](/prisma/schema.prisma)
+- [Identity & Auth](/docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md) · [identity-auth-manifest.json](/data/identity-auth-manifest.json)
 
-**IMP-05** is next: Master User Identity, Authentication, Roles & Permissions (see also engineering IMP-05 repository migration in step registry).
+**IMP-06** is next: Master Design System, User Experience & Visual Language.
 
-Engineering execution (migration, stack, env, CI) begins at **IMP-05** after data model is documented.
+Engineering execution (repository migration, stack lock, env, CI) begins at **engineering IMP-06** after design system is documented.

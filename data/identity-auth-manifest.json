@@ -1,0 +1,412 @@
+{
+  "version": "1.0",
+  "build": 101,
+  "package": "IMP-05",
+  "updated": "2026-07-09",
+  "title": "Master Identity, Authentication, Roles & Permissions",
+  "constitution": "/docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md",
+  "source_registries": {
+    "canonical_data_manifest": "/data/canonical-data-manifest.json",
+    "acos_roles": "/data/arkansas-civic-operating-system.json",
+    "prisma_draft": "/prisma/schema.prisma",
+    "route_manifest": "/data/route-manifest.json"
+  },
+  "philosophy": "One person \u2192 one identity \u2192 many roles \u2192 personalized experience",
+  "governing_principle": "Every person should have exactly the access they need to contribute confidently, securely, and effectively.",
+  "identity_principles": [
+    "permanent_institutional_identity",
+    "personal_profile",
+    "role_assignment",
+    "permission_set",
+    "activity_history",
+    "learning_history",
+    "volunteer_history"
+  ],
+  "authentication": {
+    "providers": [
+      {
+        "id": "email_password",
+        "name": "Email/password",
+        "status": "recommended"
+      },
+      {
+        "id": "google",
+        "name": "Google",
+        "status": "recommended"
+      },
+      {
+        "id": "apple",
+        "name": "Apple",
+        "status": "recommended"
+      },
+      {
+        "id": "microsoft",
+        "name": "Microsoft",
+        "status": "recommended"
+      },
+      {
+        "id": "enterprise_sso",
+        "name": "Enterprise SSO",
+        "status": "future"
+      }
+    ],
+    "mfa_required_roles": [
+      "administrator",
+      "executive",
+      "department_lead"
+    ],
+    "session_expiration": true
+  },
+  "anonymous_access": [
+    "Browse public research",
+    "Read articles",
+    "Use search",
+    "Explore counties and cities",
+    "Read educational materials"
+  ],
+  "roles": [
+    {
+      "id": "public",
+      "name": "Public Visitor",
+      "level": 0,
+      "account_required": false,
+      "workspace": "/",
+      "capabilities": [
+        "Browse public research",
+        "Read articles",
+        "Use search",
+        "Explore counties and cities",
+        "Read educational materials"
+      ],
+      "acos_mapping": null
+    },
+    {
+      "id": "member",
+      "name": "Registered Member",
+      "level": 1,
+      "account_required": true,
+      "workspace": "/dashboard",
+      "capabilities": [
+        "Personal dashboard",
+        "Learning progress",
+        "Bookmarks and saved research",
+        "Event registration",
+        "Notifications",
+        "AI assistant",
+        "Personal calendar",
+        "Community recommendations"
+      ],
+      "acos_mapping": "Learner"
+    },
+    {
+      "id": "volunteer",
+      "name": "Volunteer",
+      "level": 2,
+      "account_required": true,
+      "workspace": "/volunteer",
+      "capabilities": [
+        "Volunteer workspace",
+        "Assignments",
+        "Projects",
+        "Training",
+        "Community conversations"
+      ],
+      "acos_mapping": "Volunteer"
+    },
+    {
+      "id": "education_leader",
+      "name": "Education Leader",
+      "level": 3,
+      "account_required": true,
+      "workspace": "/leader",
+      "capabilities": [
+        "Presentation materials",
+        "Local leadership tools",
+        "County and city resources",
+        "Mentoring features",
+        "Community management"
+      ],
+      "acos_mapping": "Education Leader"
+    },
+    {
+      "id": "research_contributor",
+      "name": "Research Contributor",
+      "level": 3,
+      "account_required": true,
+      "workspace": "/research",
+      "capabilities": [
+        "Research workspace",
+        "Draft submissions",
+        "Evidence management",
+        "Citation tools",
+        "Peer review participation"
+      ],
+      "acos_mapping": "Researcher"
+    },
+    {
+      "id": "organization_admin",
+      "name": "Organization Administrator",
+      "level": 4,
+      "account_required": true,
+      "workspace": "/organization",
+      "capabilities": [
+        "Organization dashboard",
+        "Member management",
+        "Shared resources",
+        "Events",
+        "Coalition reporting"
+      ],
+      "acos_mapping": "Coalition partner"
+    },
+    {
+      "id": "department_lead",
+      "name": "Department Lead",
+      "level": 5,
+      "account_required": true,
+      "workspace": "/executive",
+      "capabilities": [
+        "Department dashboard",
+        "Project oversight",
+        "Volunteer coordination",
+        "Mission metrics",
+        "Reporting"
+      ],
+      "acos_mapping": null
+    },
+    {
+      "id": "executive",
+      "name": "Executive Leadership",
+      "level": 6,
+      "account_required": true,
+      "workspace": "/executive",
+      "capabilities": [
+        "Mission Control",
+        "Institution dashboards",
+        "Strategic planning",
+        "Institutional reports",
+        "Forecasting",
+        "Executive AI"
+      ],
+      "acos_mapping": "Executive"
+    },
+    {
+      "id": "administrator",
+      "name": "System Administrator",
+      "level": 7,
+      "account_required": true,
+      "workspace": "/admin",
+      "capabilities": [
+        "Platform configuration",
+        "User management",
+        "Security",
+        "Infrastructure",
+        "AI management",
+        "Deployment tools"
+      ],
+      "acos_mapping": null,
+      "mfa_required": true
+    }
+  ],
+  "role_count": 9,
+  "multi_role_supported": true,
+  "permission_categories": [
+    {
+      "id": "read",
+      "name": "Read",
+      "description": "View content and data within scope"
+    },
+    {
+      "id": "create",
+      "name": "Create",
+      "description": "Add new records"
+    },
+    {
+      "id": "edit",
+      "name": "Edit",
+      "description": "Modify existing records"
+    },
+    {
+      "id": "review",
+      "name": "Review",
+      "description": "Submit for editorial or peer review"
+    },
+    {
+      "id": "approve",
+      "name": "Approve",
+      "description": "Approve content or actions"
+    },
+    {
+      "id": "publish",
+      "name": "Publish",
+      "description": "Make content publicly visible"
+    },
+    {
+      "id": "manage",
+      "name": "Manage",
+      "description": "Oversee users, resources, or projects in scope"
+    },
+    {
+      "id": "delete",
+      "name": "Delete",
+      "description": "Rare; soft-delete preferred"
+    },
+    {
+      "id": "administer",
+      "name": "Administer",
+      "description": "Platform configuration"
+    },
+    {
+      "id": "audit",
+      "name": "Audit",
+      "description": "View change history and security logs"
+    }
+  ],
+  "permission_category_count": 10,
+  "geographic_scopes": [
+    {
+      "scope": "neighborhood",
+      "role_example": "Neighborhood Leader",
+      "assignment": "Assigned neighborhood"
+    },
+    {
+      "scope": "city",
+      "role_example": "City Education Leader",
+      "assignment": "Assigned city"
+    },
+    {
+      "scope": "county",
+      "role_example": "County Education Director",
+      "assignment": "Assigned county"
+    },
+    {
+      "scope": "region",
+      "role_example": "Regional Mentor",
+      "assignment": "Assigned region"
+    },
+    {
+      "scope": "statewide",
+      "role_example": "Executive",
+      "assignment": "All Arkansas"
+    }
+  ],
+  "organization_permissions": {
+    "multi_org_membership": true,
+    "org_specific_permissions": true,
+    "org_entities": [
+      "members",
+      "roles",
+      "resources",
+      "events",
+      "projects"
+    ]
+  },
+  "identity_lifecycle": [
+    {
+      "stage": 1,
+      "id": "visitor",
+      "name": "Visitor",
+      "account_required": false
+    },
+    {
+      "stage": 2,
+      "id": "registered_member",
+      "name": "Registered Member",
+      "account_required": true
+    },
+    {
+      "stage": 3,
+      "id": "learner",
+      "name": "Learner",
+      "account_required": true
+    },
+    {
+      "stage": 4,
+      "id": "volunteer",
+      "name": "Volunteer",
+      "account_required": true
+    },
+    {
+      "stage": 5,
+      "id": "education_leader",
+      "name": "Education Leader",
+      "account_required": true
+    },
+    {
+      "stage": 6,
+      "id": "mentor",
+      "name": "Mentor",
+      "account_required": true
+    },
+    {
+      "stage": 7,
+      "id": "institutional_leader",
+      "name": "Institutional Leader",
+      "account_required": true
+    }
+  ],
+  "onboarding_steps": [
+    "Welcome",
+    "Mission introduction",
+    "Personal interests",
+    "County selection",
+    "City selection",
+    "Learning recommendations",
+    "Volunteer opportunities (optional)",
+    "AI introduction"
+  ],
+  "privacy_controls": [
+    "profile_visibility",
+    "volunteer_visibility",
+    "communication_preferences",
+    "organization_memberships",
+    "notification_settings",
+    "public_facing_information"
+  ],
+  "security_principles": [
+    "Least privilege by default",
+    "Multi-factor authentication for elevated roles",
+    "Session expiration",
+    "Audit logging",
+    "Permission review",
+    "No shared administrator accounts"
+  ],
+  "mission_control_metrics": [
+    "registered_users",
+    "active_users",
+    "volunteers",
+    "education_leaders",
+    "organization_administrators",
+    "county_leadership",
+    "city_leadership",
+    "role_distribution",
+    "growth_trends"
+  ],
+  "ai_context_fields": [
+    "role",
+    "permissions",
+    "projects",
+    "learning_history",
+    "volunteer_responsibilities",
+    "calendar",
+    "institutional_context"
+  ],
+  "account_routes": [
+    "/login",
+    "/register",
+    "/forgot-password",
+    "/profile",
+    "/settings",
+    "/notifications",
+    "/messages",
+    "/dashboard"
+  ],
+  "workspace_routes_by_role": {
+    "volunteer": "/volunteer",
+    "education_leader": "/leader",
+    "organization_admin": "/organization",
+    "executive": "/executive",
+    "administrator": "/admin"
+  },
+  "status": "documented",
+  "implemented": false
+}

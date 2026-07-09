@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.5] - 2026-07-09 — IMP-05 Identity & Auth documented
+
+### Implementation Package 5 of 50
+- **Master Identity, Authentication, Roles & Permissions** — one person, one identity, many roles
+- Nine-role hierarchy, 10 permission categories, geographic and organization scoping
+- Machine-readable **identity-auth-manifest.json**
+- Engineering IMP-06 merged: repository migration + stack lock + environment
+- IMP-06 next: Master Design System, User Experience & Visual Language
+- Honest: 5/50 documented · 0/50 implemented · 68% package readiness
+
 ## [2.05.4] - 2026-07-09 — IMP-04 Database Schema documented
 
 ### Implementation Package 4 of 50

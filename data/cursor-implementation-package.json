@@ -213,7 +213,33 @@
     "next_package": {
       "number": 5,
       "id": "IMP-05",
-      "title": "Master User Identity, Authentication, Roles & Permissions"
+      "title": "Master Identity, Authentication, Roles & Permissions",
+      "status": "documented"
+    }
+  },
+  "identity_auth": {
+    "title": "Master Identity, Authentication, Roles & Permissions",
+    "package": "Implementation Package 5 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md",
+    "manifest": "/data/identity-auth-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "One person \u2192 one identity \u2192 many roles \u2192 personalized experience",
+    "role_count": 9,
+    "permission_category_count": 10,
+    "auth_providers": [
+      "email_password",
+      "google",
+      "apple",
+      "microsoft"
+    ],
+    "onboarding_step_count": 8,
+    "multi_role_supported": true,
+    "next_package": {
+      "number": 6,
+      "id": "IMP-06",
+      "title": "Master Design System, User Experience & Visual Language",
+      "note": "Doctrinal package 6; engineering IMP-06 is repository migration and stack lock"
     }
   },
   "supersedes": {
@@ -421,33 +447,54 @@
       "number": 5,
       "id": "IMP-05",
       "band": "A",
-      "title": "Repository migration and folder scaffold",
-      "summary": "Strangler-fig migration plan, repo audit, target folder scaffold without breaking static deploy",
+      "package_label": "Implementation Package 5 of 50",
+      "title": "Master Identity, Authentication, Roles & Permissions",
+      "summary": "Complete identity and authorization model \u2014 one person, one identity, many roles, personalized experience",
       "deliverables": [
-        "docs/MIGRATION_PLAN.md",
-        "docs/REPO_AUDIT.md",
-        "app/README.md",
-        "database/README.md"
+        "docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md",
+        "data/identity-auth-manifest.json",
+        "Identity Architecture",
+        "Authentication Model",
+        "Role Hierarchy",
+        "Permission Framework",
+        "Geographic Authorization Model",
+        "Organization Authorization Model",
+        "User Lifecycle",
+        "Onboarding Framework",
+        "Privacy Standards",
+        "Security Standards"
       ],
       "acceptance_criteria": [
-        "Current tree diffed against IMP-02 repository structure",
-        "Migration strategy chosen with rollback plan",
-        "Target folders scaffolded; existing static Netlify deploy unchanged",
-        "Safe-edit zones listed for volunteer contributors"
+        "Core philosophy: one person \u2192 one identity \u2192 many roles \u2192 personalized experience",
+        "Nine-role hierarchy documented with additive permissions",
+        "Authentication providers and MFA for elevated roles defined",
+        "Anonymous, registered, and role-scoped capabilities documented",
+        "Geographic and organization permission scoping defined",
+        "Identity lifecycle, onboarding, privacy, security, MC and AI integration documented",
+        "Cursor should never need to invent authorization rules during development"
       ],
       "source_blueprints": [
-        "/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md",
-        "/data/repository-blueprint.json"
+        "/data/identity-auth-manifest.json",
+        "/data/arkansas-civic-operating-system.json",
+        "/data/canonical-data-manifest.json",
+        "/docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md",
+        "/prisma/schema.prisma"
       ],
-      "status": "specified"
+      "constitution": "/docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md",
+      "manifest": "/data/identity-auth-manifest.json",
+      "status": "documented",
+      "documented_date": "2026-07-09"
     },
     {
       "number": 6,
       "id": "IMP-06",
       "band": "A",
-      "title": "Stack lock, service boundaries, and environment",
-      "summary": "Lock stack versions; service boundaries; .env.example and secrets matrix",
+      "title": "Repository migration, stack lock, and environment",
+      "summary": "Strangler-fig migration, repo audit, folder scaffold, pinned stack, service boundaries, env matrix",
       "deliverables": [
+        "docs/MIGRATION_PLAN.md",
+        "docs/REPO_AUDIT.md",
+        "app/README.md",
         "docs/STACK.md",
         "docs/SERVICE_BOUNDARIES.md",
         "docs/DEPLOYMENT_TOPOLOGY.md",
@@ -455,13 +502,17 @@
         "docs/ENVIRONMENT.md"
       ],
       "acceptance_criteria": [
+        "Current tree diffed against IMP-02 repository structure",
+        "Migration strategy chosen with rollback plan",
+        "Target folders scaffolded; existing static Netlify deploy unchanged",
         "Pinned versions documented with rationale",
         "Public site, MC, API, and admin deployment units defined",
         "All required env vars documented with no secrets committed"
       ],
       "source_blueprints": [
-        "/data/technical-architecture.json",
-        "/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md"
+        "/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md",
+        "/data/repository-blueprint.json",
+        "/data/technical-architecture.json"
       ],
       "status": "specified"
     },
@@ -539,7 +590,7 @@
         "CONTRIBUTING.md"
       ],
       "acceptance_criteria": [
-        "IMP-01 through IMP-04 documented; IMP-05\u201309 engineering criteria verified",
+        "IMP-01 through IMP-05 documented; IMP-06\u201309 engineering criteria verified",
         "CONTRIBUTING.md links to implementation packages and CURSOR_MASTER_BUILD_PROMPT.md",
         "One successful Netlify preview deploy from develop",
         "Executive sign-off field in checklist (manual)"
@@ -1430,7 +1481,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 4,
+        "current": 5,
         "status": "partial"
       },
       {
@@ -1465,6 +1516,12 @@
       },
       {
         "id": "CIP-D08",
+        "indicator": "Identity & Auth (IMP-05)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D09",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -1509,9 +1566,9 @@
   "summary": {
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "implementation_package_readiness_pct": 66,
+    "implementation_package_readiness_pct": 68,
     "steps_total": 50,
-    "steps_documented": 4,
+    "steps_documented": 5,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

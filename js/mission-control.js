@@ -10658,6 +10658,13 @@ async function initCursorImplementationPackage() {
       <div class="mc-stat"><div class="mc-stat__label">MVP in scope</div><div class="mc-stat__value">${s.mvp_in_scope_count}</div></div>
       <div class="mc-stat"><div class="mc-stat__label">Days to Jan 2027</div><div class="mc-stat__value">${s.days_remaining}</div></div>
     </div>
+    <h2 class="mc-section-title">Identity & Auth (IMP-05)</h2>
+    <p class="mc-bar-note"><strong>${cip.identity_auth.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.identity_auth.role_count} roles · ${cip.identity_auth.permission_category_count} permission categories · multi-role ${cip.identity_auth.multi_role_supported ? 'supported' : 'disabled'}</p>
+    <p class="mc-bar-note"><a href="${cip.identity_auth.route}">IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md</a> · <a href="${cip.identity_auth.manifest}">identity-auth-manifest.json</a></p>
+    <h3 class="mc-subsection-title">Authentication Providers</h3>
+    <ul class="mc-deliverables">${cip.identity_auth.auth_providers.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h3 class="mc-subsection-title">Onboarding (${cip.identity_auth.onboarding_step_count} steps)</h3>
+    <p class="mc-bar-note">${cip.identity_auth.philosophy}</p>
     <h2 class="mc-section-title">Database Schema (IMP-04)</h2>
     <p class="mc-bar-note"><strong>${cip.database_schema.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.database_schema.domain_count} domains · ${cip.database_schema.total_tables_defined} tables defined · ${cip.database_schema.prisma_models_drafted} Prisma models drafted</p>
     <p class="mc-bar-note"><a href="${cip.database_schema.route}">IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md</a> · <a href="${cip.database_schema.manifest}">canonical-data-manifest.json</a> · <a href="${cip.database_schema.prisma_draft}">schema.prisma</a></p>

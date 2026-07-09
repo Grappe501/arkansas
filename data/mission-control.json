@@ -1,5 +1,5 @@
 {
-  "version": "2.05.4",
+  "version": "2.05.5",
   "build": 101,
   "updated": "2026-07-09",
   "identity": {
@@ -11,7 +11,7 @@
   "executive": {
     "github_status": "connected",
     "netlify_status": "production_healthy",
-    "content_readiness": 66,
+    "content_readiness": 68,
     "research_readiness": 43,
     "data_viz_readiness": 12,
     "signup_funnel_readiness": 26,
@@ -24,7 +24,7 @@
     "knowledge_atlas_readiness": 58,
     "platform_architecture_readiness": 59,
     "repository_structure_readiness": 32,
-    "database_schema_readiness": 52,
+    "database_schema_readiness": 58,
     "wireframe_readiness": 38,
     "contact_intelligence_readiness": 34,
     "relationship_os_readiness": 54,
@@ -121,7 +121,7 @@
     "connected_citizen_goal_pct": 15,
     "implementation_steps_total": 50,
     "implementation_steps_implemented": 0,
-    "implementation_steps_documented": 4,
+    "implementation_steps_documented": 5,
     "overall_completion": 101,
     "current_build": {
       "number": 101,
@@ -133,8 +133,8 @@
       "number": 102,
       "title": "Executive war room & countdown dashboard components"
     },
-    "implementation_package_readiness": 66,
-    "cursor_implementation_package_readiness": 66,
+    "implementation_package_readiness": 68,
+    "cursor_implementation_package_readiness": 68,
     "implementation_phase_started": false,
     "sprint_zero_started": false
   },
@@ -871,7 +871,7 @@
     {
       "id": "cursor_implementation_package",
       "label": "Implementation Package",
-      "value": 66,
+      "value": 68,
       "max": 100,
       "note": "0/50 steps implemented \u00b7 Sprint Zero pending."
     }
@@ -2801,64 +2801,23 @@
     {
       "number": 101,
       "title": "Citizens United Facts Cursor Implementation Package v1.0",
-      "version": "2.05.4",
+      "version": "2.05.5",
       "status": "complete",
       "started": "2026-07-09",
       "completed": "2026-07-09",
       "purpose": "50 executable implementation steps \u2014 blueprint to code",
-      "summary": "50 steps in 5 bands. IMP-01\u201304 documented (Constitution, Architecture, Route Map, Database Schema). 66% readiness \u00b7 4/50 documented \u00b7 0 implemented.",
+      "summary": "50 steps in 5 bands. IMP-01\u201305 documented. 68% readiness \u00b7 5/50 documented \u00b7 0 implemented.",
       "files_created": [
-        "data/cursor-implementation-package.json",
-        "docs/MASTER_CURSOR_IMPLEMENTATION_PACKAGE.md",
-        "docs/CURSOR_MASTER_BUILD_PROMPT.md",
-        "docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md",
-        "docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md",
-        "docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md",
-        "docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md",
-        "data/route-manifest.json",
-        "data/canonical-data-manifest.json",
-        "prisma/schema.prisma",
-        "database/README.md",
-        "builds/101-cursor-implementation-package.md",
-        "mission-control/cursor-implementation-package.html",
-        "scripts/gen-cursor-implementation-package.py",
-        "scripts/update-mc-build101.py"
-      ],
-      "files_modified": [
-        "js/mission-control.js",
-        "data/site.json",
-        "data/canonical-data-model.json",
-        "BUILD_PLAN.md",
-        "netlify.toml"
-      ],
-      "pages_created": [
-        "/mission-control/cursor-implementation-package.html"
+        "docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md",
+        "data/identity-auth-manifest.json"
       ],
       "decisions_made": [
-        "50 steps \u2014 thorough without drifting into abstract planning",
-        "IMP-01 Master Technical Constitution governs all future packages",
-        "IMP-03 Route Map: complete navigation before code",
-        "IMP-04 Database Schema: canonical data model before migrations",
-        "Five bands of 10: foundation, presentation, data, operations, knowledge/launch",
-        "Supersedes Build Bible v1 as executable engineering layer (Build Bible v2)",
-        "4 documented \u00b7 0 implemented \u2014 honest status",
-        "66% readiness"
-      ],
-      "open_questions": [
-        "IMP-05 identity vs repository migration \u2014 align step registry with package titles",
-        "MC read paths public vs auth-gated \u2014 IMP-28 decision",
-        "Single source of truth: JSON registries vs DB \u2014 per-entity in IMP-47"
-      ],
-      "risks": [
-        "Zero implementation steps completed \u2014 package is specification only",
-        "Sprint Zero not started \u2014 no Neon/Prisma in production",
-        "Component specs (IMP-16\u201318) not yet created",
-        "War Room (IMP-38) specified here but Build #102 may extend it"
+        "IMP-05 Identity & Auth: nine-role hierarchy, additive permissions, multi-role support",
+        "Engineering IMP-06 merged repository migration + stack lock + environment"
       ],
       "next_recommended": 102,
       "branch": "main",
       "git_commit": "pending",
-      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/cursor-implementation-package.html",
       "review_status": "complete"
     },
     {
@@ -7846,23 +7805,22 @@
     }
   ],
   "briefing": {
-    "what_built": "IMP-01\u201304 documented: Constitution, Architecture, Route Map, Database Schema + manifests",
-    "building_now": "IMP-05 Master User Identity, Authentication, Roles & Permissions next",
+    "what_built": "IMP-01\u201305 documented: Constitution through Identity & Auth + manifests",
+    "building_now": "IMP-06 Master Design System, User Experience & Visual Language next",
     "blocked": [
       "Sprint Zero not complete",
       "0/50 code-implemented",
-      "No live Postgres/Prisma migrations yet"
+      "Auth not wired in production"
     ],
     "ready_public": [
       "Technical Constitution",
       "Technical Architecture",
       "Route Map",
-      "route-manifest.json",
       "Database Schema",
-      "canonical-data-manifest.json",
-      "prisma/schema.prisma (draft)"
+      "Identity & Auth",
+      "identity-auth-manifest.json"
     ],
-    "next": "IMP-05 \u2014 Master User Identity, Authentication, Roles & Permissions"
+    "next": "IMP-06 \u2014 Master Design System, User Experience & Visual Language"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8878,10 +8836,10 @@
   "cursor_implementation_package": "/data/cursor-implementation-package.json",
   "cursor_implementation_package_dashboard": "/mission-control/cursor-implementation-package.html",
   "cursor_implementation_package_inventory": {
-    "readiness_score": 66,
+    "readiness_score": 68,
     "steps_total": 50,
     "steps_implemented": 0,
-    "steps_documented": 4,
+    "steps_documented": 5,
     "bands_total": 5,
     "sprint_zero_started": false,
     "cursor_master_prompt_ready": true
