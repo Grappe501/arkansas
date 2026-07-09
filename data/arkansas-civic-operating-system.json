@@ -382,7 +382,7 @@
     "user_accounts": 0,
     "workspace_modules": 15,
     "user_roles": 6,
-    "institutional_completion_pct": 95
+    "institutional_completion_pct": 97
   },
   "catalog_gaps": [
     "No single login / user account system",
@@ -401,7 +401,7 @@
   ],
   "recommended_next_build": {
     "number": 97,
-    "title": "Executive War Room & Countdown Dashboard Components",
-    "note": "War room UI, countdown dashboard, platform auth MVP, workspace shell, role permissions, COMP-* specs."
+    "title": "Master Institutional Launch Certification",
+    "note": "January 2027 readiness audit \u2014 12 certification domains, launch recommendation, independent review, certification archive."
   }
 }

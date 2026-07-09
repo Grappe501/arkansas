@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Launch Certification <a href="/mission-control/institutional-launch-certification.html" class="mc-inline-link">Jan 2027 Readiness Audit #97 →</a></h2>
+    <p class="mc-bar-note">Build #97 — Master Institutional Launch Certification. 12 domains, 67 criteria, 5 certification levels, launch recommendation. 0/12 certified · 45% overall score · dashboard not live. 57% readiness.</p>
     <h2 class="mc-section-title">ACOS 2.0 <a href="/mission-control/arkansas-civic-operating-system.html" class="mc-inline-link">One Login. One Platform. #96 →</a></h2>
     <p class="mc-bar-note">Build #96 — Master Arkansas Civic Operating System. Personalized civic workspace, 15 modules, 6 role workspaces, AI assistant, smart notifications. 0 accounts · single login not live. 59% readiness.</p>
     <h2 class="mc-section-title">Master Action Network <a href="/mission-control/master-arkansas-action-network.html" class="mc-inline-link">Educate. Connect. Act. #95 →</a></h2>
@@ -5277,6 +5279,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initExecutiveInstitution();
   initMasterArkansasActionNetwork();
   initArkansasCivicOperatingSystem();
+  initInstitutionalLaunchCertification();
 });
 
 async function initUxArchitecture() {
@@ -10195,6 +10198,102 @@ async function initArkansasCivicOperatingSystem() {
       <a href="/data/arkansas-civic-operating-system.json">JSON</a> ·
       <a href="/mission-control/arkansas-county-operating-system.html">County ACOS (#77)</a> ·
       <a href="/mission-control/localbrain-architecture.html">LocalBrain (#92)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initInstitutionalLaunchCertification() {
+  const root = document.getElementById('mc-institutional-launch-certification-root');
+  if (!root) return;
+
+  const [ilcRes, mcRes] = await Promise.all([
+    fetch('/data/institutional-launch-certification.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ilc = await ilcRes.json();
+  const mc = await mcRes.json();
+  const s = ilc.summary;
+
+  const domainRows = ilc.certification_domains.domains.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.domain}</td>
+      <td>${d.readiness_pct}%</td><td>L${d.certification_level}</td>
+      <td>${d.status}</td><td>${d.certified ? 'Yes' : 'No'}</td></tr>`).join('');
+
+  const levelRows = ilc.certification_levels.levels.map(l => `
+    <tr><td>${l.level}</td><td>${l.name}</td><td>${l.description}</td></tr>`).join('');
+
+  const dashRows = ilc.executive_readiness_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td>
+      <td>${typeof d.current === 'number' ? d.current.toLocaleString() : d.current}${d.unit || ''}</td>
+      <td>${d.status}</td></tr>`).join('');
+
+  const systemRows = ilc.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  const criteriaBlocks = ilc.certification_domains.domains.map(d => `
+    <h3 class="mc-subsection-title">${d.domain} <span class="mc-bar-note">(${d.criteria.length} criteria · ${d.readiness_pct}%)</span></h3>
+    <ul class="mc-deliverables">${d.criteria.map(c => `<li>${c}</li>`).join('')}</ul>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Launch Certification</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #97 · ${ilc.title}</p>
+      <h1>${ilc.subtitle}</h1>
+      <p class="mc-header__question">${ilc.governing_principle}</p>
+      <p class="mc-bar-note">${ilc.purpose}</p>
+      <p class="mc-bar-note"><strong>${ilc.tagline}</strong> · ${s.days_remaining} days to ${ilc.completion_target_date}</p>
+      <p class="mc-bar-note">Launch checklist: <a href="${ilc.prior_launch_plan_route}">Master Launch Plan (#85)</a> · ${s.launch_checklist_items_complete}/${s.launch_checklist_items_total} items</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Certification readiness</div><div class="mc-stat__value">${s.institutional_launch_certification_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Overall score</div><div class="mc-stat__value">${s.overall_certification_score}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Institutional level</div><div class="mc-stat__value">L${s.overall_certification_level}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Domains certified</div><div class="mc-stat__value">${s.domains_certified}/${s.domains_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Cert dashboard</div><div class="mc-stat__value">${s.certification_dashboard_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Launch rec issued</div><div class="mc-stat__value">${s.launch_recommendation_issued ? 'Yes' : 'No'}</div></div>
+    </div>
+    <h2 class="mc-section-title">${ilc.institutional_philosophy.title}</h2>
+    <p class="mc-bar-note">Question: Are we ready to earn the trust of Arkansas? — not did we finish building.</p>
+    <h2 class="mc-section-title">${ilc.certification_domains.title}</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Domain</th><th>Score</th><th>Level</th><th>Status</th><th>Certified</th></tr></thead>
+      <tbody>${domainRows}</tbody></table>
+    ${criteriaBlocks}
+    <h2 class="mc-section-title">${ilc.certification_levels.title}</h2>
+    <p class="mc-bar-note">Overall: <strong>${s.overall_certification_level_name}</strong> (Level ${s.overall_certification_level})</p>
+    <table class="mc-table"><thead><tr><th>Level</th><th>Name</th><th>Description</th></tr></thead>
+      <tbody>${levelRows}</tbody></table>
+    <h2 class="mc-section-title">${ilc.executive_readiness_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${ilc.executive_readiness_dashboard.live ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">${ilc.independent_readiness_review.title}</h2>
+    <p class="mc-bar-note">Completed: ${ilc.independent_readiness_review.completed ? 'Yes' : 'No'}</p>
+    <h2 class="mc-section-title">${ilc.launch_recommendation.title}</h2>
+    <p class="mc-bar-note">Issued: ${ilc.launch_recommendation.issued ? 'Yes' : 'No'}${ilc.launch_recommendation.current ? ` · ${ilc.launch_recommendation.current}` : ''}</p>
+    <ul class="mc-deliverables">${ilc.launch_recommendation.options.map(o => `<li>${o}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ilc.certification_archive.title}</h2>
+    <p class="mc-bar-note">Started: ${ilc.certification_archive.started ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${ilc.certification_archive.fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Founder's Principle</h2>
+    <p class="mc-bar-note">${ilc.founders_principle}</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${ilc.integration.chain}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${ilc.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ilc.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ilc.recommended_next_build.number} — ${ilc.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ilc.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_INSTITUTIONAL_LAUNCH_CERTIFICATION.md">MASTER_INSTITUTIONAL_LAUNCH_CERTIFICATION.md</a> ·
+      <a href="/data/institutional-launch-certification.json">JSON</a> ·
+      <a href="/mission-control/master-launch-plan.html">Launch Plan (#85)</a> ·
+      <a href="/mission-control/execution-schedule.html">Execution Schedule (#88)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

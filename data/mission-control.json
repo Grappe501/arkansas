@@ -1,6 +1,6 @@
 {
-  "version": "2.00.0",
-  "build": 96,
+  "version": "2.01.0",
+  "build": 97,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 96,
+    "overall_completion": 97,
     "current_build": {
-      "number": 96,
-      "title": "Citizens United Facts Master Arkansas Civic Operating System (ACOS 2.0)"
-    },
-    "active_phase": "Civic OS \u2192 War Room",
-    "last_completed": "Master Action Network",
-    "next_build": {
       "number": 97,
+      "title": "Citizens United Facts Master Institutional Launch Certification v1.0"
+    },
+    "active_phase": "Launch Certification \u2192 War Room",
+    "last_completed": "ACOS 2.0",
+    "next_build": {
+      "number": 98,
       "title": "Executive war room & countdown dashboard components"
     },
     "github_status": "connected",
@@ -46,6 +46,7 @@
     "executive_institution_readiness": 50,
     "master_arkansas_action_network_readiness": 50,
     "arkansas_civic_operating_system_readiness": 59,
+    "institutional_launch_certification_readiness": 57,
     "coalition_network_readiness": 44,
     "citizen_action_center_readiness": 42,
     "campaign_finance_observatory_readiness": 38,
@@ -105,7 +106,7 @@
     "build_bible_readiness": 49,
     "data_architecture_readiness": 58,
     "ux_architecture_readiness": 59,
-    "launch_strategy_readiness": 44,
+    "launch_strategy_readiness": 57,
     "pmo_readiness": 60,
     "master_plan_readiness": 56,
     "statewide_growth_readiness": 48,
@@ -129,8 +130,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 96,
-      "note": "Build #96 \u2014 ACOS 2.0. 176 days to Jan 2027."
+      "value": 97,
+      "note": "Build #97 \u2014 Launch Certification. 176 days to Jan 2027."
     },
     {
       "id": "constitution",
@@ -825,7 +826,14 @@
       "label": "ACOS 2.0",
       "value": 59,
       "max": 100,
-      "note": "0 accounts \u00b7 workspace planned."
+      "note": "ACOS 2.0 \u00b7 59% readiness."
+    },
+    {
+      "id": "institutional_launch_certification",
+      "label": "Launch Certification",
+      "value": 57,
+      "max": 100,
+      "note": "0/12 certified \u00b7 score 45%."
     }
   ],
   "public_readiness": {
@@ -1694,6 +1702,12 @@
       "id": "arkansas_civic_operating_system",
       "label": "ACOS 2.0",
       "href": "/mission-control/arkansas-civic-operating-system.html",
+      "status": "complete"
+    },
+    {
+      "id": "institutional_launch_certification",
+      "label": "Launch Certification",
+      "href": "/mission-control/institutional-launch-certification.html",
       "status": "complete"
     }
   ],
@@ -2720,6 +2734,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 97,
+      "title": "Citizens United Facts Master Institutional Launch Certification v1.0",
+      "version": "2.01.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "January 2027 readiness audit \u2014 final quality gate before launch",
+      "summary": "12 certification domains, 67 criteria, 5 certification levels, executive dashboard, independent review, launch recommendation, certification archive. 57% readiness \u00b7 0/12 certified \u00b7 overall score 45% (Building).",
+      "files_created": [
+        "data/institutional-launch-certification.json",
+        "docs/MASTER_INSTITUTIONAL_LAUNCH_CERTIFICATION.md",
+        "builds/097-institutional-launch-certification.md",
+        "mission-control/institutional-launch-certification.html",
+        "scripts/gen-institutional-launch-certification.py",
+        "scripts/update-mc-build97.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/institutional-launch-certification.html"
+      ],
+      "decisions_made": [
+        "Launch because earned trust \u2014 not because calendar says so",
+        "12 certification domains with Not Started \u2192 Certified progression",
+        "5 certification levels \u2014 goal all domains Certified before Jan 2027",
+        "Three launch recommendations with documented rationale",
+        "Independent readiness review before certification",
+        "Certification archive permanently preserved",
+        "57% readiness \u2014 blueprint only"
+      ],
+      "open_questions": [
+        "When to conduct first independent readiness review?",
+        "Domain criteria tracked per-item or per-domain score only?",
+        "Certification level promotion \u2014 manual or automated from MC data?",
+        "Relationship to Launch Plan (#85) checklist \u2014 merge or parallel?"
+      ],
+      "risks": [
+        "Certification dashboard not live",
+        "0/12 domains certified",
+        "No independent readiness review conducted",
+        "Launch recommendation not yet issued"
+      ],
+      "next_recommended": 98,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/institutional-launch-certification.html",
+      "review_status": "complete"
+    },
     {
       "number": 96,
       "title": "Citizens United Facts Master Arkansas Civic Operating System (ACOS 2.0)",
@@ -7865,21 +7932,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Master Arkansas Civic Operating System (ACOS 2.0) \u2014 One Login. One Platform.",
-    "building_now": "96 builds \u2014 executive war room next",
+    "what_built": "Master Institutional Launch Certification v1.0 \u2014 January 2027 Readiness Audit",
+    "building_now": "97 builds \u2014 executive war room next",
     "blocked": [
-      "Single login",
-      "Personal workspace",
-      "AI assistant",
-      "Role permissions"
+      "Certification dashboard",
+      "0 domains certified",
+      "Independent review",
+      "Launch recommendation"
     ],
     "ready_public": [
-      "Workspace modules spec",
-      "Role workspaces",
-      "Privacy controls",
-      "MC integration model"
+      "12 domains defined",
+      "67 criteria",
+      "5 levels",
+      "Launch recommendation options"
     ],
-    "next": "Build #97 \u2014 Executive war room & countdown dashboard components"
+    "next": "Build #98 \u2014 Executive war room & countdown dashboard components"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8854,5 +8921,15 @@
     "personal_workspace_live": false,
     "ai_assistant_live": false,
     "user_accounts": 0
+  },
+  "institutional_launch_certification": "/data/institutional-launch-certification.json",
+  "institutional_launch_certification_dashboard": "/mission-control/institutional-launch-certification.html",
+  "institutional_launch_certification_inventory": {
+    "readiness_score": 57,
+    "overall_certification_score": 45,
+    "overall_certification_level": 2,
+    "domains_certified": 0,
+    "certification_dashboard_live": false,
+    "launch_recommendation_issued": false
   }
 }

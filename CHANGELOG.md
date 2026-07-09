@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.01.0] - 2026-07-09 — Build #97 Master Institutional Launch Certification
+
+### The January 2027 Readiness Audit
+- **Master Institutional Launch Certification v1.0** — official launch certification process, final quality gate
+- 12 certification domains, 67 criteria, 5 levels (Planning → Certified)
+- Executive readiness dashboard, independent review, three launch recommendations, certification archive
+- Integrates Master Launch Plan (#85), PMO (#89), Execution Schedule (#88), ACOS 2.0 (#96)
+- Honest: 0/12 domains certified · 45% overall score · Building (L2) · 57% readiness
+- MC dashboard: `/mission-control/institutional-launch-certification.html`
+
 ## [2.00.0] - 2026-07-09 — Build #96 Master Arkansas Civic Operating System (ACOS 2.0)
 
 ### One Login. One Platform. Everything Connected.

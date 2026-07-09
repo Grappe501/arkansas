@@ -1,0 +1,439 @@
+{
+  "version": "1.0",
+  "build": 97,
+  "updated": "2026-07-09",
+  "completion_target_date": "2027-01-01",
+  "title": "Master Institutional Launch Certification v1.0",
+  "subtitle": "The January 2027 Readiness Audit",
+  "tagline": "Earn the Trust of Arkansas",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/institutional-launch-certification.html",
+  "constitution": "/docs/MASTER_INSTITUTIONAL_LAUNCH_CERTIFICATION.md",
+  "prior_launch_plan_route": "/mission-control/master-launch-plan.html",
+  "purpose": "Official Launch Certification Process \u2014 final quality gate before January 2027. Comprehensive audit determines whether every critical system is operational, trustworthy, documented, and ready for statewide use. Launch because earned confidence \u2014 not because the calendar says so.",
+  "governing_principle": "The institution launches only when it is ready to fulfill its promise. Not because the deadline arrives. Not because every feature is perfect. But because Citizens United Facts has demonstrated research, leadership, technology, governance, volunteers, transparency, and operational maturity necessary to become a trusted civic education institution for Arkansas.",
+  "founders_principle": "Trust is earned before launch\u2014not after it. Preparation creates confidence. Discipline creates quality. Transparency creates credibility. Certification should represent months of careful work, thoughtful review, volunteer dedication, and unwavering commitment to serving Arkansas well.",
+  "institutional_philosophy": {
+    "title": "Institutional Philosophy",
+    "question_not_did_we_finish": true,
+    "question_are_we_ready_for_trust": true,
+    "supports_earning_trust": true
+  },
+  "certification_domains": {
+    "title": "The Twelve Certification Domains",
+    "domains": [
+      {
+        "id": "LCD-01",
+        "domain": "Research",
+        "criteria": [
+          "Core research library completed",
+          "Evidence verified",
+          "Sources documented",
+          "Editorial review completed",
+          "Claims Registry operational"
+        ],
+        "readiness_pct": 43,
+        "certification_level": 2,
+        "status": "in_progress",
+        "certified": false
+      },
+      {
+        "id": "LCD-02",
+        "domain": "Technology",
+        "criteria": [
+          "Website operational",
+          "Mobile compatibility",
+          "Search functioning",
+          "User accounts working",
+          "AI systems functioning",
+          "Security review completed",
+          "Backup systems verified"
+        ],
+        "readiness_pct": 59,
+        "certification_level": 3,
+        "status": "ready",
+        "certified": false
+      },
+      {
+        "id": "LCD-03",
+        "domain": "Mission Control",
+        "criteria": [
+          "Executive dashboards",
+          "County dashboards",
+          "City dashboards",
+          "Neighborhood dashboards",
+          "PMO dashboards",
+          "Reporting accuracy",
+          "Digital Twin synchronization"
+        ],
+        "readiness_pct": 42,
+        "certification_level": 2,
+        "status": "in_progress",
+        "certified": false
+      },
+      {
+        "id": "LCD-04",
+        "domain": "Community Education Academy",
+        "criteria": [
+          "Curriculum complete",
+          "Learning pathways operational",
+          "Certification system functioning",
+          "Education Leader training available"
+        ],
+        "readiness_pct": 26,
+        "certification_level": 1,
+        "status": "not_started",
+        "certified": false
+      },
+      {
+        "id": "LCD-05",
+        "domain": "Volunteer Network",
+        "criteria": [
+          "Volunteer onboarding",
+          "Training materials",
+          "Role documentation",
+          "Leadership pathways",
+          "Mentorship system"
+        ],
+        "readiness_pct": 44,
+        "certification_level": 2,
+        "status": "in_progress",
+        "certified": false
+      },
+      {
+        "id": "LCD-06",
+        "domain": "Coalition Network",
+        "criteria": [
+          "Organization onboarding",
+          "Coalition directory",
+          "Shared resources",
+          "Partnership agreements",
+          "Communication systems"
+        ],
+        "readiness_pct": 44,
+        "certification_level": 2,
+        "status": "in_progress",
+        "certified": false
+      },
+      {
+        "id": "LCD-07",
+        "domain": "Arkansas Coverage",
+        "criteria": [
+          "All 75 counties",
+          "250 largest cities",
+          "Neighborhood framework",
+          "Education Leader recruitment",
+          "Community conversation readiness"
+        ],
+        "readiness_pct": 48,
+        "certification_level": 2,
+        "status": "in_progress",
+        "certified": false
+      },
+      {
+        "id": "LCD-08",
+        "domain": "Governance",
+        "criteria": [
+          "Constitution complete",
+          "Operating Manual complete",
+          "PMO operational",
+          "Decision documentation",
+          "Policies approved",
+          "Leadership structure documented"
+        ],
+        "readiness_pct": 50,
+        "certification_level": 2,
+        "status": "in_progress",
+        "certified": false
+      },
+      {
+        "id": "LCD-09",
+        "domain": "AI & LocalBrains",
+        "criteria": [
+          "LocalBrains operational",
+          "Institutional knowledge connected",
+          "AI assistants trained",
+          "Knowledge Platform integrated",
+          "Executive AI functioning"
+        ],
+        "readiness_pct": 60,
+        "certification_level": 3,
+        "status": "ready",
+        "certified": false
+      },
+      {
+        "id": "LCD-10",
+        "domain": "Communications",
+        "criteria": [
+          "Public website",
+          "Social media",
+          "Educational videos",
+          "Press materials",
+          "Email communications",
+          "Presentation resources"
+        ],
+        "readiness_pct": 42,
+        "certification_level": 2,
+        "status": "in_progress",
+        "certified": false
+      },
+      {
+        "id": "LCD-11",
+        "domain": "Trust & Transparency",
+        "criteria": [
+          "Citation review",
+          "Public correction process",
+          "Accessibility review",
+          "Privacy review",
+          "Transparency standards",
+          "Annual review schedule"
+        ],
+        "readiness_pct": 50,
+        "certification_level": 2,
+        "status": "in_progress",
+        "certified": false
+      },
+      {
+        "id": "LCD-12",
+        "domain": "Institutional Sustainability",
+        "criteria": [
+          "Documentation",
+          "Knowledge preservation",
+          "Leadership succession",
+          "Volunteer capacity",
+          "Financial readiness",
+          "Long-term operating plan"
+        ],
+        "readiness_pct": 41,
+        "certification_level": 2,
+        "status": "in_progress",
+        "certified": false
+      }
+    ],
+    "status_labels": [
+      "not_started",
+      "in_progress",
+      "ready",
+      "certified"
+    ],
+    "domains_total": 12,
+    "domains_certified": 0,
+    "total_criteria": 67
+  },
+  "certification_levels": {
+    "title": "Certification Levels",
+    "levels": [
+      {
+        "level": 1,
+        "name": "Planning",
+        "description": "Domain specified, not yet building"
+      },
+      {
+        "level": 2,
+        "name": "Building",
+        "description": "Active development in progress"
+      },
+      {
+        "level": 3,
+        "name": "Operational",
+        "description": "System functioning in private development"
+      },
+      {
+        "level": 4,
+        "name": "Launch Ready",
+        "description": "Meets launch standards pending final audit"
+      },
+      {
+        "level": 5,
+        "name": "Certified",
+        "description": "Independent review passed \u2014 launch certified"
+      }
+    ],
+    "goal_all_domains_certified": true,
+    "overall_level": 2,
+    "overall_level_name": "Building"
+  },
+  "executive_readiness_dashboard": {
+    "title": "Executive Readiness Dashboard",
+    "indicators": [
+      {
+        "id": "ILC-D01",
+        "indicator": "Overall Certification Score",
+        "current": 45,
+        "unit": "%",
+        "status": "partial"
+      },
+      {
+        "id": "ILC-D02",
+        "indicator": "Department Readiness",
+        "current": 50,
+        "unit": "%",
+        "status": "partial"
+      },
+      {
+        "id": "ILC-D03",
+        "indicator": "County Readiness",
+        "current": 47,
+        "unit": "%",
+        "status": "partial"
+      },
+      {
+        "id": "ILC-D04",
+        "indicator": "City Readiness",
+        "current": 48,
+        "unit": "%",
+        "status": "partial"
+      },
+      {
+        "id": "ILC-D05",
+        "indicator": "Technology Readiness",
+        "current": 59,
+        "unit": "%",
+        "status": "partial"
+      },
+      {
+        "id": "ILC-D06",
+        "indicator": "Volunteer Readiness",
+        "current": 44,
+        "unit": "%",
+        "status": "partial"
+      },
+      {
+        "id": "ILC-D07",
+        "indicator": "Research Readiness",
+        "current": 43,
+        "unit": "%",
+        "status": "partial"
+      },
+      {
+        "id": "ILC-D08",
+        "indicator": "Trust Readiness",
+        "current": 50,
+        "unit": "%",
+        "status": "partial"
+      },
+      {
+        "id": "ILC-D09",
+        "indicator": "Governance Readiness",
+        "current": 50,
+        "unit": "%",
+        "status": "partial"
+      },
+      {
+        "id": "ILC-D10",
+        "indicator": "Overall Institutional Readiness",
+        "current": 96,
+        "unit": "%",
+        "status": "partial"
+      }
+    ],
+    "live": false,
+    "identifies_remaining_work": true,
+    "status": "planned"
+  },
+  "independent_readiness_review": {
+    "title": "Independent Readiness Review",
+    "invite_volunteers_and_advisors": true,
+    "identify_blind_spots": true,
+    "completed": false,
+    "status": "planned"
+  },
+  "launch_recommendation": {
+    "title": "Launch Recommendation",
+    "options": [
+      "Ready for Launch",
+      "Launch with Limited Improvements Outstanding",
+      "Delay Until Critical Issues Are Resolved"
+    ],
+    "issued": false,
+    "current": null,
+    "documented_rationale": true,
+    "status": "planned"
+  },
+  "certification_archive": {
+    "title": "Certification Archive",
+    "fields": [
+      "What was evaluated",
+      "What standards existed",
+      "What improvements were recommended",
+      "When certification occurred"
+    ],
+    "permanently_preserved": true,
+    "started": false,
+    "status": "planned"
+  },
+  "integration": {
+    "chain": "Mission Control \u2192 PMO \u2192 Digital Twin \u2192 LocalBrains \u2192 Research Institute \u2192 Community Education Academy \u2192 Volunteer Network \u2192 Coalition Network \u2192 Operating Manual",
+    "every_system_participates": true,
+    "systems": [
+      {
+        "system": "Master Launch Plan (#85)",
+        "route": "/mission-control/master-launch-plan.html",
+        "status": "live"
+      },
+      {
+        "system": "Execution Schedule (#88)",
+        "route": "/mission-control/execution-schedule.html",
+        "status": "live"
+      },
+      {
+        "system": "PMO (#89)",
+        "route": "/mission-control/pmo-execution-office.html",
+        "status": "live"
+      },
+      {
+        "system": "Operating Manual (#90)",
+        "route": "/mission-control/institutional-operating-manual.html",
+        "status": "live"
+      },
+      {
+        "system": "Digital Twin (#81)",
+        "route": "/mission-control/institutional-digital-twin.html",
+        "status": "live"
+      },
+      {
+        "system": "ACOS 2.0 (#96)",
+        "route": "/mission-control/arkansas-civic-operating-system.html",
+        "status": "live"
+      }
+    ]
+  },
+  "long_term_vision": "When January 2027 arrives, Citizens United Facts demonstrates\u2014with documentation, measurable standards, and transparent evidence\u2014that it has prepared itself to responsibly serve Arkansas. That confidence becomes part of its reputation from day one.",
+  "summary": {
+    "completion_target_date": "2027-01-01",
+    "days_remaining": 176,
+    "institutional_launch_certification_readiness_pct": 57,
+    "master_launch_plan_readiness_pct": 54,
+    "overall_certification_score": 45,
+    "overall_certification_level": 2,
+    "overall_certification_level_name": "Building",
+    "domains_certified": 0,
+    "domains_total": 12,
+    "certification_dashboard_live": false,
+    "independent_review_completed": false,
+    "launch_recommendation_issued": false,
+    "launch_checklist_items_complete": 3,
+    "launch_checklist_items_total": 36,
+    "institutional_completion_pct": 96
+  },
+  "catalog_gaps": [
+    "Certification dashboard not live",
+    "0/12 domains certified",
+    "No independent readiness review conducted",
+    "Launch recommendation not yet issued",
+    "Certification archive not started",
+    "Domain criteria not tracked item-by-item in MC",
+    "Statewide readiness map not operational",
+    "No automated certification level promotion workflow",
+    "Technology domain below launch threshold (accounts, search, AI)",
+    "Academy and volunteer domains significantly below ready",
+    "Digital Twin not synchronized for certification audit",
+    "Annual review schedule not enforced"
+  ],
+  "recommended_next_build": {
+    "number": 98,
+    "title": "Executive War Room & Countdown Dashboard Components",
+    "note": "War room UI, countdown dashboard, certification tracker, domain criteria checklist, launch recommendation workflow, COMP-* specs."
+  }
+}

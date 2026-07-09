@@ -316,10 +316,10 @@ out = {
     ],
     'recommended_next_build': {
         'number': 97,
-        'title': 'Executive War Room & Countdown Dashboard Components',
+        'title': 'Master Institutional Launch Certification',
         'note': (
-            'War room UI, countdown dashboard, platform auth MVP, workspace shell, '
-            'role permissions, COMP-* specs.'
+            'January 2027 readiness audit — 12 certification domains, launch '
+            'recommendation, independent review, certification archive.'
         ),
     },
 }
