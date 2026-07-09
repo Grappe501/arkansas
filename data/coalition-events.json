@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "state": "Arkansas",
+  "updated": "2026-07-09",
+  "summary": {
+    "total_events": 0,
+    "upcoming": 0,
+    "past": 0,
+    "by_type": {
+      "community_conversation": 0,
+      "civic_club": 0,
+      "classroom": 0,
+      "library": 0,
+      "faith_forum": 0,
+      "workshop": 0
+    }
+  },
+  "events": []
+}

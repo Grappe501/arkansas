@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "build": 13,
+  "updated": "2026-07-09",
+  "title": "Arkansas Coalition Organization Profile",
+  "scope": "arkansas",
+  "description": "Schema for organizational profiles in the Arkansas educational coalition.",
+  "required": ["organization_name", "organization_type", "city", "county", "state", "partnership_level", "contact_email"],
+  "fields": {
+    "organization_name": { "type": "string", "public_default": true },
+    "organization_type": { "type": "enum", "values_ref": "coalition-ecosystem.organization_types", "public_default": true },
+    "city": { "type": "string", "public_default": true },
+    "county": { "type": "string", "public_default": true },
+    "state": { "type": "string", "default": "Arkansas", "public_default": true },
+    "service_area": { "type": "string", "public_default": true },
+    "mission": { "type": "text", "public_default": true },
+    "website": { "type": "url", "public_default": true },
+    "contact_person": { "type": "string", "public_default": false },
+    "contact_email": { "type": "email", "public_default": false },
+    "contact_phone": { "type": "string", "public_default": false },
+    "educational_interests": { "type": "string[]", "public_default": true },
+    "resources_offered": { "type": "string[]", "public_default": true },
+    "events_hosted": { "type": "number", "public_default": true },
+    "partnership_level": {
+      "type": "enum",
+      "values": ["supporter", "educational_partner", "community_partner", "research_partner", "strategic_partner"],
+      "public_default": true
+    },
+    "date_joined": { "type": "date", "public_default": true },
+    "privacy": {
+      "type": "object",
+      "description": "Per-field public/private overrides",
+      "public_default": false
+    },
+    "referral_source": { "type": "string", "public_default": false }
+  },
+  "membership_levels_ref": "/data/coalition-ecosystem.json#membership_levels",
+  "client_tracker": "/js/coalition-profile.js",
+  "form_route": "/coalition/join.html"
+}

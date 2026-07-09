@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Event Calendar | Arkansas Coalition</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/education.css">
+  <link rel="stylesheet" href="/css/action-hub.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="site-main">
+    <nav class="breadcrumb"><a href="/">Front Door</a> → <a href="/coalition/">Coalition</a> → Events</nav>
+    <header class="hall-header">
+      <span class="status-badge status-badge--coming">Statewide</span>
+      <h1>Arkansas Community Event Calendar</h1>
+      <p class="hall-purpose">Educational events across Arkansas — community conversations, civic clubs, classrooms, libraries, faith forums, and workshops.</p>
+    </header>
+    <section aria-labelledby="calendar-heading">
+      <h2 id="calendar-heading" class="section-title">Upcoming Events</h2>
+      <p>No scheduled events yet. Coalition members can submit educational events below.</p>
+    </section>
+    <section id="submit" aria-labelledby="submit-heading">
+      <h2 id="submit-heading" class="section-title">Submit an Educational Event</h2>
+      <form class="lead-form" name="coalition-event" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/educate/thanks.html">
+        <input type="hidden" name="form-name" value="coalition-event">
+        <p hidden><label>Bot: <input name="bot-field"></label></p>
+        <div class="form-grid">
+          <div class="form-group form-group--full"><label for="event_title">Event title *</label><input type="text" id="event_title" name="event_title" required></div>
+          <div class="form-group">
+            <label for="event_type">Event type *</label>
+            <select id="event_type" name="event_type" required>
+              <option value="">Select type</option>
+              <option value="community_conversation">Community conversation</option>
+              <option value="civic_club">Civic club presentation</option>
+              <option value="classroom">Classroom discussion</option>
+              <option value="library">Library event</option>
+              <option value="faith_forum">Faith community forum</option>
+              <option value="workshop">Public education workshop</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="event_date">Date *</label><input type="date" id="event_date" name="event_date" required></div>
+          <div class="form-group"><label for="event_city">City *</label><input type="text" id="event_city" name="city" required></div>
+          <div class="form-group"><label for="event_county">County *</label><input type="text" id="event_county" name="county" required></div>
+          <div class="form-group form-group--full"><label for="org_name">Hosting organization</label><input type="text" id="org_name" name="organization_name"></div>
+          <div class="form-group form-group--full"><label for="event_desc">Description</label><textarea id="event_desc" name="description" rows="3"></textarea></div>
+          <div class="form-group"><label for="contact_email">Contact email *</label><input type="email" id="contact_email" name="contact_email" required></div>
+        </div>
+        <button type="submit" class="form-submit">Submit Event</button>
+      </form>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="/js/layout.js"></script>
+  <script src="/js/coalition-profile.js"></script>
+  <script src="/js/action-hub.js"></script>
+</body>
+</html>

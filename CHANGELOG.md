@@ -13,6 +13,14 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.17.0] - 2026-07-09 — Build #13 Coalition & Outreach
+
+### Coalition Building & Public Outreach System
+- First-class **Coalition & Outreach Layer** alongside Education, Research, and Civic Action
+- Coalition directory, org profiles, membership levels, resource center, event calendar
+- Mission Control coalition dashboard with 75-county org table
+- **Homepage three paths:** I'm Here to Learn · I Want to Help · My Organization Wants to Partner
+
 ## [1.16.1] - 2026-07-09 — Build #12 Arkansas focus
 
 ### Arkansas Civic Participation Constitution

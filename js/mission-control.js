@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Arkansas Coalition &amp; Outreach <a href="/mission-control/coalition.html" class="mc-inline-link">Coalition Dashboard →</a></h2>
+    <p class="mc-bar-note">Build #13 — Coalition directory, org profiles, event calendar, resource center, social command center scaffold.</p>
     <h2 class="mc-section-title">Arkansas Civic Ecosystem <a href="/mission-control/civic-ecosystem.html" class="mc-inline-link">County Dashboard →</a></h2>
     <p class="mc-bar-note">Build #12 — Arkansas Education Ladder (7 levels), 75-county map, Arkansas Action Hub.</p>
     <h2 class="mc-section-title">Knowledge Graph <a href="/mission-control/knowledge-graph.html" class="mc-inline-link">Educational Intelligence →</a></h2>
@@ -1289,6 +1291,139 @@ async function initCivicEcosystemBlueprint() {
   initDevConsole(mc);
 }
 
+async function initCoalitionBlueprint() {
+  const root = document.getElementById('mc-coalition-root');
+  if (!root) return;
+
+  const [coalitionRes, directoryRes, eventsRes, countiesRes, mcRes] = await Promise.all([
+    fetch('/data/coalition-ecosystem.json'),
+    fetch('/data/coalition-directory.json'),
+    fetch('/data/coalition-events.json'),
+    fetch('/data/arkansas-counties.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const coalition = await coalitionRes.json();
+  const directory = await directoryRes.json();
+  const events = await eventsRes.json();
+  const counties = await countiesRes.json();
+  const mc = await mcRes.json();
+  const ca = mc.civic_action || {};
+  const sm = mc.coalition_outreach || {};
+
+  const metricValue = (id) => {
+    const map = {
+      coalition_organizations: directory.summary.total_organizations,
+      counties_represented: directory.summary.counties_represented,
+      educational_events: events.summary.upcoming,
+      active_education_leaders: ca.education_leader_signups || 0,
+      community_conversations: sm.community_conversations || 0,
+      resource_downloads: ca.toolkit_requests || 0,
+      social_media_growth: sm.social_followers || 0,
+      official_shares: sm.official_shares || 0,
+      organization_referrals: sm.organization_referrals || 0
+    };
+    return map[id] ?? 0;
+  };
+
+  const countyOrgMap = {};
+  directory.organizations.forEach(o => {
+    const c = o.county || 'Unknown';
+    countyOrgMap[c] = (countyOrgMap[c] || 0) + 1;
+  });
+
+  const countyRows = counties.counties
+    .map(c => ({
+      ...c,
+      orgs: countyOrgMap[c.name] || 0
+    }))
+    .sort((a, b) => b.orgs - a.orgs || a.name.localeCompare(b.name))
+    .map(c => `
+      <tr class="${c.orgs > 0 ? 'mc-table__row--approved' : ''}">
+        <td>${c.name}</td>
+        <td>${c.orgs}</td>
+        <td>${c.participants}</td>
+        <td>${c.conversations}</td>
+      </tr>`).join('');
+
+  const levelRows = coalition.membership_levels.map(l => `
+    <tr><td>${l.title}</td><td>${l.description}</td><td>${directory.summary.by_level[l.id] ?? 0}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Arkansas Coalition</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #13 · ${coalition.title}</p>
+      <h1>Coalition Growth Dashboard</h1>
+      <p class="mc-header__question">${coalition.governing_principle}</p>
+    </header>
+    <section class="mc-card">
+      <h3>Arkansas Educational Coalition</h3>
+      <p class="mc-bar-note">${coalition.purpose}</p>
+      <p class="mc-bar-note"><strong>Not a political campaign</strong> — organizations join to improve public understanding through research, civic education, and respectful dialogue.</p>
+    </section>
+    <h2 class="mc-section-title">Platform Pillars (Homepage Entry Points)</h2>
+    <div class="mc-dep-map">
+      ${coalition.platform_pillars.map((p, i) => `
+        <span class="mc-dep-map__node"><span class="mc-dep-map__num">${i + 1}</span><span class="mc-dep-map__label">${p.entry}</span></span>
+        ${i < coalition.platform_pillars.length - 1 ? '<span class="mc-dep-map__arrow">→</span>' : ''}`).join('')}
+    </div>
+    <ul class="mc-deliverables">${coalition.platform_pillars.map(p => `
+      <li><strong>${p.title}</strong> — ${p.entry} · <a href="${p.route}">${p.route}</a></li>`).join('')}</ul>
+    <h2 class="mc-section-title">Coalition Growth Metrics</h2>
+    <div class="mc-executive mc-executive--hero">
+      ${coalition.growth_dashboard.metrics.slice(0, 6).map(m => `
+        <div class="mc-stat"><div class="mc-stat__label">${m.title}</div><div class="mc-stat__value">${metricValue(m.id)}</div></div>`).join('')}
+    </div>
+    <table class="mc-table">
+      <thead><tr><th>Metric</th><th>Source</th><th>Value</th></tr></thead>
+      <tbody>${coalition.growth_dashboard.metrics.map(m => `
+        <tr><td>${m.title}</td><td>${m.source}</td><td>${metricValue(m.id)}</td></tr>`).join('')}
+      </tbody>
+    </table>
+    <p class="mc-bar-note">Readiness: ${sm.readiness_score ?? 10}% · Metrics at 0 until coalition forms submit and directory populates.</p>
+    <h2 class="mc-section-title">Membership Levels</h2>
+    <table class="mc-table">
+      <thead><tr><th>Level</th><th>Role</th><th>Organizations</th></tr></thead>
+      <tbody>${levelRows}</tbody>
+    </table>
+    <h2 class="mc-section-title">Coalition Map (${counties.counties_total} counties)</h2>
+    <p class="mc-bar-note">${directory.summary.needs_outreach}</p>
+    <div class="mc-card mc-inv-table-wrap" style="max-height:320px;overflow-y:auto">
+      <table class="mc-table mc-inv-table">
+        <thead><tr><th>County</th><th>Organizations</th><th>Participants</th><th>Conversations</th></tr></thead>
+        <tbody>${countyRows}</tbody>
+      </table>
+    </div>
+    <p class="mc-bar-note">Counties represented: ${directory.summary.counties_represented} · Interactive map planned.</p>
+    <h2 class="mc-section-title">Organization Types (${coalition.organization_types.length})</h2>
+    <p class="mc-bar-note">${coalition.organization_types.map(t => t.label).join(' · ')}</p>
+    <h2 class="mc-section-title">Workspaces</h2>
+    <ul class="mc-deliverables">
+      <li><strong>Coalition Directory</strong> — <a href="${coalition.coalition_directory.route}">${coalition.coalition_directory.route}</a> · Join: <a href="${coalition.coalition_directory.join_route}">${coalition.coalition_directory.join_route}</a></li>
+      <li><strong>${coalition.organization_resource_center.title}</strong> — <a href="${coalition.organization_resource_center.route}">${coalition.organization_resource_center.route}</a></li>
+      <li><strong>${coalition.community_event_calendar.title}</strong> — <a href="${coalition.community_event_calendar.route}">${coalition.community_event_calendar.route}</a> (${events.summary.total_events} events)</li>
+      <li><strong>${coalition.social_media_command_center.title}</strong> — ${coalition.social_media_command_center.channels.length} channels planned</li>
+    </ul>
+    <h2 class="mc-section-title">Social Media Command Center</h2>
+    <p class="mc-bar-note">${coalition.social_media_command_center.emphasis}</p>
+    <table class="mc-table">
+      <thead><tr><th>Channel</th><th>Status</th></tr></thead>
+      <tbody>${coalition.social_media_command_center.channels.map(ch => `
+        <tr><td>${ch.label}</td><td>${ch.status}</td></tr>`).join('')}
+      </tbody>
+    </table>
+    <h2 class="mc-section-title">Coalition Principles</h2>
+    <ul class="mc-deliverables">${coalition.coalition_principles.map(p => `<li>${p}</li>`).join('')}</ul>
+    <p class="mc-bar-note">
+      <a href="/docs/COALITION_OUTREACH.md">COALITION_OUTREACH.md</a> ·
+      <a href="/data/coalition-ecosystem.json">JSON</a> ·
+      <a href="/coalition/">Public coalition hub</a> ·
+      <a href="/">Three-path homepage</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -1301,4 +1436,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initResearchBlueprint();
   initKnowledgeGraphBlueprint();
   initCivicEcosystemBlueprint();
+  initCoalitionBlueprint();
 });

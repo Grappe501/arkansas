@@ -1,0 +1,182 @@
+{
+  "version": "1.0",
+  "build": 13,
+  "updated": "2026-07-09",
+  "scope": "arkansas",
+  "title": "Coalition Building & Public Outreach System",
+  "route": "/mission-control/coalition.html",
+  "data_file": "/data/coalition-ecosystem.json",
+  "directory_file": "/data/coalition-directory.json",
+  "events_file": "/data/coalition-events.json",
+  "schema": "/data/organization-profile-schema.json",
+  "legacy_doc": "/docs/COALITION_OUTREACH.md",
+  "purpose": "Unite organizations across Arkansas around a shared commitment to educating the public about Citizens United — not a political campaign, but an educational coalition.",
+  "governing_principle": "The strength of the platform will not be measured only by individual learners. It will also be measured by the number of trusted Arkansas organizations that choose to help educate their communities and expand access to accurate, well-sourced information about Citizens United.",
+  "platform_pillars": [
+    { "id": "education", "title": "Education", "entry": "I'm Here to Learn", "route": "/explore/" },
+    { "id": "leadership", "title": "Leadership", "entry": "I Want to Help", "route": "/educate/" },
+    { "id": "coalition", "title": "Coalition Building", "entry": "My Organization Wants to Partner", "route": "/coalition/" }
+  ],
+  "coalition_principles": [
+    "Respectful dialogue",
+    "Evidence-based education",
+    "Transparency",
+    "Community collaboration",
+    "Voluntary participation",
+    "Nonpartisan civic learning"
+  ],
+  "organization_types": [
+    { "id": "nonprofit", "label": "Nonprofit organization" },
+    { "id": "civic", "label": "Civic organization" },
+    { "id": "community", "label": "Community organization" },
+    { "id": "neighborhood", "label": "Neighborhood association" },
+    { "id": "veteran", "label": "Veteran organization" },
+    { "id": "faith_based", "label": "Faith-based organization" },
+    { "id": "educational", "label": "Educational organization" },
+    { "id": "student", "label": "Student organization" },
+    { "id": "business_association", "label": "Business association" },
+    { "id": "professional_association", "label": "Professional association" },
+    { "id": "public_policy", "label": "Public policy organization" },
+    { "id": "good_government", "label": "Good-government organization" }
+  ],
+  "membership_levels": [
+    {
+      "id": "supporter",
+      "level": 1,
+      "title": "Supporter",
+      "description": "Supports the educational mission."
+    },
+    {
+      "id": "educational_partner",
+      "level": 2,
+      "title": "Educational Partner",
+      "description": "Shares platform resources with members."
+    },
+    {
+      "id": "community_partner",
+      "level": 3,
+      "title": "Community Partner",
+      "description": "Hosts educational events."
+    },
+    {
+      "id": "research_partner",
+      "level": 4,
+      "title": "Research Partner",
+      "description": "Contributes research, historical materials, or expertise."
+    },
+    {
+      "id": "strategic_partner",
+      "level": 5,
+      "title": "Strategic Partner",
+      "description": "Collaborates on statewide educational initiatives."
+    }
+  ],
+  "coalition_directory": {
+    "title": "Coalition Directory",
+    "route": "/coalition/",
+    "join_route": "/coalition/join.html",
+    "public_profiles": true,
+    "privacy_model": "Organizations choose which fields are public or private.",
+    "profile_elements": [
+      "Organization name",
+      "Organization type",
+      "City",
+      "County",
+      "Service area",
+      "Mission",
+      "Website",
+      "Contact person",
+      "Educational interests",
+      "Resources offered",
+      "Events hosted",
+      "Partnership level",
+      "Date joined"
+    ]
+  },
+  "coalition_map": {
+    "title": "Arkansas Coalition Map",
+    "status": "table_scaffold",
+    "displays": [
+      "Coalition organizations",
+      "Education leaders",
+      "Community conversations",
+      "Partner events",
+      "Counties represented",
+      "Counties still needing outreach"
+    ],
+    "interactive_map": "planned",
+    "counties_file": "/data/arkansas-counties.json"
+  },
+  "organization_resource_center": {
+    "title": "Organization Resource Center",
+    "route": "/coalition/resources.html",
+    "emphasis": "Easy to customize for local educational events.",
+    "resources": [
+      "Educational presentations",
+      "Printable materials",
+      "Research summaries",
+      "Community discussion guides",
+      "Event toolkits",
+      "Social media resources",
+      "Presentation graphics",
+      "Frequently asked questions"
+    ],
+    "status": "scaffold"
+  },
+  "social_media_command_center": {
+    "title": "Social Media Command Center",
+    "emphasis": "Direct people back to the educational website rather than replacing it.",
+    "channels": [
+      { "id": "facebook", "label": "Facebook", "status": "planned" },
+      { "id": "instagram", "label": "Instagram", "status": "planned" },
+      { "id": "x", "label": "X", "status": "planned" },
+      { "id": "linkedin", "label": "LinkedIn", "status": "planned" },
+      { "id": "youtube", "label": "YouTube", "status": "planned" },
+      { "id": "tiktok", "label": "TikTok", "status": "planned" },
+      { "id": "threads", "label": "Threads", "status": "planned" }
+    ],
+    "metrics": [
+      { "id": "posts_published", "title": "Educational posts published" },
+      { "id": "reach", "title": "Reach" },
+      { "id": "shares", "title": "Shares" },
+      { "id": "engagement", "title": "Engagement" },
+      { "id": "followers", "title": "Followers" },
+      { "id": "video_performance", "title": "Video performance" },
+      { "id": "platform_traffic", "title": "Traffic returned to platform" }
+    ],
+    "status": "scaffold"
+  },
+  "community_event_calendar": {
+    "title": "Community Event Calendar",
+    "route": "/coalition/events.html",
+    "submit_route": "/coalition/events.html#submit",
+    "event_types": [
+      "Community conversations",
+      "Civic club presentations",
+      "Classroom discussions",
+      "Library events",
+      "Faith community forums",
+      "Public education workshops"
+    ],
+    "status": "scaffold"
+  },
+  "growth_dashboard": {
+    "title": "Coalition Growth Dashboard",
+    "route": "/mission-control/coalition.html",
+    "metrics": [
+      { "id": "coalition_organizations", "title": "Coalition organizations", "source": "coalition-directory.json" },
+      { "id": "counties_represented", "title": "Counties represented", "source": "coalition-directory.json" },
+      { "id": "educational_events", "title": "Educational events scheduled", "source": "coalition-events.json" },
+      { "id": "active_education_leaders", "title": "Active education leaders", "source": "mission-control.json civic_action" },
+      { "id": "community_conversations", "title": "Community conversations", "source": "civic_action" },
+      { "id": "resource_downloads", "title": "Resource downloads", "source": "civic_action" },
+      { "id": "social_media_growth", "title": "Social media growth", "source": "social_media_command_center" },
+      { "id": "official_shares", "title": "Public official resource shares", "source": "civic_action" },
+      { "id": "organization_referrals", "title": "Organization referrals", "source": "coalition-directory.json" }
+    ]
+  },
+  "future_expansion": {
+    "note": "Coalition layer is Arkansas-scoped in v1. Architecture supports future state coalitions without redesign.",
+    "architecture": "modular"
+  }
+}

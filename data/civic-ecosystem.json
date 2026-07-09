@@ -80,6 +80,7 @@
     "actions": [
       { "id": "education-leader", "title": "Become an Arkansas Education Leader", "url": "/educate/", "icon": "★", "min_level": 1, "primary_from_level": 4 },
       { "id": "join-network", "title": "Join the Arkansas Education Network", "url": "/action/join-network.html", "icon": "◎", "min_level": 1 },
+      { "id": "coalition-partner", "title": "My Organization Wants to Partner", "url": "/coalition/", "icon": "🤝", "min_level": 1, "pillar": "coalition" },
       { "id": "share-page", "title": "Share This Page", "url": "/action/share.html", "icon": "↗", "min_level": 1, "primary_until_level": 3 },
       { "id": "invite", "title": "Invite Friends & Family", "url": "/action/share.html#invite", "icon": "👥", "min_level": 2 },
       { "id": "host-conversation", "title": "Host a Community Conversation", "url": "/action/community-conversation.html", "icon": "🗣", "min_level": 3 },

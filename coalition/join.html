@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the Arkansas Coalition | Citizens Facts</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/education.css">
+  <link rel="stylesheet" href="/css/action-hub.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="site-main">
+    <nav class="breadcrumb"><a href="/">Front Door</a> → <a href="/coalition/">Coalition</a> → Join</nav>
+    <header class="action-page-intro">
+      <span class="status-badge status-badge--live">Coalition · Arkansas</span>
+      <h1>My Organization Wants to Partner</h1>
+      <p class="hall-purpose">
+        Create an organizational profile for the Arkansas educational coalition. You are joining an
+        <strong>educational mission</strong>, not a political campaign. Choose what information is public on your profile.
+      </p>
+    </header>
+    <form class="lead-form" name="coalition-join" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/educate/thanks.html">
+      <input type="hidden" name="form-name" value="coalition-join">
+      <p hidden><label>Bot: <input name="bot-field"></label></p>
+      <div class="form-grid">
+        <div class="form-group form-group--full">
+          <label for="org_name">Organization name *</label>
+          <input type="text" id="org_name" name="organization_name" required>
+        </div>
+        <div class="form-group">
+          <label for="org_type">Organization type *</label>
+          <select id="org_type" name="organization_type" required>
+            <option value="">Select type</option>
+            <option value="nonprofit">Nonprofit organization</option>
+            <option value="civic">Civic organization</option>
+            <option value="community">Community organization</option>
+            <option value="neighborhood">Neighborhood association</option>
+            <option value="veteran">Veteran organization</option>
+            <option value="faith_based">Faith-based organization</option>
+            <option value="educational">Educational organization</option>
+            <option value="student">Student organization</option>
+            <option value="business_association">Business association</option>
+            <option value="professional_association">Professional association</option>
+            <option value="public_policy">Public policy organization</option>
+            <option value="good_government">Good-government organization</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="partnership_level">Partnership level *</label>
+          <select id="partnership_level" name="partnership_level" required>
+            <option value="">Select level</option>
+            <option value="supporter">Supporter — supports the mission</option>
+            <option value="educational_partner">Educational Partner — shares resources</option>
+            <option value="community_partner">Community Partner — hosts events</option>
+            <option value="research_partner">Research Partner — contributes expertise</option>
+            <option value="strategic_partner">Strategic Partner — statewide collaboration</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="city">City *</label><input type="text" id="city" name="city" required></div>
+        <div class="form-group"><label for="county">Arkansas county *</label><input type="text" id="county" name="county" required placeholder="e.g. Pulaski"></div>
+        <div class="form-group form-group--full">
+          <label for="service_area">Service area</label>
+          <input type="text" id="service_area" name="service_area" placeholder="e.g. Central Arkansas, statewide">
+        </div>
+        <div class="form-group form-group--full">
+          <label for="mission">Organization mission</label>
+          <textarea id="mission" name="mission" rows="3"></textarea>
+        </div>
+        <div class="form-group"><label for="website">Website</label><input type="url" id="website" name="website" placeholder="https://"></div>
+        <div class="form-group"><label for="contact_person">Contact person</label><input type="text" id="contact_person" name="contact_person"></div>
+        <div class="form-group"><label for="email">Contact email *</label><input type="email" id="email" name="contact_email" required></div>
+        <div class="form-group"><label for="phone">Contact phone</label><input type="tel" id="phone" name="contact_phone"></div>
+        <div class="form-group form-group--full">
+          <label for="interests">Educational interests</label>
+          <textarea id="interests" name="educational_interests" rows="2" placeholder="What Citizens United topics does your organization want to help explain?"></textarea>
+        </div>
+        <div class="form-group form-group--full">
+          <label for="resources">Resources your organization can offer</label>
+          <textarea id="resources" name="resources_offered" rows="2" placeholder="Venues, volunteers, research, outreach channels…"></textarea>
+        </div>
+        <div class="form-group form-group--full">
+          <label>Public profile preferences</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="public_fields" value="contact" checked> Show contact person publicly</label>
+            <label><input type="checkbox" name="public_fields" value="website" checked> Show website publicly</label>
+            <label><input type="checkbox" name="public_fields" value="mission" checked> Show mission publicly</label>
+          </div>
+          <p class="form-note">Uncheck to keep fields private. Name, type, county, and partnership level appear in the public directory.</p>
+        </div>
+      </div>
+      <button type="submit" class="form-submit">Submit Coalition Profile</button>
+      <p class="form-note"><strong>Coalition principles:</strong> Respectful dialogue, evidence-based education, transparency, voluntary participation, nonpartisan civic learning.</p>
+    </form>
+  </main>
+  <div id="site-footer"></div>
+  <script src="/js/layout.js"></script>
+  <script src="/js/coalition-profile.js"></script>
+  <script src="/js/action-hub.js"></script>
+  <script>
+    document.querySelector('form[name="coalition-join"]')?.addEventListener('submit', () => {
+      if (window.CoalitionProfile) CoalitionProfile.markOrganizationJoined();
+    });
+  </script>
+</body>
+</html>

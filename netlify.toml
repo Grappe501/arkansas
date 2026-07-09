@@ -105,6 +105,11 @@
   to = "/design-system/"
   status = 301
 
+[[redirects]]
+  from = "/coalition"
+  to = "/coalition/"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]

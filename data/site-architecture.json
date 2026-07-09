@@ -1,6 +1,6 @@
 {
-  "version": "1.0",
-  "build": 5,
+  "version": "1.1",
+  "build": 13,
   "updated": "2026-07-09",
   "title": "Master Information Architecture v1.0",
   "route": "/mission-control/architecture.html",
@@ -18,6 +18,46 @@
     "navigation_rule": "Navigation should answer questions rather than expose technical categories.",
     "architecture_principle": "The platform should never feel like a collection of articles. It should feel like exploring a living institution dedicated to helping citizens understand one of the most consequential Supreme Court decisions in modern American history."
   },
+  "platform_layers": [
+    {
+      "id": "education",
+      "title": "Education",
+      "description": "Content, halls, knowledge graph, depth model — educate first.",
+      "routes": ["/", "/explore/", "/halls/", "/library/"],
+      "mission_control": "/mission-control/knowledge-graph.html",
+      "build": 11
+    },
+    {
+      "id": "research",
+      "title": "Research",
+      "description": "Evidence registry, source hierarchy, claim verification.",
+      "routes": ["/library/", "/mission-control/research.html"],
+      "mission_control": "/mission-control/research.html",
+      "build": 10
+    },
+    {
+      "id": "civic_action",
+      "title": "Civic Action",
+      "description": "Arkansas Education Ladder, Action Hub, community conversations, county dashboard.",
+      "routes": ["/educate/", "/action/"],
+      "mission_control": "/mission-control/civic-ecosystem.html",
+      "build": 12
+    },
+    {
+      "id": "coalition_outreach",
+      "title": "Coalition & Outreach",
+      "description": "Arkansas organizational coalition, resource center, event calendar, social command center.",
+      "routes": ["/coalition/"],
+      "mission_control": "/mission-control/coalition.html",
+      "build": 13,
+      "homepage_entry": "My Organization Wants to Partner"
+    }
+  ],
+  "homepage_entry_paths": [
+    { "id": "learn", "title": "I'm Here to Learn", "pillar": "Education", "route": "/explore/" },
+    { "id": "help", "title": "I Want to Help", "pillar": "Leadership", "route": "/educate/" },
+    { "id": "partner", "title": "My Organization Wants to Partner", "pillar": "Coalition Building", "route": "/coalition/" }
+  ],
   "reader_journey": [
     { "stage": 1, "id": "discover", "title": "Discover", "description": "Learn why Citizens United still matters." },
     { "stage": 2, "id": "understand", "title": "Understand", "description": "Grasp what happened and what changed." },
@@ -51,7 +91,7 @@
         { "id": "timeline-preview", "title": "Interactive Timeline Preview", "status": "partial" },
         { "id": "money-preview", "title": "Money in Politics Preview", "status": "partial" },
         { "id": "reform-preview", "title": "Current Reform Preview", "status": "partial" },
-        { "id": "leadership-invitation", "title": "Leadership Invitation", "status": "live" }
+        { "id": "leadership-invitation", "title": "Three-Path Entry (Learn · Help · Partner)", "status": "live" }
       ]
     },
     {
@@ -339,7 +379,8 @@
       "/solutions",
       "/teach",
       "/sources",
-      "/mission-control"
+      "/mission-control",
+      "/coalition"
     ]
   },
   "destination_counts": {

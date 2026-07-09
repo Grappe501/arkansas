@@ -1,11 +1,11 @@
 # Citizens United Education Website — Master Build Plan
 
-100 steps across **12 operational phases**, governed by the **15-phase [Master Phase Registry](/mission-control/phases.html)**.
+100 steps across **13 operational phases**, governed by the **15-phase [Master Phase Registry](/mission-control/phases.html)**.
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.16.1 · **Arkansas Civic:** [/mission-control/civic-ecosystem.html](/mission-control/civic-ecosystem.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #12:** ✅ Civic Ecosystem · **Build #11:** ✅ Knowledge Graph · **Build #10:** ✅ Research  
+**Current version:** 1.17.0 · **Coalition:** [/mission-control/coalition.html](/mission-control/coalition.html) · **Arkansas Civic:** [/mission-control/civic-ecosystem.html](/mission-control/civic-ecosystem.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #13:** ✅ Coalition & Outreach · **Build #12:** ✅ Arkansas Civic Ecosystem · **Build #11:** ✅ Knowledge Graph  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
 > **Arkansas pilot (v1):** All civic action frameworks scoped to Arkansas first — modular for future states.
@@ -197,11 +197,55 @@ Become a Leader · Join the Network · Share · Invite Friends · Draft a Law ·
 
 ---
 
+## Phase 13 — Coalition Building & Public Outreach (Build #13) ★ NEW
+
+*First-class Coalition & Outreach Layer — alongside Education, Research, and Civic Action.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| C1 | Coalition ecosystem blueprint | ✅ | `data/coalition-ecosystem.json` |
+| C2 | Organization profile schema | ✅ | `data/organization-profile-schema.json` |
+| C3 | Coalition directory (Arkansas) | 🟡 | `data/coalition-directory.json` (0 orgs) |
+| C4 | Organization join form (Netlify) | ✅ | `/coalition/join.html` |
+| C5 | Five membership levels | ✅ | Supporter → Strategic Partner |
+| C6 | Organization Resource Center | 🟡 | `/coalition/resources.html` |
+| C7 | Community Event Calendar + submit | 🟡 | `/coalition/events.html` |
+| C8 | Coalition Growth Dashboard | ✅ | `/mission-control/coalition.html` |
+| C9 | Arkansas coalition map (county table) | 🟡 | MC dashboard; interactive map ⬜ |
+| C10 | Social Media Command Center scaffold | 🟡 | Metrics at 0; channels planned |
+| C11 | Homepage three-path entry points | ✅ | Learn · Help · Partner |
+| C12 | Platform layers in site architecture | ✅ | `platform_layers` in IA |
+| C13 | Coalition principles doc | ✅ | `docs/COALITION_OUTREACH.md` |
+
+**Governing principle:** Success is measured by trusted Arkansas organizations that help educate their communities — not only individual learners.
+
+**Architecture doc:** `docs/COALITION_OUTREACH.md` · **Dashboard:** `/mission-control/coalition.html`
+
+### Coalition membership levels
+
+| Level | Role |
+|-------|------|
+| Supporter | Supports the educational mission |
+| Educational Partner | Shares platform resources |
+| Community Partner | Hosts educational events |
+| Research Partner | Contributes research or expertise |
+| Strategic Partner | Statewide educational collaboration |
+
+### Homepage entry paths
+
+| Path | Pillar | Route |
+|------|--------|-------|
+| I'm Here to Learn | Education | `/explore/` |
+| I Want to Help | Leadership | `/educate/` |
+| My Organization Wants to Partner | Coalition Building | `/coalition/` |
+
+---
+
 ## Platform Progression
 
 ```
-Learn          →  Participate     →  Organize         →  Build Solutions
-(Halls)           (Sign up, network)  (Share, invite)     (Draft laws, ballot lab)
+Learn          →  Participate     →  Organize         →  Build Solutions    →  Coalition
+(Halls)           (Sign up, network)  (Share, invite)     (Draft laws, ballot)   (Organizations)
 ```
 
 ## Progress Summary
@@ -209,10 +253,11 @@ Learn          →  Participate     →  Organize         →  Build Solutions
 | Phase | Focus | Status |
 |-------|-------|--------|
 | 1–6 | Knowledge system | Mostly ✅ |
-| **7** | **Civic Action Layer** | **🟡 Scaffolded v1.4.0** |
+| **7** | **Civic Action Layer** | **🟡 Scaffolded** |
 | 8–12 | Forms, tech, launch | 🟡 |
+| **13** | **Coalition & Outreach** | **🟡 Scaffolded v1.17.0** |
 
-**Next:** Build #13 — First Deep Content with KG-IDs, Evidence IDs, and journey-aware cross-links.
+**Next:** Build #14 — First Deep Content with KG-IDs, Evidence IDs, and Arkansas-focused articles.
 
 ---
 

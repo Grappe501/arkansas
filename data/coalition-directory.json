@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "state": "Arkansas",
+  "updated": "2026-07-09",
+  "summary": {
+    "total_organizations": 0,
+    "counties_represented": 0,
+    "by_level": {
+      "supporter": 0,
+      "educational_partner": 0,
+      "community_partner": 0,
+      "research_partner": 0,
+      "strategic_partner": 0
+    },
+    "needs_outreach": "All 75 counties — coalition directory opens with Build #13; profiles populate via join form."
+  },
+  "organizations": []
+}

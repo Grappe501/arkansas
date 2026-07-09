@@ -1,6 +1,6 @@
 {
-  "version": "1.16.1",
-  "build": 12,
+  "version": "1.17.0",
+  "build": 13,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,33 +9,34 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 12,
+    "overall_completion": 13,
     "current_build": {
-      "number": 12,
-      "title": "Arkansas Civic Action Ecosystem & Leadership Development System"
-    },
-    "active_phase": "Arkansas Civic Action Platform",
-    "last_completed": "Citizens United Knowledge Graph & Educational Intelligence Architecture",
-    "next_build": {
       "number": 13,
-      "title": "First Deep Content \u2014 KG-IDs, Evidence IDs, ds-* components"
+      "title": "Coalition Building & Public Outreach"
+    },
+    "active_phase": "Coalition & Outreach",
+    "last_completed": "Arkansas Civic Action Ecosystem & Leadership Development System",
+    "next_build": {
+      "number": 14,
+      "title": "First Deep Content \u2014 KG-IDs, Evidence IDs, Arkansas articles"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
     "content_readiness": 10,
     "research_readiness": 18,
     "data_viz_readiness": 2,
-    "signup_funnel_readiness": 12,
+    "signup_funnel_readiness": 14,
     "civic_action_readiness": 22,
-    "public_launch_readiness": 4,
+    "coalition_readiness": 10,
+    "public_launch_readiness": 5,
     "public_launch_label": "Early Foundation"
   },
   "progress_bars": [
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 12,
-      "note": "Nine frameworks live. Arkansas Education Ladder + county dashboard. Deep content next."
+      "value": 13,
+      "note": "Ten frameworks live. Coalition layer + three-path homepage. Deep content next."
     },
     {
       "id": "constitution",
@@ -95,7 +96,7 @@
       "id": "signup",
       "label": "Signup Funnel Completion",
       "value": 12,
-      "note": "Arkansas Participation Constitution: 7-level ladder, 75-county scaffold, participant schema v1.6."
+      "note": "Three homepage paths: Learn, Help, Partner. Org join + event forms scaffolded."
     },
     {
       "id": "action_hub",
@@ -106,8 +107,8 @@
     {
       "id": "relational",
       "label": "Relational Organizing Completion",
-      "value": 8,
-      "note": "Relational organizing framework + referral/share tracking stubs."
+      "value": 10,
+      "note": "Coalition directory + org referrals planned alongside relational organizing."
     },
     {
       "id": "model_law",
@@ -150,6 +151,13 @@
       "label": "Public Launch Readiness",
       "value": 2,
       "note": "Not ready for broad public education launch."
+    },
+    {
+      "id": "coalition",
+      "label": "Coalition & Outreach",
+      "value": 10,
+      "max": 100,
+      "note": "Directory, join form, resource center, event calendar, MC dashboard \u2014 0 orgs until submissions."
     }
   ],
   "public_readiness": {
@@ -521,6 +529,12 @@
       "label": "Arkansas Civic Ecosystem",
       "href": "/mission-control/civic-ecosystem.html",
       "status": "complete"
+    },
+    {
+      "id": "coalition",
+      "label": "Coalition Hub",
+      "href": "/coalition/",
+      "status": "building"
     }
   ],
   "phases": [
@@ -1547,6 +1561,67 @@
   ],
   "builds": [
     {
+      "number": 13,
+      "title": "Coalition Building & Public Outreach",
+      "version": "1.17.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "First-class Coalition & Outreach Layer \u2014 Arkansas educational coalition, not a political campaign",
+      "summary": "Coalition directory, 5 membership levels, org join form, resource center, event calendar, growth dashboard, three-path homepage.",
+      "files_created": [
+        "data/coalition-ecosystem.json",
+        "data/coalition-directory.json",
+        "data/organization-profile-schema.json",
+        "data/coalition-events.json",
+        "docs/COALITION_OUTREACH.md",
+        "builds/013-coalition-outreach.md",
+        "js/coalition-profile.js",
+        "coalition/index.html",
+        "coalition/join.html",
+        "coalition/resources.html",
+        "coalition/events.html",
+        "mission-control/coalition.html",
+        "scripts/update-mc-build13.py"
+      ],
+      "files_modified": [
+        "index.html",
+        "css/education.css",
+        "data/site-architecture.json",
+        "data/civic-ecosystem.json",
+        "js/mission-control.js",
+        "BUILD_PLAN.md",
+        "builds/BUILDS.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/coalition.html",
+        "/coalition/",
+        "/coalition/join.html",
+        "/coalition/resources.html",
+        "/coalition/events.html"
+      ],
+      "decisions_made": [
+        "Coalition as first-class platform layer alongside Education, Research, Civic Action",
+        "Homepage three parallel entry paths \u2014 Learn, Help, Partner",
+        "Organizations join educational coalition, not political campaign",
+        "County coalition map as table first; interactive map planned"
+      ],
+      "open_questions": [
+        "Public org directory listing vs. approval workflow?",
+        "Social media API integration for command center metrics?",
+        "Supabase for org profiles and event calendar?"
+      ],
+      "risks": [
+        "All coalition metrics at 0 until orgs join \u2014 honest scaffolding"
+      ],
+      "next_recommended": 14,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/coalition.html",
+      "review_status": "complete"
+    },
+    {
       "number": 12,
       "title": "Arkansas Civic Action Ecosystem & Leadership Development System",
       "version": "1.16.1",
@@ -2010,19 +2085,19 @@
     }
   ],
   "briefing": {
-    "what_built": "Arkansas Civic Participation Constitution v1.0 \u2014 Education Ladder, county dashboard, Arkansas Action Hub",
-    "building_now": "Arkansas civic ecosystem ready \u2014 deep Arkansas content next (Build #13)",
+    "what_built": "Coalition & Outreach Layer \u2014 org coalition, three-path homepage, MC dashboard",
+    "building_now": "Coalition framework live \u2014 deep Arkansas content next (Build #14)",
     "blocked": [
-      "Participant profile backend",
-      "County coordinators",
-      "Interactive county map"
+      "Org directory backend",
+      "Interactive coalition map",
+      "Social metrics APIs"
     ],
     "ready_public": [
-      "Arkansas Action Hub 11 actions",
-      "Community conversation page",
-      "75-county table in Mission Control"
+      "Three-path homepage",
+      "Coalition join form",
+      "Resource & event scaffolds"
     ],
-    "next": "Build #13 \u2014 First Deep Content with KG-IDs, Evidence IDs, Arkansas-focused articles"
+    "next": "Build #14 \u2014 First Deep Content with KG-IDs, Evidence IDs, Arkansas articles"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -2059,5 +2134,19 @@
   "civic_ecosystem": "/data/civic-ecosystem.json",
   "civic_ecosystem_route": "/mission-control/civic-ecosystem.html",
   "arkansas_counties": "/data/arkansas-counties.json",
-  "pilot_state": "Arkansas"
+  "pilot_state": "Arkansas",
+  "coalition_ecosystem": "/data/coalition-ecosystem.json",
+  "coalition_route": "/mission-control/coalition.html",
+  "coalition_hub": "/coalition/",
+  "coalition_outreach": {
+    "readiness_score": 10,
+    "organizations": 0,
+    "counties_represented": 0,
+    "events_scheduled": 0,
+    "community_conversations": 0,
+    "social_followers": 0,
+    "official_shares": 0,
+    "organization_referrals": 0,
+    "resource_downloads": 0
+  }
 }
