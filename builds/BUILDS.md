@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#12** | **Civic Action Ecosystem** | **1.16.0** | **✅ Complete** | [012](012-civic-action-ecosystem.md) · [/mission-control/civic-ecosystem.html](../mission-control/civic-ecosystem.html) |
 | **#11** | **Knowledge Graph & Intelligence** | **1.15.0** | **✅ Complete** | [011](011-knowledge-graph.md) · [/mission-control/knowledge-graph.html](../mission-control/knowledge-graph.html) |
 | **#10** | **Research & Evidence Framework** | **1.14.0** | **✅ Complete** | [010](010-master-research-evidence-framework.md) · [/mission-control/research.html](../mission-control/research.html) |
 | **#9** | **Visual Design System** | **1.13.0** | **✅ Complete** | [009](009-visual-design-system.md) · [/design-system/](../design-system/) |
@@ -11,7 +12,7 @@
 | **#5** | **Site Architecture** | **1.9.0** | **✅ Complete** | [005](005-master-site-architecture.md) |
 | **#4** | **Phase Registry** | **1.8.0** | **✅ Complete** | [004](004-master-phase-registry.md) |
 
-## Platform Stack (Builds #4–#11)
+## Platform Stack (Builds #4–#12)
 
 | Layer | Route | Focus |
 |-------|-------|-------|
@@ -22,8 +23,9 @@
 | Citizen Journey | `/mission-control/journey.html` | People & UX |
 | Design Language | `/mission-control/design.html` | Visual system |
 | Research Constitution | `/mission-control/research.html` | Evidence & sources |
-| **Knowledge Graph** | `/mission-control/knowledge-graph.html` | **Connected knowledge** |
+| **Knowledge Graph** | `/mission-control/knowledge-graph.html` | Connected knowledge |
+| **Civic Ecosystem** | `/mission-control/civic-ecosystem.html` | **Leadership & participation** |
 
-## Knowledge Rule (Build #11)
+## Civic Rule (Build #12)
 
-Knowledge should never end at the page where it began. Every object has a KG-ID and relationships. Explore Further on every page.
+Educate first — never ask action before understanding. Seven-level Civic Growth Ladder governs the Action Hub. Success = people who help others learn.

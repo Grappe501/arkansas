@@ -1,9 +1,10 @@
 /**
- * Citizens Facts — Shared layout v1.15.0
+ * Citizens Facts — Shared layout v1.16.0
  */
 
 const SITE_CSS = '/css/action-hub.css';
 const SITE_JS = '/js/action-hub.js';
+const CIVIC_PROFILE_JS = '/js/civic-profile.js';
 const JOURNEY_CSS = '/css/journey-panel.css';
 const JOURNEY_JS = '/js/journey.js';
 const EXPLORE_JS = '/js/explore-further.js';
@@ -26,6 +27,12 @@ function ensureActionHubAssets() {
     journey.src = JOURNEY_JS;
     journey.defer = true;
     document.body.appendChild(journey);
+  }
+  if (!document.querySelector(`script[src="${CIVIC_PROFILE_JS}"]`)) {
+    const civic = document.createElement('script');
+    civic.src = CIVIC_PROFILE_JS;
+    civic.defer = true;
+    document.body.appendChild(civic);
   }
   if (!document.querySelector(`script[src="${SITE_JS}"]`)) {
     const script = document.createElement('script');
@@ -73,7 +80,7 @@ function renderSiteFooter() {
   return `
   <footer class="site-footer">
     <p>
-      Citizens Facts · v<span data-site-version>1.15.0</span> ·
+      Citizens Facts · v<span data-site-version>1.16.0</span> ·
       <a href="/explore/">Site Map</a> ·
       <a href="/library/">Sources</a> ·
       <a href="/solutions/">Solutions Center</a> ·

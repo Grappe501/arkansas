@@ -1,5 +1,5 @@
 /**
- * Citizens United Mission Control v1.15.0 — Build #11
+ * Citizens United Mission Control v1.16.0 — Build #12
  */
 
 const isAdmin = () =>
@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Civic Ecosystem <a href="/mission-control/civic-ecosystem.html" class="mc-inline-link">Leadership Dashboard →</a></h2>
+    <p class="mc-bar-note">Build #12 — 7-level Civic Growth Ladder, ladder-aware Action Hub, Community Conversation Program.</p>
     <h2 class="mc-section-title">Knowledge Graph <a href="/mission-control/knowledge-graph.html" class="mc-inline-link">Educational Intelligence →</a></h2>
     <p class="mc-bar-note">Build #11 — 38 KG nodes, 62 edges, Explore Further on all content pages, 10 knowledge clusters.</p>
     <h2 class="mc-section-title">Research Framework <a href="/mission-control/research.html" class="mc-inline-link">Evidence Registry →</a></h2>
@@ -1170,6 +1172,97 @@ async function initKnowledgeGraphBlueprint() {
   }
 }
 
+async function initCivicEcosystemBlueprint() {
+  const root = document.getElementById('mc-civic-root');
+  if (!root) return;
+
+  const [civicRes, mcRes] = await Promise.all([
+    fetch('/data/civic-ecosystem.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const civic = await civicRes.json();
+  const mc = await mcRes.json();
+  const metrics = civic.leadership_metrics;
+  const ca = mc.civic_action || {};
+
+  const metricValue = (id) => {
+    const map = {
+      registered_participants: ca.education_leader_signups + ca.contact_network_signups,
+      active_subscribers: ca.contact_network_signups,
+      community_educators: ca.education_leader_signups,
+      community_conversations: 0,
+      resource_downloads: ca.toolkit_requests,
+      friend_family_shares: ca.share_actions,
+      official_shares: 0,
+      model_law_contributors: ca.model_law_submissions,
+      ballot_lab_participants: ca.ballot_lab_submissions
+    };
+    return map[id] ?? 0;
+  };
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Civic Ecosystem</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #12 · ${civic.title}</p>
+      <h1>Civic Action Ecosystem</h1>
+      <p class="mc-header__question">${civic.principle}</p>
+    </header>
+    <section class="mc-card">
+      <h3>Purpose</h3>
+      <p class="mc-bar-note">${civic.purpose}</p>
+      <p class="mc-bar-note"><strong>Education before action:</strong> ${civic.education_before_action}</p>
+    </section>
+    <h2 class="mc-section-title">Civic Growth Ladder (7 Levels)</h2>
+    <div class="mc-dep-map">
+      ${civic.civic_growth_ladder.map((l, i) => `
+        <span class="mc-dep-map__node"><span class="mc-dep-map__num">${l.level}</span><span class="mc-dep-map__label">${l.title}</span></span>
+        ${i < civic.civic_growth_ladder.length - 1 ? '<span class="mc-dep-map__arrow">→</span>' : ''}`).join('')}
+    </div>
+    <div class="mc-card">
+      <ul class="mc-deliverables">${civic.civic_growth_ladder.map(l => `
+        <li><strong>Level ${l.level} — ${l.title}</strong> — ${l.mission}</li>`).join('')}</ul>
+    </div>
+    <h2 class="mc-section-title">Leadership Metrics</h2>
+    <div class="mc-executive mc-executive--hero">
+      ${metrics.slice(0, 6).map(m => `
+        <div class="mc-stat"><div class="mc-stat__label">${m.title}</div><div class="mc-stat__value">${metricValue(m.id)}</div></div>`).join('')}
+    </div>
+    <table class="mc-table">
+      <thead><tr><th>Metric</th><th>Source</th><th>Value</th></tr></thead>
+      <tbody>${metrics.map(m => `
+        <tr><td>${m.title}</td><td>${m.source}</td><td>${metricValue(m.id)}</td></tr>`).join('')}
+      </tbody>
+    </table>
+    <p class="mc-bar-note">Readiness: ${ca.readiness_score}% · Metrics measure educational network growth, not political outcomes.</p>
+    <h2 class="mc-section-title">Action Hub (${civic.action_hub.actions.length} actions)</h2>
+    <table class="mc-table">
+      <thead><tr><th>Action</th><th>Min Level</th><th>Route</th></tr></thead>
+      <tbody>${civic.action_hub.actions.map(a => `
+        <tr><td>${a.icon} ${a.title}</td><td>${a.min_level}</td><td><a href="${a.url}">${a.url}</a></td></tr>`).join('')}
+      </tbody>
+    </table>
+    <h2 class="mc-section-title">Workspaces</h2>
+    <ul class="mc-deliverables">
+      <li><strong>Community Conversation</strong> — <a href="${civic.community_conversation_program.route}">${civic.community_conversation_program.route}</a> (${civic.community_conversation_program.status})</li>
+      <li><strong>Model Law Workspace</strong> — <a href="${civic.policy_development_center.model_law_workspace.route}">draft-laws</a></li>
+      <li><strong>Ballot Initiative Lab</strong> — <a href="${civic.policy_development_center.ballot_initiative_lab.route}">ballot-lab</a></li>
+      <li><strong>Public Officials</strong> — <a href="${civic.public_official_resource_center.route}">contact-legislators</a></li>
+    </ul>
+    <h2 class="mc-section-title">Participation Principles</h2>
+    <ul class="mc-deliverables">${civic.participation_principles.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Avoid</h2>
+    <ul class="mc-deliverables">${civic.avoid.map(a => `<li>${a}</li>`).join('')}</ul>
+    <p class="mc-bar-note">
+      <a href="/docs/CIVIC_PARTICIPATION_CONSTITUTION.md">CIVIC_PARTICIPATION_CONSTITUTION.md</a> ·
+      <a href="/data/civic-ecosystem.json">JSON</a> ·
+      <a href="/data/participant-profile-schema.json">Profile schema</a> ·
+      <a href="/">Try Action Hub live</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -1181,4 +1274,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initDesignBlueprint();
   initResearchBlueprint();
   initKnowledgeGraphBlueprint();
+  initCivicEcosystemBlueprint();
 });

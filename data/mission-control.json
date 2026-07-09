@@ -1,6 +1,6 @@
 {
-  "version": "1.15.0",
-  "build": 11,
+  "version": "1.16.0",
+  "build": 12,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 11,
+    "overall_completion": 12,
     "current_build": {
-      "number": 11,
-      "title": "Citizens United Knowledge Graph & Educational Intelligence Architecture"
-    },
-    "active_phase": "Information Architecture",
-    "last_completed": "Master Research & Evidence Framework",
-    "next_build": {
       "number": 12,
+      "title": "Civic Action Ecosystem & Leadership Development System"
+    },
+    "active_phase": "Civic Action Platform",
+    "last_completed": "Citizens United Knowledge Graph & Educational Intelligence Architecture",
+    "next_build": {
+      "number": 13,
       "title": "First Deep Content \u2014 KG-IDs, Evidence IDs, ds-* components"
     },
     "github_status": "connected",
@@ -25,8 +25,8 @@
     "content_readiness": 10,
     "research_readiness": 18,
     "data_viz_readiness": 2,
-    "signup_funnel_readiness": 8,
-    "civic_action_readiness": 8,
+    "signup_funnel_readiness": 12,
+    "civic_action_readiness": 22,
     "public_launch_readiness": 4,
     "public_launch_label": "Early Foundation"
   },
@@ -34,8 +34,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 11,
-      "note": "Eight registries + knowledge graph live. 38 KG nodes, Explore Further on content pages. Deep content next."
+      "value": 12,
+      "note": "Nine frameworks live. Civic Growth Ladder + ladder-aware Action Hub. Deep content next."
     },
     {
       "id": "constitution",
@@ -94,32 +94,32 @@
     {
       "id": "signup",
       "label": "Signup Funnel Completion",
-      "value": 8,
-      "note": "Education funnel integrated with journey stage Lead."
+      "value": 12,
+      "note": "Civic Participation Constitution: 7-level ladder, participant schema v1.5, community conversation scaffold."
     },
     {
       "id": "action_hub",
       "label": "Floating Action Hub Completion",
-      "value": 5,
-      "note": "Hub UI live. Most workspace actions are stubs."
+      "value": 18,
+      "note": "11 hub actions gated by civic growth level. civic-profile.js tracks participation signals."
     },
     {
       "id": "relational",
       "label": "Relational Organizing Completion",
-      "value": 3,
-      "note": "Share page with local referral stub. No backend tracking."
+      "value": 8,
+      "note": "Relational organizing framework + referral/share tracking stubs."
     },
     {
       "id": "model_law",
       "label": "Model Law Workspace Completion",
-      "value": 2,
-      "note": "Placeholder page only."
+      "value": 5,
+      "note": "Model Law Workspace linked from Policy Development Center."
     },
     {
       "id": "ballot_lab",
       "label": "Ballot Initiative Lab Completion",
-      "value": 2,
-      "note": "Placeholder page only."
+      "value": 5,
+      "note": "Ballot Initiative Lab linked from Policy Development Center."
     },
     {
       "id": "contact_list",
@@ -345,7 +345,7 @@
     "pending_followups": 0,
     "reviewed_submissions": 0,
     "approved_local_leads": 0,
-    "readiness_score": 5
+    "readiness_score": 22
   },
   "build_map": [
     {
@@ -514,6 +514,12 @@
       "id": "knowledge_graph",
       "label": "Knowledge Graph",
       "href": "/mission-control/knowledge-graph.html",
+      "status": "complete"
+    },
+    {
+      "id": "civic_ecosystem",
+      "label": "Civic Ecosystem",
+      "href": "/mission-control/civic-ecosystem.html",
       "status": "complete"
     }
   ],
@@ -1541,6 +1547,53 @@
   ],
   "builds": [
     {
+      "number": 12,
+      "title": "Civic Action Ecosystem & Leadership Development System",
+      "version": "1.16.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Civic Participation Constitution \u2014 educate first, voluntary leadership network",
+      "summary": "7-level Civic Growth Ladder, 11 ladder-aware hub actions, community conversation program, leadership dashboard, participant schema v1.5.",
+      "files_created": [
+        "data/civic-ecosystem.json",
+        "docs/CIVIC_PARTICIPATION_CONSTITUTION.md",
+        "builds/012-civic-action-ecosystem.md",
+        "js/civic-profile.js",
+        "action/community-conversation.html",
+        "mission-control/civic-ecosystem.html"
+      ],
+      "files_modified": [
+        "js/action-hub.js",
+        "js/layout.js",
+        "js/mission-control.js",
+        "data/participant-profile-schema.json",
+        "docs/CIVIC_ACTION.md"
+      ],
+      "pages_created": [
+        "/mission-control/civic-ecosystem.html",
+        "/action/community-conversation.html"
+      ],
+      "decisions_made": [
+        "7-level Civic Growth Ladder governs hub action visibility",
+        "Education before action \u2014 min_level gates on all hub actions",
+        "Leadership metrics measure educational network, not political wins",
+        "Community Conversation as dedicated program route"
+      ],
+      "open_questions": [
+        "Backend for unified participant profiles?",
+        "Civic education certification timeline?"
+      ],
+      "risks": [
+        "Metrics at 0 until forms/backend \u2014 honest scaffolding"
+      ],
+      "next_recommended": 13,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/civic-ecosystem.html",
+      "review_status": "complete"
+    },
+    {
       "number": 11,
       "title": "Citizens United Knowledge Graph & Educational Intelligence Architecture",
       "version": "1.15.0",
@@ -1955,19 +2008,19 @@
     }
   ],
   "briefing": {
-    "what_built": "Knowledge Graph Constitution v1.0 \u2014 38 connected nodes, Explore Further, educational intelligence",
-    "building_now": "Graph ready \u2014 wire KG-IDs and Evidence IDs into first deep content (Build #12)",
+    "what_built": "Civic Participation Constitution v1.0 \u2014 growth ladder, ladder-aware hub, leadership dashboard",
+    "building_now": "Civic ecosystem ready \u2014 deep content and facilitator materials next (Build #13)",
     "blocked": [
-      "Visual graph renderer",
-      "AI Q&A layer",
-      "Interactive charts"
+      "Participant profile backend",
+      "County coordinators",
+      "Certification program"
     ],
     "ready_public": [
-      "Explore Further on hall pages",
-      "Knowledge graph dashboard",
-      "Hub-and-spoke case network"
+      "Action Hub 11 actions",
+      "Community conversation page",
+      "Civic level display in hub"
     ],
-    "next": "Build #12 \u2014 First Deep Content with KG-IDs, Evidence IDs, ds-* components"
+    "next": "Build #13 \u2014 First Deep Content with KG-IDs, Evidence IDs, ds-* components"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -2000,5 +2053,7 @@
   "research_route": "/mission-control/research.html",
   "knowledge_graph": "/data/knowledge-graph.json",
   "kg_registry": "/data/kg-registry.json",
-  "knowledge_graph_route": "/mission-control/knowledge-graph.html"
+  "knowledge_graph_route": "/mission-control/knowledge-graph.html",
+  "civic_ecosystem": "/data/civic-ecosystem.json",
+  "civic_ecosystem_route": "/mission-control/civic-ecosystem.html"
 }

@@ -34,4 +34,4 @@ Graph registry **live** with 38 nodes (v1 target: ~500). Avg completion **14%**.
 
 ## Next Recommended Build
 
-**Build #12 — First Deep Content** — L2 articles wired to KG-IDs, Evidence IDs, and `ds-*` components.
+**Build #13 — First Deep Content** — L2 articles wired to KG-IDs, Evidence IDs, and `ds-*` components.

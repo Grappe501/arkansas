@@ -1,8 +1,20 @@
 {
-  "version": "1.4.0",
-  "description": "Unified participant profile — one record per person across all civic actions",
+  "version": "1.5.0",
+  "build": 12,
+  "description": "Unified participant profile — Civic Growth Ladder v1.0",
+  "civic_growth_ladder": {
+    "levels": ["visitor", "subscriber", "advocate", "educator", "regional_leader", "research_contributor", "national_leader"],
+    "tracker": "/js/civic-profile.js",
+    "constitution": "/docs/CIVIC_PARTICIPATION_CONSTITUTION.md"
+  },
   "fields": {
     "participant_id": { "type": "string", "generated": true },
+    "civic_growth_level": {
+      "type": "string",
+      "enum": ["visitor", "subscriber", "advocate", "educator", "regional_leader", "research_contributor", "national_leader"],
+      "default": "visitor"
+    },
+    "civic_growth_level_number": { "type": "integer", "min": 1, "max": 7 },
     "contact": {
       "name": "string",
       "email": "string",
@@ -15,26 +27,33 @@
     "learning_progress": {
       "halls_visited": ["string"],
       "depth_levels_used": ["L1", "L2", "L3", "L4"],
-      "topics_completed": ["string"]
+      "topics_completed": ["string"],
+      "journey_stage": "string"
     },
     "interests": {
       "topics": ["string"],
       "leadership_roles": ["string"],
-      "volunteer_roles": ["string"]
+      "volunteer_roles": ["string"],
+      "community_interests": ["string"]
     },
     "organizing": {
       "referrals_made": "number",
       "referral_code": "string",
+      "invitations_shared": "number",
       "events_attended": ["string"],
+      "conversations_hosted": ["string"],
       "toolkit_downloads": ["string"]
     },
     "solutions": {
       "legislative_ideas_submitted": ["object"],
       "ballot_contributions": ["object"],
-      "community_ideas": ["object"]
+      "community_ideas": ["object"],
+      "official_resource_shares": ["object"]
     },
-    "leadership_pathway_stage": {
-      "enum": ["learner", "volunteer", "researcher", "organizer", "presenter", "education_lead"]
+    "research_contributions": {
+      "sources_submitted": ["string"],
+      "reviews_completed": ["string"],
+      "local_knowledge": ["string"]
     }
   }
 }

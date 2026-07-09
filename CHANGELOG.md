@@ -13,6 +13,13 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.16.0] - 2026-07-09 — Build #12 Complete
+
+### Build #12: Civic Action Ecosystem & Leadership Development System
+- **Civic Participation Constitution v1.0** — 7-level growth ladder, education before action
+- `data/civic-ecosystem.json` + `js/civic-profile.js` — ladder-aware Action Hub (11 actions)
+- Community Conversation Program · Leadership dashboard · Participant schema v1.5
+
 ## [1.15.0] - 2026-07-09 — Build #11 Complete
 
 ### Build #11: Citizens United Knowledge Graph & Educational Intelligence Architecture

@@ -1,6 +1,6 @@
 /**
- * Citizens Facts — Floating Action Hub v1.12.0
- * Stage-aware civic actions — Build #8
+ * Citizens Facts — Floating Action Hub v1.16.0
+ * Civic Growth Ladder-aware — Build #12
  */
 
 function getReferralCode() {
@@ -40,11 +40,42 @@ function getVisitorStage() {
   return 'discover';
 }
 
+function getCivicLevel() {
+  if (window.CivicProfile?.estimateCivicLevel) return window.CivicProfile.estimateCivicLevel();
+  return 'visitor';
+}
+
+function getCivicLevelNum() {
+  if (window.CivicProfile?.civicLevelNumber) return window.CivicProfile.civicLevelNumber(getCivicLevel());
+  return 1;
+}
+
 function isEarlyStage(stage) {
   return stage === 'discover' || stage === 'understand';
 }
 
-function renderHubLinks(stage, config) {
+function renderCivicHubActions(ecosystem, civicLevelNum) {
+  const actions = ecosystem?.action_hub?.actions || [];
+  return actions
+    .filter(a => (a.min_level || 1) <= civicLevelNum)
+    .map(a => {
+      const primary = (a.primary_from_level && civicLevelNum >= a.primary_from_level) ||
+        (a.primary_until_level && civicLevelNum < a.primary_until_level);
+      const cls = primary ? ' action-hub__link--primary' : '';
+      if (a.id === 'share-page') {
+        return `<a href="${a.url}" class="action-hub__link${cls}" data-track-share>${a.icon} ${a.title}</a>`;
+      }
+      return `<a href="${a.url}" class="action-hub__link${cls}">${a.icon} ${a.title}</a>`;
+    }).join('');
+}
+
+function renderHubLinks(stage, config, ecosystem) {
+  const civicLevelNum = getCivicLevelNum();
+  if (ecosystem?.action_hub?.actions) {
+    const bookmark = `<button type="button" class="action-hub__link action-hub__link--bookmark" data-bookmark>★ Save This Page</button>`;
+    return renderCivicHubActions(ecosystem, civicLevelNum) + bookmark;
+  }
+
   const early = isEarlyStage(stage);
   const block = early ? config?.action_hub_stages?.early : config?.action_hub_stages?.advanced;
   if (!block) return renderDefaultLinks(stage);
@@ -63,6 +94,7 @@ function renderHubLinks(stage, config) {
   ` : `
     <a href="/action/share.html" class="action-hub__link">↗ Share This Page</a>
     <a href="/action/join-network.html" class="action-hub__link">◎ Join the Network</a>
+    <a href="/action/community-conversation.html" class="action-hub__link">🗣 Host a Conversation</a>
     <a href="/action/ideas.html" class="action-hub__link">💡 Community Ideas</a>
   `;
 
@@ -81,10 +113,10 @@ function renderDefaultLinks(stage) {
   }
   return `
     <a href="/educate/" class="action-hub__link action-hub__link--primary">★ Become an Education Leader</a>
-    <a href="/teach" class="action-hub__link">🗣 Host a Conversation</a>
+    <a href="/action/community-conversation.html" class="action-hub__link">🗣 Host a Conversation</a>
     <a href="/action/draft-laws.html" class="action-hub__link">§ Draft a Model Law</a>
     <a href="/action/ballot-lab.html" class="action-hub__link">✓ Ballot Initiative Lab</a>
-    <a href="/action/contact-legislators.html" class="action-hub__link">🏛 Contact Lawmakers</a>
+    <a href="/action/contact-legislators.html" class="action-hub__link">🏛 Share with Officials</a>
     <a href="/action/share.html" class="action-hub__link">↗ Share</a>
   `;
 }
@@ -93,13 +125,21 @@ async function renderActionHub() {
   if (document.getElementById('action-hub')) return;
 
   let config = null;
+  let ecosystem = null;
   try {
-    const res = await fetch('/data/ux-journey.json');
-    config = await res.json();
+    const [uxRes, civicRes] = await Promise.all([
+      fetch('/data/ux-journey.json'),
+      fetch('/data/civic-ecosystem.json')
+    ]);
+    config = await uxRes.json();
+    ecosystem = await civicRes.json();
   } catch { /* use defaults */ }
 
   const stage = getVisitorStage();
+  const civicLevel = getCivicLevel();
+  const civicNum = getCivicLevelNum();
   const early = isEarlyStage(stage);
+  const ladderTitle = ecosystem?.civic_growth_ladder?.find(l => l.id === civicLevel)?.title || civicLevel;
   const label = early
     ? (config?.action_hub_stages?.early?.label || 'Learn & Share')
     : (config?.action_hub_stages?.advanced?.label || 'Take Action');
@@ -114,9 +154,9 @@ async function renderActionHub() {
     </button>
     <div id="action-hub-panel" class="action-hub__panel" hidden>
       <p class="action-hub__title">Civic Action Hub</p>
-      <p class="action-hub__subtitle">Stage: ${stage} · Education before action</p>
+      <p class="action-hub__subtitle">Journey: ${stage} · Civic level ${civicNum}: ${ladderTitle}</p>
       <nav class="action-hub__nav" aria-label="Civic actions">
-        ${renderHubLinks(stage, config)}
+        ${renderHubLinks(stage, config, ecosystem)}
       </nav>
     </div>`;
 
@@ -128,6 +168,10 @@ async function renderActionHub() {
       const btn = hub.querySelector('[data-bookmark]');
       if (btn) btn.textContent = saved ? '★ Saved!' : '★ Save This Page';
     }
+  });
+
+  hub.querySelector('[data-track-share]')?.addEventListener('click', () => {
+    if (window.CivicProfile?.trackShare) window.CivicProfile.trackShare();
   });
 
   const toggle = hub.querySelector('.action-hub__toggle');
@@ -154,4 +198,4 @@ document.addEventListener('DOMContentLoaded', () => {
   renderActionHub();
 });
 
-window.CivicAction = { getReferralCode, getShareUrl, trackHallVisit, getVisitorStage };
+window.CivicAction = { getReferralCode, getShareUrl, trackHallVisit, getVisitorStage, getCivicLevel, getCivicLevelNum };
