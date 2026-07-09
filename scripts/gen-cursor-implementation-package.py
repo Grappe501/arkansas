@@ -26,7 +26,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 6  # IMP-01 through IMP-06
+steps_documented = 7  # IMP-01 through IMP-07
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -267,19 +267,54 @@ IMPLEMENTATION_STEPS = [
     },
     {
         'number': 7, 'id': 'IMP-07', 'band': 'A',
-        'title': 'Repository migration, stack lock, Netlify deployment, and environment',
-        'summary': 'Strangler-fig migration, repo audit, folder scaffold, pinned stack, netlify.toml, env matrix',
+        'package_label': 'Implementation Package 7 of 50',
+        'title': 'Master Mission Control Architecture & Executive Command Center',
+        'summary': 'Executive cockpit, institutional health, statewide map, domain dashboards, alerts, digital twin, AI advisor',
+        'deliverables': [
+            'docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md',
+            'data/mission-control-architecture-manifest.json',
+            'Executive Command Center', 'Institutional Health Dashboard',
+            'January 2027 Completion Dashboard', 'County, City & Neighborhood Dashboards',
+            'Volunteer Command Center', 'Academy Dashboard', 'Research Dashboard',
+            'Coalition Dashboard', 'PMO Dashboard', 'Executive Calendar',
+            'AI Executive Advisor', 'Digital Twin Integration', 'Alert System',
+        ],
+        'acceptance_criteria': [
+            'MC mission: five executive questions documented for every dashboard',
+            'Executive home, health score, Jan 2027 completion, and state map defined',
+            'County, city, neighborhood, and domain command center dashboards specified',
+            'Executive calendar, briefing, alerts, digital twin, search, AI advisor documented',
+            'Role-based MC permissions aligned with IMP-05 identity model',
+            'Every major institutional system has a clear reporting destination',
+        ],
+        'source_blueprints': [
+            '/data/mission-control-architecture-manifest.json',
+            '/data/mission-control.json',
+            '/data/mc2-executive.json',
+            '/data/institutional-digital-twin.json',
+            '/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md',
+        ],
+        'constitution': '/docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md',
+        'manifest': '/data/mission-control-architecture-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+    },
+    {
+        'number': 8, 'id': 'IMP-08', 'band': 'A',
+        'title': 'Repository migration, stack lock, Netlify, Git workflow, and environment',
+        'summary': 'Strangler-fig migration, repo audit, pinned stack, netlify.toml, branch model, env matrix',
         'deliverables': [
             'docs/MIGRATION_PLAN.md', 'docs/REPO_AUDIT.md', 'app/README.md',
             'docs/STACK.md', 'docs/SERVICE_BOUNDARIES.md', 'docs/DEPLOYMENT_TOPOLOGY.md',
-            'netlify.toml', 'docs/DEPLOYMENT.md', '.env.example', 'docs/ENVIRONMENT.md',
+            'netlify.toml', 'docs/DEPLOYMENT.md', 'docs/GIT_WORKFLOW.md',
+            '.env.example', 'docs/ENVIRONMENT.md',
         ],
         'acceptance_criteria': [
             'Current tree diffed against IMP-02 repository structure',
             'Migration strategy chosen with rollback plan',
             'Target folders scaffolded; existing static Netlify deploy unchanged',
             'Pinned versions documented with rationale',
-            'Preview deploys documented for develop branch',
+            'Branch purposes match repository-blueprint branch_structure',
             'All required env vars documented with no secrets committed',
         ],
         'source_blueprints': [
@@ -288,19 +323,6 @@ IMPLEMENTATION_STEPS = [
             '/data/technical-architecture.json',
             '/netlify.toml',
         ],
-        'status': 'specified',
-    },
-    {
-        'number': 8, 'id': 'IMP-08', 'band': 'A',
-        'title': 'GitHub branch and protection model',
-        'summary': 'main + develop + feature/* + content/* branch workflow',
-        'deliverables': ['docs/GIT_WORKFLOW.md'],
-        'acceptance_criteria': [
-            'Branch purposes match repository-blueprint branch_structure',
-            'PR review requirement documented for main',
-            'Content-only branch workflow for volunteers',
-        ],
-        'source_blueprints': ['/data/repository-blueprint.json'],
         'status': 'specified',
     },
     {
@@ -322,7 +344,7 @@ IMPLEMENTATION_STEPS = [
         'summary': 'Gate before Band B — repo ready for first code slice',
         'deliverables': ['docs/SPRINT_ZERO_CHECKLIST.md', 'CONTRIBUTING.md'],
         'acceptance_criteria': [
-            'IMP-01 through IMP-06 documented; IMP-07–09 engineering criteria verified',
+            'IMP-01 through IMP-07 documented; IMP-08–09 engineering criteria verified',
             'CONTRIBUTING.md links to implementation packages and CURSOR_MASTER_BUILD_PROMPT.md',
             'One successful Netlify preview deploy from develop',
             'Executive sign-off field in checklist (manual)',
@@ -1501,6 +1523,212 @@ DESIGN_SYSTEM_MANIFEST = {
     'implemented': False,
 }
 
+EXECUTIVE_QUESTIONS = [
+    {'id': 'EQ-01', 'question': 'Where are we?', 'purpose': 'Current state and progress'},
+    {'id': 'EQ-02', 'question': 'What is happening?', 'purpose': 'Active operations and events'},
+    {'id': 'EQ-03', 'question': 'Why is it happening?', 'purpose': 'Trends, causes, context'},
+    {'id': 'EQ-04', 'question': 'What needs attention?', 'purpose': 'Alerts, risks, gaps'},
+    {'id': 'EQ-05', 'question': 'What should we do next?', 'purpose': 'Priorities and recommendations'},
+]
+
+STEWARDSHIP_ACTIONS = ['see', 'understand', 'prioritize', 'coordinate', 'improve']
+
+EXECUTIVE_HOME_PANELS = [
+    'overall_institutional_health', 'january_2027_completion_progress', 'critical_alerts',
+    'top_priorities', 'projects_at_risk', 'volunteer_activity', 'research_progress',
+    'county_coverage', 'city_coverage', 'neighborhood_growth',
+    'fifteen_percent_engagement_progress', 'two_hundred_k_arkansans_progress',
+    'executive_calendar', 'ai_executive_briefing',
+]
+
+INSTITUTIONAL_HEALTH_CATEGORIES = [
+    'research', 'technology', 'mission_control', 'education', 'volunteer_network',
+    'county_operations', 'city_operations', 'neighborhood_operations', 'coalition',
+    'communications', 'governance', 'ai_systems', 'knowledge_platform', 'trust', 'pmo',
+]
+
+JANUARY_2027_DASHBOARD_METRICS = [
+    'overall_completion', 'department_completion', 'open_milestones', 'critical_path',
+    'blocked_work', 'volunteer_capacity', 'schedule_variance', 'projected_completion_date',
+]
+
+STATE_MAP_LAYERS = [
+    'county_health', 'education_leaders', 'city_participation', 'volunteer_density',
+    'coalition_partners', 'community_conversations', 'academy_participation',
+    'research_activity', 'fifteen_percent_connected_citizen_goal',
+]
+
+MC_DASHBOARDS = [
+    {
+        'id': 'MC-D01', 'name': 'Executive Home', 'route': '/mission-control/',
+        'questions': ['EQ-01', 'EQ-02', 'EQ-04', 'EQ-05'],
+        'panels': EXECUTIVE_HOME_PANELS,
+    },
+    {
+        'id': 'MC-D02', 'name': 'Institutional Health', 'route': '/mission-control/health',
+        'questions': ['EQ-01', 'EQ-03', 'EQ-04', 'EQ-05'],
+        'categories': INSTITUTIONAL_HEALTH_CATEGORIES,
+    },
+    {
+        'id': 'MC-D03', 'name': 'January 2027 Completion', 'route': '/mission-control/completion-2027',
+        'questions': ['EQ-01', 'EQ-04', 'EQ-05'],
+        'metrics': JANUARY_2027_DASHBOARD_METRICS,
+    },
+    {
+        'id': 'MC-D04', 'name': 'Arkansas State Map', 'route': '/mission-control/map',
+        'questions': ['EQ-01', 'EQ-02'],
+        'layers': STATE_MAP_LAYERS,
+    },
+    {
+        'id': 'MC-D05', 'name': 'County Operations', 'route': '/counties/{county-slug}',
+        'questions': ['EQ-01', 'EQ-02', 'EQ-05'],
+    },
+    {
+        'id': 'MC-D06', 'name': 'City Operations', 'route': '/cities/{city-slug}',
+        'questions': ['EQ-01', 'EQ-02', 'EQ-05'],
+    },
+    {
+        'id': 'MC-D07', 'name': 'Neighborhood', 'route': '/neighborhoods/{slug}',
+        'questions': ['EQ-01', 'EQ-02'],
+    },
+    {
+        'id': 'MC-D08', 'name': 'Volunteer Command Center', 'route': '/mission-control/volunteers',
+        'questions': ['EQ-02', 'EQ-04', 'EQ-05'],
+    },
+    {
+        'id': 'MC-D09', 'name': 'Academy Dashboard', 'route': '/mission-control/academy',
+        'questions': ['EQ-01', 'EQ-02'],
+    },
+    {
+        'id': 'MC-D10', 'name': 'Research Dashboard', 'route': '/mission-control/research',
+        'questions': ['EQ-01', 'EQ-02', 'EQ-04'],
+    },
+    {
+        'id': 'MC-D11', 'name': 'Coalition Dashboard', 'route': '/mission-control/coalition',
+        'questions': ['EQ-01', 'EQ-02'],
+    },
+    {
+        'id': 'MC-D12', 'name': 'Communications Dashboard', 'route': '/mission-control/communications',
+        'questions': ['EQ-01', 'EQ-02'],
+    },
+    {
+        'id': 'MC-D13', 'name': 'AI Dashboard', 'route': '/mission-control/ai',
+        'questions': ['EQ-02', 'EQ-03'],
+    },
+    {
+        'id': 'MC-D14', 'name': 'PMO Dashboard', 'route': '/mission-control/pmo',
+        'questions': ['EQ-01', 'EQ-04', 'EQ-05'],
+    },
+]
+
+EXECUTIVE_CALENDAR_SOURCES = [
+    'research', 'community_conversations', 'volunteer_events', 'academy',
+    'technology_releases', 'leadership_meetings', 'public_events', 'annual_reviews',
+]
+
+EXECUTIVE_BRIEFING_SECTIONS = [
+    'institution_summary', 'new_developments', 'critical_alerts', 'volunteer_needs',
+    'research_updates', 'executive_recommendations', 'upcoming_deadlines',
+]
+
+ALERT_TYPES = [
+    {'type': 'research_overdue', 'severity_default': 'high'},
+    {'type': 'volunteer_shortage', 'severity_default': 'high'},
+    {'type': 'leadership_vacancy', 'severity_default': 'medium'},
+    {'type': 'technology_failure', 'severity_default': 'critical'},
+    {'type': 'missed_milestone', 'severity_default': 'high'},
+    {'type': 'security_concern', 'severity_default': 'critical'},
+    {'type': 'county_support_need', 'severity_default': 'medium'},
+    {'type': 'community_growth_opportunity', 'severity_default': 'low'},
+]
+
+ALERT_SEVERITY_LEVELS = ['critical', 'high', 'medium', 'low', 'informational']
+
+DIGITAL_TWIN_VISUALIZATIONS = [
+    'institution_growth', 'leadership_network', 'knowledge_graph', 'county_development',
+    'volunteer_movement', 'forecasts', 'scenario_planning',
+]
+
+EXECUTIVE_SEARCH_DOMAINS = [
+    'people', 'organizations', 'projects', 'research', 'counties',
+    'cities', 'documents', 'events', 'tasks',
+]
+
+AI_EXECUTIVE_QUESTIONS = [
+    'What should leadership focus on this week?',
+    'Which counties need immediate support?',
+    'What projects threaten January 2027?',
+    'What trends should concern us?',
+    'Where are opportunities?',
+]
+
+MC_ROLE_ACCESS = [
+    {'role': 'county_leader', 'dashboards': ['MC-D05', 'MC-D04']},
+    {'role': 'city_leader', 'dashboards': ['MC-D06', 'MC-D04']},
+    {'role': 'organization_admin', 'dashboards': ['MC-D11']},
+    {'role': 'research_contributor', 'dashboards': ['MC-D10']},
+    {'role': 'executive', 'dashboards': 'all'},
+    {'role': 'administrator', 'dashboards': 'all_plus_admin'},
+]
+
+REPORTING_INTEGRATIONS = [
+    {'system': 'Build registry', 'registry': '/data/mission-control.json', 'route': '/mission-control/'},
+    {'system': 'MC2 Executive', 'registry': '/data/mc2-executive.json', 'route': '/mission-control/executive.html'},
+    {'system': 'Digital Twin', 'registry': '/data/institutional-digital-twin.json', 'route': '/mission-control/institutional-digital-twin.html'},
+    {'system': 'Launch Certification', 'registry': '/data/institutional-launch-certification.json', 'route': '/mission-control/launch-certification.html'},
+    {'system': 'Implementation Package', 'registry': '/data/cursor-implementation-package.json', 'route': '/mission-control/cursor-implementation-package.html'},
+]
+
+MISSION_CONTROL_ARCHITECTURE_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-07',
+    'updated': today,
+    'title': 'Master Mission Control Architecture & Executive Command Center',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md',
+    'source_registries': {
+        'mission_control': '/data/mission-control.json',
+        'mc2_executive': '/data/mc2-executive.json',
+        'digital_twin': '/data/institutional-digital-twin.json',
+        'launch_certification': '/data/institutional-launch-certification.json',
+    },
+    'philosophy': 'Mission Control is the institutional brain — stewardship, not data overload',
+    'governing_principle': (
+        'Leaders should never have to guess. Every important question answerable '
+        'with evidence, clarity, and confidence.'
+    ),
+    'integration_rule': 'If it cannot be measured in Mission Control, it is not fully integrated',
+    'executive_questions': EXECUTIVE_QUESTIONS,
+    'stewardship_actions': STEWARDSHIP_ACTIONS,
+    'executive_home_panels': EXECUTIVE_HOME_PANELS,
+    'institutional_health_categories': INSTITUTIONAL_HEALTH_CATEGORIES,
+    'health_category_count': len(INSTITUTIONAL_HEALTH_CATEGORIES),
+    'january_2027_targets': {
+        'completion_date': completion_target_date,
+        'counties': 75,
+        'cities': 250,
+        'connected_voter_pct': 15,
+        'arkansans_connected': 200000,
+    },
+    'january_2027_dashboard_metrics': JANUARY_2027_DASHBOARD_METRICS,
+    'state_map_layers': STATE_MAP_LAYERS,
+    'dashboards': MC_DASHBOARDS,
+    'dashboard_count': len(MC_DASHBOARDS),
+    'executive_calendar_sources': EXECUTIVE_CALENDAR_SOURCES,
+    'executive_briefing_sections': EXECUTIVE_BRIEFING_SECTIONS,
+    'alert_types': ALERT_TYPES,
+    'alert_severity_levels': ALERT_SEVERITY_LEVELS,
+    'digital_twin_visualizations': DIGITAL_TWIN_VISUALIZATIONS,
+    'digital_twin_route': '/mission-control/institutional-digital-twin.html',
+    'executive_search_domains': EXECUTIVE_SEARCH_DOMAINS,
+    'ai_executive_questions': AI_EXECUTIVE_QUESTIONS,
+    'mc_role_access': MC_ROLE_ACCESS,
+    'reporting_integrations': REPORTING_INTEGRATIONS,
+    'honest_metrics_rule': 'Mission Control tells the truth about itself. Never inflate completion.',
+    'status': 'documented',
+    'implemented': False,
+}
+
 ROUTE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -1559,7 +1787,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D07', 'indicator': 'Database Schema (IMP-04)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D08', 'indicator': 'Identity & Auth (IMP-05)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D09', 'indicator': 'Design System (IMP-06)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D10', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D10', 'indicator': 'Mission Control Architecture (IMP-07)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D11', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -1737,6 +1966,26 @@ out = {
             'number': 7,
             'id': 'IMP-07',
             'title': 'Master Mission Control Architecture & Executive Command Center',
+            'status': 'documented',
+        },
+    },
+    'mission_control_architecture': {
+        'title': 'Master Mission Control Architecture & Executive Command Center',
+        'package': 'Implementation Package 7 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md',
+        'manifest': '/data/mission-control-architecture-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': MISSION_CONTROL_ARCHITECTURE_MANIFEST['philosophy'],
+        'executive_question_count': len(EXECUTIVE_QUESTIONS),
+        'dashboard_count': MISSION_CONTROL_ARCHITECTURE_MANIFEST['dashboard_count'],
+        'health_category_count': MISSION_CONTROL_ARCHITECTURE_MANIFEST['health_category_count'],
+        'alert_type_count': len(ALERT_TYPES),
+        'executive_questions': [q['question'] for q in EXECUTIVE_QUESTIONS],
+        'next_package': {
+            'number': 8,
+            'id': 'IMP-08',
+            'title': 'Master LocalBrain Architecture & Institutional AI Network',
         },
     },
     'supersedes': {
@@ -1837,6 +2086,10 @@ with open(root / 'data/identity-auth-manifest.json', 'w', newline='\n') as f:
 
 with open(root / 'data/design-system-manifest.json', 'w', newline='\n') as f:
     json.dump(DESIGN_SYSTEM_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/mission-control-architecture-manifest.json', 'w', newline='\n') as f:
+    json.dump(MISSION_CONTROL_ARCHITECTURE_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

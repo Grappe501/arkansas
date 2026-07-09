@@ -266,7 +266,33 @@
     "next_package": {
       "number": 7,
       "id": "IMP-07",
-      "title": "Master Mission Control Architecture & Executive Command Center"
+      "title": "Master Mission Control Architecture & Executive Command Center",
+      "status": "documented"
+    }
+  },
+  "mission_control_architecture": {
+    "title": "Master Mission Control Architecture & Executive Command Center",
+    "package": "Implementation Package 7 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md",
+    "manifest": "/data/mission-control-architecture-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Mission Control is the institutional brain \u2014 stewardship, not data overload",
+    "executive_question_count": 5,
+    "dashboard_count": 14,
+    "health_category_count": 15,
+    "alert_type_count": 8,
+    "executive_questions": [
+      "Where are we?",
+      "What is happening?",
+      "Why is it happening?",
+      "What needs attention?",
+      "What should we do next?"
+    ],
+    "next_package": {
+      "number": 8,
+      "id": "IMP-08",
+      "title": "Master LocalBrain Architecture & Institutional AI Network"
     }
   },
   "supersedes": {
@@ -559,8 +585,52 @@
       "number": 7,
       "id": "IMP-07",
       "band": "A",
-      "title": "Repository migration, stack lock, Netlify deployment, and environment",
-      "summary": "Strangler-fig migration, repo audit, folder scaffold, pinned stack, netlify.toml, env matrix",
+      "package_label": "Implementation Package 7 of 50",
+      "title": "Master Mission Control Architecture & Executive Command Center",
+      "summary": "Executive cockpit, institutional health, statewide map, domain dashboards, alerts, digital twin, AI advisor",
+      "deliverables": [
+        "docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md",
+        "data/mission-control-architecture-manifest.json",
+        "Executive Command Center",
+        "Institutional Health Dashboard",
+        "January 2027 Completion Dashboard",
+        "County, City & Neighborhood Dashboards",
+        "Volunteer Command Center",
+        "Academy Dashboard",
+        "Research Dashboard",
+        "Coalition Dashboard",
+        "PMO Dashboard",
+        "Executive Calendar",
+        "AI Executive Advisor",
+        "Digital Twin Integration",
+        "Alert System"
+      ],
+      "acceptance_criteria": [
+        "MC mission: five executive questions documented for every dashboard",
+        "Executive home, health score, Jan 2027 completion, and state map defined",
+        "County, city, neighborhood, and domain command center dashboards specified",
+        "Executive calendar, briefing, alerts, digital twin, search, AI advisor documented",
+        "Role-based MC permissions aligned with IMP-05 identity model",
+        "Every major institutional system has a clear reporting destination"
+      ],
+      "source_blueprints": [
+        "/data/mission-control-architecture-manifest.json",
+        "/data/mission-control.json",
+        "/data/mc2-executive.json",
+        "/data/institutional-digital-twin.json",
+        "/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md"
+      ],
+      "constitution": "/docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md",
+      "manifest": "/data/mission-control-architecture-manifest.json",
+      "status": "documented",
+      "documented_date": "2026-07-09"
+    },
+    {
+      "number": 8,
+      "id": "IMP-08",
+      "band": "A",
+      "title": "Repository migration, stack lock, Netlify, Git workflow, and environment",
+      "summary": "Strangler-fig migration, repo audit, pinned stack, netlify.toml, branch model, env matrix",
       "deliverables": [
         "docs/MIGRATION_PLAN.md",
         "docs/REPO_AUDIT.md",
@@ -570,6 +640,7 @@
         "docs/DEPLOYMENT_TOPOLOGY.md",
         "netlify.toml",
         "docs/DEPLOYMENT.md",
+        "docs/GIT_WORKFLOW.md",
         ".env.example",
         "docs/ENVIRONMENT.md"
       ],
@@ -578,7 +649,7 @@
         "Migration strategy chosen with rollback plan",
         "Target folders scaffolded; existing static Netlify deploy unchanged",
         "Pinned versions documented with rationale",
-        "Preview deploys documented for develop branch",
+        "Branch purposes match repository-blueprint branch_structure",
         "All required env vars documented with no secrets committed"
       ],
       "source_blueprints": [
@@ -586,25 +657,6 @@
         "/data/repository-blueprint.json",
         "/data/technical-architecture.json",
         "/netlify.toml"
-      ],
-      "status": "specified"
-    },
-    {
-      "number": 8,
-      "id": "IMP-08",
-      "band": "A",
-      "title": "GitHub branch and protection model",
-      "summary": "main + develop + feature/* + content/* branch workflow",
-      "deliverables": [
-        "docs/GIT_WORKFLOW.md"
-      ],
-      "acceptance_criteria": [
-        "Branch purposes match repository-blueprint branch_structure",
-        "PR review requirement documented for main",
-        "Content-only branch workflow for volunteers"
-      ],
-      "source_blueprints": [
-        "/data/repository-blueprint.json"
       ],
       "status": "specified"
     },
@@ -642,7 +694,7 @@
         "CONTRIBUTING.md"
       ],
       "acceptance_criteria": [
-        "IMP-01 through IMP-06 documented; IMP-07\u201309 engineering criteria verified",
+        "IMP-01 through IMP-07 documented; IMP-08\u201309 engineering criteria verified",
         "CONTRIBUTING.md links to implementation packages and CURSOR_MASTER_BUILD_PROMPT.md",
         "One successful Netlify preview deploy from develop",
         "Executive sign-off field in checklist (manual)"
@@ -1533,7 +1585,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 6,
+        "current": 7,
         "status": "partial"
       },
       {
@@ -1580,6 +1632,12 @@
       },
       {
         "id": "CIP-D10",
+        "indicator": "Mission Control Architecture (IMP-07)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D11",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -1624,9 +1682,9 @@
   "summary": {
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "implementation_package_readiness_pct": 71,
+    "implementation_package_readiness_pct": 72,
     "steps_total": 50,
-    "steps_documented": 6,
+    "steps_documented": 7,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

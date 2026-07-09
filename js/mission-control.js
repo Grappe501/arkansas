@@ -10658,6 +10658,11 @@ async function initCursorImplementationPackage() {
       <div class="mc-stat"><div class="mc-stat__label">MVP in scope</div><div class="mc-stat__value">${s.mvp_in_scope_count}</div></div>
       <div class="mc-stat"><div class="mc-stat__label">Days to Jan 2027</div><div class="mc-stat__value">${s.days_remaining}</div></div>
     </div>
+    <h2 class="mc-section-title">Mission Control Architecture (IMP-07)</h2>
+    <p class="mc-bar-note"><strong>${cip.mission_control_architecture.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.mission_control_architecture.dashboard_count} dashboards · ${cip.mission_control_architecture.health_category_count} health categories · ${cip.mission_control_architecture.alert_type_count} alert types</p>
+    <p class="mc-bar-note"><a href="${cip.mission_control_architecture.route}">IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md</a> · <a href="${cip.mission_control_architecture.manifest}">mission-control-architecture-manifest.json</a></p>
+    <h3 class="mc-subsection-title">Five Executive Questions</h3>
+    <ul class="mc-deliverables">${cip.mission_control_architecture.executive_questions.map(q => `<li>${q}</li>`).join('')}</ul>
     <h2 class="mc-section-title">Design System (IMP-06)</h2>
     <p class="mc-bar-note"><strong>${cip.design_system.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.design_system.component_count} shared components · ${cip.design_system.card_type_count} card types · ${cip.design_system.live_component_count} live ds-* components · ${cip.design_system.accessibility_wcag}</p>
     <p class="mc-bar-note"><a href="${cip.design_system.route}">IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md</a> · <a href="${cip.design_system.manifest}">design-system-manifest.json</a> · <a href="/design-system/">Showcase</a></p>
