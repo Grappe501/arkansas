@@ -287,7 +287,8 @@
     "institutional_digital_library",
     "institutional_integration_platform",
     "institutional_security_trust",
-    "institutional_qa_launch_readiness"
+    "institutional_qa_launch_readiness",
+    "institutional_devops_production"
   ],
   "packages_completed": 17,
   "packages_total": 50,

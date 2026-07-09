@@ -26,7 +26,7 @@ tl = cip.get('master_timeline', {})
 
 
 
-mc['version'] = '2.05.26'
+mc['version'] = '2.05.27'
 
 mc['updated'] = '2026-07-09'
 
@@ -96,21 +96,21 @@ for bar in mc['progress_bars']:
 
 mc['briefing'] = {
 
-    'what_built': 'IMP-01–26 documented — QA, certification & launch readiness (52%)',
+    'what_built': 'IMP-01–27 documented — DevOps, infrastructure & production operations (54%)',
 
-    'building_now': 'IMP-27 Deployment, DevOps & Production Ops next; Sprint Zero pending',
+    'building_now': 'IMP-28 Governance, Executive Office & PMO next; Sprint Zero pending',
 
     'blocked': ['Sprint Zero not complete', '0/50 code-implemented', f"{s.get('days_to_software', 0)} days to software target"],
 
     'ready_public': [
 
-        'QA & Launch Readiness', 'qa-launch-readiness-manifest.json', '75-county partnership certification',
+        'DevOps & Production Ops', 'devops-production-manifest.json', 'Deployment pipeline & monitoring',
 
-        'Security & Trust', 'Launch checklist & county readiness criteria',
+        'QA & Launch Readiness', 'Oct 1 production infrastructure readiness',
 
     ],
 
-    'next': 'IMP-27 — Master Deployment, Infrastructure, DevOps & Production Operations',
+    'next': 'IMP-28 — Master Governance, Executive Office, PMO & Institutional Decision Framework',
 
 }
 

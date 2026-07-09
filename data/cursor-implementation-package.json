@@ -770,6 +770,33 @@
       "number": 27,
       "id": "IMP-27",
       "title": "Master Deployment, Infrastructure, DevOps & Production Operations",
+      "status": "documented"
+    }
+  },
+  "devops_production": {
+    "title": "Master Deployment, Infrastructure, DevOps & Production Operations",
+    "package": "Implementation Package 27 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_27_DEVOPS_PRODUCTION.md",
+    "manifest": "/data/devops-production-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Infrastructure should be invisible \u2014 volunteers never think about servers, databases, or scaling",
+    "infrastructure_component_count": 12,
+    "deployment_pipeline_step_count": 9,
+    "monitoring_platform_metric_count": 10,
+    "environment_count": 4,
+    "operational_metric_count": 8,
+    "packages_completed": 27,
+    "packages_complete_pct": 54,
+    "county_milestone_date": "2026-10-01",
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000,
+    "mc_dashboard": "/mission-control/platform.html",
+    "engineering_note": "Doctrinal IMP-27 DevOps & Production Ops; engineering IMP-27 is Role model definition",
+    "next_package": {
+      "number": 28,
+      "id": "IMP-28",
+      "title": "Master Governance, Executive Office, PMO & Institutional Decision Framework",
       "status": "specified"
     }
   },
@@ -2172,7 +2199,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 26,
+        "current": 27,
         "status": "partial"
       },
       {
@@ -2339,6 +2366,12 @@
       },
       {
         "id": "CIP-D30",
+        "indicator": "DevOps & Production Ops (IMP-27)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D31",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -2393,7 +2426,7 @@
     "days_remaining": 176,
     "implementation_package_readiness_pct": 100,
     "steps_total": 50,
-    "steps_documented": 26,
+    "steps_documented": 27,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

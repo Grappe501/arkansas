@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 26  # IMP-01 through IMP-26 (doctrinal)
+steps_documented = 27  # IMP-01 through IMP-27 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3335,7 +3335,7 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'institutional_analytics', 'institutional_automation', 'public_digital_experience',
     'mobile_field_operations', 'institutional_digital_library',
     'institutional_integration_platform', 'institutional_security_trust',
-    'institutional_qa_launch_readiness',
+    'institutional_qa_launch_readiness', 'institutional_devops_production',
 ]
 
 RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
@@ -4816,6 +4816,179 @@ QA_LAUNCH_READINESS_MANIFEST = {
     'implemented': False,
 }
 
+INFRASTRUCTURE_PHILOSOPHY_VALUES = [
+    'reliability', 'security', 'observability', 'scalability', 'recoverability',
+    'simplicity', 'cost_effectiveness', 'mission_continuity',
+]
+
+ENVIRONMENT_ARCHITECTURE = [
+    'development', 'testing', 'staging', 'production',
+]
+
+DEPLOYMENT_PIPELINE_STEPS = [
+    'development', 'automated_testing', 'quality_verification', 'security_review',
+    'staging_deployment', 'operational_validation', 'production_approval',
+    'production_deployment', 'mission_control_verification',
+]
+
+INFRASTRUCTURE_COMPONENTS = [
+    'web_application', 'api_services', 'database', 'document_storage',
+    'media_storage', 'search_engine', 'ai_gateway', 'background_workers',
+    'notification_services', 'monitoring', 'logging', 'backup_systems',
+]
+
+DATABASE_OPERATIONS_STANDARDS = [
+    'automated_backups', 'migration_management', 'performance_monitoring',
+    'index_optimization', 'recovery_procedures', 'integrity_validation',
+]
+
+MONITORING_PLATFORM_METRICS = [
+    'application_uptime', 'response_times', 'api_performance', 'database_health',
+    'storage_utilization', 'background_jobs', 'ai_services', 'integration_health',
+    'errors', 'user_activity',
+]
+
+LOGGING_EVENT_TYPES = [
+    'authentication', 'workflow_execution', 'research_publication',
+    'volunteer_onboarding', 'system_errors', 'security_events',
+    'integration_failures',
+]
+
+SCALING_STRATEGIES = [
+    'additional_web_servers', 'database_optimization', 'caching',
+    'background_processing', 'media_delivery', 'search_indexing',
+    'ai_request_balancing',
+]
+
+PRODUCTION_ALERT_TYPES = [
+    'system_outages', 'performance_degradation', 'security_incidents',
+    'failed_backups', 'integration_failures', 'storage_thresholds',
+    'critical_workflow_failures',
+]
+
+RELEASE_MANAGEMENT_FIELDS = [
+    'version_number', 'release_notes', 'deployment_date',
+    'validation_results', 'rollback_plan', 'known_issues',
+]
+
+ROLLBACK_STRATEGY_CAPABILITIES = [
+    'rapid_rollback', 'database_compatibility', 'configuration_restoration',
+    'version_history', 'operational_verification',
+]
+
+INFRASTRUCTURE_DOCUMENTATION_FIELDS = [
+    'purpose', 'dependencies', 'configuration', 'monitoring',
+    'recovery_procedures', 'responsible_owners',
+]
+
+BUSINESS_CONTINUITY_CAPABILITIES = [
+    'automated_backups', 'redundant_storage', 'disaster_recovery',
+    'operational_documentation', 'mission_control_continuity',
+    'knowledge_preservation', 'communication_procedures',
+]
+
+PRODUCTION_SECURITY_CONTROLS = [
+    'encrypted_communications', 'secret_management', 'role_based_administration',
+    'infrastructure_audit_logs', 'regular_updates', 'continuous_monitoring',
+    'security_reviews',
+]
+
+OPERATIONAL_METRICS = [
+    'availability', 'performance', 'deployment_frequency', 'recovery_time',
+    'error_rates', 'infrastructure_cost', 'growth_capacity', 'operational_readiness',
+]
+
+OCTOBER_PRODUCTION_READINESS_SCOPE = [
+    '75_county_operating_systems', 'organization_portals',
+    'community_education_academy', 'volunteer_network', 'mission_control',
+    'knowledge_platform', 'community_conversations', 'public_website',
+]
+
+DEVOPS_PRODUCTION_SYSTEM_CHAIN = [
+    'mission_control', 'knowledge_platform', 'research_institute',
+    'community_education_academy', 'volunteer_network', 'coalition_network',
+    'county_operating_system', 'city_operating_system', 'neighborhood_operating_system',
+    'communications', 'ai_localbrains', 'integration_platform', 'security_framework',
+]
+
+DEVOPS_PRODUCTION_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-27',
+    'updated': today,
+    'title': 'Master Deployment, Infrastructure, DevOps & Production Operations',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_27_DEVOPS_PRODUCTION.md',
+    'source_registries': {
+        'technical_architecture': '/data/technical-architecture.json',
+        'qa_launch_readiness': '/data/qa-launch-readiness-manifest.json',
+        'security_trust': '/data/security-trust-manifest.json',
+        'integration_platform': '/data/integration-platform-manifest.json',
+        'repository_blueprint': '/data/repository-blueprint.json',
+    },
+    'philosophy': 'Infrastructure should be invisible — volunteers never think about servers, databases, or scaling',
+    'governing_principle': (
+        'Technology should never become the institution; it quietly supports people '
+        'educating communities and serving Arkansas'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'infrastructure_philosophy_values': INFRASTRUCTURE_PHILOSOPHY_VALUES,
+    'environment_architecture': ENVIRONMENT_ARCHITECTURE,
+    'environment_count': len(ENVIRONMENT_ARCHITECTURE),
+    'deployment_pipeline_steps': DEPLOYMENT_PIPELINE_STEPS,
+    'deployment_pipeline_step_count': len(DEPLOYMENT_PIPELINE_STEPS),
+    'infrastructure_components': INFRASTRUCTURE_COMPONENTS,
+    'infrastructure_component_count': len(INFRASTRUCTURE_COMPONENTS),
+    'database_operations_standards': DATABASE_OPERATIONS_STANDARDS,
+    'database_operations_standard_count': len(DATABASE_OPERATIONS_STANDARDS),
+    'monitoring_platform_metrics': MONITORING_PLATFORM_METRICS,
+    'monitoring_platform_metric_count': len(MONITORING_PLATFORM_METRICS),
+    'logging_event_types': LOGGING_EVENT_TYPES,
+    'logging_event_type_count': len(LOGGING_EVENT_TYPES),
+    'scaling_strategies': SCALING_STRATEGIES,
+    'scaling_strategy_count': len(SCALING_STRATEGIES),
+    'production_alert_types': PRODUCTION_ALERT_TYPES,
+    'production_alert_type_count': len(PRODUCTION_ALERT_TYPES),
+    'release_management_fields': RELEASE_MANAGEMENT_FIELDS,
+    'release_management_field_count': len(RELEASE_MANAGEMENT_FIELDS),
+    'rollback_strategy_capabilities': ROLLBACK_STRATEGY_CAPABILITIES,
+    'rollback_strategy_capability_count': len(ROLLBACK_STRATEGY_CAPABILITIES),
+    'infrastructure_documentation_fields': INFRASTRUCTURE_DOCUMENTATION_FIELDS,
+    'infrastructure_documentation_field_count': len(INFRASTRUCTURE_DOCUMENTATION_FIELDS),
+    'business_continuity_capabilities': BUSINESS_CONTINUITY_CAPABILITIES,
+    'business_continuity_capability_count': len(BUSINESS_CONTINUITY_CAPABILITIES),
+    'production_security_controls': PRODUCTION_SECURITY_CONTROLS,
+    'production_security_control_count': len(PRODUCTION_SECURITY_CONTROLS),
+    'operational_metrics': OPERATIONAL_METRICS,
+    'operational_metric_count': len(OPERATIONAL_METRICS),
+    'october_production_readiness': {
+        'target_date': county_milestone_date,
+        'scope': OCTOBER_PRODUCTION_READINESS_SCOPE,
+        'label': 'Production infrastructure supports statewide growth by October 1',
+    },
+    'organizational_goals': {
+        'counties_total': 75,
+        'counties_with_partnerships_goal': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'devops_production_system_chain': DEVOPS_PRODUCTION_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/platform.html',
+    'packages_completed': 27,
+    'packages_total': 50,
+    'packages_complete_pct': 54,
+    'engineering_note': 'Doctrinal IMP-27 DevOps & Production Ops; engineering IMP-27 is Role model definition',
+    'status': 'documented',
+    'implemented': False,
+}
+
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -4958,7 +5131,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D27', 'indicator': 'Integration Platform (IMP-24)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D28', 'indicator': 'Security & Trust (IMP-25)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D29', 'indicator': 'QA & Launch Readiness (IMP-26)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D30', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D30', 'indicator': 'DevOps & Production Ops (IMP-27)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D31', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -5633,6 +5807,33 @@ out = {
             'number': 27,
             'id': 'IMP-27',
             'title': 'Master Deployment, Infrastructure, DevOps & Production Operations',
+            'status': 'documented',
+        },
+    },
+    'devops_production': {
+        'title': 'Master Deployment, Infrastructure, DevOps & Production Operations',
+        'package': 'Implementation Package 27 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_27_DEVOPS_PRODUCTION.md',
+        'manifest': '/data/devops-production-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': DEVOPS_PRODUCTION_MANIFEST['philosophy'],
+        'infrastructure_component_count': DEVOPS_PRODUCTION_MANIFEST['infrastructure_component_count'],
+        'deployment_pipeline_step_count': DEVOPS_PRODUCTION_MANIFEST['deployment_pipeline_step_count'],
+        'monitoring_platform_metric_count': DEVOPS_PRODUCTION_MANIFEST['monitoring_platform_metric_count'],
+        'environment_count': DEVOPS_PRODUCTION_MANIFEST['environment_count'],
+        'operational_metric_count': DEVOPS_PRODUCTION_MANIFEST['operational_metric_count'],
+        'packages_completed': DEVOPS_PRODUCTION_MANIFEST['packages_completed'],
+        'packages_complete_pct': DEVOPS_PRODUCTION_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': DEVOPS_PRODUCTION_MANIFEST['mc_dashboard'],
+        'engineering_note': DEVOPS_PRODUCTION_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 28,
+            'id': 'IMP-28',
+            'title': 'Master Governance, Executive Office, PMO & Institutional Decision Framework',
             'status': 'specified',
         },
     },
@@ -5829,6 +6030,10 @@ with open(root / 'data/security-trust-manifest.json', 'w', newline='\n') as f:
 
 with open(root / 'data/qa-launch-readiness-manifest.json', 'w', newline='\n') as f:
     json.dump(QA_LAUNCH_READINESS_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/devops-production-manifest.json', 'w', newline='\n') as f:
+    json.dump(DEVOPS_PRODUCTION_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(
