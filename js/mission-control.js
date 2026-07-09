@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Research Institute <a href="/mission-control/arkansas-research-institute.html" class="mc-inline-link">Policy Lab #73 →</a></h2>
+    <p class="mc-bar-note">Build #73 — Research Institute & Policy Innovation Laboratory. Eight divisions, research standards, policy lab. Expand knowledge not certainty. 0 projects · 0 white papers · 0/8 divisions. ~43% readiness.</p>
     <h2 class="mc-section-title">Arkansas Communications <a href="/mission-control/arkansas-communications.html" class="mc-inline-link">One Voice #72 →</a></h2>
     <p class="mc-bar-note">Build #72 — Communications & Public Education System. One institutional voice, content pyramid, editorial calendar. Education before persuasion. 0 articles · 0 videos · 0 emails. ~42% readiness.</p>
     <h2 class="mc-section-title">Community Listening <a href="/mission-control/arkansas-community-listening.html" class="mc-inline-link">Listening Network #71 →</a></h2>
@@ -5205,6 +5207,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initArkansasCommandStrategy();
   initArkansasCommunityListening();
   initArkansasCommunications();
+  initArkansasResearchInstitute();
 });
 
 async function initUxArchitecture() {
@@ -7593,6 +7596,104 @@ async function initArkansasCommunications() {
       <a href="/mission-control/content-factory.html">Content Factory</a> ·
       <a href="/mission-control/media-studio.html">Media Studio</a> ·
       <a href="/mission-control/narrative.html">Narrative Architecture</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initArkansasResearchInstitute() {
+  const root = document.getElementById('mc-arkansas-research-institute-root');
+  if (!root) return;
+
+  const [ariRes, mcRes] = await Promise.all([
+    fetch('/data/arkansas-research-institute.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ari = await ariRes.json();
+  const mc = await mcRes.json();
+  const s = ari.summary;
+
+  const divRows = ari.research_divisions.divisions.map(d => `
+    <tr><td>${d.number}</td><td><code>${d.id}</code></td><td>${d.title}</td>
+      <td>${d.projects}</td><td>${d.status}</td></tr>`).join('');
+
+  const dashRows = ari.research_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td><td>${d.current}</td><td>${d.status}</td></tr>`).join('');
+
+  const reviewRows = ari.research_review.workflow.map(st => `
+    <tr><td>${st.step}</td><td>${st.title}</td><td>${st.items}</td><td>${st.status}</td></tr>`).join('');
+
+  const systemRows = ari.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td><td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Arkansas Research Institute</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #73 · ${ari.title}</p>
+      <h1>From Education to Better Ideas</h1>
+      <p class="mc-header__question">${ari.governing_principle}</p>
+      <p class="mc-bar-note">${ari.purpose}</p>
+      <p class="mc-bar-note"><strong>Permanent pillar:</strong> ${ari.permanent_institutional_pillar ? 'Yes' : 'No'} · <strong>Not predetermined advocacy:</strong> ${ari.not_advocacy_predetermined_answers ? 'Yes' : 'No'}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Institute readiness</div><div class="mc-stat__value">${s.arkansas_research_institute_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Projects</div><div class="mc-stat__value">${s.research_projects_underway}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">White papers</div><div class="mc-stat__value">${s.completed_white_papers}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Divisions</div><div class="mc-stat__value">${s.divisions_operational}/${s.research_divisions}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Policy comparisons</div><div class="mc-stat__value">${s.policy_comparisons}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Repository</div><div class="mc-stat__value">${s.repository_projects}</div></div>
+    </div>
+    <h2 class="mc-section-title">${ari.mission.title}</h2>
+    <p class="mc-bar-note">Distinguishes: ${ari.mission.distinguishes.join(' · ')}</p>
+    <ul class="mc-deliverables">${ari.mission.topics.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ari.research_philosophy.title}</h2>
+    <p class="mc-bar-note">Begins with questions: ${ari.research_philosophy.begins_with_questions ? 'Yes' : 'No'} · Teaches evidence evaluation: ${ari.research_philosophy.teaches_evidence_evaluation ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${ari.research_philosophy.starter_questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ari.research_divisions.title}</h2>
+    <p class="mc-bar-note">Operational: ${ari.research_divisions.divisions_operational}/${ari.research_divisions.divisions_total}</p>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Division</th><th>Projects</th><th>Status</th></tr></thead>
+      <tbody>${divRows}</tbody></table>
+    ${ari.research_divisions.divisions.map(d => `
+      <h3 class="mc-subsection-title">Division ${d.number}: ${d.title}</h3>
+      ${d.topics ? `<ul class="mc-deliverables">${d.topics.map(t => `<li>${t}</li>`).join('')}</ul>` : ''}
+      ${d.work_types ? `<ul class="mc-deliverables">${d.work_types.map(w => `<li>${w}</li>`).join('')}</ul>` : ''}
+      ${d.distinguishes ? `<p class="mc-bar-note"><strong>Distinguishes:</strong> ${d.distinguishes.join(' · ')}</p>` : ''}
+      ${d.comparison_not_endorsement ? `<p class="mc-bar-note">Comparison, not endorsement</p>` : ''}
+      ${d.educational_context ? `<p class="mc-bar-note">Educational context only</p>` : ''}
+      ${d.improves_curriculum ? `<p class="mc-bar-note">Results improve curriculum</p>` : ''}`).join('')}
+    <h2 class="mc-section-title">${ari.research_standards.title}</h2>
+    <p class="mc-bar-note">Transparency strengthens credibility: ${ari.research_standards.transparency_strengthens_credibility ? 'Yes' : 'No'} · ${ari.research_standards.status}</p>
+    <ul class="mc-deliverables">${ari.research_standards.required_elements.map(e => `<li>${e}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ari.research_review.title}</h2>
+    <p class="mc-bar-note">MC tracks every stage: ${ari.research_review.mc_tracks_every_stage ? 'Yes' : 'No'} · Operational: ${ari.research_review.operational ? 'Yes' : 'No'} · ${ari.research_review.status}</p>
+    <table class="mc-table"><thead><tr><th>Step</th><th>Stage</th><th>Items</th><th>Status</th></tr></thead>
+      <tbody>${reviewRows}</tbody></table>
+    <h2 class="mc-section-title">${ari.research_repository.title}</h2>
+    <p class="mc-bar-note">Permanent archive: ${ari.research_repository.permanent_archive ? 'Yes' : 'No'} · Projects: ${ari.research_repository.projects_archived} · ${ari.research_repository.status}</p>
+    <ul class="mc-deliverables">${ari.research_repository.features.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ari.research_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${ari.research_dashboard.live ? 'Yes' : 'No'} · ${ari.research_dashboard.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${ari.integration.chain}</p>
+    <p class="mc-bar-note">Supports every function: ${ari.integration.supports_every_function ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${ari.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ari.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ari.recommended_next_build.number} — ${ari.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ari.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_ARKANSAS_RESEARCH_INSTITUTE.md">MASTER_ARKANSAS_RESEARCH_INSTITUTE.md</a> ·
+      <a href="/data/arkansas-research-institute.json">JSON</a> ·
+      <a href="/mission-control/research-observatory.html">Research Observatory</a> ·
+      <a href="/mission-control/campaign-finance-observatory.html">Campaign Finance Observatory</a> ·
+      <a href="/mission-control/evidence-ledger.html">Evidence Ledger</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

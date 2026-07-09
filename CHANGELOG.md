@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.77.0] - 2026-07-09 — Build #73 Arkansas Research Institute
+
+### From Education to Better Ideas
+- **Research Institute & Policy Innovation Laboratory v1.0** — permanent institutional pillar
+- Eight divisions: Constitutional, Campaign Finance, Arkansas Civic, Comparative Policy, International, Public Opinion, Policy Innovation Lab, Future Trends
+- Research standards (8 elements), six-stage review, permanent repository
+- Not advocacy for predetermined answers — expand knowledge not certainty
+- Honest: 0 projects · 0 white papers · 0/8 divisions operational · ~43% readiness
+- MC dashboard: `/mission-control/arkansas-research-institute.html`
+
 ## [1.76.0] - 2026-07-09 — Build #72 Arkansas Communications
 
 ### One Voice, Thousands of Conversations

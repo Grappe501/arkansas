@@ -1,6 +1,6 @@
 {
-  "version": "1.76.0",
-  "build": 72,
+  "version": "1.77.0",
+  "build": 73,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,21 +9,21 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 72,
+    "overall_completion": 73,
     "current_build": {
-      "number": 72,
-      "title": "Citizens United Facts Master Arkansas Communications & Public Education System v1.0"
-    },
-    "active_phase": "Arkansas Communications \u2192 Implementation Translation",
-    "last_completed": "Arkansas Community Listening",
-    "next_build": {
       "number": 73,
+      "title": "Citizens United Facts Master Research Institute & Arkansas Policy Innovation Laboratory v1.0"
+    },
+    "active_phase": "Research Institute \u2192 Implementation Translation",
+    "last_completed": "Arkansas Communications",
+    "next_build": {
+      "number": 74,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
-    "content_readiness": 32,
-    "research_readiness": 26,
+    "content_readiness": 28,
+    "research_readiness": 43,
     "data_viz_readiness": 12,
     "signup_funnel_readiness": 26,
     "civic_action_readiness": 28,
@@ -42,7 +42,7 @@
     "institutional_ai_readiness": 42,
     "coalition_network_readiness": 44,
     "citizen_action_center_readiness": 42,
-    "campaign_finance_observatory_readiness": 36,
+    "campaign_finance_observatory_readiness": 37,
     "arkansas_action_network_readiness": 38,
     "civic_intelligence_command_center_readiness": 43,
     "sustainability_stewardship_readiness": 38,
@@ -52,25 +52,26 @@
     "arkansas_command_strategy_readiness": 39,
     "arkansas_community_listening_readiness": 41,
     "arkansas_communications_readiness": 42,
+    "arkansas_research_institute_readiness": 43,
     "mc2_readiness": 42,
     "ai_engine_readiness": 34,
-    "content_factory_readiness": 34,
+    "content_factory_readiness": 30,
     "education_academy_readiness": 26,
-    "observatory_readiness": 29,
-    "outreach_readiness": 36,
+    "observatory_readiness": 43,
+    "outreach_readiness": 34,
     "county_os_readiness": 28,
     "campaign_os_readiness": 34,
     "encyclopedia_readiness": 19,
-    "narrative_readiness": 28,
+    "narrative_readiness": 24,
     "curriculum_readiness": 26,
     "trust_readiness": 30,
-    "library_readiness": 22,
+    "library_readiness": 25,
     "learning_lab_readiness": 22,
-    "media_studio_readiness": 22,
+    "media_studio_readiness": 18,
     "civic_intelligence_readiness": 36,
-    "evidence_ledger_readiness": 22,
+    "evidence_ledger_readiness": 27,
     "civic_action_lab_readiness": 26,
-    "research_methodology_readiness": 25,
+    "research_methodology_readiness": 29,
     "institutional_maturity_pct": 32,
     "current_institutional_version": "V1",
     "systems_integration_readiness": 44,
@@ -100,8 +101,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 72,
-      "note": "Build #72 \u2014 Arkansas Communications & Public Education System."
+      "value": 73,
+      "note": "Build #73 \u2014 Research Institute & Policy Innovation Laboratory."
     },
     {
       "id": "constitution",
@@ -136,8 +137,8 @@
     {
       "id": "research",
       "label": "Research System",
-      "value": 33,
-      "note": "Listening network \u2014 0 questions \u00b7 0 leader reports."
+      "value": 43,
+      "note": "Research institute \u2014 0 projects \u00b7 0/8 divisions operational."
     },
     {
       "id": "data_viz",
@@ -629,6 +630,13 @@
       "value": 42,
       "max": 100,
       "note": "0 articles \u00b7 review workflow planned."
+    },
+    {
+      "id": "arkansas_research_institute",
+      "label": "Research Institute",
+      "value": 43,
+      "max": 100,
+      "note": "0 white papers \u00b7 dashboard planned."
     }
   ],
   "public_readiness": {
@@ -1353,6 +1361,12 @@
       "id": "arkansas_communications",
       "label": "Communications",
       "href": "/mission-control/arkansas-communications.html",
+      "status": "complete"
+    },
+    {
+      "id": "arkansas_research_institute",
+      "label": "Research Institute",
+      "href": "/mission-control/arkansas-research-institute.html",
       "status": "complete"
     }
   ],
@@ -2379,6 +2393,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 73,
+      "title": "Citizens United Facts Master Research Institute & Arkansas Policy Innovation Laboratory v1.0",
+      "version": "1.77.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Research Institute & Policy Innovation Lab \u2014 expand knowledge not certainty",
+      "summary": "Eight divisions, research standards, review workflow, repository, policy lab; 43% readiness. 0 projects \u00b7 0 white papers \u00b7 0/8 divisions operational.",
+      "files_created": [
+        "data/arkansas-research-institute.json",
+        "docs/MASTER_ARKANSAS_RESEARCH_INSTITUTE.md",
+        "builds/073-arkansas-research-institute.md",
+        "mission-control/arkansas-research-institute.html",
+        "scripts/gen-arkansas-research-institute.py",
+        "scripts/update-mc-build73.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/arkansas-research-institute.html"
+      ],
+      "decisions_made": [
+        "Permanent institutional pillar \u2014 not advocacy for predetermined answers",
+        "Eight divisions including Policy Innovation Lab and Future Trends Observatory",
+        "Research standards: 8 required elements per publication",
+        "Six-stage review: research through scheduled review",
+        "Distinguish facts, viewpoints, and policy proposals",
+        "Expand knowledge not certainty \u2014 teach evidence evaluation",
+        "43% readiness \u2014 constitution only"
+      ],
+      "open_questions": [
+        "Reconcile Research Institute (#73) vs Research Observatory (#29)?",
+        "Policy Innovation Lab: public draft workspace or internal only?",
+        "Peer review: internal board vs external scholars?",
+        "Knowledge Graph: auto-link research or manual curation?"
+      ],
+      "risks": [
+        "0 research projects underway \u2014 no project intake or pipeline",
+        "0 completed white papers \u2014 Policy Innovation Lab not operational",
+        "0/8 divisions operational \u2014 division pages and leads not assigned",
+        "Research dashboard planned \u2014 not live in Mission Control"
+      ],
+      "next_recommended": 74,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-research-institute.html",
+      "review_status": "complete"
+    },
     {
       "number": 72,
       "title": "Citizens United Facts Master Arkansas Communications & Public Education System v1.0",
@@ -6087,21 +6154,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Arkansas Communications v1.0 \u2014 one voice, institutional communications framework",
-    "building_now": "72 builds specified \u2014 implementation translation next",
+    "what_built": "Arkansas Research Institute v1.0 \u2014 civic research & policy innovation lab",
+    "building_now": "73 builds specified \u2014 implementation translation next",
     "blocked": [
-      "Editorial calendar",
-      "Review workflow",
-      "Presentation kit",
-      "Communications dashboard"
+      "Research pipeline",
+      "Division pages",
+      "Policy lab UI",
+      "Repository"
     ],
     "ready_public": [
-      "Institutional voice",
-      "Five objectives",
-      "Content pyramid",
-      "Review process spec"
+      "Eight divisions",
+      "Research standards",
+      "Review workflow spec",
+      "Mission topics"
     ],
-    "next": "Build #73 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #74 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -6865,5 +6932,13 @@
     "articles_published": 0,
     "editorial_calendar_live": false,
     "one_institutional_voice": true
+  },
+  "arkansas_research_institute": "/data/arkansas-research-institute.json",
+  "arkansas_research_institute_dashboard": "/mission-control/arkansas-research-institute.html",
+  "arkansas_research_institute_inventory": {
+    "readiness_score": 43,
+    "research_projects_underway": 0,
+    "divisions_total": 8,
+    "permanent_pillar": true
   }
 }
