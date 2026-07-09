@@ -61,6 +61,6 @@ Accessible civic education without sacrificing depth — trustworthy evidence in
 
 ---
 
-## Recommended Next: Build #44 — Component Specifications with Props/States
+## Recommended Next: Build #45 — Component Specifications with Props/States
 
 Map media player shells, documentary chapter layouts, infographic widgets, and accessibility patterns to COMP-* from Build #17.

@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Institutional Roadmap <a href="/mission-control/institutional-roadmap.html" class="mc-inline-link">V1–V10 →</a></h2>
+    <p class="mc-bar-note">Build #44 — Master institutional roadmap, strategic evolution V1–V10. Current: V1 Foundation. 44 builds ≠ V10. 32% institutional maturity.</p>
     <h2 class="mc-section-title">Research Methodology <a href="/mission-control/research-methodology.html" class="mc-inline-link">10 Principles →</a></h2>
     <p class="mc-bar-note">Build #43 — Master research methodology & standards, 11-stage workflow, source checklist. Extends Build #10. 25% methodology readiness.</p>
     <h2 class="mc-section-title">Civic Action Lab <a href="/mission-control/civic-action-lab.html" class="mc-inline-link">6 Divisions →</a></h2>
@@ -4231,6 +4233,90 @@ async function initResearchMethodology() {
   initDevConsole(mc);
 }
 
+  initDevConsole(mc);
+}
+
+async function initInstitutionalRoadmap() {
+  const root = document.getElementById('mc-institutional-roadmap-root');
+  if (!root) return;
+
+  const [irRes, mcRes] = await Promise.all([
+    fetch('/data/institutional-roadmap.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ir = await irRes.json();
+  const mc = await mcRes.json();
+  const s = ir.summary;
+
+  const versionRows = ir.versions.map(v => `
+    <tr><td>V${v.version}</td><td>${v.title}</td><td>${v.maturity_pct}%</td>
+      <td>${v.current_phase}</td><td>${v.status}</td></tr>`).join('');
+
+  const versionCards = ir.versions.map(v => `
+    <div class="mc-card"><h3>V${v.version}: ${v.title}</h3>
+      <p class="mc-bar-note"><strong>Goal:</strong> ${v.primary_goal}</p>
+      <p class="mc-bar-note">${v.maturity_pct}% · ${v.current_phase} · ${v.status}</p>
+      <p class="mc-bar-note"><strong>Deliverables:</strong></p>
+      <ul class="mc-deliverables">${v.deliverables.slice(0, 4).map(d => `<li>${d}</li>`).join('')}
+        ${v.deliverables.length > 4 ? `<li>+${v.deliverables.length - 4} more</li>` : ''}</ul>
+      ${v.note ? `<p class="mc-bar-note">${v.note}</p>` : ''}
+    </div>`).join('');
+
+  const metricRows = ir.mc_integration.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Institutional Roadmap</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #44 · ${ir.title}</p>
+      <h1>Master Institutional Roadmap</h1>
+      <p class="mc-header__question">${ir.governing_principle}</p>
+      <p class="mc-bar-note">${ir.current_institutional_phase}</p>
+      <p class="mc-bar-note">Software: Build #${ir.software_build} (v${ir.software_version}) · Institutional: <strong>${ir.current_institutional_version}</strong> → ${ir.next_institutional_version}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Institutional maturity</div><div class="mc-stat__value">${s.institutional_maturity_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Current version</div><div class="mc-stat__value">${s.current_institutional_version}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">V1 maturity</div><div class="mc-stat__value">${s.v1_maturity_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Avg version</div><div class="mc-stat__value">${s.avg_version_maturity_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Software builds</div><div class="mc-stat__value">${s.software_builds_complete}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Annual review</div><div class="mc-stat__value">${s.annual_review_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Institutional Vision</h2>
+    <ul class="mc-deliverables">${ir.institutional_vision.map(v => `<li>${v}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Ten Institutional Versions</h2>
+    <table class="mc-table"><thead><tr><th>Ver</th><th>Title</th><th>Maturity</th><th>Phase</th><th>Status</th></tr></thead>
+      <tbody>${versionRows}</tbody></table>
+    <div class="mc-grid-2">${versionCards}</div>
+    <h2 class="mc-section-title">Success Definition</h2>
+    <p class="mc-bar-note">${ir.success_definition}</p>
+    <h2 class="mc-section-title">Cross-Version Priorities</h2>
+    <ul class="mc-deliverables">${ir.cross_version_priorities.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Annual Strategic Review</h2>
+    <ul class="mc-deliverables">${ir.annual_strategic_review.map(a => `<li>${a}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Preservation Strategy</h2>
+    <ul class="mc-deliverables">${ir.preservation_strategy.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Long-Term Sustainability</h2>
+    <ul class="mc-deliverables">${ir.sustainability_planning.map(su => `<li>${su}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Institutional Maturity Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ir.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ir.recommended_next_build.number} — ${ir.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ir.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_INSTITUTIONAL_ROADMAP.md">MASTER_INSTITUTIONAL_ROADMAP.md</a> ·
+      <a href="/data/institutional-roadmap.json">JSON</a> ·
+      <a href="/mission-control/campaign-os.html">Campaign OS</a> ·
+      <a href="/builds/">Build Registry</a> ·
+      <a href="/mission-control/executive.html">Executive</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -4273,4 +4359,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initEvidenceLedger();
   initCivicActionLab();
   initResearchMethodology();
+  initInstitutionalRoadmap();
 });

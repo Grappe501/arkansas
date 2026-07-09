@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.48.0] - 2026-07-09 — Build #44 Master Institutional Roadmap
+
+### V1–V10 Strategic Evolution Plan
+- **Master Institutional Roadmap v1.0** — 10 institutional versions, maturity metrics
+- Current position: V1 Foundation (68%), early V2 Arkansas Expansion
+- 44 software builds ≠ Version 10 — institutional maturity distinct from engineering
+- 32% honest institutional maturity — annual review not built
+- MC dashboard: `/mission-control/institutional-roadmap.html`
+
 ## [1.47.0] - 2026-07-09 — Build #43 Master Research Methodology & Standards Manual
 
 ### Institutional Research Constitution

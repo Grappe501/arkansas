@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#44** | **Master Institutional Roadmap** | **1.48.0** | **✅ Complete** | [044](044-master-institutional-roadmap.md) · [/mission-control/institutional-roadmap.html](../mission-control/institutional-roadmap.html) |
 | **#43** | **Master Research Methodology & Standards Manual** | **1.47.0** | **✅ Complete** | [043](043-master-research-methodology-standards-manual.md) · [/mission-control/research-methodology.html](../mission-control/research-methodology.html) |
 | **#42** | **Master Civic Action Lab** | **1.46.0** | **✅ Complete** | [042](042-master-civic-action-lab.md) · [/mission-control/civic-action-lab.html](../mission-control/civic-action-lab.html) |
 | **#41** | **Master Evidence Ledger & Claims Registry** | **1.45.0** | **✅ Complete** | [041](041-master-evidence-ledger-claims-registry.md) · [/mission-control/evidence-ledger.html](../mission-control/evidence-ledger.html) |
@@ -70,6 +71,7 @@
 | **Master Evidence Ledger** | `/mission-control/evidence-ledger.html` | **CLAIM-* registry · A–E strength** |
 | **Master Civic Action Lab** | `/mission-control/civic-action-lab.html` | **6 divisions · civic solutions** |
 | **Research Methodology & Standards** | `/mission-control/research-methodology.html` | **10 principles · 11-stage workflow** |
+| **Master Institutional Roadmap** | `/mission-control/institutional-roadmap.html` | **V1–V10 · strategic evolution** |
 | Phase Registry | `/mission-control/phases.html` | Project phases |
 | Site Architecture | `/mission-control/architecture.html` | Information architecture (IA) |
 | **Platform Blueprint** | `/mission-control/platform.html` | **Technical architecture · v1 system** |

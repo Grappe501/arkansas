@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.47.0 · **Research Methodology:** [/mission-control/research-methodology.html](/mission-control/research-methodology.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #43:** ✅ Research Methodology · **Build #42:** ✅ Civic Action Lab · **Build #41:** ✅ Evidence Ledger · **Build #40:** ✅ Institutional Brain  
+**Current version:** 1.48.0 · **Institutional Roadmap:** [/mission-control/institutional-roadmap.html](/mission-control/institutional-roadmap.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #44:** ✅ Institutional Roadmap · **Build #43:** ✅ Research Methodology · **Build #42:** ✅ Civic Action Lab · **Build #41:** ✅ Evidence Ledger  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **44** | **Master Institutional Roadmap** | **✅ v1.48.0** |
 | **43** | **Master Research Methodology & Standards Manual** | **✅ v1.47.0** |
 | **42** | **Master Civic Action Lab** | **✅ v1.46.0** |
 | **41** | **Master Evidence Ledger & Claims Registry** | **✅ v1.45.0** |
@@ -283,7 +284,23 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **37** | **Master Research Library** | **✅ v1.41.0** |
 | **36** | **Trust Framework** | **✅ v1.40.0** |
 
-**Next:** Build #44 — Component specifications with props/states.
+**Next:** Build #45 — Component specifications with props/states.
+
+---
+
+## Phase 44 — Master Institutional Roadmap (Build #44) ★ NEW
+
+*Strategic evolution V1–V10 — institutional maturity over software completion.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| I1 | Institutional Roadmap Blueprint v1.0 | ✅ | `data/institutional-roadmap.json` |
+| I2 | 10 institutional versions V1–V10 | ✅ | Foundation through Permanent Institution |
+| I3 | Maturity scoring per version | ✅ | Honest — 44 builds ≠ V10 |
+| I4 | Cross-version priorities + preservation | ✅ | Annual review planned |
+| I5 | Current position V1 → V2 | 🟡 | Enrollment and content partial |
+| I6 | MC institutional maturity metrics (8) | ✅ | Tracking partial |
+| I7 | MC institutional roadmap dashboard | ✅ | `/mission-control/institutional-roadmap.html` |
 
 ---
 

@@ -58,6 +58,6 @@ Readers understand the process by which conclusions were reached — transparenc
 
 ---
 
-## Recommended Next: Build #44 — Component Specifications with Props/States
+## Recommended Next: Build #45 — Component Specifications with Props/States
 
 Map research workflow panels, source evaluation forms, citation widgets, and QA checklists to COMP-* from Build #17.

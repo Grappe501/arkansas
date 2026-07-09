@@ -191,7 +191,7 @@ out = {
         'Accessibility standards defined but not verified per lab',
     ],
     'recommended_next_build': {
-        'number': 44,
+        'number': 45,
         'title': 'Component Specifications with Props/States',
         'note': 'Map laboratory shells, interactive widgets, and accessibility patterns to COMP-* from Build #17.',
     },

@@ -233,7 +233,7 @@ out = {
         'Adherence to methodology not measured per article',
     ],
     'recommended_next_build': {
-        'number': 44,
+        'number': 45,
         'title': 'Component Specifications with Props/States',
         'note': 'Map research workflow panels, source evaluation forms, citation widgets, and QA checklists to COMP-* from Build #17.',
     },

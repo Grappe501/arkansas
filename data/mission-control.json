@@ -1,6 +1,6 @@
 {
-  "version": "1.47.0",
-  "build": 43,
+  "version": "1.48.0",
+  "build": 44,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 43,
+    "overall_completion": 44,
     "current_build": {
-      "number": 43,
-      "title": "Citizens United Facts Master Research Methodology & Standards Manual"
-    },
-    "active_phase": "Institutional Research \u2014 Methodology & Standards Manual",
-    "last_completed": "Master Civic Action Lab",
-    "next_build": {
       "number": 44,
+      "title": "Citizens United Facts Master Institutional Roadmap"
+    },
+    "active_phase": "Strategic Evolution \u2014 Master Institutional Roadmap V1\u2013V10",
+    "last_completed": "Master Research Methodology & Standards Manual",
+    "next_build": {
+      "number": 45,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
@@ -57,6 +57,8 @@
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 25,
+    "institutional_maturity_pct": 32,
+    "current_institutional_version": "V1",
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -64,8 +66,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 43,
-      "note": "Research Methodology live \u2014 10 principles, 14 evidence items."
+      "value": 44,
+      "note": "Institutional Roadmap live \u2014 V1 at 68%, 32% maturity."
     },
     {
       "id": "constitution",
@@ -389,7 +391,14 @@
       "label": "Research Methodology & Standards",
       "value": 25,
       "max": 100,
-      "note": "7/10 principles partial \u2014 12% citation coverage."
+      "note": "Research Methodology \u2014 10 principles defined."
+    },
+    {
+      "id": "institutional_maturity",
+      "label": "Institutional Maturity (V1\u2013V10)",
+      "value": 32,
+      "max": 100,
+      "note": "Current: V1 \u2014 software build #44 \u2260 V10."
     }
   ],
   "public_readiness": {
@@ -940,6 +949,12 @@
       "id": "research_methodology",
       "label": "Research Methodology & Standards",
       "href": "/mission-control/research-methodology.html",
+      "status": "complete"
+    },
+    {
+      "id": "institutional_roadmap",
+      "label": "Master Institutional Roadmap",
+      "href": "/mission-control/institutional-roadmap.html",
       "status": "complete"
     }
   ],
@@ -1966,6 +1981,56 @@
     }
   ],
   "builds": [
+    {
+      "number": 44,
+      "title": "Citizens United Facts Master Institutional Roadmap",
+      "version": "1.48.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "V1\u2013V10 Strategic Evolution Plan \u2014 institutional maturity over software completion",
+      "summary": "10 institutional versions, V1 active; 32% overall maturity.",
+      "files_created": [
+        "data/institutional-roadmap.json",
+        "docs/MASTER_INSTITUTIONAL_ROADMAP.md",
+        "builds/044-master-institutional-roadmap.md",
+        "mission-control/institutional-roadmap.html",
+        "scripts/gen-institutional-roadmap.py",
+        "scripts/update-mc-build44.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/institutional-roadmap.html"
+      ],
+      "decisions_made": [
+        "10 institutional versions V1 Foundation through V10 Permanent Institution",
+        "Institutional maturity distinct from software build count (44 builds \u2260 V10)",
+        "Current position: V1 completing, early V2 Arkansas Expansion",
+        "Cross-version priorities + annual review + preservation + sustainability",
+        "Success definition \u2014 quality of understanding, not platform size",
+        "32% honest institutional maturity"
+      ],
+      "open_questions": [
+        "First annual strategic review date?",
+        "V2 county activation strategy?",
+        "Governance framework timing?"
+      ],
+      "risks": [
+        "44 builds may imply false maturity",
+        "V1 enrollment at 0",
+        "V4\u2013V7 architecture without delivery"
+      ],
+      "next_recommended": 45,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/institutional-roadmap.html",
+      "review_status": "complete"
+    },
     {
       "number": 43,
       "title": "Citizens United Facts Master Research Methodology & Standards Manual",
@@ -3997,19 +4062,19 @@
     }
   ],
   "briefing": {
-    "what_built": "Research Methodology v1.0 \u2014 10 principles, 11-stage workflow, source checklist, MC metrics",
-    "building_now": "Methodology constitution \u2014 research-framework.json as foundation",
+    "what_built": "Institutional Roadmap v1.0 \u2014 V1\u2013V10 versions, maturity metrics, preservation strategy",
+    "building_now": "V1 Foundation completing \u2014 platform live, enrollment and content partial",
     "blocked": [
-      "Adherence tracking",
-      "Scheduled review automation",
-      "Per-source evaluation records"
+      "Annual review workflow",
+      "Governance framework",
+      "V2 county activation"
     ],
     "ready_public": [
-      "Research Methodology MC dashboard",
-      "10-principle taxonomy",
-      "QA checklist"
+      "Institutional Roadmap MC dashboard",
+      "10-version taxonomy",
+      "Honest maturity scoring"
     ],
-    "next": "Build #44 \u2014 Component specifications with props/states"
+    "next": "Build #45 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -4490,5 +4555,16 @@
     "evidence_items": 14,
     "citation_coverage_pct": 12,
     "adherence_tracking_live": false
+  },
+  "institutional_roadmap": "/data/institutional-roadmap.json",
+  "institutional_roadmap_dashboard": "/mission-control/institutional-roadmap.html",
+  "institutional_roadmap_inventory": {
+    "readiness_score": 32,
+    "current_version": "V1",
+    "next_version": "V2",
+    "versions_partial": 7,
+    "v1_maturity_pct": 68,
+    "software_builds": 44,
+    "annual_review_live": false
   }
 }
