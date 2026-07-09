@@ -456,7 +456,32 @@
       "number": 15,
       "id": "IMP-15",
       "title": "Master County Operating System, City Operating System & Neighborhood Operating System",
-      "note": "Doctrinal package 15; engineering IMP-15 is Mission Control shell layout"
+      "status": "documented"
+    }
+  },
+  "local_operating_systems": {
+    "title": "Master County Operating System, City Operating System & Neighborhood Operating System",
+    "package": "Implementation Package 15 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_15_LOCAL_OPERATING_SYSTEMS.md",
+    "manifest": "/data/local-operating-systems-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "The statewide institution is built locally \u2014 one institution with distributed leadership",
+    "counties_total": 75,
+    "target_cities": 250,
+    "engagement_goal_pct": 15,
+    "county_module_count": 11,
+    "city_module_count": 10,
+    "neighborhood_module_count": 9,
+    "packages_completed": 15,
+    "packages_complete_pct": 30,
+    "county_milestone_date": "2026-10-01",
+    "engineering_note": "Doctrinal IMP-15 Local OS; engineering IMP-15 is Mission Control shell layout",
+    "next_package": {
+      "number": 16,
+      "id": "IMP-16",
+      "title": "Master Communication Platform, Messaging System & Arkansas Civic Media Network",
+      "note": "Doctrinal package 16; engineering IMP-16 is component registry COMP-* index"
     }
   },
   "master_timeline": {
@@ -1858,7 +1883,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 14,
+        "current": 15,
         "status": "partial"
       },
       {
@@ -1953,6 +1978,12 @@
       },
       {
         "id": "CIP-D18",
+        "indicator": "Local Operating Systems (IMP-15)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D19",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -2001,11 +2032,12 @@
     "days_to_software": 2,
     "days_to_county_milestone": 84,
     "days_to_organizational": 176,
+    "engagement_goal_pct": 15,
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "implementation_package_readiness_pct": 88,
+    "implementation_package_readiness_pct": 90,
     "steps_total": 50,
-    "steps_documented": 14,
+    "steps_documented": 15,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

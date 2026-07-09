@@ -26,7 +26,7 @@ tl = cip.get('master_timeline', {})
 
 
 
-mc['version'] = '2.05.14'
+mc['version'] = '2.05.15'
 
 mc['updated'] = '2026-07-09'
 
@@ -51,6 +51,8 @@ mc['executive'] = {
     'days_to_software': s.get('days_to_software', 0),
 
     'days_to_county_milestone': s.get('days_to_county_milestone', 0),
+
+    'engagement_goal_pct': s.get('engagement_goal_pct', 15),
 
     'days_to_organizational': s.get('days_to_organizational', s.get('days_remaining', 0)),
 
@@ -92,21 +94,21 @@ for bar in mc['progress_bars']:
 
 mc['briefing'] = {
 
-    'what_built': 'IMP-01–14 documented — coalition & partnership OS (28%)',
+    'what_built': 'IMP-01–15 documented — statewide org framework complete (30%)',
 
-    'building_now': 'IMP-15 County/City/Neighborhood OS next; Sprint Zero pending',
+    'building_now': 'IMP-16 Communication Platform & Civic Media Network next; Sprint Zero pending',
 
     'blocked': ['Sprint Zero not complete', '0/50 code-implemented', f"{s.get('days_to_software', 0)} days to software target"],
 
     'ready_public': [
 
-        'Coalition Network', 'coalition-network-manifest.json', 'Organization Portal',
+        'Local Operating Systems', 'local-operating-systems-manifest.json', '15% engagement goal',
 
-        'Volunteer Network', 'Education Academy', '75-by-October-1 Milestone',
+        'Coalition Network', 'Volunteer Network', '75-by-October-1 Milestone',
 
     ],
 
-    'next': 'IMP-15 — Master County OS, City OS & Neighborhood Operating System',
+    'next': 'IMP-16 — Master Communication Platform, Messaging System & Arkansas Civic Media Network',
 
 }
 

@@ -13,6 +13,19 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.15] - 2026-07-09 — IMP-15 County/City/Neighborhood OS
+
+### Implementation Package 15 of 50
+- **Master County Operating System, City Operating System & Neighborhood Operating System**
+- 75 counties · 250 target cities · 11 county modules · 10 city modules · 9 neighborhood modules
+- County scorecard, community conversations, local calendar, local AI, community health metrics
+- **15% engagement goal** — registered voters connected per county and target city
+- Oct 1 2026: live county OS, dashboard, research profile, coalition, academy, MC reporting
+- Machine-readable **local-operating-systems-manifest.json**
+- Statewide organizational framework complete: 15/50 (**30%**)
+- IMP-16 next (doctrinal): Communication Platform & Arkansas Civic Media Network
+- Honest: 15/50 documented · 0/50 implemented · 90% package readiness
+
 ## [2.05.14] - 2026-07-09 — IMP-14 Coalition Network & Partnership OS
 
 ### Implementation Package 14 of 50

@@ -1,0 +1,301 @@
+{
+  "version": "1.0",
+  "build": 101,
+  "package": "IMP-15",
+  "updated": "2026-07-09",
+  "title": "Master County Operating System, City Operating System & Neighborhood Operating System",
+  "constitution": "/docs/IMPLEMENTATION_PACKAGE_15_LOCAL_OPERATING_SYSTEMS.md",
+  "source_registries": {
+    "county_operating_system": "/data/county-operating-system.json",
+    "arkansas_county_os": "/data/arkansas-county-operating-system.json",
+    "arkansas_city_os": "/data/arkansas-city-operating-system.json",
+    "arkansas_neighborhood_os": "/data/arkansas-neighborhood-operating-system.json",
+    "neighborhood_profiles": "/data/neighborhood-profiles.json",
+    "neighborhood_organizing": "/data/neighborhood-organizing.json",
+    "coalition_network": "/data/coalition-network-manifest.json",
+    "volunteer_network": "/data/volunteer-network-manifest.json"
+  },
+  "philosophy": "The statewide institution is built locally \u2014 one institution with distributed leadership",
+  "governing_principle": "A statewide institution is built through thousands of local relationships; when every county is organized, Arkansas gains permanent infrastructure for informed self-government",
+  "master_timeline": {
+    "phase_one": {
+      "id": "software_completion",
+      "title": "Software Completion",
+      "target_date": "2026-07-11",
+      "days_remaining": 2,
+      "scope": [
+        "Public website",
+        "Mission Control",
+        "LocalBrains",
+        "Community Education Academy",
+        "Knowledge Platform",
+        "Research system",
+        "Volunteer system",
+        "Coalition system",
+        "County, City, and Neighborhood systems",
+        "AI infrastructure",
+        "Administrative tools"
+      ]
+    },
+    "phase_two": {
+      "id": "county_milestone",
+      "title": "75 Counties by October 1",
+      "target_date": "2026-10-01",
+      "days_remaining": 84,
+      "scope": [
+        "Completed county profile for all 75 counties",
+        "Education Leader or active recruitment contact per county",
+        "County dashboard operational in Mission Control",
+        "Initial local resource information",
+        "Development plan for continued growth per county"
+      ]
+    },
+    "phase_three": {
+      "id": "organizational_readiness",
+      "title": "Organizational Readiness",
+      "target_date": "2027-01-01",
+      "days_remaining": 176,
+      "focus": [
+        "Recruiting Education Leaders",
+        "Expanding county coverage",
+        "Growing city leadership",
+        "Coalition development",
+        "Volunteer training",
+        "Community conversations",
+        "Research expansion",
+        "Public testing",
+        "User feedback",
+        "System refinement",
+        "Launch certification",
+        "City and neighborhood systems mature",
+        "Statewide volunteer development expanded"
+      ]
+    },
+    "sequence": "Software Complete (Jul 11, 2026) \u2192 75 Counties (Oct 1, 2026) \u2192 Organizational Readiness (Jan 2027)",
+    "build_out_months_approx": 6,
+    "county_milestone": {
+      "target_date": "2026-10-01",
+      "counties_total": 75,
+      "days_remaining": 84,
+      "label": "75-by-October-1 Milestone"
+    }
+  },
+  "software_completion_date": "2026-07-11",
+  "county_milestone_date": "2026-10-01",
+  "organizational_readiness_date": "2027-01-01",
+  "days_to_software": 2,
+  "days_to_county_milestone": 84,
+  "days_to_organizational": 176,
+  "local_first_hierarchy": [
+    "arkansas",
+    "county",
+    "city",
+    "neighborhood",
+    "community_conversation",
+    "citizen"
+  ],
+  "counties_total": 75,
+  "target_cities": 250,
+  "engagement_goal_pct": 15,
+  "engagement_goal_label": "15% registered voters connected per county and target city",
+  "engagement_connection_types": [
+    "educational_updates",
+    "academy_participation",
+    "community_conversations",
+    "volunteer_service",
+    "research_subscriptions",
+    "organization_membership",
+    "educational_event_attendance"
+  ],
+  "county_os_modules": [
+    "county_dashboard",
+    "education_leader_directory",
+    "volunteer_directory",
+    "coalition_directory",
+    "community_calendar",
+    "research_library",
+    "community_conversations",
+    "county_academy",
+    "county_projects",
+    "county_ai_assistant",
+    "mission_control_metrics"
+  ],
+  "county_module_count": 11,
+  "county_dashboard_metrics": [
+    "county_health",
+    "education_leader_status",
+    "volunteer_growth",
+    "academy_participation",
+    "organizations",
+    "upcoming_events",
+    "community_conversations",
+    "research_resources",
+    "engagement_progress_15pct",
+    "leadership_pipeline",
+    "mission_control_recommendations"
+  ],
+  "county_scorecard_metrics": [
+    "education_leaders",
+    "volunteers",
+    "academy_enrollments",
+    "courses_completed",
+    "community_conversations",
+    "organizations_participating",
+    "neighborhoods_active",
+    "research_resources_completed",
+    "public_engagement",
+    "citizen_connection_15pct_goal"
+  ],
+  "city_os_modules": [
+    "city_dashboard",
+    "leadership_directory",
+    "volunteer_directory",
+    "neighborhood_map",
+    "community_calendar",
+    "educational_events",
+    "organizations",
+    "local_research",
+    "ai_assistant",
+    "mission_control_metrics"
+  ],
+  "city_module_count": 10,
+  "neighborhood_os_modules": [
+    "neighborhood_profile",
+    "neighborhood_leader",
+    "community_conversations",
+    "volunteer_opportunities",
+    "educational_resources",
+    "meeting_calendar",
+    "neighborhood_projects",
+    "local_announcements",
+    "ai_assistant"
+  ],
+  "neighborhood_module_count": 9,
+  "leadership_hierarchy": [
+    {
+      "level": "state",
+      "title": "State"
+    },
+    {
+      "level": "region",
+      "title": "Region (optional)"
+    },
+    {
+      "level": "county_education_leader",
+      "title": "County Education Leader"
+    },
+    {
+      "level": "city_education_leader",
+      "title": "City Education Leader"
+    },
+    {
+      "level": "neighborhood_leader",
+      "title": "Neighborhood Leader"
+    },
+    {
+      "level": "community_volunteers",
+      "title": "Community Volunteers"
+    }
+  ],
+  "community_conversation_fields": [
+    "topic",
+    "facilitator",
+    "educational_resources",
+    "attendance",
+    "questions_raised",
+    "follow_up_actions",
+    "future_meetings"
+  ],
+  "local_resource_library": [
+    "local_government_information",
+    "libraries",
+    "historical_societies",
+    "educational_organizations",
+    "community_partners",
+    "meeting_locations",
+    "volunteer_opportunities"
+  ],
+  "county_academy_features": [
+    "local_courses",
+    "upcoming_classes",
+    "education_leaders",
+    "certificates_earned",
+    "community_presentations",
+    "volunteer_training"
+  ],
+  "local_calendar_event_types": [
+    "community_conversations",
+    "academy_classes",
+    "volunteer_meetings",
+    "coalition_meetings",
+    "public_civic_education_events"
+  ],
+  "local_ai_example_queries": [
+    "events_in_my_county",
+    "who_is_my_education_leader",
+    "courses_available_nearby",
+    "organizations_in_my_city",
+    "scheduled_community_conversations"
+  ],
+  "community_health_metrics": [
+    "leadership",
+    "volunteer_activity",
+    "learning",
+    "coalition_participation",
+    "community_conversations",
+    "educational_events",
+    "growth_trends",
+    "citizen_engagement"
+  ],
+  "geographic_map_layers": [
+    "county_coverage",
+    "city_coverage",
+    "neighborhood_coverage",
+    "education_leaders",
+    "organizations",
+    "community_conversations",
+    "volunteer_density",
+    "engagement_progress"
+  ],
+  "october_county_milestone": {
+    "target_date": "2026-10-01",
+    "requirements": [
+      "live_county_operating_system",
+      "completed_county_dashboard",
+      "county_research_profile",
+      "education_leader_or_leader_in_training",
+      "coalition_relationships",
+      "community_calendar",
+      "academy_presence",
+      "mission_control_reporting"
+    ],
+    "label": "Statewide County Operating Network Established"
+  },
+  "local_os_system_chain": [
+    "mission_control",
+    "community_education_academy",
+    "volunteer_network",
+    "coalition_network",
+    "research_institute",
+    "knowledge_platform",
+    "calendar_brain",
+    "ai_localbrains",
+    "executive_dashboard"
+  ],
+  "statewide_framework": [
+    "institutional_governance",
+    "mission_control",
+    "knowledge_platform",
+    "research_institute",
+    "community_education_academy",
+    "volunteer_operating_system",
+    "coalition_network",
+    "county_city_neighborhood_operating_systems"
+  ],
+  "packages_completed": 15,
+  "packages_total": 50,
+  "packages_complete_pct": 30,
+  "engineering_note": "Doctrinal IMP-15 Local OS; engineering IMP-15 is Mission Control shell layout",
+  "status": "documented",
+  "implemented": false
+}

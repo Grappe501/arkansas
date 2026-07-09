@@ -15,6 +15,8 @@ software_completion = date(2026, 7, 11)
 county_milestone = date(2026, 10, 1)
 organizational_readiness = date(2027, 1, 1)
 today_date = date(2026, 7, 9)
+engagement_goal_pct = 15
+target_cities = 250
 days_to_software = max((software_completion - today_date).days, 0)
 days_to_county_milestone = max((county_milestone - today_date).days, 0)
 days_to_organizational = max((organizational_readiness - today_date).days, 0)
@@ -86,7 +88,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 14  # IMP-01 through IMP-14 (doctrinal)
+steps_documented = 15  # IMP-01 through IMP-15 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -2870,6 +2872,183 @@ COALITION_NETWORK_MANIFEST = {
     'implemented': False,
 }
 
+LOCAL_FIRST_HIERARCHY = [
+    'arkansas', 'county', 'city', 'neighborhood', 'community_conversation', 'citizen',
+]
+
+COUNTY_OS_MODULES = [
+    'county_dashboard', 'education_leader_directory', 'volunteer_directory',
+    'coalition_directory', 'community_calendar', 'research_library',
+    'community_conversations', 'county_academy', 'county_projects',
+    'county_ai_assistant', 'mission_control_metrics',
+]
+
+COUNTY_DASHBOARD_METRICS = [
+    'county_health', 'education_leader_status', 'volunteer_growth',
+    'academy_participation', 'organizations', 'upcoming_events',
+    'community_conversations', 'research_resources', 'engagement_progress_15pct',
+    'leadership_pipeline', 'mission_control_recommendations',
+]
+
+COUNTY_SCORECARD_METRICS = [
+    'education_leaders', 'volunteers', 'academy_enrollments', 'courses_completed',
+    'community_conversations', 'organizations_participating', 'neighborhoods_active',
+    'research_resources_completed', 'public_engagement', 'citizen_connection_15pct_goal',
+]
+
+CITY_OS_MODULES = [
+    'city_dashboard', 'leadership_directory', 'volunteer_directory', 'neighborhood_map',
+    'community_calendar', 'educational_events', 'organizations', 'local_research',
+    'ai_assistant', 'mission_control_metrics',
+]
+
+NEIGHBORHOOD_OS_MODULES = [
+    'neighborhood_profile', 'neighborhood_leader', 'community_conversations',
+    'volunteer_opportunities', 'educational_resources', 'meeting_calendar',
+    'neighborhood_projects', 'local_announcements', 'ai_assistant',
+]
+
+LEADERSHIP_HIERARCHY = [
+    {'level': 'state', 'title': 'State'},
+    {'level': 'region', 'title': 'Region (optional)'},
+    {'level': 'county_education_leader', 'title': 'County Education Leader'},
+    {'level': 'city_education_leader', 'title': 'City Education Leader'},
+    {'level': 'neighborhood_leader', 'title': 'Neighborhood Leader'},
+    {'level': 'community_volunteers', 'title': 'Community Volunteers'},
+]
+
+COMMUNITY_CONVERSATION_FIELDS = [
+    'topic', 'facilitator', 'educational_resources', 'attendance',
+    'questions_raised', 'follow_up_actions', 'future_meetings',
+]
+
+LOCAL_RESOURCE_LIBRARY = [
+    'local_government_information', 'libraries', 'historical_societies',
+    'educational_organizations', 'community_partners', 'meeting_locations',
+    'volunteer_opportunities',
+]
+
+COUNTY_ACADEMY_FEATURES = [
+    'local_courses', 'upcoming_classes', 'education_leaders',
+    'certificates_earned', 'community_presentations', 'volunteer_training',
+]
+
+LOCAL_CALENDAR_EVENT_TYPES = [
+    'community_conversations', 'academy_classes', 'volunteer_meetings',
+    'coalition_meetings', 'public_civic_education_events',
+]
+
+LOCAL_AI_EXAMPLE_QUERIES = [
+    'events_in_my_county', 'who_is_my_education_leader', 'courses_available_nearby',
+    'organizations_in_my_city', 'scheduled_community_conversations',
+]
+
+COMMUNITY_HEALTH_METRICS = [
+    'leadership', 'volunteer_activity', 'learning', 'coalition_participation',
+    'community_conversations', 'educational_events', 'growth_trends', 'citizen_engagement',
+]
+
+ENGAGEMENT_CONNECTION_TYPES = [
+    'educational_updates', 'academy_participation', 'community_conversations',
+    'volunteer_service', 'research_subscriptions', 'organization_membership',
+    'educational_event_attendance',
+]
+
+GEOGRAPHIC_MAP_LAYERS = [
+    'county_coverage', 'city_coverage', 'neighborhood_coverage',
+    'education_leaders', 'organizations', 'community_conversations',
+    'volunteer_density', 'engagement_progress',
+]
+
+OCTOBER_COUNTY_OS_REQUIREMENTS = [
+    'live_county_operating_system',
+    'completed_county_dashboard',
+    'county_research_profile',
+    'education_leader_or_leader_in_training',
+    'coalition_relationships',
+    'community_calendar',
+    'academy_presence',
+    'mission_control_reporting',
+]
+
+LOCAL_OS_SYSTEM_CHAIN = [
+    'mission_control', 'community_education_academy', 'volunteer_network',
+    'coalition_network', 'research_institute', 'knowledge_platform',
+    'calendar_brain', 'ai_localbrains', 'executive_dashboard',
+]
+
+STATEWIDE_FRAMEWORK_COMPLETE = [
+    'institutional_governance', 'mission_control', 'knowledge_platform',
+    'research_institute', 'community_education_academy', 'volunteer_operating_system',
+    'coalition_network', 'county_city_neighborhood_operating_systems',
+]
+
+LOCAL_OPERATING_SYSTEMS_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-15',
+    'updated': today,
+    'title': 'Master County Operating System, City Operating System & Neighborhood Operating System',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_15_LOCAL_OPERATING_SYSTEMS.md',
+    'source_registries': {
+        'county_operating_system': '/data/county-operating-system.json',
+        'arkansas_county_os': '/data/arkansas-county-operating-system.json',
+        'arkansas_city_os': '/data/arkansas-city-operating-system.json',
+        'arkansas_neighborhood_os': '/data/arkansas-neighborhood-operating-system.json',
+        'neighborhood_profiles': '/data/neighborhood-profiles.json',
+        'neighborhood_organizing': '/data/neighborhood-organizing.json',
+        'coalition_network': '/data/coalition-network-manifest.json',
+        'volunteer_network': '/data/volunteer-network-manifest.json',
+    },
+    'philosophy': 'The statewide institution is built locally — one institution with distributed leadership',
+    'governing_principle': (
+        'A statewide institution is built through thousands of local relationships; '
+        'when every county is organized, Arkansas gains permanent infrastructure for informed self-government'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'local_first_hierarchy': LOCAL_FIRST_HIERARCHY,
+    'counties_total': 75,
+    'target_cities': target_cities,
+    'engagement_goal_pct': engagement_goal_pct,
+    'engagement_goal_label': '15% registered voters connected per county and target city',
+    'engagement_connection_types': ENGAGEMENT_CONNECTION_TYPES,
+    'county_os_modules': COUNTY_OS_MODULES,
+    'county_module_count': len(COUNTY_OS_MODULES),
+    'county_dashboard_metrics': COUNTY_DASHBOARD_METRICS,
+    'county_scorecard_metrics': COUNTY_SCORECARD_METRICS,
+    'city_os_modules': CITY_OS_MODULES,
+    'city_module_count': len(CITY_OS_MODULES),
+    'neighborhood_os_modules': NEIGHBORHOOD_OS_MODULES,
+    'neighborhood_module_count': len(NEIGHBORHOOD_OS_MODULES),
+    'leadership_hierarchy': LEADERSHIP_HIERARCHY,
+    'community_conversation_fields': COMMUNITY_CONVERSATION_FIELDS,
+    'local_resource_library': LOCAL_RESOURCE_LIBRARY,
+    'county_academy_features': COUNTY_ACADEMY_FEATURES,
+    'local_calendar_event_types': LOCAL_CALENDAR_EVENT_TYPES,
+    'local_ai_example_queries': LOCAL_AI_EXAMPLE_QUERIES,
+    'community_health_metrics': COMMUNITY_HEALTH_METRICS,
+    'geographic_map_layers': GEOGRAPHIC_MAP_LAYERS,
+    'october_county_milestone': {
+        'target_date': county_milestone_date,
+        'requirements': OCTOBER_COUNTY_OS_REQUIREMENTS,
+        'label': 'Statewide County Operating Network Established',
+    },
+    'local_os_system_chain': LOCAL_OS_SYSTEM_CHAIN,
+    'statewide_framework': STATEWIDE_FRAMEWORK_COMPLETE,
+    'packages_completed': 15,
+    'packages_total': 50,
+    'packages_complete_pct': 30,
+    'engineering_note': 'Doctrinal IMP-15 Local OS; engineering IMP-15 is Mission Control shell layout',
+    'status': 'documented',
+    'implemented': False,
+}
+
 ROUTE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -2936,11 +3115,12 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D15', 'indicator': 'Education Academy (IMP-12)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D16', 'indicator': 'Volunteer Network (IMP-13)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D17', 'indicator': 'Coalition Network (IMP-14)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D18', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D18', 'indicator': 'Local Operating Systems (IMP-15)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D19', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
-    88,
+    90,
     14
     + len(IMPLEMENTATION_STEPS) // 2
     + len(BANDS) * 2
@@ -3297,7 +3477,32 @@ out = {
             'number': 15,
             'id': 'IMP-15',
             'title': 'Master County Operating System, City Operating System & Neighborhood Operating System',
-            'note': 'Doctrinal package 15; engineering IMP-15 is Mission Control shell layout',
+            'status': 'documented',
+        },
+    },
+    'local_operating_systems': {
+        'title': 'Master County Operating System, City Operating System & Neighborhood Operating System',
+        'package': 'Implementation Package 15 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_15_LOCAL_OPERATING_SYSTEMS.md',
+        'manifest': '/data/local-operating-systems-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': LOCAL_OPERATING_SYSTEMS_MANIFEST['philosophy'],
+        'counties_total': LOCAL_OPERATING_SYSTEMS_MANIFEST['counties_total'],
+        'target_cities': LOCAL_OPERATING_SYSTEMS_MANIFEST['target_cities'],
+        'engagement_goal_pct': LOCAL_OPERATING_SYSTEMS_MANIFEST['engagement_goal_pct'],
+        'county_module_count': LOCAL_OPERATING_SYSTEMS_MANIFEST['county_module_count'],
+        'city_module_count': LOCAL_OPERATING_SYSTEMS_MANIFEST['city_module_count'],
+        'neighborhood_module_count': LOCAL_OPERATING_SYSTEMS_MANIFEST['neighborhood_module_count'],
+        'packages_completed': LOCAL_OPERATING_SYSTEMS_MANIFEST['packages_completed'],
+        'packages_complete_pct': LOCAL_OPERATING_SYSTEMS_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engineering_note': LOCAL_OPERATING_SYSTEMS_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 16,
+            'id': 'IMP-16',
+            'title': 'Master Communication Platform, Messaging System & Arkansas Civic Media Network',
+            'note': 'Doctrinal package 16; engineering IMP-16 is component registry COMP-* index',
         },
     },
     'master_timeline': MASTER_TIMELINE,
@@ -3355,6 +3560,7 @@ out = {
         'days_to_software': days_to_software,
         'days_to_county_milestone': days_to_county_milestone,
         'days_to_organizational': days_to_organizational,
+        'engagement_goal_pct': engagement_goal_pct,
         'completion_target_date': organizational_readiness_date,
         'days_remaining': days_to_organizational,
         'implementation_package_readiness_pct': implementation_package_readiness,
@@ -3443,6 +3649,10 @@ with open(root / 'data/volunteer-network-manifest.json', 'w', newline='\n') as f
 
 with open(root / 'data/coalition-network-manifest.json', 'w', newline='\n') as f:
     json.dump(COALITION_NETWORK_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/local-operating-systems-manifest.json', 'w', newline='\n') as f:
+    json.dump(LOCAL_OPERATING_SYSTEMS_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(
