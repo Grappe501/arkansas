@@ -1,0 +1,471 @@
+{
+  "version": "1.0",
+  "build": 72,
+  "updated": "2026-07-09",
+  "title": "Master Arkansas Communications & Public Education System v1.0",
+  "subtitle": "One Voice, Thousands of Conversations \u2014 The Institutional Communications Framework",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/arkansas-communications.html",
+  "constitution": "/docs/MASTER_ARKANSAS_COMMUNICATIONS.md",
+  "purpose": "Permanent communications system \u2014 one consistent institutional voice across every article, video, presentation, post, email, interview, conversation, and campaign.",
+  "governing_principle": "Communicate to help Arkansas understand. Every communication leaves people better informed. Public service becomes trusted institution.",
+  "communications_philosophy": {
+    "increase_understanding_not_win_arguments": true,
+    "education_before_persuasion": true,
+    "questions_every_communication_answers": [
+      "What happened?",
+      "Why does it matter?",
+      "What does the evidence show?",
+      "Where can I learn more?",
+      "How can I help educate others?"
+    ]
+  },
+  "institutional_voice": {
+    "title": "Institutional Voice",
+    "traits": [
+      "Calm",
+      "Respectful",
+      "Evidence-based",
+      "Patient",
+      "Curious",
+      "Transparent",
+      "Welcoming",
+      "Hopeful",
+      "Confident without being arrogant"
+    ],
+    "trust_through_consistency": true,
+    "status": "specified"
+  },
+  "communication_objectives": {
+    "title": "Five Communication Objectives",
+    "objectives": [
+      {
+        "id": "ACOM-O1",
+        "number": 1,
+        "title": "Explain",
+        "description": "Help Arkansans understand complex ideas",
+        "status": "specified"
+      },
+      {
+        "id": "ACOM-O2",
+        "number": 2,
+        "title": "Connect",
+        "description": "Show relationships between history, law, campaign finance, and Arkansas",
+        "status": "specified"
+      },
+      {
+        "id": "ACOM-O3",
+        "number": 3,
+        "title": "Invite",
+        "description": "Encourage continued learning and participation",
+        "status": "specified"
+      },
+      {
+        "id": "ACOM-O4",
+        "number": 4,
+        "title": "Equip",
+        "description": "Provide resources that help others teach",
+        "status": "specified"
+      },
+      {
+        "id": "ACOM-O5",
+        "number": 5,
+        "title": "Strengthen",
+        "description": "Build lasting relationships with communities across Arkansas",
+        "status": "specified"
+      }
+    ]
+  },
+  "communication_channels": {
+    "title": "Communication Channels",
+    "channels": [
+      {
+        "id": "ACOM-CH1",
+        "channel": "Website",
+        "status": "partial",
+        "route": "/"
+      },
+      {
+        "id": "ACOM-CH2",
+        "channel": "Email",
+        "status": "planned"
+      },
+      {
+        "id": "ACOM-CH3",
+        "channel": "Social media",
+        "status": "planned"
+      },
+      {
+        "id": "ACOM-CH4",
+        "channel": "Community presentations",
+        "status": "planned"
+      },
+      {
+        "id": "ACOM-CH5",
+        "channel": "Educational videos",
+        "status": "planned",
+        "route": "/mission-control/media-studio.html"
+      },
+      {
+        "id": "ACOM-CH6",
+        "channel": "Podcasts",
+        "status": "planned"
+      },
+      {
+        "id": "ACOM-CH7",
+        "channel": "Printable resources",
+        "status": "planned"
+      },
+      {
+        "id": "ACOM-CH8",
+        "channel": "Community conversations",
+        "status": "planned"
+      },
+      {
+        "id": "ACOM-CH9",
+        "channel": "Coalition newsletters",
+        "status": "planned",
+        "route": "/coalition/"
+      },
+      {
+        "id": "ACOM-CH10",
+        "channel": "Press materials",
+        "status": "planned"
+      }
+    ],
+    "coordinated_mission": true,
+    "status": "partial"
+  },
+  "content_pyramid": {
+    "title": "The Content Pyramid",
+    "layers": [
+      "Research Paper",
+      "Comprehensive Article",
+      "Lesson",
+      "Infographic",
+      "Video",
+      "Presentation",
+      "Social Media Graphic",
+      "One-Page Fact Sheet",
+      "Shareable Quote"
+    ],
+    "multiple_formats_per_topic": true,
+    "status": "specified"
+  },
+  "editorial_calendar": {
+    "title": "Editorial Calendar",
+    "statewide_calendar": true,
+    "live": false,
+    "event_types": [
+      "Research releases",
+      "Historical anniversaries",
+      "Supreme Court milestones",
+      "Educational campaigns",
+      "Community conversations",
+      "Academy announcements",
+      "Coalition updates",
+      "Arkansas legislative education (when relevant)"
+    ],
+    "status": "planned"
+  },
+  "social_media_strategy": {
+    "title": "Social Media Strategy",
+    "purposes": [
+      "Introduce ideas",
+      "Share educational resources",
+      "Highlight new research",
+      "Celebrate Education Leaders",
+      "Promote community events",
+      "Invite deeper learning"
+    ],
+    "return_to_institution_for_context": true,
+    "status": "planned"
+  },
+  "email_communications": {
+    "title": "Email Communications",
+    "educate_before_ask": true,
+    "series": [
+      "Welcome sequence",
+      "Learning pathways",
+      "Research updates",
+      "Academy news",
+      "Community stories",
+      "Coalition highlights",
+      "Mission Control updates",
+      "Annual reports"
+    ],
+    "informed_not_marketed": true,
+    "emails_sent": 0,
+    "status": "planned"
+  },
+  "presentation_system": {
+    "title": "Presentation System",
+    "standardized_for_leaders": true,
+    "formats": [
+      {
+        "format": "30-minute overview",
+        "status": "planned"
+      },
+      {
+        "format": "60-minute workshop",
+        "status": "planned"
+      },
+      {
+        "format": "Community discussion",
+        "status": "planned"
+      },
+      {
+        "format": "Library presentation",
+        "status": "planned"
+      },
+      {
+        "format": "College presentation",
+        "status": "planned"
+      },
+      {
+        "format": "Civic organization presentation",
+        "status": "planned"
+      }
+    ],
+    "evidence_based": true,
+    "requests": 0,
+    "status": "planned"
+  },
+  "media_response_framework": {
+    "title": "Media Response Framework",
+    "educational_resource_role": true,
+    "principles": [
+      "Providing verified information",
+      "Sharing primary sources",
+      "Explaining historical context",
+      "Directing people to educational resources",
+      "Maintaining a respectful tone"
+    ],
+    "press_inquiries": 0,
+    "status": "planned"
+  },
+  "storytelling_framework": {
+    "title": "Storytelling Framework",
+    "story_types": [
+      "Historical stories",
+      "Supreme Court history",
+      "Arkansas stories",
+      "Community success stories",
+      "Education Leader stories",
+      "Research discoveries"
+    ],
+    "makes_complex_memorable": true,
+    "status": "specified"
+  },
+  "communications_dashboard": {
+    "title": "Mission Control Communications Dashboard",
+    "live": false,
+    "educational_reach_not_marketing": true,
+    "indicators": [
+      {
+        "id": "ACOM-D1",
+        "indicator": "Articles published",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACOM-D2",
+        "indicator": "Videos released",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACOM-D3",
+        "indicator": "Emails sent",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACOM-D4",
+        "indicator": "Presentation requests",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACOM-D5",
+        "indicator": "Community events",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACOM-D6",
+        "indicator": "Social media reach",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACOM-D7",
+        "indicator": "Resource downloads",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACOM-D8",
+        "indicator": "Press inquiries",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACOM-D9",
+        "indicator": "Communication effectiveness",
+        "current": "not_measured",
+        "status": "planned"
+      }
+    ],
+    "status": "planned"
+  },
+  "communications_review_process": {
+    "title": "Communications Review Process",
+    "quality_before_speed": true,
+    "operational": false,
+    "steps": [
+      {
+        "step": 1,
+        "id": "research_review",
+        "title": "Research Review",
+        "items_passed": 0,
+        "status": "planned"
+      },
+      {
+        "step": 2,
+        "id": "editorial_review",
+        "title": "Editorial Review",
+        "items_passed": 0,
+        "status": "planned"
+      },
+      {
+        "step": 3,
+        "id": "evidence_verification",
+        "title": "Evidence Verification",
+        "items_passed": 0,
+        "status": "planned"
+      },
+      {
+        "step": 4,
+        "id": "accessibility_review",
+        "title": "Accessibility Review",
+        "items_passed": 0,
+        "status": "planned"
+      },
+      {
+        "step": 5,
+        "id": "publication",
+        "title": "Publication",
+        "items_passed": 0,
+        "status": "planned"
+      },
+      {
+        "step": 6,
+        "id": "performance_review",
+        "title": "Performance Review",
+        "items_passed": 0,
+        "status": "planned"
+      }
+    ],
+    "status": "planned"
+  },
+  "integration": {
+    "chain": "Research Library \u2192 Curriculum \u2192 Media Studio \u2192 Citizen Action Center \u2192 Education Academy \u2192 Coalition Network \u2192 Mission Control",
+    "systems": [
+      {
+        "system": "Master Research Library (#37)",
+        "route": "/mission-control/research-library.html",
+        "status": "live"
+      },
+      {
+        "system": "Master Curriculum (#35)",
+        "route": "/mission-control/curriculum.html",
+        "status": "live"
+      },
+      {
+        "system": "Media Studio (#39)",
+        "route": "/mission-control/media-studio.html",
+        "status": "live"
+      },
+      {
+        "system": "Content Production Factory (#27)",
+        "route": "/mission-control/content-factory.html",
+        "status": "live"
+      },
+      {
+        "system": "Narrative Architecture (#34)",
+        "route": "/mission-control/narrative.html",
+        "status": "live"
+      },
+      {
+        "system": "Citizen Action Center (#62)",
+        "route": "/mission-control/citizen-action-center.html",
+        "status": "live"
+      },
+      {
+        "system": "Community Education Academy (#28)",
+        "route": "/mission-control/education-academy.html",
+        "status": "partial"
+      },
+      {
+        "system": "Coalition Network (#61)",
+        "route": "/mission-control/coalition-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Community Listening (#71)",
+        "route": "/mission-control/arkansas-community-listening.html",
+        "status": "live",
+        "note": "Informs communications"
+      },
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      }
+    ],
+    "every_system_contributes": true
+  },
+  "long_term_voice_recognition": "Arkansans recognize the voice immediately \u2014 not loud, reliable. Researched carefully, documented transparently, explained clearly, presented respectfully.",
+  "summary": {
+    "communication_objectives": 5,
+    "communication_channels": 10,
+    "content_pyramid_layers": 9,
+    "articles_published": 0,
+    "videos_released": 0,
+    "emails_sent": 0,
+    "presentation_requests": 0,
+    "community_events": 0,
+    "social_media_reach": 0,
+    "resource_downloads": 0,
+    "press_inquiries": 0,
+    "editorial_calendar_live": false,
+    "communications_dashboard_live": false,
+    "review_workflow_operational": false,
+    "arkansas_communications_readiness_pct": 42,
+    "content_factory_readiness_pct": 30,
+    "media_studio_readiness_pct": 18,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "0 articles tracked in communications registry \u2014 no publish pipeline",
+    "0 videos released \u2014 Media Studio not wired to communications dashboard",
+    "0 emails sent \u2014 no email series or welcome sequence built",
+    "0 presentation requests \u2014 leader presentation kit not distributed",
+    "Editorial calendar specified \u2014 not live in Mission Control",
+    "Communications dashboard planned \u2014 not live",
+    "Review workflow specified \u2014 0 items passed through 6-step process",
+    "Content pyramid specified \u2014 no multi-format generation workflow",
+    "Social media strategy specified \u2014 no coordinated posting system",
+    "Build #72 vs Content Factory (#27) \u2014 reconcile communications vs production?",
+    "Build #72 vs Narrative Architecture (#34) \u2014 unify voice specs?",
+    "Communication effectiveness not measured \u2014 educational reach metrics undefined",
+    "Press inquiry workflow not built \u2014 0 inquiries handled"
+  ],
+  "recommended_next_build": {
+    "number": 73,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "Editorial calendar UI, content pyramid workflow, review queue, presentation kit, email series templates, communications dashboard, COMP-* specs, GitHub backlog."
+  }
+}

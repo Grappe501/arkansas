@@ -1,6 +1,6 @@
 {
-  "version": "1.75.0",
-  "build": 71,
+  "version": "1.76.0",
+  "build": 72,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,21 +9,21 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 71,
+    "overall_completion": 72,
     "current_build": {
-      "number": 71,
-      "title": "Citizens United Facts Master Arkansas Community Intelligence & Listening System v1.0"
-    },
-    "active_phase": "Community Listening \u2192 Implementation Translation",
-    "last_completed": "Arkansas Command Strategy",
-    "next_build": {
       "number": 72,
+      "title": "Citizens United Facts Master Arkansas Communications & Public Education System v1.0"
+    },
+    "active_phase": "Arkansas Communications \u2192 Implementation Translation",
+    "last_completed": "Arkansas Community Listening",
+    "next_build": {
+      "number": 73,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
-    "content_readiness": 28,
-    "research_readiness": 31,
+    "content_readiness": 32,
+    "research_readiness": 26,
     "data_viz_readiness": 12,
     "signup_funnel_readiness": 26,
     "civic_action_readiness": 28,
@@ -51,21 +51,22 @@
     "relational_organizing_growth_engine_readiness": 34,
     "arkansas_command_strategy_readiness": 39,
     "arkansas_community_listening_readiness": 41,
+    "arkansas_communications_readiness": 42,
     "mc2_readiness": 42,
     "ai_engine_readiness": 34,
-    "content_factory_readiness": 30,
+    "content_factory_readiness": 34,
     "education_academy_readiness": 26,
     "observatory_readiness": 29,
-    "outreach_readiness": 34,
+    "outreach_readiness": 36,
     "county_os_readiness": 28,
     "campaign_os_readiness": 34,
     "encyclopedia_readiness": 19,
-    "narrative_readiness": 24,
+    "narrative_readiness": 28,
     "curriculum_readiness": 26,
     "trust_readiness": 30,
     "library_readiness": 22,
     "learning_lab_readiness": 22,
-    "media_studio_readiness": 18,
+    "media_studio_readiness": 22,
     "civic_intelligence_readiness": 36,
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
@@ -99,8 +100,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 71,
-      "note": "Build #71 \u2014 Community Intelligence & Listening System."
+      "value": 72,
+      "note": "Build #72 \u2014 Arkansas Communications & Public Education System."
     },
     {
       "id": "constitution",
@@ -129,8 +130,8 @@
     {
       "id": "content",
       "label": "Content System",
-      "value": 20,
-      "note": "Editorial OS defined \u2014 15 published of 351 registered. Factory dashboard at content-factory.html."
+      "value": 36,
+      "note": "One voice \u2014 0 articles \u00b7 0 videos \u00b7 calendar planned."
     },
     {
       "id": "research",
@@ -621,6 +622,13 @@
       "value": 41,
       "max": 100,
       "note": "0 questions \u00b7 observatory planned."
+    },
+    {
+      "id": "arkansas_communications",
+      "label": "Communications",
+      "value": 42,
+      "max": 100,
+      "note": "0 articles \u00b7 review workflow planned."
     }
   ],
   "public_readiness": {
@@ -1339,6 +1347,12 @@
       "id": "arkansas_community_listening",
       "label": "Community Listening",
       "href": "/mission-control/arkansas-community-listening.html",
+      "status": "complete"
+    },
+    {
+      "id": "arkansas_communications",
+      "label": "Communications",
+      "href": "/mission-control/arkansas-communications.html",
       "status": "complete"
     }
   ],
@@ -2365,6 +2379,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 72,
+      "title": "Citizens United Facts Master Arkansas Communications & Public Education System v1.0",
+      "version": "1.76.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Communications & Public Education \u2014 one voice, thousands of conversations",
+      "summary": "Institutional voice, five objectives, content pyramid, editorial calendar, review process; 42% readiness. 0 articles \u00b7 0 videos \u00b7 0 emails \u00b7 calendar not live.",
+      "files_created": [
+        "data/arkansas-communications.json",
+        "docs/MASTER_ARKANSAS_COMMUNICATIONS.md",
+        "builds/072-arkansas-communications.md",
+        "mission-control/arkansas-communications.html",
+        "scripts/gen-arkansas-communications.py",
+        "scripts/update-mc-build72.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/arkansas-communications.html"
+      ],
+      "decisions_made": [
+        "One consistent institutional voice across all channels",
+        "Education before persuasion \u2014 increase understanding not win arguments",
+        "Five objectives: Explain, Connect, Invite, Equip, Strengthen",
+        "Content pyramid \u2014 nine formats per major topic",
+        "Six-step review: research \u2192 editorial \u2192 evidence \u2192 accessibility \u2192 publish \u2192 performance",
+        "Educational reach not marketing performance",
+        "42% readiness \u2014 constitution only"
+      ],
+      "open_questions": [
+        "Reconcile communications (#72) vs Content Factory (#27)?",
+        "Editorial calendar: MC-native vs external tool?",
+        "Social media: institutional accounts vs leader-generated?",
+        "Communication effectiveness metrics \u2014 what counts as educational reach?"
+      ],
+      "risks": [
+        "0 articles tracked in communications registry \u2014 no publish pipeline",
+        "0 videos released \u2014 Media Studio not wired to communications dashboard",
+        "0 emails sent \u2014 no email series or welcome sequence built",
+        "0 presentation requests \u2014 leader presentation kit not distributed"
+      ],
+      "next_recommended": 73,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-communications.html",
+      "review_status": "complete"
+    },
     {
       "number": 71,
       "title": "Citizens United Facts Master Arkansas Community Intelligence & Listening System v1.0",
@@ -6020,21 +6087,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Arkansas Community Listening v1.0 \u2014 statewide civic listening network",
-    "building_now": "71 builds specified \u2014 implementation translation next",
+    "what_built": "Arkansas Communications v1.0 \u2014 one voice, institutional communications framework",
+    "building_now": "72 builds specified \u2014 implementation translation next",
     "blocked": [
-      "Feedback forms",
-      "Question Observatory",
-      "Workflow tracker",
-      "Pulse reports"
+      "Editorial calendar",
+      "Review workflow",
+      "Presentation kit",
+      "Communications dashboard"
     ],
     "ready_public": [
-      "Six sources",
-      "Operating principle",
-      "Workflow spec",
-      "Listening tour"
+      "Institutional voice",
+      "Five objectives",
+      "Content pyramid",
+      "Review process spec"
     ],
-    "next": "Build #72 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #73 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -6790,5 +6857,13 @@
     "questions_received": 0,
     "listening_sources": 6,
     "question_observatory_live": false
+  },
+  "arkansas_communications": "/data/arkansas-communications.json",
+  "arkansas_communications_dashboard": "/mission-control/arkansas-communications.html",
+  "arkansas_communications_inventory": {
+    "readiness_score": 42,
+    "articles_published": 0,
+    "editorial_calendar_live": false,
+    "one_institutional_voice": true
   }
 }

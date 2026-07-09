@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Arkansas Communications <a href="/mission-control/arkansas-communications.html" class="mc-inline-link">One Voice #72 →</a></h2>
+    <p class="mc-bar-note">Build #72 — Communications & Public Education System. One institutional voice, content pyramid, editorial calendar. Education before persuasion. 0 articles · 0 videos · 0 emails. ~41% readiness.</p>
     <h2 class="mc-section-title">Community Listening <a href="/mission-control/arkansas-community-listening.html" class="mc-inline-link">Listening Network #71 →</a></h2>
     <p class="mc-bar-note">Build #71 — Community Intelligence & Listening System. Six sources, question observatory, pulse reports. Learn from Arkansas. 0 questions · 0 leader reports · 0 pulse reports. ~41% readiness.</p>
     <h2 class="mc-section-title">Arkansas Command Strategy <a href="/mission-control/arkansas-command-strategy.html" class="mc-inline-link">Statewide Execution #70 →</a></h2>
@@ -5202,6 +5204,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initRelationalOrganizingGrowthEngine();
   initArkansasCommandStrategy();
   initArkansasCommunityListening();
+  initArkansasCommunications();
 });
 
 async function initUxArchitecture() {
@@ -7473,6 +7476,123 @@ async function initArkansasCommunityListening() {
       <a href="/mission-control/research-observatory.html">Research Observatory</a> ·
       <a href="/mission-control/evidence-ledger.html">Evidence Ledger</a> ·
       <a href="/mission-control/citizen-action-center.html">Citizen Action Center</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initArkansasCommunications() {
+  const root = document.getElementById('mc-arkansas-communications-root');
+  if (!root) return;
+
+  const [acomRes, mcRes] = await Promise.all([
+    fetch('/data/arkansas-communications.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const acom = await acomRes.json();
+  const mc = await mcRes.json();
+  const s = acom.summary;
+
+  const objRows = acom.communication_objectives.objectives.map(o => `
+    <tr><td>${o.number}</td><td><code>${o.id}</code></td><td>${o.title}</td>
+      <td>${o.description}</td><td>${o.status}</td></tr>`).join('');
+
+  const channelRows = acom.communication_channels.channels.map(ch => `
+    <tr><td><code>${ch.id}</code></td><td>${ch.channel}</td><td>${ch.status}</td>
+      <td>${ch.route ? `<a href="${ch.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  const dashRows = acom.communications_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td>
+      <td>${typeof d.current === 'number' ? d.current.toLocaleString() : d.current}</td><td>${d.status}</td></tr>`).join('');
+
+  const reviewRows = acom.communications_review_process.steps.map(st => `
+    <tr><td>${st.step}</td><td>${st.title}</td><td>${st.items_passed}</td><td>${st.status}</td></tr>`).join('');
+
+  const presRows = acom.presentation_system.formats.map(p => `
+    <tr><td>${p.format}</td><td>${p.status}</td></tr>`).join('');
+
+  const systemRows = acom.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td><td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Arkansas Communications</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #72 · ${acom.title}</p>
+      <h1>One Voice, Thousands of Conversations</h1>
+      <p class="mc-header__question">${acom.governing_principle}</p>
+      <p class="mc-bar-note">${acom.purpose}</p>
+      <p class="mc-bar-note"><strong>Education before persuasion:</strong> ${acom.communications_philosophy.education_before_persuasion ? 'Yes' : 'No'} · <strong>Increase understanding:</strong> ${acom.communications_philosophy.increase_understanding_not_win_arguments ? 'Yes' : 'No'}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Communications readiness</div><div class="mc-stat__value">${s.arkansas_communications_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Articles</div><div class="mc-stat__value">${s.articles_published}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Videos</div><div class="mc-stat__value">${s.videos_released}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Emails sent</div><div class="mc-stat__value">${s.emails_sent}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Presentations</div><div class="mc-stat__value">${s.presentation_requests}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Press inquiries</div><div class="mc-stat__value">${s.press_inquiries}</div></div>
+    </div>
+    <h2 class="mc-section-title">Communications Philosophy</h2>
+    <p class="mc-bar-note">Every communication answers:</p>
+    <ul class="mc-deliverables">${acom.communications_philosophy.questions_every_communication_answers.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acom.institutional_voice.title}</h2>
+    <p class="mc-bar-note">Trust through consistency: ${acom.institutional_voice.trust_through_consistency ? 'Yes' : 'No'} · ${acom.institutional_voice.status}</p>
+    <ul class="mc-deliverables">${acom.institutional_voice.traits.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acom.communication_objectives.title}</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Objective</th><th>Description</th><th>Status</th></tr></thead>
+      <tbody>${objRows}</tbody></table>
+    <h2 class="mc-section-title">${acom.communication_channels.title}</h2>
+    <p class="mc-bar-note">Coordinated mission: ${acom.communication_channels.coordinated_mission ? 'Yes' : 'No'} · ${acom.communication_channels.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Channel</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${channelRows}</tbody></table>
+    <h2 class="mc-section-title">${acom.content_pyramid.title}</h2>
+    <p class="mc-bar-note">Multiple formats per topic: ${acom.content_pyramid.multiple_formats_per_topic ? 'Yes' : 'No'} · ${acom.content_pyramid.status}</p>
+    <ul class="mc-deliverables">${acom.content_pyramid.layers.map(l => `<li>${l}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acom.editorial_calendar.title}</h2>
+    <p class="mc-bar-note">Live: ${acom.editorial_calendar.live ? 'Yes' : 'No'} · Statewide: ${acom.editorial_calendar.statewide_calendar ? 'Yes' : 'No'} · ${acom.editorial_calendar.status}</p>
+    <ul class="mc-deliverables">${acom.editorial_calendar.event_types.map(e => `<li>${e}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acom.social_media_strategy.title}</h2>
+    <p class="mc-bar-note">Return to institution for context: ${acom.social_media_strategy.return_to_institution_for_context ? 'Yes' : 'No'} · ${acom.social_media_strategy.status}</p>
+    <ul class="mc-deliverables">${acom.social_media_strategy.purposes.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acom.email_communications.title}</h2>
+    <p class="mc-bar-note">Educate before ask: ${acom.email_communications.educate_before_ask ? 'Yes' : 'No'} · Sent: ${acom.email_communications.emails_sent} · ${acom.email_communications.status}</p>
+    <ul class="mc-deliverables">${acom.email_communications.series.map(srs => `<li>${srs}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acom.presentation_system.title}</h2>
+    <p class="mc-bar-note">Standardized for leaders: ${acom.presentation_system.standardized_for_leaders ? 'Yes' : 'No'} · Requests: ${acom.presentation_system.requests} · ${acom.presentation_system.status}</p>
+    <table class="mc-table"><thead><tr><th>Format</th><th>Status</th></tr></thead>
+      <tbody>${presRows}</tbody></table>
+    <h2 class="mc-section-title">${acom.media_response_framework.title}</h2>
+    <p class="mc-bar-note">Educational resource role: ${acom.media_response_framework.educational_resource_role ? 'Yes' : 'No'} · Inquiries: ${acom.media_response_framework.press_inquiries} · ${acom.media_response_framework.status}</p>
+    <ul class="mc-deliverables">${acom.media_response_framework.principles.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acom.storytelling_framework.title}</h2>
+    <p class="mc-bar-note">${acom.storytelling_framework.status}</p>
+    <ul class="mc-deliverables">${acom.storytelling_framework.story_types.map(st => `<li>${st}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acom.communications_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${acom.communications_dashboard.live ? 'Yes' : 'No'} · Educational reach not marketing: ${acom.communications_dashboard.educational_reach_not_marketing ? 'Yes' : 'No'} · ${acom.communications_dashboard.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">${acom.communications_review_process.title}</h2>
+    <p class="mc-bar-note">Quality before speed: ${acom.communications_review_process.quality_before_speed ? 'Yes' : 'No'} · Operational: ${acom.communications_review_process.operational ? 'Yes' : 'No'} · ${acom.communications_review_process.status}</p>
+    <table class="mc-table"><thead><tr><th>Step</th><th>Stage</th><th>Passed</th><th>Status</th></tr></thead>
+      <tbody>${reviewRows}</tbody></table>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${acom.integration.chain}</p>
+    <p class="mc-bar-note">Every system contributes: ${acom.integration.every_system_contributes ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${acom.long_term_voice_recognition}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${acom.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${acom.recommended_next_build.number} — ${acom.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${acom.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_ARKANSAS_COMMUNICATIONS.md">MASTER_ARKANSAS_COMMUNICATIONS.md</a> ·
+      <a href="/data/arkansas-communications.json">JSON</a> ·
+      <a href="/mission-control/content-factory.html">Content Factory</a> ·
+      <a href="/mission-control/media-studio.html">Media Studio</a> ·
+      <a href="/mission-control/narrative.html">Narrative Architecture</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

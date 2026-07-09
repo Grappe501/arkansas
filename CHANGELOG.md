@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.76.0] - 2026-07-09 — Build #72 Arkansas Communications
+
+### One Voice, Thousands of Conversations
+- **Arkansas Communications & Public Education System v1.0** — one consistent institutional voice
+- Education before persuasion; five objectives: Explain, Connect, Invite, Equip, Strengthen
+- Ten channels, nine-layer content pyramid, editorial calendar, six-step review process
+- Institutional voice: calm, evidence-based, transparent, welcoming
+- Honest: 0 articles · 0 videos · 0 emails · calendar not live · review not operational · ~41% readiness
+- MC dashboard: `/mission-control/arkansas-communications.html`
+
 ## [1.75.0] - 2026-07-09 — Build #71 Arkansas Community Listening
 
 ### Listening Before Leading — The Statewide Civic Listening Network
