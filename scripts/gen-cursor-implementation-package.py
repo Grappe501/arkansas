@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 21  # IMP-01 through IMP-21 (doctrinal)
+steps_documented = 22  # IMP-01 through IMP-22 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3333,6 +3333,7 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'coalition_network', 'local_operating_systems', 'communication_platform',
     'institutional_time_intelligence', 'institutional_relationship_intelligence',
     'institutional_analytics', 'institutional_automation', 'public_digital_experience',
+    'mobile_field_operations',
 ]
 
 RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
@@ -3981,6 +3982,152 @@ PUBLIC_WEBSITE_MANIFEST = {
     'implemented': False,
 }
 
+PWA_CAPABILITIES = [
+    'home_screen_install', 'fast_startup', 'offline_capabilities', 'push_notifications',
+    'background_sync', 'app_like_experience',
+]
+
+MOBILE_DASHBOARD_WIDGETS = [
+    'todays_schedule', 'upcoming_events', 'learning_progress', 'volunteer_assignments',
+    'community_conversations', 'county_updates', 'messages', 'personal_ai',
+]
+
+MOBILE_VOLUNTEER_ACTIONS = [
+    'view_assignments', 'accept_projects', 'navigate_to_events', 'access_training',
+    'read_resources', 'check_schedules', 'message_mentors', 'record_community_activity',
+]
+
+EDUCATION_LEADER_MOBILE_TOOLS = [
+    'launch_presentations', 'discussion_guides', 'research_summaries', 'check_attendance',
+    'schedule_follow_ups', 'recruit_volunteers', 'ai_q_and_a',
+]
+
+OFFLINE_CACHE_RESOURCES = [
+    'downloaded_lessons', 'presentation_materials', 'county_profiles',
+    'volunteer_assignments', 'event_agendas', 'community_conversation_guides',
+]
+
+QR_CODE_TARGETS = [
+    'course_enrollment', 'community_conversations', 'county_pages', 'city_pages',
+    'volunteer_sign_up', 'organization_profiles', 'presentation_materials',
+]
+
+EVENT_CHECK_IN_TYPES = [
+    'qr_code_check_in', 'attendance_tracking', 'volunteer_sign_in',
+    'presentation_attendance', 'academy_participation', 'organization_events',
+]
+
+LOCATION_RECOMMENDATIONS = [
+    'nearby_conversations', 'county_events', 'academy_classes',
+    'volunteer_opportunities', 'partner_organizations', 'educational_resources',
+]
+
+MOBILE_AI_CAPABILITIES = [
+    'questions', 'research', 'scheduling', 'directions', 'volunteer_guidance',
+    'presentation_preparation', 'county_information', 'community_recommendations',
+]
+
+MOBILE_NOTIFICATION_TYPES = [
+    'event_reminders', 'volunteer_assignments', 'course_reminders', 'research_updates',
+    'community_announcements', 'leadership_messages', 'mission_control_alerts',
+]
+
+MOBILE_MEDIA_ACTIONS = [
+    'watch_videos', 'listen_podcasts', 'download_presentations',
+    'share_resources', 'read_research', 'bookmark_materials',
+]
+
+FIELD_DATA_COLLECTION = [
+    'community_conversations', 'presentation_attendance', 'volunteer_interest',
+    'local_resource_updates', 'organization_information', 'community_observations',
+]
+
+TRAVEL_SUPPORT_FEATURES = [
+    'driving_directions', 'multi_stop_itineraries', 'regional_travel',
+    'event_routing', 'county_visit_planning',
+]
+
+MOBILE_ACCESSIBILITY = [
+    'large_touch_targets', 'voice_input', 'screen_readers', 'high_contrast',
+    'offline_reading', 'simple_navigation',
+]
+
+MC_MOBILE_INTEGRATION_METRICS = [
+    'mobile_usage', 'offline_usage', 'qr_scans', 'field_activity',
+    'volunteer_check_ins', 'presentation_attendance', 'location_engagement',
+    'event_participation',
+]
+
+MOBILE_SYSTEM_CHAIN = [
+    'mission_control', 'volunteer_network', 'community_education_academy',
+    'county_operating_system', 'city_operating_system', 'neighborhood_operating_system',
+    'calendar_brain', 'relationship_intelligence', 'knowledge_platform',
+    'communications', 'ai_localbrains',
+]
+
+MOBILE_PWA_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-22',
+    'updated': today,
+    'title': 'Master Mobile Experience, Progressive Web App & Field Operations Platform',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_22_MOBILE_PWA.md',
+    'source_registries': {
+        'public_website': '/data/public-website-manifest.json',
+        'volunteer_network': '/data/volunteer-network-manifest.json',
+        'education_academy': '/data/education-academy-manifest.json',
+        'local_operating_systems': '/data/local-operating-systems-manifest.json',
+        'time_intelligence': '/data/time-intelligence-manifest.json',
+        'relationship_intelligence': '/data/relationship-intelligence-manifest.json',
+        'outreach_engine': '/data/outreach-engine.json',
+    },
+    'philosophy': 'Mobile is a first-class experience — design for real life in the field',
+    'governing_principle': (
+        'The institution should travel wherever its volunteers travel — immediate access '
+        'to knowledge, tools, relationships, and resources in every community setting'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'pwa_capabilities': PWA_CAPABILITIES,
+    'pwa_capability_count': len(PWA_CAPABILITIES),
+    'mobile_dashboard_widgets': MOBILE_DASHBOARD_WIDGETS,
+    'mobile_volunteer_actions': MOBILE_VOLUNTEER_ACTIONS,
+    'education_leader_mobile_tools': EDUCATION_LEADER_MOBILE_TOOLS,
+    'offline_cache_resources': OFFLINE_CACHE_RESOURCES,
+    'qr_code_targets': QR_CODE_TARGETS,
+    'qr_code_target_count': len(QR_CODE_TARGETS),
+    'event_check_in_types': EVENT_CHECK_IN_TYPES,
+    'location_recommendations': LOCATION_RECOMMENDATIONS,
+    'mobile_ai_capabilities': MOBILE_AI_CAPABILITIES,
+    'mobile_notification_types': MOBILE_NOTIFICATION_TYPES,
+    'mobile_media_actions': MOBILE_MEDIA_ACTIONS,
+    'field_data_collection': FIELD_DATA_COLLECTION,
+    'travel_support_features': TRAVEL_SUPPORT_FEATURES,
+    'mobile_accessibility': MOBILE_ACCESSIBILITY,
+    'mobile_accessibility_count': len(MOBILE_ACCESSIBILITY),
+    'mc_mobile_integration_metrics': MC_MOBILE_INTEGRATION_METRICS,
+    'organizational_goals': {
+        'counties_total': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'mobile_system_chain': MOBILE_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/outreach.html',
+    'packages_completed': 22,
+    'packages_total': 50,
+    'packages_complete_pct': 44,
+    'engineering_note': 'Doctrinal IMP-22 Mobile PWA; engineering IMP-22 is Prisma schema knowledge entities',
+    'status': 'documented',
+    'implemented': False,
+}
+
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -4118,7 +4265,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D22', 'indicator': 'Institutional Analytics (IMP-19)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D23', 'indicator': 'Automation Engine (IMP-20)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D24', 'indicator': 'Public Website (IMP-21)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D25', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D25', 'indicator': 'Mobile PWA & Field Ops (IMP-22)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D26', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -4657,6 +4805,33 @@ out = {
             'number': 22,
             'id': 'IMP-22',
             'title': 'Master Mobile Experience, Progressive Web App & Field Operations Platform',
+            'status': 'documented',
+        },
+    },
+    'mobile_pwa': {
+        'title': 'Master Mobile Experience, Progressive Web App & Field Operations Platform',
+        'package': 'Implementation Package 22 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_22_MOBILE_PWA.md',
+        'manifest': '/data/mobile-pwa-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': MOBILE_PWA_MANIFEST['philosophy'],
+        'pwa_capability_count': MOBILE_PWA_MANIFEST['pwa_capability_count'],
+        'qr_code_target_count': MOBILE_PWA_MANIFEST['qr_code_target_count'],
+        'mobile_accessibility_count': MOBILE_PWA_MANIFEST['mobile_accessibility_count'],
+        'mobile_dashboard_widget_count': len(MOBILE_DASHBOARD_WIDGETS),
+        'field_data_collection_count': len(FIELD_DATA_COLLECTION),
+        'packages_completed': MOBILE_PWA_MANIFEST['packages_completed'],
+        'packages_complete_pct': MOBILE_PWA_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': MOBILE_PWA_MANIFEST['mc_dashboard'],
+        'engineering_note': MOBILE_PWA_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 23,
+            'id': 'IMP-23',
+            'title': 'Master Document Management, Digital Library & Institutional Archive',
             'status': 'specified',
         },
     },
@@ -4833,6 +5008,10 @@ with open(root / 'data/automation-engine-manifest.json', 'w', newline='\n') as f
 
 with open(root / 'data/public-website-manifest.json', 'w', newline='\n') as f:
     json.dump(PUBLIC_WEBSITE_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/mobile-pwa-manifest.json', 'w', newline='\n') as f:
+    json.dump(MOBILE_PWA_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

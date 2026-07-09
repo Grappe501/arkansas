@@ -1,0 +1,265 @@
+{
+  "version": "1.0",
+  "build": 101,
+  "package": "IMP-22",
+  "updated": "2026-07-09",
+  "title": "Master Mobile Experience, Progressive Web App & Field Operations Platform",
+  "constitution": "/docs/IMPLEMENTATION_PACKAGE_22_MOBILE_PWA.md",
+  "source_registries": {
+    "public_website": "/data/public-website-manifest.json",
+    "volunteer_network": "/data/volunteer-network-manifest.json",
+    "education_academy": "/data/education-academy-manifest.json",
+    "local_operating_systems": "/data/local-operating-systems-manifest.json",
+    "time_intelligence": "/data/time-intelligence-manifest.json",
+    "relationship_intelligence": "/data/relationship-intelligence-manifest.json",
+    "outreach_engine": "/data/outreach-engine.json"
+  },
+  "philosophy": "Mobile is a first-class experience \u2014 design for real life in the field",
+  "governing_principle": "The institution should travel wherever its volunteers travel \u2014 immediate access to knowledge, tools, relationships, and resources in every community setting",
+  "master_timeline": {
+    "phase_one": {
+      "id": "software_completion",
+      "title": "Software Completion",
+      "target_date": "2026-07-11",
+      "days_remaining": 2,
+      "scope": [
+        "Public website",
+        "Mission Control",
+        "LocalBrains",
+        "Community Education Academy",
+        "Knowledge Platform",
+        "Research system",
+        "Volunteer system",
+        "Coalition system",
+        "County, City, and Neighborhood systems",
+        "AI infrastructure",
+        "Administrative tools"
+      ]
+    },
+    "phase_two": {
+      "id": "county_milestone",
+      "title": "75 Counties by October 1",
+      "target_date": "2026-10-01",
+      "days_remaining": 84,
+      "scope": [
+        "Completed county profile for all 75 counties",
+        "Education Leader or active recruitment contact per county",
+        "County dashboard operational in Mission Control",
+        "Initial local resource information",
+        "Development plan for continued growth per county"
+      ]
+    },
+    "phase_three": {
+      "id": "organizational_readiness",
+      "title": "Organizational Readiness",
+      "target_date": "2027-01-01",
+      "days_remaining": 176,
+      "focus": [
+        "Recruiting Education Leaders",
+        "Expanding county coverage",
+        "Growing city leadership",
+        "Coalition development",
+        "Volunteer training",
+        "Community conversations",
+        "Research expansion",
+        "Public testing",
+        "User feedback",
+        "System refinement",
+        "Launch certification",
+        "City and neighborhood systems mature",
+        "Statewide volunteer development expanded"
+      ]
+    },
+    "sequence": "Software Complete (Jul 11, 2026) \u2192 75 Counties (Oct 1, 2026) \u2192 Organizational Readiness (Jan 2027)",
+    "build_out_months_approx": 6,
+    "county_milestone": {
+      "target_date": "2026-10-01",
+      "counties_total": 75,
+      "days_remaining": 84,
+      "label": "75-by-October-1 Milestone"
+    }
+  },
+  "software_completion_date": "2026-07-11",
+  "county_milestone_date": "2026-10-01",
+  "organizational_readiness_date": "2027-01-01",
+  "days_to_software": 2,
+  "days_to_county_milestone": 84,
+  "days_to_organizational": 176,
+  "pwa_capabilities": [
+    "home_screen_install",
+    "fast_startup",
+    "offline_capabilities",
+    "push_notifications",
+    "background_sync",
+    "app_like_experience"
+  ],
+  "pwa_capability_count": 6,
+  "mobile_dashboard_widgets": [
+    "todays_schedule",
+    "upcoming_events",
+    "learning_progress",
+    "volunteer_assignments",
+    "community_conversations",
+    "county_updates",
+    "messages",
+    "personal_ai"
+  ],
+  "mobile_volunteer_actions": [
+    "view_assignments",
+    "accept_projects",
+    "navigate_to_events",
+    "access_training",
+    "read_resources",
+    "check_schedules",
+    "message_mentors",
+    "record_community_activity"
+  ],
+  "education_leader_mobile_tools": [
+    "launch_presentations",
+    "discussion_guides",
+    "research_summaries",
+    "check_attendance",
+    "schedule_follow_ups",
+    "recruit_volunteers",
+    "ai_q_and_a"
+  ],
+  "offline_cache_resources": [
+    "downloaded_lessons",
+    "presentation_materials",
+    "county_profiles",
+    "volunteer_assignments",
+    "event_agendas",
+    "community_conversation_guides"
+  ],
+  "qr_code_targets": [
+    "course_enrollment",
+    "community_conversations",
+    "county_pages",
+    "city_pages",
+    "volunteer_sign_up",
+    "organization_profiles",
+    "presentation_materials"
+  ],
+  "qr_code_target_count": 7,
+  "event_check_in_types": [
+    "qr_code_check_in",
+    "attendance_tracking",
+    "volunteer_sign_in",
+    "presentation_attendance",
+    "academy_participation",
+    "organization_events"
+  ],
+  "location_recommendations": [
+    "nearby_conversations",
+    "county_events",
+    "academy_classes",
+    "volunteer_opportunities",
+    "partner_organizations",
+    "educational_resources"
+  ],
+  "mobile_ai_capabilities": [
+    "questions",
+    "research",
+    "scheduling",
+    "directions",
+    "volunteer_guidance",
+    "presentation_preparation",
+    "county_information",
+    "community_recommendations"
+  ],
+  "mobile_notification_types": [
+    "event_reminders",
+    "volunteer_assignments",
+    "course_reminders",
+    "research_updates",
+    "community_announcements",
+    "leadership_messages",
+    "mission_control_alerts"
+  ],
+  "mobile_media_actions": [
+    "watch_videos",
+    "listen_podcasts",
+    "download_presentations",
+    "share_resources",
+    "read_research",
+    "bookmark_materials"
+  ],
+  "field_data_collection": [
+    "community_conversations",
+    "presentation_attendance",
+    "volunteer_interest",
+    "local_resource_updates",
+    "organization_information",
+    "community_observations"
+  ],
+  "travel_support_features": [
+    "driving_directions",
+    "multi_stop_itineraries",
+    "regional_travel",
+    "event_routing",
+    "county_visit_planning"
+  ],
+  "mobile_accessibility": [
+    "large_touch_targets",
+    "voice_input",
+    "screen_readers",
+    "high_contrast",
+    "offline_reading",
+    "simple_navigation"
+  ],
+  "mobile_accessibility_count": 6,
+  "mc_mobile_integration_metrics": [
+    "mobile_usage",
+    "offline_usage",
+    "qr_scans",
+    "field_activity",
+    "volunteer_check_ins",
+    "presentation_attendance",
+    "location_engagement",
+    "event_participation"
+  ],
+  "organizational_goals": {
+    "counties_total": 75,
+    "target_cities": 250,
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000
+  },
+  "mobile_system_chain": [
+    "mission_control",
+    "volunteer_network",
+    "community_education_academy",
+    "county_operating_system",
+    "city_operating_system",
+    "neighborhood_operating_system",
+    "calendar_brain",
+    "relationship_intelligence",
+    "knowledge_platform",
+    "communications",
+    "ai_localbrains"
+  ],
+  "institutional_systems": [
+    "technical_foundation",
+    "mission_control",
+    "localbrains",
+    "knowledge_platform",
+    "research_institute",
+    "community_education_academy",
+    "volunteer_network",
+    "coalition_network",
+    "local_operating_systems",
+    "communication_platform",
+    "institutional_time_intelligence",
+    "institutional_relationship_intelligence",
+    "institutional_analytics",
+    "institutional_automation",
+    "public_digital_experience",
+    "mobile_field_operations"
+  ],
+  "mc_dashboard": "/mission-control/outreach.html",
+  "packages_completed": 22,
+  "packages_total": 50,
+  "packages_complete_pct": 44,
+  "engineering_note": "Doctrinal IMP-22 Mobile PWA; engineering IMP-22 is Prisma schema knowledge entities",
+  "status": "documented",
+  "implemented": false
+}

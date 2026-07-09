@@ -634,6 +634,33 @@
       "number": 22,
       "id": "IMP-22",
       "title": "Master Mobile Experience, Progressive Web App & Field Operations Platform",
+      "status": "documented"
+    }
+  },
+  "mobile_pwa": {
+    "title": "Master Mobile Experience, Progressive Web App & Field Operations Platform",
+    "package": "Implementation Package 22 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_22_MOBILE_PWA.md",
+    "manifest": "/data/mobile-pwa-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Mobile is a first-class experience \u2014 design for real life in the field",
+    "pwa_capability_count": 6,
+    "qr_code_target_count": 7,
+    "mobile_accessibility_count": 6,
+    "mobile_dashboard_widget_count": 8,
+    "field_data_collection_count": 6,
+    "packages_completed": 22,
+    "packages_complete_pct": 44,
+    "county_milestone_date": "2026-10-01",
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000,
+    "mc_dashboard": "/mission-control/outreach.html",
+    "engineering_note": "Doctrinal IMP-22 Mobile PWA; engineering IMP-22 is Prisma schema knowledge entities",
+    "next_package": {
+      "number": 23,
+      "id": "IMP-23",
+      "title": "Master Document Management, Digital Library & Institutional Archive",
       "status": "specified"
     }
   },
@@ -2036,7 +2063,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 21,
+        "current": 22,
         "status": "partial"
       },
       {
@@ -2173,6 +2200,12 @@
       },
       {
         "id": "CIP-D25",
+        "indicator": "Mobile PWA & Field Ops (IMP-22)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D26",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -2227,7 +2260,7 @@
     "days_remaining": 176,
     "implementation_package_readiness_pct": 100,
     "steps_total": 50,
-    "steps_documented": 21,
+    "steps_documented": 22,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,
