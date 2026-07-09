@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#21** | **Repository Blueprint** | **1.25.0** | **✅ Complete** | [021](021-repository-folder-structure.md) · [/mission-control/repository.html](../mission-control/repository.html) |
 | **#20** | **Platform Blueprint** | **1.24.0** | **✅ Complete** | [020](020-master-platform-blueprint.md) · [/mission-control/platform.html](../mission-control/platform.html) |
 | **#19** | **Knowledge Atlas** | **1.23.0** | **✅ Complete** | [019](019-knowledge-atlas.md) · [/mission-control/atlas.html](../mission-control/atlas.html) |
 | **#18** | **Facts Framework** | **1.22.0** | **✅ Complete** | [018](018-citizens-united-facts-framework.md) · [/mission-control/facts.html](../mission-control/facts.html) |
@@ -20,10 +21,11 @@
 | **#5** | **Site Architecture** | **1.9.0** | **✅ Complete** | [005](005-master-site-architecture.md) |
 | **#4** | **Phase Registry** | **1.8.0** | **✅ Complete** | [004](004-master-phase-registry.md) |
 
-## Platform Stack (Builds #4–#20)
+## Platform Stack (Builds #4–#21)
 
 | Layer | Route | Focus |
 |-------|-------|-------|
+| **Repository Blueprint** | `/mission-control/repository.html` | **GitHub & folder structure · v1 target** |
 | Phase Registry | `/mission-control/phases.html` | Project phases |
 | Site Architecture | `/mission-control/architecture.html` | Information architecture (IA) |
 | **Platform Blueprint** | `/mission-control/platform.html` | **Technical architecture · v1 system** |

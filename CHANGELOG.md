@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.25.0] - 2026-07-09 — Build #21 Repository Blueprint
+
+### GitHub Repository & Folder Structure Blueprint
+- **Repository Architecture v1.0** — branches, target src/ layout, docs taxonomy
+- 4 workstreams mapped to current flat v0 layout (28% structure readiness)
+- Migration map, target scripts, GitHub labels & milestones
+- `.env.example` added; physical migration deferred
+- MC dashboard: `/mission-control/repository.html`
+
 ## [1.24.0] - 2026-07-09 — Build #20 Platform Blueprint
 
 ### Master Platform Blueprint & Technical Architecture

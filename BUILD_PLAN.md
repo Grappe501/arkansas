@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.24.0 · **Platform:** [/mission-control/platform.html](/mission-control/platform.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #20:** ✅ Platform Blueprint · **Build #19:** ✅ Knowledge Atlas · **Build #18:** ✅ Facts Framework  
+**Current version:** 1.25.0 · **Repository:** [/mission-control/repository.html](/mission-control/repository.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #21:** ✅ Repository Blueprint · **Build #20:** ✅ Platform Blueprint · **Build #19:** ✅ Knowledge Atlas  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -264,8 +264,28 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **18** | **Facts Framework** | **✅ v1.22.0** |
 | **19** | **Knowledge Atlas** | **✅ v1.23.0** |
 | **20** | **Platform Blueprint** | **✅ v1.24.0** |
+| **21** | **Repository Structure** | **✅ v1.25.0** |
 
-**Next:** Build #21 — Repository & folder structure *(implementation artifacts wave)*.
+**Next:** Build #22 — Database schema and entity-relationship model.
+
+---
+
+## Phase 21 — Repository Structure (Build #21) ★ NEW
+
+*GitHub and folder structure blueprint before framework migration.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| R1 | Repository Blueprint v1.0 | ✅ | `data/repository-blueprint.json` |
+| R2 | Four workstreams mapped | ✅ | Current paths documented |
+| R3 | Branch structure (main/develop/feature/content) | ✅ | |
+| R4 | Target src/ and docs/ taxonomy | ✅ | Migration map |
+| R5 | Target scripts and package.json | ✅ | |
+| R6 | .env.example | ✅ | Placeholders only |
+| R7 | GitHub labels & milestones | ✅ | Defined, not yet in remote |
+| R8 | MC repository dashboard | ✅ | `/mission-control/repository.html` |
+
+**Note:** Physical migration to `src/` not executed — blueprint only (28% structure readiness).
 
 ---
 
@@ -393,7 +413,7 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#18**~~ | ~~Citizens United Facts Framework~~ ✅ Done |
 | ~~**#19**~~ | ~~Knowledge Atlas & Learning Paths~~ ✅ Done |
 | ~~**#20**~~ | ~~Master Platform Blueprint & Technical Architecture~~ ✅ Done |
-| **#21** | **Repository & folder structure** |
+| ~~**#21**~~ | ~~Repository & folder structure~~ ✅ Done |
 | **#22** | **Database schema and entity-relationship model** |
 | **#23** | **Wireframes for every major screen** |
 | **#24** | **Component specifications with props/states** |

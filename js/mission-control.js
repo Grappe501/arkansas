@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Repository Blueprint <a href="/mission-control/repository.html" class="mc-inline-link">Folder Structure →</a></h2>
+    <p class="mc-bar-note">Build #21 — Branch model, target src/ layout, docs taxonomy, scripts, GitHub labels &amp; milestones.</p>
     <h2 class="mc-section-title">Platform Architecture <a href="/mission-control/platform.html" class="mc-inline-link">Technical Blueprint →</a></h2>
     <p class="mc-bar-note">Build #20 — Stack, data, security, v1 success criteria, implementation roadmap (#21–#25).</p>
     <h2 class="mc-section-title">Knowledge Atlas <a href="/mission-control/atlas.html" class="mc-inline-link">Learning Worlds →</a></h2>
@@ -1995,6 +1997,104 @@ async function initPlatformArchitectureBlueprint() {
   initDevConsole(mc);
 }
 
+async function initRepositoryBlueprint() {
+  const root = document.getElementById('mc-repository-root');
+  if (!root) return;
+
+  const [bpRes, mcRes] = await Promise.all([
+    fetch('/data/repository-blueprint.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const bp = await bpRes.json();
+  const mc = await mcRes.json();
+  const s = bp.summary;
+  const cur = bp.current_layout;
+
+  const workstreamRows = bp.workstreams.map(w => `
+    <tr class="${w.status === 'live' ? 'mc-table__row--approved' : ''}">
+      <td>${w.title}</td><td>${w.status}</td>
+      <td>${w.current_paths.join(', ')}</td>
+    </tr>`).join('');
+
+  const docsRows = bp.docs_folders.map(d => `
+    <tr><td><code>${d.path}</code></td><td>${d.status}</td><td>${d.current_mapping}</td></tr>`).join('');
+
+  const srcRows = bp.src_folders.map(f => `
+    <tr><td><code>${f.path}</code></td><td>${f.status}</td><td>${f.current_mapping}</td></tr>`).join('');
+
+  const scriptRows = bp.target_scripts.map(sc => `
+    <tr><td><code>${sc.name}</code></td><td>${sc.status}</td><td>${sc.current_equivalent || '—'}</td></tr>`).join('');
+
+  const migRows = bp.migration_map.map(m => `
+    <tr><td>${m.from}</td><td>${m.to}</td><td>${m.status}</td></tr>`).join('');
+
+  const milestoneRows = bp.github_milestones.map(m => `
+    <tr class="${m.status === 'complete' ? 'mc-table__row--approved' : ''}">
+      <td>${m.number}</td><td>${m.title}</td><td>${m.status}</td>
+    </tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Repository Blueprint</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #21 · ${bp.title}</p>
+      <h1>GitHub &amp; Folder Structure</h1>
+      <p class="mc-header__question">${bp.philosophy}</p>
+    </header>
+    <section class="mc-card">
+      <h3>Repository Names</h3>
+      <p class="mc-bar-note"><strong>Recommended:</strong> <code>${bp.repository_names.recommended}</code></p>
+      <p class="mc-bar-note"><strong>Current remote:</strong> <a href="https://github.com/${bp.repository_names.current_remote}">${bp.repository_names.current_remote}</a> · Local: <code>${bp.repository_names.current_local}</code></p>
+      <p class="mc-bar-note"><em>${s.note}</em></p>
+    </section>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Workstreams</div><div class="mc-stat__value">${s.workstreams}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Structure readiness</div><div class="mc-stat__value">${s.structure_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Current pattern</div><div class="mc-stat__value" style="font-size:1rem">${cur.pattern}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Has src/</div><div class="mc-stat__value">${cur.has_src ? 'Yes' : 'No'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Scripts</div><div class="mc-stat__value">${cur.script_count} ${cur.scripts_language}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Migration done</div><div class="mc-stat__value">${s.migration_executed ? 'Yes' : 'No'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Four Workstreams</h2>
+    <table class="mc-table"><thead><tr><th>Workstream</th><th>Status</th><th>Current paths</th></tr></thead><tbody>${workstreamRows}</tbody></table>
+    <h2 class="mc-section-title">Branch Structure</h2>
+    <table class="mc-table"><thead><tr><th>Branch</th><th>Purpose</th><th>Status</th></tr></thead>
+      <tbody>${bp.branch_structure.map(b => `<tr><td><code>${b.name}</code></td><td>${b.purpose}</td><td>${b.status}</td></tr>`).join('')}</tbody></table>
+    <h2 class="mc-section-title">Current Layout (v0)</h2>
+    <p class="mc-bar-note">${cur.description}</p>
+    <p class="mc-bar-note">Root folders: ${cur.root_folders.join(', ')}</p>
+    <h2 class="mc-section-title">Target docs/ Taxonomy</h2>
+    <table class="mc-table"><thead><tr><th>Folder</th><th>Status</th><th>Current mapping</th></tr></thead><tbody>${docsRows}</tbody></table>
+    <h2 class="mc-section-title">Target src/ Structure</h2>
+    <table class="mc-table"><thead><tr><th>Folder</th><th>Status</th><th>Current mapping</th></tr></thead><tbody>${srcRows}</tbody></table>
+    <h2 class="mc-section-title">Target Scripts</h2>
+    <table class="mc-table"><thead><tr><th>Script</th><th>Status</th><th>Current equivalent</th></tr></thead><tbody>${scriptRows}</tbody></table>
+    <h2 class="mc-section-title">Package Scripts</h2>
+    <p class="mc-bar-note"><strong>Current:</strong> <code>${Object.keys(bp.package_scripts.current).join(', ')}</code></p>
+    <p class="mc-bar-note"><strong>Target:</strong> dev, build, check, mission-control, content:validate, sources:validate, routes:validate</p>
+    <h2 class="mc-section-title">Netlify</h2>
+    <p class="mc-bar-note"><strong>Current:</strong> publish <code>${bp.netlify.current.publish}</code> — ${bp.netlify.current.note}</p>
+    <p class="mc-bar-note"><strong>Target:</strong> <code>npm run build</code> → <code>${bp.netlify.target.publish}</code> (Node ${bp.netlify.target.node_version})</p>
+    <h2 class="mc-section-title">Migration Map</h2>
+    <table class="mc-table"><thead><tr><th>From</th><th>To</th><th>Status</th></tr></thead><tbody>${migRows}</tbody></table>
+    <h2 class="mc-section-title">GitHub Labels (${bp.github_labels.length})</h2>
+    <p class="mc-bar-note">${bp.github_labels.map(l => `<code>${l}</code>`).join(' ')}</p>
+    <h2 class="mc-section-title">GitHub Milestones</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>Milestone</th><th>Status</th></tr></thead><tbody>${milestoneRows}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${bp.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${bp.recommended_next_build.number} — ${bp.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${bp.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/REPOSITORY_ARCHITECTURE.md">REPOSITORY_ARCHITECTURE.md</a> ·
+      <a href="/data/repository-blueprint.json">JSON</a> ·
+      <a href="/mission-control/platform.html">Platform Blueprint</a> ·
+      <a href="https://github.com/${bp.repository_names.current_remote}">GitHub</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -2014,4 +2114,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initFactsFrameworkBlueprint();
   initKnowledgeAtlasBlueprint();
   initPlatformArchitectureBlueprint();
+  initRepositoryBlueprint();
 });

@@ -609,8 +609,8 @@
     "Brand & Identity System deferred \u2014 working titles in use"
   ],
   "recommended_next_build": {
-    "number": 21,
-    "title": "Repository & Folder Structure",
-    "note": "Implementation artifacts wave \u2014 folder layout before production code."
+    "number": 22,
+    "title": "Database Schema and Entity-Relationship Model",
+    "note": "ERD before framework migration to src/."
   }
 }

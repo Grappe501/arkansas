@@ -1,6 +1,6 @@
 {
-  "version": "1.24.0",
-  "build": 20,
+  "version": "1.25.0",
+  "build": 21,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,16 +9,16 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 20,
+    "overall_completion": 21,
     "current_build": {
-      "number": 20,
-      "title": "Master Platform Blueprint & Technical Architecture"
-    },
-    "active_phase": "Technical Architecture \u2014 Platform Blueprint",
-    "last_completed": "Citizens United Knowledge Atlas & Learning Path System",
-    "next_build": {
       "number": 21,
-      "title": "Repository & folder structure"
+      "title": "GitHub Repository & Folder Structure Blueprint"
+    },
+    "active_phase": "Implementation Artifacts \u2014 Repository Structure",
+    "last_completed": "Master Platform Blueprint & Technical Architecture",
+    "next_build": {
+      "number": 22,
+      "title": "Database schema and entity-relationship model"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
@@ -34,6 +34,7 @@
     "facts_framework_readiness": 12,
     "knowledge_atlas_readiness": 18,
     "platform_architecture_readiness": 20,
+    "repository_structure_readiness": 28,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -41,8 +42,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 20,
-      "note": "Platform blueprint live \u2014 60% arch readiness, v1 success 48%. Implementation wave #21\u2013#25 next."
+      "value": 21,
+      "note": "Repository blueprint live \u2014 28% structure readiness. Migration not executed. DB schema next."
     },
     {
       "id": "constitution",
@@ -206,6 +207,13 @@
       "value": 20,
       "max": 100,
       "note": "Stack 2 live / 2 partial \u2014 honest v1 criteria at 48%."
+    },
+    {
+      "id": "repository",
+      "label": "Repository Structure",
+      "value": 28,
+      "max": 100,
+      "note": "Target src/ layout defined \u2014 flat v0 layout still in use."
     }
   ],
   "public_readiness": {
@@ -618,6 +626,12 @@
       "id": "platform",
       "label": "Platform Blueprint",
       "href": "/mission-control/platform.html",
+      "status": "complete"
+    },
+    {
+      "id": "repository",
+      "label": "Repository Blueprint",
+      "href": "/mission-control/repository.html",
       "status": "complete"
     }
   ],
@@ -1645,6 +1659,54 @@
   ],
   "builds": [
     {
+      "number": 21,
+      "title": "GitHub Repository & Folder Structure Blueprint",
+      "version": "1.25.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Repository Architecture v1.0 \u2014 branches, folder structure, scripts, GitHub labels/milestones",
+      "summary": "4 workstreams, target src/ layout, migration map, 28% readiness \u2014 blueprint only, no physical migration.",
+      "files_created": [
+        "data/repository-blueprint.json",
+        "docs/REPOSITORY_ARCHITECTURE.md",
+        "builds/021-repository-folder-structure.md",
+        "mission-control/repository.html",
+        ".env.example",
+        "scripts/gen-repository-blueprint.py",
+        "scripts/update-mc-build21.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml",
+        "CONTRIBUTING.md"
+      ],
+      "pages_created": [
+        "/mission-control/repository.html"
+      ],
+      "decisions_made": [
+        "Recommended repo name: citizens-united-facts",
+        "Target: src/app, src/components, src/data, organized docs/",
+        "Current v0 flat layout documented with honest migration map",
+        "Physical migration deferred \u2014 blueprint before restructure",
+        ".env.example added with placeholders only"
+      ],
+      "open_questions": [
+        "Rename GitHub remote to citizens-united-facts?",
+        "Next.js vs other framework?"
+      ],
+      "risks": [
+        "28% structure readiness \u2014 migration not executed"
+      ],
+      "next_recommended": 22,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/repository.html",
+      "review_status": "complete"
+    },
+    {
       "number": 20,
       "title": "Master Platform Blueprint & Technical Architecture",
       "version": "1.24.0",
@@ -2506,19 +2568,19 @@
     }
   ],
   "briefing": {
-    "what_built": "Platform Blueprint v1.0 \u2014 complete technical architecture before production code",
-    "building_now": "Constitutional foundation complete (Builds 1\u201320) \u2014 implementation artifacts next (#21\u2013#25)",
+    "what_built": "Repository Blueprint v1.0 \u2014 target folder structure and GitHub workflow",
+    "building_now": "Implementation artifacts wave \u2014 database schema next (Build #22)",
     "blocked": [
-      "No database",
-      "No frontend framework",
-      "Public official sharing automation"
+      "No src/ migration",
+      "No validation .mjs scripts",
+      "develop branch not standard"
     ],
     "ready_public": [
-      "Platform MC dashboard",
-      "v1 success criteria",
-      "Implementation roadmap"
+      "Repository MC dashboard",
+      "Migration map",
+      ".env.example"
     ],
-    "next": "Build #21 \u2014 Repository & folder structure"
+    "next": "Build #22 \u2014 Database schema and ERD"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -2678,5 +2740,16 @@
     "mc_systems_live": 6,
     "philosophy": "Build once. Expand forever.",
     "next_implementation_builds": "21\u201325"
+  },
+  "repository_blueprint": "/data/repository-blueprint.json",
+  "repository_dashboard": "/mission-control/repository.html",
+  "repository_inventory": {
+    "readiness_score": 28,
+    "structure_readiness_pct": 28,
+    "migration_executed": false,
+    "current_pattern": "flat_static_v0",
+    "recommended_repo_name": "citizens-united-facts",
+    "workstreams": 4,
+    "target_src_folders": 7
   }
 }

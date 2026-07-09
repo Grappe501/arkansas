@@ -3,6 +3,7 @@
 ## Repository
 
 - **GitHub:** [Grappe501/arkansas](https://github.com/Grappe501/arkansas)
+- **Recommended name:** `citizens-united-facts` (see [Repository Blueprint](/mission-control/repository.html))
 - **Live:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
 ## Branches
