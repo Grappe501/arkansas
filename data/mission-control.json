@@ -1,6 +1,6 @@
 {
-  "version": "1.36.0",
-  "build": 32,
+  "version": "1.37.0",
+  "build": 33,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,21 +9,21 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 32,
+    "overall_completion": 33,
     "current_build": {
-      "number": 32,
-      "title": "Citizens United Facts Educational Campaign Operating System"
-    },
-    "active_phase": "Multi-Year Strategic Growth \u2014 Horizon One: Build the Institution",
-    "last_completed": "Arkansas County Operating System",
-    "next_build": {
       "number": 33,
+      "title": "Citizens United Facts Research Encyclopedia & Knowledge Library"
+    },
+    "active_phase": "Knowledge Institution \u2014 Encyclopedia Architecture",
+    "last_completed": "Educational Campaign Operating System",
+    "next_build": {
+      "number": 34,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
-    "content_readiness": 20,
-    "research_readiness": 22,
+    "content_readiness": 22,
+    "research_readiness": 24,
     "data_viz_readiness": 2,
     "signup_funnel_readiness": 22,
     "civic_action_readiness": 32,
@@ -32,7 +32,7 @@
     "route_inventory_readiness": 18,
     "component_registry_readiness": 22,
     "facts_framework_readiness": 12,
-    "knowledge_atlas_readiness": 18,
+    "knowledge_atlas_readiness": 20,
     "platform_architecture_readiness": 20,
     "repository_structure_readiness": 28,
     "database_schema_readiness": 35,
@@ -46,6 +46,7 @@
     "outreach_readiness": 22,
     "county_os_readiness": 28,
     "campaign_os_readiness": 34,
+    "encyclopedia_readiness": 19,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -53,8 +54,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 32,
-      "note": "Campaign OS live \u2014 Horizon 1 active, 3/5 H1 indicators met."
+      "value": 33,
+      "note": "Encyclopedia live \u2014 38/400 entries, 9.5% catalog completion."
     },
     {
       "id": "constitution",
@@ -302,6 +303,13 @@
       "value": 34,
       "max": 100,
       "note": "Horizon One at 43% \u2014 master roadmap defined, engagement metrics at zero."
+    },
+    {
+      "id": "encyclopedia",
+      "label": "Encyclopedia & Knowledge Library",
+      "value": 19,
+      "max": 100,
+      "note": "6 fully sourced \u2014 9 categories, KG-aligned, search planned."
     }
   ],
   "public_readiness": {
@@ -786,6 +794,12 @@
       "id": "campaign_os",
       "label": "Educational Campaign OS",
       "href": "/mission-control/campaign-os.html",
+      "status": "complete"
+    },
+    {
+      "id": "encyclopedia",
+      "label": "Encyclopedia & Knowledge Library",
+      "href": "/mission-control/encyclopedia.html",
       "status": "complete"
     }
   ],
@@ -1812,6 +1826,55 @@
     }
   ],
   "builds": [
+    {
+      "number": 33,
+      "title": "Citizens United Facts Research Encyclopedia & Knowledge Library",
+      "version": "1.37.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Encyclopedia Architecture v1.0 \u2014 living reference connected through knowledge graph",
+      "summary": "9 categories, 38/400 entries; 19% readiness.",
+      "files_created": [
+        "data/encyclopedia-knowledge-library.json",
+        "docs/ENCYCLOPEDIA_ARCHITECTURE.md",
+        "builds/033-encyclopedia-knowledge-library.md",
+        "mission-control/encyclopedia.html",
+        "scripts/gen-encyclopedia-knowledge-library.py",
+        "scripts/update-mc-build33.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/encyclopedia.html"
+      ],
+      "decisions_made": [
+        "9 encyclopedia categories (100\u2013900) aligned to KG node types",
+        "9-section entry structure for every encyclopedia page",
+        "Completion score tracks planned, published, sourced, cross-links",
+        "KG registry (38 nodes) as interim published entry source",
+        "Canonical /encyclopedia/[category]/[slug] defined \u2014 not built",
+        "26% honest readiness \u2014 architecture live, 7.6% catalog published"
+      ],
+      "open_questions": [
+        "When to migrate KG nodes to canonical encyclopedia routes?",
+        "Glossary scale for Category 700?"
+      ],
+      "risks": [
+        "Category 700 empty",
+        "Only 7 entries fully sourced",
+        "Search not implemented"
+      ],
+      "next_recommended": 34,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/encyclopedia.html",
+      "review_status": "complete"
+    },
     {
       "number": 32,
       "title": "Citizens United Facts Educational Campaign Operating System",
@@ -3248,20 +3311,20 @@
     }
   ],
   "briefing": {
-    "what_built": "Campaign OS v1.0 \u2014 4 horizons, annual cycle, quarterly framework, innovation & risk architecture",
-    "building_now": "Horizon One \u2014 Build the Institution (3/5 success indicators met)",
+    "what_built": "Encyclopedia v1.0 \u2014 9 categories, completion score, KG relationship graph",
+    "building_now": "Knowledge library \u2014 38 KG nodes mapped, 400 entries planned",
     "blocked": [
-      "0 coalition organizations",
-      "0 Education Leaders enrolled",
-      "Quarterly reports not automated"
+      "Canonical encyclopedia routes not built",
+      "Search not implemented",
+      "Category 700 (Terms) empty"
     ],
     "ready_public": [
-      "Campaign OS MC dashboard",
-      "4-horizon roadmap",
-      "Annual cycle",
-      "Institutional memory links"
+      "Encyclopedia MC dashboard",
+      "9-category architecture",
+      "Citation standards",
+      "KG alignment"
     ],
-    "next": "Build #33 \u2014 Component specifications with props/states"
+    "next": "Build #34 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -3579,5 +3642,28 @@
     "quarterly_reports_live": false,
     "innovation_queue_live": false,
     "annual_summit_live": false
+  },
+  "encyclopedia_knowledge_library": "/data/encyclopedia-knowledge-library.json",
+  "encyclopedia_dashboard": "/mission-control/encyclopedia.html",
+  "encyclopedia_inventory": {
+    "readiness_score": 19,
+    "categories_total": 9,
+    "entries_planned": 400,
+    "entries_published": 38,
+    "entries_fully_sourced": 6,
+    "completion_score": {
+      "entries_planned": 400,
+      "entries_published": 38,
+      "entries_fully_sourced": 6,
+      "entries_under_review": 7,
+      "entries_needing_updates": 4,
+      "cross_link_completeness_pct": 53,
+      "reading_level_completeness_pct": 9,
+      "overall_completion_pct": 9.5,
+      "avg_entry_completion_pct": 15,
+      "orphan_entries": 4
+    },
+    "canonical_routes_live": false,
+    "encyclopedia_search_live": false
   }
 }

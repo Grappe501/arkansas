@@ -282,7 +282,7 @@ out = {
         'Risk management partial — no automated risk dashboard',
     ],
     'recommended_next_build': {
-        'number': 33,
+        'number': 34,
         'title': 'Component Specifications with Props/States',
         'note': 'Map strategic growth dashboards and horizon indicators to COMP-* components from Build #17.',
     },

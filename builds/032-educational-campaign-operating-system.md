@@ -50,6 +50,6 @@ Built as an institution rather than a project — institutions have missions.
 
 ---
 
-## Recommended Next: Build #33 — Component Specifications with Props/States
+## Recommended Next: Build #34 — Component Specifications with Props/States
 
 Map horizon indicators and strategic dashboards to COMP-* components from Build #17.

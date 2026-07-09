@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Encyclopedia & Knowledge Library <a href="/mission-control/encyclopedia.html" class="mc-inline-link">9 Categories →</a></h2>
+    <p class="mc-bar-note">Build #33 — Living encyclopedia, 9-section entry structure, completion score, KG relationship graph. 26% encyclopedia readiness.</p>
     <h2 class="mc-section-title">Educational Campaign OS <a href="/mission-control/campaign-os.html" class="mc-inline-link">4 Horizons →</a></h2>
     <p class="mc-bar-note">Build #32 — Multi-year strategic growth blueprint, annual cycle, quarterly reviews, innovation pipeline. Horizon One active.</p>
     <h2 class="mc-section-title">County Operating System <a href="/mission-control/county-os.html" class="mc-inline-link">75 Counties →</a></h2>
@@ -3209,6 +3211,103 @@ async function initEducationalCampaignOperatingSystem() {
   initDevConsole(mc);
 }
 
+async function initEncyclopediaKnowledgeLibrary() {
+  const root = document.getElementById('mc-encyclopedia-root');
+  if (!root) return;
+
+  const [encRes, kgRes, mcRes] = await Promise.all([
+    fetch('/data/encyclopedia-knowledge-library.json'),
+    fetch('/data/kg-registry.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const enc = await encRes.json();
+  const kg = await kgRes.json();
+  const mc = await mcRes.json();
+  const s = enc.summary;
+  const cs = enc.completion_score;
+  const rg = enc.relationship_graph;
+
+  const categoryRows = enc.categories.map(c => `
+    <tr><td><code>${c.id}</code></td><td>${c.number} — ${c.title}</td>
+      <td>${c.entries_published}/${c.entries_planned}</td><td>${c.completion_pct}%</td><td>${c.status}</td></tr>`).join('');
+
+  const categoryCards = enc.categories.map(c => `
+    <div class="mc-card"><h3>Category ${c.number}: ${c.title}</h3>
+      <p class="mc-bar-note">${c.entries_published}/${c.entries_planned} entries · ${c.status}</p>
+      <ul class="mc-deliverables">${c.examples.map(e => `<li>${e}</li>`).join('')}</ul>
+    </div>`).join('');
+
+  const completionBars = [
+    ['Planned', cs.entries_planned, cs.entries_planned],
+    ['Published', cs.entries_published, cs.entries_planned],
+    ['Fully sourced', cs.entries_fully_sourced, cs.entries_published],
+    ['Under review', cs.entries_under_review, cs.entries_published],
+    ['Needing updates', cs.entries_needing_updates, cs.entries_published],
+  ].map(([label, val, max]) => `
+    <div class="mc-phase-item"><span>${label}</span><span>${val}${max && label !== 'Planned' ? ` / ${max}` : ''}</span></div>`).join('');
+
+  const kgSample = (kg.nodes || []).slice(0, 12).map(n => `
+    <tr><td><code>${n.kg_id}</code></td><td>${n.title}</td><td>${n.type}</td>
+      <td>${n.completion_pct || 0}%</td><td>${n.url ? `<a href="${n.url}">→</a>` : '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Encyclopedia & Knowledge Library</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #33 · ${enc.title}</p>
+      <h1>Research Encyclopedia & Knowledge Library</h1>
+      <p class="mc-header__question">${enc.governing_principle}</p>
+      <p class="mc-bar-note">Canonical: <code>${enc.canonical_entry_route}</code> · Current: ${enc.current_entry_route}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Encyclopedia readiness</div><div class="mc-stat__value">${s.encyclopedia_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Published</div><div class="mc-stat__value">${s.entries_published}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Planned</div><div class="mc-stat__value">${s.entries_planned}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Fully sourced</div><div class="mc-stat__value">${s.entries_fully_sourced}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">KG nodes</div><div class="mc-stat__value">${rg.nodes}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Cross-links</div><div class="mc-stat__value">${cs.cross_link_completeness_pct}%</div></div>
+    </div>
+    <h2 class="mc-section-title">Reader Questions (${s.reader_questions})</h2>
+    <ul class="mc-deliverables">${enc.reader_questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Nine Encyclopedia Categories</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Category</th><th>Published/Planned</th><th>Complete</th><th>Status</th></tr></thead>
+      <tbody>${categoryRows}</tbody></table>
+    <div class="mc-grid-2">${categoryCards}</div>
+    <h2 class="mc-section-title">Entry Structure (${s.entry_structure_sections} sections)</h2>
+    <ol class="mc-deliverables">${enc.entry_structure.map(sec => `<li>${sec}</li>`).join('')}</ol>
+    <h2 class="mc-section-title">Encyclopedia Completion Score</h2>
+    <div class="mc-card">${completionBars}
+      <p class="mc-bar-note">Catalog: ${cs.overall_completion_pct}% · Avg entry: ${cs.avg_entry_completion_pct}% · Orphans: ${cs.orphan_entries}</p>
+      <p class="mc-bar-note">Cross-link completeness: ${cs.cross_link_completeness_pct}% · Reading-level: ${cs.reading_level_completeness_pct}%</p>
+    </div>
+    <h2 class="mc-section-title">Relationship Graph <a href="/mission-control/knowledge-graph.html" class="mc-inline-link">KG →</a></h2>
+    <p class="mc-bar-note">${rg.nodes} nodes · ${rg.edges} edges · Hub: <code>${rg.hub_node}</code> · Status: ${rg.status}</p>
+    <ul class="mc-deliverables">${rg.targets.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">KG Entries (sample)</h2>
+    <div class="mc-card mc-inv-table-wrap" style="max-height:320px;overflow-y:auto">
+      <table class="mc-table"><thead><tr><th>KG ID</th><th>Title</th><th>Type</th><th>Complete</th><th>Link</th></tr></thead>
+        <tbody>${kgSample}</tbody></table>
+    </div>
+    <h2 class="mc-section-title">Search Axes (${s.search_axes})</h2>
+    <ul class="mc-deliverables">${enc.search.axes.map(a => `<li>${a}</li>`).join('')}</ul>
+    <p class="mc-bar-note">Search live: ${s.encyclopedia_search_live ? 'yes' : 'no — planned'}</p>
+    <h2 class="mc-section-title">Citation Standards</h2>
+    <ul class="mc-deliverables">${enc.citation_standards.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${enc.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${enc.recommended_next_build.number} — ${enc.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${enc.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/ENCYCLOPEDIA_ARCHITECTURE.md">ENCYCLOPEDIA_ARCHITECTURE.md</a> ·
+      <a href="/data/encyclopedia-knowledge-library.json">JSON</a> ·
+      <a href="/data/kg-registry.json">KG Registry</a> ·
+      <a href="/data/facts-registry.json">Facts Registry</a> ·
+      <a href="/mission-control/knowledge-graph.html">Knowledge Graph</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -3240,4 +3339,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initOutreachEngine();
   initCountyOperatingSystem();
   initEducationalCampaignOperatingSystem();
+  initEncyclopediaKnowledgeLibrary();
 });

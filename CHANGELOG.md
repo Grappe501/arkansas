@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.37.0] - 2026-07-09 — Build #33 Encyclopedia & Knowledge Library
+
+### Research Encyclopedia Architecture
+- **Encyclopedia & Knowledge Library v1.0** — 9 categories (100–900), 9-section entry structure
+- Completion score: planned, published, sourced, cross-links, reading-level
+- Aligned to KG registry (38 nodes), facts registry, evidence registry
+- Canonical `/encyclopedia/[category]/[slug]` defined — not built
+- 26% honest readiness — 38/400 entries, Category 700 empty
+- MC dashboard: `/mission-control/encyclopedia.html`
+
 ## [1.36.0] - 2026-07-09 — Build #32 Educational Campaign Operating System
 
 ### Multi-Year Strategic Growth Blueprint

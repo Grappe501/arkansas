@@ -1,0 +1,399 @@
+{
+  "version": "1.0",
+  "build": 33,
+  "updated": "2026-07-09",
+  "title": "Research Encyclopedia & Knowledge Library v1.0",
+  "subtitle": "Encyclopedia Architecture",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/encyclopedia.html",
+  "canonical_entry_route": "/encyclopedia/[category]/[slug]",
+  "current_entry_route": "KG nodes via /explore/ and hall pages",
+  "constitution": "/docs/ENCYCLOPEDIA_ARCHITECTURE.md",
+  "purpose": "Definitive living encyclopedia \u2014 every topic connected through a single knowledge system.",
+  "encyclopedia_philosophy": "Every page answers one question exceptionally well.",
+  "governing_principle": "Help readers see how history, law, Constitution, spending, reform, and civic education fit together.",
+  "reader_questions": [
+    "What is this?",
+    "Why does it matter?",
+    "How is it connected?",
+    "What happened before?",
+    "What happened after?",
+    "Where can I verify it?",
+    "What should I read next?"
+  ],
+  "categories": [
+    {
+      "id": "ENCY-CAT-100",
+      "number": 100,
+      "title": "People",
+      "slug": "people",
+      "examples": [
+        "Supreme Court Justices",
+        "Attorneys involved in the case",
+        "Constitutional scholars",
+        "Members of Congress",
+        "Historical reform figures"
+      ],
+      "entry_fields": [
+        "Biography",
+        "Historical significance",
+        "Timeline",
+        "Related cases",
+        "Related legislation",
+        "Related educational resources",
+        "Primary sources"
+      ],
+      "kg_type": "person",
+      "status": "partial",
+      "entries_planned": 60,
+      "entries_published": 2,
+      "completion_pct": 3
+    },
+    {
+      "id": "ENCY-CAT-200",
+      "number": 200,
+      "title": "Court Cases",
+      "slug": "court-cases",
+      "examples": [
+        "Citizens United v. FEC",
+        "Buckley v. Valeo",
+        "McConnell v. FEC",
+        "Austin v. Michigan Chamber of Commerce",
+        "McCutcheon v. FEC"
+      ],
+      "entry_fields": [
+        "Background",
+        "Legal questions",
+        "Holding",
+        "Majority opinion",
+        "Separate opinions",
+        "Long-term impact",
+        "Related constitutional principles",
+        "Source documents"
+      ],
+      "kg_type": "case",
+      "status": "partial",
+      "entries_planned": 45,
+      "entries_published": 7,
+      "completion_pct": 16
+    },
+    {
+      "id": "ENCY-CAT-300",
+      "number": 300,
+      "title": "Laws",
+      "slug": "laws",
+      "examples": [
+        "Federal statutes",
+        "Arkansas campaign finance statutes",
+        "Historical campaign finance legislation",
+        "Proposed legislation"
+      ],
+      "entry_fields": [
+        "Current law",
+        "Historical law",
+        "Proposals",
+        "Related cases",
+        "Primary sources"
+      ],
+      "kg_type": "law",
+      "status": "partial",
+      "entries_planned": 40,
+      "entries_published": 4,
+      "completion_pct": 10
+    },
+    {
+      "id": "ENCY-CAT-400",
+      "number": 400,
+      "title": "Constitutional Principles",
+      "slug": "constitutional-principles",
+      "examples": [
+        "Freedom of Speech",
+        "Political Speech",
+        "Freedom of Association",
+        "Judicial Review",
+        "Strict Scrutiny",
+        "Independent Expenditures"
+      ],
+      "entry_fields": [
+        "Plain-language explanation",
+        "Progressive depth",
+        "Related cases",
+        "Related events"
+      ],
+      "kg_type": "principle",
+      "status": "partial",
+      "entries_planned": 35,
+      "entries_published": 5,
+      "completion_pct": 14
+    },
+    {
+      "id": "ENCY-CAT-500",
+      "number": 500,
+      "title": "Organizations",
+      "slug": "organizations",
+      "examples": [
+        "Federal Election Commission",
+        "Supreme Court",
+        "Congressional committees",
+        "Educational institutions",
+        "Coalition partners (where appropriate)"
+      ],
+      "entry_fields": [
+        "Role in civic education story",
+        "Related cases",
+        "Related legislation",
+        "Resources"
+      ],
+      "kg_type": "organization",
+      "status": "partial",
+      "entries_planned": 30,
+      "entries_published": 4,
+      "completion_pct": 13
+    },
+    {
+      "id": "ENCY-CAT-600",
+      "number": 600,
+      "title": "Historical Events",
+      "slug": "historical-events",
+      "examples": [
+        "Tillman Act",
+        "Watergate",
+        "Federal Election Campaign Act",
+        "Bipartisan Campaign Reform Act",
+        "Citizens United decision",
+        "Emergence of Super PACs"
+      ],
+      "entry_fields": [
+        "Historical timeline",
+        "Related entries",
+        "Long-term impact",
+        "Primary sources"
+      ],
+      "kg_type": "event",
+      "status": "partial",
+      "entries_planned": 50,
+      "entries_published": 8,
+      "completion_pct": 16
+    },
+    {
+      "id": "ENCY-CAT-700",
+      "number": 700,
+      "title": "Terms & Definitions",
+      "slug": "terms-definitions",
+      "examples": [
+        "PAC",
+        "Super PAC",
+        "Independent Expenditure",
+        "Express Advocacy",
+        "Electioneering Communication",
+        "Disclosure",
+        "Dark Money"
+      ],
+      "entry_fields": [
+        "Simple explanation",
+        "Legal detail",
+        "Related cases",
+        "Related legislation"
+      ],
+      "kg_type": "term",
+      "status": "planned",
+      "entries_planned": 80,
+      "entries_published": 0,
+      "completion_pct": 0
+    },
+    {
+      "id": "ENCY-CAT-800",
+      "number": 800,
+      "title": "Data & Statistics",
+      "slug": "data-statistics",
+      "examples": [
+        "Political spending",
+        "Independent expenditures",
+        "Election cycles",
+        "Outside spending",
+        "Disclosure statistics"
+      ],
+      "entry_fields": [
+        "Methodology",
+        "Limitations",
+        "Primary sources",
+        "Related visualizations"
+      ],
+      "kg_type": "data",
+      "status": "partial",
+      "entries_planned": 25,
+      "entries_published": 2,
+      "completion_pct": 8
+    },
+    {
+      "id": "ENCY-CAT-900",
+      "number": 900,
+      "title": "Reform Ideas",
+      "slug": "reform-ideas",
+      "examples": [
+        "Constitutional amendment proposals",
+        "Federal legislative concepts",
+        "Arkansas legislative concepts",
+        "Ballot initiative concepts",
+        "Transparency proposals"
+      ],
+      "entry_fields": [
+        "Enacted law",
+        "Proposed reforms",
+        "Educational analysis",
+        "Related resources"
+      ],
+      "kg_type": "reform",
+      "status": "partial",
+      "entries_planned": 35,
+      "entries_published": 6,
+      "completion_pct": 17
+    }
+  ],
+  "entry_structure": [
+    "Plain-language summary",
+    "Why it matters",
+    "Historical context",
+    "Detailed explanation",
+    "Related encyclopedia entries",
+    "Primary sources",
+    "Frequently asked questions",
+    "Timeline placement",
+    "Suggested learning path"
+  ],
+  "relationship_graph": {
+    "title": "Encyclopedia Relationship Graph",
+    "status": "partial",
+    "targets": [
+      "People",
+      "Court cases",
+      "Laws",
+      "Historical events",
+      "Constitutional principles",
+      "Data",
+      "Educational resources",
+      "Arkansas-specific content"
+    ],
+    "registry": "/data/kg-registry.json",
+    "nodes": 38,
+    "edges": 40,
+    "hub_node": "KG-CASE-000003",
+    "fully_connected_hub": true
+  },
+  "search": {
+    "title": "Encyclopedia Search",
+    "status": "planned",
+    "axes": [
+      "Keyword",
+      "Topic",
+      "Date",
+      "Court case",
+      "Person",
+      "Organization",
+      "Law",
+      "Constitutional principle",
+      "Arkansas content",
+      "Source type"
+    ],
+    "note": "Educational relevance over simple keyword matching."
+  },
+  "completion_score": {
+    "entries_planned": 400,
+    "entries_published": 38,
+    "entries_fully_sourced": 6,
+    "entries_under_review": 7,
+    "entries_needing_updates": 4,
+    "cross_link_completeness_pct": 53,
+    "reading_level_completeness_pct": 9,
+    "overall_completion_pct": 9.5,
+    "avg_entry_completion_pct": 15,
+    "orphan_entries": 4
+  },
+  "citation_standards": [
+    "Cite authoritative sources",
+    "Identify publication and review dates",
+    "Link to primary documents whenever available",
+    "Distinguish established facts from interpretation",
+    "Explain uncertainty when it exists"
+  ],
+  "kg_type_mapping": {
+    "person": "100",
+    "case": "200",
+    "law": "300",
+    "principle": "400",
+    "organization": "500",
+    "event": "600",
+    "term": "700",
+    "data": "800",
+    "reform": "900"
+  },
+  "future_expansion": {
+    "title": "Future Topic Expansion",
+    "status": "defined",
+    "note": "Same encyclopedia framework accommodates additional civic education subjects.",
+    "current_focus": "Citizens United only"
+  },
+  "related_systems": [
+    {
+      "title": "Knowledge Graph Registry",
+      "route": "/data/kg-registry.json",
+      "build": 11
+    },
+    {
+      "title": "Facts Registry",
+      "route": "/data/facts-registry.json",
+      "build": 18
+    },
+    {
+      "title": "Evidence Registry",
+      "route": "/data/evidence-registry.json",
+      "build": 10
+    },
+    {
+      "title": "Knowledge Atlas",
+      "route": "/mission-control/atlas.html",
+      "build": 19
+    },
+    {
+      "title": "Research Observatory",
+      "route": "/mission-control/research-observatory.html",
+      "build": 29
+    },
+    {
+      "title": "AI Knowledge Engine",
+      "route": "/mission-control/ai-knowledge.html",
+      "build": 26
+    }
+  ],
+  "summary": {
+    "categories_total": 9,
+    "entry_structure_sections": 9,
+    "reader_questions": 7,
+    "search_axes": 10,
+    "entries_planned": 400,
+    "entries_published": 38,
+    "entries_fully_sourced": 6,
+    "facts_linked": 13,
+    "evidence_linked": 14,
+    "canonical_routes_live": false,
+    "encyclopedia_search_live": false,
+    "completion_tracking_live": true,
+    "encyclopedia_readiness_pct": 19
+  },
+  "catalog_gaps": [
+    "Canonical /encyclopedia/[category]/[slug] routes not built \u2014 KG nodes link to hall pages",
+    "Category 700 (Terms & Definitions) has 0 published entries \u2014 glossary not encyclopedia-scale",
+    "Only 6/38 entries fully sourced with evidence IDs",
+    "Encyclopedia search not implemented \u2014 axes defined only",
+    "9-section entry structure not enforced on all published entries",
+    "4 orphan KG nodes \u2014 cross-link completeness incomplete",
+    "38/400 planned entries published (9.5%)",
+    "Reading-level progression (simple \u2192 legal depth) not uniform across entries"
+  ],
+  "recommended_next_build": {
+    "number": 34,
+    "title": "Component Specifications with Props/States",
+    "note": "Map encyclopedia entry structure and category pages to COMP-* components from Build #17."
+  }
+}

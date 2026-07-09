@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.36.0 · **Campaign OS:** [/mission-control/campaign-os.html](/mission-control/campaign-os.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #32:** ✅ Campaign OS · **Build #31:** ✅ County OS · **Build #30:** ✅ Outreach Engine  
+**Current version:** 1.37.0 · **Encyclopedia:** [/mission-control/encyclopedia.html](/mission-control/encyclopedia.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #33:** ✅ Encyclopedia · **Build #32:** ✅ Campaign OS · **Build #31:** ✅ County OS  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,10 +274,27 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **33** | **Encyclopedia & Knowledge Library** | **✅ v1.37.0** |
 | **32** | **Educational Campaign OS** | **✅ v1.36.0** |
 | **31** | **County Operating System** | **✅ v1.35.0** |
 
-**Next:** Build #33 — Component specifications with props/states.
+**Next:** Build #34 — Component specifications with props/states.
+
+---
+
+## Phase 33 — Encyclopedia & Knowledge Library (Build #33) ★ NEW
+
+*Living encyclopedia — definitive educational reference.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| M1 | Encyclopedia Architecture v1.0 | ✅ | `data/encyclopedia-knowledge-library.json` |
+| M2 | 9 categories (100–900) | ✅ | People through Reform Ideas |
+| M3 | 9-section entry structure | ✅ | Consistent navigation |
+| M4 | Completion score + citation standards | ✅ | MC tracking |
+| M5 | KG relationship graph alignment | ✅ | 38 nodes mapped |
+| M6 | Search axes (10) | ✅ | Search planned |
+| M7 | MC encyclopedia dashboard | ✅ | `/mission-control/encyclopedia.html` |
 
 ---
 
@@ -615,7 +632,8 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#30**~~ | ~~Public Engagement & Outreach Engine~~ ✅ Done |
 | ~~**#31**~~ | ~~Arkansas County Operating System~~ ✅ Done |
 | ~~**#32**~~ | ~~Educational Campaign Operating System~~ ✅ Done |
-| **#33** | **Component specifications with props/states** |
+| ~~**#33**~~ | ~~Research Encyclopedia & Knowledge Library~~ ✅ Done |
+| **#34** | **Component specifications with props/states** |
 
 ---
 
