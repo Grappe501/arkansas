@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">PMO Execution Office <a href="/mission-control/pmo-execution-office.html" class="mc-inline-link">Central Execution #89 →</a></h2>
+    <p class="mc-bar-note">Build #89 — Master PMO & Execution Office. Central execution office for Jan 2027 mission complete. 12 portfolios, project registry, milestones, risk/decision registers. Dashboard not live. ~60% readiness.</p>
     <h2 class="mc-section-title">Execution Schedule <a href="/mission-control/execution-schedule.html" class="mc-inline-link">Mission Complete Jan 2027 #88 →</a></h2>
     <p class="mc-bar-note">Build #88 — Master Execution Schedule. January 2027 = V1 completion target, not construction start. Countdown, war room, critical path, 10 departments. War room not live. ~56% readiness.</p>
     <h2 class="mc-section-title">First 100 Days <a href="/mission-control/launch-campaign-first-100-days.html" class="mc-inline-link">Post-Completion Campaign #87 →</a></h2>
@@ -308,8 +310,8 @@ async function initMissionControl() {
     <p class="mc-bar-note">Build #52 — Master User Experience Architecture. 7 emotional stages, Learning + Civic Compass, Action Hub live. 0 delight moments. 39% UX readiness.</p>
     <h2 class="mc-section-title">Launch Strategy <a href="/mission-control/launch-strategy.html" class="mc-inline-link">Arkansas Rollout →</a></h2>
     <p class="mc-bar-note">Build #53 — Master Launch Strategy. Phase 0 Private Development. 8% public launch readiness — not recommended. 39% launch strategy readiness.</p>
-    <h2 class="mc-section-title">PMO <a href="/mission-control/pmo.html" class="mc-inline-link">Execution System →</a></h2>
-    <p class="mc-bar-note">Build #54 — Master Project Management Office. 10 departments, risk register, dependency maps. 0 owners assigned. 46% PMO readiness.</p>
+    <h2 class="mc-section-title">PMO <a href="/mission-control/pmo.html" class="mc-inline-link">Execution System #54 →</a> · <a href="/mission-control/pmo-execution-office.html" class="mc-inline-link">Execution Office #89 →</a></h2>
+    <p class="mc-bar-note">Build #54 — Master PMO (departments, workflow). Build #89 — PMO Execution Office (portfolios, registry, milestones). 0 owners assigned.</p>
     <h2 class="mc-section-title">Governance & Constitution <a href="/mission-control/governance.html" class="mc-inline-link">Institutional Rules →</a></h2>
     <p class="mc-bar-note">Build #49 — Master governance & institutional constitution. 6 values, 7 steward roles. 0 stewards assigned. 44% governance readiness.</p>
     <h2 class="mc-section-title">Technical Architecture <a href="/mission-control/technical-architecture.html" class="mc-inline-link">Production Engineering →</a></h2>
@@ -5253,6 +5255,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initArkansasCivicReachParticipation();
   initLaunchCampaignFirst100Days();
   initExecutionSchedule();
+  initPmoExecutionOffice();
 });
 
 async function initUxArchitecture() {
@@ -9285,6 +9288,125 @@ async function initExecutionSchedule() {
       <a href="/mission-control/master-launch-plan.html">Launch Plan (#85)</a> ·
       <a href="/mission-control/arkansas-strategic-plan-2035.html">Strategic Plan (#84)</a> ·
       <a href="/mission-control/launch-campaign-first-100-days.html">First 100 Days (#87)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initPmoExecutionOffice() {
+  const root = document.getElementById('mc-pmo-execution-office-root');
+  if (!root) return;
+
+  const [peoRes, mcRes] = await Promise.all([
+    fetch('/data/pmo-execution-office.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const peo = await peoRes.json();
+  const mc = await mcRes.json();
+  const s = peo.summary;
+
+  const portfolioRows = peo.executive_portfolio.portfolios.map(p => `
+    <tr><td><code>${p.id}</code></td><td>${p.name}</td><td>${p.owner}</td>
+      <td>${p.readiness_pct}%</td><td>${p.status}</td></tr>`).join('');
+
+  const milestoneRows = peo.milestone_management.milestones.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.milestone}</td>
+      <td>${m.achieved ? 'Yes' : 'No'}</td><td>${m.status}</td></tr>`).join('');
+
+  const riskRows = peo.risk_register.risks.map(r => `
+    <tr><td><code>${r.id}</code></td><td>${r.risk}</td>
+      <td>${r.likelihood}</td><td>${r.impact}</td><td>${r.owner}</td><td>${r.status}</td></tr>`).join('');
+
+  const depRows = peo.dependency_map.elements.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.element}</td>
+      <td>${d.tracked ? 'Yes' : 'No'}</td><td>${d.status}</td></tr>`).join('');
+
+  const widgetRows = peo.pmo_dashboard.widgets.map(w => `
+    <tr><td><code>${w.id}</code></td><td>${w.widget}</td>
+      <td>${typeof w.current === 'number' ? w.current.toLocaleString() : w.current}${w.unit ? w.unit : ''}</td>
+      <td>${w.status}</td></tr>`).join('');
+
+  const systemRows = peo.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → PMO Execution Office</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #89 · ${peo.title}</p>
+      <h1>${peo.subtitle}</h1>
+      <p class="mc-header__question">${peo.governing_principle}</p>
+      <p class="mc-bar-note">${peo.purpose}</p>
+      <p class="mc-bar-note"><strong>${peo.completion_target_label}</strong> · ${s.days_remaining} days remaining</p>
+      <p class="mc-bar-note"><strong>Tagline:</strong> ${peo.tagline}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">PMO readiness</div><div class="mc-stat__value">${s.pmo_execution_office_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Milestones</div><div class="mc-stat__value">${s.milestones_achieved}/${s.milestones_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Portfolio owners</div><div class="mc-stat__value">${s.portfolio_owners_assigned}/${s.portfolios_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Risks open</div><div class="mc-stat__value">${s.risks_open}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Dashboard live</div><div class="mc-stat__value">${s.pmo_dashboard_live ? 'Yes' : 'No'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Institutional completion</div><div class="mc-stat__value">${s.institutional_completion_pct}%</div></div>
+    </div>
+    <h2 class="mc-section-title">${peo.pmo_mission.title}</h2>
+    <blockquote class="mc-bar-note"><em>${peo.pmo_mission.statement}</em></blockquote>
+    <h2 class="mc-section-title">${peo.pmo_responsibilities.title}</h2>
+    <p class="mc-bar-note">Nothing major without visibility: ${peo.pmo_responsibilities.nothing_major_without_visibility ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${peo.pmo_responsibilities.responsibilities.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${peo.executive_portfolio.title}</h2>
+    <p class="mc-bar-note">Owners: ${peo.executive_portfolio.owners_assigned}/${peo.executive_portfolio.portfolios_total} · Status: ${peo.executive_portfolio.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Portfolio</th><th>Owner</th><th>Readiness</th><th>Status</th></tr></thead>
+      <tbody>${portfolioRows}</tbody></table>
+    <h2 class="mc-section-title">${peo.project_registry.title}</h2>
+    <p class="mc-bar-note">Live: ${peo.project_registry.live ? 'Yes' : 'No'} · ${peo.project_registry.note}</p>
+    <ul class="mc-deliverables">${peo.project_registry.fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${peo.milestone_management.title}</h2>
+    <p class="mc-bar-note">Achieved: ${peo.milestone_management.milestones_achieved}/${peo.milestone_management.milestones_total} · Measurable acceptance criteria: ${peo.milestone_management.measurable_acceptance_criteria ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Milestone</th><th>Achieved</th><th>Status</th></tr></thead>
+      <tbody>${milestoneRows}</tbody></table>
+    <h2 class="mc-section-title">${peo.risk_register.title}</h2>
+    <p class="mc-bar-note">Open: ${peo.risk_register.risks_open}/${peo.risk_register.risks_total}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Owner</th><th>Status</th></tr></thead>
+      <tbody>${riskRows}</tbody></table>
+    <h2 class="mc-section-title">${peo.decision_register.title}</h2>
+    <p class="mc-bar-note">Recorded: ${peo.decision_register.decisions_recorded} · Institutional memory: ${peo.decision_register.institutional_memory ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${peo.decision_register.examples.map(e => `<li>${e}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${peo.dependency_map.title}</h2>
+    <p class="mc-bar-note">PMO coordinates, not reacts: ${peo.dependency_map.pmo_coordinates_not_reacts ? 'Yes' : 'No'} · Status: ${peo.dependency_map.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Element</th><th>Tracked</th><th>Status</th></tr></thead>
+      <tbody>${depRows}</tbody></table>
+    <h2 class="mc-section-title">${peo.volunteer_assignment_system.title}</h2>
+    <p class="mc-bar-note">Assignments tracked: ${peo.volunteer_assignment_system.assignments_tracked} · Status: ${peo.volunteer_assignment_system.status}</p>
+    <ul class="mc-deliverables">${peo.volunteer_assignment_system.fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${peo.weekly_executive_briefing.title}</h2>
+    <p class="mc-bar-note">Automated: ${peo.weekly_executive_briefing.automated ? 'Yes' : 'No'} · One authoritative report: ${peo.weekly_executive_briefing.one_authoritative_report ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${peo.weekly_executive_briefing.briefing_items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${peo.pmo_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${peo.pmo_dashboard.live ? 'Yes' : 'No'} · Leadership operational cockpit: ${peo.pmo_dashboard.leadership_operational_cockpit ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Widget</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${widgetRows}</tbody></table>
+    <h2 class="mc-section-title">${peo.quality_gates.title}</h2>
+    <p class="mc-bar-note">Completion means operational readiness: ${peo.quality_gates.completion_means_operational_readiness ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${peo.quality_gates.gates.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Founder's Principle</h2>
+    <p class="mc-bar-note">${peo.founders_principle}</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${peo.integration.chain}</p>
+    <p class="mc-bar-note">Every component reports into PMO: ${peo.integration.every_component_reports_into_pmo ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${peo.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${peo.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${peo.recommended_next_build.number} — ${peo.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${peo.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_PMO_EXECUTION_OFFICE.md">MASTER_PMO_EXECUTION_OFFICE.md</a> ·
+      <a href="/data/pmo-execution-office.json">JSON</a> ·
+      <a href="/mission-control/pmo.html">PMO (#54)</a> ·
+      <a href="/mission-control/execution-schedule.html">Execution Schedule (#88)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

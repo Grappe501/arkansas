@@ -1,6 +1,6 @@
 {
-  "version": "1.92.0",
-  "build": 88,
+  "version": "1.93.0",
+  "build": 89,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 88,
+    "overall_completion": 89,
     "current_build": {
-      "number": 88,
-      "title": "Citizens United Facts Master Execution Schedule v1.0"
-    },
-    "active_phase": "Execution Schedule \u2192 War Room",
-    "last_completed": "Launch Campaign & First 100 Days",
-    "next_build": {
       "number": 89,
+      "title": "Citizens United Facts Master PMO & Execution Office v1.0"
+    },
+    "active_phase": "PMO Execution Office \u2192 War Room",
+    "last_completed": "Master Execution Schedule",
+    "next_build": {
+      "number": 90,
       "title": "Executive war room & countdown dashboard components"
     },
     "github_status": "connected",
@@ -68,6 +68,7 @@
     "arkansas_civic_reach_participation_readiness": 56,
     "launch_campaign_first_100_days_readiness": 57,
     "execution_schedule_readiness": 56,
+    "pmo_execution_office_readiness": 60,
     "mc2_readiness": 42,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
@@ -98,7 +99,7 @@
     "data_architecture_readiness": 41,
     "ux_architecture_readiness": 39,
     "launch_strategy_readiness": 44,
-    "pmo_readiness": 48,
+    "pmo_readiness": 60,
     "master_plan_readiness": 56,
     "statewide_growth_readiness": 48,
     "neighborhood_organizing_readiness": 50,
@@ -121,8 +122,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 88,
-      "note": "Build #88 \u2014 Execution Schedule. 176 days to Jan 2027."
+      "value": 89,
+      "note": "Build #89 \u2014 PMO Execution Office. 176 days to Jan 2027."
     },
     {
       "id": "constitution",
@@ -521,9 +522,9 @@
     {
       "id": "pmo",
       "label": "Project Management Office",
-      "value": 48,
+      "value": 60,
       "max": 100,
-      "note": "Mission complete Jan 2027 \u00b7 176 days remaining."
+      "note": "PMO cockpit planned \u00b7 0/12 owners."
     },
     {
       "id": "master_plan",
@@ -761,7 +762,14 @@
       "label": "Execution Schedule",
       "value": 56,
       "max": 100,
-      "note": "176 days \u00b7 war room planned."
+      "note": "176 days \u00b7 PMO coordinates execution."
+    },
+    {
+      "id": "pmo_execution_office",
+      "label": "PMO Execution Office",
+      "value": 60,
+      "max": 100,
+      "note": "0/10 milestones \u00b7 dashboard planned."
     }
   ],
   "public_readiness": {
@@ -1582,6 +1590,12 @@
       "id": "execution_schedule",
       "label": "Execution Schedule",
       "href": "/mission-control/execution-schedule.html",
+      "status": "complete"
+    },
+    {
+      "id": "pmo_execution_office",
+      "label": "PMO Execution Office",
+      "href": "/mission-control/pmo-execution-office.html",
       "status": "complete"
     }
   ],
@@ -2608,6 +2622,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 89,
+      "title": "Citizens United Facts Master PMO & Execution Office v1.0",
+      "version": "1.93.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Central execution office \u2014 deliver institution by January 2027",
+      "summary": "12 portfolios, project registry, milestones, risk/decision registers, dependency map, volunteer assignments, weekly briefing, quality gates. 60% readiness \u00b7 0/10 milestones \u00b7 dashboard not live.",
+      "files_created": [
+        "data/pmo-execution-office.json",
+        "docs/MASTER_PMO_EXECUTION_OFFICE.md",
+        "builds/089-pmo-execution-office.md",
+        "mission-control/pmo-execution-office.html",
+        "scripts/gen-pmo-execution-office.py",
+        "scripts/update-mc-build89.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml",
+        "data/execution-schedule.json"
+      ],
+      "pages_created": [
+        "/mission-control/pmo-execution-office.html"
+      ],
+      "decisions_made": [
+        "PMO = central execution office for Jan 2027 mission complete",
+        "Extends PMO #54 with portfolio, registry, milestone, risk, decision systems",
+        "12 executive portfolios with owner/milestone/progress model",
+        "Quality gates \u2014 completion means operational readiness",
+        "Weekly executive briefing \u2014 one authoritative report",
+        "60% readiness \u2014 blueprint only"
+      ],
+      "open_questions": [
+        "Unify PMO #54 and #89 dashboards?",
+        "Project registry \u2014 builds[] or separate PMO DB?",
+        "Weekly briefing \u2014 auto from MC JSON or manual?",
+        "Portfolio owners \u2014 volunteer or executive assignment?"
+      ],
+      "risks": [
+        "PMO dashboard not live \u2014 no operational cockpit",
+        "Project registry not operational \u2014 builds in MC only",
+        "0 portfolio owners assigned",
+        "0 milestones achieved with acceptance criteria"
+      ],
+      "next_recommended": 90,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/pmo-execution-office.html",
+      "review_status": "complete"
+    },
     {
       "number": 88,
       "title": "Citizens United Facts Master Execution Schedule v1.0",
@@ -7334,21 +7401,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Execution Schedule v1.0 \u2014 Mission Complete by January 2027",
-    "building_now": "88 builds \u2014 executive war room next",
+    "what_built": "PMO & Execution Office v1.0 \u2014 Building the Institution With Discipline",
+    "building_now": "89 builds \u2014 executive war room next",
     "blocked": [
-      "War room UI",
-      "Live countdown",
-      "Critical path tracker",
-      "Department automation"
+      "PMO dashboard UI",
+      "Project registry",
+      "Auto weekly briefing",
+      "Dependency visualization"
     ],
     "ready_public": [
-      "Countdown spec",
-      "War room panels",
-      "Timeline alignment",
-      "Governing principle"
+      "Portfolio model",
+      "Milestone acceptance criteria",
+      "Risk register",
+      "Quality gates"
     ],
-    "next": "Build #89 \u2014 Executive war room & countdown dashboard components"
+    "next": "Build #90 \u2014 Executive war room & countdown dashboard components"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8247,5 +8314,15 @@
     "days_remaining": 176,
     "executive_war_room_live": false,
     "mission_complete_january_2027": true
+  },
+  "pmo_execution_office": "/data/pmo-execution-office.json",
+  "pmo_execution_office_dashboard": "/mission-control/pmo-execution-office.html",
+  "pmo_execution_office_inventory": {
+    "readiness_score": 60,
+    "completion_target_date": "2027-01-01",
+    "days_remaining": 176,
+    "pmo_dashboard_live": false,
+    "portfolios_total": 12,
+    "portfolio_owners_assigned": 0
   }
 }
