@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 27  # IMP-01 through IMP-27 (doctrinal)
+steps_documented = 28  # IMP-01 through IMP-28 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3335,7 +3335,7 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'institutional_analytics', 'institutional_automation', 'public_digital_experience',
     'mobile_field_operations', 'institutional_digital_library',
     'institutional_integration_platform', 'institutional_security_trust',
-    'institutional_qa_launch_readiness', 'institutional_devops_production',
+    'institutional_devops_production', 'institutional_governance_pmo',
 ]
 
 RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
@@ -4989,6 +4989,176 @@ DEVOPS_PRODUCTION_MANIFEST = {
     'implemented': False,
 }
 
+GOVERNANCE_PHILOSOPHY_VALUES = [
+    'clearly_defined', 'transparent', 'documented', 'delegated_appropriately',
+    'accountable', 'mission_driven',
+]
+
+INSTITUTIONAL_STRUCTURE_LEVELS = [
+    'executive_office', 'program_management_office', 'mission_control',
+    'functional_departments', 'county_leadership', 'city_leadership',
+    'neighborhood_leadership', 'community_volunteers',
+]
+
+EXECUTIVE_OFFICE_RESPONSIBILITIES = [
+    'mission_stewardship', 'strategic_planning', 'institutional_partnerships',
+    'long_term_priorities', 'major_policy_decisions', 'executive_communications',
+    'annual_planning',
+]
+
+PMO_RESPONSIBILITIES = [
+    'project_portfolio_management', 'milestone_tracking', 'risk_management',
+    'cross_department_coordination', 'dependency_management', 'resource_planning',
+    'operational_reporting',
+]
+
+MC_GOVERNANCE_CAPABILITIES = [
+    'dashboards', 'forecasts', 'performance_metrics', 'alerts',
+    'recommendations', 'operational_visibility',
+]
+
+DECISION_FRAMEWORK_STEPS = [
+    'issue_identified', 'evidence_collected', 'options_evaluated',
+    'stakeholders_consulted', 'decision_documented', 'implementation_planned',
+    'mission_control_monitoring', 'post_implementation_review',
+]
+
+DELEGATION_PRINCIPLES = [
+    'neighborhood_to_neighborhood_leaders', 'city_to_city_leaders',
+    'county_to_county_leadership', 'statewide_to_executive_office',
+]
+
+POLICY_MANAGEMENT_FIELDS = [
+    'purpose', 'scope', 'owner', 'approval_date', 'review_schedule',
+    'revision_history', 'related_procedures',
+]
+
+STRATEGIC_PLANNING_HORIZONS = [
+    'daily_operations', 'weekly_coordination', 'monthly_reviews',
+    'quarterly_planning', 'annual_strategic_planning', 'long_term_institutional_vision',
+]
+
+RISK_GOVERNANCE_CATEGORIES = [
+    'technology', 'volunteer_capacity', 'research_backlog', 'leadership_vacancies',
+    'community_engagement', 'funding', 'operational_continuity',
+]
+
+ANNUAL_OPERATING_PLAN_ELEMENTS = [
+    'strategic_priorities', 'major_initiatives', 'county_objectives',
+    'academy_objectives', 'volunteer_goals', 'research_goals', 'technology_roadmap',
+]
+
+GOVERNANCE_MEETING_TYPES = [
+    'executive_strategy', 'pmo_review', 'mission_control_review',
+    'research_leadership', 'academy_leadership', 'volunteer_leadership',
+    'county_leadership', 'coalition_coordination',
+]
+
+ACCOUNTABILITY_FRAMEWORK_FIELDS = [
+    'responsible_owner', 'supporting_team', 'milestones', 'success_metrics',
+    'review_schedule',
+]
+
+ORGANIZATIONAL_MEMORY_FIELDS = [
+    'decision', 'rationale', 'participants', 'supporting_evidence',
+    'implementation_date', 'review_outcome',
+]
+
+GOVERNANCE_ETHICS_COMMITMENTS = [
+    'integrity', 'transparency', 'evidence_based_decision_making',
+    'respectful_collaboration', 'responsible_stewardship', 'service_to_mission',
+]
+
+OCTOBER_GOVERNANCE_OBJECTIVE_SCOPE = [
+    '75_county_leadership_teams', 'county_organizational_partnerships',
+    'education_leader_coordination', 'volunteer_oversight',
+    'mission_control_reporting', 'operational_consistency_statewide',
+]
+
+GOVERNANCE_PMO_SYSTEM_CHAIN = [
+    'mission_control', 'pmo', 'knowledge_platform', 'research_institute',
+    'community_education_academy', 'volunteer_network', 'coalition_network',
+    'county_operating_system', 'city_operating_system', 'neighborhood_operating_system',
+    'communications', 'ai_localbrains',
+]
+
+GOVERNANCE_PMO_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-28',
+    'updated': today,
+    'title': 'Master Governance, Executive Office, PMO & Institutional Decision Framework',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_28_GOVERNANCE_PMO.md',
+    'source_registries': {
+        'organizational_constitution': '/data/organizational-constitution.json',
+        'devops_production': '/data/devops-production-manifest.json',
+        'qa_launch_readiness': '/data/qa-launch-readiness-manifest.json',
+        'mission_control_architecture': '/data/mission-control-architecture-manifest.json',
+        'execution_schedule': '/data/execution-schedule.json',
+    },
+    'philosophy': 'Clear governance creates continuity — build an institution that outlasts its founders',
+    'governing_principle': (
+        'Strong institutions are defined by systems that enable many people to lead '
+        'responsibly over time, accountable to mission and adaptable to change'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'governance_philosophy_values': GOVERNANCE_PHILOSOPHY_VALUES,
+    'institutional_structure_levels': INSTITUTIONAL_STRUCTURE_LEVELS,
+    'institutional_structure_level_count': len(INSTITUTIONAL_STRUCTURE_LEVELS),
+    'executive_office_responsibilities': EXECUTIVE_OFFICE_RESPONSIBILITIES,
+    'executive_office_responsibility_count': len(EXECUTIVE_OFFICE_RESPONSIBILITIES),
+    'pmo_responsibilities': PMO_RESPONSIBILITIES,
+    'pmo_responsibility_count': len(PMO_RESPONSIBILITIES),
+    'mc_governance_capabilities': MC_GOVERNANCE_CAPABILITIES,
+    'mc_governance_capability_count': len(MC_GOVERNANCE_CAPABILITIES),
+    'decision_framework_steps': DECISION_FRAMEWORK_STEPS,
+    'decision_framework_step_count': len(DECISION_FRAMEWORK_STEPS),
+    'delegation_principles': DELEGATION_PRINCIPLES,
+    'policy_management_fields': POLICY_MANAGEMENT_FIELDS,
+    'policy_management_field_count': len(POLICY_MANAGEMENT_FIELDS),
+    'strategic_planning_horizons': STRATEGIC_PLANNING_HORIZONS,
+    'strategic_planning_horizon_count': len(STRATEGIC_PLANNING_HORIZONS),
+    'risk_governance_categories': RISK_GOVERNANCE_CATEGORIES,
+    'risk_governance_category_count': len(RISK_GOVERNANCE_CATEGORIES),
+    'annual_operating_plan_elements': ANNUAL_OPERATING_PLAN_ELEMENTS,
+    'annual_operating_plan_element_count': len(ANNUAL_OPERATING_PLAN_ELEMENTS),
+    'governance_meeting_types': GOVERNANCE_MEETING_TYPES,
+    'governance_meeting_type_count': len(GOVERNANCE_MEETING_TYPES),
+    'accountability_framework_fields': ACCOUNTABILITY_FRAMEWORK_FIELDS,
+    'accountability_framework_field_count': len(ACCOUNTABILITY_FRAMEWORK_FIELDS),
+    'organizational_memory_fields': ORGANIZATIONAL_MEMORY_FIELDS,
+    'organizational_memory_field_count': len(ORGANIZATIONAL_MEMORY_FIELDS),
+    'governance_ethics_commitments': GOVERNANCE_ETHICS_COMMITMENTS,
+    'governance_ethics_commitment_count': len(GOVERNANCE_ETHICS_COMMITMENTS),
+    'october_governance_objective': {
+        'target_date': county_milestone_date,
+        'scope': OCTOBER_GOVERNANCE_OBJECTIVE_SCOPE,
+        'label': 'Consistent governance framework in every county by October 1',
+    },
+    'organizational_goals': {
+        'counties_total': 75,
+        'counties_with_partnerships_goal': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'governance_pmo_system_chain': GOVERNANCE_PMO_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/governance.html',
+    'packages_completed': 28,
+    'packages_total': 50,
+    'packages_complete_pct': 56,
+    'engineering_note': 'Doctrinal IMP-28 Governance & PMO; engineering IMP-28 is Permission middleware',
+    'status': 'documented',
+    'implemented': False,
+}
+
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -5132,7 +5302,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D28', 'indicator': 'Security & Trust (IMP-25)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D29', 'indicator': 'QA & Launch Readiness (IMP-26)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D30', 'indicator': 'DevOps & Production Ops (IMP-27)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D31', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D31', 'indicator': 'Governance & PMO (IMP-28)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D32', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -5834,6 +6005,33 @@ out = {
             'number': 28,
             'id': 'IMP-28',
             'title': 'Master Governance, Executive Office, PMO & Institutional Decision Framework',
+            'status': 'documented',
+        },
+    },
+    'governance_pmo': {
+        'title': 'Master Governance, Executive Office, PMO & Institutional Decision Framework',
+        'package': 'Implementation Package 28 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_28_GOVERNANCE_PMO.md',
+        'manifest': '/data/governance-pmo-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': GOVERNANCE_PMO_MANIFEST['philosophy'],
+        'institutional_structure_level_count': GOVERNANCE_PMO_MANIFEST['institutional_structure_level_count'],
+        'decision_framework_step_count': GOVERNANCE_PMO_MANIFEST['decision_framework_step_count'],
+        'pmo_responsibility_count': GOVERNANCE_PMO_MANIFEST['pmo_responsibility_count'],
+        'governance_meeting_type_count': GOVERNANCE_PMO_MANIFEST['governance_meeting_type_count'],
+        'risk_governance_category_count': GOVERNANCE_PMO_MANIFEST['risk_governance_category_count'],
+        'packages_completed': GOVERNANCE_PMO_MANIFEST['packages_completed'],
+        'packages_complete_pct': GOVERNANCE_PMO_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': GOVERNANCE_PMO_MANIFEST['mc_dashboard'],
+        'engineering_note': GOVERNANCE_PMO_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 29,
+            'id': 'IMP-29',
+            'title': 'Master Sustainability, Growth Strategy, Knowledge Transfer & Institutional Continuity',
             'status': 'specified',
         },
     },
@@ -6034,6 +6232,10 @@ with open(root / 'data/qa-launch-readiness-manifest.json', 'w', newline='\n') as
 
 with open(root / 'data/devops-production-manifest.json', 'w', newline='\n') as f:
     json.dump(DEVOPS_PRODUCTION_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/governance-pmo-manifest.json', 'w', newline='\n') as f:
+    json.dump(GOVERNANCE_PMO_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

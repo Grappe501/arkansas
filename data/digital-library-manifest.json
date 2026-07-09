@@ -326,8 +326,8 @@
     "institutional_digital_library",
     "institutional_integration_platform",
     "institutional_security_trust",
-    "institutional_qa_launch_readiness",
-    "institutional_devops_production"
+    "institutional_devops_production",
+    "institutional_governance_pmo"
   ],
   "mc_dashboard": "/mission-control/research-library.html",
   "packages_completed": 23,

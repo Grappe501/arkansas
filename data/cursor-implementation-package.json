@@ -797,6 +797,33 @@
       "number": 28,
       "id": "IMP-28",
       "title": "Master Governance, Executive Office, PMO & Institutional Decision Framework",
+      "status": "documented"
+    }
+  },
+  "governance_pmo": {
+    "title": "Master Governance, Executive Office, PMO & Institutional Decision Framework",
+    "package": "Implementation Package 28 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_28_GOVERNANCE_PMO.md",
+    "manifest": "/data/governance-pmo-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Clear governance creates continuity \u2014 build an institution that outlasts its founders",
+    "institutional_structure_level_count": 8,
+    "decision_framework_step_count": 8,
+    "pmo_responsibility_count": 7,
+    "governance_meeting_type_count": 8,
+    "risk_governance_category_count": 7,
+    "packages_completed": 28,
+    "packages_complete_pct": 56,
+    "county_milestone_date": "2026-10-01",
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000,
+    "mc_dashboard": "/mission-control/governance.html",
+    "engineering_note": "Doctrinal IMP-28 Governance & PMO; engineering IMP-28 is Permission middleware",
+    "next_package": {
+      "number": 29,
+      "id": "IMP-29",
+      "title": "Master Sustainability, Growth Strategy, Knowledge Transfer & Institutional Continuity",
       "status": "specified"
     }
   },
@@ -2199,7 +2226,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 27,
+        "current": 28,
         "status": "partial"
       },
       {
@@ -2372,6 +2399,12 @@
       },
       {
         "id": "CIP-D31",
+        "indicator": "Governance & PMO (IMP-28)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D32",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -2426,7 +2459,7 @@
     "days_remaining": 176,
     "implementation_package_readiness_pct": 100,
     "steps_total": 50,
-    "steps_documented": 27,
+    "steps_documented": 28,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

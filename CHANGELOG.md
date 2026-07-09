@@ -13,6 +13,19 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.28] - 2026-07-09 — IMP-28 Governance, Executive Office & PMO
+
+### Implementation Package 28 of 50
+- **Master Governance, Executive Office, PMO & Institutional Decision Framework**
+- 8-level institutional structure · Executive Office · PMO · Mission Control intelligence
+- 8-step decision framework · delegation · policy management · strategic planning horizons
+- Risk governance · annual operating plan · accountability · organizational memory · ethics
+- Oct 1 governance objective for 75 counties statewide
+- Machine-readable **governance-pmo-manifest.json**
+- Institutional OS evolution: **28/50 packages (56%)**
+- IMP-29 next (doctrinal): Sustainability, Growth Strategy & Institutional Continuity
+- Honest: 28/50 documented · 0/50 implemented · 100% package readiness
+
 ## [2.05.27] - 2026-07-09 — IMP-27 DevOps & Production Operations
 
 ### Implementation Package 27 of 50

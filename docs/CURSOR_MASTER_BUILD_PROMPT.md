@@ -43,6 +43,7 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 0y. **Security & Trust (IMP-25):** [/docs/IMPLEMENTATION_PACKAGE_25_SECURITY_TRUST.md](/docs/IMPLEMENTATION_PACKAGE_25_SECURITY_TRUST.md) · [/data/security-trust-manifest.json](/data/security-trust-manifest.json)
 0z. **QA & Launch Readiness (IMP-26):** [/docs/IMPLEMENTATION_PACKAGE_26_QA_LAUNCH_READINESS.md](/docs/IMPLEMENTATION_PACKAGE_26_QA_LAUNCH_READINESS.md) · [/data/qa-launch-readiness-manifest.json](/data/qa-launch-readiness-manifest.json)
 0aa. **DevOps & Production Ops (IMP-27):** [/docs/IMPLEMENTATION_PACKAGE_27_DEVOPS_PRODUCTION.md](/docs/IMPLEMENTATION_PACKAGE_27_DEVOPS_PRODUCTION.md) · [/data/devops-production-manifest.json](/data/devops-production-manifest.json)
+0ab. **Governance & PMO (IMP-28):** [/docs/IMPLEMENTATION_PACKAGE_28_GOVERNANCE_PMO.md](/docs/IMPLEMENTATION_PACKAGE_28_GOVERNANCE_PMO.md) · [/data/governance-pmo-manifest.json](/data/governance-pmo-manifest.json)
 
 ## Master timeline (updated IMP-11)
 
@@ -148,7 +149,7 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 
 ## First step to implement
 
-**IMP-01** through **IMP-27** are **documented**:
+**IMP-01** through **IMP-28** are **documented**:
 - [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
 - [Technical Architecture](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
 - [Route Map](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [route-manifest.json](/data/route-manifest.json)
@@ -176,7 +177,8 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 - [Security & Trust](/docs/IMPLEMENTATION_PACKAGE_25_SECURITY_TRUST.md) · [security-trust-manifest.json](/data/security-trust-manifest.json)
 - [QA & Launch Readiness](/docs/IMPLEMENTATION_PACKAGE_26_QA_LAUNCH_READINESS.md) · [qa-launch-readiness-manifest.json](/data/qa-launch-readiness-manifest.json)
 - [DevOps & Production Ops](/docs/IMPLEMENTATION_PACKAGE_27_DEVOPS_PRODUCTION.md) · [devops-production-manifest.json](/data/devops-production-manifest.json)
+- [Governance & PMO](/docs/IMPLEMENTATION_PACKAGE_28_GOVERNANCE_PMO.md) · [governance-pmo-manifest.json](/data/governance-pmo-manifest.json)
 
-**IMP-28** is next (doctrinal): Master Governance, Executive Office, PMO & Institutional Decision Framework.
+**IMP-29** is next (doctrinal): Master Sustainability, Growth Strategy, Knowledge Transfer & Institutional Continuity.
 
 Engineering **Sprint Zero (IMP-10 step registry)** is the Band A gate before Band B code slices.
