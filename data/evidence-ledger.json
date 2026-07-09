@@ -1,0 +1,384 @@
+{
+  "version": "1.0",
+  "build": 41,
+  "updated": "2026-07-09",
+  "title": "Master Evidence Ledger & Claims Registry v1.0",
+  "subtitle": "Institutional Truth Architecture",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/evidence-ledger.html",
+  "canonical_claim_route": "/claims/[claim-id]",
+  "current_claim_route": "claims-ledger.json + facts-registry \u2014 no public claim pages",
+  "constitution": "/docs/MASTER_EVIDENCE_LEDGER.md",
+  "purpose": "Every meaningful factual claim traceable to evidence.",
+  "core_philosophy": "Every meaningful factual claim can be traced back to evidence.",
+  "governing_principle": "Authority from evidence quality and transparent review \u2014 not institutional assertion alone.",
+  "long_term_vision": "Visitors explore the chain of evidence behind every important claim.",
+  "id_format": "CLAIM-{6-digit}",
+  "legacy_id_format": "claim-{NNN}",
+  "fact_id_format": "FACT-{NNNN}",
+  "evidence_id_format": "EV-{6-digit}",
+  "evidence_strength_levels": [
+    {
+      "id": "EVL-A",
+      "level": "A",
+      "title": "Primary legal authority",
+      "description": "Supreme Court opinions, statutes, constitutional text.",
+      "status": "live",
+      "claims_at_level": 1
+    },
+    {
+      "id": "EVL-B",
+      "level": "B",
+      "title": "Official government publications",
+      "description": "Government reports, public records, official datasets.",
+      "status": "live",
+      "claims_at_level": 1
+    },
+    {
+      "id": "EVL-C",
+      "level": "C",
+      "title": "Peer-reviewed academic literature",
+      "description": "Law review articles, academic journals, university publications.",
+      "status": "planned",
+      "claims_at_level": 0
+    },
+    {
+      "id": "EVL-D",
+      "level": "D",
+      "title": "Multiple reliable secondary sources",
+      "description": "Educational organizations, major news, verified secondary references.",
+      "status": "partial",
+      "claims_at_level": 0
+    },
+    {
+      "id": "EVL-E",
+      "level": "E",
+      "title": "Educational synthesis",
+      "description": "Context-dependent synthesis \u2014 methodology must be documented.",
+      "status": "partial",
+      "claims_at_level": 1
+    }
+  ],
+  "review_workflow": [
+    {
+      "id": "WF-01",
+      "stage": "Draft",
+      "status": "defined"
+    },
+    {
+      "id": "WF-02",
+      "stage": "Source Collection",
+      "status": "partial"
+    },
+    {
+      "id": "WF-03",
+      "stage": "Verification",
+      "status": "partial"
+    },
+    {
+      "id": "WF-04",
+      "stage": "Editorial Review",
+      "status": "partial"
+    },
+    {
+      "id": "WF-05",
+      "stage": "Publication",
+      "status": "partial"
+    },
+    {
+      "id": "WF-06",
+      "stage": "Scheduled Review",
+      "status": "planned"
+    },
+    {
+      "id": "WF-07",
+      "stage": "Revision",
+      "status": "planned"
+    }
+  ],
+  "evidence_link_types": [
+    "Primary Sources",
+    "Court Opinions",
+    "Statutes",
+    "Government Reports",
+    "Academic Research",
+    "Historical Records",
+    "Verified Data Sets",
+    "Supporting Educational Resources"
+  ],
+  "claim_relationship_types": [
+    "Articles",
+    "Lessons",
+    "Encyclopedia entries",
+    "Timeline events",
+    "Charts",
+    "Videos",
+    "Community education resources",
+    "Frequently asked questions"
+  ],
+  "change_history_fields": [
+    "What changed",
+    "Why it changed",
+    "Who reviewed it",
+    "Supporting evidence added",
+    "Sources removed",
+    "Date of change"
+  ],
+  "contradictory_evidence_policy": [
+    "Describe the differing evidence",
+    "Explain the nature of the disagreement",
+    "Identify the strongest available support",
+    "Encourage readers to consult primary materials"
+  ],
+  "public_transparency": [
+    "Evidence strength",
+    "Review date",
+    "Supporting source count",
+    "Related documents",
+    "Version history"
+  ],
+  "future_ai_integration": [
+    "Cite evidence precisely",
+    "Recommend additional sources",
+    "Detect outdated claims",
+    "Identify unsupported statements",
+    "Build educational summaries grounded in verified information"
+  ],
+  "claims": [
+    {
+      "claim_id": "CLAIM-000001",
+      "legacy_id": "claim-001",
+      "fact_id": "FACT-1001",
+      "claim_statement": "Citizens United held that government may not restrict independent political spending by corporations and unions.",
+      "plain_language": "The Supreme Court ruled that independent political spending by corporations and unions is protected speech.",
+      "expanded_explanation": "In Citizens United v. FEC (2010), the Court held that the First Amendment prohibits government restriction of independent expenditures by corporations and associations.",
+      "topic_category": "Supreme Court holding",
+      "date_created": "2026-07-09",
+      "date_last_reviewed": "2026-07-09",
+      "review_status": "published",
+      "workflow_stage": "Publication",
+      "evidence_strength": "A",
+      "evidence_ids": [
+        "EV-000001"
+      ],
+      "evidence_count": 1,
+      "related_hall": "/halls/what-court-decided.html",
+      "related_kg_id": "KG-CASE-000003",
+      "educational_context": "Foundation for understanding corporate independent expenditure doctrine after 2010.",
+      "learn_next": "SpeechNow.org v. FEC and Super PAC development",
+      "audit_history": [],
+      "conflicting_evidence": false,
+      "scheduled_review": null,
+      "status": "verified"
+    },
+    {
+      "claim_id": "CLAIM-000002",
+      "legacy_id": "claim-002",
+      "fact_id": "FACT-5001",
+      "claim_statement": "Montana Initiative 194 would prohibit artificial persons from contributing to campaigns, ballot measures, or political parties.",
+      "plain_language": "Montana voters may consider a ballot measure restricting corporate and organizational political contributions.",
+      "expanded_explanation": "Initiative 194 seeks to exclude artificial persons from contributing to campaigns, ballot measures, or political parties in Montana.",
+      "topic_category": "State reform",
+      "date_created": "2026-07-09",
+      "date_last_reviewed": "2026-07-09",
+      "review_status": "published",
+      "workflow_stage": "Publication",
+      "evidence_strength": "B",
+      "evidence_ids": [
+        "EV-000004",
+        "EV-000005"
+      ],
+      "evidence_count": 2,
+      "related_hall": "/halls/montana-hawaii.html",
+      "educational_context": "Example of state-level response to Citizens United through ballot initiative.",
+      "learn_next": "Compare with Hawaii Act 11 legislative approach",
+      "audit_history": [],
+      "conflicting_evidence": false,
+      "scheduled_review": null,
+      "status": "verified"
+    },
+    {
+      "claim_id": "CLAIM-000003",
+      "legacy_id": "claim-003",
+      "fact_id": "FACT-5002",
+      "claim_statement": "Hawaii Act 11 restricts corporate election spending; effective July 1, 2027.",
+      "plain_language": "Hawaii passed legislation restricting certain corporate election spending, with a future effective date.",
+      "expanded_explanation": "Hawaii Act 11 addresses corporate influence in elections; legislative text confirmation pending full primary source review.",
+      "topic_category": "State reform",
+      "date_created": "2026-07-09",
+      "date_last_reviewed": "2026-07-09",
+      "review_status": "requires_review",
+      "workflow_stage": "Verification",
+      "evidence_strength": "E",
+      "evidence_ids": [
+        "EV-000006",
+        "EV-000014"
+      ],
+      "evidence_count": 2,
+      "related_hall": "/halls/montana-hawaii.html",
+      "educational_context": "Illustrates legislative (not ballot) path to corporate spending restrictions.",
+      "learn_next": "Obtain Hawaii legislative text as Level A/B evidence",
+      "audit_history": [],
+      "conflicting_evidence": false,
+      "scheduled_review": null,
+      "status": "awaiting_review",
+      "note": "Journalism source \u2014 legislative text not yet primary-confirmed"
+    }
+  ],
+  "mc_integration": {
+    "title": "Mission Control Evidence Ledger Metrics",
+    "status": "partial",
+    "metrics": [
+      {
+        "id": "EL-M01",
+        "title": "Total claims",
+        "status": "partial",
+        "current": 3,
+        "target": 500
+      },
+      {
+        "id": "EL-M02",
+        "title": "Claims fully verified",
+        "status": "partial",
+        "current": 2
+      },
+      {
+        "id": "EL-M03",
+        "title": "Claims awaiting review",
+        "status": "partial",
+        "current": 1
+      },
+      {
+        "id": "EL-M04",
+        "title": "Claims requiring updated sources",
+        "status": "partial",
+        "current": 1
+      },
+      {
+        "id": "EL-M05",
+        "title": "Newly added claims",
+        "status": "partial",
+        "current": 3
+      },
+      {
+        "id": "EL-M06",
+        "title": "Claims with conflicting evidence",
+        "status": "planned",
+        "current": 0
+      },
+      {
+        "id": "EL-M07",
+        "title": "Claims nearing scheduled review",
+        "status": "planned",
+        "current": 0
+      },
+      {
+        "id": "EL-M08",
+        "title": "Facts registry (FACT-*)",
+        "status": "partial",
+        "current": 13
+      },
+      {
+        "id": "EL-M09",
+        "title": "Evidence items (EV-*)",
+        "status": "partial",
+        "current": 14
+      }
+    ],
+    "public_transparency_live": false,
+    "audit_trail_live": false
+  },
+  "foundations": {
+    "claims_ledger": {
+      "route": "/data/claims-ledger.json",
+      "build": 10,
+      "legacy_claims": 3
+    },
+    "facts_registry": {
+      "route": "/data/facts-registry.json",
+      "build": 18,
+      "facts": 13
+    },
+    "evidence_registry": {
+      "route": "/data/evidence-registry.json",
+      "build": 10,
+      "items": 14
+    },
+    "trust_framework": {
+      "route": "/data/trust-framework.json",
+      "build": 36,
+      "evidence_levels": 4
+    }
+  },
+  "related_systems": [
+    {
+      "title": "Evidence Registry",
+      "route": "/data/evidence-registry.json",
+      "build": 10
+    },
+    {
+      "title": "Facts Framework",
+      "route": "/data/facts-registry.json",
+      "build": 18
+    },
+    {
+      "title": "Trust Framework",
+      "route": "/data/trust-framework.json",
+      "build": 36
+    },
+    {
+      "title": "Research Library",
+      "route": "/data/master-research-library.json",
+      "build": 37
+    },
+    {
+      "title": "Civic Intelligence",
+      "route": "/data/civic-intelligence.json",
+      "build": 40
+    },
+    {
+      "title": "AI Knowledge Engine",
+      "route": "/data/ai-knowledge-engine.json",
+      "build": 26
+    }
+  ],
+  "summary": {
+    "claims_total": 3,
+    "claims_verified": 2,
+    "claims_awaiting_review": 1,
+    "claims_requiring_sources": 1,
+    "claims_with_conflicting_evidence": 0,
+    "claims_with_audit_history": 0,
+    "facts_registry_total": 13,
+    "facts_migrated_from_claims": 3,
+    "evidence_items_total": 14,
+    "evidence_awaiting_review": 4,
+    "strength_levels_defined": 5,
+    "workflow_stages": 7,
+    "avg_claim_record_completeness_pct": 100,
+    "v1_target_claims": 500,
+    "claims_growth_pct": 1,
+    "public_claim_pages_live": false,
+    "audit_trail_live": false,
+    "scheduled_review_live": false,
+    "evidence_ledger_readiness_pct": 22
+  },
+  "catalog_gaps": [
+    "Only 3/500 claims \u2014 vast majority of platform sentences not CLAIM-linked",
+    "13 FACT-* records \u2014 not all migrated to CLAIM-* format",
+    "No public /claims/[id] pages \u2014 transparency panels not built",
+    "Audit trail defined \u2014 0 change history records",
+    "Scheduled review workflow planned \u2014 no automation",
+    "Level C (academic) \u2014 0 peer-reviewed sources in evidence registry",
+    "Contradictory evidence policy defined \u2014 no live conflict records",
+    "10 facts awaiting sources per facts-registry",
+    "Claim-to-lesson/encyclopedia/video relationships not wired",
+    "Trust framework has A\u2013D levels \u2014 ledger adds Level E synthesis"
+  ],
+  "recommended_next_build": {
+    "number": 42,
+    "title": "Component Specifications with Props/States",
+    "note": "Map claim panels, evidence strength badges, audit history viewers, and transparency widgets to COMP-* from Build #17."
+  }
+}

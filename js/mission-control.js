@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Evidence Ledger <a href="/mission-control/evidence-ledger.html" class="mc-inline-link">Claims Registry →</a></h2>
+    <p class="mc-bar-note">Build #41 — Master evidence ledger & claims registry, A–E strength levels, 7-stage review. 3/500 CLAIM-* records. 22% ledger readiness.</p>
     <h2 class="mc-section-title">Institutional Brain <a href="/mission-control/civic-intelligence.html" class="mc-inline-link">Civic Intelligence →</a></h2>
     <p class="mc-bar-note">Build #40 — Master knowledge graph & civic intelligence, 17 node types, 7 layers. 38/500 KG nodes. 24% brain readiness.</p>
     <h2 class="mc-section-title">Media Studio <a href="/mission-control/media-studio.html" class="mc-inline-link">8 Divisions →</a></h2>
@@ -3967,6 +3969,96 @@ async function initCivicIntelligence() {
   initDevConsole(mc);
 }
 
+async function initEvidenceLedger() {
+  const root = document.getElementById('mc-evidence-ledger-root');
+  if (!root) return;
+
+  const [ledgerRes, mcRes] = await Promise.all([
+    fetch('/data/evidence-ledger.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ledger = await ledgerRes.json();
+  const mc = await mcRes.json();
+  const s = ledger.summary;
+
+  const strengthRows = ledger.evidence_strength_levels.map(l => `
+    <tr><td>Level ${l.level}</td><td>${l.title}</td><td>${l.claims_at_level}</td><td>${l.status}</td></tr>`).join('');
+
+  const claimRows = ledger.claims.map(c => `
+    <tr><td><code>${c.claim_id}</code></td><td>${c.claim_statement.slice(0, 60)}…</td>
+      <td>${c.evidence_strength}</td><td>${c.evidence_count}</td><td>${c.status}</td></tr>`).join('');
+
+  const claimCards = ledger.claims.map(c => `
+    <div class="mc-card"><h3><code>${c.claim_id}</code></h3>
+      <p class="mc-bar-note">${c.claim_statement}</p>
+      <p class="mc-bar-note">Strength: ${c.evidence_strength} · ${c.workflow_stage} · ${c.status}</p>
+      <p class="mc-bar-note">EV: ${c.evidence_ids.join(', ')}${c.fact_id ? ` · FACT: ${c.fact_id}` : ''}</p>
+      <p class="mc-bar-note"><strong>Why it matters:</strong> ${c.educational_context}</p>
+      ${c.note ? `<p class="mc-bar-note">${c.note}</p>` : ''}
+    </div>`).join('');
+
+  const workflowRows = ledger.review_workflow.map(w => `
+    <tr><td>${w.stage}</td><td>${w.status}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Evidence Ledger</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #41 · ${ledger.title}</p>
+      <h1>Master Evidence Ledger & Claims Registry</h1>
+      <p class="mc-header__question">${ledger.governing_principle}</p>
+      <p class="mc-bar-note">${ledger.core_philosophy}</p>
+      <p class="mc-bar-note">Canonical: <code>${ledger.canonical_claim_route}</code> · Format: <code>${ledger.id_format}</code></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Ledger readiness</div><div class="mc-stat__value">${s.evidence_ledger_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Claims</div><div class="mc-stat__value">${s.claims_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Verified</div><div class="mc-stat__value">${s.claims_verified}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Awaiting review</div><div class="mc-stat__value">${s.claims_awaiting_review}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">EV items</div><div class="mc-stat__value">${s.evidence_items_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Audit trail</div><div class="mc-stat__value">${s.audit_trail_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Evidence Strength Levels (A–E)</h2>
+    <table class="mc-table"><thead><tr><th>Level</th><th>Type</th><th>Claims</th><th>Status</th></tr></thead>
+      <tbody>${strengthRows}</tbody></table>
+    <h2 class="mc-section-title">Claim Registry</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Statement</th><th>Strength</th><th>Sources</th><th>Status</th></tr></thead>
+      <tbody>${claimRows}</tbody></table>
+    <div class="mc-grid-2">${claimCards}</div>
+    <h2 class="mc-section-title">Review Workflow</h2>
+    <table class="mc-table"><thead><tr><th>Stage</th><th>Status</th></tr></thead>
+      <tbody>${workflowRows}</tbody></table>
+    <h2 class="mc-section-title">Evidence Link Types</h2>
+    <ul class="mc-deliverables">${ledger.evidence_link_types.map(e => `<li>${e}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Contradictory Evidence Policy</h2>
+    <ul class="mc-deliverables">${ledger.contradictory_evidence_policy.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Public Transparency</h2>
+    <ul class="mc-deliverables">${ledger.public_transparency.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Evidence Ledger Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${ledger.mc_integration.metrics.map(m => `
+        <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td>
+          <td>${m.current}${m.target ? ` / ${m.target}` : ''}</td></tr>`).join('')}</tbody></table>
+    <h2 class="mc-section-title">Foundations</h2>
+    <ul class="mc-deliverables">${Object.entries(ledger.foundations).map(([k, v]) =>
+      `<li>${k}: <a href="${v['route']}">${v['route']}</a> (Build #${v['build']})</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Future AI Integration</h2>
+    <ul class="mc-deliverables">${ledger.future_ai_integration.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ledger.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ledger.recommended_next_build.number} — ${ledger.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ledger.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_EVIDENCE_LEDGER.md">MASTER_EVIDENCE_LEDGER.md</a> ·
+      <a href="/data/evidence-ledger.json">JSON</a> ·
+      <a href="/data/claims-ledger.json">Legacy Claims</a> ·
+      <a href="/data/evidence-registry.json">Evidence Registry</a> ·
+      <a href="/mission-control/trust.html">Trust Framework</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -4006,4 +4098,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initLearningLaboratory();
   initMediaStudio();
   initCivicIntelligence();
+  initEvidenceLedger();
 });

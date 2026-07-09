@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.45.0] - 2026-07-09 — Build #41 Master Evidence Ledger & Claims Registry
+
+### Institutional Truth Architecture
+- **Master Evidence Ledger & Claims Registry v1.0** — CLAIM-* format, A–E strength levels
+- 7-stage review workflow, contradictory evidence policy, audit trail schema
+- 3 canonical claims seeded from legacy claims-ledger
+- 22% honest readiness — no public claim pages or audit trail
+- MC dashboard: `/mission-control/evidence-ledger.html`
+
 ## [1.44.0] - 2026-07-09 — Build #40 Master Knowledge Graph & Civic Intelligence Engine
 
 ### Institutional Brain Architecture

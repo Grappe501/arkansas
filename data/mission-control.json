@@ -1,6 +1,6 @@
 {
-  "version": "1.44.0",
-  "build": 40,
+  "version": "1.45.0",
+  "build": 41,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 40,
+    "overall_completion": 41,
     "current_build": {
-      "number": 40,
-      "title": "Citizens United Facts Master Knowledge Graph & Civic Intelligence Engine"
-    },
-    "active_phase": "Institutional Brain \u2014 Master Knowledge Graph & Civic Intelligence",
-    "last_completed": "Documentary Experience & Media Studio",
-    "next_build": {
       "number": 41,
+      "title": "Citizens United Facts Master Evidence Ledger & Claims Registry"
+    },
+    "active_phase": "Institutional Truth \u2014 Master Evidence Ledger & Claims Registry",
+    "last_completed": "Master Knowledge Graph & Civic Intelligence Engine",
+    "next_build": {
+      "number": 42,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
@@ -54,6 +54,7 @@
     "learning_lab_readiness": 22,
     "media_studio_readiness": 18,
     "civic_intelligence_readiness": 24,
+    "evidence_ledger_readiness": 22,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -61,8 +62,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 40,
-      "note": "Institutional Brain live \u2014 38 KG nodes, 40 relationships."
+      "value": 41,
+      "note": "Evidence Ledger live \u2014 3 CLAIM-* records, 2 verified."
     },
     {
       "id": "constitution",
@@ -365,7 +366,14 @@
       "label": "Institutional Brain & Civic Intelligence",
       "value": 24,
       "max": 100,
-      "note": "38 nodes, 5/7 layers partial \u2014 no brain viz."
+      "note": "Institutional Brain \u2014 38/500 KG nodes."
+    },
+    {
+      "id": "evidence_ledger",
+      "label": "Master Evidence Ledger",
+      "value": 22,
+      "max": 100,
+      "note": "3/500 claims \u2014 no public claim pages or audit trail."
     }
   ],
   "public_readiness": {
@@ -898,6 +906,12 @@
       "id": "civic_intelligence",
       "label": "Institutional Brain & Civic Intelligence",
       "href": "/mission-control/civic-intelligence.html",
+      "status": "complete"
+    },
+    {
+      "id": "evidence_ledger",
+      "label": "Master Evidence Ledger",
+      "href": "/mission-control/evidence-ledger.html",
       "status": "complete"
     }
   ],
@@ -1924,6 +1938,56 @@
     }
   ],
   "builds": [
+    {
+      "number": 41,
+      "title": "Citizens United Facts Master Evidence Ledger & Claims Registry",
+      "version": "1.45.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Institutional Truth Architecture v1.0 \u2014 every claim traceable to evidence",
+      "summary": "3 CLAIM-* records, 14 EV-* items; 22% overall.",
+      "files_created": [
+        "data/evidence-ledger.json",
+        "docs/MASTER_EVIDENCE_LEDGER.md",
+        "builds/041-master-evidence-ledger-claims-registry.md",
+        "mission-control/evidence-ledger.html",
+        "scripts/gen-evidence-ledger.py",
+        "scripts/update-mc-build41.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/evidence-ledger.html"
+      ],
+      "decisions_made": [
+        "CLAIM-{6-digit} canonical format \u2014 extends legacy claim-* and FACT-*",
+        "5 evidence strength levels A\u2013E \u2014 adds synthesis level",
+        "7-stage review workflow \u2014 scheduled review planned",
+        "3 claims seeded from claims-ledger with full record structure",
+        "Contradictory evidence policy \u2014 transparency over hiding disagreement",
+        "22% honest readiness \u2014 3/500 claims"
+      ],
+      "open_questions": [
+        "Migrate all FACT-* to CLAIM-*?",
+        "Public claim page design?",
+        "Audit trail storage?"
+      ],
+      "risks": [
+        "Only 1% of claim target",
+        "0 audit history records",
+        "Hawaii claim requires review"
+      ],
+      "next_recommended": 42,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/evidence-ledger.html",
+      "review_status": "complete"
+    },
     {
       "number": 40,
       "title": "Citizens United Facts Master Knowledge Graph & Civic Intelligence Engine",
@@ -3805,19 +3869,19 @@
     }
   ],
   "briefing": {
-    "what_built": "Institutional Brain v1.0 \u2014 17 node types, 7 intelligence layers, dependency maps, MC metrics",
-    "building_now": "KG registry as foundation \u2014 explore-further interim navigation",
+    "what_built": "Evidence Ledger v1.0 \u2014 CLAIM-* registry, A\u2013E strength levels, review workflow, MC metrics",
+    "building_now": "3 canonical claims from legacy ledger \u2014 facts and evidence linked",
     "blocked": [
-      "No brain visualization",
-      "Question engine",
-      "County/community graph edges"
+      "Public claim pages",
+      "Audit trail",
+      "Scheduled review automation"
     ],
     "ready_public": [
-      "Civic Intelligence MC dashboard",
-      "Educational dependency chain",
-      "KG foundation link"
+      "Evidence Ledger MC dashboard",
+      "CLAIM-* format",
+      "Strength level taxonomy"
     ],
-    "next": "Build #41 \u2014 Component specifications with props/states"
+    "next": "Build #42 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -4267,5 +4331,16 @@
     "intelligence_layers_partial": 5,
     "question_engine_live": false,
     "brain_visualization_live": false
+  },
+  "evidence_ledger": "/data/evidence-ledger.json",
+  "evidence_ledger_dashboard": "/mission-control/evidence-ledger.html",
+  "evidence_ledger_inventory": {
+    "readiness_score": 22,
+    "claims_total": 3,
+    "claims_verified": 2,
+    "claims_awaiting_review": 1,
+    "evidence_items_total": 14,
+    "audit_trail_live": false,
+    "public_claim_pages_live": false
   }
 }

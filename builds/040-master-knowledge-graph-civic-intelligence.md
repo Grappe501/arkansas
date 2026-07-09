@@ -54,6 +54,6 @@ A living civic knowledge institution where every fact, source, lesson, county, e
 
 ---
 
-## Recommended Next: Build #41 — Component Specifications with Props/States
+## Recommended Next: Build #42 — Component Specifications with Props/States
 
 Map brain visualization shells, node panels, relationship edges, and explore-further widgets to COMP-* from Build #17.

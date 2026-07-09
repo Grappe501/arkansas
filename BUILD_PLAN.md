@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.44.0 · **Civic Intelligence:** [/mission-control/civic-intelligence.html](/mission-control/civic-intelligence.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #40:** ✅ Institutional Brain · **Build #39:** ✅ Media Studio · **Build #38:** ✅ Learning Lab · **Build #37:** ✅ Research Library  
+**Current version:** 1.45.0 · **Evidence Ledger:** [/mission-control/evidence-ledger.html](/mission-control/evidence-ledger.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #41:** ✅ Evidence Ledger · **Build #40:** ✅ Institutional Brain · **Build #39:** ✅ Media Studio · **Build #38:** ✅ Learning Lab  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,13 +274,30 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **41** | **Master Evidence Ledger & Claims Registry** | **✅ v1.45.0** |
 | **40** | **Master Knowledge Graph & Civic Intelligence** | **✅ v1.44.0** |
 | **39** | **Documentary Experience & Media Studio** | **✅ v1.43.0** |
 | **38** | **Interactive Learning Laboratory** | **✅ v1.42.0** |
 | **37** | **Master Research Library** | **✅ v1.41.0** |
 | **36** | **Trust Framework** | **✅ v1.40.0** |
 
-**Next:** Build #41 — Component specifications with props/states.
+**Next:** Build #42 — Component specifications with props/states.
+
+---
+
+## Phase 41 — Master Evidence Ledger & Claims Registry (Build #41) ★ NEW
+
+*Institutional truth — every claim traceable to evidence.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| E1 | Evidence Ledger Blueprint v1.0 | ✅ | `data/evidence-ledger.json` |
+| E2 | CLAIM-{6-digit} canonical format | ✅ | Extends claim-* and FACT-* |
+| E3 | 5 evidence strength levels A–E | ✅ | Adds synthesis level |
+| E4 | 7-stage review workflow | ✅ | Scheduled review planned |
+| E5 | 3 claims seeded from legacy ledger | 🟡 | 3/500 target |
+| E6 | MC evidence metrics (9) | ✅ | Tracking partial |
+| E7 | MC evidence ledger dashboard | ✅ | `/mission-control/evidence-ledger.html` |
 
 ---
 

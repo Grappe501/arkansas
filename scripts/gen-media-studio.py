@@ -244,7 +244,7 @@ out = {
         'Media engagement metrics not tracked — no analytics integration',
     ],
     'recommended_next_build': {
-        'number': 41,
+        'number': 42,
         'title': 'Component Specifications with Props/States',
         'note': 'Map media player shells, documentary chapter layouts, infographic widgets, and accessibility patterns to COMP-* from Build #17.',
     },
