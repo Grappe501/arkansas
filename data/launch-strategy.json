@@ -1,0 +1,605 @@
+{
+  "version": "1.0",
+  "build": 53,
+  "updated": "2026-07-09",
+  "title": "Master Launch Strategy & Arkansas Rollout Blueprint v1.0",
+  "subtitle": "From Internal Build to Public Institution",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/launch-strategy.html",
+  "constitution": "/docs/MASTER_LAUNCH_STRATEGY.md",
+  "purpose": "How Citizens United Facts is introduced to Arkansas \u2014 quality, trust, and sustainable growth over publicity.",
+  "governing_principle": "Never rush to become public. Launch only when the institution is ready to earn public trust \u2014 readiness over deadlines.",
+  "launch_philosophy": {
+    "wrong_question": "When can we launch?",
+    "right_question": "When is the institution ready to earn public trust?",
+    "tone": "Deliberate, confident, well prepared"
+  },
+  "extends": [
+    {
+      "title": "Master Build Bible",
+      "build": 50,
+      "route": "/data/build-bible.json"
+    },
+    {
+      "title": "Institutional Roadmap",
+      "build": 44,
+      "route": "/data/institutional-roadmap.json"
+    },
+    {
+      "title": "Visitor Journey",
+      "build": 47,
+      "route": "/data/visitor-journey.json"
+    },
+    {
+      "title": "UX Architecture",
+      "build": 52,
+      "route": "/data/ux-architecture.json"
+    },
+    {
+      "title": "Governance Constitution",
+      "build": 49,
+      "route": "/data/governance-constitution.json"
+    }
+  ],
+  "launch_phases": {
+    "title": "Six Launch Phases",
+    "phases": [
+      {
+        "id": "PHASE-0",
+        "number": 0,
+        "title": "Private Development",
+        "audience": "Project team only",
+        "objectives": [
+          "Build core architecture",
+          "Populate initial content",
+          "Test Mission Control",
+          "Verify citations",
+          "Complete accessibility review",
+          "Test every workflow"
+        ],
+        "mc_indicators": [
+          "Engineering readiness",
+          "Research readiness",
+          "Content readiness",
+          "System health"
+        ],
+        "public_visibility": "None (institutional target)",
+        "status": "active",
+        "readiness_pct": 42,
+        "note": "Netlify production URL exists \u2014 treated as dev/staging until Phase 3 gate"
+      },
+      {
+        "id": "PHASE-1",
+        "number": 1,
+        "title": "Trusted Review Circle",
+        "audience": "Invitation-only: attorneys, historians, educators, researchers, librarians, coalition reps",
+        "objectives": [
+          "Test educational clarity",
+          "Identify factual issues",
+          "Evaluate navigation",
+          "Improve explanations",
+          "Review trust signals"
+        ],
+        "mc_indicators": [
+          "Review Feedback dashboard",
+          "Issue triage",
+          "Citation verification queue"
+        ],
+        "public_visibility": "Invite-only URL",
+        "status": "planned",
+        "readiness_pct": 5,
+        "note": "Review Feedback dashboard not built"
+      },
+      {
+        "id": "PHASE-2",
+        "number": 2,
+        "title": "Arkansas Pilot",
+        "audience": "Limited Arkansas learners",
+        "objectives": [
+          "Observe real learning behavior",
+          "Test Education Academy",
+          "Test Contact Network",
+          "Test Coalition sign-on",
+          "Evaluate community conversations"
+        ],
+        "mc_indicators": [
+          "Learning progression",
+          "Signup funnels",
+          "Pilot cohort metrics"
+        ],
+        "public_visibility": "Pilot cohort",
+        "status": "planned",
+        "readiness_pct": 8,
+        "note": "0 Education Leaders \u00b7 0 coalition orgs \u00b7 no pilot cohort defined"
+      },
+      {
+        "id": "PHASE-3",
+        "number": 3,
+        "title": "Public Arkansas Launch",
+        "audience": "Anyone in Arkansas",
+        "objectives": [
+          "Introduce platform publicly",
+          "Statewide educational outreach",
+          "Recruit Education Leaders",
+          "Expand coalition",
+          "Publish Research Library"
+        ],
+        "mc_indicators": [
+          "Public institutional reporting",
+          "Outreach metrics",
+          "Launch readiness score"
+        ],
+        "public_visibility": "Full public",
+        "status": "planned",
+        "readiness_pct": 8,
+        "note": "Launch checklist 2/12 complete \u2014 not ready for recommendation"
+      },
+      {
+        "id": "PHASE-4",
+        "number": 4,
+        "title": "Institutional Growth",
+        "audience": "Arkansas public + partners",
+        "objectives": [
+          "County pages",
+          "Expand Academy",
+          "Publish documentaries",
+          "Expand encyclopedia",
+          "Grow coalition",
+          "Increase educational events"
+        ],
+        "mc_indicators": [
+          "County coverage",
+          "Media assets",
+          "Event calendar",
+          "Encyclopedia depth"
+        ],
+        "public_visibility": "Full public",
+        "status": "planned",
+        "readiness_pct": 3,
+        "note": "75 counties indexed \u2014 0 with participation"
+      },
+      {
+        "id": "PHASE-5",
+        "number": 5,
+        "title": "Long-Term Stewardship",
+        "audience": "Arkansas + institutional stewards",
+        "objectives": [
+          "Maintain research",
+          "Update resources",
+          "Review evidence",
+          "Train Education Leaders",
+          "Preserve institutional knowledge",
+          "Continue serving Arkansas"
+        ],
+        "mc_indicators": [
+          "Annual review",
+          "Succession planning",
+          "Evidence refresh cycle"
+        ],
+        "public_visibility": "Full public",
+        "status": "planned",
+        "readiness_pct": 10,
+        "note": "Governance annual report not generated \u2014 stewardship planned in roadmap"
+      }
+    ],
+    "current_phase": 0,
+    "current_phase_title": "Private Development",
+    "phases_total": 6
+  },
+  "readiness_checklist": {
+    "title": "Public Launch Gate",
+    "principle": "Readiness, not deadlines",
+    "items": [
+      {
+        "id": "CHK-01",
+        "item": "Research verified",
+        "status": "partial",
+        "current": "25% research readiness"
+      },
+      {
+        "id": "CHK-02",
+        "item": "Core curriculum published",
+        "status": "partial",
+        "current": "15 published / ~2700 target"
+      },
+      {
+        "id": "CHK-03",
+        "item": "Evidence Ledger operational",
+        "status": "partial",
+        "current": "3 claims in ledger"
+      },
+      {
+        "id": "CHK-04",
+        "item": "Mission Control operational",
+        "status": "live",
+        "current": "54 builds logged"
+      },
+      {
+        "id": "CHK-05",
+        "item": "Accessibility review completed",
+        "status": "planned",
+        "current": "WCAG audit not performed"
+      },
+      {
+        "id": "CHK-06",
+        "item": "Privacy policy published",
+        "status": "planned",
+        "current": "Not published \u2014 governance gap"
+      },
+      {
+        "id": "CHK-07",
+        "item": "Editorial standards published",
+        "status": "partial",
+        "current": "Content factory partial \u2014 no public standards page"
+      },
+      {
+        "id": "CHK-08",
+        "item": "Source Library available",
+        "status": "partial",
+        "current": "/library/ live \u2014 14 evidence IDs"
+      },
+      {
+        "id": "CHK-09",
+        "item": "Knowledge Graph functioning",
+        "status": "partial",
+        "current": "38/500 KG nodes"
+      },
+      {
+        "id": "CHK-10",
+        "item": "Education Leader signup operational",
+        "status": "partial",
+        "current": "0 signups \u2014 form exists"
+      },
+      {
+        "id": "CHK-11",
+        "item": "Coalition signup operational",
+        "status": "partial",
+        "current": "0 orgs joined"
+      },
+      {
+        "id": "CHK-12",
+        "item": "Contact Network operational",
+        "status": "partial",
+        "current": "0 contact signups"
+      }
+    ],
+    "items_live": 1,
+    "items_partial": 9,
+    "items_planned": 2,
+    "checklist_score_pct": 42,
+    "public_launch_recommended": false
+  },
+  "launch_metrics": {
+    "principle": "Educational indicators over page views",
+    "metrics": [
+      {
+        "id": "MET-01",
+        "metric": "Learning path completion",
+        "status": "planned",
+        "tracking": "None"
+      },
+      {
+        "id": "MET-02",
+        "metric": "Returning learners",
+        "status": "planned",
+        "tracking": "No analytics"
+      },
+      {
+        "id": "MET-03",
+        "metric": "Education Leader applications",
+        "status": "partial",
+        "tracking": "0 total"
+      },
+      {
+        "id": "MET-04",
+        "metric": "Coalition organizations joining",
+        "status": "partial",
+        "tracking": "0 total"
+      },
+      {
+        "id": "MET-05",
+        "metric": "Community conversation requests",
+        "status": "planned",
+        "tracking": "No intake log"
+      },
+      {
+        "id": "MET-06",
+        "metric": "Toolkit downloads",
+        "status": "planned",
+        "tracking": "Not measured"
+      },
+      {
+        "id": "MET-07",
+        "metric": "Source Library usage",
+        "status": "planned",
+        "tracking": "No analytics"
+      }
+    ],
+    "instrumented": 0
+  },
+  "communication_strategy": {
+    "pillars": [
+      "Education",
+      "Transparency",
+      "Historical understanding",
+      "Constitutional literacy",
+      "Primary sources",
+      "Arkansas civic engagement"
+    ],
+    "framing": "Public educational resource \u2014 not advocacy",
+    "status": "partial",
+    "current": "Messaging in site copy \u2014 no launch communications plan"
+  },
+  "feedback_architecture": {
+    "principle": "Every phase actively collects feedback",
+    "categories": [
+      {
+        "category": "Educational clarity",
+        "status": "planned",
+        "mc_route": null
+      },
+      {
+        "category": "Navigation",
+        "status": "planned",
+        "mc_route": null
+      },
+      {
+        "category": "Missing topics",
+        "status": "planned",
+        "mc_route": null
+      },
+      {
+        "category": "Source requests",
+        "status": "planned",
+        "mc_route": null
+      },
+      {
+        "category": "Accessibility concerns",
+        "status": "planned",
+        "mc_route": null
+      },
+      {
+        "category": "Suggested improvements",
+        "status": "planned",
+        "mc_route": null
+      }
+    ],
+    "mc_triage": "planned",
+    "phase_1_dashboard": "Review Feedback \u2014 not built"
+  },
+  "arkansas_growth_strategy": {
+    "strategy": "County-by-county expansion",
+    "counties_total": 75,
+    "counties_with_participation": 0,
+    "priorities": [
+      "Recruit Education Leaders",
+      "Build coalition partnerships",
+      "Host community conversations",
+      "Develop local resource collections",
+      "Support libraries and civic organizations"
+    ],
+    "status": "planned"
+  },
+  "annual_relaunch": {
+    "title": "Annual Institutional Renewal",
+    "activities": [
+      "Annual research updates",
+      "New educational resources",
+      "State of the Institution report",
+      "Academy updates",
+      "Coalition recognition",
+      "Community education highlights"
+    ],
+    "status": "planned",
+    "first_annual": null
+  },
+  "success_definition": {
+    "criteria": [
+      "Arkansans trust the platform",
+      "Educators recommend it",
+      "Libraries reference it",
+      "Students learn from it",
+      "Community organizations use it",
+      "Public officials recognize it as reliable educational resource"
+    ],
+    "measure": "Steady growth in understanding \u2014 not short-lived publicity"
+  },
+  "launch_command_center": {
+    "title": "Launch Command Center",
+    "route": "/mission-control/launch-strategy.html",
+    "readiness_dimensions": [
+      {
+        "id": "LCC-01",
+        "dimension": "Overall launch readiness",
+        "pct": 8,
+        "status": "early"
+      },
+      {
+        "id": "LCC-02",
+        "dimension": "Research readiness",
+        "pct": 25,
+        "status": "partial"
+      },
+      {
+        "id": "LCC-03",
+        "dimension": "Technology readiness",
+        "pct": 38,
+        "status": "partial"
+      },
+      {
+        "id": "LCC-04",
+        "dimension": "Content readiness",
+        "pct": 28,
+        "status": "partial"
+      },
+      {
+        "id": "LCC-05",
+        "dimension": "Accessibility readiness",
+        "pct": 15,
+        "status": "planned"
+      },
+      {
+        "id": "LCC-06",
+        "dimension": "Coalition readiness",
+        "pct": 18,
+        "status": "planned"
+      },
+      {
+        "id": "LCC-07",
+        "dimension": "County readiness",
+        "pct": 28,
+        "status": "partial"
+      },
+      {
+        "id": "LCC-08",
+        "dimension": "Education Leader readiness",
+        "pct": 26,
+        "status": "partial"
+      },
+      {
+        "id": "LCC-09",
+        "dimension": "Institutional readiness",
+        "pct": 38,
+        "status": "partial"
+      },
+      {
+        "id": "LCC-10",
+        "dimension": "UX / experience readiness",
+        "pct": 39,
+        "status": "partial"
+      }
+    ]
+  },
+  "long_term_vision": "Public launch is the opening chapter \u2014 decades of Arkansas civic education ahead. Every year: more complete, trustworthy, connected, useful, understandable, valuable.",
+  "mc_integration": {
+    "title": "Mission Control Launch Metrics",
+    "status": "partial",
+    "metrics": [
+      {
+        "id": "LCH-01",
+        "title": "Launch phases defined",
+        "status": "live",
+        "current": "6/6"
+      },
+      {
+        "id": "LCH-02",
+        "title": "Current rollout phase",
+        "status": "live",
+        "current": "Phase 0 \u2014 Private Development"
+      },
+      {
+        "id": "LCH-03",
+        "title": "Launch checklist complete",
+        "status": "planned",
+        "current": "1 live, 9 partial, 2 planned"
+      },
+      {
+        "id": "LCH-04",
+        "title": "Public launch recommended",
+        "status": "blocked",
+        "current": "No \u2014 8% public launch readiness"
+      },
+      {
+        "id": "LCH-05",
+        "title": "Review Feedback dashboard",
+        "status": "planned",
+        "current": "Phase 1 requirement \u2014 not built"
+      },
+      {
+        "id": "LCH-06",
+        "title": "Educational launch metrics tracked",
+        "status": "planned",
+        "current": "0/7 metrics instrumented"
+      },
+      {
+        "id": "LCH-07",
+        "title": "Feedback categorization in MC",
+        "status": "planned",
+        "current": "No feedback intake pipeline"
+      },
+      {
+        "id": "LCH-08",
+        "title": "County growth visualization",
+        "status": "partial",
+        "current": "75 counties \u2014 0 participation"
+      },
+      {
+        "id": "LCH-09",
+        "title": "Annual relaunch scheduled",
+        "status": "planned",
+        "current": "Not scheduled"
+      },
+      {
+        "id": "LCH-10",
+        "title": "Launch Command Center live",
+        "status": "live",
+        "current": "This dashboard"
+      }
+    ],
+    "authoritative_reference": true
+  },
+  "related_blueprints": [
+    {
+      "title": "Institutional Roadmap (#44)",
+      "route": "/mission-control/institutional-roadmap.html",
+      "build": 44
+    },
+    {
+      "title": "Outreach Engine",
+      "route": "/mission-control/outreach.html",
+      "build": 30
+    },
+    {
+      "title": "Education Academy",
+      "route": "/mission-control/education-academy.html",
+      "build": 28
+    },
+    {
+      "title": "County OS",
+      "route": "/mission-control/county-os.html",
+      "build": 31
+    },
+    {
+      "title": "Trust Framework",
+      "route": "/mission-control/trust.html",
+      "build": 36
+    }
+  ],
+  "summary": {
+    "phases_total": 6,
+    "current_phase": 0,
+    "checklist_items": 12,
+    "checklist_live": 1,
+    "checklist_partial": 9,
+    "checklist_planned": 2,
+    "checklist_score_pct": 42,
+    "public_launch_readiness_pct": 8,
+    "public_launch_recommended": false,
+    "education_leaders": 0,
+    "coalition_orgs": 0,
+    "knowledge_published": 15,
+    "launch_metrics_instrumented": 0,
+    "feedback_pipeline_live": false,
+    "annual_relaunch_scheduled": false,
+    "launch_strategy_readiness_pct": 39
+  },
+  "catalog_gaps": [
+    "Site publicly reachable on Netlify \u2014 institutional phase model treats as Phase 0 dev",
+    "Review Feedback dashboard (Phase 1) not built",
+    "0/7 educational launch metrics instrumented",
+    "No feedback categorization pipeline in Mission Control",
+    "Privacy policy not published \u2014 blocks launch checklist",
+    "WCAG accessibility audit not completed",
+    "8% public launch readiness \u2014 10/12 checklist items incomplete",
+    "0 Education Leaders \u00b7 0 coalition orgs \u2014 Phase 2 pilot impossible today",
+    "Annual relaunch / State of Institution report not scheduled",
+    "County-by-county growth visualization not live",
+    "Learning progression tracking not server-side \u2014 Phase 2 requirement unmet"
+  ],
+  "recommended_next_build": {
+    "number": 54,
+    "title": "Master Implementation Roadmap & Sprint Zero",
+    "note": "Review Feedback dashboard, privacy policy, accessibility audit sprint, Neon/Prisma, first pilot cohort criteria."
+  }
+}

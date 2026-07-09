@@ -1,6 +1,6 @@
 {
-  "version": "1.56.0",
-  "build": 52,
+  "version": "1.57.0",
+  "build": 53,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 52,
+    "overall_completion": 53,
     "current_build": {
-      "number": 52,
-      "title": "Citizens United Facts Master User Experience Architecture v1.0"
-    },
-    "active_phase": "Implementation \u2014 Experience Blueprint Established",
-    "last_completed": "Master Data Architecture & Canonical Data Dictionary",
-    "next_build": {
       "number": 53,
+      "title": "Citizens United Facts Master Launch Strategy & Arkansas Rollout Blueprint v1.0"
+    },
+    "active_phase": "Rollout \u2014 Phase 0 Private Development",
+    "last_completed": "Master User Experience Architecture",
+    "next_build": {
+      "number": 54,
       "title": "Master implementation roadmap & sprint zero"
     },
     "github_status": "connected",
@@ -57,7 +57,7 @@
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 25,
-    "institutional_maturity_pct": 38,
+    "institutional_maturity_pct": 39,
     "current_institutional_version": "V1",
     "systems_integration_readiness": 28,
     "production_matrix_readiness": 39,
@@ -67,17 +67,21 @@
     "build_bible_readiness": 49,
     "data_architecture_readiness": 41,
     "ux_architecture_readiness": 39,
+    "launch_strategy_readiness": 39,
+    "rollout_phase": 0,
+    "rollout_phase_title": "Private Development",
     "planning_phase_complete": true,
-    "implementation_phase": "experience_blueprint_established",
+    "implementation_phase": "phase_0_private_development",
     "public_launch_readiness": 8,
-    "public_launch_label": "Early Foundation"
+    "public_launch_label": "Early Foundation",
+    "public_launch_recommended": false
   },
   "progress_bars": [
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 52,
-      "note": "Build #52 \u2014 Master User Experience Architecture complete."
+      "value": 53,
+      "note": "Build #53 \u2014 Master Launch Strategy & Arkansas Rollout Blueprint complete."
     },
     {
       "id": "constitution",
@@ -406,9 +410,9 @@
     {
       "id": "institutional_maturity",
       "label": "Institutional Maturity (V1\u2013V10)",
-      "value": 38,
+      "value": 39,
       "max": 100,
-      "note": "Experience blueprint \u2014 museum-quality civic learning target."
+      "note": "Phase 0 Private Development \u2014 public launch not recommended."
     },
     {
       "id": "systems_integration",
@@ -465,6 +469,13 @@
       "value": 39,
       "max": 100,
       "note": "2 action hub items live \u00b7 0 delight moments."
+    },
+    {
+      "id": "launch_strategy",
+      "label": "Launch Strategy",
+      "value": 39,
+      "max": 100,
+      "note": "Phase 0 active \u00b7 8% public launch readiness."
     }
   ],
   "public_readiness": {
@@ -1069,6 +1080,12 @@
       "id": "ux_architecture",
       "label": "Master UX Architecture",
       "href": "/mission-control/ux-architecture.html",
+      "status": "complete"
+    },
+    {
+      "id": "launch_strategy",
+      "label": "Launch Strategy",
+      "href": "/mission-control/launch-strategy.html",
       "status": "complete"
     }
   ],
@@ -2095,6 +2112,58 @@
     }
   ],
   "builds": [
+    {
+      "number": 53,
+      "title": "Citizens United Facts Master Launch Strategy & Arkansas Rollout Blueprint v1.0",
+      "version": "1.57.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Arkansas rollout blueprint \u2014 six phases, readiness gate, Launch Command Center",
+      "summary": "Phase 0 active, 1+9/12 checklist partial, 8% public launch \u2014 not recommended.",
+      "files_created": [
+        "data/launch-strategy.json",
+        "docs/MASTER_LAUNCH_STRATEGY.md",
+        "builds/053-master-launch-strategy.md",
+        "mission-control/launch-strategy.html",
+        "scripts/gen-launch-strategy.py",
+        "scripts/update-mc-build53.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/launch-strategy.html"
+      ],
+      "decisions_made": [
+        "Six launch phases (0\u20135) \u2014 private development through long-term stewardship",
+        "Public launch gated on 12-item readiness checklist \u2014 not deadlines",
+        "Educational metrics over page views \u2014 mission-aligned success definition",
+        "County-by-county Arkansas growth strategy",
+        "Annual relaunch as living institution model",
+        "Phase 0 active \u2014 8% public launch readiness, not recommended"
+      ],
+      "open_questions": [
+        "Netlify public URL vs Phase 0 private development \u2014 formal staging?",
+        "Review Feedback dashboard scope for Phase 1?",
+        "Pilot cohort selection criteria?",
+        "First annual relaunch date?"
+      ],
+      "risks": [
+        "Site already public \u2014 phase model vs reality mismatch",
+        "8% public launch readiness \u2014 premature publicity risk",
+        "0 signups \u2014 Phase 2 pilot has no cohort",
+        "Privacy + accessibility gaps block checklist"
+      ],
+      "next_recommended": 54,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/launch-strategy.html",
+      "review_status": "complete"
+    },
     {
       "number": 52,
       "title": "Citizens United Facts Master User Experience Architecture v1.0",
@@ -4632,20 +4701,20 @@
     }
   ],
   "briefing": {
-    "what_built": "UX Architecture v1.0 \u2014 emotional journey, compasses, progressive disclosure, institutional personality",
-    "building_now": "Implementation \u2014 experience blueprint established; Sprint Zero next",
+    "what_built": "Launch Strategy v1.0 \u2014 6 phases, readiness checklist, Launch Command Center, Arkansas growth plan",
+    "building_now": "Phase 0 Private Development \u2014 public launch not recommended",
     "blocked": [
-      "Learning Compass UI",
-      "Site search",
-      "Delight moments",
-      "Community vitality widgets"
+      "Privacy policy",
+      "Accessibility audit",
+      "Review Feedback dashboard",
+      "Launch metrics instrumentation"
     ],
     "ready_public": [
-      "UX Architecture MC dashboard",
-      "Action Hub live",
-      "Experience philosophy documented"
+      "Launch Command Center dashboard",
+      "Six-phase rollout model",
+      "Readiness checklist"
     ],
-    "next": "Build #53 \u2014 Master implementation roadmap & sprint zero"
+    "next": "Build #54 \u2014 Master implementation roadmap & sprint zero"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -5221,5 +5290,16 @@
     "learning_compass_questions": 7,
     "search_live": false,
     "delight_moments_live": 0
+  },
+  "launch_strategy": "/data/launch-strategy.json",
+  "launch_strategy_dashboard": "/mission-control/launch-strategy.html",
+  "launch_strategy_inventory": {
+    "readiness_score": 39,
+    "current_phase": 0,
+    "checklist_score_pct": 42,
+    "public_launch_readiness_pct": 8,
+    "public_launch_recommended": false,
+    "checklist_live": 1,
+    "checklist_partial": 9
   }
 }

@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.56.0 · **UX Architecture:** [/mission-control/ux-architecture.html](/mission-control/ux-architecture.html) · **Data Architecture:** [/mission-control/data-architecture.html](/mission-control/data-architecture.html) · **OS:** [Mission Control](/mission-control/)  
-**Implementation** — Experience Blueprint established · **Next:** Build #53 Sprint Zero  
+**Current version:** 1.57.0 · **Launch Strategy:** [/mission-control/launch-strategy.html](/mission-control/launch-strategy.html) · **OS:** [Mission Control](/mission-control/)  
+**Rollout** — Phase 0 Private Development · Public launch **not recommended** · **Next:** Build #54 Sprint Zero  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **53** | **Master Launch Strategy & Arkansas Rollout Blueprint** | **✅ v1.57.0** |
 | **52** | **Master User Experience Architecture** | **✅ v1.56.0** |
 | **51** | **Master Data Architecture & Canonical Data Dictionary** | **✅ v1.55.0** |
 | **50** | **Master Build Bible** ★ | **✅ v1.54.0** |
@@ -292,7 +293,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **37** | **Master Research Library** | **✅ v1.41.0** |
 | **36** | **Trust Framework** | **✅ v1.40.0** |
 
-**Next:** Build #53 — Master implementation roadmap & sprint zero.
+**Next:** Build #54 — Master implementation roadmap & sprint zero.
 
 ---
 

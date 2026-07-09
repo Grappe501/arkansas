@@ -238,6 +238,8 @@ async function initMissionControl() {
     <p class="mc-bar-note">Build #51 — Master Data Architecture & Canonical Data Dictionary. 12 domains (100–1200), single source of truth. 0 relationship edges. 41% data architecture readiness.</p>
     <h2 class="mc-section-title">UX Architecture <a href="/mission-control/ux-architecture.html" class="mc-inline-link">Experience Blueprint →</a></h2>
     <p class="mc-bar-note">Build #52 — Master User Experience Architecture. 7 emotional stages, Learning + Civic Compass, Action Hub live. 0 delight moments. 39% UX readiness.</p>
+    <h2 class="mc-section-title">Launch Strategy <a href="/mission-control/launch-strategy.html" class="mc-inline-link">Arkansas Rollout →</a></h2>
+    <p class="mc-bar-note">Build #53 — Master Launch Strategy. Phase 0 Private Development. 8% public launch readiness — not recommended. 39% launch strategy readiness.</p>
     <h2 class="mc-section-title">Governance & Constitution <a href="/mission-control/governance.html" class="mc-inline-link">Institutional Rules →</a></h2>
     <p class="mc-bar-note">Build #49 — Master governance & institutional constitution. 6 values, 7 steward roles. 0 stewards assigned. 44% governance readiness.</p>
     <h2 class="mc-section-title">Technical Architecture <a href="/mission-control/technical-architecture.html" class="mc-inline-link">Production Engineering →</a></h2>
@@ -5145,6 +5147,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initBuildBible();
   initDataArchitecture();
   initUxArchitecture();
+  initLaunchStrategy();
 });
 
 async function initUxArchitecture() {
@@ -5286,6 +5289,118 @@ async function initUxArchitecture() {
       <a href="/mission-control/visitor-journey.html">Visitor Journey (#47)</a> ·
       <a href="/mission-control/journey.html">Citizen Journey (#8)</a> ·
       <a href="/mission-control/atlas.html">Knowledge Atlas</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initLaunchStrategy() {
+  const root = document.getElementById('mc-launch-strategy-root');
+  if (!root) return;
+
+  const [lsRes, mcRes] = await Promise.all([
+    fetch('/data/launch-strategy.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ls = await lsRes.json();
+  const mc = await mcRes.json();
+  const s = ls.summary;
+  const phases = ls.launch_phases;
+
+  const phaseRows = phases.phases.map(p => `
+    <tr><td><code>${p.id}</code></td><td>${p.number}</td><td>${p.title}</td><td>${p.status}</td>
+      <td>${p.readiness_pct}%</td><td>${p.public_visibility}</td><td>${p.note}</td></tr>`).join('');
+
+  const chkRows = ls.readiness_checklist.items.map(c => `
+    <tr><td><code>${c.id}</code></td><td>${c.item}</td><td>${c.status}</td><td>${c.current}</td></tr>`).join('');
+
+  const metricRows = ls.launch_metrics.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.metric}</td><td>${m.status}</td><td>${m.tracking}</td></tr>`).join('');
+
+  const lccRows = ls.launch_command_center.readiness_dimensions.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.dimension}</td><td>${d.pct}%</td><td>${d.status}</td></tr>`).join('');
+
+  const feedbackRows = ls.feedback_architecture.categories.map(f => `
+    <tr><td>${f.category}</td><td>${f.status}</td></tr>`).join('');
+
+  const mcMetricRows = ls.mc_integration.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('');
+
+  const extendLinks = ls.extends.map(e =>
+    `<a href="${e.route}">Build #${e.build} ${e.title}</a>`).join(' · ');
+
+  const launchRec = ls.readiness_checklist.public_launch_recommended
+    ? 'Yes — checklist gate cleared'
+    : `No — ${s.public_launch_readiness_pct}% public launch readiness`;
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Launch Strategy</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #53 · ${ls.title}</p>
+      <h1>Master Launch Strategy & Arkansas Rollout Blueprint</h1>
+      <p class="mc-header__question">${ls.governing_principle}</p>
+      <p class="mc-bar-note">${ls.purpose}</p>
+      <p class="mc-bar-note">Extends ${extendLinks}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Launch strategy readiness</div><div class="mc-stat__value">${s.launch_strategy_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Current phase</div><div class="mc-stat__value">Phase ${phases.current_phase}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Public launch readiness</div><div class="mc-stat__value">${s.public_launch_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Checklist score</div><div class="mc-stat__value">${s.checklist_score_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Launch recommended</div><div class="mc-stat__value">${s.public_launch_recommended ? 'Yes' : 'No'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Education Leaders</div><div class="mc-stat__value">${s.education_leaders}</div></div>
+    </div>
+    <h2 class="mc-section-title">Launch Philosophy</h2>
+    <p class="mc-bar-note"><strong>Wrong question:</strong> ${ls.launch_philosophy.wrong_question}</p>
+    <p class="mc-bar-note"><strong>Right question:</strong> ${ls.launch_philosophy.right_question}</p>
+    <p class="mc-bar-note">${ls.launch_philosophy.tone}</p>
+    <h2 class="mc-section-title">Six Launch Phases</h2>
+    <p class="mc-bar-note"><strong>Current:</strong> Phase ${phases.current_phase} — ${phases.current_phase_title}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>#</th><th>Phase</th><th>Status</th><th>Readiness</th><th>Visibility</th><th>Note</th></tr></thead>
+      <tbody>${phaseRows}</tbody></table>
+    <h2 class="mc-section-title">Launch Readiness Checklist</h2>
+    <p class="mc-bar-note">${ls.readiness_checklist.principle} · Public launch recommended: <strong>${launchRec}</strong></p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Requirement</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${chkRows}</tbody></table>
+    <h2 class="mc-section-title">Launch Metrics (Educational)</h2>
+    <p class="mc-bar-note">${ls.launch_metrics.principle}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Tracking</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Communication Strategy</h2>
+    <p class="mc-bar-note"><strong>Pillars:</strong> ${ls.communication_strategy.pillars.join(' · ')}</p>
+    <p class="mc-bar-note">${ls.communication_strategy.framing} — ${ls.communication_strategy.current}</p>
+    <h2 class="mc-section-title">Feedback Architecture</h2>
+    <p class="mc-bar-note">${ls.feedback_architecture.principle} · ${ls.feedback_architecture.phase_1_dashboard}</p>
+    <table class="mc-table"><thead><tr><th>Category</th><th>Status</th></tr></thead>
+      <tbody>${feedbackRows}</tbody></table>
+    <h2 class="mc-section-title">Arkansas Growth Strategy</h2>
+    <p class="mc-bar-note">${ls.arkansas_growth_strategy.strategy} — ${ls.arkansas_growth_strategy.counties_with_participation}/${ls.arkansas_growth_strategy.counties_total} counties with participation</p>
+    <ul class="mc-deliverables">${ls.arkansas_growth_strategy.priorities.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Annual Relaunch</h2>
+    <p class="mc-bar-note">${ls.annual_relaunch.title} — ${ls.annual_relaunch.status}</p>
+    <ul class="mc-deliverables">${ls.annual_relaunch.activities.map(a => `<li>${a}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Success Definition</h2>
+    <ul class="mc-deliverables">${ls.success_definition.criteria.map(c => `<li>${c}</li>`).join('')}</ul>
+    <p class="mc-bar-note">${ls.success_definition.measure}</p>
+    <h2 class="mc-section-title">Launch Command Center</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Dimension</th><th>Readiness</th><th>Status</th></tr></thead>
+      <tbody>${lccRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${ls.long_term_vision}</p>
+    <h2 class="mc-section-title">Launch Metrics (Mission Control)</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${mcMetricRows}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ls.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ls.recommended_next_build.number} — ${ls.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ls.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_LAUNCH_STRATEGY.md">MASTER_LAUNCH_STRATEGY.md</a> ·
+      <a href="/data/launch-strategy.json">JSON</a> ·
+      <a href="/mission-control/institutional-roadmap.html">Institutional Roadmap</a> ·
+      <a href="/mission-control/outreach.html">Outreach Engine</a> ·
+      <a href="/mission-control/county-os.html">County OS</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 
