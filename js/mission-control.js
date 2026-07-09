@@ -1,128 +1,136 @@
 /**
- * Citizens Facts — Mission Control OS v1.6.0
+ * Citizens United Mission Control v1.7.0 — Build #3
  */
 
-function pctBar(label, value, colorClass = 'green') {
-  const blocks = Math.round(value / 5);
-  const bar = '█'.repeat(Math.min(blocks, 20)) + '░'.repeat(Math.max(0, 20 - blocks));
+const isAdmin = () =>
+  window.location.pathname.includes('/admin/') ||
+  new URLSearchParams(window.location.search).has('admin');
+
+function pctBar(label, value, note = '', colorClass = 'blue') {
+  const c = value >= 70 ? 'green' : value >= 30 ? 'yellow' : 'blue';
   return `
     <div class="mc-bar-row">
       <div class="mc-bar-row__header">
         <span class="mc-bar-row__label">${label}</span>
         <span class="mc-bar-row__pct">${value}%</span>
       </div>
-      <div class="mc-bar" title="${bar}">
-        <div class="mc-bar__fill mc-bar__fill--${colorClass}" style="width:${value}%"></div>
+      <div class="mc-bar"><div class="mc-bar__fill mc-bar__fill--${colorClass || c}" style="width:${Math.max(value, 2)}%"></div></div>
+      ${note ? `<p class="mc-bar-note">${note}</p>` : ''}
+    </div>`;
+}
+
+function renderHeader(data, admin) {
+  const ex = data.executive;
+  return `
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">${admin ? '🔒 Admin' : 'Public'} · ${data.identity.public_name}</p>
+      <h1>Citizens United Education Platform</h1>
+      <p class="mc-header__question">Where are we today? What changed? What is left to build?</p>
+      <div class="mc-executive mc-executive--hero">
+        <div class="mc-stat mc-stat--wide"><div class="mc-stat__label">Overall Completion</div><div class="mc-stat__value mc-stat__value--hero">${ex.overall_completion}%</div></div>
+        <div class="mc-stat"><div class="mc-stat__label">Current Build</div><div class="mc-stat__value">#${ex.current_build.number}</div></div>
+        <div class="mc-stat"><div class="mc-stat__label">Active Phase</div><div class="mc-stat__value">${ex.active_phase}</div></div>
+        <div class="mc-stat"><div class="mc-stat__label">Last Completed</div><div class="mc-stat__value">${ex.last_completed}</div></div>
+        <div class="mc-stat"><div class="mc-stat__label">Next Build</div><div class="mc-stat__value">#${ex.next_build.number} ${ex.next_build.title}</div></div>
+        <div class="mc-stat"><div class="mc-stat__label">GitHub</div><div class="mc-stat__value">${ex.github_status}</div></div>
+        <div class="mc-stat"><div class="mc-stat__label">Netlify</div><div class="mc-stat__value">${ex.netlify_status.replace('_', ' ')}</div></div>
+        <div class="mc-stat"><div class="mc-stat__label">Public Launch</div><div class="mc-stat__value">${ex.public_launch_label} (${ex.public_launch_readiness}%)</div></div>
       </div>
-    </div>`;
+    </header>`;
 }
 
-function statusDot(status) {
-  const map = { complete: 'complete', building: 'building', planning: 'planning', not_started: 'not_started', testing: 'building' };
-  return `<span class="mc-status-dot mc-status-dot--${map[status] || 'not_started'}"></span>`;
-}
-
-function renderExecutive(ex) {
+function renderFiveQuestions(b) {
   return `
-    <div class="mc-executive">
-      <div class="mc-stat"><div class="mc-stat__label">Overall Completion</div><div class="mc-stat__value mc-stat__value--highlight">${ex.overall_completion}%</div></div>
-      <div class="mc-stat"><div class="mc-stat__label">Last Build</div><div class="mc-stat__value">#${ex.last_build.number} ${ex.last_build.title}</div></div>
-      <div class="mc-stat"><div class="mc-stat__label">Repository</div><div class="mc-stat__value mc-stat__value--highlight">${ex.repository.status === 'connected' ? 'GitHub Connected' : '—'}</div></div>
-      <div class="mc-stat"><div class="mc-stat__label">Deployment</div><div class="mc-stat__value mc-stat__value--highlight">Netlify ${ex.deployment.status}</div></div>
-      <div class="mc-stat"><div class="mc-stat__label">Content Pages</div><div class="mc-stat__value">${ex.content_pages.complete} / ${ex.content_pages.target}</div></div>
-      <div class="mc-stat"><div class="mc-stat__label">Research Complete</div><div class="mc-stat__value">${ex.research_complete}%</div></div>
-      <div class="mc-stat"><div class="mc-stat__label">Data Visualizations</div><div class="mc-stat__value">${ex.data_visualizations.complete} / ${ex.data_visualizations.target}</div></div>
-      <div class="mc-stat"><div class="mc-stat__label">Action Platform</div><div class="mc-stat__value">${ex.action_platform}%</div></div>
-      <div class="mc-stat"><div class="mc-stat__label">Testing</div><div class="mc-stat__value mc-stat__value--warn">${ex.testing}%</div></div>
-      <div class="mc-stat"><div class="mc-stat__label">Volunteer Pipeline</div><div class="mc-stat__value">${ex.volunteer_pipeline}%</div></div>
-      <div class="mc-stat"><div class="mc-stat__label">Today's Goal</div><div class="mc-stat__value" style="font-size:0.95rem">${ex.todays_goal}</div></div>
-    </div>`;
-}
-
-function renderBriefing(b, ex) {
-  return `
-    <section class="mc-briefing">
-      <h2>☀ Daily Mission Briefing — ${new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' })}</h2>
-      <ul>
-        <li><strong>Yesterday:</strong> ${b.yesterday_completed} tasks completed</li>
-        <li><strong>Overall progress:</strong> ${ex.overall_completion}%</li>
-        <li><strong>Biggest risk:</strong> ${b.biggest_risk}</li>
-        <li><strong>Today's focus:</strong> ${b.today_focus}</li>
-        <li><strong>Estimated completion:</strong> ${ex.estimated_days_remaining} days</li>
-      </ul>
+    <section class="mc-card mc-five-q">
+      <h3>The Five Questions</h3>
+      <ol>
+        <li><strong>What has been built?</strong> ${b.what_built}</li>
+        <li><strong>What is being built now?</strong> ${b.building_now}</li>
+        <li><strong>What is blocked?</strong> ${b.blocked.join('; ')}</li>
+        <li><strong>What is ready for public use?</strong> ${b.ready_public.join('; ')}</li>
+        <li><strong>What needs to happen next?</strong> ${b.next}</li>
+      </ol>
     </section>`;
 }
 
 function renderPhases(phases) {
-  const sorted = [...phases].sort((a, b) => (a.id === 0 ? -1 : b.id === 0 ? 1 : a.id - b.id));
-  return sorted
-    .map(
-      (p) => `
+  const sorted = [...phases].sort((a, b) => (a.id === 0 ? 99 : a.id) - (b.id === 0 ? 99 : b.id));
+  return sorted.map(p => `
     <div class="mc-phase" data-phase>
       <button type="button" class="mc-phase__header" aria-expanded="false">
         <span class="mc-phase__toggle">▶</span>
         <span class="mc-phase__title">Phase ${p.id} — ${p.title}</span>
+        <span class="mc-phase__status mc-phase__status--${p.status}">${p.status.replace('_', ' ')}</span>
         <span class="mc-phase__pct">${p.completion}%</span>
       </button>
       <div class="mc-phase__body" hidden>
-        ${pctBar('Completion', p.completion)}
+        ${pctBar('Phase completion', p.completion)}
         <div class="mc-phase__meta">
-          <span>${p.tasks} tasks</span>
-          ${p.started ? `<span>Started ${p.started}</span>` : ''}
-          ${p.completed ? `<span>Completed ${p.completed}</span>` : ''}
+          <span>${p.steps_complete}/${p.steps_total} steps</span>
+          ${p.active_step ? `<span>Active: ${p.active_step}</span>` : ''}
+          ${p.blocked ? `<span>Blocked: ${p.blocked}</span>` : ''}
+          <span>Updated ${p.updated}</span>
         </div>
-        ${(p.items || [])
-          .map(
-            (item) => `
-          <div class="mc-phase-item">
-            <span>${statusDot(item.status)}${item.name}</span>
-            <span>${item.status.replace('_', ' ')}${item.note ? ` · ${item.note}` : ''}</span>
-          </div>`
-          )
-          .join('')}
+        ${p.notes ? `<p class="mc-bar-note">${p.notes}</p>` : ''}
       </div>
-    </div>`
-    )
-    .join('');
+    </div>`).join('');
+}
+
+function renderSteps(steps) {
+  return `
+    <table class="mc-table">
+      <thead><tr><th>#</th><th>Phase</th><th>Title</th><th>Status</th><th>%</th></tr></thead>
+      <tbody>
+        ${steps.map(s => `
+          <tr class="mc-table__row--${s.status}">
+            <td>${s.num}</td><td>${s.phase}</td><td>${s.title}</td>
+            <td>${s.status}</td><td>${s.pct}%</td>
+          </tr>`).join('')}
+      </tbody>
+    </table>
+    <p class="mc-bar-note">Full 100-step registry expands in Build #4.</p>`;
 }
 
 function renderBuildMap(nodes) {
+  const statusClass = { complete: 'complete', building: 'building', planning: 'planning', not_started: 'not_started', review: 'testing', blocked: 'blocked' };
   return `
-    <div class="mc-build-map">
-      ${nodes
-        .map(
-          (n, i) => `
-        ${i > 0 ? '<span class="mc-build-map__arrow">↓</span>' : ''}
-        <a href="${n.href}" class="mc-build-map__node mc-build-map__node--${n.status}">${n.label}</a>`
-        )
-        .join('')}
-      <div class="mc-legend">
-        <span style="--c:#22c55e">Complete</span>
-        <span>Building</span>
-        <span>Planning</span>
-        <span>Not started</span>
-      </div>
+    <div class="mc-build-map mc-build-map--grid">
+      ${nodes.map(n => `
+        <a href="${n.href}" class="mc-build-map__node mc-build-map__node--${statusClass[n.status] || 'not_started'}" target="${n.href.startsWith('http') ? '_blank' : '_self'}" rel="noopener">${n.label}</a>
+      `).join('')}
+    </div>
+    <div class="mc-legend">
+      <span>Gray: Not started</span><span>Blue: Planning</span><span>Yellow: Building</span>
+      <span>Purple: Review</span><span>Green: Complete</span><span>Red: Blocked</span>
     </div>`;
 }
 
-function renderBuildsList(builds) {
+function renderResearchReadiness(items) {
   return `
-    <ul class="mc-builds-list">
-      ${[...builds]
-        .reverse()
-        .map(
-          (b) => `
-        <li><a href="/mission-control/build.html?b=${b.number}">
-          <span>Build #${b.number} — ${b.title}</span>
-          <span>v${b.version} · ${b.status}</span>
-        </a></li>`
-        )
-        .join('')}
-    </ul>`;
+    <table class="mc-table">
+      <thead><tr><th>Category</th><th>Collected</th><th>Reviewed</th><th>Summarized</th><th>Cited</th><th>Gaps</th></tr></thead>
+      <tbody>
+        ${items.map(r => `
+          <tr><td>${r.category}</td><td>${r.collected}</td><td>${r.reviewed}</td>
+          <td>${r.summarized}</td><td>${r.cited}</td><td class="mc-table__gaps">${r.gaps}</td></tr>`).join('')}
+      </tbody>
+    </table>`;
+}
+
+function renderAdminPanel(admin) {
+  if (!admin) return '';
+  return `
+    <section class="mc-card mc-admin-panel">
+      <h3>🔒 Admin — Internal</h3>
+      <p><strong>Notes:</strong> ${admin.internal_notes}</p>
+      <p><strong>Blocked:</strong> ${admin.blocked_tasks.join(' · ')}</p>
+      <p><strong>Risks:</strong> ${admin.risks.join(' · ')}</p>
+      <p><strong>Signups:</strong> ${admin.signup_records_note}</p>
+    </section>`;
 }
 
 function initPhaseToggles() {
-  document.querySelectorAll('[data-phase]').forEach((phase) => {
+  document.querySelectorAll('[data-phase]').forEach(phase => {
     const btn = phase.querySelector('.mc-phase__header');
     const body = phase.querySelector('.mc-phase__body');
     const toggle = phase.querySelector('.mc-phase__toggle');
@@ -135,143 +143,113 @@ function initPhaseToggles() {
   });
 }
 
-function initDevConsole(data) {
-  const params = new URLSearchParams(window.location.search);
-  if (!params.has('dev')) return;
-
-  const el = document.createElement('div');
-  el.className = 'mc-dev-console';
-  el.innerHTML = `
-    <span><strong>Dev Console</strong></span>
-    <span>Build: #${data.executive.last_build.number}</span>
-    <span>Next: #${(data.builds[data.builds.length - 1]?.next_builds || [4])[0]}</span>
-    <span>Blocked: ${data.briefing.blocked_tasks.length}</span>
-    <a href="${data.executive.repository.url}" target="_blank" rel="noopener">GitHub</a>
-    <a href="${data.executive.deployment.url}" target="_blank" rel="noopener">Netlify</a>
-    <a href="/data/mission-control.json">JSON</a>
-    <a href="/BUILD_PLAN.md">Build Plan</a>`;
-  document.body.appendChild(el);
-}
-
 async function initMissionControl() {
   const root = document.getElementById('mc-root');
   if (!root) return;
 
+  const admin = isAdmin();
   const res = await fetch('/data/mission-control.json');
   const data = await res.json();
 
-  const dims = data.dimensions;
-  const readiness = data.public_readiness;
+  const pr = data.public_readiness;
+  const civic = data.civic_action;
+  const dep = data.deployment;
 
   root.innerHTML = `
-    ${renderBriefing(data.briefing, data.executive)}
-    ${renderExecutive(data.executive)}
+    ${renderHeader(data, admin)}
+    ${renderFiveQuestions(data.briefing)}
     <div class="mc-progress-block">
-      <h2>Build Dimensions</h2>
-      ${pctBar('Research', dims.research, 'blue')}
-      ${pctBar('Writing', dims.writing, 'blue')}
-      ${pctBar('Design', dims.design, 'green')}
-      ${pctBar('Development', dims.development, 'yellow')}
-      ${pctBar('Testing', dims.testing, 'yellow')}
-      ${pctBar('Deployment', dims.deployment, 'green')}
-      ${pctBar('Volunteer System', dims.volunteer_system, 'purple')}
+      <h2>Layered Progress — Honest Metrics</h2>
+      <p class="mc-principle">${data.identity.principle}</p>
+      ${data.progress_bars.map(b => pctBar(b.label, b.value, b.note)).join('')}
     </div>
-    <div class="mc-progress-block">
-      <h2>Public Readiness — Is the educational mission ready?</h2>
-      ${Object.entries(readiness)
-        .map(([k, v]) => pctBar(k.replace(/_/g, ' '), v, v > 50 ? 'green' : 'yellow'))
-        .join('')}
+    <div class="mc-grid-2">
+      <div class="mc-card">
+        <h3>Public Readiness Score</h3>
+        <div class="mc-stat__value mc-stat__value--hero" style="font-size:2.5rem">${pr.score}%</div>
+        <ul class="mc-readiness-list">
+          ${pr.questions.map(q => `<li>${q.ready ? '✓' : '○'} ${q.q} <em>(${q.pct}%)</em></li>`).join('')}
+        </ul>
+      </div>
+      <div class="mc-card">
+        <h3>Civic Action Readiness</h3>
+        <div class="mc-stat__value mc-stat__value--hero" style="font-size:2.5rem">${civic.readiness_score}%</div>
+        <div class="mc-phase-item"><span>Education leads</span><span>${civic.education_leader_signups}</span></div>
+        <div class="mc-phase-item"><span>Network signups</span><span>${civic.contact_network_signups}</span></div>
+        <div class="mc-phase-item"><span>Community ideas</span><span>${civic.community_ideas}</span></div>
+        <p class="mc-bar-note">Counts from Netlify Forms when integrated.</p>
+      </div>
     </div>
-    <h2 class="mc-section-title">Phase Dashboard</h2>
-    <div id="mc-phases">${renderPhases(data.phases)}</div>
+    ${renderAdminPanel(admin ? data.admin_only : null)}
+    <h2 class="mc-section-title">Phase Progress Cards</h2>
+    ${renderPhases(data.phases)}
+    <h2 class="mc-section-title">Step-Level Tracking</h2>
+    <div class="mc-card">${renderSteps(data.steps)}</div>
     <h2 class="mc-section-title">Living Build Map</h2>
     ${renderBuildMap(data.build_map)}
-    <div class="mc-grid-2" style="margin-top:2rem">
-      <div class="mc-card">
-        <h3>Repository Status</h3>
-        <div class="mc-phase-item"><span>GitHub</span><span>${data.repository.connected ? 'Connected' : '—'}</span></div>
-        <div class="mc-phase-item"><span>Branch</span><span>${data.repository.branch}</span></div>
-        <div class="mc-phase-item"><span>Production</span><span>${data.repository.production}</span></div>
-        <div class="mc-phase-item"><span>Deploy Preview</span><span>${data.repository.deploy_preview}</span></div>
-      </div>
-      <div class="mc-card">
-        <h3>Research Dashboard</h3>
-        ${Object.entries(data.research_inventory)
-          .map(([k, v]) => `<div class="mc-phase-item"><span>${k.replace(/_/g, ' ')}</span><span>${v.collected} / ${v.target}</span></div>`)
-          .join('')}
-      </div>
-      <div class="mc-card">
-        <h3>Content Dashboard</h3>
-        ${Object.entries(data.content_areas)
-          .map(([k, v]) => `<div class="mc-phase-item"><span>${k.replace(/_/g, ' ')}</span><span>${v}%</span></div>`)
-          .join('')}
-      </div>
-      <div class="mc-card">
-        <h3>Leadership Pipeline</h3>
-        ${Object.entries(data.leadership_pipeline)
-          .map(([k, v]) => `<div class="mc-phase-item"><span>${k.replace(/_/g, ' ')}</span><span>${v}</span></div>`)
-          .join('')}
-        <p style="font-size:0.8rem;color:var(--mc-text-muted);margin:0.75rem 0 0">Grows as signups come in via Netlify Forms.</p>
-      </div>
+    <h2 class="mc-section-title">Research Readiness</h2>
+    <div class="mc-card">${renderResearchReadiness(data.research_readiness)}</div>
+    <h2 class="mc-section-title">Deployment Dashboard</h2>
+    <div class="mc-card">
+      <div class="mc-phase-item"><span>Repository</span><span>${dep.repository_connected ? 'Connected' : '—'}</span></div>
+      <div class="mc-phase-item"><span>Production branch</span><span>${dep.production_branch}</span></div>
+      <div class="mc-phase-item"><span>Last commit</span><span><code>${dep.last_commit}</code></span></div>
+      <div class="mc-phase-item"><span>Last deploy</span><span>${dep.last_successful_deploy}</span></div>
+      <div class="mc-phase-item"><span>Production</span><span><a href="${dep.production_url}" target="_blank" rel="noopener">${dep.production_status}</a></span></div>
+      <div class="mc-phase-item"><span>Forms</span><span>${dep.forms_configured ? 'Yes' : 'No'}</span></div>
+      <div class="mc-phase-item"><span>Redirects</span><span>${dep.redirects_configured ? 'Yes' : 'No'}</span></div>
     </div>
-    <h2 class="mc-section-title">Build Registry</h2>
-    ${renderBuildsList(data.builds)}
-    <p style="font-size:0.85rem;color:var(--mc-text-muted);margin-top:1rem">Add <code>?dev=1</code> for developer console. Data: <a href="/data/mission-control.json">mission-control.json</a></p>`;
+    <h2 class="mc-section-title">Build Records</h2>
+    <ul class="mc-builds-list">
+      ${[...data.builds].map(b => `
+        <li><a href="/mission-control/build.html?b=${b.number}">
+          <span>Build #${b.number} — ${b.title}</span><span>v${b.version || '—'} · ${b.status}</span>
+        </a></li>`).join('')}
+    </ul>
+    <p class="mc-bar-note">
+      <a href="${admin ? '/mission-control/' : '/admin/mission-control/'}">${admin ? '← Public view' : 'Admin view →'}</a>
+      · <a href="/data/mission-control.json">JSON</a> · <code>?dev=1</code> dev console
+    </p>`;
 
   initPhaseToggles();
-  initDevConsole(data);
+  if (new URLSearchParams(window.location.search).has('dev') || admin) initDevConsole(data);
+}
+
+function initDevConsole(data) {
+  if (document.querySelector('.mc-dev-console')) return;
+  const el = document.createElement('div');
+  el.className = 'mc-dev-console';
+  el.innerHTML = `
+    <span><strong>Dev Console</strong></span>
+    <span>Build #${data.executive.current_build.number}</span>
+    <span>Next: #${data.executive.next_build.number}</span>
+    <a href="${data.deployment.repo_url}">GitHub</a>
+    <a href="${data.deployment.production_url}">Netlify</a>`;
+  document.body.appendChild(el);
 }
 
 async function initBuildDetail() {
   const root = document.getElementById('mc-build-detail');
   if (!root) return;
-
   const num = parseInt(new URLSearchParams(window.location.search).get('b'), 10);
   const res = await fetch('/data/mission-control.json');
   const data = await res.json();
-  const build = data.builds.find((b) => b.number === num);
-
-  if (!build) {
-    root.innerHTML = '<p>Build not found.</p>';
-    return;
-  }
+  const build = data.builds.find(b => b.number === num);
+  if (!build) { root.innerHTML = '<p>Build not found.</p>'; return; }
 
   root.innerHTML = `
-    <nav class="breadcrumb" style="color:var(--mc-text-muted)"><a href="/mission-control/" style="color:var(--mc-accent)">Mission Control</a> → Build #${build.number}</nav>
-    <header class="mc-header">
-      <h1>Build #${build.number} — ${build.title}</h1>
-      <p class="mc-header__question">Permanent institutional memory · Build DNA</p>
-    </header>
+    <nav class="breadcrumb"><a href="/mission-control/">Mission Control</a> → Build #${build.number}</nav>
+    <header class="mc-header"><h1>Build #${build.number} — ${build.title}</h1>
+    <p class="mc-header__question">Permanent institutional memory · Build DNA</p></header>
     <div class="mc-dna">
-      <div class="mc-dna__item"><strong>Status</strong>${build.status}</div>
-      <div class="mc-dna__item"><strong>Version</strong>v${build.version}</div>
-      <div class="mc-dna__item"><strong>Phase</strong>${build.phase}</div>
-      <div class="mc-dna__item"><strong>Started</strong>${build.started || '—'}</div>
-      <div class="mc-dna__item"><strong>Completed</strong>${build.completed || '—'}</div>
-      <div class="mc-dna__item"><strong>Est. Hours</strong>${build.estimated_hours || '—'}</div>
-      <div class="mc-dna__item"><strong>Actual Hours</strong>${build.actual_hours || '—'}</div>
-      <div class="mc-dna__item"><strong>Review</strong>${build.review_status || '—'}</div>
-      <div class="mc-dna__item"><strong>Documentation</strong>${build.documentation_status || '—'}</div>
-      <div class="mc-dna__item"><strong>Testing</strong>${build.testing_status || '—'}</div>
-      <div class="mc-dna__item"><strong>Git Commit</strong><code>${build.git_commit || '—'}</code></div>
-      <div class="mc-dna__item"><strong>Netlify</strong>${build.netlify_deploy || '—'}</div>
+      ${Object.entries({ Status: build.status, Version: build.version, Started: build.started, Completed: build.completed, Purpose: build.purpose, Branch: build.branch, Commit: build.git_commit, Review: build.review_status }).map(([k,v]) => `
+        <div class="mc-dna__item"><strong>${k}</strong>${v || '—'}</div>`).join('')}
     </div>
-    <div class="mc-card" style="margin-top:1rem">
-      <h3>Files</h3>
-      <ul>${(build.files || []).map((f) => `<li><code>${f}</code></li>`).join('')}</ul>
-    </div>
-    <div class="mc-card" style="margin-top:1rem">
-      <h3>Pages</h3>
-      <ul>${(build.pages || []).map((p) => `<li><a href="${p}">${p}</a></li>`).join('')}</ul>
-    </div>
-    <div class="mc-grid-2" style="margin-top:1rem">
-      <div class="mc-card"><h3>Dependencies</h3><p>Builds: ${(build.dependencies || []).join(', ') || 'None'}</p></div>
-      <div class="mc-card"><h3>Next Builds</h3><p>${(build.next_builds || []).map((n) => `<a href="/mission-control/build.html?b=${n}">#${n}</a>`).join(', ') || 'TBD'}</p></div>
-    </div>
-    <div class="mc-card" style="margin-top:1rem"><h3>Notes</h3><p>${build.notes || '—'}</p></div>
-    <div class="mc-card" style="margin-top:1rem"><h3>Lessons Learned</h3><p>${build.lessons || '—'}</p></div>
-    ${build.cursor_prompt ? `<div class="mc-card" style="margin-top:1rem"><h3>Cursor Prompt</h3><pre style="white-space:pre-wrap;font-size:0.85rem">${build.cursor_prompt}</pre></div>` : ''}
-    <p style="margin-top:1.5rem"><a href="/builds/00${build.number}-*.html">View build page →</a> · <a href="/mission-control/">← Mission Control</a></p>`;
+    ${build.summary ? `<div class="mc-card"><h3>Summary</h3><p>${build.summary}</p></div>` : ''}
+    ${build.decisions_made ? `<div class="mc-card"><h3>Decisions</h3><ul>${build.decisions_made.map(d => `<li>${d}</li>`).join('')}</ul></div>` : ''}
+    ${build.risks ? `<div class="mc-card"><h3>Risks</h3><ul>${(Array.isArray(build.risks) ? build.risks : [build.risks]).map(r => `<li>${r}</li>`).join('')}</ul></div>` : ''}
+    ${build.lessons ? `<div class="mc-card"><h3>Lessons</h3><p>${build.lessons}</p></div>` : ''}
+    <p><a href="/mission-control/">← Mission Control</a></p>`;
 }
 
 document.addEventListener('DOMContentLoaded', () => {

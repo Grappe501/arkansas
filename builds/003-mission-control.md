@@ -1,48 +1,57 @@
-# Build #3 — Mission Control OS
+# Build #3 — Mission Control Dashboard
 
 **Status:** ✅ Complete  
-**Version:** 1.6.0  
-**Route:** [/mission-control/](../mission-control/)
+**Version:** 1.7.0  
+**Routes:** [/mission-control/](../mission-control/) · [/admin/mission-control/](../admin/mission-control/)
 
 ---
+
+## Public Name
+
+**Citizens United Mission Control**
 
 ## Purpose
 
-The BUILD_PLAN is not a document — it is the **operating system** for the project.
+The project operating cockpit — not an afterthought.
 
-Mission Control answers:
+Answers five questions at all times:
 
-> **Where are we today, what changed today, and what is left to build?**
+1. What has been built?
+2. What is being built now?
+3. What is blocked?
+4. What is ready for public use?
+5. What needs to happen next?
 
-## Components
+## Design Feel
 
-| Component | Location |
-|-----------|----------|
-| Live dashboard | `/mission-control/` |
-| Data source | `data/mission-control.json` |
-| Build DNA pages | `/mission-control/build.html?b=N` |
-| Public readiness | Dashboard section |
-| Living build map | Dashboard (color-coded nodes) |
-| Dev console | `?dev=1` query param |
+NASA mission control + civic institution + campaign war room. Sophisticated, calm, high-trust, honest.
 
-## Update Protocol
+## Version 1 Includes
 
-Every build commit should update `data/mission-control.json`:
+- Overall completion card (honest **3%** baseline per Build #3 spec)
+- Phase progress cards (expandable)
+- Step-level tracking (sample steps; full registry in Build #4)
+- 19 layered progress bars with explanations
+- Living build map (20 nodes, color-coded)
+- Public readiness score + 10 readiness questions
+- Research readiness dashboard (13 categories)
+- Deployment dashboard (GitHub → Netlify)
+- Civic action metrics
+- Build records with DNA pages
+- Public `/mission-control` + Admin `/admin/mission-control`
 
-1. Bump `executive.overall_completion`
-2. Add/update build in `builds[]`
-3. Update phase completion
-4. Update `build_map` node statuses
-5. Refresh `briefing` for daily mission briefing
+## Principle
 
-## Public Readiness
+> Mission Control tells the truth about itself. Never inflate completion.
 
-Tracks educational mission readiness — not just code:
+## Data Source
 
-- Historical narrative, legal explanations, data viz
-- Primary sources, fact-check, citations
-- Mobile, community engagement, leadership recruitment
+`data/mission-control.json` — update every build commit.
+
+## Next Build
+
+**Build #4 — Master Phase Registry** (full 100-step tracker)
 
 ---
 
-*Build #3 is complete. Mission Control is the project OS.*
+*Build #3 is complete.*

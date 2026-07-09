@@ -426,3 +426,64 @@ body.mc-body .action-hub__toggle {
   color: var(--mc-text-muted);
   margin-bottom: 0.2rem;
 }
+
+.mc-bar-note {
+  font-size: 0.78rem;
+  color: var(--mc-text-muted);
+  margin: 0.35rem 0 0.85rem;
+  line-height: 1.45;
+}
+
+.mc-principle {
+  font-style: italic;
+  color: var(--mc-yellow);
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+}
+
+.mc-header__eyebrow {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--mc-accent);
+  margin: 0 0 0.5rem;
+}
+
+.mc-stat--wide { grid-column: span 2; }
+.mc-stat__value--hero { font-size: 2.25rem; color: var(--mc-green); }
+.mc-executive--hero { margin-top: 1.5rem; }
+
+.mc-five-q ol { margin: 0; padding-left: 1.25rem; color: var(--mc-text-muted); font-size: 0.9rem; }
+.mc-five-q li { margin-bottom: 0.5rem; }
+
+.mc-phase__status {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+.mc-phase__status--complete { background: #14532d; color: #bbf7d0; }
+.mc-phase__status--building { background: #422006; color: #fef08a; }
+.mc-phase__status--live { background: #1e3a5f; color: #bfdbfe; }
+.mc-phase__status--not_started { background: var(--mc-gray); color: #fff; }
+
+.mc-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+.mc-table th, .mc-table td { padding: 0.5rem 0.75rem; border-bottom: 1px solid var(--mc-border); text-align: left; }
+.mc-table th { color: var(--mc-text-muted); font-size: 0.7rem; text-transform: uppercase; }
+.mc-table__gaps { color: var(--mc-text-muted); font-size: 0.8rem; }
+.mc-table__row--blocked td { color: var(--mc-red); }
+
+.mc-build-map--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.5rem;
+}
+.mc-build-map--grid .mc-build-map__node { min-width: unset; font-size: 0.8rem; }
+.mc-build-map__node--blocked { background: #450a0a; color: #fecaca; border-color: var(--mc-red); }
+.mc-build-map__node--testing { background: #3b0764; color: #e9d5ff; border-color: var(--mc-purple); }
+
+.mc-readiness-list { list-style: none; padding: 0; margin: 1rem 0 0; font-size: 0.85rem; }
+.mc-readiness-list li { padding: 0.35rem 0; border-bottom: 1px solid var(--mc-border); color: var(--mc-text-muted); }
+.mc-admin-panel { border-color: var(--mc-yellow); margin-bottom: 2rem; }
+.mc-body--admin .mc-header h1::after { content: " · Admin"; font-size: 0.5em; color: var(--mc-yellow); }

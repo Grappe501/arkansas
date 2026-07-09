@@ -10,6 +10,11 @@
   status = 301
 
 [[redirects]]
+  from = "/admin/mission-control"
+  to = "/admin/mission-control/"
+  status = 301
+
+[[redirects]]
   from = "/mission-control"
   to = "/mission-control/"
   status = 301
