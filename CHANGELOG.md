@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.53.0] - 2026-07-09 — Build #49 Master Governance & Institutional Constitution
+
+### The Rules That Govern the Institution
+- **Master Governance, Stewardship & Institutional Constitution v1.0** — supreme governance document
+- 6 institutional values, 7 steward roles, 4 decision categories, Institutional Oath
+- Public accountability index, correction policy, annual stewardship review framework
+- Extends Build #2 Project Constitution — 0/7 stewards assigned, no annual report yet
+- MC dashboard: `/mission-control/governance.html`
+
 ## [1.52.0] - 2026-07-09 — Build #48 Master Technical Architecture & Deployment Blueprint
 
 ### Production Engineering Constitution

@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Governance & Constitution <a href="/mission-control/governance.html" class="mc-inline-link">Institutional Rules →</a></h2>
+    <p class="mc-bar-note">Build #49 — Master governance & institutional constitution. 6 values, 7 steward roles. 0 stewards assigned. 44% governance readiness.</p>
     <h2 class="mc-section-title">Technical Architecture <a href="/mission-control/technical-architecture.html" class="mc-inline-link">Production Engineering →</a></h2>
     <p class="mc-bar-note">Build #48 — Master technical architecture & deployment blueprint. Next.js/Neon target. GitHub→Netlify live. 3/8 stack layers. 38% readiness.</p>
     <h2 class="mc-section-title">Visitor Journey <a href="/mission-control/visitor-journey.html" class="mc-inline-link">8 Stages →</a></h2>
@@ -4733,6 +4735,116 @@ async function initTechnicalArchitecture() {
   initDevConsole(mc);
 }
 
+async function initGovernanceConstitution() {
+  const root = document.getElementById('mc-governance-root');
+  if (!root) return;
+
+  const [govRes, mcRes] = await Promise.all([
+    fetch('/data/governance-constitution.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const gov = await govRes.json();
+  const mc = await mcRes.json();
+  const s = gov.summary;
+
+  const valueRows = gov.institutional_values.map(v => `
+    <tr><td><code>${v.id}</code></td><td>${v.title}</td><td>${v.status}</td><td>${v.implementation}</td></tr>`).join('');
+
+  const stewardRows = gov.governance_structure.stewards.map(st => `
+    <tr><td><code>${st.id}</code></td><td>${st.title}</td><td>${st.scope}</td>
+      <td>${st.assigned ? 'Yes' : 'No'}</td><td>${st.status}</td></tr>`).join('');
+
+  const respRows = gov.institutional_responsibilities.map(r => `
+    <tr><td><code>${r.id}</code></td><td>${r.title}</td><td>${r.status}</td>
+      <td>${r.route ? `<a href="${r.route}">${r.route}</a>` : '—'}</td></tr>`).join('');
+
+  const pubRows = gov.public_accountability.map(p => `
+    <tr><td>${p.document}</td><td>${p.status}</td>
+      <td>${p.route ? `<a href="${p.route}">view</a>` : '—'}</td></tr>`).join('');
+
+  const decRows = gov.decision_categories.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.title}</td><td>${d.description}</td><td>${d.mc_logging}</td></tr>`).join('');
+
+  const memRows = gov.institutional_memory.map(m => `
+    <tr><td>${m.type}</td><td>${m.status}</td><td>${m.current || ''}</td></tr>`).join('');
+
+  const metricRows = gov.mc_integration.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('');
+
+  const corrFlow = gov.correction_policy.steps.map((st, i) =>
+    `${st}${i < gov.correction_policy.steps.length - 1 ? ' →' : ''}`).join(' ');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Governance & Constitution</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #49 · ${gov.title}</p>
+      <h1>Master Governance, Stewardship & Institutional Constitution</h1>
+      <p class="mc-header__question">${gov.governing_principle}</p>
+      <p class="mc-bar-note">${gov.purpose}</p>
+      <p class="mc-bar-note">Extends <a href="/builds/002-project-constitution.md">Build #2 Project Constitution</a> · <a href="/mission-control/research-methodology.html">Research Methodology</a> · <a href="/mission-control/trust.html">Trust Framework</a></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Governance readiness</div><div class="mc-stat__value">${s.governance_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Values</div><div class="mc-stat__value">${s.values_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Stewards</div><div class="mc-stat__value">${s.stewards_assigned}/${s.stewards_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Public docs</div><div class="mc-stat__value">${s.public_docs_live}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Annual review</div><div class="mc-stat__value">${s.annual_review_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Builds logged</div><div class="mc-stat__value">${s.builds_logged}</div></div>
+    </div>
+    <h2 class="mc-section-title">Mission Statement</h2>
+    <p class="mc-bar-note">${gov.mission_statement}</p>
+    <h2 class="mc-section-title">Institutional Values</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Value</th><th>Status</th><th>Implementation</th></tr></thead>
+      <tbody>${valueRows}</tbody></table>
+    <h2 class="mc-section-title">Institutional Responsibilities</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Responsibility</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${respRows}</tbody></table>
+    <h2 class="mc-section-title">Steward Roles</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Steward</th><th>Scope</th><th>Assigned</th><th>Status</th></tr></thead>
+      <tbody>${stewardRows}</tbody></table>
+    <p class="mc-bar-note">${gov.governance_structure.note}</p>
+    <h2 class="mc-section-title">Decision Categories</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Category</th><th>Scope</th><th>MC Logging</th></tr></thead>
+      <tbody>${decRows}</tbody></table>
+    <h2 class="mc-section-title">Correction Policy</h2>
+    <p class="mc-bar-note">${corrFlow}</p>
+    <p class="mc-bar-note">${gov.correction_policy.principle}</p>
+    <p class="mc-bar-note">${gov.correction_policy.current}</p>
+    <h2 class="mc-section-title">Public Accountability</h2>
+    <table class="mc-table"><thead><tr><th>Document</th><th>Status</th><th>Link</th></tr></thead>
+      <tbody>${pubRows}</tbody></table>
+    <h2 class="mc-section-title">Community Participation</h2>
+    <ul class="mc-deliverables">${gov.community_participation.channels.map(c => `<li>${c.channel} — ${c.status}${c.note ? ' (' + c.note + ')' : ''}</li>`).join('')}</ul>
+    <p class="mc-bar-note">${gov.community_participation.review_gate}</p>
+    <h2 class="mc-section-title">Institutional Memory</h2>
+    <table class="mc-table"><thead><tr><th>Type</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${memRows}</tbody></table>
+    <h2 class="mc-section-title">Annual Institutional Review</h2>
+    <p class="mc-bar-note"><strong>${gov.annual_institutional_review.title}</strong> — ${gov.annual_institutional_review.frequency} · ${gov.annual_institutional_review.status}</p>
+    <ul class="mc-deliverables">${gov.annual_institutional_review.dimensions.map(d => `<li>${d}</li>`).join('')}</ul>
+    <p class="mc-bar-note">${gov.annual_institutional_review.note}</p>
+    <h2 class="mc-section-title">Institutional Oath</h2>
+    <blockquote class="mc-bar-note" style="border-left:3px solid var(--mc-accent);padding-left:1rem;font-style:italic">
+      ${gov.institutional_oath.join('<br>')}
+    </blockquote>
+    <h2 class="mc-section-title">Governance Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${gov.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${gov.recommended_next_build.number} — ${gov.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${gov.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_GOVERNANCE_CONSTITUTION.md">MASTER_GOVERNANCE_CONSTITUTION.md</a> ·
+      <a href="/data/governance-constitution.json">JSON</a> ·
+      <a href="/mission-control/institutional-roadmap.html">Institutional Roadmap</a> ·
+      <a href="/builds/002-project-constitution.md">Project Constitution</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -4780,4 +4892,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initContentProductionMatrix();
   initVisitorJourney();
   initTechnicalArchitecture();
+  initGovernanceConstitution();
 });

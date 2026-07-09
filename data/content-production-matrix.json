@@ -470,12 +470,12 @@
       ],
       "registry": "/data/mission-control.json",
       "related_build": 25,
-      "registered": 64,
-      "published": 49,
+      "registered": 65,
+      "published": 50,
       "in_pipeline": 15,
       "planned": 0,
       "queue_coverage_pct": 100,
-      "completion_pct": 98.0,
+      "completion_pct": 100,
       "production_stages": {},
       "status": "live"
     }
@@ -598,7 +598,7 @@
     "registered_in_queue": 448,
     "queue_coverage_pct": 22.5,
     "published_assets": 15,
-    "mc_dashboards_complete": 49,
+    "mc_dashboards_complete": 50,
     "in_pipeline": 49,
     "avg_production_speed": "Not measured \u2014 no velocity tracking",
     "research_backlog": "40 source slots + 1 claims awaiting review",
@@ -1162,11 +1162,11 @@
     "domains_total": 14,
     "institutional_target_total": 2045,
     "educational_target_total": 1995,
-    "assets_registered": 512,
+    "assets_registered": 513,
     "educational_assets_registered": 448,
     "assets_published": 15,
     "educational_assets_published": 15,
-    "mc_dashboards_complete": 49,
+    "mc_dashboards_complete": 50,
     "assets_in_pipeline": 49,
     "assets_planned": 1931,
     "queue_coverage_pct": 22.5,
@@ -1190,7 +1190,7 @@
     "Component specifications still deferred \u2014 production UI widgets unmapped"
   ],
   "recommended_next_build": {
-    "number": 49,
+    "number": 50,
     "title": "Component Specifications with Props/States",
     "note": "Map stack status panels, deployment pipeline viz, environment badges, and monitoring widgets to COMP-* from Build #17."
   }

@@ -1,0 +1,514 @@
+{
+  "version": "1.0",
+  "build": 49,
+  "updated": "2026-07-09",
+  "title": "Master Governance, Stewardship & Institutional Constitution v1.0",
+  "subtitle": "The Rules That Govern the Institution",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/governance.html",
+  "constitution": "/docs/MASTER_GOVERNANCE_CONSTITUTION.md",
+  "purpose": "How the institution governs itself, protects its mission, and ensures continuity beyond founders.",
+  "governing_principle": "Evidence-based civic education, transparent scholarship, respectful dialogue, long-term Arkansas service.",
+  "mission_statement": "Citizens United Facts exists to provide Arkansans with accurate, transparent, well-documented civic education about Citizens United v. FEC, its historical context, constitutional foundations, measurable impacts, and related public policy discussions.",
+  "extends": [
+    {
+      "title": "Project Constitution",
+      "build": 2,
+      "route": "/builds/002-project-constitution.md"
+    },
+    {
+      "title": "Research Methodology",
+      "build": 43,
+      "route": "/data/research-methodology.json"
+    },
+    {
+      "title": "Trust Framework",
+      "build": 36,
+      "route": "/data/trust-framework.json"
+    },
+    {
+      "title": "Institutional Roadmap",
+      "build": 44,
+      "route": "/data/institutional-roadmap.json"
+    }
+  ],
+  "institutional_values": [
+    {
+      "id": "VAL-01",
+      "title": "Truth",
+      "description": "Facts matter. Claims require evidence. Corrections are welcomed.",
+      "status": "live",
+      "implementation": "Evidence Ledger + Research Methodology"
+    },
+    {
+      "id": "VAL-02",
+      "title": "Transparency",
+      "description": "Readers understand sources, review, updates, and revision reasons.",
+      "status": "partial",
+      "implementation": "Trust Framework partial \u2014 24% readiness"
+    },
+    {
+      "id": "VAL-03",
+      "title": "Respect",
+      "description": "Different viewpoints welcomed; perspectives explained fairly.",
+      "status": "partial",
+      "implementation": "Debate hall planned \u2014 narrative architecture"
+    },
+    {
+      "id": "VAL-04",
+      "title": "Intellectual Curiosity",
+      "description": "Questions encouraged. Research ongoing. Learning never ends.",
+      "status": "live",
+      "implementation": "Research Observatory + Learning Lab designed"
+    },
+    {
+      "id": "VAL-05",
+      "title": "Arkansas First",
+      "description": "Built for Arkansas. National context supports local civic education.",
+      "status": "live",
+      "implementation": "75-county OS, Arkansas pilot in all frameworks"
+    },
+    {
+      "id": "VAL-06",
+      "title": "Long-Term Stewardship",
+      "description": "Valuable decades from now. Credibility over short-term popularity.",
+      "status": "partial",
+      "implementation": "Institutional Roadmap V1\u2013V10 \u2014 succession planned"
+    }
+  ],
+  "institutional_responsibilities": [
+    {
+      "id": "RES-01",
+      "title": "Maintain research quality",
+      "status": "partial",
+      "route": "/mission-control/research-methodology.html"
+    },
+    {
+      "id": "RES-02",
+      "title": "Maintain source transparency",
+      "status": "partial",
+      "route": "/library/"
+    },
+    {
+      "id": "RES-03",
+      "title": "Correct verified errors",
+      "status": "partial",
+      "route": "/mission-control/trust.html"
+    },
+    {
+      "id": "RES-04",
+      "title": "Review content regularly",
+      "status": "planned",
+      "route": "/mission-control/content-factory.html"
+    },
+    {
+      "id": "RES-05",
+      "title": "Protect participant privacy",
+      "status": "partial",
+      "route": "/mission-control/contact-intelligence.html"
+    },
+    {
+      "id": "RES-06",
+      "title": "Document important decisions",
+      "status": "partial",
+      "route": "/builds/"
+    },
+    {
+      "id": "RES-07",
+      "title": "Preserve institutional memory",
+      "status": "partial",
+      "route": "/mission-control/"
+    }
+  ],
+  "editorial_independence": {
+    "principle": "Evidence, documentation, historical accuracy, educational value \u2014 not popularity or political pressure",
+    "standards_route": "/mission-control/content-factory.html",
+    "research_route": "/mission-control/research-methodology.html",
+    "status": "partial"
+  },
+  "conflict_disclosure": {
+    "disclosures": [
+      "Funding (where appropriate)",
+      "Author disclosures",
+      "Research limitations",
+      "Source conflicts"
+    ],
+    "status": "planned",
+    "current": "Not enforced in content metadata"
+  },
+  "correction_policy": {
+    "steps": [
+      "Investigate",
+      "Correct",
+      "Document",
+      "Explain",
+      "Learn"
+    ],
+    "principle": "Corrections strengthen trust \u2014 never viewed as failures",
+    "status": "partial",
+    "current": "Trust Framework documents process \u2014 no public correction log live",
+    "route": "/mission-control/trust.html"
+  },
+  "governance_structure": {
+    "title": "Steward Roles",
+    "stewards": [
+      {
+        "id": "STW-01",
+        "title": "Executive Steward",
+        "scope": "Mission, strategy, institutional health",
+        "status": "partial",
+        "assigned": false
+      },
+      {
+        "id": "STW-02",
+        "title": "Research Steward",
+        "scope": "Research quality, methodology, evidence",
+        "status": "planned",
+        "assigned": false
+      },
+      {
+        "id": "STW-03",
+        "title": "Editorial Steward",
+        "scope": "Content standards, review, publication",
+        "status": "planned",
+        "assigned": false
+      },
+      {
+        "id": "STW-04",
+        "title": "Technology Steward",
+        "scope": "Software, infrastructure, security, MC",
+        "status": "partial",
+        "assigned": false
+      },
+      {
+        "id": "STW-05",
+        "title": "Community Steward",
+        "scope": "Education leaders, academy, outreach",
+        "status": "planned",
+        "assigned": false
+      },
+      {
+        "id": "STW-06",
+        "title": "Coalition Steward",
+        "scope": "Partnerships, Arkansas organizations",
+        "status": "planned",
+        "assigned": false
+      },
+      {
+        "id": "STW-07",
+        "title": "Mission Control Steward",
+        "scope": "MC operations, reporting, governance data",
+        "status": "partial",
+        "assigned": false
+      }
+    ],
+    "stewards_total": 7,
+    "stewards_assigned": 0,
+    "note": "One individual may hold multiple roles initially"
+  },
+  "decision_categories": [
+    {
+      "id": "DEC-OP",
+      "title": "Operational",
+      "description": "Routine administration",
+      "mc_logging": "partial"
+    },
+    {
+      "id": "DEC-ED",
+      "title": "Editorial",
+      "description": "Educational content, research, publications",
+      "mc_logging": "partial"
+    },
+    {
+      "id": "DEC-TE",
+      "title": "Technical",
+      "description": "Software, infrastructure, security, Mission Control",
+      "mc_logging": "live"
+    },
+    {
+      "id": "DEC-ST",
+      "title": "Strategic",
+      "description": "Mission, expansion, partnerships, long-term planning",
+      "mc_logging": "partial"
+    }
+  ],
+  "public_accountability": [
+    {
+      "id": "PUB-01",
+      "document": "Mission",
+      "status": "live",
+      "route": "/docs/MASTER_GOVERNANCE_CONSTITUTION.md"
+    },
+    {
+      "id": "PUB-02",
+      "document": "Editorial standards",
+      "status": "partial",
+      "route": "/mission-control/content-factory.html"
+    },
+    {
+      "id": "PUB-03",
+      "document": "Research methodology",
+      "status": "live",
+      "route": "/docs/MASTER_RESEARCH_METHODOLOGY.md"
+    },
+    {
+      "id": "PUB-04",
+      "document": "Correction policy",
+      "status": "partial",
+      "route": "/mission-control/trust.html"
+    },
+    {
+      "id": "PUB-05",
+      "document": "Privacy policy",
+      "status": "planned",
+      "route": null
+    },
+    {
+      "id": "PUB-06",
+      "document": "Accessibility commitment",
+      "status": "partial",
+      "route": "/mission-control/design.html"
+    },
+    {
+      "id": "PUB-07",
+      "document": "Governance principles",
+      "status": "live",
+      "route": "/docs/MASTER_GOVERNANCE_CONSTITUTION.md"
+    }
+  ],
+  "community_participation": {
+    "channels": [
+      {
+        "channel": "Research suggestions",
+        "status": "planned"
+      },
+      {
+        "channel": "Source recommendations",
+        "status": "planned"
+      },
+      {
+        "channel": "Educational questions",
+        "status": "partial",
+        "note": "FAQ planned"
+      },
+      {
+        "channel": "Coalition participation",
+        "status": "planned",
+        "note": "0 orgs"
+      },
+      {
+        "channel": "Community education",
+        "status": "planned",
+        "note": "0 leaders"
+      },
+      {
+        "channel": "Volunteer service",
+        "status": "planned"
+      }
+    ],
+    "review_gate": "Every contribution reviewed before becoming institutional knowledge",
+    "status": "planned"
+  },
+  "institutional_memory": [
+    {
+      "type": "Major decisions",
+      "status": "partial",
+      "current": "Build decisions in MC builds[]"
+    },
+    {
+      "type": "Version history",
+      "status": "live",
+      "current": "Git + VERSION + CHANGELOG"
+    },
+    {
+      "type": "Research milestones",
+      "status": "planned"
+    },
+    {
+      "type": "Editorial milestones",
+      "status": "planned"
+    },
+    {
+      "type": "Coalition growth",
+      "status": "planned",
+      "current": "0 orgs"
+    },
+    {
+      "type": "Mission Control history",
+      "status": "live",
+      "current": "50 builds logged"
+    },
+    {
+      "type": "Annual reports",
+      "status": "planned"
+    }
+  ],
+  "succession_planning": {
+    "principle": "Institution should not depend on one individual",
+    "status": "partial",
+    "current": "Leadership succession",
+    "route": "/mission-control/institutional-roadmap.html"
+  },
+  "annual_institutional_review": {
+    "title": "Institutional Stewardship Report",
+    "frequency": "Annual",
+    "status": "planned",
+    "dimensions": [
+      "Mission alignment",
+      "Research quality",
+      "Educational impact",
+      "Coalition development",
+      "Technical health",
+      "Accessibility",
+      "Transparency",
+      "Governance improvements"
+    ],
+    "note": "Institutional Roadmap defines annual review \u2014 report generator not built",
+    "route": "/mission-control/institutional-roadmap.html"
+  },
+  "institutional_oath": [
+    "We will seek truth through evidence.",
+    "We will explain complex issues with honesty and clarity.",
+    "We will acknowledge uncertainty when it exists.",
+    "We will distinguish documented facts from interpretation.",
+    "We will preserve transparency in our methods.",
+    "We will welcome thoughtful questions.",
+    "We will continue improving the institution for future generations of Arkansans."
+  ],
+  "long_term_vision": {
+    "recognition": "Trusted civic education \u2014 not loudest argument",
+    "audiences": [
+      "Teachers",
+      "Students",
+      "Journalists",
+      "Community organizations",
+      "Public officials",
+      "Citizens"
+    ],
+    "defining_quality": "Evidence above rhetoric"
+  },
+  "mc_integration": {
+    "title": "Mission Control Governance Metrics",
+    "status": "partial",
+    "metrics": [
+      {
+        "id": "GOV-01",
+        "title": "Institutional values defined",
+        "status": "live",
+        "current": "6/6"
+      },
+      {
+        "id": "GOV-02",
+        "title": "Values implemented",
+        "status": "partial",
+        "current": "3 live, 3 partial"
+      },
+      {
+        "id": "GOV-03",
+        "title": "Steward roles defined",
+        "status": "live",
+        "current": "7/7"
+      },
+      {
+        "id": "GOV-04",
+        "title": "Stewards formally assigned",
+        "status": "planned",
+        "current": "0/7"
+      },
+      {
+        "id": "GOV-05",
+        "title": "Public accountability documents",
+        "status": "partial",
+        "current": "6/7"
+      },
+      {
+        "id": "GOV-06",
+        "title": "Correction policy operational",
+        "status": "partial",
+        "current": "Documented \u2014 no correction log"
+      },
+      {
+        "id": "GOV-07",
+        "title": "Annual stewardship report",
+        "status": "planned",
+        "current": "Not generated"
+      },
+      {
+        "id": "GOV-08",
+        "title": "Succession planning",
+        "status": "partial",
+        "current": "Roadmap sustainability \u2014 not operational"
+      },
+      {
+        "id": "GOV-09",
+        "title": "Community contribution review",
+        "status": "planned",
+        "current": "No intake workflow"
+      },
+      {
+        "id": "GOV-10",
+        "title": "Strategic decision logging",
+        "status": "partial",
+        "current": "MC builds[] \u2014 not full decision registry"
+      }
+    ],
+    "governance_as_system": true
+  },
+  "related_blueprints": [
+    {
+      "title": "Institutional Roadmap",
+      "route": "/data/institutional-roadmap.json",
+      "build": 44
+    },
+    {
+      "title": "Research Methodology",
+      "route": "/data/research-methodology.json",
+      "build": 43
+    },
+    {
+      "title": "Trust Framework",
+      "route": "/data/trust-framework.json",
+      "build": 36
+    },
+    {
+      "title": "Systems Integration",
+      "route": "/data/systems-integration.json",
+      "build": 45
+    }
+  ],
+  "summary": {
+    "values_total": 6,
+    "values_live": 3,
+    "values_partial": 3,
+    "responsibilities_total": 7,
+    "stewards_total": 7,
+    "stewards_assigned": 0,
+    "decision_categories": 4,
+    "public_docs_live": 3,
+    "public_docs_partial": 3,
+    "institutional_memory_live": 2,
+    "annual_review_live": false,
+    "correction_log_live": false,
+    "succession_operational": false,
+    "builds_logged": 50,
+    "governance_readiness_pct": 44
+  },
+  "catalog_gaps": [
+    "0/7 stewards formally assigned \u2014 roles defined only",
+    "Annual Institutional Stewardship Report not generated",
+    "No public correction log \u2014 policy documented in Trust Framework only",
+    "Privacy policy not published",
+    "Community contribution review workflow not built",
+    "Conflict disclosure not enforced in content metadata",
+    "Editorial independence principles live \u2014 enforcement workflow partial",
+    "Institutional memory = build history \u2014 research/editorial/coalition milestones missing",
+    "Build #2 Project Constitution and Build #49 Governance Constitution coexist \u2014 hierarchy documented",
+    "Component specifications still deferred \u2014 governance UI widgets unmapped"
+  ],
+  "recommended_next_build": {
+    "number": 50,
+    "title": "Component Specifications with Props/States",
+    "note": "Map steward role cards, values panels, accountability doc links, and annual review widgets to COMP-* from Build #17."
+  }
+}

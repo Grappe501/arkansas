@@ -328,7 +328,7 @@ out = {
         'Component specifications still deferred — stack migration UI unmapped',
     ],
     'recommended_next_build': {
-        'number': 49,
+        'number': 50,
         'title': 'Component Specifications with Props/States',
         'note': 'Map stack status panels, deployment pipeline viz, environment badges, and monitoring widgets to COMP-* from Build #17.',
     },

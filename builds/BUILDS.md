@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#49** | **Master Governance & Institutional Constitution** | **1.53.0** | **✅ Complete** | [049](049-master-governance-stewardship-institutional-constitution.md) · [/mission-control/governance.html](../mission-control/governance.html) |
 | **#48** | **Master Technical Architecture & Deployment Blueprint** | **1.52.0** | **✅ Complete** | [048](048-master-technical-architecture-deployment-blueprint.md) · [/mission-control/technical-architecture.html](../mission-control/technical-architecture.html) |
 | **#47** | **Master Visitor Journey & Behavioral Architecture** | **1.51.0** | **✅ Complete** | [047](047-master-visitor-journey-behavioral-architecture.md) · [/mission-control/visitor-journey.html](../mission-control/visitor-journey.html) |
 | **#46** | **Master Content Production Matrix** | **1.50.0** | **✅ Complete** | [046](046-master-content-production-matrix.md) · [/mission-control/content-production-matrix.html](../mission-control/content-production-matrix.html) |

@@ -1,6 +1,6 @@
 {
-  "version": "1.52.0",
-  "build": 48,
+  "version": "1.53.0",
+  "build": 49,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 48,
+    "overall_completion": 49,
     "current_build": {
-      "number": 48,
-      "title": "Citizens United Facts Master Technical Architecture & Deployment Blueprint"
-    },
-    "active_phase": "Production Engineering \u2014 Technical Architecture & Deployment",
-    "last_completed": "Master Visitor Journey & Behavioral Architecture",
-    "next_build": {
       "number": 49,
+      "title": "Citizens United Facts Master Governance, Stewardship & Institutional Constitution"
+    },
+    "active_phase": "Institutional Constitution \u2014 Governance & Stewardship",
+    "last_completed": "Master Technical Architecture & Deployment Blueprint",
+    "next_build": {
+      "number": 50,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
@@ -57,12 +57,13 @@
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 25,
-    "institutional_maturity_pct": 32,
+    "institutional_maturity_pct": 34,
     "current_institutional_version": "V1",
     "systems_integration_readiness": 28,
     "production_matrix_readiness": 39,
     "visitor_journey_readiness": 40,
     "technical_architecture_readiness": 38,
+    "governance_readiness": 44,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -70,8 +71,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 48,
-      "note": "Technical Architecture live \u2014 3/8 stack layers, GitHub\u2192Netlify."
+      "value": 49,
+      "note": "Governance Constitution live \u2014 7 steward roles, 6 values."
     },
     {
       "id": "constitution",
@@ -400,9 +401,9 @@
     {
       "id": "institutional_maturity",
       "label": "Institutional Maturity (V1\u2013V10)",
-      "value": 32,
+      "value": 34,
       "max": 100,
-      "note": "Institutional maturity V1 \u2014 32% overall."
+      "note": "Institutional maturity V1 \u2014 governance constitution adds stewardship layer."
     },
     {
       "id": "systems_integration",
@@ -431,6 +432,13 @@
       "value": 38,
       "max": 100,
       "note": "3/8 live \u2014 static v1, Next.js/Neon planned."
+    },
+    {
+      "id": "governance",
+      "label": "Governance & Stewardship Constitution",
+      "value": 44,
+      "max": 100,
+      "note": "0/7 stewards assigned \u2014 annual review planned."
     }
   ],
   "public_readiness": {
@@ -1011,6 +1019,12 @@
       "id": "technical_architecture",
       "label": "Technical Architecture & Deployment",
       "href": "/mission-control/technical-architecture.html",
+      "status": "complete"
+    },
+    {
+      "id": "governance",
+      "label": "Governance & Institutional Constitution",
+      "href": "/mission-control/governance.html",
       "status": "complete"
     }
   ],
@@ -2037,6 +2051,57 @@
     }
   ],
   "builds": [
+    {
+      "number": 49,
+      "title": "Citizens United Facts Master Governance, Stewardship & Institutional Constitution",
+      "version": "1.53.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Institutional Constitution \u2014 governance, stewardship, public trust, continuity",
+      "summary": "6 values, 7 steward roles, 3 public docs live; 44% readiness.",
+      "files_created": [
+        "data/governance-constitution.json",
+        "docs/MASTER_GOVERNANCE_CONSTITUTION.md",
+        "builds/049-master-governance-stewardship-institutional-constitution.md",
+        "mission-control/governance.html",
+        "scripts/gen-governance-constitution.py",
+        "scripts/update-mc-build49.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/governance.html"
+      ],
+      "decisions_made": [
+        "Institutional Constitution v1.0 \u2014 supreme governance document for stewardship",
+        "6 institutional values \u2014 Truth through Long-Term Stewardship",
+        "7 steward roles \u2014 Executive through Mission Control",
+        "4 decision categories \u2014 Operational, Editorial, Technical, Strategic",
+        "7 public accountability documents \u2014 2 live, 4 partial, 1 planned",
+        "Institutional Oath \u2014 contributor commitment",
+        "44% honest readiness \u2014 taxonomy live, stewards unassigned"
+      ],
+      "open_questions": [
+        "Hierarchy vs Build #2 Project Constitution?",
+        "Steward assignment process?",
+        "Annual report automation?"
+      ],
+      "risks": [
+        "Governance without operational enforcement",
+        "0 stewards assigned",
+        "Two constitutions may confuse"
+      ],
+      "next_recommended": 50,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/governance.html",
+      "review_status": "complete"
+    },
     {
       "number": 48,
       "title": "Citizens United Facts Master Technical Architecture & Deployment Blueprint",
@@ -4369,20 +4434,20 @@
     }
   ],
   "briefing": {
-    "what_built": "Technical Architecture v1.0 \u2014 stack, deployment, APIs, monitoring, scalability",
-    "building_now": "Static v1 on Netlify \u2014 target Next.js/Neon documented",
+    "what_built": "Governance Constitution v1.0 \u2014 values, stewards, accountability, oath, annual review framework",
+    "building_now": "Governance as MC first-class system \u2014 extends Build #2 constitution",
     "blocked": [
-      "Neon provisioning",
-      "Next.js migration",
-      "Global search",
-      "Auth"
+      "Steward assignments",
+      "Annual stewardship report",
+      "Correction log",
+      "Privacy policy"
     ],
     "ready_public": [
-      "Technical Architecture MC dashboard",
-      "Deployment workflow",
-      "Stack constitution"
+      "Governance MC dashboard",
+      "Institutional Constitution",
+      "Public accountability index"
     ],
-    "next": "Build #49 \u2014 Component specifications with props/states"
+    "next": "Build #50 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -4915,5 +4980,15 @@
     "preview_deploys_live": true,
     "nextjs_migration": false,
     "neon_postgres_live": false
+  },
+  "governance_constitution": "/data/governance-constitution.json",
+  "governance_dashboard": "/mission-control/governance.html",
+  "governance_inventory": {
+    "readiness_score": 44,
+    "values_total": 6,
+    "stewards_total": 7,
+    "stewards_assigned": 0,
+    "annual_review_live": false,
+    "public_docs_live": 3
   }
 }
