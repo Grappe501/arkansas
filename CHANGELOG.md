@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.7.0] - 2026-07-09 — Build #3 spec locked
+
+### Build #3: Mission Control Dashboard (governing spec)
+- Honest **3%** overall baseline; never inflate completion
+- 19 layered progress bars with explanations
+- Five questions, step tracker, 20-node build map
+- Public readiness score, research readiness (13 categories)
+- Deployment + civic action dashboards
+- Admin route: `/admin/mission-control/`
+
 ## [1.6.0] - 2026-07-09 — Build #3: Mission Control OS
 
 ### Added

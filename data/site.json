@@ -2,10 +2,11 @@
   "site": {
     "title": "Citizens Facts",
     "tagline": "Citizens United civic education — Understand → Teach → Lead",
-    "version": "1.6.0",
+    "version": "1.7.0",
     "constitution": "v1.0",
     "mission_control": "/mission-control/",
-    "build": { "number": 3, "title": "Mission Control OS", "status": "complete" },
+    "mission_control_admin": "/admin/mission-control/",
+    "build": { "number": 3, "title": "Mission Control Dashboard", "status": "complete" },
     "url": "https://arkansas-facts.netlify.app",
     "github": "https://github.com/Grappe501/arkansas",
     "mission": "Turn a curious reader into a local educator.",
