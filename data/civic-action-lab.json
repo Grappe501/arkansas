@@ -1,0 +1,342 @@
+{
+  "version": "1.0",
+  "build": 42,
+  "updated": "2026-07-09",
+  "title": "Master Civic Action Lab v1.0",
+  "subtitle": "Civic Solutions, Legislative Innovation & Ballot Initiative Architecture",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/civic-action-lab.html",
+  "canonical_lab_route": "/civic-lab/[division-slug]",
+  "current_lab_route": "Solutions hub + action pages \u2014 interim static workspaces",
+  "constitution": "/docs/MASTER_CIVIC_ACTION_LAB.md",
+  "purpose": "Bridge between civic understanding and civic participation \u2014 educate first.",
+  "mission": "Help Arkansans understand current law, proposals, constitutional constraints, and Arkansas processes.",
+  "governing_principle": "Educate first \u2014 illuminate options, preserve transparency, encourage evidence-based engagement.",
+  "long_term_vision": "Arkansas's most comprehensive educational environment for how ideas become law or ballot initiatives.",
+  "not_a_campaign": "Not a campaign headquarters or lobbying platform \u2014 educational laboratory only.",
+  "core_philosophy": [
+    "Learn",
+    "Research",
+    "Compare",
+    "Discuss",
+    "Draft",
+    "Review",
+    "Share"
+  ],
+  "divisions": [
+    {
+      "id": "CAL-D01",
+      "number": 1,
+      "title": "Federal Solutions Studio",
+      "slug": "federal-solutions",
+      "purpose": "Educational exploration of federal-level proposals and reforms.",
+      "examples": [
+        "Disclosure proposals",
+        "Campaign finance legislation",
+        "Constitutional amendment proposals",
+        "FEC reforms",
+        "Transparency initiatives"
+      ],
+      "interim_route": "/solutions/#federal",
+      "status": "partial",
+      "readiness_pct": 28,
+      "note": "Solutions hub federal section \u2014 proposal deep-dives not built"
+    },
+    {
+      "id": "CAL-D02",
+      "number": 2,
+      "title": "Arkansas Legislative Studio",
+      "slug": "arkansas-legislative",
+      "purpose": "Educational exploration of Arkansas General Assembly policy ideas.",
+      "examples": [
+        "Current Arkansas law",
+        "Statutory framework",
+        "Constitutional considerations",
+        "Historical background",
+        "Related research"
+      ],
+      "interim_route": "/solutions/#arkansas",
+      "status": "partial",
+      "readiness_pct": 22,
+      "note": "Dedicated Arkansas section scaffold \u2014 no proposal library"
+    },
+    {
+      "id": "CAL-D03",
+      "number": 3,
+      "title": "Arkansas Ballot Initiative Studio",
+      "slug": "ballot-initiative",
+      "purpose": "Educational workspace for Arkansas initiative and referendum process.",
+      "examples": [
+        "Constitutional requirements",
+        "Signature requirements",
+        "Geographic distribution",
+        "Historical examples",
+        "Timeline planning",
+        "Draft language",
+        "Legal review checklist"
+      ],
+      "interim_route": "/action/ballot-lab.html",
+      "status": "partial",
+      "readiness_pct": 26,
+      "note": "Ballot lab page exists \u2014 no guided draft builder workflow"
+    },
+    {
+      "id": "CAL-D04",
+      "number": 4,
+      "title": "Comparative Reform Library",
+      "slug": "comparative-reform",
+      "purpose": "Compare reform approaches across jurisdictions.",
+      "examples": [
+        "Montana developments",
+        "Hawaii developments",
+        "Other state reforms",
+        "Historical federal reforms"
+      ],
+      "interim_route": "/halls/montana-hawaii.html",
+      "status": "partial",
+      "readiness_pct": 32,
+      "live_comparisons": 2,
+      "note": "MT Initiative 194 + HI Act 11 live \u2014 comparison matrix partial"
+    },
+    {
+      "id": "CAL-D05",
+      "number": 5,
+      "title": "Public Comment Workspace",
+      "slug": "public-comment",
+      "purpose": "Submit questions, observations, research suggestions, and draft ideas.",
+      "examples": [
+        "Questions",
+        "Educational observations",
+        "Research suggestions",
+        "Draft ideas",
+        "Historical materials",
+        "Source recommendations"
+      ],
+      "interim_route": "/action/ideas.html",
+      "status": "partial",
+      "readiness_pct": 24,
+      "note": "Community ideas form \u2014 editorial review workflow partial"
+    },
+    {
+      "id": "CAL-D06",
+      "number": 6,
+      "title": "Community Review Panels",
+      "slug": "community-review",
+      "purpose": "Structured educational review by subject-matter volunteers.",
+      "examples": [
+        "Attorneys",
+        "Historians",
+        "Political scientists",
+        "Civic educators",
+        "Coalition partners",
+        "Community volunteers"
+      ],
+      "interim_route": "/coalition/",
+      "status": "planned",
+      "readiness_pct": 10,
+      "note": "Coalition hub exists \u2014 no review panel workflow"
+    }
+  ],
+  "legislative_tracker": [
+    "Current Status",
+    "Historical Timeline",
+    "Supporting Research",
+    "Related Court Decisions",
+    "Related Constitutional Principles",
+    "Relevant Arkansas Information",
+    "Primary Sources"
+  ],
+  "draft_builder": {
+    "title": "Draft Builder",
+    "status": "partial",
+    "workspaces": [
+      {
+        "id": "DB-01",
+        "title": "Federal concepts",
+        "status": "planned",
+        "route": "/action/draft-laws.html"
+      },
+      {
+        "id": "DB-02",
+        "title": "Arkansas legislative concepts",
+        "status": "planned",
+        "route": "/action/draft-laws.html"
+      },
+      {
+        "id": "DB-03",
+        "title": "Ballot initiative concepts",
+        "status": "partial",
+        "route": "/action/ballot-lab.html"
+      }
+    ],
+    "steps": [
+      "Define the problem",
+      "Research current law",
+      "Identify constitutional questions",
+      "Gather supporting evidence",
+      "Consider implementation challenges",
+      "Record unanswered questions"
+    ],
+    "guided_workflow_live": false
+  },
+  "public_official_center": {
+    "title": "Public Official Education Center",
+    "route": "/action/contact-legislators.html",
+    "audiences": [
+      "Arkansas U.S. Representatives",
+      "Arkansas U.S. Senators",
+      "Arkansas General Assembly members"
+    ],
+    "packet_includes": [
+      "Historical background",
+      "Relevant legal context",
+      "Primary source references",
+      "Research summaries",
+      "Related educational resources"
+    ],
+    "status": "partial",
+    "packets_prepared": 0
+  },
+  "mc_integration": {
+    "title": "Civic Action Lab Dashboard Metrics",
+    "status": "partial",
+    "metrics": [
+      {
+        "id": "CAL-M01",
+        "title": "Model law concepts",
+        "status": "partial",
+        "current": 0
+      },
+      {
+        "id": "CAL-M02",
+        "title": "Ballot initiative concepts",
+        "status": "partial",
+        "current": 0
+      },
+      {
+        "id": "CAL-M03",
+        "title": "Federal proposal summaries",
+        "status": "planned",
+        "current": 0
+      },
+      {
+        "id": "CAL-M04",
+        "title": "Arkansas proposal summaries",
+        "status": "planned",
+        "current": 0
+      },
+      {
+        "id": "CAL-M05",
+        "title": "Comparative state studies",
+        "status": "partial",
+        "current": 2
+      },
+      {
+        "id": "CAL-M06",
+        "title": "Research citations",
+        "status": "partial",
+        "current": 14
+      },
+      {
+        "id": "CAL-M07",
+        "title": "Public comments awaiting review",
+        "status": "partial",
+        "current": 0
+      },
+      {
+        "id": "CAL-M08",
+        "title": "Educational packets prepared",
+        "status": "planned",
+        "current": 0
+      }
+    ],
+    "submission_tracking_live": false
+  },
+  "future_expansion": [
+    "Structured public workshops",
+    "Collaborative drafting sessions",
+    "Additional state comparisons",
+    "Expanded constitutional analysis",
+    "Educational simulations",
+    "AI-assisted research navigation grounded in verified sources"
+  ],
+  "foundations": {
+    "solutions_policy": {
+      "route": "/data/solutions-policy.json",
+      "hub": "/solutions/"
+    },
+    "civic_ecosystem": {
+      "route": "/data/civic-ecosystem.json",
+      "build": 12
+    },
+    "civic_action_mc": {
+      "readiness_score": 22
+    }
+  },
+  "related_systems": [
+    {
+      "title": "Solutions & Policy Options",
+      "route": "/data/solutions-policy.json",
+      "hub": "/solutions/"
+    },
+    {
+      "title": "Civic Ecosystem",
+      "route": "/data/civic-ecosystem.json",
+      "build": 12
+    },
+    {
+      "title": "Evidence Ledger",
+      "route": "/data/evidence-ledger.json",
+      "build": 41
+    },
+    {
+      "title": "Research Observatory",
+      "route": "/data/research-observatory.json",
+      "build": 29
+    },
+    {
+      "title": "Outreach Engine",
+      "route": "/data/outreach-engine.json",
+      "build": 30
+    },
+    {
+      "title": "County OS",
+      "route": "/data/arkansas-counties.json",
+      "build": 31
+    }
+  ],
+  "summary": {
+    "divisions_total": 6,
+    "divisions_partial": 5,
+    "divisions_planned": 1,
+    "avg_division_readiness_pct": 24,
+    "comparative_studies_live": 2,
+    "draft_builder_workspaces": 3,
+    "guided_draft_builder_live": false,
+    "community_review_panels_live": false,
+    "model_law_submissions": 0,
+    "ballot_lab_submissions": 0,
+    "community_ideas_pending": 0,
+    "educational_packets_prepared": 0,
+    "submission_tracking_live": false,
+    "civic_action_lab_readiness_pct": 26
+  },
+  "catalog_gaps": [
+    "No canonical /civic-lab/[slug] routes \u2014 solutions/action pages interim",
+    "Federal Solutions Studio \u2014 hub scaffold only, no proposal deep-dives",
+    "Arkansas Legislative Studio \u2014 no Arkansas proposal library",
+    "Ballot Initiative Studio \u2014 no guided draft builder or legal checklist automation",
+    "Community Review Panels not built \u2014 coalition hub only",
+    "Draft Builder \u2014 2/3 workspaces planned, no guided workflow",
+    "Legislative tracker elements defined \u2014 not wired per proposal",
+    "Public Official packets \u2014 contact tool exists, packet generator not built",
+    "MC submission counts at 0 \u2014 Netlify Forms not integrated",
+    "Distinguish enacted law vs proposals \u2014 matrix partial only"
+  ],
+  "recommended_next_build": {
+    "number": 43,
+    "title": "Component Specifications with Props/States",
+    "note": "Map lab division shells, draft builder workspaces, legislative tracker panels, and packet builders to COMP-* from Build #17."
+  }
+}

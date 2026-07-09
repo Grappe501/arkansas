@@ -10,7 +10,7 @@ today = '2026-07-09'
 
 def load_json(path):
     if path.exists():
-        with open(path) as f:
+        with open(path, encoding='utf-8') as f:
             return json.load(f)
     return {}
 

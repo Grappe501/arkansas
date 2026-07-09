@@ -1,6 +1,6 @@
 {
-  "version": "1.45.0",
-  "build": 41,
+  "version": "1.46.0",
+  "build": 42,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 41,
+    "overall_completion": 42,
     "current_build": {
-      "number": 41,
-      "title": "Citizens United Facts Master Evidence Ledger & Claims Registry"
-    },
-    "active_phase": "Institutional Truth \u2014 Master Evidence Ledger & Claims Registry",
-    "last_completed": "Master Knowledge Graph & Civic Intelligence Engine",
-    "next_build": {
       "number": 42,
+      "title": "Citizens United Facts Master Civic Action Lab"
+    },
+    "active_phase": "Civic Participation \u2014 Master Civic Action Lab",
+    "last_completed": "Master Evidence Ledger & Claims Registry",
+    "next_build": {
+      "number": 43,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
@@ -26,7 +26,7 @@
     "research_readiness": 28,
     "data_viz_readiness": 6,
     "signup_funnel_readiness": 22,
-    "civic_action_readiness": 32,
+    "civic_action_readiness": 26,
     "coalition_readiness": 18,
     "data_model_readiness": 38,
     "route_inventory_readiness": 18,
@@ -55,6 +55,7 @@
     "media_studio_readiness": 18,
     "civic_intelligence_readiness": 24,
     "evidence_ledger_readiness": 22,
+    "civic_action_lab_readiness": 26,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -62,8 +63,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 41,
-      "note": "Evidence Ledger live \u2014 3 CLAIM-* records, 2 verified."
+      "value": 42,
+      "note": "Civic Action Lab live \u2014 6 divisions, 2 comparative studies."
     },
     {
       "id": "constitution",
@@ -373,7 +374,14 @@
       "label": "Master Evidence Ledger",
       "value": 22,
       "max": 100,
-      "note": "3/500 claims \u2014 no public claim pages or audit trail."
+      "note": "Evidence Ledger \u2014 3/500 CLAIM-* records."
+    },
+    {
+      "id": "civic_action_lab",
+      "label": "Master Civic Action Lab",
+      "value": 26,
+      "max": 100,
+      "note": "5/6 divisions partial \u2014 no guided draft builder."
     }
   ],
   "public_readiness": {
@@ -912,6 +920,12 @@
       "id": "evidence_ledger",
       "label": "Master Evidence Ledger",
       "href": "/mission-control/evidence-ledger.html",
+      "status": "complete"
+    },
+    {
+      "id": "civic_action_lab",
+      "label": "Master Civic Action Lab",
+      "href": "/mission-control/civic-action-lab.html",
       "status": "complete"
     }
   ],
@@ -1938,6 +1952,56 @@
     }
   ],
   "builds": [
+    {
+      "number": 42,
+      "title": "Citizens United Facts Master Civic Action Lab",
+      "version": "1.46.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Civic Solutions & Ballot Initiative Architecture v1.0 \u2014 educate first bridge to participation",
+      "summary": "6 divisions, 2 live comparisons; 26% overall.",
+      "files_created": [
+        "data/civic-action-lab.json",
+        "docs/MASTER_CIVIC_ACTION_LAB.md",
+        "builds/042-master-civic-action-lab.md",
+        "mission-control/civic-action-lab.html",
+        "scripts/gen-civic-action-lab.py",
+        "scripts/update-mc-build42.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/civic-action-lab.html"
+      ],
+      "decisions_made": [
+        "6 lab divisions \u2014 federal through community review panels",
+        "Learn\u2192Share philosophy \u2014 every stage on verified information",
+        "Not campaign HQ \u2014 educational laboratory only",
+        "Solutions hub + action pages as interim workspaces",
+        "MT/HI as live comparative reform examples",
+        "26% honest readiness \u2014 draft builder not guided"
+      ],
+      "open_questions": [
+        "First Arkansas ballot initiative educational draft?",
+        "Review panel recruitment?",
+        "Form integration for submissions?"
+      ],
+      "risks": [
+        "Submission counts at 0",
+        "Community review panels planned",
+        "Arkansas legislative library empty"
+      ],
+      "next_recommended": 43,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/civic-action-lab.html",
+      "review_status": "complete"
+    },
     {
       "number": 41,
       "title": "Citizens United Facts Master Evidence Ledger & Claims Registry",
@@ -3869,19 +3933,19 @@
     }
   ],
   "briefing": {
-    "what_built": "Evidence Ledger v1.0 \u2014 CLAIM-* registry, A\u2013E strength levels, review workflow, MC metrics",
-    "building_now": "3 canonical claims from legacy ledger \u2014 facts and evidence linked",
+    "what_built": "Civic Action Lab v1.0 \u2014 6 divisions, legislative tracker, draft builder schema, MC metrics",
+    "building_now": "Solutions hub and action pages as interim \u2014 MT/HI comparisons live",
     "blocked": [
-      "Public claim pages",
-      "Audit trail",
-      "Scheduled review automation"
+      "Guided draft builder",
+      "Community review panels",
+      "Submission tracking"
     ],
     "ready_public": [
-      "Evidence Ledger MC dashboard",
-      "CLAIM-* format",
-      "Strength level taxonomy"
+      "Civic Action Lab MC dashboard",
+      "6-division taxonomy",
+      "Public official center link"
     ],
-    "next": "Build #42 \u2014 Component specifications with props/states"
+    "next": "Build #43 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -4342,5 +4406,15 @@
     "evidence_items_total": 14,
     "audit_trail_live": false,
     "public_claim_pages_live": false
+  },
+  "civic_action_lab": "/data/civic-action-lab.json",
+  "civic_action_lab_dashboard": "/mission-control/civic-action-lab.html",
+  "civic_action_lab_inventory": {
+    "readiness_score": 26,
+    "divisions_total": 6,
+    "divisions_partial": 5,
+    "comparative_studies_live": 2,
+    "guided_draft_builder_live": false,
+    "submission_tracking_live": false
   }
 }
