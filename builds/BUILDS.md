@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#74** | **Civic Innovation & Reform Center** | **1.78.0** | **✅ Complete** | [074](074-arkansas-civic-innovation-reform.md) · [/mission-control/arkansas-civic-innovation-reform.html](../mission-control/arkansas-civic-innovation-reform.html) |
 | **#73** | **Research Institute & Policy Innovation Laboratory** | **1.77.0** | **✅ Complete** | [073](073-arkansas-research-institute.md) · [/mission-control/arkansas-research-institute.html](../mission-control/arkansas-research-institute.html) |
 | **#72** | **Arkansas Communications & Public Education** | **1.76.0** | **✅ Complete** | [072](072-arkansas-communications.md) · [/mission-control/arkansas-communications.html](../mission-control/arkansas-communications.html) |
 | **#71** | **Arkansas Community Intelligence & Listening** | **1.75.0** | **✅ Complete** | [071](071-arkansas-community-listening.md) · [/mission-control/arkansas-community-listening.html](../mission-control/arkansas-community-listening.html) |

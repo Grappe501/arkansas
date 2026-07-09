@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.77.0 · **Research Institute:** [/mission-control/arkansas-research-institute.html](/mission-control/arkansas-research-institute.html) · **Communications:** [/mission-control/arkansas-communications.html](/mission-control/arkansas-communications.html)  
-**Civic research** — eight divisions · policy innovation lab · expand knowledge not certainty · **Next:** Build #74 Implementation Translation Layer  
+**Current version:** 1.78.0 · **Reform Center:** [/mission-control/arkansas-civic-innovation-reform.html](/mission-control/arkansas-civic-innovation-reform.html) · **Research Institute:** [/mission-control/arkansas-research-institute.html](/mission-control/arkansas-research-institute.html)  
+**Civic solutions** — eight reform libraries · center explains citizens decide · **Next:** Build #75 Implementation Translation Layer  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **74** | **Civic Innovation & Reform Center** | **✅ v1.78.0** |
 | **73** | **Research Institute & Policy Innovation Laboratory** | **✅ v1.77.0** |
 | **72** | **Arkansas Communications & Public Education** | **✅ v1.76.0** |
 | **71** | **Arkansas Community Intelligence & Listening** | **✅ v1.75.0** |

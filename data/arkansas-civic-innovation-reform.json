@@ -1,0 +1,338 @@
+{
+  "version": "1.0",
+  "build": 74,
+  "updated": "2026-07-09",
+  "title": "Master Arkansas Civic Innovation & Reform Center v1.0",
+  "subtitle": "From Research to Responsible Reform \u2014 The Civic Solutions Laboratory",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/arkansas-civic-innovation-reform.html",
+  "constitution": "/docs/MASTER_ARKANSAS_CIVIC_INNOVATION_REFORM.md",
+  "purpose": "Arkansas's most comprehensive educational library of civic reform ideas \u2014 objective study for citizens, legislators, researchers, educators, journalists, and students.",
+  "governing_principle": "Expand quality of civic conversation. Help Arkansans understand the full landscape of ideas, evaluate evidence, appreciate constitutional constraints, recognize competing viewpoints. Informed citizens evaluate reform better than those who hear only slogans.",
+  "signature_educational_resource": true,
+  "not_single_solution_advocacy": true,
+  "center_explains_citizens_decide": true,
+  "mission": {
+    "title": "Center Mission",
+    "explains": [
+      "What reforms have been proposed",
+      "Why they were proposed",
+      "Who supports them",
+      "Who opposes them",
+      "Constitutional considerations",
+      "Potential advantages",
+      "Potential disadvantages",
+      "Historical experience",
+      "Implementation considerations"
+    ]
+  },
+  "institutional_philosophy": {
+    "title": "Six Questions Every Proposal Answers",
+    "questions": [
+      "What problem is this trying to solve?",
+      "What exactly is being proposed?",
+      "How would it work?",
+      "What constitutional questions arise?",
+      "What arguments are commonly made in favor?",
+      "What arguments are commonly made against it?"
+    ],
+    "same_educational_framework": true
+  },
+  "reform_libraries": {
+    "title": "Eight Reform Libraries",
+    "libraries_total": 8,
+    "libraries_operational": 0,
+    "libraries": [
+      {
+        "id": "ACIR-L1",
+        "number": 1,
+        "title": "Congressional Actions",
+        "topics": [
+          "Disclosure requirements",
+          "Reporting modernization",
+          "Transparency improvements",
+          "Ethics-related proposals",
+          "Election administration reforms",
+          "Constitutional amendment proposals"
+        ],
+        "note": "Explains legislative process and constitutional constraints",
+        "analyses": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ACIR-L2",
+        "number": 2,
+        "title": "Arkansas Legislative Ideas",
+        "topics": [
+          "State disclosure laws",
+          "Public reporting improvements",
+          "Educational initiatives",
+          "Transparency measures",
+          "Ethics proposals"
+        ],
+        "note": "Distinguishes current law from potential future ideas",
+        "analyses": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ACIR-L3",
+        "number": 3,
+        "title": "Ballot Initiative Resource Center",
+        "topics": [
+          "How ballot initiatives work in Arkansas",
+          "Historical initiatives",
+          "Current initiative process",
+          "Educational analyses of initiative concepts",
+          "Implementation considerations"
+        ],
+        "no_institutional_policy": true,
+        "analyses": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ACIR-L4",
+        "number": 4,
+        "title": "Constitutional Amendment Center",
+        "topics": [
+          "Federal amendment process",
+          "Arkansas constitutional amendment process",
+          "Historical amendments",
+          "Campaign finance amendment proposals",
+          "Arguments and constitutional implications"
+        ],
+        "analyses": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ACIR-L5",
+        "number": 5,
+        "title": "Comparative State Reform Library",
+        "topics": [
+          "Transparency laws",
+          "Disclosure systems",
+          "Public financing approaches",
+          "Ethics frameworks",
+          "Campaign finance reporting",
+          "Educational innovations"
+        ],
+        "analyses": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ACIR-L6",
+        "number": 6,
+        "title": "International Models",
+        "topics": [
+          "Political spending",
+          "Campaign finance",
+          "Transparency",
+          "Election oversight",
+          "Disclosure"
+        ],
+        "comparative_education": true,
+        "analyses": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ACIR-L7",
+        "number": 7,
+        "title": "Local Government Innovations",
+        "topics": [
+          "Transparency initiatives",
+          "Open data projects",
+          "Public engagement models",
+          "Educational outreach",
+          "Community participation strategies"
+        ],
+        "analyses": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ACIR-L8",
+        "number": 8,
+        "title": "Citizen Innovation Lab",
+        "submission_types": [
+          "Questions",
+          "Research topics",
+          "Educational proposals",
+          "Community suggestions",
+          "Model reforms"
+        ],
+        "editorial_review_before_public": true,
+        "submissions": 0,
+        "status": "planned"
+      }
+    ]
+  },
+  "proposal_framework": {
+    "title": "Proposal Framework",
+    "standardized_sections": [
+      "Background",
+      "Current law",
+      "Historical context",
+      "Research summary",
+      "Supporting evidence",
+      "Potential benefits",
+      "Potential concerns",
+      "Constitutional considerations",
+      "Comparison with other approaches",
+      "Primary sources",
+      "Related lessons"
+    ],
+    "consistent_structure": true,
+    "status": "specified"
+  },
+  "civic_solution_builder": {
+    "title": "Civic Solution Builder",
+    "interactive_feature": true,
+    "live": false,
+    "capabilities": [
+      "Compare reform ideas",
+      "Study combinations of approaches",
+      "Explore constitutional questions",
+      "Understand implementation challenges"
+    ],
+    "education_not_advocacy": true,
+    "status": "planned"
+  },
+  "reform_dashboard": {
+    "title": "Mission Control Reform Dashboard",
+    "live": false,
+    "indicators": [
+      {
+        "id": "ACIR-D1",
+        "indicator": "Reform analyses completed",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACIR-D2",
+        "indicator": "Comparative studies",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACIR-D3",
+        "indicator": "Model legislation reviews",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACIR-D4",
+        "indicator": "Ballot initiative educational resources",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACIR-D5",
+        "indicator": "Congressional resource guides",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACIR-D6",
+        "indicator": "Research requests",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACIR-D7",
+        "indicator": "Public questions",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACIR-D8",
+        "indicator": "Future topics",
+        "current": 0,
+        "status": "planned"
+      }
+    ],
+    "status": "planned"
+  },
+  "integration": {
+    "chain": "Research Institute \u2192 Evidence Ledger \u2192 Campaign Finance Observatory \u2192 Knowledge Graph \u2192 Citizen Action Center \u2192 Education Academy \u2192 Mission Control",
+    "systems": [
+      {
+        "system": "Research Institute (#73)",
+        "route": "/mission-control/arkansas-research-institute.html",
+        "status": "live",
+        "note": "Policy Innovation Lab"
+      },
+      {
+        "system": "Evidence Ledger (#41)",
+        "route": "/mission-control/evidence-ledger.html",
+        "status": "live"
+      },
+      {
+        "system": "Campaign Finance Observatory (#63)",
+        "route": "/mission-control/campaign-finance-observatory.html",
+        "status": "live"
+      },
+      {
+        "system": "Knowledge Graph",
+        "route": "/mission-control/knowledge-graph.html",
+        "status": "planned"
+      },
+      {
+        "system": "Citizen Action Center (#62)",
+        "route": "/mission-control/citizen-action-center.html",
+        "status": "live"
+      },
+      {
+        "system": "Community Education Academy (#28)",
+        "route": "/mission-control/education-academy.html",
+        "status": "partial"
+      },
+      {
+        "system": "Community Listening (#71)",
+        "route": "/mission-control/arkansas-community-listening.html",
+        "status": "live"
+      },
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      }
+    ],
+    "grounded_in_documented_research": true
+  },
+  "long_term_vision": "First place Arkansans visit to understand lawful, constitutional, historically informed options for improving campaign finance transparency and civic participation \u2014 examining ideas thoughtfully rather than promoting predetermined conclusions.",
+  "summary": {
+    "reform_libraries": 8,
+    "libraries_operational": 0,
+    "reform_analyses_completed": 0,
+    "comparative_studies": 0,
+    "model_legislation_reviews": 0,
+    "ballot_initiative_resources": 0,
+    "congressional_resource_guides": 0,
+    "citizen_lab_submissions": 0,
+    "civic_solution_builder_live": false,
+    "reform_dashboard_live": false,
+    "arkansas_civic_innovation_reform_readiness_pct": 44,
+    "research_institute_readiness_pct": 43,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "0 reform analyses completed \u2014 no reform library pages published",
+    "0/8 reform libraries operational \u2014 scaffold only",
+    "0 comparative studies \u2014 state/international libraries empty",
+    "0 model legislation reviews \u2014 Arkansas legislative library not built",
+    "0 ballot initiative educational resources \u2014 resource center not live",
+    "0 congressional resource guides \u2014 congressional library not built",
+    "Citizen Innovation Lab planned \u2014 0 submissions, no intake form",
+    "Civic Solution Builder planned \u2014 interactive compare not built",
+    "Reform dashboard planned \u2014 not live in Mission Control",
+    "Proposal framework specified \u2014 no standardized page template",
+    "Build #74 vs Research Institute Policy Lab (#73) \u2014 reconcile roles?",
+    "Build #74 vs Campaign Finance Observatory (#63) \u2014 unify reform data?",
+    "No institutional neutrality badge on reform pages \u2014 design needed",
+    "Current law vs proposed reform distinction \u2014 no UI pattern"
+  ],
+  "recommended_next_build": {
+    "number": 75,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "Reform library pages, proposal template, solution builder, citizen lab intake, reform dashboard, neutrality UI, COMP-* specs, GitHub backlog."
+  }
+}

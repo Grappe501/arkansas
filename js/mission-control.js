@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Reform Center <a href="/mission-control/arkansas-civic-innovation-reform.html" class="mc-inline-link">Civic Solutions #74 →</a></h2>
+    <p class="mc-bar-note">Build #74 — Civic Innovation & Reform Center. Eight reform libraries, proposal framework, solution builder. Center explains; citizens decide. 0 analyses · 0/8 libraries. ~44% readiness.</p>
     <h2 class="mc-section-title">Research Institute <a href="/mission-control/arkansas-research-institute.html" class="mc-inline-link">Policy Lab #73 →</a></h2>
     <p class="mc-bar-note">Build #73 — Research Institute & Policy Innovation Laboratory. Eight divisions, research standards, policy lab. Expand knowledge not certainty. 0 projects · 0 white papers · 0/8 divisions. ~43% readiness.</p>
     <h2 class="mc-section-title">Arkansas Communications <a href="/mission-control/arkansas-communications.html" class="mc-inline-link">One Voice #72 →</a></h2>
@@ -5208,6 +5210,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initArkansasCommunityListening();
   initArkansasCommunications();
   initArkansasResearchInstitute();
+  initArkansasCivicInnovationReform();
 });
 
 async function initUxArchitecture() {
@@ -7694,6 +7697,97 @@ async function initArkansasResearchInstitute() {
       <a href="/mission-control/research-observatory.html">Research Observatory</a> ·
       <a href="/mission-control/campaign-finance-observatory.html">Campaign Finance Observatory</a> ·
       <a href="/mission-control/evidence-ledger.html">Evidence Ledger</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initArkansasCivicInnovationReform() {
+  const root = document.getElementById('mc-arkansas-civic-innovation-reform-root');
+  if (!root) return;
+
+  const [acirRes, mcRes] = await Promise.all([
+    fetch('/data/arkansas-civic-innovation-reform.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const acir = await acirRes.json();
+  const mc = await mcRes.json();
+  const s = acir.summary;
+
+  const libRows = acir.reform_libraries.libraries.map(lib => `
+    <tr><td>${lib.number}</td><td><code>${lib.id}</code></td><td>${lib.title}</td>
+      <td>${lib.analyses ?? lib.submissions ?? 0}</td><td>${lib.status}</td></tr>`).join('');
+
+  const dashRows = acir.reform_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td><td>${d.current}</td><td>${d.status}</td></tr>`).join('');
+
+  const systemRows = acir.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td><td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Civic Innovation & Reform Center</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #74 · ${acir.title}</p>
+      <h1>From Research to Responsible Reform</h1>
+      <p class="mc-header__question">${acir.governing_principle}</p>
+      <p class="mc-bar-note">${acir.purpose}</p>
+      <p class="mc-bar-note"><strong>Signature resource:</strong> ${acir.signature_educational_resource ? 'Yes' : 'No'} · <strong>Not single-solution advocacy:</strong> ${acir.not_single_solution_advocacy ? 'Yes' : 'No'}</p>
+      <p class="mc-bar-note"><strong>Center explains, citizens decide:</strong> ${acir.center_explains_citizens_decide ? 'Yes' : 'No'}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Reform center readiness</div><div class="mc-stat__value">${s.arkansas_civic_innovation_reform_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Analyses</div><div class="mc-stat__value">${s.reform_analyses_completed}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Libraries</div><div class="mc-stat__value">${s.libraries_operational}/${s.reform_libraries}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Comparative studies</div><div class="mc-stat__value">${s.comparative_studies}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Citizen lab</div><div class="mc-stat__value">${s.citizen_lab_submissions}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Solution builder</div><div class="mc-stat__value">${s.civic_solution_builder_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">${acir.mission.title}</h2>
+    <ul class="mc-deliverables">${acir.mission.explains.map(e => `<li>${e}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acir.institutional_philosophy.title}</h2>
+    <p class="mc-bar-note">Same framework for every proposal: ${acir.institutional_philosophy.same_educational_framework ? 'Yes' : 'No'}</p>
+    <ol class="mc-deliverables">${acir.institutional_philosophy.questions.map(q => `<li>${q}</li>`).join('')}</ol>
+    <h2 class="mc-section-title">${acir.reform_libraries.title}</h2>
+    <p class="mc-bar-note">Operational: ${acir.reform_libraries.libraries_operational}/${acir.reform_libraries.libraries_total}</p>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Library</th><th>Items</th><th>Status</th></tr></thead>
+      <tbody>${libRows}</tbody></table>
+    ${acir.reform_libraries.libraries.map(lib => `
+      <h3 class="mc-subsection-title">Library ${lib.number}: ${lib.title}</h3>
+      ${lib.topics ? `<ul class="mc-deliverables">${lib.topics.map(t => `<li>${t}</li>`).join('')}</ul>` : ''}
+      ${lib.submission_types ? `<ul class="mc-deliverables">${lib.submission_types.map(st => `<li>${st}</li>`).join('')}</ul>` : ''}
+      ${lib.note ? `<p class="mc-bar-note">${lib.note}</p>` : ''}
+      ${lib.no_institutional_policy ? `<p class="mc-bar-note">No proposal presented as institutional policy</p>` : ''}
+      ${lib.comparative_education ? `<p class="mc-bar-note">Comparative education emphasis</p>` : ''}
+      ${lib.editorial_review_before_public ? `<p class="mc-bar-note">Editorial review before public consideration</p>` : ''}`).join('')}
+    <h2 class="mc-section-title">${acir.proposal_framework.title}</h2>
+    <p class="mc-bar-note">Consistent structure: ${acir.proposal_framework.consistent_structure ? 'Yes' : 'No'} · ${acir.proposal_framework.status}</p>
+    <ul class="mc-deliverables">${acir.proposal_framework.standardized_sections.map(sec => `<li>${sec}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acir.civic_solution_builder.title}</h2>
+    <p class="mc-bar-note">Live: ${acir.civic_solution_builder.live ? 'Yes' : 'No'} · Education not advocacy: ${acir.civic_solution_builder.education_not_advocacy ? 'Yes' : 'No'} · ${acir.civic_solution_builder.status}</p>
+    <ul class="mc-deliverables">${acir.civic_solution_builder.capabilities.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acir.reform_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${acir.reform_dashboard.live ? 'Yes' : 'No'} · ${acir.reform_dashboard.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${acir.integration.chain}</p>
+    <p class="mc-bar-note">Grounded in documented research: ${acir.integration.grounded_in_documented_research ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${acir.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${acir.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${acir.recommended_next_build.number} — ${acir.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${acir.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_ARKANSAS_CIVIC_INNOVATION_REFORM.md">MASTER_ARKANSAS_CIVIC_INNOVATION_REFORM.md</a> ·
+      <a href="/data/arkansas-civic-innovation-reform.json">JSON</a> ·
+      <a href="/mission-control/arkansas-research-institute.html">Research Institute</a> ·
+      <a href="/mission-control/campaign-finance-observatory.html">Campaign Finance Observatory</a> ·
+      <a href="/mission-control/citizen-action-center.html">Citizen Action Center</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 
