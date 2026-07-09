@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.25.0 · **Repository:** [/mission-control/repository.html](/mission-control/repository.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #21:** ✅ Repository Blueprint · **Build #20:** ✅ Platform Blueprint · **Build #19:** ✅ Knowledge Atlas  
+**Current version:** 1.26.0 · **Database:** [/mission-control/database.html](/mission-control/database.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #22:** ✅ Database Schema · **Build #21:** ✅ Repository Blueprint · **Build #20:** ✅ Platform Blueprint  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -265,8 +265,28 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **19** | **Knowledge Atlas** | **✅ v1.23.0** |
 | **20** | **Platform Blueprint** | **✅ v1.24.0** |
 | **21** | **Repository Structure** | **✅ v1.25.0** |
+| **22** | **Database Schema** | **✅ v1.26.0** |
 
-**Next:** Build #22 — Database schema and entity-relationship model.
+**Next:** Build #23 — Wireframes for every major screen.
+
+---
+
+## Phase 22 — Database Schema (Build #22) ★ NEW
+
+*15 entities, 10 join tables, v1 static storage, Supabase migration path.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| D1 | Database Schema v1.0 | ✅ | `data/database-schema.json` |
+| D2 | 15 primary entities | ✅ | Fields + relationships |
+| D3 | 10 join tables | ✅ | M:N relationships |
+| D4 | 8 signup types | ✅ | Form taxonomy |
+| D5 | v1/v2 storage strategy | ✅ | JSON → Postgres path |
+| D6 | MC metrics mapped to tables | ✅ | 14 metrics |
+| D7 | Canonical model extension | ✅ | 10 → 15 entities |
+| D8 | MC database dashboard | ✅ | `/mission-control/database.html` |
+
+**Note:** No database deployed — schema blueprint only (35% readiness).
 
 ---
 
@@ -414,7 +434,7 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#19**~~ | ~~Knowledge Atlas & Learning Paths~~ ✅ Done |
 | ~~**#20**~~ | ~~Master Platform Blueprint & Technical Architecture~~ ✅ Done |
 | ~~**#21**~~ | ~~Repository & folder structure~~ ✅ Done |
-| **#22** | **Database schema and entity-relationship model** |
+| ~~**#22**~~ | ~~Database schema and ERD~~ ✅ Done |
 | **#23** | **Wireframes for every major screen** |
 | **#24** | **Component specifications with props/states** |
 | **#25** | **GitHub issues, milestones, and sprint roadmap** |

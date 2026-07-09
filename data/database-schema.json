@@ -1,0 +1,710 @@
+{
+  "version": "1.0",
+  "build": 22,
+  "updated": "2026-07-09",
+  "title": "Database Schema & Entity Relationship Blueprint v1.0",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/database.html",
+  "constitution": "/docs/DATABASE_SCHEMA.md",
+  "erd_diagram": "mermaid",
+  "purpose": "Turn civic education activity into an organized, measurable Arkansas learning network.",
+  "philosophy_questions": [
+    "Who is learning?",
+    "What are they learning?",
+    "Where are they located?",
+    "What resources are they using?",
+    "Who are they connected to?",
+    "What organizations are participating?",
+    "What counties are active?",
+    "What public officials are being educated?",
+    "What research supports the platform?"
+  ],
+  "privacy_principle": "Collect only what is needed. Protect participant data. Distinguish public vs private org fields.",
+  "governing_principle": "Map the growth of Arkansas civic education \u2014 not merely store contacts.",
+  "entities": [
+    {
+      "id": "person",
+      "table": "people",
+      "title": "Person",
+      "fields": [
+        "id",
+        "first_name",
+        "last_name",
+        "email",
+        "phone",
+        "city",
+        "county",
+        "zip",
+        "role_interest",
+        "experience_level",
+        "learning_stage",
+        "signup_source",
+        "created_at",
+        "updated_at"
+      ],
+      "relationships": [
+        "Belongs to Organizations (M:N via person_organizations)",
+        "Attends Events",
+        "Downloads Resources",
+        "Submits Ideas",
+        "Invites People",
+        "May become Education Leader"
+      ],
+      "storage_status": "partial",
+      "canonical_model_id": "person"
+    },
+    {
+      "id": "organization",
+      "table": "organizations",
+      "title": "Organization",
+      "fields": [
+        "id",
+        "name",
+        "organization_type",
+        "website",
+        "city",
+        "county",
+        "service_area",
+        "primary_contact_name",
+        "primary_contact_email",
+        "primary_contact_phone",
+        "partnership_level",
+        "public_profile_enabled",
+        "status",
+        "created_at",
+        "updated_at"
+      ],
+      "relationships": [
+        "Has many People",
+        "Hosts Events",
+        "Downloads Resources",
+        "Coalition Sign-On",
+        "Refers Organizations"
+      ],
+      "storage_status": "partial",
+      "canonical_model_id": "organization"
+    },
+    {
+      "id": "county",
+      "table": "counties",
+      "title": "County",
+      "fields": [
+        "id",
+        "name",
+        "region",
+        "population",
+        "status",
+        "education_leader_count",
+        "organization_count",
+        "event_count",
+        "last_activity_at"
+      ],
+      "relationships": [
+        "Has People, Organizations, Events",
+        "Has Public Officials",
+        "Mission Control metrics"
+      ],
+      "storage_status": "live",
+      "canonical_model_id": "county"
+    },
+    {
+      "id": "event",
+      "table": "events",
+      "title": "Event",
+      "fields": [
+        "id",
+        "title",
+        "event_type",
+        "host_person_id",
+        "host_organization_id",
+        "county",
+        "city",
+        "location",
+        "start_time",
+        "end_time",
+        "public_event",
+        "estimated_attendance",
+        "actual_attendance",
+        "status",
+        "created_at",
+        "updated_at"
+      ],
+      "relationships": [
+        "Belongs to County",
+        "Hosted by Person or Organization",
+        "Uses Resources",
+        "Creates follow-up Signups"
+      ],
+      "storage_status": "partial",
+      "canonical_model_id": "event"
+    },
+    {
+      "id": "educational_resource",
+      "table": "educational_resources",
+      "title": "Educational Resource",
+      "fields": [
+        "id",
+        "mrid",
+        "title",
+        "resource_type",
+        "parent_section",
+        "difficulty_level",
+        "reading_time",
+        "download_url",
+        "public_url",
+        "status",
+        "source_count",
+        "last_reviewed_at",
+        "created_at",
+        "updated_at"
+      ],
+      "relationships": [
+        "Cites Sources",
+        "Supports Events",
+        "Downloaded by People",
+        "Shared with Public Officials",
+        "Belongs to Learning Path"
+      ],
+      "storage_status": "partial",
+      "canonical_model_id": "educational_resource"
+    },
+    {
+      "id": "source",
+      "table": "sources",
+      "title": "Source",
+      "fields": [
+        "id",
+        "evidence_id",
+        "title",
+        "author",
+        "publisher",
+        "publication_date",
+        "source_type",
+        "source_tier",
+        "url",
+        "archive_url",
+        "summary",
+        "review_status",
+        "created_at",
+        "updated_at"
+      ],
+      "relationships": [
+        "Supports Facts, Resources, Charts",
+        "Supports Model Laws and Ballot Concepts"
+      ],
+      "storage_status": "partial",
+      "canonical_model_id": "research_object"
+    },
+    {
+      "id": "fact",
+      "table": "facts",
+      "title": "Fact",
+      "fields": [
+        "id",
+        "fact_id",
+        "short_statement",
+        "plain_language_explanation",
+        "detailed_explanation",
+        "category",
+        "verification_status",
+        "last_verified_at",
+        "created_at",
+        "updated_at"
+      ],
+      "relationships": [
+        "Has many Sources",
+        "Appears in Resources",
+        "Supports Timeline and Charts"
+      ],
+      "storage_status": "partial",
+      "canonical_model_id": null
+    },
+    {
+      "id": "signup",
+      "table": "signups",
+      "title": "Signup",
+      "fields": [
+        "id",
+        "person_id",
+        "signup_type",
+        "interest_area",
+        "message",
+        "source_page",
+        "status",
+        "assigned_to",
+        "created_at",
+        "updated_at"
+      ],
+      "relationships": [
+        "Links to Person"
+      ],
+      "storage_status": "partial",
+      "canonical_model_id": null
+    },
+    {
+      "id": "referral",
+      "table": "referrals",
+      "title": "Referral",
+      "fields": [
+        "id",
+        "referrer_person_id",
+        "referred_name",
+        "referred_email",
+        "relationship_type",
+        "shared_resource_id",
+        "message",
+        "status",
+        "created_at"
+      ],
+      "relationships": [
+        "Belongs to Person",
+        "May connect Resource",
+        "May create new Person"
+      ],
+      "storage_status": "planned",
+      "canonical_model_id": null
+    },
+    {
+      "id": "public_official",
+      "table": "public_officials",
+      "title": "Public Official",
+      "fields": [
+        "id",
+        "name",
+        "office",
+        "jurisdiction",
+        "district",
+        "level",
+        "party",
+        "public_contact_url",
+        "public_email",
+        "phone",
+        "status",
+        "last_verified_at"
+      ],
+      "relationships": [
+        "Represents Counties",
+        "Receives Educational Packets",
+        "Relates to Model Laws"
+      ],
+      "storage_status": "planned",
+      "canonical_model_id": "public_official"
+    },
+    {
+      "id": "educational_packet_share",
+      "table": "educational_packet_shares",
+      "title": "Educational Packet Share",
+      "fields": [
+        "id",
+        "person_id",
+        "public_official_id",
+        "resource_id",
+        "packet_type",
+        "delivery_method",
+        "message",
+        "status",
+        "created_at"
+      ],
+      "relationships": [
+        "Person shares Resource with Public Official"
+      ],
+      "storage_status": "planned",
+      "canonical_model_id": null
+    },
+    {
+      "id": "model_law_concept",
+      "table": "model_law_concepts",
+      "title": "Model Law Concept",
+      "fields": [
+        "id",
+        "title",
+        "jurisdiction_level",
+        "summary",
+        "problem_statement",
+        "draft_text",
+        "legal_questions",
+        "research_status",
+        "review_status",
+        "created_by_person_id",
+        "created_at",
+        "updated_at"
+      ],
+      "relationships": [
+        "Cites Sources",
+        "Shared with Public Officials",
+        "Relates to Ballot Concepts"
+      ],
+      "storage_status": "stub",
+      "canonical_model_id": "model_law"
+    },
+    {
+      "id": "ballot_initiative_concept",
+      "table": "ballot_initiative_concepts",
+      "title": "Ballot Initiative Concept",
+      "fields": [
+        "id",
+        "title",
+        "summary",
+        "problem_statement",
+        "draft_language",
+        "constitutional_questions",
+        "statutory_questions",
+        "research_status",
+        "review_status",
+        "created_by_person_id",
+        "created_at",
+        "updated_at"
+      ],
+      "relationships": [
+        "Cites Sources",
+        "Relates to Model Laws",
+        "Has Contributors"
+      ],
+      "storage_status": "stub",
+      "canonical_model_id": "ballot_initiative_concept"
+    },
+    {
+      "id": "coalition_sign_on",
+      "table": "coalition_sign_ons",
+      "title": "Coalition Sign-On",
+      "fields": [
+        "id",
+        "organization_id",
+        "contact_person_id",
+        "participation_level",
+        "public_support_statement",
+        "resources_requested",
+        "status",
+        "created_at",
+        "updated_at"
+      ],
+      "relationships": [
+        "Organization joins coalition via contact Person"
+      ],
+      "storage_status": "partial",
+      "canonical_model_id": null
+    },
+    {
+      "id": "mc_build_record",
+      "table": "mc_build_records",
+      "title": "Mission Control Build Record",
+      "fields": [
+        "id",
+        "build_number",
+        "title",
+        "phase",
+        "status",
+        "completion_percentage",
+        "summary",
+        "files_created",
+        "files_modified",
+        "risks",
+        "next_build",
+        "created_at",
+        "updated_at"
+      ],
+      "relationships": [
+        "Tracked in mission-control.json builds array"
+      ],
+      "storage_status": "live",
+      "canonical_model_id": null
+    }
+  ],
+  "entity_count": 15,
+  "join_tables": [
+    {
+      "table": "person_organizations",
+      "from": "person",
+      "to": "organization",
+      "status": "planned"
+    },
+    {
+      "table": "event_resources",
+      "from": "event",
+      "to": "educational_resource",
+      "status": "planned"
+    },
+    {
+      "table": "resource_sources",
+      "from": "educational_resource",
+      "to": "source",
+      "status": "partial"
+    },
+    {
+      "table": "fact_sources",
+      "from": "fact",
+      "to": "source",
+      "status": "partial"
+    },
+    {
+      "table": "resource_facts",
+      "from": "educational_resource",
+      "to": "fact",
+      "status": "planned"
+    },
+    {
+      "table": "county_public_officials",
+      "from": "county",
+      "to": "public_official",
+      "status": "planned"
+    },
+    {
+      "table": "model_law_sources",
+      "from": "model_law_concept",
+      "to": "source",
+      "status": "planned"
+    },
+    {
+      "table": "ballot_initiative_sources",
+      "from": "ballot_initiative_concept",
+      "to": "source",
+      "status": "planned"
+    },
+    {
+      "table": "person_events",
+      "from": "person",
+      "to": "event",
+      "status": "planned"
+    },
+    {
+      "table": "organization_events",
+      "from": "organization",
+      "to": "event",
+      "status": "planned"
+    }
+  ],
+  "join_table_count": 10,
+  "signup_types": [
+    "Education Leader",
+    "Contact Network",
+    "Research Volunteer",
+    "Event Host",
+    "Coalition Interest",
+    "Public Official Sharing",
+    "Model Law Contributor",
+    "Ballot Initiative Contributor"
+  ],
+  "storage_strategy": {
+    "v1_current": [
+      {
+        "method": "Static JSON files",
+        "status": "live",
+        "examples": [
+          "data/mission-control.json",
+          "data/facts-registry.json"
+        ]
+      },
+      {
+        "method": "Netlify Forms",
+        "status": "partial",
+        "examples": [
+          "educate/index.html"
+        ]
+      },
+      {
+        "method": "Git-tracked registries",
+        "status": "live",
+        "examples": [
+          "data/evidence-registry.json"
+        ]
+      },
+      {
+        "method": "Manual CSV exports",
+        "status": "planned"
+      },
+      {
+        "method": "localStorage session",
+        "status": "live",
+        "examples": [
+          "js/journey.js"
+        ]
+      }
+    ],
+    "v2_future": [
+      {
+        "method": "Postgres",
+        "status": "planned"
+      },
+      {
+        "method": "Supabase",
+        "status": "planned",
+        "note": "Auth, RLS, realtime"
+      },
+      {
+        "method": "Neon",
+        "status": "planned"
+      },
+      {
+        "method": "Serverless API routes",
+        "status": "planned"
+      },
+      {
+        "method": "Authenticated admin dashboard",
+        "status": "planned"
+      }
+    ]
+  },
+  "mission_control_metrics": [
+    {
+      "id": "total_people",
+      "title": "Total people",
+      "source": "people",
+      "current": 0
+    },
+    {
+      "id": "education_leaders",
+      "title": "Education leaders",
+      "source": "people",
+      "current": 0
+    },
+    {
+      "id": "coalition_orgs",
+      "title": "Coalition organizations",
+      "source": "organizations",
+      "current": 0
+    },
+    {
+      "id": "counties_represented",
+      "title": "Counties represented",
+      "source": "counties",
+      "current": 0
+    },
+    {
+      "id": "counties_inactive",
+      "title": "Counties with no activity",
+      "source": "counties",
+      "current": 75
+    },
+    {
+      "id": "events_hosted",
+      "title": "Events hosted",
+      "source": "events",
+      "current": 0
+    },
+    {
+      "id": "resource_downloads",
+      "title": "Resource downloads",
+      "source": "educational_resources",
+      "current": 0
+    },
+    {
+      "id": "referrals_sent",
+      "title": "Referrals sent",
+      "source": "referrals",
+      "current": 0
+    },
+    {
+      "id": "official_shares",
+      "title": "Public official shares",
+      "source": "educational_packet_shares",
+      "current": 0
+    },
+    {
+      "id": "model_law_submissions",
+      "title": "Model law submissions",
+      "source": "model_law_concepts",
+      "current": 0
+    },
+    {
+      "id": "ballot_submissions",
+      "title": "Ballot initiative submissions",
+      "source": "ballot_initiative_concepts",
+      "current": 0
+    },
+    {
+      "id": "research_completeness",
+      "title": "Research completeness",
+      "source": "sources",
+      "current": 3
+    },
+    {
+      "id": "content_completion",
+      "title": "Content completion",
+      "source": "educational_resources",
+      "current": 12
+    },
+    {
+      "id": "deployment_readiness",
+      "title": "Deployment readiness",
+      "source": "mc_build_records",
+      "current": 8
+    }
+  ],
+  "canonical_model": {
+    "build": 15,
+    "route": "/mission-control/data-model.html",
+    "objects_in_canonical": 10,
+    "objects_in_schema": 15,
+    "new_entities": [
+      "fact",
+      "signup",
+      "referral",
+      "educational_packet_share",
+      "coalition_sign_on",
+      "mc_build_record"
+    ],
+    "relationship_registry": "/data/relationship-registry.json",
+    "relationship_types": 20
+  },
+  "integrations": [
+    {
+      "system": "Facts Framework",
+      "build": 18,
+      "entity": "fact",
+      "route": "/mission-control/facts.html"
+    },
+    {
+      "system": "Evidence Registry",
+      "build": 10,
+      "entity": "source",
+      "route": "/mission-control/research.html"
+    },
+    {
+      "system": "Content Inventory",
+      "build": 6,
+      "entity": "educational_resource",
+      "route": "/mission-control/inventory.html"
+    },
+    {
+      "system": "Coalition",
+      "build": 14,
+      "entities": [
+        "organization",
+        "coalition_sign_on"
+      ],
+      "route": "/mission-control/coalition.html"
+    },
+    {
+      "system": "Repository Blueprint",
+      "build": 21,
+      "note": "Future src/data/ tables",
+      "route": "/mission-control/repository.html"
+    }
+  ],
+  "summary": {
+    "entities": 15,
+    "join_tables": 10,
+    "fields_total": 178,
+    "entities_live": 2,
+    "entities_partial": 8,
+    "entities_planned": 3,
+    "entities_stub": 2,
+    "database_deployed": false,
+    "schema_readiness_pct": 35,
+    "migration_target": "supabase_postgres",
+    "v1_storage": "static_json_netlify_forms"
+  },
+  "catalog_gaps": [
+    "No Postgres/Supabase instance deployed",
+    "Join tables exist only as schema \u2014 no DB tables",
+    "Referral and packet share entities not implemented",
+    "Public officials directory not populated",
+    "Form submissions not synced to person/signup tables"
+  ],
+  "recommended_next_build": {
+    "number": 23,
+    "title": "Wireframes for Every Major Screen",
+    "note": "UX artifacts before component specs and framework migration."
+  }
+}

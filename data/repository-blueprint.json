@@ -500,8 +500,8 @@
     "develop branch not yet standard workflow"
   ],
   "recommended_next_build": {
-    "number": 22,
-    "title": "Database schema and entity-relationship model",
-    "note": "ERD before framework migration."
+    "number": 23,
+    "title": "Wireframes for Every Major Screen",
+    "note": "UX artifacts before component specs."
   }
 }

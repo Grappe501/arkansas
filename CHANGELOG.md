@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.26.0] - 2026-07-09 — Build #22 Database Schema
+
+### Database Schema & Entity Relationship Blueprint
+- **Data Architecture v1.0** — 15 entities, 10 join tables, ~180 fields
+- 8 signup types, privacy principle, MC metrics mapped to tables
+- v1 static JSON/Netlify Forms; v2 Supabase/Postgres migration path
+- Extends canonical model (10 → 15 entities)
+- MC dashboard: `/mission-control/database.html`
+
 ## [1.25.0] - 2026-07-09 — Build #21 Repository Blueprint
 
 ### GitHub Repository & Folder Structure Blueprint

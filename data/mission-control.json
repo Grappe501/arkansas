@@ -1,6 +1,6 @@
 {
-  "version": "1.25.0",
-  "build": 21,
+  "version": "1.26.0",
+  "build": 22,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,16 +9,16 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 21,
+    "overall_completion": 22,
     "current_build": {
-      "number": 21,
-      "title": "GitHub Repository & Folder Structure Blueprint"
-    },
-    "active_phase": "Implementation Artifacts \u2014 Repository Structure",
-    "last_completed": "Master Platform Blueprint & Technical Architecture",
-    "next_build": {
       "number": 22,
-      "title": "Database schema and entity-relationship model"
+      "title": "Database Schema & Entity Relationship Blueprint"
+    },
+    "active_phase": "Implementation Artifacts \u2014 Database Schema",
+    "last_completed": "GitHub Repository & Folder Structure Blueprint",
+    "next_build": {
+      "number": 23,
+      "title": "Wireframes for every major screen"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
@@ -28,13 +28,14 @@
     "signup_funnel_readiness": 14,
     "civic_action_readiness": 22,
     "coalition_readiness": 12,
-    "data_model_readiness": 8,
+    "data_model_readiness": 35,
     "route_inventory_readiness": 18,
     "component_registry_readiness": 22,
     "facts_framework_readiness": 12,
     "knowledge_atlas_readiness": 18,
     "platform_architecture_readiness": 20,
     "repository_structure_readiness": 28,
+    "database_schema_readiness": 35,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -42,8 +43,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 21,
-      "note": "Repository blueprint live \u2014 28% structure readiness. Migration not executed. DB schema next."
+      "value": 22,
+      "note": "Database schema live \u2014 15 entities, 10 join tables. No DB deployed yet. Wireframes next."
     },
     {
       "id": "constitution",
@@ -169,9 +170,9 @@
     {
       "id": "data_model",
       "label": "Canonical Data Model",
-      "value": 8,
+      "value": 35,
       "max": 100,
-      "note": "10 objects, 20 relationship types, 0 edges \u2014 schema ready for Build #18 database."
+      "note": "Schema blueprint \u2014 35% readiness, static JSON v1."
     },
     {
       "id": "routes",
@@ -214,6 +215,13 @@
       "value": 28,
       "max": 100,
       "note": "Target src/ layout defined \u2014 flat v0 layout still in use."
+    },
+    {
+      "id": "database",
+      "label": "Database Schema",
+      "value": 35,
+      "max": 100,
+      "note": "15 entities defined \u2014 Supabase/Postgres migration path documented."
     }
   ],
   "public_readiness": {
@@ -632,6 +640,12 @@
       "id": "repository",
       "label": "Repository Blueprint",
       "href": "/mission-control/repository.html",
+      "status": "complete"
+    },
+    {
+      "id": "database",
+      "label": "Database Schema",
+      "href": "/mission-control/database.html",
       "status": "complete"
     }
   ],
@@ -1659,6 +1673,52 @@
   ],
   "builds": [
     {
+      "number": 22,
+      "title": "Database Schema & Entity Relationship Blueprint",
+      "version": "1.26.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Data Architecture v1.0 \u2014 15 entities, 10 join tables, v1 storage strategy",
+      "summary": "15 entities, 178 fields, 10 join tables; 35% schema readiness; no DB deployed.",
+      "files_created": [
+        "data/database-schema.json",
+        "docs/DATABASE_SCHEMA.md",
+        "builds/022-database-schema.md",
+        "mission-control/database.html",
+        "scripts/gen-database-schema.py",
+        "scripts/update-mc-build22.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/database.html"
+      ],
+      "decisions_made": [
+        "15 primary entities extending canonical model (10 \u2192 15)",
+        "10 join tables for M:N relationships",
+        "8 signup types defined",
+        "v1: static JSON + Netlify Forms; v2: Supabase/Postgres",
+        "Privacy principle: collect only what is needed"
+      ],
+      "open_questions": [
+        "Supabase vs Neon for v2?",
+        "When to migrate forms to person/signup tables?"
+      ],
+      "risks": [
+        "No database deployed \u2014 schema blueprint only"
+      ],
+      "next_recommended": 23,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/database.html",
+      "review_status": "complete"
+    },
+    {
       "number": 21,
       "title": "GitHub Repository & Folder Structure Blueprint",
       "version": "1.25.0",
@@ -2568,19 +2628,19 @@
     }
   ],
   "briefing": {
-    "what_built": "Repository Blueprint v1.0 \u2014 target folder structure and GitHub workflow",
-    "building_now": "Implementation artifacts wave \u2014 database schema next (Build #22)",
+    "what_built": "Database Schema v1.0 \u2014 15 entities, ERD, join tables, MC metrics",
+    "building_now": "Implementation artifacts \u2014 wireframes next (Build #23)",
     "blocked": [
-      "No src/ migration",
-      "No validation .mjs scripts",
-      "develop branch not standard"
+      "No Postgres/Supabase",
+      "Join tables not in DB",
+      "Forms not synced to entities"
     ],
     "ready_public": [
-      "Repository MC dashboard",
-      "Migration map",
-      ".env.example"
+      "Database MC dashboard",
+      "ERD overview",
+      "Storage migration path"
     ],
-    "next": "Build #22 \u2014 Database schema and ERD"
+    "next": "Build #23 \u2014 Wireframes for every major screen"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -2751,5 +2811,17 @@
     "recommended_repo_name": "citizens-united-facts",
     "workstreams": 4,
     "target_src_folders": 7
+  },
+  "database_schema": "/data/database-schema.json",
+  "database_dashboard": "/mission-control/database.html",
+  "database_inventory": {
+    "readiness_score": 35,
+    "entities": 15,
+    "join_tables": 10,
+    "fields_total": 178,
+    "schema_readiness_pct": 35,
+    "database_deployed": false,
+    "v1_storage": "static_json_netlify_forms",
+    "migration_target": "supabase_postgres"
   }
 }

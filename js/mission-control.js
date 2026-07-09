@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Database Schema <a href="/mission-control/database.html" class="mc-inline-link">Entity Blueprint →</a></h2>
+    <p class="mc-bar-note">Build #22 — 15 entities, 10 join tables, v1 static storage, Supabase/Postgres migration path.</p>
     <h2 class="mc-section-title">Repository Blueprint <a href="/mission-control/repository.html" class="mc-inline-link">Folder Structure →</a></h2>
     <p class="mc-bar-note">Build #21 — Branch model, target src/ layout, docs taxonomy, scripts, GitHub labels &amp; milestones.</p>
     <h2 class="mc-section-title">Platform Architecture <a href="/mission-control/platform.html" class="mc-inline-link">Technical Blueprint →</a></h2>
@@ -2095,6 +2097,115 @@ async function initRepositoryBlueprint() {
   initDevConsole(mc);
 }
 
+async function initDatabaseSchemaBlueprint() {
+  const root = document.getElementById('mc-database-root');
+  if (!root) return;
+
+  const [schemaRes, mcRes] = await Promise.all([
+    fetch('/data/database-schema.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const schema = await schemaRes.json();
+  const mc = await mcRes.json();
+  const s = schema.summary;
+  const cm = schema.canonical_model;
+
+  const entityRows = schema.entities.map(e => `
+    <tr class="${e.storage_status === 'live' ? 'mc-table__row--approved' : ''}">
+      <td><code>${e.table}</code></td>
+      <td>${e.title}</td>
+      <td>${e.fields.length}</td>
+      <td>${e.storage_status}</td>
+      <td>${e.canonical_model_id || '—'}</td>
+    </tr>`).join('');
+
+  const joinRows = schema.join_tables.map(j => `
+    <tr><td><code>${j.table}</code></td><td>${j.from} → ${j.to}</td><td>${j.status}</td></tr>`).join('');
+
+  const metricRows = schema.mission_control_metrics.map(m => `
+    <tr><td>${m.title}</td><td><code>${m.source}</code></td><td>${m.current}</td></tr>`).join('');
+
+  const erMermaid = `erDiagram
+    PERSON ||--o{ PERSON_ORGANIZATIONS : joins
+    ORGANIZATION ||--o{ PERSON_ORGANIZATIONS : has
+    COUNTY ||--o{ PERSON : contains
+    COUNTY ||--o{ ORGANIZATION : contains
+    COUNTY ||--o{ EVENT : hosts
+    PERSON ||--o{ EVENT : hosts
+    ORGANIZATION ||--o{ EVENT : hosts
+    EVENT ||--o{ EVENT_RESOURCES : uses
+    EDUCATIONAL_RESOURCE ||--o{ EVENT_RESOURCES : supports
+    FACT ||--o{ FACT_SOURCES : cites
+    SOURCE ||--o{ FACT_SOURCES : supports
+    PERSON ||--o{ REFERRAL : sends
+    PERSON ||--o{ EDUCATIONAL_PACKET_SHARE : shares
+    PUBLIC_OFFICIAL ||--o{ EDUCATIONAL_PACKET_SHARE : receives
+    ORGANIZATION ||--o{ COALITION_SIGN_ON : signs`;
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Database Schema</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #22 · ${schema.title}</p>
+      <h1>Database Schema &amp; ERD</h1>
+      <p class="mc-header__question">${schema.purpose}</p>
+    </header>
+    <section class="mc-card">
+      <h3>${schema.platform}</h3>
+      <p class="mc-bar-note"><strong>Database deployed:</strong> ${s.database_deployed ? 'Yes' : 'No'} · <strong>v1 storage:</strong> ${s.v1_storage}</p>
+      <p class="mc-bar-note"><strong>Migration target:</strong> ${s.migration_target}</p>
+      <p class="mc-bar-note">${schema.governing_principle}</p>
+    </section>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Entities</div><div class="mc-stat__value">${s.entities}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Join tables</div><div class="mc-stat__value">${s.join_tables}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Fields</div><div class="mc-stat__value">${s.fields_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Schema readiness</div><div class="mc-stat__value">${s.schema_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Live entities</div><div class="mc-stat__value">${s.entities_live}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Partial</div><div class="mc-stat__value">${s.entities_partial}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Planned/stub</div><div class="mc-stat__value">${s.entities_planned + s.entities_stub}</div></div>
+    </div>
+    <h2 class="mc-section-title">Data Philosophy</h2>
+    <ul class="mc-deliverables">${schema.philosophy_questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Primary Entities (${s.entities})</h2>
+    <div class="mc-card mc-inv-table-wrap" style="max-height:400px;overflow-y:auto">
+      <table class="mc-table mc-inv-table">
+        <thead><tr><th>Table</th><th>Entity</th><th>Fields</th><th>Storage</th><th>Canonical ID</th></tr></thead>
+        <tbody>${entityRows}</tbody>
+      </table>
+    </div>
+    <h2 class="mc-section-title">Entity Relationships (ERD overview)</h2>
+    <pre class="mc-bar-note" style="white-space:pre-wrap;font-size:0.85rem">${erMermaid}</pre>
+    <h2 class="mc-section-title">Join Tables (${s.join_tables})</h2>
+    <table class="mc-table"><thead><tr><th>Table</th><th>Relationship</th><th>Status</th></tr></thead><tbody>${joinRows}</tbody></table>
+    <h2 class="mc-section-title">Signup Types (${schema.signup_types.length})</h2>
+    <p class="mc-bar-note">${schema.signup_types.join(' · ')}</p>
+    <h2 class="mc-section-title">Canonical Model Link (Build #${cm.build})</h2>
+    <p class="mc-bar-note">${cm.objects_in_canonical} canonical objects → ${cm.objects_in_schema} schema entities. New: ${cm.new_entities.join(', ')}.</p>
+    <p class="mc-bar-note"><a href="${cm.route}">Data Model dashboard →</a> · ${cm.relationship_types} relationship types</p>
+    <h2 class="mc-section-title">v1 Storage Strategy</h2>
+    <table class="mc-table"><thead><tr><th>Method</th><th>Status</th><th>Examples</th></tr></thead>
+      <tbody>${schema.storage_strategy.v1_current.map(x => `<tr><td>${x.method}</td><td>${x.status}</td><td>${(x.examples || []).join(', ')}</td></tr>`).join('')}</tbody></table>
+    <h2 class="mc-section-title">Future Storage</h2>
+    <ul class="mc-deliverables">${schema.storage_strategy.v2_future.map(x => `<li><strong>${x.method}</strong> — ${x.status}${x.note ? ' (' + x.note + ')' : ''}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Mission Control Metrics</h2>
+    <table class="mc-table"><thead><tr><th>Metric</th><th>Source</th><th>Current</th></tr></thead><tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Privacy</h2>
+    <p class="mc-bar-note">${schema.privacy_principle}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${schema.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${schema.recommended_next_build.number} — ${schema.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${schema.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/DATABASE_SCHEMA.md">DATABASE_SCHEMA.md</a> ·
+      <a href="/data/database-schema.json">JSON</a> ·
+      <a href="/mission-control/data-model.html">Canonical Data Model</a> ·
+      <a href="/mission-control/facts.html">Facts</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -2115,4 +2226,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initKnowledgeAtlasBlueprint();
   initPlatformArchitectureBlueprint();
   initRepositoryBlueprint();
+  initDatabaseSchemaBlueprint();
 });
