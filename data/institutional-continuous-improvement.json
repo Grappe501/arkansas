@@ -1,0 +1,411 @@
+{
+  "version": "1.0",
+  "build": 98,
+  "updated": "2026-07-09",
+  "completion_target_date": "2027-01-01",
+  "v1_completion_begins_improvement": true,
+  "title": "Master Institutional Self-Build & Continuous Improvement System v1.0",
+  "subtitle": "The Institution That Improves Itself",
+  "tagline": "Never Finished. Always Improving.",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/institutional-continuous-improvement.html",
+  "constitution": "/docs/MASTER_INSTITUTIONAL_CONTINUOUS_IMPROVEMENT.md",
+  "purpose": "January 2027 V1 completion begins permanent learning and improvement. Institution continually evaluates itself, identifies weaknesses, improves operations, strengthens resources, adapts to new research, technologies, and community needs. Mission Control monitors improvement with same rigor as construction.",
+  "governing_principle": "Completion is a milestone. Improvement is a culture. Every volunteer, conversation, lesson, research paper, community, and year should leave Citizens United Facts stronger than before. That is how an institution earns the privilege of serving Arkansas for generations.",
+  "founders_principle": "No institution is perfect. The strongest recognize imperfections, learn from them, and improve without losing sight of mission. Citizens United Facts should become known for quality civic education, humility, willingness to learn, and commitment to continual improvement.",
+  "institutional_philosophy": {
+    "title": "Institutional Philosophy",
+    "every_day_a_little_better": true,
+    "improvement_intentional": true,
+    "improvement_measured": true,
+    "improvement_documented": true,
+    "improvement_never_stops": true
+  },
+  "continuous_improvement_cycle": {
+    "title": "The Continuous Improvement Cycle",
+    "steps": [
+      {
+        "step": 1,
+        "stage": "Observe",
+        "status": "specified"
+      },
+      {
+        "step": 2,
+        "stage": "Measure",
+        "status": "specified"
+      },
+      {
+        "step": 3,
+        "stage": "Analyze",
+        "status": "specified"
+      },
+      {
+        "step": 4,
+        "stage": "Improve",
+        "status": "specified"
+      },
+      {
+        "step": 5,
+        "stage": "Verify",
+        "status": "specified"
+      },
+      {
+        "step": 6,
+        "stage": "Document",
+        "status": "partial"
+      },
+      {
+        "step": 7,
+        "stage": "Teach",
+        "status": "planned"
+      },
+      {
+        "step": 8,
+        "stage": "Repeat",
+        "status": "specified"
+      }
+    ],
+    "mc_visualizes_across_institution": true,
+    "status": "specified"
+  },
+  "sources_of_improvement": {
+    "title": "Sources of Improvement",
+    "sources": [
+      "Research updates",
+      "Volunteer suggestions",
+      "Education Leaders",
+      "Community conversations",
+      "Coalition partners",
+      "Mission Control metrics",
+      "AI recommendations",
+      "Public questions",
+      "Technology advances",
+      "Lessons learned",
+      "Launch certification gaps"
+    ],
+    "every_observation_opportunity": true,
+    "status": "specified"
+  },
+  "annual_institutional_assessment": {
+    "title": "Annual Institutional Assessment",
+    "questions": [
+      "What worked well?",
+      "What created confusion?",
+      "What should be simplified?",
+      "What should be expanded?",
+      "What no longer serves the mission?",
+      "What should be retired?"
+    ],
+    "every_department_annually": true,
+    "assessments_completed": 0,
+    "status": "planned"
+  },
+  "improvement_backlog": {
+    "title": "Improvement Backlog",
+    "categories": [
+      {
+        "id": "IB-01",
+        "category": "Research improvements",
+        "items": 0,
+        "status": "planned"
+      },
+      {
+        "id": "IB-02",
+        "category": "Technology improvements",
+        "items": 0,
+        "status": "planned"
+      },
+      {
+        "id": "IB-03",
+        "category": "Educational improvements",
+        "items": 0,
+        "status": "planned"
+      },
+      {
+        "id": "IB-04",
+        "category": "Volunteer improvements",
+        "items": 0,
+        "status": "planned"
+      },
+      {
+        "id": "IB-05",
+        "category": "Leadership improvements",
+        "items": 0,
+        "status": "planned"
+      },
+      {
+        "id": "IB-06",
+        "category": "Community improvements",
+        "items": 0,
+        "status": "planned"
+      },
+      {
+        "id": "IB-07",
+        "category": "Coalition improvements",
+        "items": 0,
+        "status": "planned"
+      },
+      {
+        "id": "IB-08",
+        "category": "Documentation improvements",
+        "items": 0,
+        "status": "planned"
+      },
+      {
+        "id": "IB-09",
+        "category": "Governance improvements",
+        "items": 0,
+        "status": "planned"
+      },
+      {
+        "id": "IB-10",
+        "category": "AI improvements",
+        "items": 0,
+        "status": "planned"
+      }
+    ],
+    "permanent_backlog": true,
+    "total_items": 0,
+    "captured_prioritized_tracked": true,
+    "status": "planned"
+  },
+  "innovation_pipeline": {
+    "title": "Innovation Pipeline",
+    "stages": [
+      {
+        "step": 1,
+        "stage": "Idea Submitted",
+        "status": "specified"
+      },
+      {
+        "step": 2,
+        "stage": "Research",
+        "status": "specified"
+      },
+      {
+        "step": 3,
+        "stage": "Discussion",
+        "status": "specified"
+      },
+      {
+        "step": 4,
+        "stage": "Prototype",
+        "status": "planned"
+      },
+      {
+        "step": 5,
+        "stage": "Pilot",
+        "status": "planned"
+      },
+      {
+        "step": 6,
+        "stage": "Evaluation",
+        "status": "planned"
+      },
+      {
+        "step": 7,
+        "stage": "Approval",
+        "status": "planned"
+      },
+      {
+        "step": 8,
+        "stage": "Institution-wide Adoption",
+        "status": "planned"
+      }
+    ],
+    "encourages_innovation_without_sacrificing_quality": true,
+    "active_items": 0,
+    "status": "specified"
+  },
+  "volunteer_improvement_program": {
+    "title": "Volunteer Improvement Program",
+    "examples": [
+      "Suggest better lessons",
+      "Improve documentation",
+      "Recommend new research",
+      "Simplify processes",
+      "Improve presentations",
+      "Identify outdated information"
+    ],
+    "every_volunteer_can_contribute": true,
+    "suggestions_received": 0,
+    "status": "planned"
+  },
+  "ai_assisted_improvement": {
+    "title": "AI-Assisted Improvement",
+    "identifies": [
+      "Frequently asked questions",
+      "Repeated volunteer challenges",
+      "Research gaps",
+      "Documentation gaps",
+      "Broken workflows",
+      "Emerging opportunities"
+    ],
+    "mc_reviews_before_implementation": true,
+    "recommendations_pending": 0,
+    "status": "planned"
+  },
+  "lessons_learned_library": {
+    "title": "Lessons Learned Library",
+    "questions": [
+      "What succeeded?",
+      "What failed?",
+      "What surprised us?",
+      "What should future volunteers know?"
+    ],
+    "part_of_institutional_memory": true,
+    "entries": 0,
+    "status": "planned"
+  },
+  "executive_improvement_dashboard": {
+    "title": "Executive Improvement Dashboard",
+    "indicators": [
+      {
+        "id": "ICI-D01",
+        "indicator": "Improvement projects",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ICI-D02",
+        "indicator": "Projects completed",
+        "current": 104,
+        "status": "partial"
+      },
+      {
+        "id": "ICI-D03",
+        "indicator": "Ideas awaiting review",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ICI-D04",
+        "indicator": "Volunteer suggestions",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ICI-D05",
+        "indicator": "AI recommendations",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ICI-D06",
+        "indicator": "Department improvement scores",
+        "current": 0,
+        "unit": "%",
+        "status": "planned"
+      },
+      {
+        "id": "ICI-D07",
+        "indicator": "Institutional improvement trend",
+        "current": 97,
+        "unit": "%",
+        "status": "partial"
+      }
+    ],
+    "live": false,
+    "leadership_knows_where_progress_occurs": true,
+    "status": "planned"
+  },
+  "institutional_health_trend": {
+    "title": "Institutional Health Trend",
+    "periods": [
+      "Today",
+      "Last Month",
+      "Last Quarter",
+      "Last Year",
+      "Since January 2027"
+    ],
+    "measures_improvement_over_time": true,
+    "not_snapshots_only": true,
+    "status": "planned"
+  },
+  "recognition": {
+    "title": "Recognition",
+    "categories": [
+      "Volunteers who improve systems",
+      "Education Leaders who develop better resources",
+      "Researchers who strengthen accuracy",
+      "Coalition partners who contribute new ideas",
+      "Communities that identify meaningful improvements"
+    ],
+    "improvement_part_of_culture": true,
+    "status": "planned"
+  },
+  "integration": {
+    "chain": "Mission Control \u2192 Digital Twin \u2192 PMO \u2192 Research Institute \u2192 Community Education Academy \u2192 Volunteer Network \u2192 Knowledge Platform \u2192 Operating Manual \u2192 AI Institution",
+    "every_component_continually_improves": true,
+    "systems": [
+      {
+        "system": "Launch Certification (#97)",
+        "route": "/mission-control/institutional-launch-certification.html",
+        "status": "live"
+      },
+      {
+        "system": "PMO (#89)",
+        "route": "/mission-control/pmo-execution-office.html",
+        "status": "live"
+      },
+      {
+        "system": "Knowledge Platform (#93)",
+        "route": "/mission-control/civic-knowledge-platform.html",
+        "status": "live"
+      },
+      {
+        "system": "AI Institution (#91)",
+        "route": "/mission-control/ai-institution.html",
+        "status": "live"
+      },
+      {
+        "system": "Operating Manual (#90)",
+        "route": "/mission-control/institutional-operating-manual.html",
+        "status": "live"
+      },
+      {
+        "system": "Digital Twin (#81)",
+        "route": "/mission-control/institutional-digital-twin.html",
+        "status": "live"
+      }
+    ]
+  },
+  "long_term_vision": "Twenty years from now, Citizens United Facts looks dramatically different from January 2027 \u2014 not because it abandoned its mission, but because it continually improved while remaining faithful to its purpose. Research stronger. Technology smarter. Volunteers better equipped. Communities more connected. Mission Control more insightful.",
+  "summary": {
+    "completion_target_date": "2027-01-01",
+    "days_remaining": 176,
+    "institutional_continuous_improvement_readiness_pct": 54,
+    "launch_certification_readiness_pct": 57,
+    "pmo_readiness_pct": 60,
+    "improvement_dashboard_live": false,
+    "improvement_backlog_items": 0,
+    "innovation_pipeline_active": 0,
+    "lessons_learned_entries": 0,
+    "ai_recommendations_pending": 0,
+    "volunteer_suggestions": 0,
+    "annual_assessments_completed": 0,
+    "improvement_cycle_steps": 8,
+    "backlog_categories": 10,
+    "institutional_completion_pct": 97
+  },
+  "catalog_gaps": [
+    "Improvement dashboard not live",
+    "Improvement backlog empty \u2014 no tracking system",
+    "Innovation pipeline not operational",
+    "Lessons learned library has no entries",
+    "AI improvement recommendations not generated",
+    "Volunteer suggestion intake not connected",
+    "Annual department assessments not scheduled",
+    "Health trend comparison not instrumented",
+    "Recognition system not implemented",
+    "Improvement cycle not visualized in MC",
+    "No link from certification gaps to improvement backlog",
+    "Post-Jan 2027 improvement cadence not defined"
+  ],
+  "recommended_next_build": {
+    "number": 99,
+    "title": "Executive War Room & Countdown Dashboard Components",
+    "note": "War room UI, countdown dashboard, improvement backlog tracker, innovation pipeline board, lessons learned registry, COMP-* specs."
+  }
+}

@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.02.0] - 2026-07-09 — Build #98 Master Institutional Self-Build & Continuous Improvement System
+
+### Never Finished. Always Improving.
+- **Master Institutional Self-Build & Continuous Improvement System v1.0** — permanent improvement culture post-Jan 2027
+- 8-step cycle (Observe → Repeat), 11 improvement sources, 10 backlog categories, 8-stage innovation pipeline
+- Volunteer improvement program, AI-assisted gap detection, lessons learned library, health trend, recognition
+- Executive improvement dashboard (7 indicators)
+- Honest: 0 backlog items · dashboard not live · lessons learned empty · 54% readiness
+- MC dashboard: `/mission-control/institutional-continuous-improvement.html`
+
 ## [2.01.0] - 2026-07-09 — Build #97 Master Institutional Launch Certification
 
 ### The January 2027 Readiness Audit

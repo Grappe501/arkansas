@@ -1,6 +1,6 @@
 {
-  "version": "2.01.0",
-  "build": 97,
+  "version": "2.02.0",
+  "build": 98,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 97,
+    "overall_completion": 98,
     "current_build": {
-      "number": 97,
-      "title": "Citizens United Facts Master Institutional Launch Certification v1.0"
-    },
-    "active_phase": "Launch Certification \u2192 War Room",
-    "last_completed": "ACOS 2.0",
-    "next_build": {
       "number": 98,
+      "title": "Citizens United Facts Master Institutional Self-Build & Continuous Improvement System v1.0"
+    },
+    "active_phase": "Continuous Improvement \u2192 War Room",
+    "last_completed": "Launch Certification",
+    "next_build": {
+      "number": 99,
       "title": "Executive war room & countdown dashboard components"
     },
     "github_status": "connected",
@@ -47,6 +47,7 @@
     "master_arkansas_action_network_readiness": 50,
     "arkansas_civic_operating_system_readiness": 59,
     "institutional_launch_certification_readiness": 57,
+    "institutional_continuous_improvement_readiness": 54,
     "coalition_network_readiness": 44,
     "citizen_action_center_readiness": 42,
     "campaign_finance_observatory_readiness": 38,
@@ -103,7 +104,7 @@
     "visitor_journey_readiness": 59,
     "technical_architecture_readiness": 59,
     "governance_readiness": 50,
-    "build_bible_readiness": 49,
+    "build_bible_readiness": 54,
     "data_architecture_readiness": 58,
     "ux_architecture_readiness": 59,
     "launch_strategy_readiness": 57,
@@ -130,8 +131,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 97,
-      "note": "Build #97 \u2014 Launch Certification. 176 days to Jan 2027."
+      "value": 98,
+      "note": "Build #98 \u2014 Continuous Improvement. 176 days to Jan 2027."
     },
     {
       "id": "constitution",
@@ -833,7 +834,14 @@
       "label": "Launch Certification",
       "value": 57,
       "max": 100,
-      "note": "0/12 certified \u00b7 score 45%."
+      "note": "Launch certification \u00b7 57% readiness."
+    },
+    {
+      "id": "institutional_continuous_improvement",
+      "label": "Continuous Improvement",
+      "value": 54,
+      "max": 100,
+      "note": "0 backlog items \u00b7 dashboard planned."
     }
   ],
   "public_readiness": {
@@ -1708,6 +1716,12 @@
       "id": "institutional_launch_certification",
       "label": "Launch Certification",
       "href": "/mission-control/institutional-launch-certification.html",
+      "status": "complete"
+    },
+    {
+      "id": "institutional_continuous_improvement",
+      "label": "Continuous Improvement",
+      "href": "/mission-control/institutional-continuous-improvement.html",
       "status": "complete"
     }
   ],
@@ -2734,6 +2748,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 98,
+      "title": "Citizens United Facts Master Institutional Self-Build & Continuous Improvement System v1.0",
+      "version": "2.02.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Permanent continuous improvement \u2014 never finished, always improving",
+      "summary": "8-step cycle, 11 sources, 10 backlog categories, innovation pipeline, volunteer program, AI-assisted improvement, lessons learned, health trend, recognition. 54% readiness \u00b7 0 backlog items \u00b7 dashboard not live.",
+      "files_created": [
+        "data/institutional-continuous-improvement.json",
+        "docs/MASTER_INSTITUTIONAL_CONTINUOUS_IMPROVEMENT.md",
+        "builds/098-institutional-continuous-improvement.md",
+        "mission-control/institutional-continuous-improvement.html",
+        "scripts/gen-institutional-continuous-improvement.py",
+        "scripts/update-mc-build98.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/institutional-continuous-improvement.html"
+      ],
+      "decisions_made": [
+        "V1 completion begins improvement culture \u2014 not the end",
+        "Observe \u2192 Measure \u2192 Analyze \u2192 Improve \u2192 Verify \u2192 Document \u2192 Teach \u2192 Repeat",
+        "Permanent improvement backlog with 10 categories",
+        "8-stage innovation pipeline",
+        "AI identifies gaps \u2014 MC reviews before implementation",
+        "Lessons learned library part of institutional memory",
+        "54% readiness \u2014 blueprint only"
+      ],
+      "open_questions": [
+        "Improvement backlog \u2014 MC UI vs external tool?",
+        "Link certification gaps (#97) to backlog automatically?",
+        "Annual assessment schedule \u2014 calendar integration?",
+        "Recognition system \u2014 public or internal only?"
+      ],
+      "risks": [
+        "Improvement dashboard not live",
+        "Improvement backlog empty \u2014 no tracking system",
+        "Innovation pipeline not operational",
+        "Lessons learned library has no entries"
+      ],
+      "next_recommended": 99,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/institutional-continuous-improvement.html",
+      "review_status": "complete"
+    },
     {
       "number": 97,
       "title": "Citizens United Facts Master Institutional Launch Certification v1.0",
@@ -7932,21 +7999,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Master Institutional Launch Certification v1.0 \u2014 January 2027 Readiness Audit",
-    "building_now": "97 builds \u2014 executive war room next",
+    "what_built": "Master Institutional Self-Build & Continuous Improvement System v1.0",
+    "building_now": "98 builds \u2014 executive war room next",
     "blocked": [
-      "Certification dashboard",
-      "0 domains certified",
-      "Independent review",
-      "Launch recommendation"
+      "Improvement dashboard",
+      "Backlog tracking",
+      "Lessons learned library",
+      "AI recommendations"
     ],
     "ready_public": [
-      "12 domains defined",
-      "67 criteria",
-      "5 levels",
-      "Launch recommendation options"
+      "Improvement cycle",
+      "Backlog categories",
+      "Innovation pipeline",
+      "Annual assessment questions"
     ],
-    "next": "Build #98 \u2014 Executive war room & countdown dashboard components"
+    "next": "Build #99 \u2014 Executive war room & countdown dashboard components"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8931,5 +8998,14 @@
     "domains_certified": 0,
     "certification_dashboard_live": false,
     "launch_recommendation_issued": false
+  },
+  "institutional_continuous_improvement": "/data/institutional-continuous-improvement.json",
+  "institutional_continuous_improvement_dashboard": "/mission-control/institutional-continuous-improvement.html",
+  "institutional_continuous_improvement_inventory": {
+    "readiness_score": 54,
+    "improvement_dashboard_live": false,
+    "improvement_backlog_items": 0,
+    "lessons_learned_entries": 0,
+    "volunteer_suggestions": 0
   }
 }

@@ -438,10 +438,10 @@ out = {
     ],
     'recommended_next_build': {
         'number': 98,
-        'title': 'Executive War Room & Countdown Dashboard Components',
+        'title': 'Master Institutional Self-Build & Continuous Improvement System',
         'note': (
-            'War room UI, countdown dashboard, certification tracker, domain criteria '
-            'checklist, launch recommendation workflow, COMP-* specs.'
+            'Permanent improvement culture — 8-step cycle, backlog, innovation pipeline, '
+            'lessons learned, AI-assisted improvement, health trend.'
         ),
     },
 }

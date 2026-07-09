@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Continuous Improvement <a href="/mission-control/institutional-continuous-improvement.html" class="mc-inline-link">Never Finished #98 →</a></h2>
+    <p class="mc-bar-note">Build #98 — Master Self-Build & Continuous Improvement. 8-step cycle, backlog, innovation pipeline, lessons learned, AI-assisted improvement. 0 backlog items · dashboard not live. 54% readiness.</p>
     <h2 class="mc-section-title">Launch Certification <a href="/mission-control/institutional-launch-certification.html" class="mc-inline-link">Jan 2027 Readiness Audit #97 →</a></h2>
     <p class="mc-bar-note">Build #97 — Master Institutional Launch Certification. 12 domains, 67 criteria, 5 certification levels, launch recommendation. 0/12 certified · 45% overall score · dashboard not live. 57% readiness.</p>
     <h2 class="mc-section-title">ACOS 2.0 <a href="/mission-control/arkansas-civic-operating-system.html" class="mc-inline-link">One Login. One Platform. #96 →</a></h2>
@@ -5280,6 +5282,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMasterArkansasActionNetwork();
   initArkansasCivicOperatingSystem();
   initInstitutionalLaunchCertification();
+  initInstitutionalContinuousImprovement();
 });
 
 async function initUxArchitecture() {
@@ -10294,6 +10297,111 @@ async function initInstitutionalLaunchCertification() {
       <a href="/data/institutional-launch-certification.json">JSON</a> ·
       <a href="/mission-control/master-launch-plan.html">Launch Plan (#85)</a> ·
       <a href="/mission-control/execution-schedule.html">Execution Schedule (#88)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initInstitutionalContinuousImprovement() {
+  const root = document.getElementById('mc-institutional-continuous-improvement-root');
+  if (!root) return;
+
+  const [iciRes, mcRes] = await Promise.all([
+    fetch('/data/institutional-continuous-improvement.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ici = await iciRes.json();
+  const mc = await mcRes.json();
+  const s = ici.summary;
+
+  const cycleRows = ici.continuous_improvement_cycle.steps.map(st => `
+    <tr><td>${st.step}</td><td>${st.stage}</td><td>${st.status}</td></tr>`).join('');
+
+  const backlogRows = ici.improvement_backlog.categories.map(b => `
+    <tr><td><code>${b.id}</code></td><td>${b.category}</td>
+      <td>${b.items}</td><td>${b.status}</td></tr>`).join('');
+
+  const pipelineRows = ici.innovation_pipeline.stages.map(st => `
+    <tr><td>${st.step}</td><td>${st.stage}</td><td>${st.status}</td></tr>`).join('');
+
+  const dashRows = ici.executive_improvement_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td>
+      <td>${typeof d.current === 'number' ? d.current.toLocaleString() : d.current}${d.unit || ''}</td>
+      <td>${d.status}</td></tr>`).join('');
+
+  const systemRows = ici.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Continuous Improvement</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #98 · ${ici.title}</p>
+      <h1>${ici.subtitle}</h1>
+      <p class="mc-header__question">${ici.governing_principle}</p>
+      <p class="mc-bar-note">${ici.purpose}</p>
+      <p class="mc-bar-note"><strong>${ici.tagline}</strong> · ${s.days_remaining} days to ${ici.completion_target_date}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Improvement readiness</div><div class="mc-stat__value">${s.institutional_continuous_improvement_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Dashboard</div><div class="mc-stat__value">${s.improvement_dashboard_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Backlog items</div><div class="mc-stat__value">${s.improvement_backlog_items}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Lessons learned</div><div class="mc-stat__value">${s.lessons_learned_entries}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Volunteer suggestions</div><div class="mc-stat__value">${s.volunteer_suggestions}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">AI recommendations</div><div class="mc-stat__value">${s.ai_recommendations_pending}</div></div>
+    </div>
+    <h2 class="mc-section-title">${ici.institutional_philosophy.title}</h2>
+    <p class="mc-bar-note">Every day a little better than yesterday: ${ici.institutional_philosophy.every_day_a_little_better ? 'Yes' : 'No'}</p>
+    <h2 class="mc-section-title">${ici.continuous_improvement_cycle.title}</h2>
+    <table class="mc-table"><thead><tr><th>Step</th><th>Stage</th><th>Status</th></tr></thead>
+      <tbody>${cycleRows}</tbody></table>
+    <h2 class="mc-section-title">${ici.sources_of_improvement.title}</h2>
+    <ul class="mc-deliverables">${ici.sources_of_improvement.sources.map(src => `<li>${src}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ici.annual_institutional_assessment.title}</h2>
+    <p class="mc-bar-note">Assessments completed: ${ici.annual_institutional_assessment.assessments_completed}</p>
+    <ul class="mc-deliverables">${ici.annual_institutional_assessment.questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ici.improvement_backlog.title}</h2>
+    <p class="mc-bar-note">Total items: ${ici.improvement_backlog.total_items}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Category</th><th>Items</th><th>Status</th></tr></thead>
+      <tbody>${backlogRows}</tbody></table>
+    <h2 class="mc-section-title">${ici.innovation_pipeline.title}</h2>
+    <p class="mc-bar-note">Active items: ${ici.innovation_pipeline.active_items}</p>
+    <table class="mc-table"><thead><tr><th>Step</th><th>Stage</th><th>Status</th></tr></thead>
+      <tbody>${pipelineRows}</tbody></table>
+    <h2 class="mc-section-title">${ici.volunteer_improvement_program.title}</h2>
+    <ul class="mc-deliverables">${ici.volunteer_improvement_program.examples.map(e => `<li>${e}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ici.ai_assisted_improvement.title}</h2>
+    <p class="mc-bar-note">Pending recommendations: ${ici.ai_assisted_improvement.recommendations_pending}</p>
+    <ul class="mc-deliverables">${ici.ai_assisted_improvement.identifies.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ici.lessons_learned_library.title}</h2>
+    <p class="mc-bar-note">Entries: ${ici.lessons_learned_library.entries}</p>
+    <ul class="mc-deliverables">${ici.lessons_learned_library.questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ici.executive_improvement_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${ici.executive_improvement_dashboard.live ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">${ici.institutional_health_trend.title}</h2>
+    <ul class="mc-deliverables">${ici.institutional_health_trend.periods.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ici.recognition.title}</h2>
+    <ul class="mc-deliverables">${ici.recognition.categories.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Founder's Principle</h2>
+    <p class="mc-bar-note">${ici.founders_principle}</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${ici.integration.chain}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${ici.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ici.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ici.recommended_next_build.number} — ${ici.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ici.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_INSTITUTIONAL_CONTINUOUS_IMPROVEMENT.md">MASTER_INSTITUTIONAL_CONTINUOUS_IMPROVEMENT.md</a> ·
+      <a href="/data/institutional-continuous-improvement.json">JSON</a> ·
+      <a href="/mission-control/institutional-launch-certification.html">Launch Certification (#97)</a> ·
+      <a href="/mission-control/pmo-execution-office.html">PMO (#89)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 
