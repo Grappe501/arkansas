@@ -1,0 +1,571 @@
+{
+  "version": "1.0",
+  "build": 70,
+  "updated": "2026-07-09",
+  "title": "Master Arkansas Command Strategy v1.0",
+  "subtitle": "The Road to 75 Counties, 250 Cities & 200,000 Arkansans",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/arkansas-command-strategy.html",
+  "constitution": "/docs/MASTER_ARKANSAS_COMMAND_STRATEGY.md",
+  "purpose": "Statewide execution strategy \u2014 how to reach every county, every major city, and 200,000 Arkansans without losing quality.",
+  "governing_principle": "Grow deliberately \u2014 trustworthy research produces excellent education, confident leaders strengthen communities, communities invite others to learn. One county, city, neighborhood, conversation, and Arkansan at a time.",
+  "not_advertising_pressure_campaigning": true,
+  "statewide_execution_playbook": true,
+  "central_question": "Exactly how do we reach every county, every major city, and 200,000 Arkansans without losing quality?",
+  "statewide_objectives": [
+    {
+      "id": "ACS-O1",
+      "number": 1,
+      "title": "Every County",
+      "description": "75 of 75 counties with active educational leadership",
+      "current": 0,
+      "target": 75,
+      "status": "scaffolded"
+    },
+    {
+      "id": "ACS-O2",
+      "number": 2,
+      "title": "Every Major City",
+      "description": "Educational teams in the 250 largest Arkansas cities",
+      "current": 0,
+      "target": 250,
+      "status": "scaffolded"
+    },
+    {
+      "id": "ACS-O3",
+      "number": 3,
+      "title": "200,000 Connected Arkansans",
+      "description": "Voluntary network committed to ongoing civic education",
+      "current": 0,
+      "target": 200000,
+      "status": "scaffolded"
+    }
+  ],
+  "expansion_pyramid": {
+    "title": "The Expansion Pyramid",
+    "layers": [
+      "Research",
+      "Website",
+      "Learners",
+      "Education Leaders",
+      "Neighborhood Teams",
+      "City Teams",
+      "County Teams",
+      "Regional Networks",
+      "Statewide Institution"
+    ],
+    "principle": "Every layer strengthens the next",
+    "status": "specified"
+  },
+  "execution_phases": {
+    "title": "Five Execution Phases",
+    "current_phase": 1,
+    "current_phase_title": "Build the Core",
+    "phases": [
+      {
+        "phase": 1,
+        "id": "build_core",
+        "title": "Build the Core",
+        "objectives": [
+          "Launch platform",
+          "Publish curriculum",
+          "Complete Mission Control",
+          "Launch Community Education Academy",
+          "Recruit founding Education Leaders"
+        ],
+        "success_metric": "The institution is operational",
+        "status": "in_progress"
+      },
+      {
+        "phase": 2,
+        "id": "county_anchors",
+        "title": "County Anchors",
+        "goal": "Recruit at least one Education Leader in every county",
+        "priority": "Coverage over density",
+        "mc_displays": "Counties without representation",
+        "status": "planned"
+      },
+      {
+        "phase": 3,
+        "id": "city_expansion",
+        "title": "City Expansion",
+        "goal": "Establish Education Leaders in the 250 largest cities",
+        "priority": "Local visibility, community conversations, partnership development",
+        "mc_displays": "City readiness",
+        "status": "planned"
+      },
+      {
+        "phase": 4,
+        "id": "neighborhood_growth",
+        "title": "Neighborhood Growth",
+        "goal": "Develop neighborhood learning networks",
+        "focus": [
+          "Living rooms",
+          "Libraries",
+          "Coffee shops",
+          "Community centers"
+        ],
+        "method": "Small-group conversations as primary growth method",
+        "status": "planned"
+      },
+      {
+        "phase": 5,
+        "id": "leadership_multiplication",
+        "title": "Leadership Multiplication",
+        "goal": "Every leader mentors another; institution becomes self-replicating",
+        "status": "planned"
+      }
+    ]
+  },
+  "county_readiness_model": {
+    "title": "County Readiness Model",
+    "stages": [
+      {
+        "stage": 1,
+        "id": "awareness",
+        "title": "Awareness",
+        "counties_at_stage": 0
+      },
+      {
+        "stage": 2,
+        "id": "leader_identified",
+        "title": "Education Leader identified",
+        "counties_at_stage": 0
+      },
+      {
+        "stage": 3,
+        "id": "conversations",
+        "title": "Community conversations occurring",
+        "counties_at_stage": 0
+      },
+      {
+        "stage": 4,
+        "id": "coalition",
+        "title": "Coalition organizations participating",
+        "counties_at_stage": 0
+      },
+      {
+        "stage": 5,
+        "id": "sustainable_team",
+        "title": "Sustainable county education team",
+        "counties_at_stage": 0
+      }
+    ],
+    "counties_past_awareness": 0,
+    "mc_displays_all_counties": true,
+    "status": "planned"
+  },
+  "city_readiness_model": {
+    "title": "City Readiness Model",
+    "stages": [
+      {
+        "stage": 1,
+        "id": "interested_learners",
+        "title": "Interested learners",
+        "cities_at_stage": 0
+      },
+      {
+        "stage": 2,
+        "id": "education_leader",
+        "title": "Education Leader",
+        "cities_at_stage": 0
+      },
+      {
+        "stage": 3,
+        "id": "conversations",
+        "title": "Community conversations",
+        "cities_at_stage": 0
+      },
+      {
+        "stage": 4,
+        "id": "coalition_partnerships",
+        "title": "Coalition partnerships",
+        "cities_at_stage": 0
+      },
+      {
+        "stage": 5,
+        "id": "educational_calendar",
+        "title": "Educational calendar",
+        "cities_at_stage": 0
+      },
+      {
+        "stage": 6,
+        "id": "sustained_activity",
+        "title": "Sustained local activity",
+        "cities_at_stage": 0
+      }
+    ],
+    "cities_with_sustained_activity": 0,
+    "mc_visualizes_maturity": true,
+    "status": "planned"
+  },
+  "participant_growth_model": {
+    "title": "The 200,000 Arkansas Model",
+    "target": 200000,
+    "current": 0,
+    "channels": [
+      "Education Leaders",
+      "Community conversations",
+      "Coalition partners",
+      "Libraries",
+      "Universities",
+      "Community organizations",
+      "Social media",
+      "Relational organizing",
+      "Word of mouth"
+    ],
+    "no_single_channel": true,
+    "status": "scaffolded"
+  },
+  "monthly_operational_targets": {
+    "title": "Monthly Operational Targets",
+    "targets": [
+      {
+        "id": "ACS-M1",
+        "metric": "New Education Leaders",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-M2",
+        "metric": "County coverage",
+        "current": 0,
+        "target": 75,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-M3",
+        "metric": "City coverage",
+        "current": 0,
+        "target": 250,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-M4",
+        "metric": "Community conversations",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-M5",
+        "metric": "Academy graduates",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-M6",
+        "metric": "Coalition organizations",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-M7",
+        "metric": "Participant growth",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-M8",
+        "metric": "Research published",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-M9",
+        "metric": "Content completed",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-M10",
+        "metric": "Technology milestones",
+        "current": 0,
+        "status": "planned"
+      }
+    ],
+    "targets_tracked": 0,
+    "status": "planned"
+  },
+  "regional_strategy": {
+    "title": "Regional Strategy",
+    "regions_total": 7,
+    "regions": [
+      {
+        "id": "COS-RG-01",
+        "title": "Northwest Arkansas",
+        "regional_mentor": 0,
+        "county_leaders": 0,
+        "city_leaders": 0,
+        "coalition_orgs": 0,
+        "status": "defined"
+      },
+      {
+        "id": "COS-RG-02",
+        "title": "North Central Arkansas",
+        "regional_mentor": 0,
+        "county_leaders": 0,
+        "city_leaders": 0,
+        "coalition_orgs": 0,
+        "status": "defined"
+      },
+      {
+        "id": "COS-RG-03",
+        "title": "Central Arkansas",
+        "regional_mentor": 0,
+        "county_leaders": 0,
+        "city_leaders": 0,
+        "coalition_orgs": 0,
+        "status": "defined"
+      },
+      {
+        "id": "COS-RG-04",
+        "title": "River Valley",
+        "regional_mentor": 0,
+        "county_leaders": 0,
+        "city_leaders": 0,
+        "coalition_orgs": 0,
+        "status": "defined"
+      },
+      {
+        "id": "COS-RG-05",
+        "title": "Delta",
+        "regional_mentor": 0,
+        "county_leaders": 0,
+        "city_leaders": 0,
+        "coalition_orgs": 0,
+        "status": "defined"
+      },
+      {
+        "id": "COS-RG-06",
+        "title": "Southwest Arkansas",
+        "regional_mentor": 0,
+        "county_leaders": 0,
+        "city_leaders": 0,
+        "coalition_orgs": 0,
+        "status": "defined"
+      },
+      {
+        "id": "COS-RG-07",
+        "title": "Southeast Arkansas",
+        "regional_mentor": 0,
+        "county_leaders": 0,
+        "city_leaders": 0,
+        "coalition_orgs": 0,
+        "status": "defined"
+      }
+    ],
+    "regional_mentors": 0,
+    "components": [
+      "Regional Mentor",
+      "County Leaders",
+      "City Leaders",
+      "Coalition relationships",
+      "Educational calendar"
+    ],
+    "status": "defined"
+  },
+  "arkansas_flywheel": {
+    "title": "The Arkansas Flywheel",
+    "cycle": [
+      "Research",
+      "Educational Resources",
+      "Learning",
+      "Education Leaders",
+      "Community Conversations",
+      "New Learners",
+      "Coalition Growth",
+      "More Research"
+    ],
+    "principle": "Each cycle strengthens the next",
+    "status": "specified"
+  },
+  "growth_dashboard": {
+    "title": "Mission Control Growth Dashboard",
+    "primary_statewide_dashboard": true,
+    "live": false,
+    "indicators": [
+      {
+        "id": "ACS-D1",
+        "indicator": "75 County Goal",
+        "current": 0,
+        "target": 75,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-D2",
+        "indicator": "250 City Goal",
+        "current": 0,
+        "target": 250,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-D3",
+        "indicator": "200,000 Participant Goal",
+        "current": 0,
+        "target": 200000,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-D4",
+        "indicator": "Neighborhood Growth",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-D5",
+        "indicator": "Leadership Pipeline",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-D6",
+        "indicator": "Academy Growth",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-D7",
+        "indicator": "Coalition Growth",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-D8",
+        "indicator": "Regional Health",
+        "current": 0,
+        "target": 7,
+        "status": "planned"
+      },
+      {
+        "id": "ACS-D9",
+        "indicator": "Institutional Readiness",
+        "current": 8,
+        "unit": "%",
+        "status": "partial"
+      },
+      {
+        "id": "ACS-D10",
+        "indicator": "Projected Completion Timeline",
+        "current": "not_modeled",
+        "status": "planned"
+      }
+    ],
+    "status": "planned"
+  },
+  "annual_goals": {
+    "title": "Annual Arkansas Goals",
+    "goals": [
+      "Increase county coverage",
+      "Increase city leadership",
+      "Improve curriculum",
+      "Expand coalition",
+      "Grow Academy enrollment",
+      "Strengthen research",
+      "Improve Educational Coverage Scores"
+    ],
+    "maturity_over_raw_growth": true,
+    "status": "planned"
+  },
+  "integration": {
+    "chain": "Statewide Growth \u2192 Action Network \u2192 Relational Organizing \u2192 Leadership Academy \u2192 Coalition \u2192 Civic Atlas \u2192 Mission Control",
+    "systems": [
+      {
+        "system": "Statewide Growth (#56)",
+        "route": "/mission-control/statewide-growth.html",
+        "status": "live",
+        "note": "Objectives foundation"
+      },
+      {
+        "system": "Arkansas Action Network (#64)",
+        "route": "/mission-control/arkansas-action-network.html",
+        "status": "live",
+        "note": "Leadership pyramid"
+      },
+      {
+        "system": "Relational Organizing (#69)",
+        "route": "/mission-control/relational-organizing-growth-engine.html",
+        "status": "live",
+        "note": "Primary expansion"
+      },
+      {
+        "system": "Citizen Leadership Academy (#68)",
+        "route": "/mission-control/citizen-leadership-academy.html",
+        "status": "live"
+      },
+      {
+        "system": "Neighborhood Organizing (#57)",
+        "route": "/mission-control/neighborhood-organizing.html",
+        "status": "live"
+      },
+      {
+        "system": "Coalition Network (#61)",
+        "route": "/mission-control/coalition-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Civic Atlas (#58)",
+        "route": "/mission-control/civic-atlas.html",
+        "status": "live",
+        "note": "County/city maps"
+      },
+      {
+        "system": "County OS (#31)",
+        "route": "/mission-control/county-os.html",
+        "status": "live",
+        "note": "7 regions"
+      },
+      {
+        "system": "Impact Measurement (#67)",
+        "route": "/mission-control/impact-measurement.html",
+        "status": "live"
+      },
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      }
+    ],
+    "extends": "Statewide Growth Blueprint (#56) \u2014 adds operational phases, readiness models, monthly targets"
+  },
+  "long_term_vision": "Every county represented; every major city has active Education Leaders; weekly conversations statewide; 200,000+ voluntarily connected; platform is Arkansas civic education infrastructure. Local leaders develop local leaders.",
+  "summary": {
+    "counties_with_leaders": 0,
+    "counties_target": 75,
+    "cities_with_leaders": 0,
+    "cities_target": 250,
+    "connected_arkansans": 0,
+    "connected_target": 200000,
+    "education_leaders": 0,
+    "county_teams": 0,
+    "city_teams": 0,
+    "regional_mentors": 0,
+    "regions_target": 7,
+    "current_execution_phase": 1,
+    "monthly_targets_tracked": 0,
+    "growth_dashboard_live": false,
+    "arkansas_command_strategy_readiness_pct": 39,
+    "statewide_growth_readiness_pct": 48,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "0/75 counties with Education Leaders \u2014 Phase Two not started",
+    "0/250 cities with teams \u2014 Phase Three not started",
+    "0/200,000 connected \u2014 participant tracking not operational",
+    "County readiness model specified \u2014 0 counties past Awareness stage",
+    "City readiness model specified \u2014 0 cities with sustained activity",
+    "0 monthly operational targets tracked \u2014 no pacing dashboard",
+    "Growth dashboard planned \u2014 not live as primary statewide view",
+    "0/7 regional mentors assigned",
+    "Phase One in progress \u2014 institution not fully operational (8% launch readiness)",
+    "Build #70 vs Build #56 Statewide Growth \u2014 reconcile command vs blueprint roles?",
+    "Build #70 vs Build #64 Action Network \u2014 unify county/city team metrics?",
+    "Projected completion timeline not modeled",
+    "Annual goals specified \u2014 no year-over-year tracking UI"
+  ],
+  "recommended_next_build": {
+    "number": 71,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "County/city readiness UI, monthly target tracking, growth dashboard components, regional maps, flywheel metrics, route inventory, COMP-* specs, GitHub backlog."
+  }
+}

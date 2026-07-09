@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Arkansas Command Strategy <a href="/mission-control/arkansas-command-strategy.html" class="mc-inline-link">Statewide Execution #70 →</a></h2>
+    <p class="mc-bar-note">Build #70 — Arkansas Command Strategy. 75 counties · 250 cities · 200K connected. Five phases, readiness models, flywheel. Phase 1 in progress. 0/75 · 0/250 · 0/200K. ~39% readiness.</p>
     <h2 class="mc-section-title">Relational Growth Engine <a href="/mission-control/relational-organizing-growth-engine.html" class="mc-inline-link">Network Effect #69 →</a></h2>
     <p class="mc-bar-note">Build #69 — Relational Organizing & Arkansas Growth Engine. Five-people question, share hub, relationship trees. Primary expansion. 0 trees · 0 invitations · 0/200K. ~34% readiness.</p>
     <h2 class="mc-section-title">Citizen Leadership Academy <a href="/mission-control/citizen-leadership-academy.html" class="mc-inline-link">Human Engine #68 →</a></h2>
@@ -5196,6 +5198,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initImpactMeasurement();
   initCitizenLeadershipAcademy();
   initRelationalOrganizingGrowthEngine();
+  initArkansasCommandStrategy();
 });
 
 async function initUxArchitecture() {
@@ -7226,6 +7229,136 @@ async function initRelationalOrganizingGrowthEngine() {
       <a href="/data/relational-organizing-growth-engine.json">JSON</a> ·
       <a href="/mission-control/neighborhood-organizing.html">Neighborhood Organizing</a> ·
       <a href="/mission-control/relationship-os.html">Relationship OS</a> ·
+      <a href="/mission-control/arkansas-action-network.html">Action Network</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initArkansasCommandStrategy() {
+  const root = document.getElementById('mc-arkansas-command-strategy-root');
+  if (!root) return;
+
+  const [acsRes, mcRes] = await Promise.all([
+    fetch('/data/arkansas-command-strategy.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const acs = await acsRes.json();
+  const mc = await mcRes.json();
+  const s = acs.summary;
+
+  const objRows = acs.statewide_objectives.map(o => `
+    <tr><td>${o.number}</td><td><code>${o.id}</code></td><td>${o.title}</td>
+      <td>${o.current}/${o.target.toLocaleString()}</td><td>${o.status}</td></tr>`).join('');
+
+  const phaseRows = acs.execution_phases.phases.map(p => `
+    <tr><td>${p.phase}</td><td><code>${p.id}</code></td><td>${p.title}</td>
+      <td>${p.status}</td></tr>`).join('');
+
+  const countyStageRows = acs.county_readiness_model.stages.map(st => `
+    <tr><td>${st.stage}</td><td>${st.title}</td><td>${st.counties_at_stage}</td></tr>`).join('');
+
+  const cityStageRows = acs.city_readiness_model.stages.map(st => `
+    <tr><td>${st.stage}</td><td>${st.title}</td><td>${st.cities_at_stage}</td></tr>`).join('');
+
+  const monthlyRows = acs.monthly_operational_targets.targets.map(t => `
+    <tr><td><code>${t.id}</code></td><td>${t.metric}</td><td>${t.current}${t.target ? `/${t.target}` : ''}</td><td>${t.status}</td></tr>`).join('');
+
+  const regionRows = acs.regional_strategy.regions.map(r => `
+    <tr><td><code>${r.id}</code></td><td>${r.title}</td><td>${r.regional_mentor}</td>
+      <td>${r.county_leaders}</td><td>${r.city_leaders}</td><td>${r.status}</td></tr>`).join('');
+
+  const dashRows = acs.growth_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td>
+      <td>${typeof d.current === 'number' ? d.current.toLocaleString() : d.current}${d.unit ? d.unit : ''}${d.target ? `/${d.target.toLocaleString()}` : ''}</td>
+      <td>${d.status}</td></tr>`).join('');
+
+  const systemRows = acs.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td><td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Arkansas Command Strategy</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #70 · ${acs.title}</p>
+      <h1>The Road to 75 Counties, 250 Cities & 200,000 Arkansans</h1>
+      <p class="mc-header__question">${acs.governing_principle}</p>
+      <p class="mc-bar-note">${acs.purpose}</p>
+      <p class="mc-bar-note"><strong>Central question:</strong> ${acs.central_question}</p>
+      <p class="mc-bar-note"><strong>Not advertising/pressure/campaigning:</strong> ${acs.not_advertising_pressure_campaigning ? 'Yes' : 'No'}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Command readiness</div><div class="mc-stat__value">${s.arkansas_command_strategy_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Counties</div><div class="mc-stat__value">${s.counties_with_leaders}/${s.counties_target}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Cities</div><div class="mc-stat__value">${s.cities_with_leaders}/${s.cities_target}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Connected</div><div class="mc-stat__value">${s.connected_arkansans}/${s.connected_target.toLocaleString()}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Execution phase</div><div class="mc-stat__value">${s.current_execution_phase}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Regional mentors</div><div class="mc-stat__value">${s.regional_mentors}/${s.regions_target}</div></div>
+    </div>
+    <h2 class="mc-section-title">Three Statewide Objectives</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Objective</th><th>Progress</th><th>Status</th></tr></thead>
+      <tbody>${objRows}</tbody></table>
+    <h2 class="mc-section-title">${acs.expansion_pyramid.title}</h2>
+    <p class="mc-bar-note">${acs.expansion_pyramid.principle} · ${acs.expansion_pyramid.status}</p>
+    <ul class="mc-deliverables">${acs.expansion_pyramid.layers.map(l => `<li>${l}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acs.execution_phases.title}</h2>
+    <p class="mc-bar-note">Current: Phase ${acs.execution_phases.current_phase} — ${acs.execution_phases.current_phase_title}</p>
+    <table class="mc-table"><thead><tr><th>Phase</th><th>ID</th><th>Title</th><th>Status</th></tr></thead>
+      <tbody>${phaseRows}</tbody></table>
+    ${acs.execution_phases.phases.map(p => `
+      <h3 class="mc-subsection-title">Phase ${p.phase}: ${p.title}</h3>
+      ${p.objectives ? `<ul class="mc-deliverables">${p.objectives.map(o => `<li>${o}</li>`).join('')}</ul>` : ''}
+      ${p.goal ? `<p class="mc-bar-note"><strong>Goal:</strong> ${p.goal}</p>` : ''}
+      ${p.priority ? `<p class="mc-bar-note"><strong>Priority:</strong> ${p.priority}</p>` : ''}
+      ${p.focus ? `<ul class="mc-deliverables">${p.focus.map(f => `<li>${f}</li>`).join('')}</ul>` : ''}
+      ${p.success_metric ? `<p class="mc-bar-note"><strong>Success:</strong> ${p.success_metric}</p>` : ''}`).join('')}
+    <h2 class="mc-section-title">${acs.county_readiness_model.title}</h2>
+    <p class="mc-bar-note">Past Awareness: ${acs.county_readiness_model.counties_past_awareness} · ${acs.county_readiness_model.status}</p>
+    <table class="mc-table"><thead><tr><th>Stage</th><th>Title</th><th>Counties</th></tr></thead>
+      <tbody>${countyStageRows}</tbody></table>
+    <h2 class="mc-section-title">${acs.city_readiness_model.title}</h2>
+    <p class="mc-bar-note">Sustained activity: ${acs.city_readiness_model.cities_with_sustained_activity} · ${acs.city_readiness_model.status}</p>
+    <table class="mc-table"><thead><tr><th>Stage</th><th>Title</th><th>Cities</th></tr></thead>
+      <tbody>${cityStageRows}</tbody></table>
+    <h2 class="mc-section-title">${acs.participant_growth_model.title}</h2>
+    <p class="mc-bar-note">${acs.participant_growth_model.current}/${acs.participant_growth_model.target.toLocaleString()} · No single channel: ${acs.participant_growth_model.no_single_channel ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${acs.participant_growth_model.channels.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acs.monthly_operational_targets.title}</h2>
+    <p class="mc-bar-note">Targets tracked: ${acs.monthly_operational_targets.targets_tracked} · ${acs.monthly_operational_targets.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${monthlyRows}</tbody></table>
+    <h2 class="mc-section-title">${acs.regional_strategy.title}</h2>
+    <p class="mc-bar-note">${acs.regional_strategy.regional_mentors}/${acs.regional_strategy.regions_total} mentors · ${acs.regional_strategy.status}</p>
+    <ul class="mc-deliverables">${acs.regional_strategy.components.map(c => `<li>${c}</li>`).join('')}</ul>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Region</th><th>Mentor</th><th>County</th><th>City</th><th>Status</th></tr></thead>
+      <tbody>${regionRows}</tbody></table>
+    <h2 class="mc-section-title">${acs.arkansas_flywheel.title}</h2>
+    <p class="mc-bar-note">${acs.arkansas_flywheel.principle} · ${acs.arkansas_flywheel.status}</p>
+    <ul class="mc-deliverables">${acs.arkansas_flywheel.cycle.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acs.growth_dashboard.title}</h2>
+    <p class="mc-bar-note">Primary statewide dashboard: ${acs.growth_dashboard.primary_statewide_dashboard ? 'Yes' : 'No'} · Live: ${acs.growth_dashboard.live ? 'Yes' : 'No'} · ${acs.growth_dashboard.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">${acs.annual_goals.title}</h2>
+    <p class="mc-bar-note">Maturity over raw growth: ${acs.annual_goals.maturity_over_raw_growth ? 'Yes' : 'No'} · ${acs.annual_goals.status}</p>
+    <ul class="mc-deliverables">${acs.annual_goals.goals.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${acs.integration.chain}</p>
+    <p class="mc-bar-note"><strong>Extends:</strong> ${acs.integration.extends}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${acs.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${acs.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${acs.recommended_next_build.number} — ${acs.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${acs.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_ARKANSAS_COMMAND_STRATEGY.md">MASTER_ARKANSAS_COMMAND_STRATEGY.md</a> ·
+      <a href="/data/arkansas-command-strategy.json">JSON</a> ·
+      <a href="/mission-control/statewide-growth.html">Statewide Growth</a> ·
+      <a href="/mission-control/civic-atlas.html">Civic Atlas</a> ·
       <a href="/mission-control/arkansas-action-network.html">Action Network</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;

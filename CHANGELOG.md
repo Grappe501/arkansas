@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.74.0] - 2026-07-09 — Build #70 Arkansas Command Strategy
+
+### The Road to 75 Counties, 250 Cities & 200,000 Arkansans
+- **Arkansas Command Strategy v1.0** — statewide execution playbook after 69 design builds
+- Three objectives: 75 counties, 250 cities, 200,000 connected Arkansans
+- Five phases: Build Core → County Anchors → City Expansion → Neighborhood Growth → Leadership Multiplication
+- County 5-stage and city 6-stage readiness models; 7 regional strategy; Arkansas flywheel
+- MC growth dashboard specified as primary statewide view
+- Honest: 0/75 counties · 0/250 cities · 0/200K connected · Phase 1 in progress · ~39% readiness
+- MC dashboard: `/mission-control/arkansas-command-strategy.html`
+
 ## [1.73.0] - 2026-07-09 — Build #69 Relational Organizing Growth Engine
 
 ### The Network Effect — Trusted Relationships to 200,000

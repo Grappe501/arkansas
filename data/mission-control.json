@@ -1,6 +1,6 @@
 {
-  "version": "1.73.0",
-  "build": 69,
+  "version": "1.74.0",
+  "build": 70,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 69,
+    "overall_completion": 70,
     "current_build": {
-      "number": 69,
-      "title": "Citizens United Facts Master Relational Organizing & Arkansas Growth Engine v1.0"
-    },
-    "active_phase": "Relational Organizing Growth Engine \u2192 Implementation Translation",
-    "last_completed": "Citizen Leadership Academy",
-    "next_build": {
       "number": 70,
+      "title": "Citizens United Facts Master Arkansas Command Strategy v1.0"
+    },
+    "active_phase": "Arkansas Command Strategy \u2192 Implementation Translation",
+    "last_completed": "Relational Organizing Growth Engine",
+    "next_build": {
+      "number": 71,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
@@ -49,12 +49,13 @@
     "impact_measurement_readiness": 31,
     "citizen_leadership_academy_readiness": 34,
     "relational_organizing_growth_engine_readiness": 34,
+    "arkansas_command_strategy_readiness": 39,
     "mc2_readiness": 42,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
     "education_academy_readiness": 26,
     "observatory_readiness": 20,
-    "outreach_readiness": 26,
+    "outreach_readiness": 34,
     "county_os_readiness": 28,
     "campaign_os_readiness": 34,
     "encyclopedia_readiness": 19,
@@ -97,8 +98,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 69,
-      "note": "Build #69 \u2014 Relational Organizing Growth Engine."
+      "value": 70,
+      "note": "Build #70 \u2014 Arkansas Command Strategy."
     },
     {
       "id": "constitution",
@@ -605,6 +606,13 @@
       "value": 34,
       "max": 100,
       "note": "0 trees \u00b7 0 pages with share hub."
+    },
+    {
+      "id": "arkansas_command_strategy",
+      "label": "Command Strategy",
+      "value": 39,
+      "max": 100,
+      "note": "Phase 1 \u00b7 0/75 counties \u00b7 0/250 cities."
     }
   ],
   "public_readiness": {
@@ -1311,6 +1319,12 @@
       "id": "relational_organizing_growth_engine",
       "label": "Relational Growth Engine",
       "href": "/mission-control/relational-organizing-growth-engine.html",
+      "status": "complete"
+    },
+    {
+      "id": "arkansas_command_strategy",
+      "label": "Command Strategy",
+      "href": "/mission-control/arkansas-command-strategy.html",
       "status": "complete"
     }
   ],
@@ -2337,6 +2351,112 @@
     }
   ],
   "builds": [
+    {
+      "number": 70,
+      "title": "Citizens United Facts Master Arkansas Command Strategy v1.0",
+      "version": "1.74.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Statewide execution playbook \u2014 75 counties, 250 cities, 200K Arkansans",
+      "summary": "Five phases, county/city readiness models, monthly targets, regional strategy, flywheel; 39% readiness. 0/75 counties \u00b7 0/250 cities \u00b7 0/200000 connected.",
+      "files_created": [
+        "data/arkansas-command-strategy.json",
+        "docs/MASTER_ARKANSAS_COMMAND_STRATEGY.md",
+        "builds/070-arkansas-command-strategy.md",
+        "mission-control/arkansas-command-strategy.html",
+        "scripts/gen-arkansas-command-strategy.py",
+        "scripts/update-mc-build70.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/arkansas-command-strategy.html"
+      ],
+      "decisions_made": [
+        "Statewide execution strategy \u2014 operational playbook after 69 design builds",
+        "Three objectives: 75 counties, 250 cities, 200,000 connected",
+        "Five phases: Core \u2192 County Anchors \u2192 City \u2192 Neighborhood \u2192 Multiplication",
+        "County 5-stage and city 6-stage readiness models",
+        "7 regional strategy \u2014 mentorship and coordination",
+        "Grow deliberately \u2014 not advertising, pressure, or campaigning",
+        "39% readiness \u2014 constitution only"
+      ],
+      "open_questions": [
+        "Reconcile Build #70 command vs Build #56 statewide growth blueprint?",
+        "Growth dashboard: replace or augment Civic Intelligence Command Center?",
+        "Monthly targets: manual entry vs automated from forms?",
+        "Projected completion timeline modeling approach?"
+      ],
+      "risks": [
+        "0/75 counties with Education Leaders \u2014 Phase Two not started",
+        "0/250 cities with teams \u2014 Phase Three not started",
+        "0/200,000 connected \u2014 participant tracking not operational",
+        "County readiness model specified \u2014 0 counties past Awareness stage"
+      ],
+      "next_recommended": 71,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-command-strategy.html",
+      "review_status": "complete"
+    },
+    {
+      "number": 70,
+      "title": "Citizens United Facts Master Arkansas Command Strategy v1.0",
+      "version": "1.74.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Statewide execution playbook \u2014 75 counties, 250 cities, 200K Arkansans",
+      "summary": "Five phases, county/city readiness models, monthly targets, regional strategy, flywheel; 39% readiness. 0/75 counties \u00b7 0/250 cities \u00b7 0/200000 connected.",
+      "files_created": [
+        "data/arkansas-command-strategy.json",
+        "docs/MASTER_ARKANSAS_COMMAND_STRATEGY.md",
+        "builds/070-arkansas-command-strategy.md",
+        "mission-control/arkansas-command-strategy.html",
+        "scripts/gen-arkansas-command-strategy.py",
+        "scripts/update-mc-build70.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/arkansas-command-strategy.html"
+      ],
+      "decisions_made": [
+        "Statewide execution strategy \u2014 operational playbook after 69 design builds",
+        "Three objectives: 75 counties, 250 cities, 200,000 connected",
+        "Five phases: Core \u2192 County Anchors \u2192 City \u2192 Neighborhood \u2192 Multiplication",
+        "County 5-stage and city 6-stage readiness models",
+        "7 regional strategy \u2014 mentorship and coordination",
+        "Grow deliberately \u2014 not advertising, pressure, or campaigning",
+        "39% readiness \u2014 constitution only"
+      ],
+      "open_questions": [
+        "Reconcile Build #70 command vs Build #56 statewide growth blueprint?",
+        "Growth dashboard: replace or augment Civic Intelligence Command Center?",
+        "Monthly targets: manual entry vs automated from forms?",
+        "Projected completion timeline modeling approach?"
+      ],
+      "risks": [
+        "0/75 counties with Education Leaders \u2014 Phase Two not started",
+        "0/250 cities with teams \u2014 Phase Three not started",
+        "0/200,000 connected \u2014 participant tracking not operational",
+        "County readiness model specified \u2014 0 counties past Awareness stage"
+      ],
+      "next_recommended": 71,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-command-strategy.html",
+      "review_status": "complete"
+    },
     {
       "number": 69,
       "title": "Citizens United Facts Master Relational Organizing & Arkansas Growth Engine v1.0",
@@ -5780,21 +5900,22 @@
     }
   ],
   "briefing": {
-    "what_built": "Relational Organizing Growth Engine v1.0 \u2014 network effect, trusted relationships",
-    "building_now": "69 builds specified \u2014 implementation translation next",
+    "what_built": "Arkansas Command Strategy v1.0 \u2014 statewide execution playbook",
+    "building_now": "70 builds specified \u2014 implementation translation next",
     "blocked": [
-      "Share hub",
-      "Relationship trees",
-      "Referral tracking",
-      "Leader dashboard"
+      "County readiness UI",
+      "City maturity maps",
+      "Monthly targets",
+      "Growth dashboard"
     ],
     "ready_public": [
-      "Growth formula",
-      "Privacy principles",
-      "Share hub spec",
-      "Recognition milestones"
+      "Three objectives",
+      "Five phases",
+      "Readiness models",
+      "Regional strategy",
+      "Flywheel"
     ],
-    "next": "Build #70 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #71 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -6533,5 +6654,14 @@
     "relationship_trees": 0,
     "connected_arkansans": 0,
     "primary_expansion_strategy": true
+  },
+  "arkansas_command_strategy": "/data/arkansas-command-strategy.json",
+  "arkansas_command_strategy_dashboard": "/mission-control/arkansas-command-strategy.html",
+  "arkansas_command_strategy_inventory": {
+    "readiness_score": 39,
+    "counties_with_leaders": 0,
+    "cities_with_leaders": 0,
+    "connected_arkansans": 0,
+    "current_execution_phase": 1
   }
 }

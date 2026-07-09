@@ -512,6 +512,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/arkansas-command-strategy"
+  to = "/mission-control/arkansas-command-strategy.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301
