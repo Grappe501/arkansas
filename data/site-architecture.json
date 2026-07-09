@@ -45,11 +45,11 @@
     },
     {
       "id": "coalition_outreach",
-      "title": "Coalition & Outreach",
-      "description": "Arkansas organizational coalition, resource center, event calendar, social command center.",
-      "routes": ["/coalition/"],
+      "title": "Coalition & Outreach (ACUCOS)",
+      "description": "Arkansas Citizens United Coalition Operating System — org coalition, county pages, growth engine.",
+      "routes": ["/coalition/", "/coalition/counties.html"],
       "mission_control": "/mission-control/coalition.html",
-      "build": 13,
+      "build": 14,
       "homepage_entry": "My Organization Wants to Partner"
     }
   ],

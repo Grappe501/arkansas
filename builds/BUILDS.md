@@ -2,7 +2,8 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
-| **#13** | **Coalition & Outreach** | **1.17.0** | **✅ Complete** | [013](013-coalition-outreach.md) · [/mission-control/coalition.html](../mission-control/coalition.html) |
+| **#14** | **ACUCOS** | **1.18.0** | **✅ Complete** | [014](014-acucos.md) · [/mission-control/coalition.html](../mission-control/coalition.html) |
+| **#13** | **Coalition & Outreach** | **1.17.0** | **✅ Complete** | [013](013-coalition-outreach.md) · [/coalition/](../coalition/) |
 | **#12** | **Arkansas Civic Ecosystem** | **1.16.1** | **✅ Complete** | [012](012-civic-action-ecosystem.md) · [/mission-control/civic-ecosystem.html](../mission-control/civic-ecosystem.html) |
 | **#11** | **Knowledge Graph & Intelligence** | **1.15.0** | **✅ Complete** | [011](011-knowledge-graph.md) · [/mission-control/knowledge-graph.html](../mission-control/knowledge-graph.html) |
 | **#10** | **Research & Evidence Framework** | **1.14.0** | **✅ Complete** | [010](010-master-research-evidence-framework.md) · [/mission-control/research.html](../mission-control/research.html) |
@@ -13,7 +14,7 @@
 | **#5** | **Site Architecture** | **1.9.0** | **✅ Complete** | [005](005-master-site-architecture.md) |
 | **#4** | **Phase Registry** | **1.8.0** | **✅ Complete** | [004](004-master-phase-registry.md) |
 
-## Platform Stack (Builds #4–#13)
+## Platform Stack (Builds #4–#14)
 
 | Layer | Route | Focus |
 |-------|-------|-------|
@@ -26,11 +27,11 @@
 | Research Constitution | `/mission-control/research.html` | Evidence & sources |
 | **Knowledge Graph** | `/mission-control/knowledge-graph.html` | Connected knowledge |
 | **Civic Ecosystem** | `/mission-control/civic-ecosystem.html` | Arkansas leadership & counties |
-| **Coalition & Outreach** | `/mission-control/coalition.html` | **Arkansas org coalition** |
+| **ACUCOS** | `/mission-control/coalition.html` | **Coalition Operating System** |
 
-## Coalition Rule (Build #13)
+## ACUCOS Rule (Build #14)
 
-Organizations join an educational coalition, not a political campaign. Homepage offers three paths: Learn, Help, Partner.
+Coalition growth is a primary success measure. Vision: one educational partner per Arkansas county. Not a supporter list — a living ecosystem.
 
 ## Arkansas Rule (Build #12)
 

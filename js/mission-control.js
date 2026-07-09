@@ -232,8 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
-    <h2 class="mc-section-title">Arkansas Coalition &amp; Outreach <a href="/mission-control/coalition.html" class="mc-inline-link">Coalition Dashboard →</a></h2>
-    <p class="mc-bar-note">Build #13 — Coalition directory, org profiles, event calendar, resource center, social command center scaffold.</p>
+    <h2 class="mc-section-title">ACUCOS <a href="/mission-control/coalition.html" class="mc-inline-link">Coalition Operating System →</a></h2>
+    <p class="mc-bar-note">Build #14 — ACUCOS v1.0, 75 county pages, 6 participation levels, growth engine, recognition system.</p>
     <h2 class="mc-section-title">Arkansas Civic Ecosystem <a href="/mission-control/civic-ecosystem.html" class="mc-inline-link">County Dashboard →</a></h2>
     <p class="mc-bar-note">Build #12 — Arkansas Education Ladder (7 levels), 75-county map, Arkansas Action Hub.</p>
     <h2 class="mc-section-title">Knowledge Graph <a href="/mission-control/knowledge-graph.html" class="mc-inline-link">Educational Intelligence →</a></h2>
@@ -1295,129 +1295,125 @@ async function initCoalitionBlueprint() {
   const root = document.getElementById('mc-coalition-root');
   if (!root) return;
 
-  const [coalitionRes, directoryRes, eventsRes, countiesRes, mcRes] = await Promise.all([
+  const [coalitionRes, directoryRes, eventsRes, countyIndexRes, mcRes] = await Promise.all([
     fetch('/data/coalition-ecosystem.json'),
     fetch('/data/coalition-directory.json'),
     fetch('/data/coalition-events.json'),
-    fetch('/data/arkansas-counties.json'),
+    fetch('/data/county-coalition-index.json'),
     fetch('/data/mission-control.json')
   ]);
   const coalition = await coalitionRes.json();
   const directory = await directoryRes.json();
   const events = await eventsRes.json();
-  const counties = await countiesRes.json();
+  const countyIndex = await countyIndexRes.json();
   const mc = await mcRes.json();
   const ca = mc.civic_action || {};
-  const sm = mc.coalition_outreach || {};
+  const co = mc.coalition_outreach || {};
+  const acucos = coalition.acucos || {};
+  const levels = coalition.participation_levels || coalition.membership_levels || [];
+  const categories = coalition.coalition_categories || coalition.organization_types || [];
+  const dashboard = coalition.coalition_dashboard || coalition.growth_dashboard || {};
+  const social = coalition.social_media_outreach || coalition.social_media_command_center || {};
 
   const metricValue = (id) => {
     const map = {
-      coalition_organizations: directory.summary.total_organizations,
+      total_organizations: directory.summary.total_organizations,
+      new_organizations_month: directory.summary.new_this_month || co.new_organizations_month || 0,
       counties_represented: directory.summary.counties_represented,
-      educational_events: events.summary.upcoming,
-      active_education_leaders: ca.education_leader_signups || 0,
-      community_conversations: sm.community_conversations || 0,
-      resource_downloads: ca.toolkit_requests || 0,
-      social_media_growth: sm.social_followers || 0,
-      official_shares: sm.official_shares || 0,
-      organization_referrals: sm.organization_referrals || 0
+      organizational_categories: Object.values(directory.summary.by_category || {}).filter(v => v > 0).length,
+      active_partnerships: directory.summary.active_partnerships || co.active_partnerships || 0,
+      upcoming_events: events.summary.upcoming,
+      completed_events: events.summary.past || co.completed_events || 0,
+      community_conversations: co.community_conversations || 0,
+      average_attendance: co.average_attendance || 0,
+      counties_hosting_events: co.counties_hosting_events || 0,
+      toolkit_downloads: ca.toolkit_requests || co.toolkit_downloads || 0,
+      presentation_downloads: co.presentation_downloads || 0,
+      video_views: co.video_views || 0,
+      research_downloads: co.research_downloads || 0,
+      faq_usage: co.faq_usage || 0,
+      individual_referrals: co.individual_referrals || 0,
+      organizational_referrals: co.organization_referrals || 0,
+      education_leader_signups: ca.education_leader_signups || 0,
+      returning_organizations: co.returning_organizations || 0,
+      coalition_retention: co.coalition_retention || 0
     };
     return map[id] ?? 0;
   };
 
-  const countyOrgMap = {};
-  directory.organizations.forEach(o => {
-    const c = o.county || 'Unknown';
-    countyOrgMap[c] = (countyOrgMap[c] || 0) + 1;
-  });
+  const renderMetricSection = (title, metrics) => `
+    <h2 class="mc-section-title">${title}</h2>
+    <div class="mc-executive">${(metrics || []).map(m => `
+      <div class="mc-stat"><div class="mc-stat__label">${m.title}</div><div class="mc-stat__value">${metricValue(m.id)}</div></div>`).join('')}
+    </div>`;
 
-  const countyRows = counties.counties
-    .map(c => ({
-      ...c,
-      orgs: countyOrgMap[c.name] || 0
-    }))
-    .sort((a, b) => b.orgs - a.orgs || a.name.localeCompare(b.name))
+  const levelRows = levels.map(l => `
+    <tr><td>${l.title}</td><td>${l.description}</td><td>${directory.summary.by_level?.[l.id] ?? directory.summary.by_level?.[l.legacy_id] ?? 0}</td></tr>`).join('');
+
+  const countyRows = countyIndex.counties
+    .sort((a, b) => b.organizations - a.organizations || a.name.localeCompare(b.name))
     .map(c => `
-      <tr class="${c.orgs > 0 ? 'mc-table__row--approved' : ''}">
-        <td>${c.name}</td>
-        <td>${c.orgs}</td>
-        <td>${c.participants}</td>
-        <td>${c.conversations}</td>
+      <tr class="${c.organizations > 0 ? 'mc-table__row--approved' : ''}">
+        <td><a href="${c.route}">${c.name}</a></td>
+        <td>${c.organizations}</td>
+        <td>${c.completeness_pct}%</td>
+        <td>${c.education_leaders}</td>
+        <td>${c.upcoming_events}</td>
       </tr>`).join('');
 
-  const levelRows = coalition.membership_levels.map(l => `
-    <tr><td>${l.title}</td><td>${l.description}</td><td>${directory.summary.by_level[l.id] ?? 0}</td></tr>`).join('');
-
   root.innerHTML = `
-    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Arkansas Coalition</nav>
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → ACUCOS</nav>
     <header class="mc-header">
-      <p class="mc-header__eyebrow">Build #13 · ${coalition.title}</p>
-      <h1>Coalition Growth Dashboard</h1>
+      <p class="mc-header__eyebrow">Build #14 · ${acucos.name || coalition.title}</p>
+      <h1>ACUCOS Coalition Dashboard</h1>
       <p class="mc-header__question">${coalition.governing_principle}</p>
     </header>
     <section class="mc-card">
-      <h3>Arkansas Educational Coalition</h3>
-      <p class="mc-bar-note">${coalition.purpose}</p>
-      <p class="mc-bar-note"><strong>Not a political campaign</strong> — organizations join to improve public understanding through research, civic education, and respectful dialogue.</p>
+      <h3>Coalition Vision</h3>
+      <p class="mc-bar-note">${coalition.coalition_vision || coalition.purpose}</p>
+      <p class="mc-bar-note"><strong>Living ecosystem</strong> — not a supporter list. Mission Control tracks coalition growth as a primary success measure.</p>
     </section>
-    <h2 class="mc-section-title">Platform Pillars (Homepage Entry Points)</h2>
-    <div class="mc-dep-map">
-      ${coalition.platform_pillars.map((p, i) => `
-        <span class="mc-dep-map__node"><span class="mc-dep-map__num">${i + 1}</span><span class="mc-dep-map__label">${p.entry}</span></span>
-        ${i < coalition.platform_pillars.length - 1 ? '<span class="mc-dep-map__arrow">→</span>' : ''}`).join('')}
-    </div>
-    <ul class="mc-deliverables">${coalition.platform_pillars.map(p => `
-      <li><strong>${p.title}</strong> — ${p.entry} · <a href="${p.route}">${p.route}</a></li>`).join('')}</ul>
-    <h2 class="mc-section-title">Coalition Growth Metrics</h2>
-    <div class="mc-executive mc-executive--hero">
-      ${coalition.growth_dashboard.metrics.slice(0, 6).map(m => `
-        <div class="mc-stat"><div class="mc-stat__label">${m.title}</div><div class="mc-stat__value">${metricValue(m.id)}</div></div>`).join('')}
-    </div>
-    <table class="mc-table">
-      <thead><tr><th>Metric</th><th>Source</th><th>Value</th></tr></thead>
-      <tbody>${coalition.growth_dashboard.metrics.map(m => `
-        <tr><td>${m.title}</td><td>${m.source}</td><td>${metricValue(m.id)}</td></tr>`).join('')}
-      </tbody>
-    </table>
-    <p class="mc-bar-note">Readiness: ${sm.readiness_score ?? 10}% · Metrics at 0 until coalition forms submit and directory populates.</p>
-    <h2 class="mc-section-title">Membership Levels</h2>
-    <table class="mc-table">
-      <thead><tr><th>Level</th><th>Role</th><th>Organizations</th></tr></thead>
-      <tbody>${levelRows}</tbody>
-    </table>
-    <h2 class="mc-section-title">Coalition Map (${counties.counties_total} counties)</h2>
-    <p class="mc-bar-note">${directory.summary.needs_outreach}</p>
+    ${renderMetricSection('Organization Metrics', dashboard.organization_metrics)}
+    ${renderMetricSection('Event Metrics', dashboard.event_metrics)}
+    ${renderMetricSection('Resource Metrics', dashboard.resource_metrics)}
+    ${renderMetricSection('Growth Metrics', dashboard.growth_metrics)}
+    <p class="mc-bar-note">ACUCOS readiness: ${co.readiness_score ?? 12}% · All metrics at 0 until organizations join and forms integrate.</p>
+    <h2 class="mc-section-title">Participation Levels (${levels.length})</h2>
+    <table class="mc-table"><thead><tr><th>Level</th><th>Role</th><th>Organizations</th></tr></thead><tbody>${levelRows}</tbody></table>
+    <h2 class="mc-section-title">Coalition Categories (${categories.length})</h2>
+    <ul class="mc-deliverables">${categories.map(c => `<li><strong>${c.title}</strong>${c.examples ? ' — ' + c.examples.join(', ') : c.description ? ' — ' + c.description : ''}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">County Completeness (${countyIndex.counties_total} counties)</h2>
+    <p class="mc-bar-note">${countyIndex.summary.needs_outreach} · Counties with partner: ${countyIndex.summary.counties_with_partner}</p>
     <div class="mc-card mc-inv-table-wrap" style="max-height:320px;overflow-y:auto">
       <table class="mc-table mc-inv-table">
-        <thead><tr><th>County</th><th>Organizations</th><th>Participants</th><th>Conversations</th></tr></thead>
+        <thead><tr><th>County</th><th>Orgs</th><th>Complete</th><th>Leaders</th><th>Events</th></tr></thead>
         <tbody>${countyRows}</tbody>
       </table>
     </div>
-    <p class="mc-bar-note">Counties represented: ${directory.summary.counties_represented} · Interactive map planned.</p>
-    <h2 class="mc-section-title">Organization Types (${coalition.organization_types.length})</h2>
-    <p class="mc-bar-note">${coalition.organization_types.map(t => t.label).join(' · ')}</p>
+    <p class="mc-bar-note"><a href="/coalition/counties.html">Public county index →</a> · Interactive map planned.</p>
+    <h2 class="mc-section-title">Growth Engine</h2>
+    <ul class="mc-deliverables">${(coalition.growth_engine?.pathways || []).map(p => `<li><strong>${p.title}</strong> — ${p.description}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recognition System</h2>
+    <p class="mc-bar-note">${coalition.recognition_system?.principle || ''}</p>
+    <p class="mc-bar-note">${(coalition.recognition_system?.awards || []).map(a => a.title).join(' · ')}</p>
+    <h2 class="mc-section-title" id="social">Social Media Outreach</h2>
+    <p class="mc-bar-note">${social.emphasis || ''}</p>
+    <table class="mc-table"><thead><tr><th>Channel</th><th>Status</th></tr></thead>
+      <tbody>${(social.channels || []).map(ch => `<tr><td>${ch.label}</td><td>${ch.status}</td></tr>`).join('')}</tbody></table>
+    <h2 class="mc-section-title">Future Integrations</h2>
+    <table class="mc-table"><thead><tr><th>System</th><th>Route</th><th>Status</th></tr></thead>
+      <tbody>${(coalition.future_integrations || []).map(i => `<tr><td>${i.title}</td><td><a href="${i.route}">${i.route}</a></td><td>${i.status}</td></tr>`).join('')}</tbody></table>
     <h2 class="mc-section-title">Workspaces</h2>
     <ul class="mc-deliverables">
-      <li><strong>Coalition Directory</strong> — <a href="${coalition.coalition_directory.route}">${coalition.coalition_directory.route}</a> · Join: <a href="${coalition.coalition_directory.join_route}">${coalition.coalition_directory.join_route}</a></li>
-      <li><strong>${coalition.organization_resource_center.title}</strong> — <a href="${coalition.organization_resource_center.route}">${coalition.organization_resource_center.route}</a></li>
-      <li><strong>${coalition.community_event_calendar.title}</strong> — <a href="${coalition.community_event_calendar.route}">${coalition.community_event_calendar.route}</a> (${events.summary.total_events} events)</li>
-      <li><strong>${coalition.social_media_command_center.title}</strong> — ${coalition.social_media_command_center.channels.length} channels planned</li>
+      <li><strong>ACUCOS Hub</strong> — <a href="/coalition/">/coalition/</a></li>
+      <li><strong>Join</strong> — <a href="/coalition/join.html">/coalition/join.html</a></li>
+      <li><strong>${coalition.coalition_resource_portal?.title || 'Resource Portal'}</strong> — <a href="${coalition.coalition_resource_portal?.route || '/coalition/resources.html'}">resources</a></li>
+      <li><strong>Event Calendar</strong> — <a href="/coalition/events.html">/coalition/events.html</a></li>
     </ul>
-    <h2 class="mc-section-title">Social Media Command Center</h2>
-    <p class="mc-bar-note">${coalition.social_media_command_center.emphasis}</p>
-    <table class="mc-table">
-      <thead><tr><th>Channel</th><th>Status</th></tr></thead>
-      <tbody>${coalition.social_media_command_center.channels.map(ch => `
-        <tr><td>${ch.label}</td><td>${ch.status}</td></tr>`).join('')}
-      </tbody>
-    </table>
-    <h2 class="mc-section-title">Coalition Principles</h2>
-    <ul class="mc-deliverables">${coalition.coalition_principles.map(p => `<li>${p}</li>`).join('')}</ul>
     <p class="mc-bar-note">
-      <a href="/docs/COALITION_OUTREACH.md">COALITION_OUTREACH.md</a> ·
-      <a href="/data/coalition-ecosystem.json">JSON</a> ·
-      <a href="/coalition/">Public coalition hub</a> ·
-      <a href="/">Three-path homepage</a> ·
+      <a href="/docs/ACUCOS_CONSTITUTION.md">ACUCOS_CONSTITUTION.md</a> ·
+      <a href="/data/coalition-ecosystem.json">Blueprint JSON</a> ·
+      <a href="/data/county-coalition-index.json">County index</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

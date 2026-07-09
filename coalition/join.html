@@ -30,30 +30,26 @@
           <input type="text" id="org_name" name="organization_name" required>
         </div>
         <div class="form-group">
-          <label for="org_type">Organization type *</label>
-          <select id="org_type" name="organization_type" required>
-            <option value="">Select type</option>
-            <option value="nonprofit">Nonprofit organization</option>
-            <option value="civic">Civic organization</option>
-            <option value="community">Community organization</option>
-            <option value="neighborhood">Neighborhood association</option>
-            <option value="veteran">Veteran organization</option>
-            <option value="faith_based">Faith-based organization</option>
-            <option value="educational">Educational organization</option>
-            <option value="student">Student organization</option>
-            <option value="business_association">Business association</option>
-            <option value="professional_association">Professional association</option>
-            <option value="public_policy">Public policy organization</option>
-            <option value="good_government">Good-government organization</option>
+          <label for="coalition_category">Coalition category *</label>
+          <select id="coalition_category" name="coalition_category" required>
+            <option value="">Select category</option>
+            <option value="civic">Civic Organizations</option>
+            <option value="nonprofit">Nonprofit Organizations</option>
+            <option value="educational">Educational Institutions</option>
+            <option value="faith">Faith Communities</option>
+            <option value="professional">Professional Organizations</option>
+            <option value="veterans">Veterans Organizations</option>
+            <option value="community_service">Community Service Organizations</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="partnership_level">Partnership level *</label>
-          <select id="partnership_level" name="partnership_level" required>
+          <label for="participation_level">Participation level *</label>
+          <select id="participation_level" name="participation_level" required>
             <option value="">Select level</option>
+            <option value="observer">Observer — learning about the coalition</option>
             <option value="supporter">Supporter — supports the mission</option>
-            <option value="educational_partner">Educational Partner — shares resources</option>
-            <option value="community_partner">Community Partner — hosts events</option>
+            <option value="educational_partner">Educational Partner — distributes materials</option>
+            <option value="event_partner">Event Partner — hosts education events</option>
             <option value="research_partner">Research Partner — contributes expertise</option>
             <option value="strategic_partner">Strategic Partner — statewide collaboration</option>
           </select>
@@ -69,7 +65,8 @@
           <textarea id="mission" name="mission" rows="3"></textarea>
         </div>
         <div class="form-group"><label for="website">Website</label><input type="url" id="website" name="website" placeholder="https://"></div>
-        <div class="form-group"><label for="contact_person">Contact person</label><input type="text" id="contact_person" name="contact_person"></div>
+        <div class="form-group"><label for="contact_person">Primary contact</label><input type="text" id="contact_person" name="primary_contact"></div>
+        <div class="form-group"><label for="contact_secondary">Secondary contact</label><input type="text" id="contact_secondary" name="secondary_contact"></div>
         <div class="form-group"><label for="email">Contact email *</label><input type="email" id="email" name="contact_email" required></div>
         <div class="form-group"><label for="phone">Contact phone</label><input type="tel" id="phone" name="contact_phone"></div>
         <div class="form-group form-group--full">
@@ -77,8 +74,8 @@
           <textarea id="interests" name="educational_interests" rows="2" placeholder="What Citizens United topics does your organization want to help explain?"></textarea>
         </div>
         <div class="form-group form-group--full">
-          <label for="resources">Resources your organization can offer</label>
-          <textarea id="resources" name="resources_offered" rows="2" placeholder="Venues, volunteers, research, outreach channels…"></textarea>
+          <label for="resources">Educational resources requested</label>
+          <textarea id="resources" name="resources_requested" rows="2" placeholder="Presentations, facilitator handbook, discussion guides…"></textarea>
         </div>
         <div class="form-group form-group--full">
           <label>Public profile preferences</label>

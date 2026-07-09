@@ -1,6 +1,6 @@
 {
-  "version": "1.17.0",
-  "build": 13,
+  "version": "1.18.0",
+  "build": 14,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 13,
+    "overall_completion": 14,
     "current_build": {
-      "number": 13,
-      "title": "Coalition Building & Public Outreach"
-    },
-    "active_phase": "Coalition & Outreach",
-    "last_completed": "Arkansas Civic Action Ecosystem & Leadership Development System",
-    "next_build": {
       "number": 14,
+      "title": "Arkansas Citizens United Coalition Operating System (ACUCOS)"
+    },
+    "active_phase": "ACUCOS \u2014 Coalition Operating System",
+    "last_completed": "Coalition Building & Public Outreach",
+    "next_build": {
+      "number": 15,
       "title": "First Deep Content \u2014 KG-IDs, Evidence IDs, Arkansas articles"
     },
     "github_status": "connected",
@@ -27,7 +27,7 @@
     "data_viz_readiness": 2,
     "signup_funnel_readiness": 14,
     "civic_action_readiness": 22,
-    "coalition_readiness": 10,
+    "coalition_readiness": 12,
     "public_launch_readiness": 5,
     "public_launch_label": "Early Foundation"
   },
@@ -35,8 +35,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 13,
-      "note": "Ten frameworks live. Coalition layer + three-path homepage. Deep content next."
+      "value": 14,
+      "note": "ACUCOS live \u2014 75 county coalition pages, 4-metric dashboard, growth engine."
     },
     {
       "id": "constitution",
@@ -155,9 +155,9 @@
     {
       "id": "coalition",
       "label": "Coalition & Outreach",
-      "value": 10,
+      "value": 12,
       "max": 100,
-      "note": "Directory, join form, resource center, event calendar, MC dashboard \u2014 0 orgs until submissions."
+      "note": "ACUCOS v1.0 \u2014 observer\u2192strategic partner, county completeness, recognition scaffold."
     }
   ],
   "public_readiness": {
@@ -1561,6 +1561,60 @@
   ],
   "builds": [
     {
+      "number": 14,
+      "title": "Arkansas Citizens United Coalition Operating System (ACUCOS)",
+      "version": "1.18.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Coalition Architecture & Growth Blueprint v1.0 \u2014 statewide organizational backbone",
+      "summary": "ACUCOS: 6 participation levels, 7 categories, 75 county pages, growth engine, 4-metric dashboard, recognition & communications scaffold.",
+      "files_created": [
+        "docs/ACUCOS_CONSTITUTION.md",
+        "data/county-coalition-index.json",
+        "builds/014-acucos.md",
+        "coalition/county.html",
+        "coalition/counties.html",
+        "js/county-coalition.js",
+        "scripts/gen-county-coalition-index.py",
+        "scripts/update-mc-build14.py"
+      ],
+      "files_modified": [
+        "data/coalition-ecosystem.json",
+        "data/coalition-directory.json",
+        "data/organization-profile-schema.json",
+        "js/mission-control.js",
+        "js/coalition-profile.js",
+        "coalition/index.html",
+        "coalition/join.html",
+        "mission-control/coalition.html",
+        "BUILD_PLAN.md"
+      ],
+      "pages_created": [
+        "/coalition/county.html",
+        "/coalition/counties.html"
+      ],
+      "decisions_made": [
+        "ACUCOS as coalition operating system \u2014 not a supporter list",
+        "One educational partner per county as long-term vision",
+        "6 participation levels including Observer and Event Partner",
+        "County completeness tracked in Mission Control"
+      ],
+      "open_questions": [
+        "Org directory approval workflow?",
+        "Newsletter and coalition communications backend?",
+        "Social API integration for outreach metrics?"
+      ],
+      "risks": [
+        "County pages and metrics at 0 \u2014 honest scaffolding"
+      ],
+      "next_recommended": 15,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/coalition.html",
+      "review_status": "complete"
+    },
+    {
       "number": 13,
       "title": "Coalition Building & Public Outreach",
       "version": "1.17.0",
@@ -2085,19 +2139,20 @@
     }
   ],
   "briefing": {
-    "what_built": "Coalition & Outreach Layer \u2014 org coalition, three-path homepage, MC dashboard",
-    "building_now": "Coalition framework live \u2014 deep Arkansas content next (Build #14)",
+    "what_built": "ACUCOS v1.0 \u2014 Coalition Operating System with 75 county pages and 4-metric dashboard",
+    "building_now": "ACUCOS framework live \u2014 deep Arkansas content next (Build #15)",
     "blocked": [
-      "Org directory backend",
-      "Interactive coalition map",
-      "Social metrics APIs"
+      "Org profile backend",
+      "Coalition newsletter",
+      "Interactive coalition map"
     ],
     "ready_public": [
-      "Three-path homepage",
-      "Coalition join form",
-      "Resource & event scaffolds"
+      "ACUCOS hub",
+      "County coalition pages",
+      "Updated join form",
+      "MC dashboard"
     ],
-    "next": "Build #14 \u2014 First Deep Content with KG-IDs, Evidence IDs, Arkansas articles"
+    "next": "Build #15 \u2014 First Deep Content with KG-IDs, Evidence IDs, Arkansas articles"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -2139,14 +2194,33 @@
   "coalition_route": "/mission-control/coalition.html",
   "coalition_hub": "/coalition/",
   "coalition_outreach": {
-    "readiness_score": 10,
+    "readiness_score": 12,
+    "acucos_version": "1.0",
     "organizations": 0,
+    "new_organizations_month": 0,
     "counties_represented": 0,
+    "counties_with_partner": 0,
+    "active_partnerships": 0,
     "events_scheduled": 0,
+    "upcoming_events": 0,
+    "completed_events": 0,
     "community_conversations": 0,
+    "average_attendance": 0,
+    "counties_hosting_events": 0,
+    "toolkit_downloads": 0,
+    "presentation_downloads": 0,
+    "video_views": 0,
+    "research_downloads": 0,
+    "faq_usage": 0,
+    "individual_referrals": 0,
+    "organizational_referrals": 0,
+    "returning_organizations": 0,
+    "coalition_retention": 0,
     "social_followers": 0,
     "official_shares": 0,
-    "organization_referrals": 0,
-    "resource_downloads": 0
-  }
+    "organization_referrals": 0
+  },
+  "acucos": "1.0",
+  "acucos_constitution": "/docs/ACUCOS_CONSTITUTION.md",
+  "county_coalition_index": "/data/county-coalition-index.json"
 }

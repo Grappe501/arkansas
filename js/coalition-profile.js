@@ -1,8 +1,18 @@
 /**
- * Coalition Profile — Arkansas Organization Tracker v1.0 (Build #13)
+ * Coalition Profile — ACUCOS v1.0 (Build #14)
  */
 
 const COALITION_PREFIX = 'cf_coalition_';
+
+const GROWTH_PATHWAYS = [
+  'individual_referral',
+  'organizational_referral',
+  'event_recruitment',
+  'community_conversations',
+  'social_media'
+];
+
+const LEVEL_LEGACY = { community_partner: 'event_partner' };
 
 function coalitionGet(key, fallback = null) {
   try {
@@ -17,6 +27,10 @@ function coalitionSet(key, value) {
   localStorage.setItem(COALITION_PREFIX + key, JSON.stringify(value));
 }
 
+function normalizeParticipationLevel(level) {
+  return LEVEL_LEGACY[level] || level;
+}
+
 function markOrganizationInterest() {
   coalitionSet('interest', true);
   coalitionSet('interest_at', new Date().toISOString());
@@ -26,8 +40,16 @@ function markOrganizationJoined(meta = {}) {
   coalitionSet('joined', true);
   coalitionSet('joined_at', new Date().toISOString());
   if (meta.county) coalitionSet('county', meta.county);
-  if (meta.level) coalitionSet('level', meta.level);
+  if (meta.level) coalitionSet('level', normalizeParticipationLevel(meta.level));
+  if (meta.category) coalitionSet('category', meta.category);
   if (meta.name) coalitionSet('org_name', meta.name);
+}
+
+function trackGrowthPathway(pathwayId) {
+  if (!GROWTH_PATHWAYS.includes(pathwayId)) return;
+  const counts = coalitionGet('growth_pathways', {});
+  counts[pathwayId] = (counts[pathwayId] || 0) + 1;
+  coalitionSet('growth_pathways', counts);
 }
 
 function getCoalitionCounty() {
@@ -41,8 +63,11 @@ function hasCoalitionInterest() {
 window.CoalitionProfile = {
   get: coalitionGet,
   set: coalitionSet,
+  normalizeParticipationLevel,
   markOrganizationInterest,
   markOrganizationJoined,
+  trackGrowthPathway,
   getCoalitionCounty,
-  hasCoalitionInterest
+  hasCoalitionInterest,
+  GROWTH_PATHWAYS
 };

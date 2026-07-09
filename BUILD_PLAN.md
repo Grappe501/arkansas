@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.17.0 · **Coalition:** [/mission-control/coalition.html](/mission-control/coalition.html) · **Arkansas Civic:** [/mission-control/civic-ecosystem.html](/mission-control/civic-ecosystem.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #13:** ✅ Coalition & Outreach · **Build #12:** ✅ Arkansas Civic Ecosystem · **Build #11:** ✅ Knowledge Graph  
+**Current version:** 1.18.0 · **ACUCOS:** [/mission-control/coalition.html](/mission-control/coalition.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #14:** ✅ ACUCOS · **Build #13:** ✅ Coalition Layer · **Build #12:** ✅ Arkansas Civic  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
 > **Arkansas pilot (v1):** All civic action frameworks scoped to Arkansas first — modular for future states.
@@ -255,9 +255,32 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | 1–6 | Knowledge system | Mostly ✅ |
 | **7** | **Civic Action Layer** | **🟡 Scaffolded** |
 | 8–12 | Forms, tech, launch | 🟡 |
-| **13** | **Coalition & Outreach** | **🟡 Scaffolded v1.17.0** |
+| **13** | **Coalition & Outreach** | **✅ v1.17.0** |
+| **14** | **ACUCOS** | **🟡 v1.18.0** |
 
-**Next:** Build #14 — First Deep Content with KG-IDs, Evidence IDs, and Arkansas-focused articles.
+**Next:** Build #15 — First Deep Content with KG-IDs, Evidence IDs, and Arkansas-focused articles.
+
+---
+
+## Phase 14 — ACUCOS (Build #14) ★ NEW
+
+*Arkansas Citizens United Coalition Operating System — statewide organizational backbone.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| A1 | ACUCOS blueprint v2.0 | ✅ | `data/coalition-ecosystem.json` |
+| A2 | ACUCOS Constitution | ✅ | `docs/ACUCOS_CONSTITUTION.md` |
+| A3 | 6 participation levels | ✅ | Observer → Strategic Partner |
+| A4 | 7 coalition categories | ✅ | Civic, nonprofit, educational, faith, professional, veterans, service |
+| A5 | 75 county coalition pages | 🟡 | `/coalition/counties.html` |
+| A6 | County completeness tracking | ✅ | `data/county-coalition-index.json` |
+| A7 | 4-metric ACUCOS dashboard | ✅ | `/mission-control/coalition.html` |
+| A8 | Growth engine (5 pathways) | 🟡 | `js/coalition-profile.js` |
+| A9 | Recognition system | 🟡 | Scaffold in blueprint |
+| A10 | Coalition communications | ⬜ | Newsletter planned |
+| A11 | Future integrations map | ✅ | 9 systems linked |
+
+**Governing principle:** Coalition growth is a primary platform success measure — not organizational size, but educational reach across Arkansas.
 
 ---
 

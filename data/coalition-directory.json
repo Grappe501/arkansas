@@ -1,18 +1,31 @@
 {
-  "version": "1.0",
+  "version": "1.1",
+  "acucos": "1.0",
   "state": "Arkansas",
   "updated": "2026-07-09",
   "summary": {
     "total_organizations": 0,
+    "new_this_month": 0,
     "counties_represented": 0,
+    "active_partnerships": 0,
     "by_level": {
+      "observer": 0,
       "supporter": 0,
       "educational_partner": 0,
-      "community_partner": 0,
+      "event_partner": 0,
       "research_partner": 0,
       "strategic_partner": 0
     },
-    "needs_outreach": "All 75 counties — coalition directory opens with Build #13; profiles populate via join form."
+    "by_category": {
+      "civic": 0,
+      "nonprofit": 0,
+      "educational": 0,
+      "faith": 0,
+      "professional": 0,
+      "veterans": 0,
+      "community_service": 0
+    },
+    "needs_outreach": "All 75 counties — ACUCOS vision: one active educational partner per county."
   },
   "organizations": []
 }

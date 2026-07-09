@@ -13,6 +13,13 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.18.0] - 2026-07-09 — Build #14 ACUCOS
+
+### Arkansas Citizens United Coalition Operating System
+- **ACUCOS v1.0** — Coalition Architecture & Growth Blueprint
+- 75 county coalition pages, 6 participation levels, 7 categories
+- 4-metric dashboard (org, event, resource, growth), growth engine, recognition scaffold
+
 ## [1.17.0] - 2026-07-09 — Build #13 Coalition & Outreach
 
 ### Coalition Building & Public Outreach System

@@ -60,4 +60,4 @@ Coalition members access customizable materials at [/coalition/resources.html](/
 
 Success is measured not only by individual learners, but by the number of **trusted Arkansas organizations** that help educate their communities with accurate, well-sourced information about *Citizens United*.
 
-**Blueprint:** `data/coalition-ecosystem.json`
+> **Superseded by ACUCOS:** See [ACUCOS_CONSTITUTION.md](ACUCOS_CONSTITUTION.md) · **Dashboard:** [/mission-control/coalition.html](/mission-control/coalition.html)
