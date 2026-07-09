@@ -86,7 +86,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 12  # IMP-01 through IMP-12 (doctrinal)
+steps_documented = 13  # IMP-01 through IMP-13 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -2550,6 +2550,173 @@ EDUCATION_ACADEMY_MANIFEST = {
     'implemented': False,
 }
 
+VOLUNTEER_JOURNEY_STAGES = [
+    {'stage': 'interested_citizen', 'title': 'Interested Citizen'},
+    {'stage': 'registered_member', 'title': 'Registered Member'},
+    {'stage': 'volunteer', 'title': 'Volunteer'},
+    {'stage': 'trained_volunteer', 'title': 'Trained Volunteer'},
+    {'stage': 'education_leader', 'title': 'Education Leader'},
+    {'stage': 'county_or_city_leader', 'title': 'County or City Leader'},
+    {'stage': 'mentor', 'title': 'Mentor'},
+    {'stage': 'institutional_leader', 'title': 'Institutional Leader'},
+]
+
+RECRUITMENT_SOURCES = [
+    'website', 'community_conversations', 'academy', 'coalition_partners',
+    'education_leaders', 'community_referrals', 'presentations', 'libraries',
+    'universities', 'civic_organizations', 'personal_invitations',
+]
+
+ONBOARDING_STEPS_VOLUNTEER = [
+    'welcome', 'mission_overview', 'institutional_values', 'county_selection',
+    'city_selection', 'areas_of_interest', 'volunteer_skills', 'academy_enrollment',
+    'ai_introduction', 'first_assignment',
+]
+
+VOLUNTEER_SKILLS = [
+    'research', 'writing', 'public_speaking', 'teaching', 'graphic_design',
+    'photography', 'video_production', 'technology', 'programming',
+    'project_management', 'fundraising', 'community_organizing', 'legal_research',
+    'historical_research', 'translation', 'data_analysis', 'event_planning',
+]
+
+VOLUNTEER_ROLES = [
+    'research_volunteer', 'education_volunteer', 'presentation_volunteer',
+    'community_conversation_host', 'education_leader', 'county_volunteer_coordinator',
+    'city_volunteer_coordinator', 'neighborhood_leader', 'technology_volunteer',
+    'media_volunteer', 'academy_mentor', 'coalition_liaison', 'project_volunteer',
+]
+
+EDUCATION_LEADER_PIPELINE_STAGES = [
+    {'stage': 'volunteer', 'title': 'Volunteer'},
+    {'stage': 'academy_completion', 'title': 'Academy Completion'},
+    {'stage': 'leadership_training', 'title': 'Leadership Training'},
+    {'stage': 'presentation_certification', 'title': 'Presentation Certification'},
+    {'stage': 'conversation_facilitation', 'title': 'Community Conversation Facilitation'},
+    {'stage': 'mentorship', 'title': 'Mentorship'},
+    {'stage': 'county_assignment', 'title': 'County Assignment'},
+    {'stage': 'education_leader', 'title': 'Education Leader'},
+]
+
+WORKSPACE_FEATURES_VOLUNTEER = [
+    'assignments', 'projects', 'training', 'calendar', 'messages', 'county_updates',
+    'ai_assistant', 'documents', 'resources', 'progress', 'recognition',
+]
+
+MATCHING_CRITERIA = [
+    'county', 'skills', 'interests', 'availability', 'leadership_goals',
+    'current_workload', 'nearby_opportunities',
+]
+
+MENTORSHIP_TRACKING = [
+    'mentor_assignments', 'meeting_frequency', 'leadership_development', 'volunteer_satisfaction',
+]
+
+RECOGNITION_TYPES = [
+    'years_of_service', 'courses_completed', 'education_leader_certification',
+    'community_conversations_hosted', 'research_contributions', 'county_milestones',
+    'volunteer_anniversaries',
+]
+
+RETENTION_METRICS = [
+    'active_volunteers', 'inactive_volunteers', 'burnout_indicators',
+    'leadership_vacancies', 'training_completion', 'volunteer_engagement',
+]
+
+ORGANIZING_TOOLKIT_ITEMS = [
+    'presentation_materials', 'discussion_guides', 'fact_sheets', 'county_resources',
+    'event_planning_checklists', 'volunteer_recruitment_materials',
+    'follow_up_templates', 'ai_presentation_assistance',
+]
+
+CITY_LEADERSHIP_METRICS = [
+    'education_leaders', 'volunteers', 'academy_participants',
+    'community_conversations', 'leadership_readiness',
+]
+
+MC_VOLUNTEER_DASHBOARD = [
+    'volunteer_growth', 'county_coverage', 'education_leader_pipeline', 'mentorship',
+    'training_completion', 'volunteer_retention', 'leadership_readiness',
+    'volunteer_workload', 'recognition_opportunities',
+]
+
+COUNTY_LEADERSHIP_OBJECTIVE = {
+    'target_date': county_milestone_date,
+    'counties_total': 75,
+    'requirement': 'education_leader_or_pipeline_volunteer_per_county',
+    'mc_priority': 'highest',
+}
+
+VOLUNTEER_SYSTEM_CHAIN = [
+    'community_education_academy', 'mission_control', 'county_operating_system',
+    'city_operating_system', 'neighborhood_operating_system', 'coalition_network',
+    'knowledge_platform', 'calendar_brain', 'ai_localbrains',
+]
+
+PLATFORM_SYSTEMS_WITH_VOLUNTEERS = [
+    'institutional_architecture', 'mission_control', 'knowledge_platform',
+    'research_institute', 'community_education_academy', 'ai_localbrains',
+    'volunteer_leadership_system',
+]
+
+VOLUNTEER_NETWORK_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-13',
+    'updated': today,
+    'title': 'Master Volunteer Network, Education Leader Pipeline & Community Organizing Platform',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_13_VOLUNTEER_NETWORK.md',
+    'source_registries': {
+        'outreach_engine': '/data/outreach-engine.json',
+        'volunteer_funding_constitution': '/data/volunteer-funding-constitution.json',
+        'education_academy': '/data/education-academy-manifest.json',
+        'identity_auth': '/data/identity-auth-manifest.json',
+        'county_operating_system': '/data/county-operating-system.json',
+    },
+    'philosophy': 'Volunteers build the institution; the platform removes uncertainty and makes service rewarding',
+    'governing_principle': (
+        'Institutions are built by people; education grows through relationships; '
+        'relationships create communities; communities transform states'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'volunteer_journey': VOLUNTEER_JOURNEY_STAGES,
+    'journey_stage_count': len(VOLUNTEER_JOURNEY_STAGES),
+    'recruitment_sources': RECRUITMENT_SOURCES,
+    'onboarding_steps': ONBOARDING_STEPS_VOLUNTEER,
+    'onboarding_step_count': len(ONBOARDING_STEPS_VOLUNTEER),
+    'volunteer_skills': VOLUNTEER_SKILLS,
+    'skill_count': len(VOLUNTEER_SKILLS),
+    'volunteer_roles': VOLUNTEER_ROLES,
+    'role_count': len(VOLUNTEER_ROLES),
+    'education_leader_pipeline': EDUCATION_LEADER_PIPELINE_STAGES,
+    'pipeline_stage_count': len(EDUCATION_LEADER_PIPELINE_STAGES),
+    'workspace_features': WORKSPACE_FEATURES_VOLUNTEER,
+    'matching_criteria': MATCHING_CRITERIA,
+    'mentorship_tracking': MENTORSHIP_TRACKING,
+    'recognition_types': RECOGNITION_TYPES,
+    'retention_metrics': RETENTION_METRICS,
+    'organizing_toolkit': ORGANIZING_TOOLKIT_ITEMS,
+    'city_leadership_metrics': CITY_LEADERSHIP_METRICS,
+    'cities_tracked': 250,
+    'mc_volunteer_dashboard': MC_VOLUNTEER_DASHBOARD,
+    'county_leadership_objective': COUNTY_LEADERSHIP_OBJECTIVE,
+    'volunteer_system_chain': VOLUNTEER_SYSTEM_CHAIN,
+    'platform_systems': PLATFORM_SYSTEMS_WITH_VOLUNTEERS,
+    'first_week_contribution_rule': True,
+    'packages_completed': 13,
+    'packages_total': 50,
+    'packages_complete_pct': 26,
+    'engineering_note': 'Doctrinal IMP-13 Volunteer Network; engineering IMP-13 is design tokens port',
+    'status': 'documented',
+    'implemented': False,
+}
+
 ROUTE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -2614,11 +2781,12 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D13', 'indicator': 'Content Management (IMP-10)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D14', 'indicator': 'Research Institute (IMP-11)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D15', 'indicator': 'Education Academy (IMP-12)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D16', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D16', 'indicator': 'Volunteer Network (IMP-13)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D17', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
-    84,
+    86,
     14
     + len(IMPLEMENTATION_STEPS) // 2
     + len(BANDS) * 2
@@ -2930,7 +3098,31 @@ out = {
             'number': 13,
             'id': 'IMP-13',
             'title': 'Master Volunteer Network, Education Leader Pipeline & Community Organizing Platform',
-            'note': 'Doctrinal package 13; engineering IMP-13 is design tokens port',
+            'status': 'documented',
+        },
+    },
+    'volunteer_network': {
+        'title': 'Master Volunteer Network, Education Leader Pipeline & Community Organizing Platform',
+        'package': 'Implementation Package 13 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_13_VOLUNTEER_NETWORK.md',
+        'manifest': '/data/volunteer-network-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': VOLUNTEER_NETWORK_MANIFEST['philosophy'],
+        'journey_stage_count': VOLUNTEER_NETWORK_MANIFEST['journey_stage_count'],
+        'pipeline_stage_count': VOLUNTEER_NETWORK_MANIFEST['pipeline_stage_count'],
+        'role_count': VOLUNTEER_NETWORK_MANIFEST['role_count'],
+        'skill_count': VOLUNTEER_NETWORK_MANIFEST['skill_count'],
+        'cities_tracked': VOLUNTEER_NETWORK_MANIFEST['cities_tracked'],
+        'packages_completed': VOLUNTEER_NETWORK_MANIFEST['packages_completed'],
+        'packages_complete_pct': VOLUNTEER_NETWORK_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engineering_note': VOLUNTEER_NETWORK_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 14,
+            'id': 'IMP-14',
+            'title': 'Master Coalition Network, Organization Portal & Partnership Operating System',
+            'note': 'Doctrinal package 14; engineering IMP-14 is core layout components',
         },
     },
     'master_timeline': MASTER_TIMELINE,
@@ -3068,6 +3260,10 @@ with open(root / 'data/research-institute-manifest.json', 'w', newline='\n') as 
 
 with open(root / 'data/education-academy-manifest.json', 'w', newline='\n') as f:
     json.dump(EDUCATION_ACADEMY_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/volunteer-network-manifest.json', 'w', newline='\n') as f:
+    json.dump(VOLUNTEER_NETWORK_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

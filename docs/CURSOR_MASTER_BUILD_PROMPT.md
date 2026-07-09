@@ -28,6 +28,7 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 0j. **Content Management (IMP-10):** [/docs/IMPLEMENTATION_PACKAGE_10_CONTENT_MANAGEMENT.md](/docs/IMPLEMENTATION_PACKAGE_10_CONTENT_MANAGEMENT.md) · [/data/content-management-manifest.json](/data/content-management-manifest.json)
 0k. **Research Institute (IMP-11):** [/docs/IMPLEMENTATION_PACKAGE_11_RESEARCH_INSTITUTE.md](/docs/IMPLEMENTATION_PACKAGE_11_RESEARCH_INSTITUTE.md) · [/data/research-institute-manifest.json](/data/research-institute-manifest.json)
 0l. **Education Academy (IMP-12):** [/docs/IMPLEMENTATION_PACKAGE_12_COMMUNITY_EDUCATION_ACADEMY.md](/docs/IMPLEMENTATION_PACKAGE_12_COMMUNITY_EDUCATION_ACADEMY.md) · [/data/education-academy-manifest.json](/data/education-academy-manifest.json)
+0m. **Volunteer Network (IMP-13):** [/docs/IMPLEMENTATION_PACKAGE_13_VOLUNTEER_NETWORK.md](/docs/IMPLEMENTATION_PACKAGE_13_VOLUNTEER_NETWORK.md) · [/data/volunteer-network-manifest.json](/data/volunteer-network-manifest.json)
 
 ## Master timeline (updated IMP-11)
 
@@ -131,7 +132,7 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 
 ## First step to implement
 
-**IMP-01** through **IMP-12** are **documented**:
+**IMP-01** through **IMP-13** are **documented**:
 - [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
 - [Technical Architecture](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
 - [Route Map](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [route-manifest.json](/data/route-manifest.json)
@@ -144,7 +145,8 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 - [Content Management](/docs/IMPLEMENTATION_PACKAGE_10_CONTENT_MANAGEMENT.md) · [content-management-manifest.json](/data/content-management-manifest.json)
 - [Research Institute](/docs/IMPLEMENTATION_PACKAGE_11_RESEARCH_INSTITUTE.md) · [research-institute-manifest.json](/data/research-institute-manifest.json)
 - [Education Academy](/docs/IMPLEMENTATION_PACKAGE_12_COMMUNITY_EDUCATION_ACADEMY.md) · [education-academy-manifest.json](/data/education-academy-manifest.json)
+- [Volunteer Network](/docs/IMPLEMENTATION_PACKAGE_13_VOLUNTEER_NETWORK.md) · [volunteer-network-manifest.json](/data/volunteer-network-manifest.json)
 
-**IMP-13** is next (doctrinal): Master Volunteer Network, Education Leader Pipeline & Community Organizing Platform.
+**IMP-14** is next (doctrinal): Master Coalition Network, Organization Portal & Partnership Operating System.
 
 Engineering **Sprint Zero (IMP-10 step registry)** is the Band A gate before Band B code slices.

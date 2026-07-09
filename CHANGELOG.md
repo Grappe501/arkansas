@@ -13,6 +13,18 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.13] - 2026-07-09 — IMP-13 Volunteer Network & Education Leader Pipeline
+
+### Implementation Package 13 of 50
+- **Master Volunteer Network, Education Leader Pipeline & Community Organizing Platform**
+- 8 journey stages · 8 Education Leader pipeline stages · 13 roles · 17 skills · 10 onboarding steps
+- Volunteer workspace, matching engine, mentorship, recognition, retention, organizing toolkit
+- County objective: Education Leader or pipeline volunteer in all 75 counties by Oct 1 2026
+- 250-city leadership tracking
+- Machine-readable **volunteer-network-manifest.json**
+- IMP-14 next (doctrinal): Coalition Network, Organization Portal & Partnership OS
+- Honest: 13/50 documented · 0/50 implemented · 86% package readiness
+
 ## [2.05.12] - 2026-07-09 — IMP-12 Community Education Academy
 
 ### Implementation Package 12 of 50

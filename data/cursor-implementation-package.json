@@ -411,7 +411,31 @@
       "number": 13,
       "id": "IMP-13",
       "title": "Master Volunteer Network, Education Leader Pipeline & Community Organizing Platform",
-      "note": "Doctrinal package 13; engineering IMP-13 is design tokens port"
+      "status": "documented"
+    }
+  },
+  "volunteer_network": {
+    "title": "Master Volunteer Network, Education Leader Pipeline & Community Organizing Platform",
+    "package": "Implementation Package 13 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_13_VOLUNTEER_NETWORK.md",
+    "manifest": "/data/volunteer-network-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Volunteers build the institution; the platform removes uncertainty and makes service rewarding",
+    "journey_stage_count": 8,
+    "pipeline_stage_count": 8,
+    "role_count": 13,
+    "skill_count": 17,
+    "cities_tracked": 250,
+    "packages_completed": 13,
+    "packages_complete_pct": 26,
+    "county_milestone_date": "2026-10-01",
+    "engineering_note": "Doctrinal IMP-13 Volunteer Network; engineering IMP-13 is design tokens port",
+    "next_package": {
+      "number": 14,
+      "id": "IMP-14",
+      "title": "Master Coalition Network, Organization Portal & Partnership Operating System",
+      "note": "Doctrinal package 14; engineering IMP-14 is core layout components"
     }
   },
   "master_timeline": {
@@ -1813,7 +1837,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 12,
+        "current": 13,
         "status": "partial"
       },
       {
@@ -1896,6 +1920,12 @@
       },
       {
         "id": "CIP-D16",
+        "indicator": "Volunteer Network (IMP-13)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D17",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -1946,9 +1976,9 @@
     "days_to_organizational": 176,
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "implementation_package_readiness_pct": 84,
+    "implementation_package_readiness_pct": 86,
     "steps_total": 50,
-    "steps_documented": 12,
+    "steps_documented": 13,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,
