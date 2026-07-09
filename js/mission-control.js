@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">First 100 Days <a href="/mission-control/launch-campaign-first-100-days.html" class="mc-inline-link">Launch Campaign #87 →</a></h2>
+    <p class="mc-bar-note">Build #87 — Launch Campaign & First 100 Days Blueprint. Post-Jan 2027 movement campaign. 3 phases, 11 indicators, weekly rhythm, county challenge. Day 0/100 · campaign not started. ~57% readiness.</p>
     <h2 class="mc-section-title">Civic Reach <a href="/mission-control/arkansas-civic-reach-participation.html" class="mc-inline-link">15% Engagement #86 →</a></h2>
     <p class="mc-bar-note">Build #86 — Civic Reach & Participation Strategy. 15% Connected Citizen Goal per county and city. 6 engagement levels, reach dashboard, quality metrics. 0 connected · 0/75 at goal · dashboard not live. ~56% readiness.</p>
     <h2 class="mc-section-title">Launch Plan 2027 <a href="/mission-control/master-launch-plan.html" class="mc-inline-link">Jan 2027 Readiness #85 →</a></h2>
@@ -5247,6 +5249,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initArkansasStrategicPlan2035();
   initMasterLaunchPlan();
   initArkansasCivicReachParticipation();
+  initLaunchCampaignFirst100Days();
 });
 
 async function initUxArchitecture() {
@@ -9079,6 +9082,97 @@ async function initArkansasCivicReachParticipation() {
       <a href="/mission-control/civic-atlas.html">Civic Atlas (#58)</a> ·
       <a href="/mission-control/relational-organizing-growth-engine.html">Growth Engine (#69)</a> ·
       <a href="/mission-control/arkansas-action-network.html">Action Network (#64)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initLaunchCampaignFirst100Days() {
+  const root = document.getElementById('mc-launch-campaign-first-100-days-root');
+  if (!root) return;
+
+  const [lcRes, mcRes] = await Promise.all([
+    fetch('/data/launch-campaign-first-100-days.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const lc = await lcRes.json();
+  const mc = await mcRes.json();
+  const s = lc.summary;
+
+  const phaseCards = lc.campaign_phases.phases.map(p => `
+    <div class="mc-card"><h3>${p.title}</h3>
+      <p class="mc-bar-note">Days ${p.days} · Status: ${p.status}</p>
+      <ul class="mc-deliverables">${p.goals.map(g => `<li>${g}</li>`).join('')}</ul></div>`).join('');
+
+  const dashRows = lc.first_100_day_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td>
+      <td>${typeof d.current === 'number' ? d.current.toLocaleString() : d.current}${d.target ? ` / ${d.target.toLocaleString()}` : ''}</td>
+      <td>${d.status}</td></tr>`).join('');
+
+  const systemRows = lc.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → First 100 Days Campaign</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #87 · ${lc.title}</p>
+      <h1>${lc.subtitle}</h1>
+      <p class="mc-header__question">${lc.governing_principle}</p>
+      <p class="mc-bar-note">${lc.purpose}</p>
+      <p class="mc-bar-note"><strong>Launch:</strong> ${lc.launch_date} · <strong>Tagline:</strong> ${lc.tagline}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Campaign readiness</div><div class="mc-stat__value">${s.launch_campaign_first_100_days_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Campaign day</div><div class="mc-stat__value">${s.campaign_day}/${s.campaign_days}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Started</div><div class="mc-stat__value">${s.campaign_started ? 'Yes' : 'No'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">New participants</div><div class="mc-stat__value">${s.new_participants.toLocaleString()}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Education Leaders</div><div class="mc-stat__value">${s.education_leaders_recruited}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Dashboard live</div><div class="mc-stat__value">${s.campaign_dashboard_live ? 'Yes' : 'No'}</div></div>
+    </div>
+    <h2 class="mc-section-title">${lc.primary_mission.title}</h2>
+    <ol class="mc-deliverables">${lc.primary_mission.objectives.map(o => `<li>${o}</li>`).join('')}</ol>
+    <h2 class="mc-section-title">${lc.campaign_phases.title}</h2>
+    <div class="mc-grid-2">${phaseCards}</div>
+    <h2 class="mc-section-title">${lc.first_100_day_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${lc.first_100_day_dashboard.live ? 'Yes' : 'No'} · Leadership reviews daily: ${lc.first_100_day_dashboard.leadership_reviews_daily ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">${lc.weekly_operations_rhythm.title}</h2>
+    <ul class="mc-deliverables">${lc.weekly_operations_rhythm.activities.map(a => `<li>${a}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${lc.county_challenge.title}</h2>
+    <p class="mc-bar-note">No county left behind: ${lc.county_challenge.no_county_left_behind ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${lc.county_challenge.objectives.map(o => `<li>${o}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${lc.coalition_growth.title}</h2>
+    <ul class="mc-deliverables">${lc.coalition_growth.priority_partnerships.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${lc.volunteer_development.title}</h2>
+    <p class="mc-bar-note">MC tracks progress: ${lc.volunteer_development.mc_tracks_progress ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${lc.volunteer_development.every_new_volunteer_receives.map(v => `<li>${v}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${lc.public_reporting.title}</h2>
+    <p class="mc-bar-note"><strong>${lc.public_reporting.first_100_days_report.title}:</strong> ${lc.public_reporting.first_100_days_report.published ? 'Published' : 'Not published'}</p>
+    <ul class="mc-deliverables">${lc.public_reporting.first_100_days_report.sections.map(sec => `<li>${sec}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${lc.learning_during_launch.title}</h2>
+    <ul class="mc-deliverables">${lc.learning_during_launch.questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${lc.success_definition.title}</h2>
+    <ul class="mc-deliverables">${lc.success_definition.criteria.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${lc.founders_standard.title}</h2>
+    <p class="mc-bar-note">${lc.founders_standard.text}</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${lc.integration.chain}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${lc.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${lc.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${lc.recommended_next_build.number} — ${lc.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${lc.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_LAUNCH_CAMPAIGN_FIRST_100_DAYS.md">MASTER_LAUNCH_CAMPAIGN_FIRST_100_DAYS.md</a> ·
+      <a href="/data/launch-campaign-first-100-days.json">JSON</a> ·
+      <a href="/mission-control/master-launch-plan.html">Launch Plan (#85)</a> ·
+      <a href="/mission-control/arkansas-civic-reach-participation.html">Civic Reach (#86)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

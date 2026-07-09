@@ -1,0 +1,365 @@
+{
+  "version": "1.0",
+  "build": 87,
+  "updated": "2026-07-09",
+  "launch_date": "2027-01-01",
+  "campaign_days": 100,
+  "title": "Master Launch Campaign & First 100 Days Blueprint v1.0",
+  "subtitle": "The First 100 Days",
+  "tagline": "Turning a Platform into a Statewide Movement",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/launch-campaign-first-100-days.html",
+  "constitution": "/docs/MASTER_LAUNCH_CAMPAIGN_FIRST_100_DAYS.md",
+  "purpose": "First 100 days after January 2027 public launch \u2014 coordinated campaign for momentum, trust, volunteers, county leadership, and permanent civic education infrastructure.",
+  "governing_principle": "Launch creates attention. Trust creates institutions. Earn trust one conversation, one county, one volunteer, one coalition partner, one Arkansan at a time.",
+  "primary_mission": {
+    "title": "Primary Mission",
+    "objectives": [
+      "Introduce Citizens United Facts to Arkansas",
+      "Recruit volunteers and Education Leaders",
+      "Build relationships with organizations",
+      "Expand educational participation",
+      "Establish foundation for long-term county growth"
+    ],
+    "every_activity_supports_objectives": true
+  },
+  "campaign_phases": {
+    "title": "Campaign Phases",
+    "phases": [
+      {
+        "phase": 1,
+        "id": "public_awareness",
+        "title": "The First 30 Days \u2014 Public Awareness",
+        "days": "1\u201330",
+        "goals": [
+          "Public website fully operational",
+          "Daily educational content",
+          "Active social media presence",
+          "Email newsletter launched",
+          "Community presentations begin",
+          "Coalition invitations distributed",
+          "Initial media outreach",
+          "Academy enrollment opens"
+        ],
+        "mc_tracks_daily": true,
+        "status": "specified"
+      },
+      {
+        "phase": 2,
+        "id": "community_activation",
+        "title": "Days 31\u201360 \u2014 Community Activation",
+        "days": "31\u201360",
+        "goals": [
+          "Launch community conversations",
+          "Recruit additional county volunteers",
+          "Expand city leadership",
+          "Introduce neighborhood learning circles",
+          "Host online educational events",
+          "Publish additional research",
+          "Grow the volunteer network"
+        ],
+        "broadcasting_to_relationships": true,
+        "status": "specified"
+      },
+      {
+        "phase": 3,
+        "id": "institutional_expansion",
+        "title": "Days 61\u2013100 \u2014 Institutional Expansion",
+        "days": "61\u2013100",
+        "goals": [
+          "Strengthen county leadership teams",
+          "Expand coalition partnerships",
+          "Increase Academy completion",
+          "Identify future mentors",
+          "Improve Mission Control using community feedback",
+          "Publish first Community Pulse Report",
+          "Publish first Institutional Progress Report"
+        ],
+        "launch_to_sustainable_growth": true,
+        "status": "specified"
+      }
+    ],
+    "phases_total": 3,
+    "dedicated_operational_campaign": true
+  },
+  "first_100_day_dashboard": {
+    "title": "First 100-Day Dashboard",
+    "indicators": [
+      {
+        "id": "LC-D01",
+        "indicator": "New participants",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "LC-D02",
+        "indicator": "Volunteer growth",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "LC-D03",
+        "indicator": "Education Leaders recruited",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "LC-D04",
+        "indicator": "County representation",
+        "current": 0,
+        "target": 75,
+        "status": "planned"
+      },
+      {
+        "id": "LC-D05",
+        "indicator": "City representation",
+        "current": 0,
+        "target": 250,
+        "status": "planned"
+      },
+      {
+        "id": "LC-D06",
+        "indicator": "Neighborhood activity",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "LC-D07",
+        "indicator": "Coalition partners",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "LC-D08",
+        "indicator": "Academy enrollment",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "LC-D09",
+        "indicator": "Community conversations",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "LC-D10",
+        "indicator": "Educational resource downloads",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "LC-D11",
+        "indicator": "Progress toward 15% Connected Citizen Goal",
+        "current": 0,
+        "target": 75,
+        "status": "planned"
+      }
+    ],
+    "live": false,
+    "leadership_reviews_daily": true,
+    "status": "planned"
+  },
+  "weekly_operations_rhythm": {
+    "title": "Weekly Operations Rhythm",
+    "activities": [
+      "Research publication",
+      "Educational video or presentation",
+      "Community conversation",
+      "Volunteer onboarding",
+      "Coalition outreach",
+      "Mission Control review",
+      "Leadership meeting",
+      "Community listening review"
+    ],
+    "predictable_operational_rhythm": true,
+    "status": "specified"
+  },
+  "county_challenge": {
+    "title": "County Challenge",
+    "objectives": [
+      "Identifying local volunteers",
+      "Building relationships",
+      "Recruiting Education Leaders",
+      "Scheduling community conversations",
+      "Connecting with local organizations",
+      "Beginning progress toward long-term county goals"
+    ],
+    "no_county_left_behind": true,
+    "status": "specified"
+  },
+  "coalition_growth": {
+    "title": "Coalition Growth",
+    "priority_partnerships": [
+      "Libraries",
+      "Historical societies",
+      "Community colleges",
+      "Universities",
+      "Nonprofits",
+      "Civic organizations",
+      "Community groups"
+    ],
+    "every_partnership_expands_reach": true,
+    "status": "specified"
+  },
+  "volunteer_development": {
+    "title": "Volunteer Development",
+    "every_new_volunteer_receives": [
+      "Orientation",
+      "Academy enrollment",
+      "Mission explanation",
+      "Resource toolkit",
+      "Mentor assignment (when available)",
+      "Leadership pathway"
+    ],
+    "mc_tracks_progress": true,
+    "status": "specified"
+  },
+  "public_reporting": {
+    "title": "Public Reporting",
+    "first_100_days_report": {
+      "title": "The First 100 Days Report",
+      "sections": [
+        "Research completed",
+        "Participants connected",
+        "Counties represented",
+        "Education Leaders",
+        "Community conversations",
+        "Coalition growth",
+        "Lessons learned",
+        "Next priorities"
+      ],
+      "published": false,
+      "transparency_begins_immediately": true
+    },
+    "community_pulse_report": false,
+    "institutional_progress_report": false,
+    "status": "specified"
+  },
+  "learning_during_launch": {
+    "title": "Learning During Launch",
+    "questions": [
+      "What worked?",
+      "What confused people?",
+      "What questions are repeated?",
+      "What resources are missing?",
+      "Which counties need help?",
+      "How can the institution improve?"
+    ],
+    "learning_as_much_as_growing": true,
+    "status": "specified"
+  },
+  "success_definition": {
+    "title": "Success Definition",
+    "criteria": [
+      "Arkansans know the institution exists",
+      "Communities begin using educational resources",
+      "Volunteers begin building local leadership",
+      "Coalition organizations begin collaborating",
+      "Mission Control provides clear operational picture",
+      "Reputation for accuracy, transparency, respectful civic education"
+    ],
+    "status": "specified"
+  },
+  "founders_standard": {
+    "title": "Founder's Standard",
+    "text": "First 100 days are not about becoming the biggest civic education organization \u2014 they are about becoming the most trusted. Every presentation, article, volunteer, conversation, correction, partnership, interaction reinforces: Citizens United Facts is here to help Arkansas understand\u2014not to tell Arkansas what to think.",
+    "most_trusted_not_biggest": true,
+    "help_understand_not_tell_what_to_think": true
+  },
+  "integration": {
+    "chain": "Mission Control \u2192 Education Academy \u2192 Coalition Network \u2192 ACOS \u2192 ArCOS \u2192 ANOS \u2192 Communications \u2192 Volunteer Network",
+    "every_system_participates_in_launch": true,
+    "systems": [
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      },
+      {
+        "system": "Community Education Academy (#68)",
+        "route": "/mission-control/citizen-leadership-academy.html",
+        "status": "live"
+      },
+      {
+        "system": "Coalition Network (#61)",
+        "route": "/mission-control/coalition-network.html",
+        "status": "live"
+      },
+      {
+        "system": "ACOS (#77)",
+        "route": "/mission-control/arkansas-county-operating-system.html",
+        "status": "live"
+      },
+      {
+        "system": "ArCOS (#78)",
+        "route": "/mission-control/arkansas-city-operating-system.html",
+        "status": "live"
+      },
+      {
+        "system": "ANOS (#79)",
+        "route": "/mission-control/arkansas-neighborhood-operating-system.html",
+        "status": "live"
+      },
+      {
+        "system": "Arkansas Communications (#72)",
+        "route": "/mission-control/arkansas-communications.html",
+        "status": "live"
+      },
+      {
+        "system": "Volunteer Network (#75)",
+        "route": "/mission-control/volunteer-funding-constitution.html",
+        "status": "live"
+      },
+      {
+        "system": "Master Launch Plan (#85)",
+        "route": "/mission-control/master-launch-plan.html",
+        "status": "live"
+      },
+      {
+        "system": "Civic Reach (#86)",
+        "route": "/mission-control/arkansas-civic-reach-participation.html",
+        "status": "live"
+      }
+    ]
+  },
+  "long_term_vision": "First 100 days transition launch into sustainable growth. Momentum becomes infrastructure. Attention becomes trust. Platform becomes statewide movement.",
+  "summary": {
+    "launch_date": "2027-01-01",
+    "campaign_days": 100,
+    "campaign_started": false,
+    "campaign_day": 0,
+    "campaign_dashboard_live": false,
+    "new_participants": 0,
+    "volunteer_growth": 0,
+    "education_leaders_recruited": 0,
+    "counties_represented": 0,
+    "cities_represented": 0,
+    "coalition_partners": 0,
+    "community_conversations": 0,
+    "first_100_days_report_published": false,
+    "launch_campaign_first_100_days_readiness_pct": 57,
+    "master_launch_plan_readiness_pct": 54,
+    "civic_reach_readiness_pct": 56,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "First 100-day campaign dashboard not live",
+    "Campaign not started \u2014 pre-launch (Jan 2027 target)",
+    "0/100 campaign days tracked",
+    "0 new participants \u00b7 0 volunteers \u00b7 0 Education Leaders",
+    "0 counties/cities represented during campaign",
+    "First 100 Days Report not published",
+    "Community Pulse Report not published",
+    "Institutional Progress Report not published",
+    "Weekly rhythm specified \u2014 not enforced in MC workflow",
+    "County Challenge not tracked per county",
+    "Volunteer development pipeline not operational",
+    "Build #87 vs Master Launch Plan (#85) \u2014 campaign vs readiness checklist"
+  ],
+  "recommended_next_build": {
+    "number": 88,
+    "title": "First 100 Days Dashboard & Campaign Tracker Components",
+    "note": "Campaign dashboard UI, day counter, phase tracker, weekly rhythm checklist, county challenge tracker, First 100 Days report generator, COMP-* specs."
+  }
+}

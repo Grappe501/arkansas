@@ -13,6 +13,18 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.91.0] - 2026-07-09 — Build #87 Launch Campaign & First 100 Days Blueprint
+
+### Turning a Platform into a Statewide Movement
+- **Master Launch Campaign & First 100 Days Blueprint v1.0** — post-January 2027 operational campaign
+- 5 primary objectives; 3 phases (awareness 1-30, activation 31-60, expansion 61-100)
+- 11-indicator campaign dashboard, weekly rhythm, county challenge, coalition growth, volunteer development
+- First 100 Days Report, learning questions, success definition
+- Founder standard — most trusted, help understand not tell what to think
+- Integrates Launch Plan (#85), Civic Reach (#86), ACOS/ArCOS/ANOS, Academy, Coalition
+- Honest: campaign not started · day 0/100 · dashboard not live · 0 participants · report not published · ~57% readiness
+- MC dashboard: `/mission-control/launch-campaign-first-100-days.html`
+
 ## [1.90.0] - 2026-07-09 — Build #86 Arkansas Civic Reach & Participation Strategy
 
 ### Reaching Every Community — The 15% Arkansas Engagement Framework
