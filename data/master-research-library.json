@@ -1,0 +1,443 @@
+{
+  "version": "1.0",
+  "build": 37,
+  "updated": "2026-07-09",
+  "title": "Master Research Library & Digital Archive v1.0",
+  "subtitle": "Institutional Knowledge Repository",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/research-library.html",
+  "public_route": "/library/",
+  "canonical_archive_route": "/archive/[collection]/[slug]",
+  "current_archive_route": "Evidence registry + /library/ index",
+  "constitution": "/docs/MASTER_RESEARCH_LIBRARY.md",
+  "purpose": "Preserve the documentary record \u2014 largest publicly understandable CU knowledge repository.",
+  "library_philosophy": "Presidential library + university research + constitutional archive + civic education museum.",
+  "governing_principle": "Preserve the record from which the story is told \u2014 evidence never hidden behind conclusions.",
+  "long_term_vision": "Trace every important claim back to underlying documents and evidence.",
+  "master_collections": [
+    {
+      "id": "LIB-COL-A",
+      "letter": "A",
+      "title": "Supreme Court Collection",
+      "slug": "supreme-court",
+      "contains": [
+        "Opinions",
+        "Dissents",
+        "Oral argument transcripts",
+        "Briefs",
+        "Related cases",
+        "Court orders",
+        "Historical notes"
+      ],
+      "annotations": [
+        "Plain-language summary",
+        "Historical significance",
+        "Related lessons",
+        "Related encyclopedia entries"
+      ],
+      "status": "partial",
+      "documents_archived": 1,
+      "documents_planned": 85,
+      "completion_pct": 1.2
+    },
+    {
+      "id": "LIB-COL-B",
+      "letter": "B",
+      "title": "Federal Law Collection",
+      "slug": "federal-law",
+      "contains": [
+        "Campaign finance statutes",
+        "Federal regulations",
+        "Congressional reports",
+        "Legislative history",
+        "Committee materials",
+        "Hearing transcripts"
+      ],
+      "annotations": [
+        "Educational annotations per document"
+      ],
+      "status": "partial",
+      "documents_archived": 3,
+      "documents_planned": 60,
+      "completion_pct": 5.0
+    },
+    {
+      "id": "LIB-COL-C",
+      "letter": "C",
+      "title": "Arkansas Collection",
+      "slug": "arkansas",
+      "contains": [
+        "Arkansas statutes",
+        "Arkansas constitutional provisions",
+        "Ballot initiative materials",
+        "Legislative history",
+        "Educational resources",
+        "Arkansas election law references"
+      ],
+      "annotations": [
+        "Arkansas-specific foundation"
+      ],
+      "status": "planned",
+      "documents_archived": 0,
+      "documents_planned": 45,
+      "completion_pct": 0.0
+    },
+    {
+      "id": "LIB-COL-D",
+      "letter": "D",
+      "title": "Historical Collection",
+      "slug": "historical",
+      "contains": [
+        "Campaign finance history",
+        "Reform movements",
+        "Watergate resources",
+        "Progressive Era materials",
+        "Major historical timelines",
+        "Significant political developments"
+      ],
+      "annotations": [
+        "Historical context for Citizens United"
+      ],
+      "status": "partial",
+      "documents_archived": 1,
+      "documents_planned": 70,
+      "completion_pct": 1.4
+    },
+    {
+      "id": "LIB-COL-E",
+      "letter": "E",
+      "title": "Academic Collection",
+      "slug": "academic",
+      "contains": [
+        "Law review articles",
+        "Peer-reviewed research",
+        "University publications",
+        "Empirical studies",
+        "Constitutional scholarship"
+      ],
+      "annotations": [
+        "Citation",
+        "Abstract",
+        "Educational summary",
+        "Related topics"
+      ],
+      "status": "planned",
+      "documents_archived": 0,
+      "documents_planned": 55,
+      "completion_pct": 0.0
+    },
+    {
+      "id": "LIB-COL-F",
+      "letter": "F",
+      "title": "Data Collection",
+      "slug": "data",
+      "contains": [
+        "Political spending datasets",
+        "Independent expenditure reports",
+        "Election finance statistics",
+        "Disclosure reports",
+        "Government data"
+      ],
+      "annotations": [
+        "Methodology",
+        "Definitions",
+        "Limitations",
+        "Educational significance"
+      ],
+      "status": "planned",
+      "documents_archived": 0,
+      "documents_planned": 40,
+      "completion_pct": 0.0
+    },
+    {
+      "id": "LIB-COL-G",
+      "letter": "G",
+      "title": "Public Education Collection",
+      "slug": "public-education",
+      "contains": [
+        "Presentation slides",
+        "Handouts",
+        "Infographics",
+        "Discussion guides",
+        "Community conversation materials",
+        "Educational videos"
+      ],
+      "annotations": [
+        "Education Leaders and coalition partners"
+      ],
+      "status": "partial",
+      "documents_archived": 9,
+      "documents_planned": 50,
+      "completion_pct": 18.0
+    }
+  ],
+  "archive_organization": {
+    "id_format": "LIB-{collection}-{6-digit}",
+    "evidence_id_format": "EV-{6-digit}",
+    "fields": [
+      "Archive ID",
+      "MRID",
+      "Collection",
+      "Category",
+      "Subject",
+      "Keywords",
+      "Publication date",
+      "Review date",
+      "Source level",
+      "Related entries"
+    ],
+    "searchable": true,
+    "status": "partial"
+  },
+  "relationship_engine": {
+    "title": "Library Relationship Engine",
+    "status": "partial",
+    "targets": [
+      "Encyclopedia entries",
+      "Educational lessons",
+      "Supreme Court cases",
+      "Historical events",
+      "Data visualizations",
+      "Community education resources",
+      "Coalition toolkits",
+      "Arkansas content"
+    ],
+    "evidence_registry": "/data/evidence-registry.json",
+    "knowledge_graph": "/data/kg-registry.json",
+    "kg_nodes": 38
+  },
+  "research_workspace": {
+    "title": "Research Workspace",
+    "status": "planned",
+    "tools": [
+      {
+        "id": "LIB-RW-01",
+        "title": "Save documents",
+        "status": "planned"
+      },
+      {
+        "id": "LIB-RW-02",
+        "title": "Build reading lists",
+        "status": "planned"
+      },
+      {
+        "id": "LIB-RW-03",
+        "title": "Bookmark sources",
+        "status": "planned"
+      },
+      {
+        "id": "LIB-RW-04",
+        "title": "Compare materials",
+        "status": "planned"
+      },
+      {
+        "id": "LIB-RW-05",
+        "title": "Track research progress",
+        "status": "planned"
+      },
+      {
+        "id": "LIB-RW-06",
+        "title": "Export citations",
+        "status": "planned"
+      }
+    ]
+  },
+  "reading_lists": [
+    {
+      "id": "LIB-RL-01",
+      "title": "Beginner Collection",
+      "focus": "Introductory materials",
+      "status": "partial",
+      "route": "/start-here/"
+    },
+    {
+      "id": "LIB-RL-02",
+      "title": "Constitutional Collection",
+      "focus": "First Amendment and jurisprudence",
+      "status": "partial",
+      "route": "/halls/what-court-decided.html"
+    },
+    {
+      "id": "LIB-RL-03",
+      "title": "Historical Collection",
+      "focus": "Campaign finance history",
+      "status": "partial",
+      "route": "/halls/story-before.html"
+    },
+    {
+      "id": "LIB-RL-04",
+      "title": "Arkansas Collection",
+      "focus": "Arkansas-specific resources",
+      "status": "planned",
+      "route": "/solutions/#arkansas"
+    },
+    {
+      "id": "LIB-RL-05",
+      "title": "Research Collection",
+      "focus": "Primary sources and advanced scholarship",
+      "status": "partial",
+      "route": "/library/"
+    }
+  ],
+  "digital_preservation": {
+    "title": "Digital Preservation",
+    "status": "partial",
+    "fields": [
+      "Metadata",
+      "Review history",
+      "Version history",
+      "Source availability",
+      "Educational summaries"
+    ],
+    "official_links_maintained": "partial"
+  },
+  "search_discovery": {
+    "title": "Search & Discovery",
+    "status": "planned",
+    "axes": [
+      "Keyword",
+      "Topic",
+      "Person",
+      "Court case",
+      "Law",
+      "Historical period",
+      "Arkansas content",
+      "Collection",
+      "Document type",
+      "Source level"
+    ],
+    "note": "Educational relevance and transparency over keyword matching only."
+  },
+  "library_dashboard_metrics": [
+    {
+      "id": "LIB-M01",
+      "title": "Documents archived",
+      "status": "partial",
+      "current": 14
+    },
+    {
+      "id": "LIB-M02",
+      "title": "Collections with content",
+      "status": "partial",
+      "current": 4
+    },
+    {
+      "id": "LIB-M03",
+      "title": "Sources verified",
+      "status": "partial",
+      "current": 10
+    },
+    {
+      "id": "LIB-M04",
+      "title": "Research summaries published",
+      "status": "partial",
+      "current": 14
+    },
+    {
+      "id": "LIB-M05",
+      "title": "Documents awaiting review",
+      "status": "partial",
+      "current": 4
+    },
+    {
+      "id": "LIB-M06",
+      "title": "Broken external links",
+      "status": "planned",
+      "current": 0
+    },
+    {
+      "id": "LIB-M07",
+      "title": "Archive growth (month)",
+      "status": "planned",
+      "current": 0
+    },
+    {
+      "id": "LIB-M08",
+      "title": "Reader usage",
+      "status": "planned",
+      "current": 0
+    }
+  ],
+  "future_expansion": [
+    "Audio recordings",
+    "Educational podcasts",
+    "Interactive exhibits",
+    "Video archives",
+    "Oral histories",
+    "Additional civic education topics"
+  ],
+  "evidence_alignment": {
+    "registry": "/data/evidence-registry.json",
+    "items_mapped": 14,
+    "v1_target": 500,
+    "research_gaps": [
+      "Buckley v. Valeo primary opinion",
+      "McConnell v. FEC materials",
+      "FEC spending datasets (2010-present)",
+      "Peer-reviewed campaign finance scholarship",
+      "Oral argument transcripts (Citizens United)",
+      "State reform legislative text beyond MT/HI"
+    ]
+  },
+  "related_systems": [
+    {
+      "title": "Evidence Registry",
+      "route": "/data/evidence-registry.json",
+      "build": 10
+    },
+    {
+      "title": "Trust Framework",
+      "route": "/data/trust-framework.json",
+      "build": 36
+    },
+    {
+      "title": "Encyclopedia",
+      "route": "/data/encyclopedia-knowledge-library.json",
+      "build": 33
+    },
+    {
+      "title": "Research Observatory",
+      "route": "/mission-control/research-observatory.html",
+      "build": 29
+    },
+    {
+      "title": "Facts Registry",
+      "route": "/data/facts-registry.json",
+      "build": 18
+    },
+    {
+      "title": "Source Library",
+      "route": "/library/",
+      "build": 10
+    }
+  ],
+  "summary": {
+    "collections_total": 7,
+    "documents_archived": 14,
+    "documents_planned": 405,
+    "archive_completion_pct": 3.5,
+    "collections_with_content": 4,
+    "reading_lists": 5,
+    "search_axes": 10,
+    "workspace_live": false,
+    "archive_search_live": false,
+    "canonical_routes_live": false,
+    "library_readiness_pct": 22
+  },
+  "catalog_gaps": [
+    "Canonical /archive/[collection]/[slug] routes not built",
+    "14/405 planned documents \u2014 3.5% archive completion",
+    "Collections C, E, F largely empty \u2014 Arkansas and academic gaps",
+    "Research workspace (save, bookmark, export) not implemented",
+    "Archive search not built \u2014 browse via evidence registry only",
+    "Oral arguments, briefs, FEC datasets not in archive",
+    "Digital preservation version history not per-document",
+    "Broken link monitoring not automated"
+  ],
+  "recommended_next_build": {
+    "number": 38,
+    "title": "Component Specifications with Props/States",
+    "note": "Map library collections, archive cards, and reading lists to COMP-* from Build #17."
+  }
+}

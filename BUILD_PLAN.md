@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.40.0 · **Trust OS:** [/mission-control/trust.html](/mission-control/trust.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #36:** ✅ Trust Framework · **Build #35:** ✅ Curriculum · **Build #34:** ✅ Narrative  
+**Current version:** 1.41.0 · **Research Library:** [/mission-control/research-library.html](/mission-control/research-library.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #37:** ✅ Research Library · **Build #36:** ✅ Trust Framework · **Build #35:** ✅ Curriculum  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,11 +274,27 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **37** | **Master Research Library** | **✅ v1.41.0** |
 | **36** | **Trust Framework** | **✅ v1.40.0** |
 | **35** | **Master Curriculum** | **✅ v1.39.0** |
-| **34** | **Narrative Architecture** | **✅ v1.38.0** |
 
-**Next:** Build #37 — Component specifications with props/states.
+**Next:** Build #38 — Component specifications with props/states.
+
+---
+
+## Phase 37 — Master Research Library (Build #37) ★ NEW
+
+*Institutional knowledge repository — preserve don't summarize.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| R1 | Knowledge Repository Blueprint v1.0 | ✅ | `data/master-research-library.json` |
+| R2 | 7 master collections A–G | ✅ | SCOTUS through Public Education |
+| R3 | Archive organization + relationship engine | ✅ | EV-ID aligned |
+| R4 | 5 reading lists + research workspace schema | ✅ | Workspace planned |
+| R5 | Search & discovery axes (10) | ✅ | Search planned |
+| R6 | Library dashboard metrics (8) | ✅ | MC tracking |
+| R7 | MC research library dashboard | ✅ | `/mission-control/research-library.html` |
 
 ---
 
@@ -686,7 +702,8 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#34**~~ | ~~Storytelling & Narrative Architecture~~ ✅ Done |
 | ~~**#35**~~ | ~~Master Curriculum & Learning Standards~~ ✅ Done |
 | ~~**#36**~~ | ~~Evidence, Transparency & Trust Framework~~ ✅ Done |
-| **#37** | **Component specifications with props/states** |
+| ~~**#37**~~ | ~~Master Research Library & Digital Archive~~ ✅ Done |
+| **#38** | **Component specifications with props/states** |
 
 ---
 

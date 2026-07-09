@@ -234,7 +234,7 @@ out = {
         f'Only {fs.get("verified", 0)}/{fs.get("total", 0)} facts verified — {es.get("citation_coverage_pct", 0)}% citation coverage',
     ],
     'recommended_next_build': {
-        'number': 37,
+        'number': 38,
         'title': 'Component Specifications with Props/States',
         'note': 'Map trust panels, evidence levels, and transparency standards to COMP-* from Build #17.',
     },

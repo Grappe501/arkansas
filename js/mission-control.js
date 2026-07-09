@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Master Research Library <a href="/mission-control/research-library.html" class="mc-inline-link">7 Collections →</a></h2>
+    <p class="mc-bar-note">Build #37 — Digital archive A–G, reading lists, relationship engine. Preserve don't summarize. 22% library readiness.</p>
     <h2 class="mc-section-title">Trust Framework <a href="/mission-control/trust.html" class="mc-inline-link">Public Trust OS →</a></h2>
     <p class="mc-bar-note">Build #36 — Evidence, transparency, trust pyramid, A–D evidence levels. v2 DB: Netlify or Neon. 24% trust readiness.</p>
     <h2 class="mc-section-title">Master Curriculum <a href="/mission-control/curriculum.html" class="mc-inline-link">6 Tiers →</a></h2>
@@ -3615,6 +3617,106 @@ async function initTrustFramework() {
   initDevConsole(mc);
 }
 
+async function initMasterResearchLibrary() {
+  const root = document.getElementById('mc-research-library-root');
+  if (!root) return;
+
+  const [libRes, evRes, mcRes] = await Promise.all([
+    fetch('/data/master-research-library.json'),
+    fetch('/data/evidence-registry.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const lib = await libRes.json();
+  const ev = await evRes.json();
+  const mc = await mcRes.json();
+  const s = lib.summary;
+
+  const collectionRows = lib.master_collections.map(c => `
+    <tr><td><code>${c.id}</code></td><td>${c.letter}</td><td>${c.title}</td>
+      <td>${c.documents_archived}/${c.documents_planned}</td><td>${c.completion_pct}%</td><td>${c.status}</td></tr>`).join('');
+
+  const collectionCards = lib.master_collections.map(c => `
+    <div class="mc-card"><h3>Collection ${c.letter}: ${c.title}</h3>
+      <p class="mc-bar-note">${c.documents_archived}/${c.documents_planned} documents · ${c.status}</p>
+      <ul class="mc-deliverables">${c.contains.map(x => `<li>${x}</li>`).join('')}</ul>
+    </div>`).join('');
+
+  const listRows = lib.reading_lists.map(r => `
+    <tr><td><code>${r.id}</code></td><td>${r.title}</td><td>${r.focus}</td>
+      <td><a href="${r.route}">${r.route}</a></td><td>${r.status}</td></tr>`).join('');
+
+  const metricRows = lib.library_dashboard_metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('');
+
+  const workspaceRows = lib.research_workspace.tools.map(t => `
+    <tr><td><code>${t.id}</code></td><td>${t.title}</td><td>${t.status}</td></tr>`).join('');
+
+  const evSample = (ev.items || []).slice(0, 10).map(i => `
+    <tr><td><code>${i.ev_id}</code></td><td>${i.title}</td><td>${i.source_type}</td>
+      <td>${i.review_status || '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Master Research Library</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #37 · ${lib.title}</p>
+      <h1>Master Research Library & Digital Archive</h1>
+      <p class="mc-header__question">${lib.governing_principle}</p>
+      <p class="mc-bar-note">Public: <a href="${lib.public_route}">${lib.public_route}</a> · Canonical: <code>${lib.canonical_archive_route}</code></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Library readiness</div><div class="mc-stat__value">${s.library_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Archived</div><div class="mc-stat__value">${s.documents_archived}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Planned</div><div class="mc-stat__value">${s.documents_planned}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Completion</div><div class="mc-stat__value">${s.archive_completion_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Collections</div><div class="mc-stat__value">${s.collections_with_content}/7</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Workspace</div><div class="mc-stat__value">${s.workspace_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Library Philosophy</h2>
+    <p class="mc-bar-note">${lib.library_philosophy}</p>
+    <h2 class="mc-section-title">Master Collections A–G</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Col</th><th>Collection</th><th>Docs</th><th>Complete</th><th>Status</th></tr></thead>
+      <tbody>${collectionRows}</tbody></table>
+    <div class="mc-grid-2">${collectionCards}</div>
+    <h2 class="mc-section-title">Archive Organization</h2>
+    <ul class="mc-deliverables">${lib.archive_organization.fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <p class="mc-bar-note">ID: ${lib.archive_organization.id_format} · Evidence: ${lib.archive_organization.evidence_id_format}</p>
+    <h2 class="mc-section-title">Relationship Engine</h2>
+    <ul class="mc-deliverables">${lib.relationship_engine.targets.map(t => `<li>${t}</li>`).join('')}</ul>
+    <p class="mc-bar-note">${lib.relationship_engine.kg_nodes} KG nodes linked</p>
+    <h2 class="mc-section-title">Curated Reading Lists</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>List</th><th>Focus</th><th>Route</th><th>Status</th></tr></thead>
+      <tbody>${listRows}</tbody></table>
+    <h2 class="mc-section-title">Research Workspace</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Tool</th><th>Status</th></tr></thead>
+      <tbody>${workspaceRows}</tbody></table>
+    <h2 class="mc-section-title">Search Axes (${s.search_axes})</h2>
+    <ul class="mc-deliverables">${lib.search_discovery.axes.map(a => `<li>${a}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Library Dashboard Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Evidence Registry (sample)</h2>
+    <div class="mc-card mc-inv-table-wrap" style="max-height:280px;overflow-y:auto">
+      <table class="mc-table"><thead><tr><th>EV ID</th><th>Title</th><th>Type</th><th>Review</th></tr></thead>
+        <tbody>${evSample}</tbody></table>
+    </div>
+    <h2 class="mc-section-title">Research Gaps</h2>
+    <ul class="mc-deliverables">${lib.evidence_alignment.research_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${lib.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${lib.recommended_next_build.number} — ${lib.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${lib.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_RESEARCH_LIBRARY.md">MASTER_RESEARCH_LIBRARY.md</a> ·
+      <a href="/data/master-research-library.json">JSON</a> ·
+      <a href="/data/evidence-registry.json">Evidence Registry</a> ·
+      <a href="/library/">Source Library</a> ·
+      <a href="/mission-control/trust.html">Trust Framework</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -3650,4 +3752,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initNarrativeArchitecture();
   initMasterCurriculum();
   initTrustFramework();
+  initMasterResearchLibrary();
 });

@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.41.0] - 2026-07-09 — Build #37 Master Research Library
+
+### Institutional Knowledge Repository
+- **Master Research Library & Digital Archive v1.0** — 7 collections A–G
+- Archive organization, relationship engine, 5 reading lists, research workspace schema
+- 14 evidence items mapped — 405 documents planned (3.5% completion)
+- 22% honest readiness — workspace and archive search not built
+- MC dashboard: `/mission-control/research-library.html`
+
 ## [1.40.0] - 2026-07-09 — Build #36 Trust Framework
 
 ### Public Trust Operating System

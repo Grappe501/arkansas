@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#37** | **Master Research Library** | **1.41.0** | **✅ Complete** | [037](037-master-research-library.md) · [/mission-control/research-library.html](../mission-control/research-library.html) |
 | **#36** | **Trust Framework** | **1.40.0** | **✅ Complete** | [036](036-evidence-transparency-trust.md) · [/mission-control/trust.html](../mission-control/trust.html) |
 | **#35** | **Master Curriculum** | **1.39.0** | **✅ Complete** | [035](035-master-curriculum.md) · [/mission-control/curriculum.html](../mission-control/curriculum.html) |
 | **#34** | **Narrative Architecture** | **1.38.0** | **✅ Complete** | [034](034-narrative-architecture.md) · [/mission-control/narrative.html](../mission-control/narrative.html) |
@@ -56,6 +57,7 @@
 | **Narrative Architecture** | `/mission-control/narrative.html` | **8 acts · 4 layers · documentary museum** |
 | **Master Curriculum** | `/mission-control/curriculum.html` | **6 tiers · 6 paths · learning standards** |
 | **Trust Framework** | `/mission-control/trust.html` | **Trust pyramid · evidence A–D · DB decision** |
+| **Master Research Library** | `/mission-control/research-library.html` | **7 collections A–G · digital archive** |
 | Phase Registry | `/mission-control/phases.html` | Project phases |
 | Site Architecture | `/mission-control/architecture.html` | Information architecture (IA) |
 | **Platform Blueprint** | `/mission-control/platform.html` | **Technical architecture · v1 system** |

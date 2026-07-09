@@ -55,6 +55,6 @@ Earn trust through transparency — give readers tools to investigate, not press
 
 ---
 
-## Recommended Next: Build #37 — Component Specifications with Props/States
+## Recommended Next: Build #38 — Component Specifications with Props/States
 
 Map trust panels, evidence levels, and transparency standards to COMP-* from Build #17.
