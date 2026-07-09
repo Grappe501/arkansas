@@ -41,7 +41,8 @@ Opens a local server at `http://localhost:8080`.
 ## Deployment
 
 - **GitHub:** [Grappe501/arkansas](https://github.com/Grappe501/arkansas)
-- **Netlify:** Connected for automatic deploys on push to `main`
+- **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
+- **Netlify:** Auto-deploys on push to `main`
 
 ## Versioning
 

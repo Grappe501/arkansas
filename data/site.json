@@ -2,7 +2,9 @@
   "site": {
     "title": "Citizens Facts",
     "tagline": "Tracking Citizens United reform, ballot initiatives, and democratic finance policy",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "url": "https://arkansas-facts.netlify.app",
+    "github": "https://github.com/Grappe501/arkansas"
   },
   "tracks": [
     {
