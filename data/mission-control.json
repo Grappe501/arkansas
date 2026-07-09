@@ -1,5 +1,5 @@
 {
-  "version": "1.16.0",
+  "version": "1.16.1",
   "build": 12,
   "updated": "2026-07-09",
   "identity": {
@@ -12,9 +12,9 @@
     "overall_completion": 12,
     "current_build": {
       "number": 12,
-      "title": "Civic Action Ecosystem & Leadership Development System"
+      "title": "Arkansas Civic Action Ecosystem & Leadership Development System"
     },
-    "active_phase": "Civic Action Platform",
+    "active_phase": "Arkansas Civic Action Platform",
     "last_completed": "Citizens United Knowledge Graph & Educational Intelligence Architecture",
     "next_build": {
       "number": 13,
@@ -35,7 +35,7 @@
       "id": "overall",
       "label": "Overall Platform Completion",
       "value": 12,
-      "note": "Nine frameworks live. Civic Growth Ladder + ladder-aware Action Hub. Deep content next."
+      "note": "Nine frameworks live. Arkansas Education Ladder + county dashboard. Deep content next."
     },
     {
       "id": "constitution",
@@ -95,13 +95,13 @@
       "id": "signup",
       "label": "Signup Funnel Completion",
       "value": 12,
-      "note": "Civic Participation Constitution: 7-level ladder, participant schema v1.5, community conversation scaffold."
+      "note": "Arkansas Participation Constitution: 7-level ladder, 75-county scaffold, participant schema v1.6."
     },
     {
       "id": "action_hub",
       "label": "Floating Action Hub Completion",
       "value": 18,
-      "note": "11 hub actions gated by civic growth level. civic-profile.js tracks participation signals."
+      "note": "11 Arkansas Action Hub actions gated by education level. civic-profile.js tracks county + signals."
     },
     {
       "id": "relational",
@@ -518,7 +518,7 @@
     },
     {
       "id": "civic_ecosystem",
-      "label": "Civic Ecosystem",
+      "label": "Arkansas Civic Ecosystem",
       "href": "/mission-control/civic-ecosystem.html",
       "status": "complete"
     }
@@ -1548,15 +1548,16 @@
   "builds": [
     {
       "number": 12,
-      "title": "Civic Action Ecosystem & Leadership Development System",
-      "version": "1.16.0",
+      "title": "Arkansas Civic Action Ecosystem & Leadership Development System",
+      "version": "1.16.1",
       "status": "complete",
       "started": "2026-07-09",
       "completed": "2026-07-09",
-      "purpose": "Civic Participation Constitution \u2014 educate first, voluntary leadership network",
-      "summary": "7-level Civic Growth Ladder, 11 ladder-aware hub actions, community conversation program, leadership dashboard, participant schema v1.5.",
+      "purpose": "Arkansas Civic Participation Constitution \u2014 educate first, Arkansas pilot state",
+      "summary": "Arkansas Education Ladder (7 levels), 75-county participation table, Arkansas Action Hub, community conversation program, leadership dashboard, participant schema v1.6.",
       "files_created": [
         "data/civic-ecosystem.json",
+        "data/arkansas-counties.json",
         "docs/CIVIC_PARTICIPATION_CONSTITUTION.md",
         "builds/012-civic-action-ecosystem.md",
         "js/civic-profile.js",
@@ -1575,13 +1576,14 @@
         "/action/community-conversation.html"
       ],
       "decisions_made": [
-        "7-level Civic Growth Ladder governs hub action visibility",
+        "Arkansas as pilot state \u2014 prove model in 75 counties before expansion",
+        "7-level Arkansas Education Ladder governs hub action visibility",
         "Education before action \u2014 min_level gates on all hub actions",
-        "Leadership metrics measure educational network, not political wins",
-        "Community Conversation as dedicated program route"
+        "County-level participation tracking for outreach planning"
       ],
       "open_questions": [
         "Backend for unified participant profiles?",
+        "Interactive Arkansas county map vs. table?",
         "Civic education certification timeline?"
       ],
       "risks": [
@@ -2008,19 +2010,19 @@
     }
   ],
   "briefing": {
-    "what_built": "Civic Participation Constitution v1.0 \u2014 growth ladder, ladder-aware hub, leadership dashboard",
-    "building_now": "Civic ecosystem ready \u2014 deep content and facilitator materials next (Build #13)",
+    "what_built": "Arkansas Civic Participation Constitution v1.0 \u2014 Education Ladder, county dashboard, Arkansas Action Hub",
+    "building_now": "Arkansas civic ecosystem ready \u2014 deep Arkansas content next (Build #13)",
     "blocked": [
       "Participant profile backend",
       "County coordinators",
-      "Certification program"
+      "Interactive county map"
     ],
     "ready_public": [
-      "Action Hub 11 actions",
+      "Arkansas Action Hub 11 actions",
       "Community conversation page",
-      "Civic level display in hub"
+      "75-county table in Mission Control"
     ],
-    "next": "Build #13 \u2014 First Deep Content with KG-IDs, Evidence IDs, ds-* components"
+    "next": "Build #13 \u2014 First Deep Content with KG-IDs, Evidence IDs, Arkansas-focused articles"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -2055,5 +2057,7 @@
   "kg_registry": "/data/kg-registry.json",
   "knowledge_graph_route": "/mission-control/knowledge-graph.html",
   "civic_ecosystem": "/data/civic-ecosystem.json",
-  "civic_ecosystem_route": "/mission-control/civic-ecosystem.html"
+  "civic_ecosystem_route": "/mission-control/civic-ecosystem.html",
+  "arkansas_counties": "/data/arkansas-counties.json",
+  "pilot_state": "Arkansas"
 }

@@ -2,7 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
-| **#12** | **Civic Action Ecosystem** | **1.16.0** | **✅ Complete** | [012](012-civic-action-ecosystem.md) · [/mission-control/civic-ecosystem.html](../mission-control/civic-ecosystem.html) |
+| **#12** | **Arkansas Civic Ecosystem** | **1.16.1** | **✅ Complete** | [012](012-civic-action-ecosystem.md) · [/mission-control/civic-ecosystem.html](../mission-control/civic-ecosystem.html) |
 | **#11** | **Knowledge Graph & Intelligence** | **1.15.0** | **✅ Complete** | [011](011-knowledge-graph.md) · [/mission-control/knowledge-graph.html](../mission-control/knowledge-graph.html) |
 | **#10** | **Research & Evidence Framework** | **1.14.0** | **✅ Complete** | [010](010-master-research-evidence-framework.md) · [/mission-control/research.html](../mission-control/research.html) |
 | **#9** | **Visual Design System** | **1.13.0** | **✅ Complete** | [009](009-visual-design-system.md) · [/design-system/](../design-system/) |
@@ -24,8 +24,8 @@
 | Design Language | `/mission-control/design.html` | Visual system |
 | Research Constitution | `/mission-control/research.html` | Evidence & sources |
 | **Knowledge Graph** | `/mission-control/knowledge-graph.html` | Connected knowledge |
-| **Civic Ecosystem** | `/mission-control/civic-ecosystem.html` | **Leadership & participation** |
+| **Civic Ecosystem** | `/mission-control/civic-ecosystem.html` | **Arkansas leadership & counties** |
 
-## Civic Rule (Build #12)
+## Arkansas Rule (Build #12)
 
-Educate first — never ask action before understanding. Seven-level Civic Growth Ladder governs the Action Hub. Success = people who help others learn.
+Arkansas is the pilot. Prove the model in 75 counties before expanding. Success = informed Arkansans who help others learn in their communities.

@@ -1,11 +1,25 @@
 /**
- * Civic Profile — Civic Growth Ladder v1.0 (Build #12)
- * Client-side level estimation from participation signals.
+ * Civic Profile — Arkansas Education Ladder v1.1 (Build #12)
  */
 
 const CIVIC_PREFIX = 'cf_civic_';
 
-const LEVEL_ORDER = ['visitor', 'subscriber', 'advocate', 'educator', 'regional_leader', 'research_contributor', 'national_leader'];
+const LEVEL_ORDER = [
+  'visitor',
+  'subscriber',
+  'community_supporter',
+  'educator',
+  'county_leader',
+  'ar_research_contributor',
+  'education_council'
+];
+
+const LEGACY_MAP = {
+  advocate: 'community_supporter',
+  regional_leader: 'county_leader',
+  research_contributor: 'ar_research_contributor',
+  national_leader: 'education_council'
+};
 
 function civicGet(key, fallback = null) {
   try {
@@ -20,27 +34,45 @@ function civicSet(key, value) {
   localStorage.setItem(CIVIC_PREFIX + key, JSON.stringify(value));
 }
 
+function normalizeLevel(level) {
+  return LEGACY_MAP[level] || level;
+}
+
 function estimateCivicLevel() {
   const explicit = civicGet('level');
-  if (explicit && LEVEL_ORDER.includes(explicit)) return explicit;
+  if (explicit) {
+    const norm = normalizeLevel(explicit);
+    if (LEVEL_ORDER.includes(norm)) return norm;
+  }
 
   const joinedNetwork = localStorage.getItem('cf_joined_network') === 'true';
   const educationLead = localStorage.getItem('cf_education_lead') === 'true';
   const shareCount = parseInt(localStorage.getItem('cf_share_count') || '0', 10);
   const halls = JSON.parse(localStorage.getItem('cf_halls_visited') || '[]');
   const hostedConversation = civicGet('hosted_conversation', false);
+  const countyLeader = civicGet('county_leader', false);
 
+  if (countyLeader) return 'county_leader';
   if (educationLead && hostedConversation) return 'educator';
   if (educationLead) return 'educator';
-  if (shareCount >= 2 || localStorage.getItem('cf_invites_sent')) return 'advocate';
+  if (shareCount >= 2 || localStorage.getItem('cf_invites_sent')) return 'community_supporter';
   if (joinedNetwork) return 'subscriber';
   if (halls.length >= 1) return 'visitor';
   return 'visitor';
 }
 
 function civicLevelNumber(level) {
-  const idx = LEVEL_ORDER.indexOf(level);
+  const norm = normalizeLevel(level || estimateCivicLevel());
+  const idx = LEVEL_ORDER.indexOf(norm);
   return idx >= 0 ? idx + 1 : 1;
+}
+
+function getArkansasCounty() {
+  return localStorage.getItem('cf_arkansas_county') || null;
+}
+
+function setArkansasCounty(county) {
+  if (county) localStorage.setItem('cf_arkansas_county', county);
 }
 
 function trackShare() {
@@ -63,6 +95,9 @@ function trackConversationHost() {
 window.CivicProfile = {
   estimateCivicLevel,
   civicLevelNumber,
+  normalizeLevel,
+  getArkansasCounty,
+  setArkansasCounty,
   trackShare,
   trackNetworkJoin,
   trackEducationLead,

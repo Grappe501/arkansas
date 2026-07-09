@@ -4,11 +4,11 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.16.0 · **Civic Ecosystem:** [/mission-control/civic-ecosystem.html](/mission-control/civic-ecosystem.html) · **OS:** [Mission Control](/mission-control/)  
+**Current version:** 1.16.1 · **Arkansas Civic:** [/mission-control/civic-ecosystem.html](/mission-control/civic-ecosystem.html) · **OS:** [Mission Control](/mission-control/)  
 **Build #12:** ✅ Civic Ecosystem · **Build #11:** ✅ Knowledge Graph · **Build #10:** ✅ Research  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
-> **Nine frameworks:** Phase · Architecture · Content · MRID · Journey · Design · Research · Knowledge Graph · **Civic Ecosystem**
+> **Arkansas pilot (v1):** All civic action frameworks scoped to Arkansas first — modular for future states.
 
 ---
 

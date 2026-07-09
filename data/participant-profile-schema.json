@@ -1,9 +1,19 @@
 {
-  "version": "1.5.0",
+  "version": "1.6.0",
   "build": 12,
-  "description": "Unified participant profile — Civic Growth Ladder v1.0",
+  "scope": "arkansas",
+  "description": "Arkansas participant profile — county-centric civic education ladder",
   "civic_growth_ladder": {
-    "levels": ["visitor", "subscriber", "advocate", "educator", "regional_leader", "research_contributor", "national_leader"],
+    "title": "Arkansas Education Ladder",
+    "levels": [
+      "visitor",
+      "subscriber",
+      "community_supporter",
+      "educator",
+      "county_leader",
+      "ar_research_contributor",
+      "education_council"
+    ],
     "tracker": "/js/civic-profile.js",
     "constitution": "/docs/CIVIC_PARTICIPATION_CONSTITUTION.md"
   },
@@ -11,7 +21,7 @@
     "participant_id": { "type": "string", "generated": true },
     "civic_growth_level": {
       "type": "string",
-      "enum": ["visitor", "subscriber", "advocate", "educator", "regional_leader", "research_contributor", "national_leader"],
+      "enum": ["visitor", "subscriber", "community_supporter", "educator", "county_leader", "ar_research_contributor", "education_council"],
       "default": "visitor"
     },
     "civic_growth_level_number": { "type": "integer", "min": 1, "max": 7 },
@@ -20,8 +30,8 @@
       "email": "string",
       "phone": "string",
       "city": "string",
-      "state": "string",
       "county": "string",
+      "state": { "type": "string", "default": "Arkansas" },
       "zip": "string"
     },
     "learning_progress": {
@@ -53,7 +63,7 @@
     "research_contributions": {
       "sources_submitted": ["string"],
       "reviews_completed": ["string"],
-      "local_knowledge": ["string"]
+      "arkansas_developments": ["string"]
     }
   }
 }

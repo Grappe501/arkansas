@@ -1,6 +1,6 @@
 # Civic Action Layer
 
-> **Civic Participation Constitution v1.0:** [CIVIC_PARTICIPATION_CONSTITUTION.md](CIVIC_PARTICIPATION_CONSTITUTION.md) · **Dashboard:** [/mission-control/civic-ecosystem.html](/mission-control/civic-ecosystem.html) · **Blueprint:** `data/civic-ecosystem.json`
+> **Arkansas Civic Participation Constitution v1.0:** [CIVIC_PARTICIPATION_CONSTITUTION.md](CIVIC_PARTICIPATION_CONSTITUTION.md) · **Dashboard:** [/mission-control/civic-ecosystem.html](/mission-control/civic-ecosystem.html) · **Counties:** `data/arkansas-counties.json`
 
 > **Platform evolution:** Knowledge website → Civic organizing platform
 

@@ -1,35 +1,39 @@
-# Build #12 — Civic Action Ecosystem & Leadership Development System
+# Build #12 — Arkansas Civic Action Ecosystem & Leadership Development System
 
 **Status:** ✅ Complete  
-**Version:** 1.16.0  
+**Version:** 1.16.1  
 **Routes:** [/mission-control/civic-ecosystem.html](/mission-control/civic-ecosystem.html) · [/action/community-conversation.html](/action/community-conversation.html)
 
 ---
 
 ## Purpose
 
-Establish **Civic Participation Constitution v1.0** — educate first, then build a voluntary nationwide network of community educators.
+Establish **Arkansas Civic Participation Constitution v1.0** — Arkansas as the pilot state. Educate first, then build a voluntary statewide network of community educators.
 
-## Civic Participation Constitution v1.0
+## Arkansas Civic Participation Constitution v1.0
 
 ### What Shipped
 
-- **`data/civic-ecosystem.json`** — 7-level ladder, 11 hub actions, relational organizing, metrics
-- **`docs/CIVIC_PARTICIPATION_CONSTITUTION.md`** — governing document
-- **`js/civic-profile.js`** — client-side civic growth level tracking
-- **Action Hub v1.16** — ladder-aware menu on every page
-- **`/action/community-conversation.html`** — Community Conversation Program scaffold
-- **Participant schema v1.5** — civic growth level fields
-- Leadership dashboard at `/mission-control/civic-ecosystem.html`
+- **`data/civic-ecosystem.json` v1.1** — Arkansas Education Ladder, Arkansas Action Hub, county tracking
+- **`data/arkansas-counties.json`** — 75 counties with participation scaffold
+- **`docs/CIVIC_PARTICIPATION_CONSTITUTION.md`** — Arkansas-focused governing doc
+- **`js/civic-profile.js`** — Arkansas ladder levels + county field
+- **Arkansas Action Hub** — 11 ladder-aware actions on every page
+- **County dashboard** in Mission Control (table; interactive map planned)
+- Participant schema v1.6 — county/city required
 
-### Civic Growth Ladder (7)
+### Arkansas Education Ladder (7)
 
-Visitor → Subscriber → Advocate → Educator → Regional Leader → Research Contributor → National Network
+Visitor → Subscriber (Arkansas Education Network) → Community Supporter → Community Educator → **County Education Leader** → Arkansas Research Contributor → Arkansas Education Council
 
 ### Honest Status
 
-Framework and hub **live**. Backend participant profiles, certification, and county coordinators **planned**. Leadership metrics mostly **0** until Netlify Forms + backend integration.
+Arkansas framework **live**. County participation all **0** until forms/backend. Montana/Hawaii content remains comparative national examples — platform operations are **Arkansas-first**.
+
+### Future Expansion
+
+Modular architecture — other states can adopt without redesign. Arkansas proves the model first.
 
 ## Next Recommended Build
 
-**Build #13 — First Deep Content** — L2 articles with KG-IDs, Evidence IDs, and `ds-*` components.
+**Build #13 — First Deep Content** — L2 Arkansas-focused articles with KG-IDs and Evidence IDs.

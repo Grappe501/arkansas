@@ -13,6 +13,12 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.16.1] - 2026-07-09 — Build #12 Arkansas focus
+
+### Arkansas Civic Participation Constitution
+- Refocused Build #12 on **Arkansas as pilot state** — 75-county dashboard, Arkansas Education Ladder, Arkansas Action Hub labels
+- `data/arkansas-counties.json` · county-centric participant profiles
+
 ## [1.16.0] - 2026-07-09 — Build #12 Complete
 
 ### Build #12: Civic Action Ecosystem & Leadership Development System

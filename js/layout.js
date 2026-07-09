@@ -80,7 +80,7 @@ function renderSiteFooter() {
   return `
   <footer class="site-footer">
     <p>
-      Citizens Facts · v<span data-site-version>1.16.0</span> ·
+      Citizens Facts · v<span data-site-version>1.16.1</span> ·
       <a href="/explore/">Site Map</a> ·
       <a href="/library/">Sources</a> ·
       <a href="/solutions/">Solutions Center</a> ·

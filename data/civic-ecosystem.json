@@ -1,15 +1,23 @@
 {
-  "version": "1.0",
+  "version": "1.1",
   "build": 12,
   "updated": "2026-07-09",
-  "title": "Civic Participation Constitution v1.0",
+  "scope": "arkansas",
+  "title": "Arkansas Civic Participation Constitution v1.0",
   "route": "/mission-control/civic-ecosystem.html",
   "data_file": "/data/civic-ecosystem.json",
+  "counties_file": "/data/arkansas-counties.json",
   "legacy_doc": "/docs/CIVIC_ACTION.md",
-  "principle": "The ultimate measure of success is not how many pages are read — it is how many people become confident enough to help someone else understand Citizens United and participate constructively through education.",
-  "purpose": "Educate first. Then build a nationwide network of informed citizens who voluntarily help educate others — through education, relationship-building, collaboration, and constructive engagement with public institutions.",
-  "education_before_action": "Never ask visitors to take actions they do not yet understand. Guide progression from learner to trusted community educator.",
-  "civic_growth_ladder": [
+  "principle": "Success is measured by the growth of informed communities across Arkansas. The platform succeeds when more Arkansans understand Citizens United, confidently explain it to others, and strengthen civic education within their own counties through respectful, evidence-based engagement.",
+  "purpose": "Educate first. Build a statewide network of informed Arkansans who voluntarily educate their families, neighbors, civic organizations, and local communities about Citizens United and its effects.",
+  "pilot_state": {
+    "name": "Arkansas",
+    "abbrev": "AR",
+    "counties": 75,
+    "role": "Pilot, proving ground, and educational model for future modular expansion."
+  },
+  "education_before_action": "Education is always the first objective. Community leadership is the long-term outcome. Never ask participants to act before they understand.",
+  "arkansas_education_ladder": [
     {
       "level": 1,
       "id": "visitor",
@@ -21,142 +29,177 @@
       "level": 2,
       "id": "subscriber",
       "title": "Subscriber",
-      "characteristics": ["Joins the contact network", "Saves resources", "Receives platform updates"],
+      "characteristics": ["Joins the Arkansas Education Network", "Receives educational updates", "Saves resources"],
       "mission": "Remain connected and continue learning."
     },
     {
       "level": 3,
-      "id": "advocate",
-      "title": "Advocate for Education",
-      "characteristics": ["Shares educational resources", "Invites friends and family", "Participates in community discussions"],
-      "mission": "Expand public awareness through trusted personal relationships."
+      "id": "community_supporter",
+      "title": "Community Supporter",
+      "legacy_id": "advocate",
+      "characteristics": ["Shares educational resources", "Invites friends and family", "Encourages respectful discussion"],
+      "mission": "Expand public understanding through trusted relationships."
     },
     {
       "level": 4,
       "id": "educator",
       "title": "Community Educator",
-      "characteristics": ["Hosts conversations", "Uses presentation materials", "Facilitates local educational events"],
-      "mission": "Help others understand Citizens United through respectful, evidence-based discussion."
+      "characteristics": ["Hosts conversations", "Uses educational toolkits", "Leads small discussion groups"],
+      "mission": "Help fellow Arkansans better understand Citizens United."
     },
     {
       "level": 5,
-      "id": "regional_leader",
-      "title": "Regional Education Leader",
-      "characteristics": ["Coordinates multiple volunteers", "Organizes local education efforts", "Mentors new community educators"],
-      "mission": "Strengthen regional civic education capacity."
+      "id": "county_leader",
+      "title": "County Education Leader",
+      "legacy_id": "regional_leader",
+      "characteristics": ["Coordinates educational efforts within a county", "Mentors new volunteers", "Organizes presentations and local events"],
+      "mission": "Strengthen county-level civic education.",
+      "tracks_county": true
     },
     {
       "level": 6,
-      "id": "research_contributor",
-      "title": "Research Contributor",
-      "characteristics": ["Assists with source collection", "Reviews educational materials", "Identifies updates", "Contributes local knowledge"],
-      "mission": "Help keep the platform accurate and current."
+      "id": "ar_research_contributor",
+      "title": "Arkansas Research Contributor",
+      "legacy_id": "research_contributor",
+      "characteristics": ["Assists with research", "Reviews educational materials", "Identifies Arkansas-specific developments", "Helps maintain source quality"],
+      "mission": "Strengthen the platform's research and educational accuracy."
     },
     {
       "level": 7,
-      "id": "national_leader",
-      "title": "National Leadership Network",
-      "characteristics": ["Experienced educator", "Contributes to long-term strategy", "Supports platform growth and institutional knowledge"],
-      "mission": "Sustain a national educational community."
+      "id": "education_council",
+      "title": "Arkansas Education Council",
+      "legacy_id": "national_leader",
+      "characteristics": ["Experienced volunteers", "Subject matter contributors", "Community education mentors", "Long-term advisors"],
+      "mission": "Help sustain and continuously improve Arkansas's civic education network."
     }
   ],
   "action_hub": {
+    "title": "Arkansas Action Hub",
     "persistent": true,
-    "adapts_to": ["learning_stage", "civic_growth_level", "prior_participation"],
+    "adapts_to": ["learning_stage", "civic_growth_level", "prior_participation", "county"],
     "actions": [
-      { "id": "education-leader", "title": "Become an Education Leader", "url": "/educate/", "icon": "★", "min_level": 1, "primary_from_level": 4 },
-      { "id": "join-network", "title": "Join the Contact Network", "url": "/action/join-network.html", "icon": "◎", "min_level": 1 },
+      { "id": "education-leader", "title": "Become an Arkansas Education Leader", "url": "/educate/", "icon": "★", "min_level": 1, "primary_from_level": 4 },
+      { "id": "join-network", "title": "Join the Arkansas Education Network", "url": "/action/join-network.html", "icon": "◎", "min_level": 1 },
       { "id": "share-page", "title": "Share This Page", "url": "/action/share.html", "icon": "↗", "min_level": 1, "primary_until_level": 3 },
       { "id": "invite", "title": "Invite Friends & Family", "url": "/action/share.html#invite", "icon": "👥", "min_level": 2 },
       { "id": "host-conversation", "title": "Host a Community Conversation", "url": "/action/community-conversation.html", "icon": "🗣", "min_level": 3 },
       { "id": "download-resources", "title": "Download Educational Resources", "url": "/educate/#toolkit", "icon": "⬇", "min_level": 2 },
       { "id": "model-law", "title": "Explore the Model Law Workspace", "url": "/action/draft-laws.html", "icon": "§", "min_level": 4 },
-      { "id": "ballot-lab", "title": "Explore the Ballot Initiative Lab", "url": "/action/ballot-lab.html", "icon": "✓", "min_level": 4 },
-      { "id": "share-officials", "title": "Share Materials with Public Officials", "url": "/action/contact-legislators.html", "icon": "🏛", "min_level": 3 },
+      { "id": "ballot-lab", "title": "Explore the Arkansas Ballot Initiative Lab", "url": "/action/ballot-lab.html", "icon": "✓", "min_level": 4 },
+      { "id": "share-officials", "title": "Share Resources with Public Officials", "url": "/action/contact-legislators.html", "icon": "🏛", "min_level": 3 },
       { "id": "community-ideas", "title": "Submit Community Ideas", "url": "/action/ideas.html", "icon": "💡", "min_level": 2 },
       { "id": "ask-question", "title": "Ask a Question", "url": "/action/ideas.html#feedback", "icon": "?", "min_level": 1 }
     ]
   },
   "relational_organizing": {
-    "principle": "Expand understanding through existing trusted relationships — not mass blast outreach.",
+    "title": "Arkansas Relational Organizing",
+    "principle": "Education spreads most effectively through trusted relationships within Arkansas communities.",
     "examples": [
-      "Invite family members to learn together",
-      "Share specific pages with friends",
-      "Recommend resources to civic organizations",
-      "Encourage discussion in classrooms, faith communities, neighborhood groups, campuses"
+      "Share resources with family",
+      "Invite friends to learn together",
+      "Organize neighborhood discussions",
+      "Present to civic organizations",
+      "Present to churches and faith communities",
+      "Present to schools and campuses where appropriate",
+      "Introduce the platform to local community groups"
     ],
-    "privacy": "Track educational sharing activity in aggregate; respect individual privacy.",
+    "privacy": "Track educational sharing in aggregate by county; respect individual privacy.",
     "tracking": {
       "referral_code": "localStorage cf_referral_code",
       "share_count": "localStorage cf_share_count",
-      "invites": "localStorage cf_invites_sent"
+      "invites": "localStorage cf_invites_sent",
+      "county": "localStorage cf_arkansas_county"
     }
   },
   "community_conversation_program": {
+    "title": "Arkansas Community Conversation Program",
     "route": "/action/community-conversation.html",
-    "emphasis": "Respectful dialogue and evidence-based learning",
+    "emphasis": "Respectful, evidence-based civic education",
     "resources": [
       "Conversation guides",
+      "Presentation slides",
       "Discussion questions",
-      "Presentation outlines",
       "Printable handouts",
-      "Suggested timelines",
       "Frequently asked questions",
       "Follow-up materials"
     ],
     "status": "scaffold"
   },
   "policy_development_center": {
+    "title": "Arkansas Policy Development Center",
     "model_law_workspace": {
       "route": "/action/draft-laws.html",
-      "scope": ["Federal proposals", "State proposals", "Arkansas General Assembly concepts", "Regulatory approaches", "Transparency measures", "Disclosure concepts"],
+      "scope": [
+        "Federal legislative concepts",
+        "Arkansas legislative concepts",
+        "Regulatory concepts",
+        "Transparency proposals",
+        "Disclosure proposals",
+        "Election-related educational proposals"
+      ],
       "disclaimer": "Educational drafts only — not enacted law."
     },
     "ballot_initiative_lab": {
+      "title": "Arkansas Ballot Initiative Lab",
       "route": "/action/ballot-lab.html",
-      "functions": ["Research", "Comparative analysis", "Historical examples", "Draft language development", "Educational discussion", "Legal considerations", "Source documentation"],
-      "purpose": "Educational collaboration and idea development."
+      "functions": [
+        "Historical initiative research",
+        "Comparative analysis",
+        "Draft language development",
+        "Legal research",
+        "Constitutional considerations",
+        "Source documentation"
+      ],
+      "purpose": "Collaborative civic education and research."
     }
   },
   "public_official_resource_center": {
+    "title": "Public Official Education Center",
     "route": "/action/contact-legislators.html",
     "recipients": [
-      "Members of Congress",
-      "United States Senators",
-      "Members of the Arkansas General Assembly",
-      "Other state legislators (as platform expands)"
+      "Arkansas members of the U.S. House of Representatives",
+      "Arkansas U.S. Senators",
+      "Members of the Arkansas General Assembly"
     ],
-    "content_focus": "Factual educational content, research, and publicly available source documents."
+    "content_focus": "Verified facts, primary sources, research summaries, and explanatory materials."
   },
   "participant_profile": {
+    "title": "Arkansas Participant Profiles",
     "schema": "/data/participant-profile-schema.json",
     "client_tracker": "/js/civic-profile.js",
+    "required_geo": ["county", "city", "state"],
     "elements": [
+      "County",
+      "City",
       "Learning progress",
-      "Community interests",
-      "Geographic region",
       "Volunteer interests",
-      "Educational events attended",
+      "Community conversations hosted",
       "Resources downloaded",
       "Invitations shared",
-      "Leadership pathway",
       "Research contributions",
-      "Community conversation history"
+      "Leadership pathway",
+      "Educational events attended"
     ]
   },
   "leadership_metrics": [
-    { "id": "registered_participants", "title": "Registered participants", "source": "backend_future", "value": 0 },
-    { "id": "active_subscribers", "title": "Active subscribers", "source": "netlify_forms", "value": 0 },
+    { "id": "total_participants", "title": "Total participants", "source": "backend_future", "value": 0 },
+    { "id": "active_learners", "title": "Active learners", "source": "local_tracking", "value": 0 },
     { "id": "community_educators", "title": "Community educators", "source": "netlify_forms", "value": 0 },
-    { "id": "regional_leaders", "title": "Regional leaders", "source": "manual", "value": 0 },
+    { "id": "county_leaders", "title": "County education leaders", "source": "manual", "value": 0 },
     { "id": "research_contributors", "title": "Research contributors", "source": "manual", "value": 0 },
-    { "id": "community_conversations", "title": "Community conversations", "source": "planned", "value": 0 },
+    { "id": "community_conversations", "title": "Community conversations hosted", "source": "planned", "value": 0 },
     { "id": "resource_downloads", "title": "Educational resource downloads", "source": "planned", "value": 0 },
     { "id": "friend_family_shares", "title": "Shares with friends and family", "source": "local_tracking", "value": 0 },
-    { "id": "official_shares", "title": "Public official resource shares", "source": "planned", "value": 0 },
+    { "id": "official_shares", "title": "Resources shared with public officials", "source": "planned", "value": 0 },
     { "id": "model_law_contributors", "title": "Model law contributors", "source": "planned", "value": 0 },
     { "id": "ballot_lab_participants", "title": "Ballot Initiative Lab participants", "source": "planned", "value": 0 }
   ],
+  "county_dashboard": {
+    "enabled": true,
+    "map_type": "county_grid",
+    "data_file": "/data/arkansas-counties.json",
+    "purpose": "Identify counties with strong engagement and counties needing additional outreach."
+  },
   "participation_principles": [
     "Curiosity",
     "Respectful dialogue",
@@ -168,16 +211,12 @@
   "avoid": [
     "Harassment of public officials",
     "Misinformation",
-    "Disrespectful interactions with officials or fellow citizens",
+    "Disrespectful interactions",
     "Pressure to act before understanding"
   ],
-  "future_expansion": [
-    "State-level education networks",
-    "County education coordinators",
-    "Specialized research teams",
-    "Subject matter working groups",
-    "Speaker bureaus",
-    "Civic education certification",
-    "Advanced facilitator training"
-  ]
+  "future_expansion": {
+    "v1_scope": "Arkansas only",
+    "architecture": "Modular — other states can adopt the same framework without platform redesign",
+    "note": "Arkansas serves as the pilot and proving ground."
+  }
 }

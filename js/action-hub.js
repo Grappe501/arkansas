@@ -1,6 +1,6 @@
 /**
- * Citizens Facts — Floating Action Hub v1.16.0
- * Civic Growth Ladder-aware — Build #12
+ * Citizens Facts — Floating Action Hub v1.16.1
+ * Arkansas Education Ladder-aware — Build #12
  */
 
 function getReferralCode() {
@@ -139,7 +139,9 @@ async function renderActionHub() {
   const civicLevel = getCivicLevel();
   const civicNum = getCivicLevelNum();
   const early = isEarlyStage(stage);
-  const ladderTitle = ecosystem?.civic_growth_ladder?.find(l => l.id === civicLevel)?.title || civicLevel;
+  const ladderTitle = ecosystem?.arkansas_education_ladder?.find(l => l.id === civicLevel)?.title
+    || ecosystem?.civic_growth_ladder?.find(l => l.id === civicLevel)?.title
+    || civicLevel;
   const label = early
     ? (config?.action_hub_stages?.early?.label || 'Learn & Share')
     : (config?.action_hub_stages?.advanced?.label || 'Take Action');
@@ -153,8 +155,8 @@ async function renderActionHub() {
       <span class="action-hub__toggle-label">${label}</span>
     </button>
     <div id="action-hub-panel" class="action-hub__panel" hidden>
-      <p class="action-hub__title">Civic Action Hub</p>
-      <p class="action-hub__subtitle">Journey: ${stage} · Civic level ${civicNum}: ${ladderTitle}</p>
+      <p class="action-hub__title">Arkansas Action Hub</p>
+      <p class="action-hub__subtitle">Arkansas · Journey: ${stage} · Level ${civicNum}: ${ladderTitle}</p>
       <nav class="action-hub__nav" aria-label="Civic actions">
         ${renderHubLinks(stage, config, ecosystem)}
       </nav>
