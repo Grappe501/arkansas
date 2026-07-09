@@ -13,6 +13,18 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.84.0] - 2026-07-09 — Build #80 Arkansas Civic Institution Roadmap
+
+### The Twenty-Year Vision & Institutional Legacy Plan
+- **Master Arkansas Civic Institution Roadmap v1.0** — 80 builds complete; plans for legacy not launch
+- Four eras: Foundation → Expansion → Maturity → Legacy; 8 twenty-year goals
+- Institutional milestones, legacy projects, leadership/research/community/technology legacy
+- Arkansas Civic Legacy Map, annual reflection, founder's reflection
+- Success measured by legacy (understanding, communities, dialogue) not traffic or awards
+- Integrates Constitution (#76), Institutional Roadmap (#44), Master Plan (#55), ACOS/ArCOS/ANOS
+- Honest: era 1 Foundation · 1/10 milestones (80 builds) · legacy map not live · 0/200K connected · ~48% readiness
+- MC dashboard: `/mission-control/arkansas-civic-institution-roadmap.html`
+
 ## [1.83.0] - 2026-07-09 — Build #79 Arkansas Neighborhood Operating System (ANOS)
 
 ### The Last 500 Feet

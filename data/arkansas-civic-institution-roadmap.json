@@ -1,0 +1,423 @@
+{
+  "version": "1.0",
+  "build": 80,
+  "updated": "2026-07-09",
+  "title": "Master Arkansas Civic Institution Roadmap v1.0",
+  "subtitle": "The Twenty-Year Vision & Institutional Legacy Plan",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/arkansas-civic-institution-roadmap.html",
+  "constitution": "/docs/MASTER_ARKANSAS_CIVIC_INSTITUTION_ROADMAP.md",
+  "purpose": "Answer: if everything succeeds, what does Citizens United Facts look like twenty years from now? Plans for legacy, not merely launch.",
+  "governing_principle": "Institutions are remembered not because they were launched. They are remembered because they endured. Purpose larger than any one person.",
+  "plans_for_legacy_not_launch": true,
+  "eighty_builds_blueprint_complete": true,
+  "founding_vision": "Help Arkansans understand Citizens United v. FEC and strengthen constitutional literacy, civic participation, and public trust. Website is the beginning; institution is the destination.",
+  "website_beginning_institution_destination": true,
+  "twenty_year_goals": {
+    "title": "Twenty-Year Goals",
+    "direction_not_rigid_deadlines": true,
+    "goals": [
+      {
+        "id": "LEG-G01",
+        "goal": "Education Leaders in all 75 counties",
+        "current": 0,
+        "target": 75,
+        "status": "scaffolded"
+      },
+      {
+        "id": "LEG-G02",
+        "goal": "Leadership teams in 250 largest cities",
+        "current": 0,
+        "target": 250,
+        "status": "scaffolded"
+      },
+      {
+        "id": "LEG-G03",
+        "goal": "200,000 connected Arkansans",
+        "current": 0,
+        "target": 200000,
+        "status": "scaffolded"
+      },
+      {
+        "id": "LEG-G04",
+        "goal": "Thousands of neighborhood learning conversations",
+        "current": 0,
+        "target": null,
+        "status": "planned"
+      },
+      {
+        "id": "LEG-G05",
+        "goal": "Mature Community Education Academy",
+        "current": 0,
+        "target": null,
+        "status": "partial"
+      },
+      {
+        "id": "LEG-G06",
+        "goal": "Thriving coalition of Arkansas organizations",
+        "current": 0,
+        "target": null,
+        "status": "partial"
+      },
+      {
+        "id": "LEG-G07",
+        "goal": "Comprehensive research library on Citizens United and campaign finance",
+        "current": 0,
+        "target": null,
+        "status": "partial"
+      },
+      {
+        "id": "LEG-G08",
+        "goal": "Recognition as Arkansas's most trusted educational resource",
+        "current": 0,
+        "target": null,
+        "status": "aspirational"
+      }
+    ],
+    "goals_total": 8
+  },
+  "four_eras": {
+    "title": "Four Eras of Growth",
+    "current_era": 1,
+    "eras": [
+      {
+        "era": 1,
+        "id": "foundation",
+        "title": "Foundation",
+        "focus": "Build the institution",
+        "objectives": [
+          "Launch the platform",
+          "Complete Mission Control",
+          "Develop curriculum",
+          "Recruit founding volunteers",
+          "Establish first county teams"
+        ],
+        "status": "active"
+      },
+      {
+        "era": 2,
+        "id": "expansion",
+        "title": "Expansion",
+        "focus": "Reach Arkansas",
+        "objectives": [
+          "County coverage",
+          "City leadership",
+          "Coalition growth",
+          "Community conversations",
+          "Academy expansion",
+          "Relationship network growth"
+        ],
+        "status": "planned"
+      },
+      {
+        "era": 3,
+        "id": "maturity",
+        "title": "Maturity",
+        "focus": "Strengthen quality",
+        "objectives": [
+          "Research excellence",
+          "Advanced curriculum",
+          "Leadership succession",
+          "Institutional sustainability",
+          "Comprehensive educational resources"
+        ],
+        "status": "planned"
+      },
+      {
+        "era": 4,
+        "id": "legacy",
+        "title": "Legacy",
+        "focus": "Preserve the institution",
+        "objectives": [
+          "Institutional continuity",
+          "Knowledge preservation",
+          "Generational leadership",
+          "Historical archives",
+          "Ongoing civic education"
+        ],
+        "status": "planned"
+      }
+    ]
+  },
+  "institutional_milestones": {
+    "title": "Institutional Milestones",
+    "milestones": [
+      {
+        "id": "LEG-M01",
+        "milestone": "First county represented",
+        "achieved": false,
+        "status": "pending"
+      },
+      {
+        "id": "LEG-M02",
+        "milestone": "All 75 counties represented",
+        "achieved": false,
+        "status": "pending"
+      },
+      {
+        "id": "LEG-M03",
+        "milestone": "100 Education Leaders",
+        "achieved": false,
+        "status": "pending"
+      },
+      {
+        "id": "LEG-M04",
+        "milestone": "500 Education Leaders",
+        "achieved": false,
+        "status": "pending"
+      },
+      {
+        "id": "LEG-M05",
+        "milestone": "250 city teams established",
+        "achieved": false,
+        "status": "pending"
+      },
+      {
+        "id": "LEG-M06",
+        "milestone": "100,000 connected Arkansans",
+        "achieved": false,
+        "status": "pending"
+      },
+      {
+        "id": "LEG-M07",
+        "milestone": "200,000 connected Arkansans",
+        "achieved": false,
+        "status": "pending"
+      },
+      {
+        "id": "LEG-M08",
+        "milestone": "Major research milestones",
+        "achieved": false,
+        "status": "pending"
+      },
+      {
+        "id": "LEG-M09",
+        "milestone": "Coalition anniversaries",
+        "achieved": false,
+        "status": "pending"
+      },
+      {
+        "id": "LEG-M10",
+        "milestone": "80 builds complete",
+        "achieved": true,
+        "status": "complete"
+      }
+    ],
+    "achieved_count": 1,
+    "mc_celebrates": true,
+    "status": "specified"
+  },
+  "legacy_projects": {
+    "title": "Legacy Projects",
+    "projects": [
+      "Comprehensive historical archives",
+      "Documentary collections",
+      "Oral history interviews",
+      "Interactive constitutional exhibits",
+      "Educational traveling displays",
+      "Arkansas civic education conferences",
+      "Annual State of Civic Education reports"
+    ],
+    "projects_started": 0,
+    "preserve_knowledge_for_future_generations": true,
+    "status": "specified"
+  },
+  "leadership_legacy": {
+    "title": "Leadership Legacy",
+    "every_generation_prepares_next": true,
+    "practices": [
+      "Mentorship",
+      "Documentation",
+      "Leadership development",
+      "Succession planning",
+      "Institutional stewardship"
+    ],
+    "never_depend_on_one_individual": true
+  },
+  "research_legacy": {
+    "title": "Research Legacy",
+    "continually_expand": true,
+    "future_collections": [
+      "New court decisions",
+      "Campaign finance developments",
+      "Arkansas historical materials",
+      "Comparative state studies",
+      "Updated policy research"
+    ],
+    "future_scholars_build_upon_work": true
+  },
+  "community_legacy": {
+    "title": "Community Legacy",
+    "woven_into_arkansas_civic_life": true,
+    "partners": [
+      "Libraries",
+      "Schools",
+      "Colleges",
+      "Community organizations",
+      "Historical societies",
+      "Service clubs",
+      "Neighborhood groups",
+      "Education Leaders"
+    ],
+    "stronger_statewide_culture": true
+  },
+  "technology_legacy": {
+    "title": "Technology Legacy",
+    "remain_adaptable": true,
+    "mc_regularly_reviews": [
+      "Infrastructure",
+      "Security",
+      "Accessibility",
+      "Preservation",
+      "Modernization"
+    ],
+    "educational_mission_constant": true
+  },
+  "annual_institutional_reflection": {
+    "title": "Annual Institutional Reflection",
+    "questions": [
+      "Are we serving Arkansas better than last year?",
+      "Are our resources more accurate?",
+      "Are our leaders better prepared?",
+      "Are our communities more connected?",
+      "Are we earning greater public trust?"
+    ],
+    "conducted": false,
+    "guides_next_year_priorities": true,
+    "status": "specified"
+  },
+  "arkansas_civic_legacy_map": {
+    "title": "Arkansas Civic Legacy Map",
+    "permanent_visual_record": true,
+    "sections": [
+      "County development",
+      "City development",
+      "Neighborhood growth",
+      "Leadership succession",
+      "Coalition expansion",
+      "Research milestones",
+      "Institutional history"
+    ],
+    "live": false,
+    "institution_story_part_of_arkansas_history": true,
+    "status": "planned"
+  },
+  "measure_of_success": {
+    "title": "Measure of Success",
+    "not_judged_by": [
+      "Website traffic",
+      "Press attention",
+      "Awards",
+      "Technology"
+    ],
+    "true_measures": [
+      "Did more Arkansans understand the Constitution?",
+      "Did communities become stronger?",
+      "Did respectful civic dialogue become more common?",
+      "Did ordinary citizens become trusted educators?",
+      "Did future generations inherit better civic resources?"
+    ],
+    "legacy_not_metrics": true
+  },
+  "founders_reflection": "Ultimate hope: someday people no longer remember who built it. They simply know that whenever an Arkansan wanted to understand Citizens United, campaign finance, constitutional government, or civic participation, there was one place they could trust \u2014 built patiently, grounded in evidence, strengthened by volunteers, sustained by communities, never stopped learning.",
+  "integration": {
+    "chain": "Constitution (#76) \u2192 Institutional Roadmap (#44) \u2192 Master Plan (#55) \u2192 ACOS \u2192 ArCOS \u2192 ANOS \u2192 Research \u2192 Academy \u2192 Coalition \u2192 Mission Control",
+    "mc_compares_current_to_vision": true,
+    "systems": [
+      {
+        "system": "Organizational Constitution (#76)",
+        "route": "/mission-control/organizational-constitution.html",
+        "status": "live"
+      },
+      {
+        "system": "Institutional Roadmap V1\u2013V10 (#44)",
+        "route": "/mission-control/institutional-roadmap.html",
+        "status": "live",
+        "note": "Version evolution plan"
+      },
+      {
+        "system": "Master Plan (#55)",
+        "route": "/mission-control/master-plan.html",
+        "status": "live"
+      },
+      {
+        "system": "ACOS (#77)",
+        "route": "/mission-control/arkansas-county-operating-system.html",
+        "status": "live"
+      },
+      {
+        "system": "ArCOS (#78)",
+        "route": "/mission-control/arkansas-city-operating-system.html",
+        "status": "live"
+      },
+      {
+        "system": "ANOS (#79)",
+        "route": "/mission-control/arkansas-neighborhood-operating-system.html",
+        "status": "live"
+      },
+      {
+        "system": "Research Institute (#73)",
+        "route": "/mission-control/arkansas-research-institute.html",
+        "status": "live"
+      },
+      {
+        "system": "Citizen Leadership Academy (#68)",
+        "route": "/mission-control/citizen-leadership-academy.html",
+        "status": "live"
+      },
+      {
+        "system": "Coalition Network (#61)",
+        "route": "/mission-control/coalition-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      }
+    ],
+    "extends": "Institutional Roadmap V1\u2013V10 (#44)",
+    "complements": "Master Plan (#55)"
+  },
+  "long_term_vision": "Year twenty: trusted statewide civic education institution; 75 counties, 250 cities, 200K connected; thousands of neighborhood conversations; mature academy and coalition; comprehensive research library; stronger civic foundation than inherited.",
+  "summary": {
+    "builds_complete": 80,
+    "current_era": 1,
+    "current_era_title": "Foundation",
+    "twenty_year_goals": 8,
+    "milestones_achieved": 1,
+    "milestones_total": 10,
+    "legacy_map_live": false,
+    "annual_reflection_conducted": false,
+    "legacy_projects_started": 0,
+    "counties_with_leaders": 0,
+    "cities_with_teams": 0,
+    "connected_arkansans": 0,
+    "participants_target": 200000,
+    "arkansas_civic_institution_roadmap_readiness_pct": 48,
+    "institutional_roadmap_readiness_pct": 48,
+    "organizational_constitution_readiness_pct": 46,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "Legacy map not live \u2014 permanent visual record not built",
+    "0/9 milestones achieved (except 80 builds complete)",
+    "Annual reflection workflow not operational",
+    "0 legacy projects started",
+    "Era tracking \u2014 MC does not compare current state to 20-year vision",
+    "Build #80 vs Institutional Roadmap (#44) \u2014 reconcile V1\u2013V10 vs four eras?",
+    "Milestone celebration system not implemented",
+    "20-year goal progress not tracked in MC executive dashboard",
+    "Founder reflection not on public front door",
+    "Technology legacy review schedule not automated",
+    "Research legacy collections \u2014 0 items beyond scaffold",
+    "Community legacy partner registry empty",
+    "Implementation translation layer still pending after 80 spec builds"
+  ],
+  "recommended_next_build": {
+    "number": 81,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "Legacy map, milestone tracker, era dashboard, annual reflection workflow, 20-year goal progress UI, COMP-* specs, GitHub backlog \u2014 begin implementation."
+  }
+}

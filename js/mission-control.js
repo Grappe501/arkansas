@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Civic Institution Roadmap <a href="/mission-control/arkansas-civic-institution-roadmap.html" class="mc-inline-link">Legacy Vision #80 →</a></h2>
+    <p class="mc-bar-note">Build #80 — Twenty-Year Vision & Institutional Legacy Plan. 80 builds complete. Four eras, 8 goals, legacy map, founder reflection. Website is beginning; institution is destination. Era 1 Foundation · 1/10 milestones. ~48% readiness.</p>
     <h2 class="mc-section-title">Neighborhood Operating System <a href="/mission-control/arkansas-neighborhood-operating-system.html" class="mc-inline-link">ANOS #79 →</a></h2>
     <p class="mc-bar-note">Build #79 — Master Arkansas Neighborhood Operating System. Final layer — last 500 feet. Growth cycle, health score, mentorship trees, 200K strategy. Neighborhoods build trust. 0 profiles · 0/200K connected. ~47% readiness.</p>
     <h2 class="mc-section-title">City Operating System <a href="/mission-control/arkansas-city-operating-system.html" class="mc-inline-link">ArCOS #78 →</a></h2>
@@ -5226,6 +5228,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initArkansasCountyOperatingSystem();
   initArkansasCityOperatingSystem();
   initArkansasNeighborhoodOperatingSystem();
+  initArkansasCivicInstitutionRoadmap();
 });
 
 async function initUxArchitecture() {
@@ -8364,6 +8367,115 @@ async function initArkansasNeighborhoodOperatingSystem() {
       <a href="/mission-control/neighborhood-organizing.html">Neighborhood Organizing (#57)</a> ·
       <a href="/mission-control/arkansas-city-operating-system.html">ArCOS (#78)</a> ·
       <a href="/mission-control/relational-organizing-growth-engine.html">Growth Engine (#69)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initArkansasCivicInstitutionRoadmap() {
+  const root = document.getElementById('mc-arkansas-civic-institution-roadmap-root');
+  if (!root) return;
+
+  const [legRes, mcRes] = await Promise.all([
+    fetch('/data/arkansas-civic-institution-roadmap.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const leg = await legRes.json();
+  const mc = await mcRes.json();
+  const s = leg.summary;
+
+  const goalRows = leg.twenty_year_goals.goals.map(g => `
+    <tr><td><code>${g.id}</code></td><td>${g.goal}</td>
+      <td>${g.current}${g.target ? `/${g.target}` : ''}</td><td>${g.status}</td></tr>`).join('');
+
+  const eraCards = leg.four_eras.eras.map(e => `
+    <div class="mc-card"><h3>Era ${e.era}: ${e.title}</h3>
+      <p class="mc-bar-note"><strong>Focus:</strong> ${e.focus} · Status: ${e.status}</p>
+      <ul class="mc-deliverables">${e.objectives.map(o => `<li>${o}</li>`).join('')}</ul></div>`).join('');
+
+  const milestoneRows = leg.institutional_milestones.milestones.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.milestone}</td>
+      <td>${m.achieved ? 'Yes' : 'No'}</td><td>${m.status}</td></tr>`).join('');
+
+  const systemRows = leg.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td><td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Arkansas Civic Institution Roadmap</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #80 · ${leg.title}</p>
+      <h1>${leg.subtitle}</h1>
+      <p class="mc-header__question">${leg.governing_principle}</p>
+      <p class="mc-bar-note">${leg.purpose}</p>
+      <p class="mc-bar-note"><strong>80 builds complete:</strong> ${leg.eighty_builds_blueprint_complete ? 'Yes' : 'No'} · <strong>Plans for legacy:</strong> ${leg.plans_for_legacy_not_launch ? 'Yes' : 'No'}</p>
+      <p class="mc-bar-note"><strong>Founding vision:</strong> ${leg.founding_vision}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Legacy readiness</div><div class="mc-stat__value">${s.arkansas_civic_institution_roadmap_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Builds</div><div class="mc-stat__value">${s.builds_complete}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Current era</div><div class="mc-stat__value">${s.current_era} — ${s.current_era_title}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Milestones</div><div class="mc-stat__value">${s.milestones_achieved}/${s.milestones_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Connected</div><div class="mc-stat__value">${s.connected_arkansans}/${s.participants_target}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Legacy map</div><div class="mc-stat__value">${s.legacy_map_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">${leg.twenty_year_goals.title}</h2>
+    <p class="mc-bar-note">Direction, not rigid deadlines: ${leg.twenty_year_goals.direction_not_rigid_deadlines ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Goal</th><th>Progress</th><th>Status</th></tr></thead>
+      <tbody>${goalRows}</tbody></table>
+    <h2 class="mc-section-title">${leg.four_eras.title}</h2>
+    <p class="mc-bar-note">Current era: ${leg.four_eras.current_era}</p>
+    <div class="mc-grid-2">${eraCards}</div>
+    <h2 class="mc-section-title">${leg.institutional_milestones.title}</h2>
+    <p class="mc-bar-note">Achieved: ${leg.institutional_milestones.achieved_count} · MC celebrates: ${leg.institutional_milestones.mc_celebrates ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Milestone</th><th>Achieved</th><th>Status</th></tr></thead>
+      <tbody>${milestoneRows}</tbody></table>
+    <h2 class="mc-section-title">${leg.legacy_projects.title}</h2>
+    <p class="mc-bar-note">Started: ${leg.legacy_projects.projects_started} · Preserve knowledge: ${leg.legacy_projects.preserve_knowledge_for_future_generations ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${leg.legacy_projects.projects.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${leg.leadership_legacy.title}</h2>
+    <p class="mc-bar-note">Every generation prepares next: ${leg.leadership_legacy.every_generation_prepares_next ? 'Yes' : 'No'} · Never one individual: ${leg.leadership_legacy.never_depend_on_one_individual ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${leg.leadership_legacy.practices.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${leg.research_legacy.title}</h2>
+    <p class="mc-bar-note">Future scholars build upon work: ${leg.research_legacy.future_scholars_build_upon_work ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${leg.research_legacy.future_collections.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${leg.community_legacy.title}</h2>
+    <p class="mc-bar-note">Woven into civic life: ${leg.community_legacy.woven_into_arkansas_civic_life ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${leg.community_legacy.partners.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${leg.technology_legacy.title}</h2>
+    <p class="mc-bar-note">Mission constant: ${leg.technology_legacy.educational_mission_constant ? 'Yes' : 'No'} · Adaptable: ${leg.technology_legacy.remain_adaptable ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${leg.technology_legacy.mc_regularly_reviews.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${leg.annual_institutional_reflection.title}</h2>
+    <p class="mc-bar-note">Conducted: ${leg.annual_institutional_reflection.conducted ? 'Yes' : 'No'} · ${leg.annual_institutional_reflection.status}</p>
+    <ul class="mc-deliverables">${leg.annual_institutional_reflection.questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${leg.arkansas_civic_legacy_map.title}</h2>
+    <p class="mc-bar-note">Live: ${leg.arkansas_civic_legacy_map.live ? 'Yes' : 'No'} · ${leg.arkansas_civic_legacy_map.status}</p>
+    <ul class="mc-deliverables">${leg.arkansas_civic_legacy_map.sections.map(sec => `<li>${sec}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${leg.measure_of_success.title}</h2>
+    <p class="mc-bar-note"><strong>Not judged by:</strong></p>
+    <ul class="mc-deliverables">${leg.measure_of_success.not_judged_by.map(n => `<li>${n}</li>`).join('')}</ul>
+    <p class="mc-bar-note"><strong>True measures:</strong></p>
+    <ul class="mc-deliverables">${leg.measure_of_success.true_measures.map(m => `<li>${m}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Founder's Reflection</h2>
+    <p class="mc-bar-note">${leg.founders_reflection}</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${leg.integration.chain}</p>
+    <p class="mc-bar-note"><strong>MC compares to vision:</strong> ${leg.integration.mc_compares_current_to_vision ? 'Yes' : 'No'} · <strong>Extends:</strong> ${leg.integration.extends}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${leg.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${leg.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${leg.recommended_next_build.number} — ${leg.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${leg.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_ARKANSAS_CIVIC_INSTITUTION_ROADMAP.md">MASTER_ARKANSAS_CIVIC_INSTITUTION_ROADMAP.md</a> ·
+      <a href="/data/arkansas-civic-institution-roadmap.json">JSON</a> ·
+      <a href="/mission-control/institutional-roadmap.html">Institutional Roadmap (#44)</a> ·
+      <a href="/mission-control/organizational-constitution.html">Constitution (#76)</a> ·
+      <a href="/mission-control/master-plan.html">Master Plan (#55)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 
