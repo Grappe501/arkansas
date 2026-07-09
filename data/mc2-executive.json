@@ -1,0 +1,601 @@
+{
+  "version": "1.0",
+  "build": 25,
+  "updated": "2026-07-09",
+  "title": "Mission Control 2.0 & Executive Command Center v1.0",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/executive.html",
+  "legacy_route": "/mission-control/",
+  "constitution": "/docs/MISSION_CONTROL_2.md",
+  "purpose": "If it matters, it is visible. Mission Control as the operating system for the entire initiative.",
+  "executive_philosophy": "Answer within seconds: where are we, what is complete, what needs attention, where succeeding, where behind, what to build next.",
+  "governing_principle": "Help the team understand what should happen next \u2014 not merely what has happened.",
+  "executive_panels": [
+    {
+      "id": "MC2-EP-01",
+      "title": "Platform Completion",
+      "metric": "overall_completion",
+      "value": 24,
+      "unit": "percent",
+      "status": "live"
+    },
+    {
+      "id": "MC2-EP-02",
+      "title": "Current Build",
+      "metric": "current_build",
+      "value": {
+        "number": 24,
+        "title": "Contact Intelligence & Community Relationship Architecture"
+      },
+      "status": "live"
+    },
+    {
+      "id": "MC2-EP-03",
+      "title": "Active Development",
+      "metric": "active_phase",
+      "value": "Implementation Artifacts \u2014 Contact Intelligence",
+      "status": "live"
+    },
+    {
+      "id": "MC2-EP-04",
+      "title": "Public Readiness",
+      "metric": "readiness_scores",
+      "value": {
+        "educational": 18,
+        "technical": 28,
+        "research": 20,
+        "coalition": 14,
+        "launch": 8
+      },
+      "status": "partial"
+    },
+    {
+      "id": "MC2-EP-05",
+      "title": "Arkansas Readiness Map",
+      "metric": "county_coverage",
+      "value": {
+        "counties_total": 75,
+        "counties_active": 0,
+        "education_leaders": 0,
+        "coalition_orgs": 0,
+        "events": 0,
+        "conversations": 0
+      },
+      "route": "/mission-control/civic-ecosystem.html",
+      "status": "partial"
+    }
+  ],
+  "workspaces": [
+    {
+      "id": "MC2-WS-01",
+      "title": "Executive Overview",
+      "purpose": "High-level project status snapshot",
+      "track_count": 5,
+      "tracks": [
+        "Platform completion",
+        "Current build",
+        "Active development",
+        "Public readiness",
+        "Arkansas readiness map"
+      ],
+      "route": "/mission-control/executive.html",
+      "implementation_status": "partial",
+      "data_source": "/data/mission-control.json",
+      "notes": "MC2 executive command center \u2014 this build"
+    },
+    {
+      "id": "MC2-WS-02",
+      "title": "Development Center",
+      "purpose": "Phases, builds, components, routes, features",
+      "track_count": 7,
+      "tracks": [
+        "Phases",
+        "Builds",
+        "Components",
+        "Routes",
+        "Features",
+        "Bugs",
+        "Enhancements"
+      ],
+      "route": "/mission-control/phases.html",
+      "implementation_status": "partial",
+      "data_source": "/data/mission-control.json",
+      "notes": "Phases + builds live; bugs/features tracking not formalized"
+    },
+    {
+      "id": "MC2-WS-03",
+      "title": "Research Center",
+      "purpose": "Sources, facts, citations, gaps, review schedule",
+      "track_count": 5,
+      "tracks": [
+        "Sources collected",
+        "Facts verified",
+        "Pages needing citations",
+        "Research gaps",
+        "Review schedule"
+      ],
+      "route": "/mission-control/research.html",
+      "implementation_status": "partial",
+      "data_source": "/data/evidence-registry.json",
+      "notes": "14 Evidence IDs; automated citation gap scan not built"
+    },
+    {
+      "id": "MC2-WS-04",
+      "title": "Education Center",
+      "purpose": "Lessons, resources, downloads, learning paths",
+      "track_count": 6,
+      "tracks": [
+        "Lessons completed",
+        "Resources published",
+        "Downloads",
+        "Popular learning paths",
+        "FAQ growth",
+        "Toolkit usage"
+      ],
+      "route": "/mission-control/atlas.html",
+      "implementation_status": "partial",
+      "data_source": "/data/knowledge-atlas.json",
+      "notes": "Atlas tracks worlds/districts; download analytics not integrated"
+    },
+    {
+      "id": "MC2-WS-05",
+      "title": "Coalition Center",
+      "purpose": "Organizations, counties, sign-ons, partnerships",
+      "track_count": 5,
+      "tracks": [
+        "Organizations",
+        "Counties represented",
+        "New sign-ons",
+        "Partnership levels",
+        "Organization referrals"
+      ],
+      "route": "/mission-control/coalition.html",
+      "implementation_status": "partial",
+      "data_source": "/data/county-coalition-index.json",
+      "notes": "ACUCOS dashboard live; sign-on queue not automated"
+    },
+    {
+      "id": "MC2-WS-06",
+      "title": "Community Education Center",
+      "purpose": "Events, conversations, speakers, presentations",
+      "track_count": 5,
+      "tracks": [
+        "Events",
+        "Community conversations",
+        "Speakers",
+        "Presentations",
+        "Resource requests"
+      ],
+      "route": "/mission-control/civic-ecosystem.html",
+      "implementation_status": "partial",
+      "data_source": "/data/contact-intelligence.json",
+      "notes": "County map scaffold; event capture form not built"
+    },
+    {
+      "id": "MC2-WS-07",
+      "title": "Public Official Education Center",
+      "purpose": "Educational outreach to federal and state officials",
+      "track_count": 7,
+      "tracks": [
+        "Packets prepared",
+        "Packets shared",
+        "Resource requests",
+        "Follow-up reminders",
+        "U.S. House",
+        "U.S. Senate",
+        "Arkansas General Assembly"
+      ],
+      "route": "/action/contact-legislators.html",
+      "implementation_status": "planned",
+      "data_source": null,
+      "notes": "Share-with-officials screen planned (WF-018); no tracking backend"
+    },
+    {
+      "id": "MC2-WS-08",
+      "title": "Communications Center",
+      "purpose": "Newsletter, traffic, social, referrals, shares",
+      "track_count": 6,
+      "tracks": [
+        "Newsletter growth",
+        "Website traffic",
+        "Social media performance",
+        "Referral activity",
+        "Share rates",
+        "Returning visitors"
+      ],
+      "route": null,
+      "implementation_status": "planned",
+      "data_source": null,
+      "notes": "No analytics integration; Netlify/GA not connected to MC"
+    },
+    {
+      "id": "MC2-WS-09",
+      "title": "Command Center",
+      "purpose": "Private admin operational headquarters",
+      "track_count": 8,
+      "tracks": [
+        "Review queues",
+        "Coalition approvals",
+        "Event management",
+        "Research assignments",
+        "Content publishing",
+        "Build approvals",
+        "Dashboard configuration",
+        "User management"
+      ],
+      "route": "/admin/mission-control/",
+      "implementation_status": "stub",
+      "data_source": null,
+      "notes": "Admin view exists; queues and approvals not operational"
+    }
+  ],
+  "workspace_count": 9,
+  "health_indicators": [
+    {
+      "id": "MC2-HI-01",
+      "title": "Research Health",
+      "score": 20,
+      "status": "partial",
+      "source": "research_readiness + evidence registry"
+    },
+    {
+      "id": "MC2-HI-02",
+      "title": "Content Health",
+      "score": 18,
+      "status": "partial",
+      "source": "content inventory + knowledge atlas"
+    },
+    {
+      "id": "MC2-HI-03",
+      "title": "Technical Health",
+      "score": 28,
+      "status": "partial",
+      "source": "platform + repository blueprints"
+    },
+    {
+      "id": "MC2-HI-04",
+      "title": "Coalition Health",
+      "score": 14,
+      "status": "partial",
+      "source": "county-coalition-index + ACUCOS"
+    },
+    {
+      "id": "MC2-HI-05",
+      "title": "County Coverage",
+      "score": 0,
+      "status": "planned",
+      "source": "relationship_health.counties_active / 75"
+    },
+    {
+      "id": "MC2-HI-06",
+      "title": "Volunteer Capacity",
+      "score": 31,
+      "status": "partial",
+      "source": "contact-intelligence.json"
+    },
+    {
+      "id": "MC2-HI-07",
+      "title": "Source Verification",
+      "score": 62,
+      "status": "partial",
+      "source": "facts_inventory"
+    },
+    {
+      "id": "MC2-HI-08",
+      "title": "Deployment Health",
+      "score": 85,
+      "status": "live",
+      "source": "deployment dashboard"
+    },
+    {
+      "id": "MC2-HI-09",
+      "title": "Overall Project Health",
+      "score": 25,
+      "status": "partial",
+      "source": "weighted average of health indicators"
+    }
+  ],
+  "smart_alerts": [
+    {
+      "id": "MC2-SA-01",
+      "title": "Counties without education leaders",
+      "status": "defined",
+      "automated": false
+    },
+    {
+      "id": "MC2-SA-02",
+      "title": "Pages needing citation review",
+      "status": "defined",
+      "automated": false
+    },
+    {
+      "id": "MC2-SA-03",
+      "title": "Coalition applications awaiting review",
+      "status": "defined",
+      "automated": false
+    },
+    {
+      "id": "MC2-SA-04",
+      "title": "Research nearing scheduled updates",
+      "status": "defined",
+      "automated": false
+    },
+    {
+      "id": "MC2-SA-05",
+      "title": "Broken links",
+      "status": "defined",
+      "automated": false
+    },
+    {
+      "id": "MC2-SA-06",
+      "title": "Incomplete learning paths",
+      "status": "defined",
+      "automated": false
+    },
+    {
+      "id": "MC2-SA-07",
+      "title": "Upcoming educational events",
+      "status": "defined",
+      "automated": false
+    },
+    {
+      "id": "MC2-SA-08",
+      "title": "Pending public official resource requests",
+      "status": "defined",
+      "automated": false
+    }
+  ],
+  "executive_reports": [
+    {
+      "id": "MC2-ER-01",
+      "title": "Weekly progress report",
+      "status": "planned"
+    },
+    {
+      "id": "MC2-ER-02",
+      "title": "Monthly coalition report",
+      "status": "planned"
+    },
+    {
+      "id": "MC2-ER-03",
+      "title": "County activity report",
+      "status": "planned"
+    },
+    {
+      "id": "MC2-ER-04",
+      "title": "Research status report",
+      "status": "planned"
+    },
+    {
+      "id": "MC2-ER-05",
+      "title": "Mission Control snapshot",
+      "status": "partial",
+      "note": "Manual via mission-control.json export"
+    },
+    {
+      "id": "MC2-ER-06",
+      "title": "Launch readiness assessment",
+      "status": "partial",
+      "note": "public_readiness score in MC v1"
+    }
+  ],
+  "success_metrics": {
+    "education": [
+      {
+        "metric": "Learning paths completed",
+        "status": "planned"
+      },
+      {
+        "metric": "Toolkit downloads",
+        "status": "planned"
+      },
+      {
+        "metric": "Source library usage",
+        "status": "planned"
+      }
+    ],
+    "community": [
+      {
+        "metric": "Community conversations",
+        "status": "planned",
+        "current": 0
+      },
+      {
+        "metric": "Counties with active education leaders",
+        "status": "partial",
+        "current": 0
+      },
+      {
+        "metric": "Coalition organizations",
+        "status": "partial",
+        "current": 0
+      }
+    ],
+    "research": [
+      {
+        "metric": "Verified facts",
+        "status": "partial",
+        "current": 8
+      },
+      {
+        "metric": "Sources cataloged",
+        "status": "partial",
+        "current": 14
+      },
+      {
+        "metric": "Pages fully cited",
+        "status": "planned"
+      }
+    ],
+    "growth": [
+      {
+        "metric": "Returning visitors",
+        "status": "planned"
+      },
+      {
+        "metric": "Volunteer signups",
+        "status": "partial",
+        "current": 0
+      },
+      {
+        "metric": "Organization partnerships",
+        "status": "partial",
+        "current": 0
+      }
+    ]
+  },
+  "future_intelligence": [
+    {
+      "capability": "Recommend next development priorities",
+      "status": "planned"
+    },
+    {
+      "capability": "Identify research gaps",
+      "status": "partial",
+      "note": "research_readiness gaps listed manually"
+    },
+    {
+      "capability": "Suggest counties for outreach",
+      "status": "planned"
+    },
+    {
+      "capability": "Recommend coalition partners",
+      "status": "planned"
+    },
+    {
+      "capability": "Detect outdated content",
+      "status": "planned"
+    },
+    {
+      "capability": "Build launch checklists",
+      "status": "partial",
+      "note": "public_readiness questions exist"
+    },
+    {
+      "capability": "Forecast project readiness",
+      "status": "planned"
+    }
+  ],
+  "executive_principles": [
+    {
+      "principle": "Visibility",
+      "description": "Nothing important is hidden."
+    },
+    {
+      "principle": "Transparency",
+      "description": "Progress and gaps are visible."
+    },
+    {
+      "principle": "Accountability",
+      "description": "Every major initiative has an owner and status."
+    },
+    {
+      "principle": "Evidence",
+      "description": "Metrics are grounded in verifiable information."
+    },
+    {
+      "principle": "Continuous Improvement",
+      "description": "Mission Control evolves alongside the platform."
+    }
+  ],
+  "build_timeline": {
+    "schema": [
+      "build_number",
+      "summary",
+      "phase",
+      "status",
+      "completion_date",
+      "related_files",
+      "github_commit",
+      "netlify_deployment",
+      "notes",
+      "future_dependencies"
+    ],
+    "builds_recorded": 24,
+    "builds_complete": 24,
+    "data_source": "/data/mission-control.json",
+    "status": "live"
+  },
+  "command_center": {
+    "route": "/admin/mission-control/",
+    "capabilities": [
+      "Review queues",
+      "Coalition approvals",
+      "Event management",
+      "Research assignments",
+      "Content publishing",
+      "Build approvals",
+      "Dashboard configuration",
+      "User management"
+    ],
+    "status": "stub"
+  },
+  "arkansas_readiness_map": {
+    "title": "Arkansas Readiness Map",
+    "route": "/mission-control/civic-ecosystem.html",
+    "counties_total": 75,
+    "layers": [
+      "Education leaders",
+      "Coalition organizations",
+      "Community conversations",
+      "Events",
+      "Counties with no activity",
+      "Counties needing outreach"
+    ],
+    "status": "partial",
+    "signature_visualization": true
+  },
+  "related_dashboards": [
+    {
+      "title": "MC v1 Dashboard",
+      "route": "/mission-control/"
+    },
+    {
+      "title": "Contact Intelligence",
+      "route": "/mission-control/contact-intelligence.html",
+      "build": 24
+    },
+    {
+      "title": "Wireframes",
+      "route": "/mission-control/wireframes.html",
+      "build": 23
+    },
+    {
+      "title": "Database Schema",
+      "route": "/mission-control/database.html",
+      "build": 22
+    }
+  ],
+  "summary": {
+    "workspaces": 9,
+    "executive_panels": 5,
+    "health_indicators": 9,
+    "smart_alerts_defined": 8,
+    "smart_alerts_automated": 0,
+    "executive_reports": 6,
+    "future_intelligence_capabilities": 7,
+    "builds_in_timeline": 24,
+    "workspace_live": 0,
+    "workspace_partial": 6,
+    "workspace_stub": 1,
+    "workspace_planned": 2,
+    "overall_project_health": 25,
+    "mc2_readiness_pct": 33
+  },
+  "catalog_gaps": [
+    "Smart alerts defined but not automated",
+    "Executive reports not generatable on demand",
+    "Communications Center has no analytics integration",
+    "Public Official Education Center not operational",
+    "Command Center queues/approvals not built",
+    "Arkansas map layers not fully interactive",
+    "Future intelligence layer mostly planned",
+    "Success metrics lack live data feeds"
+  ],
+  "recommended_next_build": {
+    "number": 26,
+    "title": "Component Specifications with Props/States",
+    "note": "Map wireframe sections to component props; wire MC2 alerts to real data sources."
+  }
+}

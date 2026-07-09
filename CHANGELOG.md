@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.29.0] - 2026-07-09 — Build #25 Mission Control 2.0
+
+### Mission Control 2.0 & Executive Command Center
+- **Executive Operating System v1.0** — 9 workspaces, 5 executive panels, 9 health indicators
+- Smart alerts (8 defined), executive reports, success dashboard, build timeline
+- Arkansas Readiness Map linked as signature visualization
+- 33% honest MC2 readiness — architecture complete, automation pending
+- MC dashboard: `/mission-control/executive.html`
+
 ## [1.28.0] - 2026-07-09 — Build #24 Contact Intelligence
 
 ### Contact Intelligence & Community Relationship Architecture

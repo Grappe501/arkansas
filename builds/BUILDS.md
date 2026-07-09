@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#25** | **Mission Control 2.0** | **1.29.0** | **✅ Complete** | [025](025-mission-control-2.md) · [/mission-control/executive.html](../mission-control/executive.html) |
 | **#24** | **Contact Intelligence** | **1.28.0** | **✅ Complete** | [024](024-contact-intelligence.md) · [/mission-control/contact-intelligence.html](../mission-control/contact-intelligence.html) |
 | **#23** | **Wireframes** | **1.27.0** | **✅ Complete** | [023](023-wireframe-blueprint.md) · [/mission-control/wireframes.html](../mission-control/wireframes.html) |
 | **#22** | **Database Schema** | **1.26.0** | **✅ Complete** | [022](022-database-schema.md) · [/mission-control/database.html](../mission-control/database.html) |
@@ -32,6 +33,7 @@
 | **Database Schema** | `/mission-control/database.html` | **15 entities · ERD · v1 static storage** |
 | **Wireframe Blueprint** | `/mission-control/wireframes.html` | **25 screens · section architecture** |
 | **Contact Intelligence** | `/mission-control/contact-intelligence.html` | **14 modules · relationship network** |
+| **Executive Command Center** | `/mission-control/executive.html` | **MC 2.0 · 9 workspaces · health scores** |
 | Phase Registry | `/mission-control/phases.html` | Project phases |
 | Site Architecture | `/mission-control/architecture.html` | Information architecture (IA) |
 | **Platform Blueprint** | `/mission-control/platform.html` | **Technical architecture · v1 system** |

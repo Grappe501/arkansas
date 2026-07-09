@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Executive Command Center <a href="/mission-control/executive.html" class="mc-inline-link">MC 2.0 →</a></h2>
+    <p class="mc-bar-note">Build #25 — 9 workspaces, health indicators, smart alerts, build timeline, Arkansas readiness map.</p>
     <h2 class="mc-section-title">Contact Intelligence <a href="/mission-control/contact-intelligence.html" class="mc-inline-link">Relationship Network →</a></h2>
     <p class="mc-bar-note">Build #24 — Civic Education Profiles, interest/skills taxonomies, county intelligence, privacy-first relationship architecture.</p>
     <h2 class="mc-section-title">Wireframe Blueprint <a href="/mission-control/wireframes.html" class="mc-inline-link">25 Screens →</a></h2>
@@ -2387,6 +2389,148 @@ async function initContactIntelligenceBlueprint() {
   initDevConsole(mc);
 }
 
+async function initExecutiveCommandCenter() {
+  const root = document.getElementById('mc-executive-root');
+  if (!root) return;
+
+  const [mc2Res, mcRes] = await Promise.all([
+    fetch('/data/mc2-executive.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const mc2 = await mc2Res.json();
+  const mc = await mcRes.json();
+  const s = mc2.summary;
+  const ex = mc.executive || {};
+
+  const panelCards = mc2.executive_panels.map(p => {
+    if (p.id === 'MC2-EP-04' && typeof p.value === 'object') {
+      const v = p.value;
+      return `<div class="mc-card"><h3>${p.title}</h3>
+        <div class="mc-phase-item"><span>Educational</span><span>${v.educational}%</span></div>
+        <div class="mc-phase-item"><span>Technical</span><span>${v.technical}%</span></div>
+        <div class="mc-phase-item"><span>Research</span><span>${v.research}%</span></div>
+        <div class="mc-phase-item"><span>Coalition</span><span>${v.coalition}%</span></div>
+        <div class="mc-phase-item"><span>Launch</span><span>${v.launch}%</span></div>
+        <p class="mc-bar-note">Status: ${p.status}</p></div>`;
+    }
+    if (p.id === 'MC2-EP-05' && typeof p.value === 'object') {
+      const v = p.value;
+      const map = mc2.arkansas_readiness_map;
+      return `<div class="mc-card"><h3>${p.title}</h3>
+        <div class="mc-phase-item"><span>Counties active</span><span>${v.counties_active} / ${v.counties_total}</span></div>
+        <div class="mc-phase-item"><span>Education leaders</span><span>${v.education_leaders}</span></div>
+        <div class="mc-phase-item"><span>Coalition orgs</span><span>${v.coalition_orgs}</span></div>
+        <div class="mc-phase-item"><span>Events</span><span>${v.events}</span></div>
+        <div class="mc-phase-item"><span>Conversations</span><span>${v.conversations}</span></div>
+        <p class="mc-bar-note"><a href="${map.route}">County map →</a> · Signature visualization · ${p.status}</p></div>`;
+    }
+    if (p.id === 'MC2-EP-02' && typeof p.value === 'object') {
+      const b = p.value;
+      return `<div class="mc-card"><h3>${p.title}</h3>
+        <div class="mc-stat__value">#${b.number || '—'}</div>
+        <p>${b.title || '—'}</p>
+        <p class="mc-bar-note">Next: #${ex.next_build?.number || '—'} — ${ex.next_build?.title || '—'}</p></div>`;
+    }
+    return `<div class="mc-card"><h3>${p.title}</h3>
+      <div class="mc-stat__value">${typeof p.value === 'object' ? JSON.stringify(p.value) : p.value}${p.unit === 'percent' ? '%' : ''}</div>
+      <p class="mc-bar-note">Status: ${p.status}</p></div>`;
+  }).join('');
+
+  const workspaceRows = mc2.workspaces.map(w => `
+    <tr class="${w.implementation_status === 'partial' ? 'mc-table__row--approved' : ''}">
+      <td><code>${w.id}</code></td>
+      <td><strong>${w.title}</strong>${w.route ? ` <a href="${w.route}" class="mc-inline-link">→</a>` : ''}</td>
+      <td>${w.track_count}</td>
+      <td>${w.implementation_status}</td>
+    </tr>`).join('');
+
+  const healthRows = mc2.health_indicators.map(h => `
+    <tr><td>${h.title}</td><td><strong>${h.score}%</strong></td><td>${h.status}</td><td class="mc-bar-note">${h.source}</td></tr>`).join('');
+
+  const alertRows = mc2.smart_alerts.map(a => `
+    <tr><td>${a.title}</td><td>${a.automated ? '✓ Automated' : '○ Defined'}</td><td>${a.status}</td></tr>`).join('');
+
+  const reportRows = mc2.executive_reports.map(r => `
+    <tr><td>${r.title}</td><td>${r.status}</td><td class="mc-bar-note">${r.note || '—'}</td></tr>`).join('');
+
+  const successBlocks = Object.entries(mc2.success_metrics).map(([cat, metrics]) => `
+    <div class="mc-card"><h3>${cat.charAt(0).toUpperCase() + cat.slice(1)}</h3>
+      <ul class="mc-deliverables">${metrics.map(m =>
+        `<li>${m.metric}${m.current !== undefined ? ` <em>(${m.current})</em>` : ''} — ${m.status}</li>`
+      ).join('')}</ul></div>`).join('');
+
+  const intelRows = mc2.future_intelligence.map(f => `
+    <tr><td>${f.capability}</td><td>${f.status}</td><td class="mc-bar-note">${f.note || '—'}</td></tr>`).join('');
+
+  const buildRows = (mc.builds || []).slice(0, 12).map(b => `
+    <tr><td>#${b.number}</td><td>${b.title}</td><td>v${b.version || '—'}</td><td>${b.status}</td><td>${b.completed || b.started || '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Executive Command Center</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #25 · ${mc2.title}</p>
+      <h1>Executive Command Center</h1>
+      <p class="mc-header__question">${mc2.governing_principle}</p>
+      <p class="mc-bar-note"><strong>If it matters, it is visible.</strong> · <a href="/mission-control/">MC v1 Dashboard</a></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">MC2 readiness</div><div class="mc-stat__value">${s.mc2_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Workspaces</div><div class="mc-stat__value">${s.workspaces}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Project health</div><div class="mc-stat__value">${s.overall_project_health}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Builds recorded</div><div class="mc-stat__value">${s.builds_in_timeline}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Alerts automated</div><div class="mc-stat__value">${s.smart_alerts_automated}/${s.smart_alerts_defined}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Platform completion</div><div class="mc-stat__value">${ex.overall_completion || '—'}%</div></div>
+    </div>
+    <h2 class="mc-section-title">Executive Dashboard Panels</h2>
+    <div class="mc-grid-2">${panelCards}</div>
+    <h2 class="mc-section-title">Mission Control Workspaces</h2>
+    <div class="mc-card mc-inv-table-wrap">
+      <table class="mc-table mc-inv-table">
+        <thead><tr><th>ID</th><th>Workspace</th><th>Tracks</th><th>Status</th></tr></thead>
+        <tbody>${workspaceRows}</tbody>
+      </table>
+    </div>
+    <h2 class="mc-section-title">Project Health Indicators</h2>
+    <table class="mc-table"><thead><tr><th>Indicator</th><th>Score</th><th>Status</th><th>Source</th></tr></thead>
+      <tbody>${healthRows}</tbody></table>
+    <h2 class="mc-section-title">Smart Alerts</h2>
+    <table class="mc-table"><thead><tr><th>Alert</th><th>Automation</th><th>Status</th></tr></thead>
+      <tbody>${alertRows}</tbody></table>
+    <h2 class="mc-section-title">Executive Reports</h2>
+    <table class="mc-table"><thead><tr><th>Report</th><th>Status</th><th>Notes</th></tr></thead>
+      <tbody>${reportRows}</tbody></table>
+    <h2 class="mc-section-title">Success Dashboard — Educational Impact</h2>
+    <div class="mc-grid-2">${successBlocks}</div>
+    <h2 class="mc-section-title">Build Timeline (${mc2.build_timeline.builds_complete} complete)</h2>
+    <div class="mc-card mc-inv-table-wrap" style="max-height:320px;overflow-y:auto">
+      <table class="mc-table"><thead><tr><th>#</th><th>Title</th><th>Version</th><th>Status</th><th>Date</th></tr></thead>
+        <tbody>${buildRows}</tbody></table>
+    </div>
+    <p class="mc-bar-note">Schema: ${mc2.build_timeline.schema.join(' · ')}</p>
+    <h2 class="mc-section-title">Future Intelligence Layer</h2>
+    <table class="mc-table"><thead><tr><th>Capability</th><th>Status</th><th>Notes</th></tr></thead>
+      <tbody>${intelRows}</tbody></table>
+    <h2 class="mc-section-title">Executive Principles</h2>
+    <ul class="mc-deliverables">${mc2.executive_principles.map(p =>
+      `<li><strong>${p.principle}</strong> — ${p.description}</li>`
+    ).join('')}</ul>
+    <h2 class="mc-section-title">Command Center <code>${mc2.command_center.route}</code></h2>
+    <ul class="mc-deliverables">${mc2.command_center.capabilities.map(c => `<li>${c}</li>`).join('')}</ul>
+    <p class="mc-bar-note">Status: ${mc2.command_center.status} — private admin workspace</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${mc2.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${mc2.recommended_next_build.number} — ${mc2.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${mc2.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MISSION_CONTROL_2.md">MISSION_CONTROL_2.md</a> ·
+      <a href="/data/mc2-executive.json">JSON</a> ·
+      <a href="/data/mission-control.json">mission-control.json</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -2410,4 +2554,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initDatabaseSchemaBlueprint();
   initWireframeBlueprint();
   initContactIntelligenceBlueprint();
+  initExecutiveCommandCenter();
 });

@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.28.0 · **Contact Intelligence:** [/mission-control/contact-intelligence.html](/mission-control/contact-intelligence.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #24:** ✅ Contact Intelligence · **Build #23:** ✅ Wireframes · **Build #22:** ✅ Database Schema  
+**Current version:** 1.29.0 · **Executive Command Center:** [/mission-control/executive.html](/mission-control/executive.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #25:** ✅ MC 2.0 · **Build #24:** ✅ Contact Intelligence · **Build #23:** ✅ Wireframes  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -268,8 +268,25 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **22** | **Database Schema** | **✅ v1.26.0** |
 | **23** | **Wireframes** | **✅ v1.27.0** |
 | **24** | **Contact Intelligence** | **✅ v1.28.0** |
+| **25** | **Mission Control 2.0** | **✅ v1.29.0** |
 
-**Next:** Build #25 — GitHub issues, milestones, and sprint roadmap.
+**Next:** Build #26 — Component specifications with props/states.
+
+---
+
+## Phase 25 — Mission Control 2.0 (Build #25) ★ NEW
+
+*Executive Operating System — if it matters, it is visible.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| E1 | MC2 Executive Blueprint v1.0 | ✅ | `data/mc2-executive.json` |
+| E2 | 9 specialized workspaces | ✅ | Mapped to existing dashboards |
+| E3 | 5 executive dashboard panels | ✅ | Including Arkansas readiness map |
+| E4 | 9 project health indicators | ✅ | Honest scores from live registries |
+| E5 | 8 smart alerts defined | ✅ | 0 automated yet |
+| E6 | Build timeline schema | ✅ | Pulls from mission-control.json |
+| E7 | MC2 executive dashboard | ✅ | `/mission-control/executive.html` |
 
 ---
 
@@ -471,7 +488,8 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#22**~~ | ~~Database schema and ERD~~ ✅ Done |
 | ~~**#23**~~ | ~~Wireframes for every major screen~~ ✅ Done |
 | ~~**#24**~~ | ~~Contact Intelligence & Community Relationship Architecture~~ ✅ Done |
-| **#25** | **GitHub issues, milestones, and sprint roadmap** |
+| ~~**#25**~~ | ~~Mission Control 2.0 & Executive Command Center~~ ✅ Done |
+| **#26** | **Component specifications with props/states** |
 
 ---
 
