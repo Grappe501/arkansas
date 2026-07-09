@@ -1,6 +1,6 @@
 {
-  "version": "1.79.0",
-  "build": 75,
+  "version": "1.80.0",
+  "build": 76,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 75,
+    "overall_completion": 76,
     "current_build": {
-      "number": 75,
-      "title": "Citizens United Facts Master Volunteer & Funding Constitution v1.0"
-    },
-    "active_phase": "Volunteer & Funding Constitution \u2192 Implementation Translation",
-    "last_completed": "Civic Innovation & Reform Center",
-    "next_build": {
       "number": 76,
+      "title": "Citizens United Facts Master Organizational Constitution & Operating Charter v1.0"
+    },
+    "active_phase": "Founding Constitution \u2192 Implementation Translation",
+    "last_completed": "Volunteer & Funding Constitution",
+    "next_build": {
+      "number": 77,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
@@ -55,6 +55,7 @@
     "arkansas_research_institute_readiness": 43,
     "arkansas_civic_innovation_reform_readiness": 44,
     "volunteer_funding_constitution_readiness": 45,
+    "organizational_constitution_readiness": 46,
     "mc2_readiness": 42,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
@@ -66,7 +67,7 @@
     "encyclopedia_readiness": 19,
     "narrative_readiness": 24,
     "curriculum_readiness": 26,
-    "trust_readiness": 35,
+    "trust_readiness": 30,
     "library_readiness": 22,
     "learning_lab_readiness": 22,
     "media_studio_readiness": 18,
@@ -80,7 +81,7 @@
     "production_matrix_readiness": 39,
     "visitor_journey_readiness": 40,
     "technical_architecture_readiness": 38,
-    "governance_readiness": 44,
+    "governance_readiness": 46,
     "build_bible_readiness": 49,
     "data_architecture_readiness": 41,
     "ux_architecture_readiness": 39,
@@ -103,8 +104,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 75,
-      "note": "Build #75 \u2014 Volunteer & Funding Constitution."
+      "value": 76,
+      "note": "Build #76 \u2014 Founding Organizational Constitution."
     },
     {
       "id": "constitution",
@@ -468,9 +469,9 @@
     {
       "id": "governance",
       "label": "Governance & Stewardship Constitution",
-      "value": 44,
+      "value": 46,
       "max": 100,
-      "note": "0/7 stewards assigned \u2014 annual review planned."
+      "note": "Founding charter \u2014 15 articles \u00b7 0/10 departments."
     },
     {
       "id": "build_bible",
@@ -653,6 +654,13 @@
       "value": 45,
       "max": 100,
       "note": "0 volunteers \u00b7 adherence planned."
+    },
+    {
+      "id": "organizational_constitution",
+      "label": "Founding Constitution",
+      "value": 46,
+      "max": 100,
+      "note": "0 amendments \u00b7 adherence planned."
     }
   ],
   "public_readiness": {
@@ -1395,6 +1403,12 @@
       "id": "volunteer_funding_constitution",
       "label": "Volunteer & Funding",
       "href": "/mission-control/volunteer-funding-constitution.html",
+      "status": "complete"
+    },
+    {
+      "id": "organizational_constitution",
+      "label": "Founding Constitution",
+      "href": "/mission-control/organizational-constitution.html",
       "status": "complete"
     }
   ],
@@ -2421,6 +2435,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 76,
+      "title": "Citizens United Facts Master Organizational Constitution & Operating Charter v1.0",
+      "version": "1.80.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Founding Constitution \u2014 permanent framework for entire institution",
+      "summary": "15 articles, 6 values, 10 departments, motto, creed, founder principle; 46% readiness. 0/10 departments operational \u00b7 0 amendments.",
+      "files_created": [
+        "data/organizational-constitution.json",
+        "docs/MASTER_ORGANIZATIONAL_CONSTITUTION.md",
+        "builds/076-organizational-constitution.md",
+        "mission-control/organizational-constitution.html",
+        "scripts/gen-organizational-constitution.py",
+        "scripts/update-mc-build76.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/organizational-constitution.html"
+      ],
+      "decisions_made": [
+        "Founding Constitution \u2014 everything flows from this document",
+        "15 articles: name through amendment process",
+        "Motto: Understand First \u00b7 Verify Always \u00b7 Teach Others",
+        "Vision: 75 counties \u00b7 250 cities \u00b7 200K connected",
+        "10 permanent departments; MC as executive operating system",
+        "Aligns Articles VIII-IX with Volunteer & Funding (#75)",
+        "46% readiness \u2014 constitution only"
+      ],
+      "open_questions": [
+        "Reconcile #76 founding vs #49 governance vs #2 project constitution?",
+        "Public constitution page on front door?",
+        "Department registry: MC-native or external?",
+        "Amendment workflow: who proposes, who ratifies?"
+      ],
+      "risks": [
+        "15 articles specified \u2014 no per-article public pages",
+        "0/10 departments operational \u2014 department registry not built",
+        "0 constitutional amendments recorded \u2014 amendment log not implemented",
+        "Adherence monitoring not live \u2014 MC does not enforce constitution checks"
+      ],
+      "next_recommended": 77,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/organizational-constitution.html",
+      "review_status": "complete"
+    },
     {
       "number": 75,
       "title": "Citizens United Facts Master Volunteer & Funding Constitution v1.0",
@@ -6288,21 +6355,22 @@
     }
   ],
   "briefing": {
-    "what_built": "Volunteer & Funding Constitution v1.0 \u2014 institutional independence charter",
-    "building_now": "75 builds specified \u2014 implementation translation next",
+    "what_built": "Organizational Constitution v1.0 \u2014 founding charter, 15 articles",
+    "building_now": "76 builds specified \u2014 implementation translation next",
     "blocked": [
-      "Volunteer registry",
-      "Funding transparency",
+      "Department registry",
+      "Amendment log",
       "Adherence monitoring",
-      "Recognition"
+      "Public constitution page"
     ],
     "ready_public": [
-      "Volunteer first",
-      "Financial independence",
-      "No special access",
-      "Stewardship question"
+      "15 articles",
+      "6 values",
+      "Motto",
+      "Creed",
+      "Founder principle"
     ],
-    "next": "Build #76 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #77 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -7090,5 +7158,13 @@
     "active_volunteers": 0,
     "funding_sources": 0,
     "all_volunteer_institution": true
+  },
+  "organizational_constitution": "/data/organizational-constitution.json",
+  "organizational_constitution_dashboard": "/mission-control/organizational-constitution.html",
+  "organizational_constitution_inventory": {
+    "readiness_score": 46,
+    "articles_ratified": 15,
+    "departments_total": 10,
+    "founding_constitution": true
   }
 }

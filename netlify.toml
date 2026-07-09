@@ -542,6 +542,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/organizational-constitution"
+  to = "/mission-control/organizational-constitution.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301

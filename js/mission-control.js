@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Founding Constitution <a href="/mission-control/organizational-constitution.html" class="mc-inline-link">Organizational Charter #76 →</a></h2>
+    <p class="mc-bar-note">Build #76 — Master Organizational Constitution. 15 articles, 6 values, 10 departments, motto, creed, founder principle. Everything flows from this document. 0/10 departments · 0 amendments. ~46% readiness.</p>
     <h2 class="mc-section-title">Volunteer & Funding <a href="/mission-control/volunteer-funding-constitution.html" class="mc-inline-link">Independence Charter #75 →</a></h2>
     <p class="mc-bar-note">Build #75 — Volunteer & Funding Constitution. All-volunteer institution, financial independence, no special access. Educate first always. 0 volunteers · 0 funding sources. ~45% readiness.</p>
     <h2 class="mc-section-title">Reform Center <a href="/mission-control/arkansas-civic-innovation-reform.html" class="mc-inline-link">Civic Solutions #74 →</a></h2>
@@ -5214,6 +5216,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initArkansasResearchInstitute();
   initArkansasCivicInnovationReform();
   initVolunteerFundingConstitution();
+  initOrganizationalConstitution();
 });
 
 async function initUxArchitecture() {
@@ -7882,6 +7885,121 @@ async function initVolunteerFundingConstitution() {
       <a href="/mission-control/sustainability-stewardship.html">Sustainability (#66)</a> ·
       <a href="/mission-control/governance.html">Governance</a> ·
       <a href="/mission-control/coalition-network.html">Coalition Network</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initOrganizationalConstitution() {
+  const root = document.getElementById('mc-organizational-constitution-root');
+  if (!root) return;
+
+  const [ocRes, mcRes] = await Promise.all([
+    fetch('/data/organizational-constitution.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const oc = await ocRes.json();
+  const mc = await mcRes.json();
+  const s = oc.summary;
+
+  const articleRows = oc.articles.items.map(a => `
+    <tr><td>${a.article}</td><td><code>${a.id}</code></td><td>${a.title}</td>
+      <td>${a.status}</td></tr>`).join('');
+
+  const valueRows = oc.core_values.values.map(v => `
+    <tr><td><code>${v.id}</code></td><td>${v.value}</td><td>${v.principle}</td></tr>`).join('');
+
+  const deptRows = oc.organizational_structure.departments.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.department}</td>
+      <td>${d.status}</td><td>${d.route ? `<a href="${d.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  const systemRows = oc.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td><td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  const mottoLines = oc.institutional_motto.lines.map(l => `<li><strong>${l}</strong></li>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Organizational Constitution</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #76 · ${oc.title}</p>
+      <h1>${oc.subtitle}</h1>
+      <p class="mc-header__question">${oc.purpose}</p>
+      <p class="mc-bar-note"><strong>Platform:</strong> ${oc.platform} · <strong>Permanent founding framework:</strong> ${oc.permanent_founding_framework ? 'Yes' : 'No'}</p>
+      <p class="mc-bar-note"><strong>Founder's principle:</strong> ${oc.founders_principle}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Constitution readiness</div><div class="mc-stat__value">${s.organizational_constitution_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Articles ratified</div><div class="mc-stat__value">${s.articles_ratified}/${s.articles_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Departments</div><div class="mc-stat__value">${s.departments_operational}/${s.departments_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Amendments</div><div class="mc-stat__value">${s.constitutional_amendments}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Core values</div><div class="mc-stat__value">${s.core_values}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Adherence monitoring</div><div class="mc-stat__value">${s.adherence_monitoring_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Institutional Motto</h2>
+    <ul class="mc-deliverables">${mottoLines}</ul>
+    <h2 class="mc-section-title">Institutional Creed</h2>
+    <ul class="mc-deliverables">${oc.institutional_creed.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${oc.articles.title}</h2>
+    <p class="mc-bar-note">Ratified: ${oc.articles.ratified}/${oc.articles.total}</p>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Article</th><th>Status</th></tr></thead>
+      <tbody>${articleRows}</tbody></table>
+    ${oc.articles.items.map(a => `
+      <h3 class="mc-subsection-title">Article ${a.article}: ${a.title}</h3>
+      <p class="mc-bar-note">${a.text}</p>`).join('')}
+    <h2 class="mc-section-title">${oc.core_values.title}</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Value</th><th>Principle</th></tr></thead>
+      <tbody>${valueRows}</tbody></table>
+    <h2 class="mc-section-title">${oc.educational_commitment.title}</h2>
+    <p class="mc-bar-note">Reduce confusion, not inflame controversy: ${oc.educational_commitment.reduce_confusion_not_inflame ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${oc.educational_commitment.commitments.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${oc.organizational_structure.title}</h2>
+    <p class="mc-bar-note">Operational: ${oc.organizational_structure.departments_operational}/${oc.organizational_structure.departments_total} · Additional departments allowed: ${oc.organizational_structure.additional_departments_allowed ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Department</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${deptRows}</tbody></table>
+    <h2 class="mc-section-title">${oc.leadership.title}</h2>
+    <p class="mc-bar-note">Leadership is stewardship: ${oc.leadership.stewardship ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${oc.leadership.responsibilities.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${oc.volunteer_foundation.title}</h2>
+    <p class="mc-bar-note">All-volunteer institution: ${oc.volunteer_foundation.all_volunteer_institution ? 'Yes' : 'No'} · Aligns with: ${oc.volunteer_foundation.aligns_with}</p>
+    <ul class="mc-deliverables">${oc.volunteer_foundation.domains.map(d => `<li>${d}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${oc.financial_principles.title}</h2>
+    <p class="mc-bar-note">Arkansas citizen contributions preferred: ${oc.financial_principles.arkansas_citizen_contributions_preferred ? 'Yes' : 'No'} · Independence preserved: ${oc.financial_principles.independence_preserved ? 'Yes' : 'No'} · Aligns with: ${oc.financial_principles.aligns_with}</p>
+    <h2 class="mc-section-title">${oc.coalition.title}</h2>
+    <p class="mc-bar-note">Organizations retain identity: ${oc.coalition.organizations_retain_identity ? 'Yes' : 'No'} · Evidence-based collaboration: ${oc.coalition.evidence_based_collaboration ? 'Yes' : 'No'}</p>
+    <h2 class="mc-section-title">${oc.mission_control_article.title}</h2>
+    <p class="mc-bar-note">Executive operating system: ${oc.mission_control_article.executive_operating_system ? 'Yes' : 'No'} · Enables informed stewardship: ${oc.mission_control_article.enables_informed_stewardship ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${oc.mission_control_article.monitors.map(m => `<li>${m}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${oc.research_standards.title}</h2>
+    <p class="mc-bar-note">Continual improvement: ${oc.research_standards.continual_improvement ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${oc.research_standards.requirements.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${oc.community_leadership.title}</h2>
+    <p class="mc-bar-note">Multiplies civic education: ${oc.community_leadership.multiplies_civic_education ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${oc.community_leadership.ladder.map(l => `<li>${l}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${oc.public_trust.title}</h2>
+    <p class="mc-bar-note">Greatest asset: ${oc.public_trust.greatest_asset ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${oc.public_trust.pillars.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${oc.amendment_process.title}</h2>
+    <p class="mc-bar-note">MC documents revisions: ${oc.amendment_process.mc_documents_revisions ? 'Yes' : 'No'} · Amendments recorded: ${oc.amendment_process.amendments_recorded} · ${oc.amendment_process.status}</p>
+    <ul class="mc-deliverables">${oc.amendment_process.criteria.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${oc.integration.chain}</p>
+    <p class="mc-bar-note"><strong>Everything flows from constitution:</strong> ${oc.integration.everything_flows_from_constitution ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${oc.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${oc.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${oc.recommended_next_build.number} — ${oc.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${oc.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_ORGANIZATIONAL_CONSTITUTION.md">MASTER_ORGANIZATIONAL_CONSTITUTION.md</a> ·
+      <a href="/data/organizational-constitution.json">JSON</a> ·
+      <a href="/mission-control/governance.html">Governance (#49)</a> ·
+      <a href="/mission-control/volunteer-funding-constitution.html">Volunteer & Funding (#75)</a> ·
+      <a href="/mission-control/master-plan.html">Master Plan (#55)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

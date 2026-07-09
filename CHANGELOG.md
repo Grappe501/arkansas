@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.80.0] - 2026-07-09 — Build #76 Organizational Constitution
+
+### The Founding Constitution
+- **Master Organizational Constitution & Operating Charter v1.0** — permanent framework for entire institution
+- 15 articles: name through amendment process; 6 core values; 10 permanent departments
+- Motto: Understand First · Verify Always · Teach Others; institutional creed; founder's principle
+- Mission Control as executive operating system (Article XI); aligns with Governance (#49) and Volunteer & Funding (#75)
+- Honest: 15/15 articles specified · 0/10 departments operational · 0 amendments · adherence not monitored · ~46% readiness
+- MC dashboard: `/mission-control/organizational-constitution.html`
+
 ## [1.79.0] - 2026-07-09 — Build #75 Volunteer & Funding Constitution
 
 ### The Institutional Independence Charter

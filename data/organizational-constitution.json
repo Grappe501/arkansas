@@ -1,0 +1,427 @@
+{
+  "version": "1.0",
+  "build": 76,
+  "updated": "2026-07-09",
+  "title": "Master Organizational Constitution & Operating Charter v1.0",
+  "subtitle": "The Founding Constitution",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/organizational-constitution.html",
+  "constitution": "/docs/MASTER_ORGANIZATIONAL_CONSTITUTION.md",
+  "purpose": "Permanent constitutional framework \u2014 everything in the institution flows from this document.",
+  "founders_principle": "Not built merely to explain one Supreme Court decision. Built to strengthen Arkansas civic culture \u2014 every article, lesson, volunteer, leader, partner, county, neighborhood, conversation, generation.",
+  "permanent_founding_framework": true,
+  "supersedes_as_founding_charter": true,
+  "institutional_motto": {
+    "lines": [
+      "Understand First.",
+      "Verify Always.",
+      "Teach Others."
+    ]
+  },
+  "institutional_creed": [
+    "An informed citizenry is essential to self-government",
+    "Complex issues deserve careful explanation",
+    "Evidence strengthens democracy",
+    "Respectful dialogue strengthens communities",
+    "Ordinary Arkansans can become extraordinary civic educators",
+    "Knowledge shared freely is one of the greatest public services"
+  ],
+  "articles": {
+    "title": "Fifteen Articles",
+    "total": 15,
+    "ratified": 15,
+    "items": [
+      {
+        "article": 1,
+        "id": "art-i",
+        "title": "Name",
+        "text": "Citizens United Facts \u2014 educate about Citizens United v. FEC; does not support or oppose by name",
+        "status": "ratified"
+      },
+      {
+        "article": 2,
+        "id": "art-ii",
+        "title": "Mission",
+        "text": "Most trusted, transparent, evidence-based educational institution for Citizens United, campaign finance, constitutional government, civic participation, and related policy",
+        "status": "ratified"
+      },
+      {
+        "article": 3,
+        "id": "art-iii",
+        "title": "Vision",
+        "text": "75 counties \u00b7 250 cities \u00b7 200,000 connected \u00b7 lasting statewide civic education infrastructure",
+        "status": "ratified"
+      },
+      {
+        "article": 4,
+        "id": "art-iv",
+        "title": "Core Values",
+        "text": "Truth, Transparency, Curiosity, Respect, Service, Stewardship",
+        "status": "ratified"
+      },
+      {
+        "article": 5,
+        "id": "art-v",
+        "title": "Educational Commitment",
+        "text": "Teach, explain, document, research, clarify, preserve \u2014 reduce confusion not inflame controversy",
+        "status": "ratified"
+      },
+      {
+        "article": 6,
+        "id": "art-vi",
+        "title": "Organizational Structure",
+        "text": "Permanent departments; additional departments may be created as institution grows",
+        "status": "ratified"
+      },
+      {
+        "article": 7,
+        "id": "art-vii",
+        "title": "Leadership",
+        "text": "Stewardship \u2014 protect research quality, public trust, develop leaders, maintain transparency",
+        "status": "ratified"
+      },
+      {
+        "article": 8,
+        "id": "art-viii",
+        "title": "Volunteer Foundation",
+        "text": "All-volunteer institution; volunteers central to all functions",
+        "status": "ratified"
+      },
+      {
+        "article": 9,
+        "id": "art-ix",
+        "title": "Financial Principles",
+        "text": "Arkansas citizen contributions preferred; support never determines conclusions",
+        "status": "ratified"
+      },
+      {
+        "article": 10,
+        "id": "art-x",
+        "title": "Coalition",
+        "text": "Collaboration with evidence-based orgs; each retains identity",
+        "status": "ratified"
+      },
+      {
+        "article": 11,
+        "id": "art-xi",
+        "title": "Mission Control",
+        "text": "Executive operating system \u2014 monitors all institutional domains",
+        "status": "ratified"
+      },
+      {
+        "article": 12,
+        "id": "art-xii",
+        "title": "Research Standards",
+        "text": "Documented, verified, reviewed, sourced; subject to continual improvement",
+        "status": "ratified"
+      },
+      {
+        "article": 13,
+        "id": "art-xiii",
+        "title": "Community Leadership",
+        "text": "Academy \u2192 Neighborhood Leaders \u2192 City \u2192 County \u2192 Regional Mentors",
+        "status": "ratified"
+      },
+      {
+        "article": 14,
+        "id": "art-xiv",
+        "title": "Public Trust",
+        "text": "Greatest asset \u2014 transparency, evidence, respect, consistency, accessibility, accountability",
+        "status": "ratified"
+      },
+      {
+        "article": 15,
+        "id": "art-xv",
+        "title": "Amendment Process",
+        "text": "Evolve preserving mission, transparency, stewardship; MC documents revisions",
+        "status": "ratified"
+      }
+    ]
+  },
+  "core_values": {
+    "title": "Core Values (Article IV)",
+    "values": [
+      {
+        "id": "OC-V1",
+        "value": "Truth",
+        "principle": "Evidence before opinion"
+      },
+      {
+        "id": "OC-V2",
+        "value": "Transparency",
+        "principle": "Show sources, explain methods, document decisions"
+      },
+      {
+        "id": "OC-V3",
+        "value": "Curiosity",
+        "principle": "Questions strengthen learning"
+      },
+      {
+        "id": "OC-V4",
+        "value": "Respect",
+        "principle": "Dignity; welcome honest questions and thoughtful dialogue"
+      },
+      {
+        "id": "OC-V5",
+        "value": "Service",
+        "principle": "Knowledge exists to serve the people of Arkansas"
+      },
+      {
+        "id": "OC-V6",
+        "value": "Stewardship",
+        "principle": "Every generation leaves the institution stronger"
+      }
+    ]
+  },
+  "educational_commitment": {
+    "title": "Educational Commitment (Article V)",
+    "commitments": [
+      "Teach",
+      "Explain",
+      "Document",
+      "Research",
+      "Clarify",
+      "Preserve"
+    ],
+    "reduce_confusion_not_inflame": true
+  },
+  "organizational_structure": {
+    "title": "Organizational Structure (Article VI)",
+    "departments_total": 10,
+    "departments_operational": 0,
+    "departments": [
+      {
+        "id": "OC-D1",
+        "department": "Executive Office",
+        "status": "specified"
+      },
+      {
+        "id": "OC-D2",
+        "department": "Research Office",
+        "status": "specified"
+      },
+      {
+        "id": "OC-D3",
+        "department": "Editorial Office",
+        "status": "specified"
+      },
+      {
+        "id": "OC-D4",
+        "department": "Technology Office",
+        "status": "specified"
+      },
+      {
+        "id": "OC-D5",
+        "department": "Design Office",
+        "status": "specified"
+      },
+      {
+        "id": "OC-D6",
+        "department": "Community Office",
+        "status": "specified"
+      },
+      {
+        "id": "OC-D7",
+        "department": "Coalition Office",
+        "status": "specified"
+      },
+      {
+        "id": "OC-D8",
+        "department": "Media Office",
+        "status": "specified"
+      },
+      {
+        "id": "OC-D9",
+        "department": "Mission Control Office",
+        "status": "partial",
+        "route": "/mission-control/"
+      },
+      {
+        "id": "OC-D10",
+        "department": "Operations Office",
+        "status": "specified"
+      }
+    ],
+    "additional_departments_allowed": true
+  },
+  "leadership": {
+    "title": "Leadership (Article VII)",
+    "stewardship": true,
+    "responsibilities": [
+      "Protecting research quality",
+      "Protecting public trust",
+      "Developing future leaders",
+      "Maintaining transparency",
+      "Supporting volunteers",
+      "Strengthening Arkansas civic education"
+    ]
+  },
+  "volunteer_foundation": {
+    "title": "Volunteer Foundation (Article VIII)",
+    "all_volunteer_institution": true,
+    "domains": [
+      "Research",
+      "Education",
+      "Leadership",
+      "Community conversations",
+      "Coalition development",
+      "Technology",
+      "Operations"
+    ],
+    "aligns_with": "Volunteer & Funding Constitution (#75)"
+  },
+  "financial_principles": {
+    "title": "Financial Principles (Article IX)",
+    "arkansas_citizen_contributions_preferred": true,
+    "independence_preserved": true,
+    "aligns_with": "Volunteer & Funding Constitution (#75)"
+  },
+  "coalition": {
+    "title": "Coalition (Article X)",
+    "organizations_retain_identity": true,
+    "evidence_based_collaboration": true
+  },
+  "mission_control_article": {
+    "title": "Mission Control (Article XI)",
+    "executive_operating_system": true,
+    "monitors": [
+      "Research",
+      "Technology",
+      "Education",
+      "Community",
+      "Coalition",
+      "Leadership",
+      "Operations",
+      "Institutional health"
+    ],
+    "enables_informed_stewardship": true
+  },
+  "research_standards": {
+    "title": "Research Standards (Article XII)",
+    "requirements": [
+      "Documented",
+      "Verified",
+      "Reviewed",
+      "Supported by appropriate sources"
+    ],
+    "continual_improvement": true
+  },
+  "community_leadership": {
+    "title": "Community Leadership (Article XIII)",
+    "ladder": [
+      "Community Education Academy",
+      "Neighborhood Education Leaders",
+      "City Education Leaders",
+      "County Education Directors",
+      "Regional Mentors"
+    ],
+    "multiplies_civic_education": true
+  },
+  "public_trust": {
+    "title": "Public Trust (Article XIV)",
+    "greatest_asset": true,
+    "pillars": [
+      "Transparency",
+      "Evidence",
+      "Respect",
+      "Consistency",
+      "Accessibility",
+      "Accountability"
+    ]
+  },
+  "amendment_process": {
+    "title": "Amendment Process (Article XV)",
+    "criteria": [
+      "Preserve the educational mission",
+      "Strengthen transparency",
+      "Improve institutional stewardship",
+      "Support Arkansas civic education"
+    ],
+    "mc_documents_revisions": true,
+    "amendments_recorded": 0,
+    "status": "specified"
+  },
+  "long_term_vision": "Fifty years from now, still serving Arkansas. New technology, leaders, research, questions \u2014 purpose unchanged: help Arkansans understand constitutional system through research, evidence, education, and community leadership.",
+  "integration": {
+    "chain": "Founding Constitution \u2192 Governance \u2192 Volunteer & Funding \u2192 Master Plan \u2192 Mission Control \u2192 All institutional systems",
+    "systems": [
+      {
+        "system": "Governance Constitution (#49)",
+        "route": "/mission-control/governance.html",
+        "status": "live",
+        "note": "Institutional governance"
+      },
+      {
+        "system": "Volunteer & Funding (#75)",
+        "route": "/mission-control/volunteer-funding-constitution.html",
+        "status": "live"
+      },
+      {
+        "system": "Project Constitution (#2)",
+        "route": "/builds/002-project-constitution.md",
+        "status": "live"
+      },
+      {
+        "system": "Master Master Plan (#55)",
+        "route": "/mission-control/master-plan.html",
+        "status": "live"
+      },
+      {
+        "system": "Civic Intelligence Command Center (#65)",
+        "route": "/mission-control/civic-intelligence-command-center.html",
+        "status": "live"
+      },
+      {
+        "system": "Citizen Leadership Academy (#68)",
+        "route": "/mission-control/citizen-leadership-academy.html",
+        "status": "live"
+      },
+      {
+        "system": "Coalition Network (#61)",
+        "route": "/mission-control/coalition-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      }
+    ],
+    "everything_flows_from_constitution": true
+  },
+  "summary": {
+    "articles_total": 15,
+    "articles_ratified": 15,
+    "core_values": 6,
+    "departments_total": 10,
+    "departments_operational": 0,
+    "constitutional_amendments": 0,
+    "adherence_monitoring_live": false,
+    "constitution_dashboard_live": false,
+    "organizational_constitution_readiness_pct": 46,
+    "governance_readiness_pct": 44,
+    "volunteer_funding_constitution_readiness_pct": 45,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "15 articles specified \u2014 no per-article public pages",
+    "0/10 departments operational \u2014 department registry not built",
+    "0 constitutional amendments recorded \u2014 amendment log not implemented",
+    "Adherence monitoring not live \u2014 MC does not enforce constitution checks",
+    "Build #76 vs Governance (#49) \u2014 reconcile founding vs governance constitutions?",
+    "Build #76 vs Project Constitution (#2) \u2014 document supersession chain",
+    "Build #76 vs Volunteer & Funding (#75) \u2014 Articles VIII-IX align but not linked in UI",
+    "Department heads unassigned \u2014 organizational structure aspirational",
+    "No public-facing constitution page on front door",
+    "Amendment process specified \u2014 no workflow for proposing amendments",
+    "MC Office partial \u2014 other 9 departments at 0% operational",
+    "Founder principle not displayed on site header/footer",
+    "50-year vision \u2014 no generational stewardship tracking"
+  ],
+  "recommended_next_build": {
+    "number": 77,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "Article pages, department registry, amendment log, adherence checklist, public constitution route, COMP-* specs, GitHub backlog."
+  }
+}
