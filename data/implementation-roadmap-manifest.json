@@ -1,0 +1,358 @@
+{
+  "version": "1.0",
+  "build": 101,
+  "package": "IMP-32",
+  "updated": "2026-07-09",
+  "title": "Master Implementation Roadmap, Build Sequencing & Cursor Execution Framework",
+  "constitution": "/docs/IMPLEMENTATION_PACKAGE_32_IMPLEMENTATION_ROADMAP.md",
+  "source_registries": {
+    "cursor_implementation_package": "/data/cursor-implementation-package.json",
+    "ai_orchestration": "/data/ai-orchestration-manifest.json",
+    "launch_strategy": "/data/launch-strategy-manifest.json",
+    "devops_production": "/data/devops-production-manifest.json",
+    "qa_launch_readiness": "/data/qa-launch-readiness-manifest.json"
+  },
+  "philosophy": "Convert vision into structured engineering \u2014 never build randomly, always in dependency order",
+  "governing_principle": "A great architecture can still fail through inconsistent execution; every Cursor session builds in the same disciplined, mission-aligned manner",
+  "master_timeline": {
+    "phase_one": {
+      "id": "software_completion",
+      "title": "Software Completion",
+      "target_date": "2026-07-11",
+      "days_remaining": 2,
+      "scope": [
+        "Public website",
+        "Mission Control",
+        "LocalBrains",
+        "Community Education Academy",
+        "Knowledge Platform",
+        "Research system",
+        "Volunteer system",
+        "Coalition system",
+        "County, City, and Neighborhood systems",
+        "AI infrastructure",
+        "Administrative tools"
+      ]
+    },
+    "phase_two": {
+      "id": "county_milestone",
+      "title": "75 Counties by October 1",
+      "target_date": "2026-10-01",
+      "days_remaining": 84,
+      "scope": [
+        "Completed county profile for all 75 counties",
+        "Education Leader or active recruitment contact per county",
+        "County dashboard operational in Mission Control",
+        "Initial local resource information",
+        "Development plan for continued growth per county"
+      ]
+    },
+    "phase_three": {
+      "id": "organizational_readiness",
+      "title": "Organizational Readiness",
+      "target_date": "2027-01-01",
+      "days_remaining": 176,
+      "focus": [
+        "Recruiting Education Leaders",
+        "Expanding county coverage",
+        "Growing city leadership",
+        "Coalition development",
+        "Volunteer training",
+        "Community conversations",
+        "Research expansion",
+        "Public testing",
+        "User feedback",
+        "System refinement",
+        "Launch certification",
+        "City and neighborhood systems mature",
+        "Statewide volunteer development expanded"
+      ]
+    },
+    "sequence": "Software Complete (Jul 11, 2026) \u2192 75 Counties (Oct 1, 2026) \u2192 Organizational Readiness (Jan 2027)",
+    "build_out_months_approx": 6,
+    "county_milestone": {
+      "target_date": "2026-10-01",
+      "counties_total": 75,
+      "days_remaining": 84,
+      "label": "75-by-October-1 Milestone"
+    }
+  },
+  "software_completion_date": "2026-07-11",
+  "county_milestone_date": "2026-10-01",
+  "organizational_readiness_date": "2027-01-01",
+  "days_to_software": 2,
+  "days_to_county_milestone": 84,
+  "days_to_organizational": 176,
+  "build_philosophy_values": [
+    "never_build_randomly",
+    "never_convenience_only",
+    "dependency_order",
+    "support_following_layers",
+    "remove_uncertainty"
+  ],
+  "engineering_slice_principles": [
+    "small_enough_to_validate",
+    "large_enough_for_progress",
+    "independently_testable",
+    "well_documented",
+    "fully_integrated_before_forward"
+  ],
+  "development_waves": [
+    {
+      "id": "wave_1_foundation",
+      "title": "Foundation",
+      "components": [
+        "infrastructure",
+        "repository",
+        "authentication",
+        "database",
+        "design_system",
+        "core_architecture",
+        "mission_control_shell",
+        "knowledge_platform_shell"
+      ]
+    },
+    {
+      "id": "wave_2_institutional_core",
+      "title": "Institutional Core",
+      "components": [
+        "research_institute",
+        "document_library",
+        "knowledge_graph",
+        "publishing",
+        "search",
+        "ai_gateway"
+      ]
+    },
+    {
+      "id": "wave_3_education",
+      "title": "Education",
+      "components": [
+        "community_education_academy",
+        "curriculum_factory",
+        "learning_platform",
+        "certification",
+        "education_leaders",
+        "ai_tutor"
+      ]
+    },
+    {
+      "id": "wave_4_community",
+      "title": "Community",
+      "components": [
+        "volunteer_network",
+        "coalition_platform",
+        "county_operating_system",
+        "city_operating_system",
+        "neighborhood_operating_system",
+        "relationship_intelligence"
+      ]
+    },
+    {
+      "id": "wave_5_intelligence",
+      "title": "Intelligence",
+      "components": [
+        "mission_control_expansion",
+        "analytics",
+        "forecasting",
+        "executive_dashboards",
+        "calendar_brain",
+        "automation"
+      ]
+    },
+    {
+      "id": "wave_6_public_experience",
+      "title": "Public Experience",
+      "components": [
+        "homepage",
+        "public_portal",
+        "interactive_arkansas_map",
+        "search",
+        "public_ai",
+        "public_dashboards",
+        "public_engagement"
+      ]
+    },
+    {
+      "id": "wave_7_operational_readiness",
+      "title": "Operational Readiness",
+      "components": [
+        "security",
+        "quality_assurance",
+        "performance",
+        "accessibility",
+        "documentation",
+        "deployment",
+        "launch_certification"
+      ]
+    },
+    {
+      "id": "wave_8_launch_growth",
+      "title": "Launch & Growth",
+      "components": [
+        "county_rollout",
+        "organization_onboarding",
+        "education_leader_deployment",
+        "volunteer_activation",
+        "community_conversations",
+        "mission_control_optimization"
+      ]
+    }
+  ],
+  "development_wave_count": 8,
+  "cursor_build_package_fields": [
+    "objective",
+    "dependencies",
+    "files_affected",
+    "acceptance_criteria",
+    "testing_steps",
+    "mission_control_metrics",
+    "rollback_considerations",
+    "expected_duration"
+  ],
+  "cursor_build_package_field_count": 8,
+  "engineering_dependency_rules": [
+    "authentication_before_permissions",
+    "database_before_apis",
+    "knowledge_graph_before_ai",
+    "research_before_academy",
+    "academy_before_education_leaders",
+    "volunteer_network_before_county_operations",
+    "county_operations_before_statewide_rollout"
+  ],
+  "engineering_dependency_rule_count": 7,
+  "validation_gates": [
+    "code_review",
+    "type_validation",
+    "testing",
+    "accessibility_review",
+    "performance_review",
+    "documentation_review",
+    "mission_control_verification"
+  ],
+  "validation_gate_count": 7,
+  "daily_build_cycle_steps": [
+    "plan",
+    "build",
+    "validate",
+    "document",
+    "deploy_to_staging",
+    "mission_control_review",
+    "merge",
+    "repeat"
+  ],
+  "daily_build_cycle_step_count": 8,
+  "feature_documentation_requirements": [
+    "architecture_notes",
+    "developer_documentation",
+    "user_documentation",
+    "mission_control_documentation",
+    "future_work_recommendations"
+  ],
+  "feature_documentation_requirement_count": 5,
+  "build_metrics": [
+    "packages_completed",
+    "dependencies_resolved",
+    "testing_status",
+    "documentation_completion",
+    "technical_debt",
+    "performance",
+    "coverage",
+    "projected_completion_date"
+  ],
+  "build_metric_count": 8,
+  "engineering_dashboard_items": [
+    "current_build_wave",
+    "current_package",
+    "completion_percentage",
+    "blocked_work",
+    "upcoming_dependencies",
+    "critical_path",
+    "engineering_risks",
+    "release_readiness"
+  ],
+  "engineering_dashboard_item_count": 8,
+  "july_11_delivery_plan": {
+    "target_date": "2026-07-11",
+    "deliverables": [
+      "production_software",
+      "mission_control",
+      "knowledge_platform",
+      "community_education_academy",
+      "volunteer_network",
+      "county_systems",
+      "city_systems",
+      "ai_ecosystem",
+      "public_website",
+      "security",
+      "quality_certification",
+      "production_deployment"
+    ],
+    "label": "Software development concludes July 11, 2026"
+  },
+  "october_1_operational_plan": {
+    "target_date": "2026-10-01",
+    "focus": [
+      "county_rollout",
+      "organization_onboarding",
+      "education_leader_deployment",
+      "volunteer_growth",
+      "operational_refinement",
+      "performance_optimization",
+      "community_support"
+    ],
+    "label": "Engineering supports institutional expansion through October 1"
+  },
+  "organizational_goals": {
+    "counties_total": 75,
+    "counties_with_partnerships_goal": 75,
+    "target_cities": 250,
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000
+  },
+  "implementation_roadmap_system_chain": [
+    "mission_control",
+    "pmo",
+    "knowledge_platform",
+    "research_institute",
+    "community_education_academy",
+    "volunteer_network",
+    "coalition_network",
+    "county_operating_system",
+    "city_operating_system",
+    "neighborhood_operating_system",
+    "communications",
+    "ai_localbrains",
+    "production_operations"
+  ],
+  "institutional_systems": [
+    "technical_foundation",
+    "mission_control",
+    "localbrains",
+    "knowledge_platform",
+    "research_institute",
+    "community_education_academy",
+    "volunteer_network",
+    "coalition_network",
+    "local_operating_systems",
+    "communication_platform",
+    "institutional_time_intelligence",
+    "institutional_relationship_intelligence",
+    "institutional_analytics",
+    "institutional_automation",
+    "public_digital_experience",
+    "mobile_field_operations",
+    "institutional_digital_library",
+    "institutional_integration_platform",
+    "institutional_security_trust",
+    "institutional_ai_orchestration",
+    "institutional_implementation_roadmap"
+  ],
+  "mc_dashboard": "/mission-control/cursor-implementation-package.html",
+  "packages_completed": 32,
+  "packages_total": 50,
+  "packages_complete_pct": 64,
+  "engineering_note": "Doctrinal IMP-32 Implementation Roadmap; engineering IMP-32 is Launch certification progress bars",
+  "status": "documented",
+  "implemented": false
+}

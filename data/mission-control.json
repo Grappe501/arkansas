@@ -1,5 +1,5 @@
 {
-  "version": "2.05.31",
+  "version": "2.05.32",
   "build": 101,
   "updated": "2026-07-09",
   "identity": {
@@ -121,7 +121,7 @@
     "connected_citizen_goal_pct": 15,
     "implementation_steps_total": 50,
     "implementation_steps_implemented": 0,
-    "implementation_steps_documented": 31,
+    "implementation_steps_documented": 32,
     "overall_completion": 101,
     "current_build": {
       "number": 101,
@@ -7814,21 +7814,21 @@
     }
   ],
   "briefing": {
-    "what_built": "IMP-01\u201331 documented \u2014 AI orchestration & agent collaboration (62%)",
-    "building_now": "IMP-32 Implementation Roadmap & Cursor Execution next; Sprint Zero pending",
+    "what_built": "IMP-01\u201332 documented \u2014 implementation roadmap & Cursor execution (64%)",
+    "building_now": "IMP-33 Engineering Standards & Development Handbook next; Sprint Zero pending",
     "blocked": [
       "Sprint Zero not complete",
       "0/50 code-implemented",
       "2 days to software target"
     ],
     "ready_public": [
+      "Implementation Roadmap",
+      "implementation-roadmap-manifest.json",
+      "8 development waves",
       "AI Orchestration",
-      "ai-orchestration-manifest.json",
-      "LocalBrains & multi-agent collaboration",
-      "Launch Strategy",
-      "Human-led AI-assisted institutional model"
+      "Cursor build packages & dependency map"
     ],
-    "next": "IMP-32 \u2014 Master Implementation Roadmap, Build Sequencing & Cursor Execution Framework"
+    "next": "IMP-33 \u2014 Master Engineering Standards, Coding Conventions, Repository Governance & Development Handbook"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8847,7 +8847,7 @@
     "readiness_score": 100,
     "steps_total": 50,
     "steps_implemented": 0,
-    "steps_documented": 31,
+    "steps_documented": 32,
     "bands_total": 5,
     "sprint_zero_started": false,
     "cursor_master_prompt_ready": true

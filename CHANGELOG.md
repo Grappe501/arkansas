@@ -13,6 +13,19 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.32] - 2026-07-09 — IMP-32 Implementation Roadmap & Cursor Execution
+
+### Implementation Package 32 of 50
+- **Master Implementation Roadmap, Build Sequencing & Cursor Execution Framework**
+- 8 development waves · Cursor build package standards · dependency map
+- 7 validation gates · daily build cycle · documentation requirements
+- Engineering metrics · engineering dashboard · July 11 delivery plan
+- October 1 operational support plan
+- Machine-readable **implementation-roadmap-manifest.json**
+- Institutional OS evolution: **32/50 packages (64%)**
+- IMP-33 next (doctrinal): Engineering Standards, Coding Conventions & Development Handbook
+- Honest: 32/50 documented · 0/50 implemented · 100% package readiness
+
 ## [2.05.31] - 2026-07-09 — IMP-31 AI Orchestration & Agent Collaboration
 
 ### Implementation Package 31 of 50

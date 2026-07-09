@@ -906,6 +906,33 @@
       "number": 32,
       "id": "IMP-32",
       "title": "Master Implementation Roadmap, Build Sequencing & Cursor Execution Framework",
+      "status": "documented"
+    }
+  },
+  "implementation_roadmap": {
+    "title": "Master Implementation Roadmap, Build Sequencing & Cursor Execution Framework",
+    "package": "Implementation Package 32 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_32_IMPLEMENTATION_ROADMAP.md",
+    "manifest": "/data/implementation-roadmap-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Convert vision into structured engineering \u2014 never build randomly, always in dependency order",
+    "development_wave_count": 8,
+    "validation_gate_count": 7,
+    "engineering_dependency_rule_count": 7,
+    "july_11_delivery_count": 12,
+    "engineering_dashboard_item_count": 8,
+    "packages_completed": 32,
+    "packages_complete_pct": 64,
+    "county_milestone_date": "2026-10-01",
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000,
+    "mc_dashboard": "/mission-control/cursor-implementation-package.html",
+    "engineering_note": "Doctrinal IMP-32 Implementation Roadmap; engineering IMP-32 is Launch certification progress bars",
+    "next_package": {
+      "number": 33,
+      "id": "IMP-33",
+      "title": "Master Engineering Standards, Coding Conventions, Repository Governance & Development Handbook",
       "status": "specified"
     }
   },
@@ -2308,7 +2335,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 31,
+        "current": 32,
         "status": "partial"
       },
       {
@@ -2505,6 +2532,12 @@
       },
       {
         "id": "CIP-D35",
+        "indicator": "Implementation Roadmap (IMP-32)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D36",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -2559,7 +2592,7 @@
     "days_remaining": 176,
     "implementation_package_readiness_pct": 100,
     "steps_total": 50,
-    "steps_documented": 31,
+    "steps_documented": 32,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

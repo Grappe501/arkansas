@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 31  # IMP-01 through IMP-31 (doctrinal)
+steps_documented = 32  # IMP-01 through IMP-32 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3335,7 +3335,7 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'institutional_analytics', 'institutional_automation', 'public_digital_experience',
     'mobile_field_operations', 'institutional_digital_library',
     'institutional_integration_platform', 'institutional_security_trust',
-    'institutional_launch_strategy', 'institutional_ai_orchestration',
+    'institutional_ai_orchestration', 'institutional_implementation_roadmap',
 ]
 
 RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
@@ -5694,6 +5694,214 @@ AI_ORCHESTRATION_MANIFEST = {
     'implemented': False,
 }
 
+BUILD_PHILOSOPHY_VALUES = [
+    'never_build_randomly', 'never_convenience_only', 'dependency_order',
+    'support_following_layers', 'remove_uncertainty',
+]
+
+ENGINEERING_SLICE_PRINCIPLES = [
+    'small_enough_to_validate', 'large_enough_for_progress', 'independently_testable',
+    'well_documented', 'fully_integrated_before_forward',
+]
+
+DEVELOPMENT_WAVES = [
+    {
+        'id': 'wave_1_foundation',
+        'title': 'Foundation',
+        'components': [
+            'infrastructure', 'repository', 'authentication', 'database', 'design_system',
+            'core_architecture', 'mission_control_shell', 'knowledge_platform_shell',
+        ],
+    },
+    {
+        'id': 'wave_2_institutional_core',
+        'title': 'Institutional Core',
+        'components': [
+            'research_institute', 'document_library', 'knowledge_graph', 'publishing',
+            'search', 'ai_gateway',
+        ],
+    },
+    {
+        'id': 'wave_3_education',
+        'title': 'Education',
+        'components': [
+            'community_education_academy', 'curriculum_factory', 'learning_platform',
+            'certification', 'education_leaders', 'ai_tutor',
+        ],
+    },
+    {
+        'id': 'wave_4_community',
+        'title': 'Community',
+        'components': [
+            'volunteer_network', 'coalition_platform', 'county_operating_system',
+            'city_operating_system', 'neighborhood_operating_system', 'relationship_intelligence',
+        ],
+    },
+    {
+        'id': 'wave_5_intelligence',
+        'title': 'Intelligence',
+        'components': [
+            'mission_control_expansion', 'analytics', 'forecasting', 'executive_dashboards',
+            'calendar_brain', 'automation',
+        ],
+    },
+    {
+        'id': 'wave_6_public_experience',
+        'title': 'Public Experience',
+        'components': [
+            'homepage', 'public_portal', 'interactive_arkansas_map', 'search',
+            'public_ai', 'public_dashboards', 'public_engagement',
+        ],
+    },
+    {
+        'id': 'wave_7_operational_readiness',
+        'title': 'Operational Readiness',
+        'components': [
+            'security', 'quality_assurance', 'performance', 'accessibility',
+            'documentation', 'deployment', 'launch_certification',
+        ],
+    },
+    {
+        'id': 'wave_8_launch_growth',
+        'title': 'Launch & Growth',
+        'components': [
+            'county_rollout', 'organization_onboarding', 'education_leader_deployment',
+            'volunteer_activation', 'community_conversations', 'mission_control_optimization',
+        ],
+    },
+]
+
+CURSOR_BUILD_PACKAGE_FIELDS = [
+    'objective', 'dependencies', 'files_affected', 'acceptance_criteria',
+    'testing_steps', 'mission_control_metrics', 'rollback_considerations',
+    'expected_duration',
+]
+
+ENGINEERING_DEPENDENCY_RULES = [
+    'authentication_before_permissions', 'database_before_apis',
+    'knowledge_graph_before_ai', 'research_before_academy',
+    'academy_before_education_leaders', 'volunteer_network_before_county_operations',
+    'county_operations_before_statewide_rollout',
+]
+
+VALIDATION_GATES = [
+    'code_review', 'type_validation', 'testing', 'accessibility_review',
+    'performance_review', 'documentation_review', 'mission_control_verification',
+]
+
+DAILY_BUILD_CYCLE_STEPS = [
+    'plan', 'build', 'validate', 'document', 'deploy_to_staging',
+    'mission_control_review', 'merge', 'repeat',
+]
+
+FEATURE_DOCUMENTATION_REQUIREMENTS = [
+    'architecture_notes', 'developer_documentation', 'user_documentation',
+    'mission_control_documentation', 'future_work_recommendations',
+]
+
+BUILD_METRICS = [
+    'packages_completed', 'dependencies_resolved', 'testing_status',
+    'documentation_completion', 'technical_debt', 'performance', 'coverage',
+    'projected_completion_date',
+]
+
+ENGINEERING_DASHBOARD_ITEMS = [
+    'current_build_wave', 'current_package', 'completion_percentage', 'blocked_work',
+    'upcoming_dependencies', 'critical_path', 'engineering_risks', 'release_readiness',
+]
+
+JULY_11_DELIVERY_PLAN = [
+    'production_software', 'mission_control', 'knowledge_platform',
+    'community_education_academy', 'volunteer_network', 'county_systems',
+    'city_systems', 'ai_ecosystem', 'public_website', 'security',
+    'quality_certification', 'production_deployment',
+]
+
+OCTOBER_1_OPERATIONAL_PLAN = [
+    'county_rollout', 'organization_onboarding', 'education_leader_deployment',
+    'volunteer_growth', 'operational_refinement', 'performance_optimization',
+    'community_support',
+]
+
+IMPLEMENTATION_ROADMAP_SYSTEM_CHAIN = [
+    'mission_control', 'pmo', 'knowledge_platform', 'research_institute',
+    'community_education_academy', 'volunteer_network', 'coalition_network',
+    'county_operating_system', 'city_operating_system', 'neighborhood_operating_system',
+    'communications', 'ai_localbrains', 'production_operations',
+]
+
+IMPLEMENTATION_ROADMAP_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-32',
+    'updated': today,
+    'title': 'Master Implementation Roadmap, Build Sequencing & Cursor Execution Framework',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_32_IMPLEMENTATION_ROADMAP.md',
+    'source_registries': {
+        'cursor_implementation_package': '/data/cursor-implementation-package.json',
+        'ai_orchestration': '/data/ai-orchestration-manifest.json',
+        'launch_strategy': '/data/launch-strategy-manifest.json',
+        'devops_production': '/data/devops-production-manifest.json',
+        'qa_launch_readiness': '/data/qa-launch-readiness-manifest.json',
+    },
+    'philosophy': 'Convert vision into structured engineering — never build randomly, always in dependency order',
+    'governing_principle': (
+        'A great architecture can still fail through inconsistent execution; every Cursor session '
+        'builds in the same disciplined, mission-aligned manner'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'build_philosophy_values': BUILD_PHILOSOPHY_VALUES,
+    'engineering_slice_principles': ENGINEERING_SLICE_PRINCIPLES,
+    'development_waves': DEVELOPMENT_WAVES,
+    'development_wave_count': len(DEVELOPMENT_WAVES),
+    'cursor_build_package_fields': CURSOR_BUILD_PACKAGE_FIELDS,
+    'cursor_build_package_field_count': len(CURSOR_BUILD_PACKAGE_FIELDS),
+    'engineering_dependency_rules': ENGINEERING_DEPENDENCY_RULES,
+    'engineering_dependency_rule_count': len(ENGINEERING_DEPENDENCY_RULES),
+    'validation_gates': VALIDATION_GATES,
+    'validation_gate_count': len(VALIDATION_GATES),
+    'daily_build_cycle_steps': DAILY_BUILD_CYCLE_STEPS,
+    'daily_build_cycle_step_count': len(DAILY_BUILD_CYCLE_STEPS),
+    'feature_documentation_requirements': FEATURE_DOCUMENTATION_REQUIREMENTS,
+    'feature_documentation_requirement_count': len(FEATURE_DOCUMENTATION_REQUIREMENTS),
+    'build_metrics': BUILD_METRICS,
+    'build_metric_count': len(BUILD_METRICS),
+    'engineering_dashboard_items': ENGINEERING_DASHBOARD_ITEMS,
+    'engineering_dashboard_item_count': len(ENGINEERING_DASHBOARD_ITEMS),
+    'july_11_delivery_plan': {
+        'target_date': software_completion_date,
+        'deliverables': JULY_11_DELIVERY_PLAN,
+        'label': 'Software development concludes July 11, 2026',
+    },
+    'october_1_operational_plan': {
+        'target_date': county_milestone_date,
+        'focus': OCTOBER_1_OPERATIONAL_PLAN,
+        'label': 'Engineering supports institutional expansion through October 1',
+    },
+    'organizational_goals': {
+        'counties_total': 75,
+        'counties_with_partnerships_goal': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'implementation_roadmap_system_chain': IMPLEMENTATION_ROADMAP_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/cursor-implementation-package.html',
+    'packages_completed': 32,
+    'packages_total': 50,
+    'packages_complete_pct': 64,
+    'engineering_note': 'Doctrinal IMP-32 Implementation Roadmap; engineering IMP-32 is Launch certification progress bars',
+    'status': 'documented',
+    'implemented': False,
+}
+
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -5841,7 +6049,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D32', 'indicator': 'Sustainability & Continuity (IMP-29)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D33', 'indicator': 'Launch Strategy (IMP-30)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D34', 'indicator': 'AI Orchestration (IMP-31)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D35', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D35', 'indicator': 'Implementation Roadmap (IMP-32)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D36', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -6652,6 +6861,33 @@ out = {
             'number': 32,
             'id': 'IMP-32',
             'title': 'Master Implementation Roadmap, Build Sequencing & Cursor Execution Framework',
+            'status': 'documented',
+        },
+    },
+    'implementation_roadmap': {
+        'title': 'Master Implementation Roadmap, Build Sequencing & Cursor Execution Framework',
+        'package': 'Implementation Package 32 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_32_IMPLEMENTATION_ROADMAP.md',
+        'manifest': '/data/implementation-roadmap-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': IMPLEMENTATION_ROADMAP_MANIFEST['philosophy'],
+        'development_wave_count': IMPLEMENTATION_ROADMAP_MANIFEST['development_wave_count'],
+        'validation_gate_count': IMPLEMENTATION_ROADMAP_MANIFEST['validation_gate_count'],
+        'engineering_dependency_rule_count': IMPLEMENTATION_ROADMAP_MANIFEST['engineering_dependency_rule_count'],
+        'july_11_delivery_count': len(JULY_11_DELIVERY_PLAN),
+        'engineering_dashboard_item_count': IMPLEMENTATION_ROADMAP_MANIFEST['engineering_dashboard_item_count'],
+        'packages_completed': IMPLEMENTATION_ROADMAP_MANIFEST['packages_completed'],
+        'packages_complete_pct': IMPLEMENTATION_ROADMAP_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': IMPLEMENTATION_ROADMAP_MANIFEST['mc_dashboard'],
+        'engineering_note': IMPLEMENTATION_ROADMAP_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 33,
+            'id': 'IMP-33',
+            'title': 'Master Engineering Standards, Coding Conventions, Repository Governance & Development Handbook',
             'status': 'specified',
         },
     },
@@ -6868,6 +7104,10 @@ with open(root / 'data/launch-strategy-manifest.json', 'w', newline='\n') as f:
 
 with open(root / 'data/ai-orchestration-manifest.json', 'w', newline='\n') as f:
     json.dump(AI_ORCHESTRATION_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/implementation-roadmap-manifest.json', 'w', newline='\n') as f:
+    json.dump(IMPLEMENTATION_ROADMAP_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(
