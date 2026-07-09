@@ -1,6 +1,6 @@
 {
-  "version": "1.59.0",
-  "build": 55,
+  "version": "1.60.0",
+  "build": 56,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 55,
+    "overall_completion": 56,
     "current_build": {
-      "number": 55,
-      "title": "Citizens United Facts Master Master Plan v1.0"
-    },
-    "active_phase": "\u2605 Planning Constitution Complete \u2192 Engineering Translation",
-    "last_completed": "Master Project Management Office (PMO)",
-    "next_build": {
       "number": 56,
+      "title": "Citizens United Facts Statewide Growth & Leadership Blueprint v1.0"
+    },
+    "active_phase": "Statewide Growth Objectives \u2192 Implementation Translation",
+    "last_completed": "Master Master Plan (North Star)",
+    "next_build": {
+      "number": 57,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
@@ -57,7 +57,7 @@
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 25,
-    "institutional_maturity_pct": 42,
+    "institutional_maturity_pct": 43,
     "current_institutional_version": "V1",
     "systems_integration_readiness": 28,
     "production_matrix_readiness": 39,
@@ -70,6 +70,7 @@
     "launch_strategy_readiness": 39,
     "pmo_readiness": 46,
     "master_plan_readiness": 56,
+    "statewide_growth_readiness": 48,
     "rollout_phase": 0,
     "rollout_phase_title": "Private Development",
     "planning_phase_complete": true,
@@ -83,8 +84,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 55,
-      "note": "\u2605 Build #55 \u2014 Master Master Plan. Planning constitution complete."
+      "value": 56,
+      "note": "Build #56 \u2014 Statewide Growth & Leadership Blueprint."
     },
     {
       "id": "constitution",
@@ -413,9 +414,9 @@
     {
       "id": "institutional_maturity",
       "label": "Institutional Maturity (V1\u2013V10)",
-      "value": 42,
+      "value": 43,
       "max": 100,
-      "note": "North Star document live \u2014 engineering translation next."
+      "note": "Measurable statewide objectives live \u2014 0/75 counties, 0/250 cities."
     },
     {
       "id": "systems_integration",
@@ -493,6 +494,13 @@
       "value": 56,
       "max": 100,
       "note": "56 builds synthesized \u00b7 28% avg engines."
+    },
+    {
+      "id": "statewide_growth",
+      "label": "Statewide Growth",
+      "value": 48,
+      "max": 100,
+      "note": "0 leaders \u00b7 0/200,000 participants \u00b7 maps planned."
     }
   ],
   "public_readiness": {
@@ -1115,6 +1123,12 @@
       "id": "master_plan",
       "label": "Master Master Plan \u2605",
       "href": "/mission-control/master-plan.html",
+      "status": "complete"
+    },
+    {
+      "id": "statewide_growth",
+      "label": "Statewide Growth",
+      "href": "/mission-control/statewide-growth.html",
       "status": "complete"
     }
   ],
@@ -2141,6 +2155,61 @@
     }
   ],
   "builds": [
+    {
+      "number": 56,
+      "title": "Citizens United Facts Statewide Growth & Leadership Blueprint v1.0",
+      "version": "1.60.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Measurable statewide growth objectives \u2014 Arkansas Civic Education Network",
+      "summary": "75 counties + 250 cities indexed; 3 statewide objectives; 48% growth blueprint readiness. 0 leaders \u00b7 0 participants.",
+      "files_created": [
+        "data/statewide-growth.json",
+        "data/arkansas-cities.json",
+        "docs/MASTER_STATEWIDE_GROWTH.md",
+        "builds/056-statewide-growth.md",
+        "mission-control/statewide-growth.html",
+        "scripts/gen-statewide-growth.py",
+        "scripts/update-mc-build56.py",
+        "scripts/arkansas-top250-cities.json"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/statewide-growth.html"
+      ],
+      "decisions_made": [
+        "Three statewide objectives: 75 counties, 250 cities, 200,000 participants",
+        "Eight-stage leadership ladder from Visitor to Regional Mentor",
+        "Geographic dashboards planned \u2014 county, city, statewide maps",
+        "Privacy-first neighborhood network \u2014 general area, not precise tracking",
+        "250 largest communities indexed from 2026 population estimates",
+        "Recruitment channels must lead back to learning resources",
+        "48% readiness \u2014 objectives documented, network empty"
+      ],
+      "open_questions": [
+        "County-to-city linkage in canonical schema?",
+        "Interactive maps: Leaflet vs static SVG Arkansas?",
+        "Participant levels vs leadership ladder unification?",
+        "Integrate County OS growth plans with statewide benchmarks?"
+      ],
+      "risks": [
+        "0/75 counties with Education Leaders \u2014 objectives defined, network empty",
+        "0/250 cities with local leadership \u2014 index scaffolded from population estimates",
+        "0/200,000 community participants \u2014 no signup funnel integrated",
+        "Interactive geographic maps not built \u2014 dashboard tables only"
+      ],
+      "next_recommended": 57,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/statewide-growth.html",
+      "review_status": "complete"
+    },
     {
       "number": 55,
       "title": "Citizens United Facts Master Master Plan v1.0",
@@ -4837,21 +4906,21 @@
     }
   ],
   "briefing": {
-    "what_built": "\u2605 Master Master Plan v1.0 \u2014 North Star constitution synthesizing 55 builds",
-    "building_now": "SHIFT: Planning constitution complete \u2192 Implementation translation layer",
+    "what_built": "Statewide Growth Blueprint v1.0 \u2014 75 counties, 250 cities, 200K participant objective",
+    "building_now": "Growth objectives defined \u2014 implementation translation next",
     "blocked": [
-      "Translation layer",
-      "Neon/Prisma",
-      "COMP-* specs",
-      "GitHub issue backlog"
+      "Interactive maps",
+      "Participant schema",
+      "Signup funnel",
+      "Leader training pipeline"
     ],
     "ready_public": [
-      "Master Plan dashboard",
-      "Constitution index",
-      "Institutional motto",
-      "Five-year vision"
+      "Statewide objectives dashboard",
+      "250-city index",
+      "Leadership ladder",
+      "Community benchmarks"
     ],
-    "next": "Build #56 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #57 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -5458,5 +5527,16 @@
     "avg_engine_readiness_pct": 28,
     "planning_constitution_complete": true,
     "translation_layer_started": false
+  },
+  "statewide_growth": "/data/statewide-growth.json",
+  "statewide_growth_dashboard": "/mission-control/statewide-growth.html",
+  "statewide_growth_inventory": {
+    "readiness_score": 48,
+    "counties_total": 75,
+    "counties_with_leaders": 0,
+    "cities_indexed": 250,
+    "participants_target": 200000,
+    "participants_current": 0,
+    "benchmarks_met": 0
   }
 }

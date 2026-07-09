@@ -442,6 +442,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/statewide-growth"
+  to = "/mission-control/statewide-growth.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301

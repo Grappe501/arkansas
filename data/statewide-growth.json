@@ -1,0 +1,428 @@
+{
+  "version": "1.0",
+  "build": 56,
+  "updated": "2026-07-09",
+  "title": "Statewide Growth & Leadership Blueprint v1.0",
+  "subtitle": "Arkansas Civic Education Network \u2014 County, City & Neighborhood Expansion Strategy",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/statewide-growth.html",
+  "constitution": "/docs/MASTER_STATEWIDE_GROWTH.md",
+  "purpose": "Measurable statewide growth objectives Mission Control monitors from launch forward \u2014 infrastructure for a durable civic education movement across Arkansas.",
+  "governing_principle": "Success is not website visits \u2014 it is whether every Arkansan has a nearby opportunity to learn, ask questions, access reliable evidence, and participate in thoughtful civic education.",
+  "arkansas_vision": "Every Arkansan should have a reasonable opportunity to learn about Citizens United through someone they know or an organization in their own community.",
+  "growth_model": "Trusted local relationships outward \u2014 not solely statewide communications",
+  "statewide_objectives": [
+    {
+      "id": "OBJ-1",
+      "number": 1,
+      "title": "Education Leaders in All 75 Counties",
+      "minimum": 1,
+      "target_range": "3\u20135 active Education Leaders",
+      "mature": "10+ depending on population",
+      "current": {
+        "counties_represented": 0,
+        "counties_total": 75,
+        "education_leaders": 0,
+        "no_leaders": 75,
+        "one_leader": 0,
+        "meeting_target": 0,
+        "exceeding_target": 0
+      },
+      "mc_displays": [
+        "Counties with no leaders",
+        "Counties with one leader",
+        "Counties meeting target",
+        "Counties exceeding target"
+      ],
+      "status": "scaffolded",
+      "progress_pct": 0.0
+    },
+    {
+      "id": "OBJ-2",
+      "number": 2,
+      "title": "Education Leaders in the 250 Largest Arkansas Cities",
+      "cities_total": 250,
+      "current": {
+        "cities_represented": 0,
+        "education_leaders": 0
+      },
+      "city_dashboard_fields": [
+        "Education Leaders",
+        "Coalition organizations",
+        "Community conversations",
+        "Educational events",
+        "Resource distribution",
+        "Growth trends"
+      ],
+      "status": "scaffolded",
+      "progress_pct": 0.0
+    },
+    {
+      "id": "OBJ-3",
+      "number": 3,
+      "title": "200,000 Arkansas Community Participants",
+      "target": 200000,
+      "current": 0,
+      "involvement_levels": [
+        "Receive educational updates",
+        "Attend community conversations",
+        "Share educational resources",
+        "Participate in surveys",
+        "Volunteer occasionally",
+        "Become an Education Leader",
+        "Join coalition activities"
+      ],
+      "status": "scaffolded",
+      "progress_pct": 0.0
+    }
+  ],
+  "neighborhood_network": {
+    "principle": "Community connection \u2014 not precise location tracking",
+    "privacy_first": true,
+    "participation_types": [
+      "Neighborhood conversations",
+      "Local discussion groups",
+      "Community presentations",
+      "Resource sharing",
+      "Event hosting"
+    ]
+  },
+  "leadership_ladder": {
+    "title": "Eight-Stage Leadership Development",
+    "stages": [
+      {
+        "stage": 1,
+        "id": "visitor",
+        "title": "Visitor",
+        "status": "live"
+      },
+      {
+        "stage": 2,
+        "id": "subscriber",
+        "title": "Subscriber",
+        "status": "planned"
+      },
+      {
+        "stage": 3,
+        "id": "learner",
+        "title": "Learner",
+        "status": "partial"
+      },
+      {
+        "stage": 4,
+        "id": "community_participant",
+        "title": "Community Participant",
+        "status": "planned"
+      },
+      {
+        "stage": 5,
+        "id": "volunteer",
+        "title": "Volunteer",
+        "status": "planned"
+      },
+      {
+        "stage": 6,
+        "id": "education_leader",
+        "title": "Education Leader",
+        "status": "planned"
+      },
+      {
+        "stage": 7,
+        "id": "county_leader",
+        "title": "County Leader",
+        "status": "planned"
+      },
+      {
+        "stage": 8,
+        "id": "regional_mentor",
+        "title": "Regional Mentor",
+        "status": "planned"
+      }
+    ],
+    "flow": "Visitor \u2192 Subscriber \u2192 Learner \u2192 Community Participant \u2192 Volunteer \u2192 Education Leader \u2192 County Leader \u2192 Regional Mentor"
+  },
+  "geographic_dashboards": [
+    {
+      "id": "county_map",
+      "title": "County Coverage",
+      "metrics": [
+        "Education Leaders",
+        "Coalition partners",
+        "Community activity"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "city_map",
+      "title": "City Coverage",
+      "metrics": [
+        "Education Leaders",
+        "Events",
+        "Organization participation"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "statewide",
+      "title": "Statewide Participation",
+      "metrics": [
+        "Total participants",
+        "Growth over time",
+        "Regional distribution"
+      ],
+      "status": "planned"
+    }
+  ],
+  "community_benchmarks": [
+    {
+      "id": "BM-1",
+      "benchmark": "75 of 75 counties represented",
+      "target": 75,
+      "current": 0,
+      "status": "not_started"
+    },
+    {
+      "id": "BM-2",
+      "benchmark": "250 largest cities represented",
+      "target": 250,
+      "current": 0,
+      "status": "not_started"
+    },
+    {
+      "id": "BM-3",
+      "benchmark": "200,000 participants connected",
+      "target": 200000,
+      "current": 0,
+      "status": "not_started"
+    },
+    {
+      "id": "BM-4",
+      "benchmark": "Coalition organizations in every region",
+      "target": 7,
+      "current": 0,
+      "status": "not_started",
+      "note": "0 orgs statewide \u2014 regional coverage not mapped"
+    },
+    {
+      "id": "BM-5",
+      "benchmark": "Community conversations occurring statewide",
+      "target": "ongoing",
+      "current": 0,
+      "status": "not_started"
+    }
+  ],
+  "recruitment_channels": [
+    {
+      "id": "web",
+      "channel": "Website signups",
+      "status": "partial",
+      "route": "/educate/"
+    },
+    {
+      "id": "presentations",
+      "channel": "Community presentations",
+      "status": "planned"
+    },
+    {
+      "id": "coalition",
+      "channel": "Coalition organizations",
+      "status": "planned",
+      "route": "/coalition/"
+    },
+    {
+      "id": "libraries",
+      "channel": "Libraries",
+      "status": "planned"
+    },
+    {
+      "id": "civic",
+      "channel": "Civic organizations",
+      "status": "planned"
+    },
+    {
+      "id": "colleges",
+      "channel": "Colleges and universities",
+      "status": "planned"
+    },
+    {
+      "id": "faith",
+      "channel": "Faith communities",
+      "status": "planned"
+    },
+    {
+      "id": "social",
+      "channel": "Social media",
+      "status": "planned"
+    },
+    {
+      "id": "referrals",
+      "channel": "Friend and family referrals (relational organizing)",
+      "status": "planned"
+    }
+  ],
+  "county_growth_plans": {
+    "title": "Per-County Local Growth Strategy",
+    "components": [
+      "Leadership recruitment",
+      "Organization outreach",
+      "Educational events",
+      "Resource distribution",
+      "Community conversation schedule"
+    ],
+    "counties_needing_support": 75,
+    "route": "/mission-control/county-os.html",
+    "status": "scaffolded"
+  },
+  "success_indicators": [
+    {
+      "id": "SI-1",
+      "indicator": "Education Leaders trained",
+      "current": 0,
+      "status": "not_started"
+    },
+    {
+      "id": "SI-2",
+      "indicator": "Counties represented",
+      "current": 0,
+      "target": 75,
+      "status": "not_started"
+    },
+    {
+      "id": "SI-3",
+      "indicator": "Cities represented",
+      "current": 0,
+      "target": 250,
+      "status": "not_started"
+    },
+    {
+      "id": "SI-4",
+      "indicator": "Active community participants",
+      "current": 0,
+      "target": 200000,
+      "status": "not_started"
+    },
+    {
+      "id": "SI-5",
+      "indicator": "Coalition organizations",
+      "current": 0,
+      "status": "not_started"
+    },
+    {
+      "id": "SI-6",
+      "indicator": "Community conversations held",
+      "current": 0,
+      "status": "not_started"
+    },
+    {
+      "id": "SI-7",
+      "indicator": "Educational resources shared",
+      "current": 0,
+      "status": "not_started"
+    },
+    {
+      "id": "SI-8",
+      "indicator": "Returning learners",
+      "current": 0,
+      "status": "not_started"
+    }
+  ],
+  "long_term_vision": [
+    "Every Arkansas county has trusted local Education Leaders",
+    "250 largest cities have visible civic education activity",
+    "200,000 Arkansans connected through voluntary participation",
+    "Coalition organizations sustain local education",
+    "Learning rooted in neighborhoods, communities, and trusted local relationships"
+  ],
+  "mc_integration": {
+    "title": "Statewide Growth Metrics",
+    "status": "partial",
+    "metrics": [
+      {
+        "id": "counties_no_leaders",
+        "title": "Counties with no leaders",
+        "current": 75,
+        "status": "live"
+      },
+      {
+        "id": "counties_one_leader",
+        "title": "Counties with one leader",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "counties_meeting_target",
+        "title": "Counties meeting target (3\u20135)",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "counties_exceeding_target",
+        "title": "Counties exceeding target (10+)",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "cities_represented",
+        "title": "Cities with Education Leaders",
+        "current": 0,
+        "target": 250,
+        "status": "live"
+      },
+      {
+        "id": "participants",
+        "title": "Community participants",
+        "current": 0,
+        "target": 200000,
+        "status": "live"
+      },
+      {
+        "id": "education_leaders",
+        "title": "Education Leaders statewide",
+        "current": 0,
+        "status": "live"
+      }
+    ],
+    "related_routes": {
+      "counties": "/data/arkansas-counties.json",
+      "cities": "/data/arkansas-cities.json",
+      "county_os": "/mission-control/county-os.html",
+      "education_academy": "/mission-control/education-academy.html",
+      "coalition": "/coalition/"
+    }
+  },
+  "summary": {
+    "counties_total": 75,
+    "counties_with_leaders": 0,
+    "counties_no_leaders": 75,
+    "cities_total": 250,
+    "cities_with_leaders": 0,
+    "education_leaders": 0,
+    "participants_current": 0,
+    "participants_target": 200000,
+    "participants_progress_pct": 0.0,
+    "coalition_orgs": 0,
+    "benchmarks_met": 0,
+    "benchmarks_total": 5,
+    "interactive_maps_status": "planned",
+    "statewide_growth_readiness_pct": 48,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "0/75 counties with Education Leaders \u2014 objectives defined, network empty",
+    "0/250 cities with local leadership \u2014 index scaffolded from population estimates",
+    "0/200,000 community participants \u2014 no signup funnel integrated",
+    "Interactive geographic maps not built \u2014 dashboard tables only",
+    "County-to-city linkage pending \u2014 city county field null",
+    "Neighborhood network privacy model documented \u2014 no participant geo fields in schema",
+    "Leadership ladder 2/8 stages operational \u2014 mostly planned",
+    "County growth plans exist in County OS (#31) \u2014 not unified with this blueprint",
+    "Recruitment channels 1/9 partial \u2014 website only",
+    "Relational organizing / referral tracking not implemented"
+  ],
+  "recommended_next_build": {
+    "number": 57,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "Neon schema for participants/leaders/geo, route inventory, COMP-* specs, API contracts, GitHub issue backlog \u2014 connect growth objectives to buildable systems."
+  }
+}

@@ -232,8 +232,10 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Statewide Growth <a href="/mission-control/statewide-growth.html" class="mc-inline-link">Arkansas Network #56 →</a></h2>
+    <p class="mc-bar-note">Build #56 — Statewide Growth & Leadership Blueprint. 75 counties, 250 cities, 200K participant objective. 0 leaders · 0 participants. ~48% growth blueprint readiness.</p>
     <h2 class="mc-section-title">Master Plan <a href="/mission-control/master-plan.html" class="mc-inline-link">★ North Star #55 →</a></h2>
-    <p class="mc-bar-note">Build #55 — Master Master Plan. Permanent constitution synthesizing 55 builds. Read first. Planning complete — translation layer next. ~52% master plan readiness.</p>
+    <p class="mc-bar-note">Build #55 — Master Master Plan. Permanent constitution synthesizing 55 builds. Read first. Planning complete — translation layer next. ~56% master plan readiness.</p>
     <h2 class="mc-section-title">Build Bible <a href="/mission-control/build-bible.html" class="mc-inline-link">★ Milestone #50 →</a></h2>
     <p class="mc-bar-note">Build #50 — Master Build Bible. Planning phase complete — 50 builds, 28 systems, 12 pillars. Implementation begins. 49% bible readiness.</p>
     <h2 class="mc-section-title">Data Architecture <a href="/mission-control/data-architecture.html" class="mc-inline-link">Canonical Dictionary →</a></h2>
@@ -5154,6 +5156,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLaunchStrategy();
   initPmo();
   initMasterPlan();
+  initStatewideGrowth();
 });
 
 async function initUxArchitecture() {
@@ -5670,6 +5673,126 @@ async function initMasterPlan() {
       <a href="/mission-control/build-bible.html">Build Bible (#50)</a> ·
       <a href="/mission-control/pmo.html">PMO (#54)</a> ·
       <a href="/mission-control/launch-strategy.html">Launch Strategy</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initStatewideGrowth() {
+  const root = document.getElementById('mc-statewide-growth-root');
+  if (!root) return;
+
+  const [sgRes, mcRes, citiesRes] = await Promise.all([
+    fetch('/data/statewide-growth.json'),
+    fetch('/data/mission-control.json'),
+    fetch('/data/arkansas-cities.json')
+  ]);
+  const sg = await sgRes.json();
+  const mc = await mcRes.json();
+  const citiesData = await citiesRes.json();
+  const s = sg.summary;
+
+  const objRows = sg.statewide_objectives.map(o => `
+    <tr><td>${o.number}</td><td><code>${o.id}</code></td><td>${o.title}</td>
+      <td>${o.progress_pct}%</td><td>${o.status}</td></tr>`).join('');
+
+  const ladderRows = sg.leadership_ladder.stages.map(st => `
+    <tr><td>${st.stage}</td><td><code>${st.id}</code></td><td>${st.title}</td><td>${st.status}</td></tr>`).join('');
+
+  const benchRows = sg.community_benchmarks.map(b => `
+    <tr><td><code>${b.id}</code></td><td>${b.benchmark}</td><td>${b.current}</td>
+      <td>${b.target}</td><td>${b.status}</td></tr>`).join('');
+
+  const channelRows = sg.recruitment_channels.map(c => `
+    <tr><td><code>${c.id}</code></td><td>${c.channel}</td><td>${c.status}</td>
+      <td>${c.route ? `<a href="${c.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  const indicatorRows = sg.success_indicators.map(i => `
+    <tr><td><code>${i.id}</code></td><td>${i.indicator}</td><td>${i.current}</td>
+      <td>${i.target ?? '—'}</td><td>${i.status}</td></tr>`).join('');
+
+  const geoRows = sg.geographic_dashboards.map(g => `
+    <tr><td><code>${g.id}</code></td><td>${g.title}</td><td>${g.metrics.join(', ')}</td><td>${g.status}</td></tr>`).join('');
+
+  const metricRows = sg.mc_integration.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.current}</td>
+      <td>${m.target ?? '—'}</td><td>${m.status}</td></tr>`).join('');
+
+  const topCities = citiesData.cities.slice(0, 15).map(c => `
+    <tr><td>${c.rank}</td><td>${c.name}</td><td>${c.population_estimate.toLocaleString()}</td>
+      <td>${c.education_leaders}</td><td>${c.status}</td></tr>`).join('');
+
+  const obj1 = sg.statewide_objectives[0].current;
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Statewide Growth</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #56 · ${sg.title}</p>
+      <h1>Arkansas Civic Education Network</h1>
+      <p class="mc-header__question">${sg.governing_principle}</p>
+      <p class="mc-bar-note">${sg.purpose}</p>
+      <p class="mc-bar-note"><strong>Vision:</strong> ${sg.arkansas_vision}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Growth readiness</div><div class="mc-stat__value">${s.statewide_growth_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Counties w/ leaders</div><div class="mc-stat__value">${s.counties_with_leaders}/${s.counties_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Cities w/ leaders</div><div class="mc-stat__value">${s.cities_with_leaders}/${s.cities_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Participants</div><div class="mc-stat__value">${s.participants_current.toLocaleString()}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Target</div><div class="mc-stat__value">${(s.participants_target / 1000).toFixed(0)}K</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Benchmarks met</div><div class="mc-stat__value">${s.benchmarks_met}/${s.benchmarks_total}</div></div>
+    </div>
+    <h2 class="mc-section-title">Three Statewide Objectives</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Objective</th><th>Progress</th><th>Status</th></tr></thead>
+      <tbody>${objRows}</tbody></table>
+    <h2 class="mc-section-title">Objective One — County Coverage Tiers</h2>
+    <div class="mc-executive">
+      <div class="mc-stat"><div class="mc-stat__label">No leaders</div><div class="mc-stat__value">${obj1.no_leaders}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">One leader</div><div class="mc-stat__value">${obj1.one_leader}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Meeting target (3–5)</div><div class="mc-stat__value">${obj1.meeting_target}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Exceeding (10+)</div><div class="mc-stat__value">${obj1.exceeding_target}</div></div>
+    </div>
+    <h2 class="mc-section-title">Leadership Ladder</h2>
+    <p class="mc-bar-note">${sg.leadership_ladder.flow}</p>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Stage</th><th>Status</th></tr></thead>
+      <tbody>${ladderRows}</tbody></table>
+    <h2 class="mc-section-title">Neighborhood Network</h2>
+    <p class="mc-bar-note">${sg.neighborhood_network.principle} · Privacy-first: ${sg.neighborhood_network.privacy_first ? 'yes' : 'no'}</p>
+    <ul class="mc-deliverables">${sg.neighborhood_network.participation_types.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Geographic Coverage Dashboards</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Dashboard</th><th>Metrics</th><th>Status</th></tr></thead>
+      <tbody>${geoRows}</tbody></table>
+    <h2 class="mc-section-title">Community Benchmarks</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Benchmark</th><th>Current</th><th>Target</th><th>Status</th></tr></thead>
+      <tbody>${benchRows}</tbody></table>
+    <h2 class="mc-section-title">Recruitment Channels</h2>
+    <p class="mc-bar-note">Every pathway leads back to learning resources.</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Channel</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${channelRows}</tbody></table>
+    <h2 class="mc-section-title">County Growth Plans</h2>
+    <p class="mc-bar-note">${sg.county_growth_plans.counties_needing_support} counties need support · <a href="${sg.county_growth_plans.route}">County OS</a></p>
+    <ul class="mc-deliverables">${sg.county_growth_plans.components.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Success Indicators</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Target</th><th>Status</th></tr></thead>
+      <tbody>${indicatorRows}</tbody></table>
+    <h2 class="mc-section-title">Top 15 Cities (250 indexed)</h2>
+    <table class="mc-table"><thead><tr><th>Rank</th><th>City</th><th>Population</th><th>Leaders</th><th>Status</th></tr></thead>
+      <tbody>${topCities}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <ul class="mc-deliverables">${sg.long_term_vision.map(v => `<li>${v}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Mission Control Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Target</th><th>Status</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${sg.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${sg.recommended_next_build.number} — ${sg.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${sg.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_STATEWIDE_GROWTH.md">MASTER_STATEWIDE_GROWTH.md</a> ·
+      <a href="/data/statewide-growth.json">JSON</a> ·
+      <a href="/data/arkansas-cities.json">250 Cities</a> ·
+      <a href="/mission-control/county-os.html">County OS</a> ·
+      <a href="/mission-control/master-plan.html">Master Plan</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 
