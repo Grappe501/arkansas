@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Master Plan <a href="/mission-control/master-plan.html" class="mc-inline-link">★ North Star #55 →</a></h2>
+    <p class="mc-bar-note">Build #55 — Master Master Plan. Permanent constitution synthesizing 55 builds. Read first. Planning complete — translation layer next. ~52% master plan readiness.</p>
     <h2 class="mc-section-title">Build Bible <a href="/mission-control/build-bible.html" class="mc-inline-link">★ Milestone #50 →</a></h2>
     <p class="mc-bar-note">Build #50 — Master Build Bible. Planning phase complete — 50 builds, 28 systems, 12 pillars. Implementation begins. 49% bible readiness.</p>
     <h2 class="mc-section-title">Data Architecture <a href="/mission-control/data-architecture.html" class="mc-inline-link">Canonical Dictionary →</a></h2>
@@ -5151,6 +5153,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initUxArchitecture();
   initLaunchStrategy();
   initPmo();
+  initMasterPlan();
 });
 
 async function initUxArchitecture() {
@@ -5531,6 +5534,141 @@ async function initPmo() {
       <a href="/data/pmo.json">JSON</a> ·
       <a href="/mission-control/executive.html">Executive Office</a> ·
       <a href="/mission-control/build-bible.html">Build Bible</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initMasterPlan() {
+  const root = document.getElementById('mc-master-plan-root');
+  if (!root) return;
+
+  const [mpRes, mcRes] = await Promise.all([
+    fetch('/data/master-plan.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const mp = await mpRes.json();
+  const mc = await mcRes.json();
+  const s = mp.summary;
+
+  const pillarRows = mp.twelve_pillars.pillars.map(p => `
+    <tr><td>${p.number}</td><td><code>${p.id}</code></td><td>${p.title}</td>
+      <td><a href="${p.route}">→</a></td></tr>`).join('');
+
+  const engineRows = mp.four_engines.engines.map(e => `
+    <tr><td><code>${e.id}</code></td><td>${e.title}</td><td>${e.readiness_pct}%</td>
+      <td>${e.components.join(', ')}</td></tr>`).join('');
+
+  const journeyRows = mp.visitor_journey.stages.map(j => `
+    <tr><td>${j.stage}</td><td>${j.title}</td><td>${j.status}</td></tr>`).join('');
+
+  const levelRows = mp.educational_philosophy.levels.map(l => `
+    <tr><td>L${l.level}</td><td>${l.title}</td><td>${l.status}</td></tr>`).join('');
+
+  const modelRows = mp.institutional_model.facets.map(f => `
+    <tr><td>${f.facet}</td><td>${f.status}</td><td>${f.route ? `<a href="${f.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  const growthRows = mp.institutional_growth.dimensions.map(g => `
+    <tr><td>${g.dimension}</td><td>${g.focus}</td><td>${g.readiness_pct}%</td></tr>`).join('');
+
+  const successRows = mp.success_five_year.goals.map(g => `
+    <tr><td>${g.goal}</td><td>${g.status}</td><td>${g.current}</td></tr>`).join('');
+
+  const implRows = mp.next_major_phase.workstreams.map(w => `
+    <tr><td><code>${w.id}</code></td><td>${w.workstream}</td><td>${w.status}</td>
+      <td>${w.route ? `<a href="${w.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  const docRows = mp.constitution_index.documents.map(d => `
+    <tr><td>#${d.build}</td><td>${d.title}</td><td>${d.role}</td><td>${d.status}</td>
+      <td><a href="${d.route}">doc</a></td></tr>`).join('');
+
+  const metricRows = mp.mc_integration.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Master Plan ★</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #55 · ${mp.title} · ★ MILESTONE</p>
+      <h1>Master Master Plan</h1>
+      <p class="mc-header__question">${mp.governing_principle}</p>
+      <p class="mc-bar-note">${mp.purpose}</p>
+      <p class="mc-bar-note"><strong>Motto:</strong> <em>${mp.institutional_motto}</em></p>
+      <p class="mc-bar-note">${mp.milestone.note}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Master plan readiness</div><div class="mc-stat__value">${s.master_plan_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Planning builds</div><div class="mc-stat__value">${s.planning_builds_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Avg engine readiness</div><div class="mc-stat__value">${s.avg_engine_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Constitution docs</div><div class="mc-stat__value">${s.constitution_docs}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Public launch</div><div class="mc-stat__value">${s.public_launch_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">5-year goals</div><div class="mc-stat__value">${s.five_year_goals_achieved}/7</div></div>
+    </div>
+    <h2 class="mc-section-title">The Why</h2>
+    <p class="mc-bar-note">${mp.the_why.context}</p>
+    <ul class="mc-deliverables">${mp.the_why.gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <p class="mc-bar-note"><strong>Arkansas:</strong> ${mp.the_why.arkansas_purpose}</p>
+    <h2 class="mc-section-title">Mission & Vision</h2>
+    <p class="mc-bar-note"><strong>Mission:</strong> ${mp.mission}</p>
+    <p class="mc-bar-note">${mp.mission_rule}</p>
+    <p class="mc-bar-note"><strong>Vision:</strong> ${mp.vision.capabilities.join(' · ')}</p>
+    <p class="mc-bar-note">${mp.vision.outcome}</p>
+    <h2 class="mc-section-title">Arkansas Model</h2>
+    <p class="mc-bar-note">${mp.arkansas_model.principle}</p>
+    <p class="mc-bar-note"><strong>Every feature asks:</strong> ${mp.arkansas_model.question}</p>
+    <h2 class="mc-section-title">Institutional Model (10 Facets)</h2>
+    <table class="mc-table"><thead><tr><th>Facet</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${modelRows}</tbody></table>
+    <h2 class="mc-section-title">Twelve Pillars</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Pillar</th><th>Route</th></tr></thead>
+      <tbody>${pillarRows}</tbody></table>
+    <h2 class="mc-section-title">Four Operating Engines</h2>
+    <p class="mc-bar-note">Average readiness: ${mp.four_engines.avg_readiness_pct}%</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Engine</th><th>Readiness</th><th>Components</th></tr></thead>
+      <tbody>${engineRows}</tbody></table>
+    <h2 class="mc-section-title">Visitor Journey</h2>
+    <p class="mc-bar-note">${mp.visitor_journey.flow}</p>
+    <table class="mc-table"><thead><tr><th>#</th><th>Stage</th><th>Status</th></tr></thead>
+      <tbody>${journeyRows}</tbody></table>
+    <h2 class="mc-section-title">Educational Philosophy (5 Layers)</h2>
+    <table class="mc-table"><thead><tr><th>Level</th><th>Layer</th><th>Status</th></tr></thead>
+      <tbody>${levelRows}</tbody></table>
+    <h2 class="mc-section-title">Philosophies</h2>
+    <p class="mc-bar-note"><strong>Trust:</strong> ${mp.philosophies.trust.join(' · ')}</p>
+    <p class="mc-bar-note"><strong>Technology:</strong> ${mp.philosophies.technology.join(' · ')}</p>
+    <p class="mc-bar-note"><strong>Research:</strong> ${mp.philosophies.research.join(' · ')}</p>
+    <p class="mc-bar-note"><strong>Community:</strong> ${mp.philosophies.community.join(' · ')}</p>
+    <h2 class="mc-section-title">Knowledge Graph</h2>
+    <p class="mc-bar-note">${mp.knowledge_graph.principle} — ${s.knowledge_graph_nodes}/${mp.knowledge_graph.nodes_target} nodes</p>
+    <p class="mc-bar-note">${mp.knowledge_graph.entity_types.join(' · ')}</p>
+    <h2 class="mc-section-title">Institutional Growth</h2>
+    <table class="mc-table"><thead><tr><th>Dimension</th><th>Focus</th><th>Readiness</th></tr></thead>
+      <tbody>${growthRows}</tbody></table>
+    <h2 class="mc-section-title">Five-Year Success</h2>
+    <table class="mc-table"><thead><tr><th>Goal</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${successRows}</tbody></table>
+    <h2 class="mc-section-title">Next Major Phase — Execution</h2>
+    <p class="mc-bar-note">${mp.next_major_phase.planning_status} — ${mp.next_major_phase.dominant_activities.join(' + ')}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Workstream</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${implRows}</tbody></table>
+    <h2 class="mc-section-title">Institutional Promise</h2>
+    <ul class="mc-deliverables">${mp.institutional_promise.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Constitution Index — Read Order</h2>
+    <p class="mc-bar-note"><strong>Read first:</strong> <a href="${mp.constitution_index.read_first}">MASTER_MASTER_PLAN.md</a></p>
+    <table class="mc-table"><thead><tr><th>Build</th><th>Document</th><th>Role</th><th>Status</th><th>Link</th></tr></thead>
+      <tbody>${docRows}</tbody></table>
+    <h2 class="mc-section-title">Master Plan Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${mp.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${mp.recommended_next_build.number} — ${mp.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${mp.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_MASTER_PLAN.md">MASTER_MASTER_PLAN.md</a> ·
+      <a href="/data/master-plan.json">JSON</a> ·
+      <a href="/mission-control/build-bible.html">Build Bible (#50)</a> ·
+      <a href="/mission-control/pmo.html">PMO (#54)</a> ·
       <a href="/mission-control/launch-strategy.html">Launch Strategy</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;

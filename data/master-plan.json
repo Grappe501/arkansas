@@ -1,0 +1,764 @@
+{
+  "version": "1.0",
+  "build": 55,
+  "updated": "2026-07-09",
+  "title": "Master Master Plan v1.0",
+  "subtitle": "The Complete Institutional Blueprint & Execution Constitution",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/master-plan.html",
+  "constitution": "/docs/MASTER_MASTER_PLAN.md",
+  "purpose": "Ties together Builds #1\u201354 \u2014 first document for any new steward ten years from now.",
+  "governing_principle": "Not built to win an election cycle \u2014 built to strengthen civic understanding across Arkansas for generations. This is the permanent North Star; future builds expand, never contradict.",
+  "milestone": {
+    "number": 55,
+    "title": "Planning Constitution Complete",
+    "planning_builds": 56,
+    "shift": "Constitution \u2192 Engineering Translation",
+    "note": "Digital civic education institution specified \u2014 next: implementation artifacts"
+  },
+  "institutional_motto": "Understand First. Verify Always. Teach Others.",
+  "the_why": {
+    "context": "Citizens United changed national conversation on campaign finance and the First Amendment",
+    "gaps": [
+      "What the case actually involved",
+      "What the Court actually held",
+      "What changed and what did not change",
+      "How campaign finance law evolved before and after",
+      "What options exist for Congress, states, and citizens"
+    ],
+    "arkansas_purpose": "Close the educational gap for Arkansas"
+  },
+  "mission": "Build Arkansas's most trusted, transparent, evidence-based educational institution devoted to understanding Citizens United v. FEC.",
+  "mission_rule": "The institution exists to educate. Everything else supports education.",
+  "vision": {
+    "capabilities": [
+      "Discover",
+      "Learn",
+      "Research",
+      "Verify",
+      "Teach",
+      "Lead",
+      "Build community",
+      "Strengthen civic understanding"
+    ],
+    "outcome": "Public educational utility \u2014 not a temporary website"
+  },
+  "institutional_model": {
+    "title": "Ten Simultaneous Facets",
+    "facets": [
+      {
+        "facet": "Research institute",
+        "status": "partial",
+        "route": "/mission-control/research-observatory.html"
+      },
+      {
+        "facet": "Constitutional law library",
+        "status": "partial",
+        "route": "/library/"
+      },
+      {
+        "facet": "Digital museum",
+        "status": "planned",
+        "route": "/halls/"
+      },
+      {
+        "facet": "University curriculum",
+        "status": "partial",
+        "route": "/mission-control/curriculum.html"
+      },
+      {
+        "facet": "Documentary studio",
+        "status": "planned",
+        "route": "/mission-control/media-studio.html"
+      },
+      {
+        "facet": "Statewide civic education network",
+        "status": "planned",
+        "route": "/educate/"
+      },
+      {
+        "facet": "Coalition hub",
+        "status": "planned",
+        "route": "/coalition/"
+      },
+      {
+        "facet": "Community leadership academy",
+        "status": "partial",
+        "route": "/mission-control/education-academy.html"
+      },
+      {
+        "facet": "Public knowledge archive",
+        "status": "partial",
+        "route": "/mission-control/research-library.html"
+      },
+      {
+        "facet": "Mission Control operating system",
+        "status": "live",
+        "route": "/mission-control/"
+      }
+    ],
+    "live": 1,
+    "partial": 5,
+    "planned": 4
+  },
+  "arkansas_model": {
+    "principle": "Everything begins and ends with Arkansas",
+    "question": "How does this help educate Arkansans?",
+    "pilot_state": "Arkansas"
+  },
+  "twelve_pillars": {
+    "title": "Permanent Institutional Organization",
+    "pillars": [
+      {
+        "number": 1,
+        "id": "research",
+        "title": "Research",
+        "route": "/mission-control/research-observatory.html"
+      },
+      {
+        "number": 2,
+        "id": "evidence",
+        "title": "Evidence",
+        "route": "/mission-control/evidence-ledger.html"
+      },
+      {
+        "number": 3,
+        "id": "education",
+        "title": "Education",
+        "route": "/educate/"
+      },
+      {
+        "number": 4,
+        "id": "encyclopedia",
+        "title": "Encyclopedia",
+        "route": "/mission-control/encyclopedia.html"
+      },
+      {
+        "number": 5,
+        "id": "curriculum",
+        "title": "Curriculum",
+        "route": "/mission-control/curriculum.html"
+      },
+      {
+        "number": 6,
+        "id": "community",
+        "title": "Community",
+        "route": "/mission-control/education-academy.html"
+      },
+      {
+        "number": 7,
+        "id": "coalition",
+        "title": "Coalition",
+        "route": "/mission-control/coalition.html"
+      },
+      {
+        "number": 8,
+        "id": "media",
+        "title": "Media",
+        "route": "/mission-control/media-studio.html"
+      },
+      {
+        "number": 9,
+        "id": "solutions",
+        "title": "Solutions",
+        "route": "/solutions/"
+      },
+      {
+        "number": 10,
+        "id": "mission_control",
+        "title": "Mission Control",
+        "route": "/mission-control/"
+      },
+      {
+        "number": 11,
+        "id": "knowledge_graph",
+        "title": "Knowledge Graph",
+        "route": "/mission-control/civic-intelligence.html"
+      },
+      {
+        "number": 12,
+        "id": "governance",
+        "title": "Governance",
+        "route": "/mission-control/governance.html"
+      }
+    ],
+    "pillars_total": 12,
+    "source": "Aligned with Build #50 Build Bible"
+  },
+  "four_engines": {
+    "title": "Operating Engines",
+    "engines": [
+      {
+        "id": "knowledge",
+        "title": "Knowledge Engine",
+        "components": [
+          "Research",
+          "Evidence",
+          "Claims",
+          "Sources",
+          "Knowledge Graph"
+        ],
+        "readiness_pct": 24
+      },
+      {
+        "id": "learning",
+        "title": "Learning Engine",
+        "components": [
+          "Curriculum",
+          "Academy",
+          "Media",
+          "Interactive Learning",
+          "Storytelling"
+        ],
+        "readiness_pct": 24
+      },
+      {
+        "id": "community",
+        "title": "Community Engine",
+        "components": [
+          "Education Leaders",
+          "Coalition",
+          "Counties",
+          "Events",
+          "Contact Network"
+        ],
+        "readiness_pct": 23
+      },
+      {
+        "id": "institution",
+        "title": "Institution Engine",
+        "components": [
+          "Mission Control",
+          "Publishing",
+          "Technology",
+          "Governance",
+          "Operations"
+        ],
+        "readiness_pct": 43
+      }
+    ],
+    "avg_readiness_pct": 28,
+    "source": "Build #50 + Build #55 synthesis"
+  },
+  "visitor_journey": {
+    "title": "Eight-Stage Journey",
+    "stages": [
+      {
+        "stage": 1,
+        "id": "curiosity",
+        "title": "Curiosity",
+        "status": "partial"
+      },
+      {
+        "stage": 2,
+        "id": "discovery",
+        "title": "Discovery",
+        "status": "partial"
+      },
+      {
+        "stage": 3,
+        "id": "understanding",
+        "title": "Understanding",
+        "status": "planned"
+      },
+      {
+        "stage": 4,
+        "id": "confidence",
+        "title": "Confidence",
+        "status": "planned"
+      },
+      {
+        "stage": 5,
+        "id": "connection",
+        "title": "Connection",
+        "status": "planned"
+      },
+      {
+        "stage": 6,
+        "id": "participation",
+        "title": "Participation",
+        "status": "planned"
+      },
+      {
+        "stage": 7,
+        "id": "leadership",
+        "title": "Leadership",
+        "status": "planned"
+      },
+      {
+        "stage": 8,
+        "id": "legacy",
+        "title": "Legacy",
+        "status": "planned"
+      }
+    ],
+    "flow": "Curiosity \u2192 Discovery \u2192 Understanding \u2192 Confidence \u2192 Connection \u2192 Participation \u2192 Leadership \u2192 Legacy"
+  },
+  "educational_philosophy": {
+    "title": "Five Learning Layers",
+    "levels": [
+      {
+        "level": 1,
+        "title": "Simple explanation",
+        "status": "partial"
+      },
+      {
+        "level": 2,
+        "title": "Expanded lesson",
+        "status": "partial"
+      },
+      {
+        "level": 3,
+        "title": "Complete article",
+        "status": "partial"
+      },
+      {
+        "level": 4,
+        "title": "Primary sources",
+        "status": "partial"
+      },
+      {
+        "level": 5,
+        "title": "Research archive",
+        "status": "partial"
+      }
+    ],
+    "principle": "Visitors choose depth"
+  },
+  "philosophies": {
+    "trust": [
+      "Evidence",
+      "Transparency",
+      "Documentation",
+      "Primary sources",
+      "Version history",
+      "Corrections",
+      "Intellectual honesty"
+    ],
+    "technology": [
+      "Technology invisible",
+      "Institution is the product",
+      "Maintainability",
+      "Documentation",
+      "Accessibility",
+      "Performance",
+      "Institutional continuity"
+    ],
+    "research": [
+      "Documented",
+      "Verified",
+      "Reviewed",
+      "Cited",
+      "Connected",
+      "Revisited",
+      "Never finished"
+    ],
+    "community": [
+      "Education Leaders",
+      "Community conversations",
+      "Coalition organizations",
+      "County networks",
+      "Public understanding",
+      "Shared knowledge"
+    ]
+  },
+  "mission_control": {
+    "role": "Executive brain of the institution",
+    "questions": [
+      "Where are we?",
+      "What's healthy?",
+      "What's missing?",
+      "What's next?"
+    ],
+    "route": "/mission-control/",
+    "status": "live"
+  },
+  "knowledge_graph": {
+    "entity_types": [
+      "Person",
+      "Court case",
+      "Law",
+      "Timeline",
+      "Claim",
+      "Source",
+      "Lesson",
+      "County",
+      "Organization",
+      "Event",
+      "Presentation",
+      "Video",
+      "Research paper"
+    ],
+    "nodes_current": 38,
+    "nodes_target": 500,
+    "principle": "Nothing stands alone",
+    "route": "/data/kg-registry.json"
+  },
+  "institutional_growth": {
+    "dimensions": [
+      {
+        "dimension": "Knowledge",
+        "focus": "More research, sources, lessons",
+        "readiness_pct": 28
+      },
+      {
+        "dimension": "Community",
+        "focus": "More leaders, counties, coalition orgs",
+        "readiness_pct": 18
+      },
+      {
+        "dimension": "Institution",
+        "focus": "Better technology, governance, transparency, curriculum",
+        "readiness_pct": 40
+      }
+    ],
+    "principle": "Every year more valuable than the year before"
+  },
+  "success_five_year": {
+    "title": "What Success Looks Like",
+    "goals": [
+      {
+        "goal": "Every Arkansas county has educational presence",
+        "status": "planned",
+        "current": "0/75 counties with participation"
+      },
+      {
+        "goal": "Thousands complete learning paths",
+        "status": "planned",
+        "current": "No path completion tracking"
+      },
+      {
+        "goal": "Hundreds of active Education Leaders",
+        "status": "planned",
+        "current": "0 leaders"
+      },
+      {
+        "goal": "Strong coalition supports civic education",
+        "status": "planned",
+        "current": "0 organizations"
+      },
+      {
+        "goal": "Widely recognized trusted educational resource",
+        "status": "planned",
+        "current": "8% public launch readiness"
+      },
+      {
+        "goal": "MC demonstrates measurable educational growth",
+        "status": "planned",
+        "current": "No analytics store"
+      },
+      {
+        "goal": "Part of Arkansas civic infrastructure",
+        "status": "planned",
+        "current": "V1 foundation only"
+      }
+    ],
+    "goals_achieved": 0
+  },
+  "next_major_phase": {
+    "title": "Execution Dominates",
+    "planning_status": "Largely complete",
+    "workstreams": [
+      {
+        "id": "IMPL-01",
+        "workstream": "Database schema",
+        "status": "partial",
+        "route": "/mission-control/database.html"
+      },
+      {
+        "id": "IMPL-02",
+        "workstream": "Repository architecture",
+        "status": "partial",
+        "route": "/mission-control/repository.html"
+      },
+      {
+        "id": "IMPL-03",
+        "workstream": "Route map",
+        "status": "partial",
+        "route": "/mission-control/routes.html"
+      },
+      {
+        "id": "IMPL-04",
+        "workstream": "Component library",
+        "status": "partial",
+        "route": "/mission-control/components.html"
+      },
+      {
+        "id": "IMPL-05",
+        "workstream": "Design system",
+        "status": "partial",
+        "route": "/design-system/"
+      },
+      {
+        "id": "IMPL-06",
+        "workstream": "Mission Control implementation",
+        "status": "partial",
+        "route": "/mission-control/"
+      },
+      {
+        "id": "IMPL-07",
+        "workstream": "Knowledge Graph implementation",
+        "status": "partial",
+        "route": "/mission-control/knowledge-graph.html"
+      },
+      {
+        "id": "IMPL-08",
+        "workstream": "Evidence Ledger implementation",
+        "status": "partial",
+        "route": "/mission-control/evidence-ledger.html"
+      },
+      {
+        "id": "IMPL-09",
+        "workstream": "Content production",
+        "status": "partial",
+        "route": "/mission-control/content-production-matrix.html"
+      },
+      {
+        "id": "IMPL-10",
+        "workstream": "County framework",
+        "status": "partial",
+        "route": "/mission-control/county-os.html"
+      },
+      {
+        "id": "IMPL-11",
+        "workstream": "Educational curriculum production",
+        "status": "partial",
+        "route": "/mission-control/curriculum.html"
+      }
+    ],
+    "dominant_activities": [
+      "Engineering",
+      "Content production"
+    ]
+  },
+  "institutional_promise": [
+    "Every visitor leaves knowing more than when they arrived",
+    "Every contributor leaves the institution stronger",
+    "Every future steward inherits better documentation, research, resources, and relationships"
+  ],
+  "constitution_index": {
+    "title": "Master Documents \u2014 Read Order",
+    "documents": [
+      {
+        "build": 55,
+        "title": "Master Master Plan",
+        "role": "North Star \u2014 read first",
+        "route": "/docs/MASTER_MASTER_PLAN.md",
+        "status": "live"
+      },
+      {
+        "build": 50,
+        "title": "Master Build Bible",
+        "role": "System index",
+        "route": "/docs/MASTER_BUILD_BIBLE.md",
+        "status": "live"
+      },
+      {
+        "build": 54,
+        "title": "Master PMO",
+        "role": "Execution system",
+        "route": "/docs/MASTER_PMO.md",
+        "status": "live"
+      },
+      {
+        "build": 53,
+        "title": "Launch Strategy",
+        "role": "Arkansas rollout",
+        "route": "/docs/MASTER_LAUNCH_STRATEGY.md",
+        "status": "live"
+      },
+      {
+        "build": 52,
+        "title": "UX Architecture",
+        "role": "Experience blueprint",
+        "route": "/docs/MASTER_UX_ARCHITECTURE.md",
+        "status": "live"
+      },
+      {
+        "build": 51,
+        "title": "Data Architecture",
+        "role": "Data constitution",
+        "route": "/docs/MASTER_DATA_ARCHITECTURE.md",
+        "status": "live"
+      },
+      {
+        "build": 49,
+        "title": "Governance Constitution",
+        "role": "Institutional rules",
+        "route": "/docs/MASTER_GOVERNANCE_CONSTITUTION.md",
+        "status": "live"
+      },
+      {
+        "build": 48,
+        "title": "Technical Architecture",
+        "role": "Engineering blueprint",
+        "route": "/docs/MASTER_TECHNICAL_ARCHITECTURE.md",
+        "status": "live"
+      },
+      {
+        "build": 47,
+        "title": "Visitor Journey",
+        "role": "Behavioral architecture",
+        "route": "/docs/MASTER_VISITOR_JOURNEY.md",
+        "status": "live"
+      },
+      {
+        "build": 2,
+        "title": "Project Constitution",
+        "role": "Original charter",
+        "route": "/builds/002-project-constitution.md",
+        "status": "live"
+      }
+    ],
+    "read_first": "/docs/MASTER_MASTER_PLAN.md"
+  },
+  "synthesis": {
+    "title": "Builds #1\u201354 Integrated",
+    "key_blueprints": [
+      {
+        "build": 51,
+        "title": "Data Architecture",
+        "route": "/data/data-architecture.json"
+      },
+      {
+        "build": 52,
+        "title": "UX Architecture",
+        "route": "/data/ux-architecture.json"
+      },
+      {
+        "build": 53,
+        "title": "Launch Strategy",
+        "route": "/data/launch-strategy.json"
+      },
+      {
+        "build": 54,
+        "title": "PMO",
+        "route": "/data/pmo.json"
+      },
+      {
+        "build": 50,
+        "title": "Build Bible",
+        "route": "/data/build-bible.json"
+      }
+    ],
+    "foundation_systems": 28,
+    "planning_builds_at_bible": 50
+  },
+  "mc_integration": {
+    "title": "Master Plan Metrics",
+    "status": "partial",
+    "metrics": [
+      {
+        "id": "MP-01",
+        "title": "Master Plan constitution live",
+        "status": "live",
+        "current": "Build #55 North Star"
+      },
+      {
+        "id": "MP-02",
+        "title": "Planning builds complete",
+        "status": "live",
+        "current": "56 builds"
+      },
+      {
+        "id": "MP-03",
+        "title": "Constitution documents indexed",
+        "status": "live",
+        "current": "10 master docs"
+      },
+      {
+        "id": "MP-04",
+        "title": "Twelve pillars defined",
+        "status": "live",
+        "current": "12/12"
+      },
+      {
+        "id": "MP-05",
+        "title": "Four engines operational",
+        "status": "planned",
+        "current": "28% avg readiness"
+      },
+      {
+        "id": "MP-06",
+        "title": "Institutional model facets live",
+        "status": "partial",
+        "current": "1 live, 5 partial"
+      },
+      {
+        "id": "MP-07",
+        "title": "Knowledge graph connected",
+        "status": "partial",
+        "current": "38/500 nodes"
+      },
+      {
+        "id": "MP-08",
+        "title": "Educational content published",
+        "status": "partial",
+        "current": "15 assets"
+      },
+      {
+        "id": "MP-09",
+        "title": "Implementation phase active",
+        "status": "partial",
+        "current": "11/11 workstreams partial"
+      },
+      {
+        "id": "MP-10",
+        "title": "Translation layer to engineering",
+        "status": "planned",
+        "current": "Build #56 recommended"
+      },
+      {
+        "id": "MP-11",
+        "title": "Five-year success criteria met",
+        "status": "planned",
+        "current": "0/7 goals achieved"
+      },
+      {
+        "id": "MP-12",
+        "title": "Master plan readiness score",
+        "status": "partial",
+        "current": "See summary"
+      }
+    ],
+    "north_star_document": true
+  },
+  "summary": {
+    "planning_builds_total": 56,
+    "pillars_total": 12,
+    "engines_total": 4,
+    "avg_engine_readiness_pct": 28,
+    "constitution_docs": 10,
+    "institutional_model_live": 1,
+    "knowledge_graph_nodes": 38,
+    "content_published": 15,
+    "education_leaders": 0,
+    "coalition_orgs": 0,
+    "implementation_workstreams": 11,
+    "five_year_goals_achieved": 0,
+    "public_launch_readiness_pct": 8,
+    "institutional_maturity_pct": 40,
+    "planning_constitution_complete": true,
+    "implementation_translation_started": false,
+    "master_plan_readiness_pct": 56
+  },
+  "catalog_gaps": [
+    "55 planning builds \u2260 working institution \u2014 constitution complete, execution minimal",
+    "Avg engine readiness 28% \u2014 blueprints dominate over operational systems",
+    "15 published of ~2700 content target \u2014 production workstream early",
+    "38/500 KG nodes \u00b7 0 relationship edges \u2014 graph theoretical",
+    "0 Education Leaders \u00b7 0 coalition orgs \u2014 community engine empty",
+    "Translation layer not built \u2014 no unified API contracts or GitHub issue backlog from constitution",
+    "Component library (Build #17) never fully spec'd \u2014 blocks direct Cursor implementation",
+    "Neon/Prisma/Next.js migration documented not started",
+    "Build #50 Build Bible and Build #55 Master Plan coexist \u2014 #55 is North Star, #50 is index",
+    "Three journey models (Build #8, #47, #55) \u2014 emotional, behavioral, master plan stages",
+    "Five-year success criteria 0/7 \u2014 aspirational only"
+  ],
+  "recommended_next_build": {
+    "number": 56,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "Turn constitutional documents into engineering artifacts: Neon schema migration, route inventory enforcement, COMP-* props/states, API contracts, GitHub issue backlog \u2014 so Cursor builds directly from blueprint without reinterpretation."
+  }
+}
