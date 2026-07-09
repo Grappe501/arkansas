@@ -1,0 +1,461 @@
+{
+  "version": "1.0",
+  "build": 93,
+  "updated": "2026-07-09",
+  "completion_target_date": "2027-01-01",
+  "title": "Master Arkansas Civic Data Warehouse & Knowledge Platform v1.0",
+  "subtitle": "One Source of Truth",
+  "tagline": "The Institutional Intelligence Backbone",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/civic-knowledge-platform.html",
+  "constitution": "/docs/MASTER_CIVIC_DATA_WAREHOUSE_KNOWLEDGE_PLATFORM.md",
+  "purpose": "Single institutional data and knowledge platform \u2014 authoritative source for every system. Every LocalBrain reads from it, Mission Control monitors it, AI learns from it, volunteers contribute to it. One source of truth.",
+  "governing_principle": "Information becomes wisdom only when it is organized. Organized knowledge becomes institutional intelligence. Institutional intelligence becomes better decisions. Better decisions strengthen public trust. The Knowledge Platform is the intellectual foundation upon which the entire institution is built.",
+  "founders_principle": "The institution should never waste volunteer time searching for information that already exists. Knowledge should be organized once and reused everywhere. The platform becomes the collective memory \u2014 each generation begins where the previous left off.",
+  "institutional_philosophy": {
+    "title": "Institutional Philosophy",
+    "exist_once_maintain_once": true,
+    "may_appear_many_places": true,
+    "eliminates_duplication_confusion_inconsistency": true
+  },
+  "four_layers": {
+    "title": "The Four Layers",
+    "layers": [
+      {
+        "layer": 1,
+        "name": "Structured Data",
+        "description": "Counties, cities, volunteers, organizations, events, citations, projects, tasks, calendars",
+        "status": "partial"
+      },
+      {
+        "layer": 2,
+        "name": "Institutional Knowledge",
+        "description": "Articles, research, policies, manuals, training, notes, presentations, lessons, archives",
+        "status": "partial"
+      },
+      {
+        "layer": 3,
+        "name": "Relationship Graph",
+        "description": "People, projects, research, organizations, geography, documents, events connected",
+        "status": "partial"
+      },
+      {
+        "layer": 4,
+        "name": "Institutional Intelligence",
+        "description": "AI interprets underlying information \u2014 answers institutional questions",
+        "status": "planned"
+      }
+    ],
+    "connected_platform": true
+  },
+  "structured_data": {
+    "title": "Layer One \u2014 Structured Data",
+    "types": [
+      {
+        "id": "SD-01",
+        "type": "Counties",
+        "route": "/data/arkansas-counties.json",
+        "canonical": false,
+        "records": 75
+      },
+      {
+        "id": "SD-02",
+        "type": "Cities",
+        "route": "/data/arkansas-cities.json",
+        "canonical": false,
+        "records": 250
+      },
+      {
+        "id": "SD-03",
+        "type": "Neighborhoods",
+        "route": "/data/neighborhood-profiles.json",
+        "canonical": false,
+        "records": 0
+      },
+      {
+        "id": "SD-04",
+        "type": "Education Leaders",
+        "canonical": false,
+        "records": 0
+      },
+      {
+        "id": "SD-05",
+        "type": "Volunteers",
+        "canonical": false,
+        "records": 0
+      },
+      {
+        "id": "SD-06",
+        "type": "Organizations",
+        "route": "/data/coalition-directory.json",
+        "canonical": false,
+        "records": 0
+      },
+      {
+        "id": "SD-07",
+        "type": "Events",
+        "canonical": false,
+        "records": 0
+      },
+      {
+        "id": "SD-08",
+        "type": "Research citations",
+        "route": "/data/evidence-registry.json",
+        "canonical": false,
+        "records": 14
+      },
+      {
+        "id": "SD-09",
+        "type": "Projects",
+        "canonical": false,
+        "records": 99
+      },
+      {
+        "id": "SD-10",
+        "type": "Tasks",
+        "canonical": false,
+        "records": 0
+      },
+      {
+        "id": "SD-11",
+        "type": "Calendars",
+        "canonical": false,
+        "records": 0
+      }
+    ],
+    "stored_in_databases": true,
+    "unified_warehouse": false,
+    "status": "partial",
+    "note": "Data exists in JSON registries \u2014 not unified warehouse DB"
+  },
+  "institutional_knowledge": {
+    "title": "Layer Two \u2014 Institutional Knowledge",
+    "types": [
+      "Articles",
+      "Research papers",
+      "Policies",
+      "Operating manuals",
+      "Training materials",
+      "Meeting notes",
+      "Presentations",
+      "Lesson plans",
+      "Historical archives"
+    ],
+    "preserves_institutional_memory": true,
+    "status": "partial"
+  },
+  "relationship_graph": {
+    "title": "Layer Three \u2014 Relationship Graph",
+    "connects": [
+      "People",
+      "Projects",
+      "Research",
+      "Organizations",
+      "Counties",
+      "Cities",
+      "Documents",
+      "Events"
+    ],
+    "nodes": 0,
+    "edges": 0,
+    "mc_visualizes": true,
+    "status": "partial",
+    "route": "/mission-control/knowledge-graph.html"
+  },
+  "institutional_intelligence": {
+    "title": "Layer Four \u2014 Institutional Intelligence",
+    "ai_interprets_not_replaces": true,
+    "example_questions": [
+      "What counties need help?",
+      "What research supports this lesson?",
+      "What projects are blocked?",
+      "What organizations operate in this county?",
+      "What community conversations occurred this month?"
+    ],
+    "useful_because_data_organized": true,
+    "status": "planned"
+  },
+  "canonical_records": {
+    "title": "Canonical Records",
+    "record_types": [
+      "County record",
+      "City record",
+      "Education Leader record",
+      "Organization record",
+      "Research citation",
+      "Article",
+      "Project",
+      "Lesson"
+    ],
+    "everything_references_canonical": true,
+    "enforced": false,
+    "status": "planned"
+  },
+  "version_control": {
+    "title": "Version Control",
+    "fields": [
+      "Current version",
+      "Previous versions",
+      "Revision history",
+      "Editor",
+      "Approval status",
+      "Review schedule"
+    ],
+    "nothing_disappears": true,
+    "status": "partial",
+    "note": "Git history for code/docs \u2014 not unified doc version registry"
+  },
+  "search_everything": {
+    "title": "Search Everything",
+    "categories": [
+      "Research",
+      "Articles",
+      "People",
+      "Organizations",
+      "Projects",
+      "Lessons",
+      "Meetings",
+      "Events",
+      "Policies",
+      "Operating manuals"
+    ],
+    "unified_search_experience": true,
+    "live": false,
+    "status": "planned"
+  },
+  "knowledge_lifecycle": {
+    "title": "Knowledge Lifecycle",
+    "stages": [
+      {
+        "stage": "Draft",
+        "status": "specified"
+      },
+      {
+        "stage": "Review",
+        "status": "specified"
+      },
+      {
+        "stage": "Approved",
+        "status": "specified"
+      },
+      {
+        "stage": "Published",
+        "status": "partial"
+      },
+      {
+        "stage": "Archived",
+        "status": "planned"
+      },
+      {
+        "stage": "Historical Record",
+        "status": "planned"
+      }
+    ],
+    "mc_tracks_every_stage": true,
+    "status": "specified"
+  },
+  "data_governance": {
+    "title": "Data Governance",
+    "fields": [
+      "Owner",
+      "Purpose",
+      "Source",
+      "Update schedule",
+      "Validation rules",
+      "Privacy classification",
+      "Retention policy"
+    ],
+    "data_stewardship_institutional_practice": true,
+    "status": "specified"
+  },
+  "executive_intelligence": {
+    "title": "Executive Intelligence",
+    "questions": [
+      "Which counties are missing Education Leaders?",
+      "Which research topics need updating?",
+      "Where are coalition gaps?",
+      "Which volunteers have specialized expertise?",
+      "What documents are overdue for review?"
+    ],
+    "leadership_answers_in_seconds": true,
+    "status": "planned"
+  },
+  "ai_integration": {
+    "title": "AI Integration",
+    "localbrains_retrieve_not_copy": true,
+    "benefits": [
+      "Consistent answers",
+      "Current information",
+      "Shared institutional memory",
+      "Reduced duplication",
+      "Higher trust"
+    ],
+    "reliable_because_knowledge_reliable": true,
+    "status": "planned"
+  },
+  "public_vs_internal": {
+    "title": "Public vs Internal Knowledge",
+    "access_levels": [
+      {
+        "level": "public",
+        "label": "Public educational resources"
+      },
+      {
+        "level": "volunteer",
+        "label": "Volunteer-only resources"
+      },
+      {
+        "level": "leadership",
+        "label": "Leadership materials"
+      },
+      {
+        "level": "administrative",
+        "label": "Administrative documents"
+      },
+      {
+        "level": "sensitive",
+        "label": "Sensitive operational information"
+      }
+    ],
+    "every_record_has_access_level": true,
+    "status": "specified"
+  },
+  "mission_control_dashboard": {
+    "title": "Mission Control Dashboard",
+    "indicators": [
+      {
+        "id": "KP-D01",
+        "indicator": "Knowledge growth",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "KP-D02",
+        "indicator": "Research growth",
+        "current": 14,
+        "status": "partial"
+      },
+      {
+        "id": "KP-D03",
+        "indicator": "Document health",
+        "current": 0,
+        "unit": "%",
+        "status": "planned"
+      },
+      {
+        "id": "KP-D04",
+        "indicator": "Review status",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "KP-D05",
+        "indicator": "Search usage",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "KP-D06",
+        "indicator": "AI retrieval quality",
+        "current": 0,
+        "unit": "%",
+        "status": "planned"
+      },
+      {
+        "id": "KP-D07",
+        "indicator": "Duplicate records",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "KP-D08",
+        "indicator": "Knowledge gaps",
+        "current": 14,
+        "status": "partial"
+      },
+      {
+        "id": "KP-D09",
+        "indicator": "Institutional completeness",
+        "current": 92,
+        "unit": "%",
+        "status": "partial"
+      }
+    ],
+    "live": false,
+    "knowledge_base_health_at_glance": true,
+    "status": "planned"
+  },
+  "integration": {
+    "chain": "Mission Control \u2192 LocalBrains \u2192 Digital Twin \u2192 Academy \u2192 Research Institute \u2192 Operating Manual \u2192 Volunteer Network \u2192 Communications \u2192 County/City/Neighborhood OS",
+    "informational_foundation": true,
+    "systems": [
+      {
+        "system": "LocalBrain Architecture (#92)",
+        "route": "/mission-control/localbrain-architecture.html",
+        "status": "live"
+      },
+      {
+        "system": "Knowledge Graph",
+        "route": "/mission-control/knowledge-graph.html",
+        "status": "partial"
+      },
+      {
+        "system": "Data Architecture (#51)",
+        "route": "/mission-control/data-architecture.html",
+        "status": "live"
+      },
+      {
+        "system": "Database Schema (#22)",
+        "route": "/mission-control/database.html",
+        "status": "live"
+      },
+      {
+        "system": "Research Library",
+        "route": "/mission-control/research-library.html",
+        "status": "partial"
+      },
+      {
+        "system": "Evidence Ledger",
+        "route": "/mission-control/evidence-ledger.html",
+        "status": "partial"
+      }
+    ]
+  },
+  "long_term_vision": "By January 2027, every volunteer knows there is exactly one place for the institution's most current knowledge. Every article, citation, lesson, project, organization, calendar, policy, and decision \u2014 connected, searchable, trustworthy.",
+  "summary": {
+    "completion_target_date": "2027-01-01",
+    "days_remaining": 176,
+    "civic_knowledge_platform_readiness_pct": 58,
+    "localbrain_architecture_readiness_pct": 60,
+    "unified_search_live": false,
+    "platform_dashboard_live": false,
+    "canonical_records_enforced": false,
+    "duplicate_records_tracked": 0,
+    "knowledge_gaps_identified": 14,
+    "structured_data_types": 11,
+    "relationship_graph_nodes": 0,
+    "relationship_graph_edges": 0,
+    "ai_retrieval_quality_pct": 0,
+    "search_queries": 0,
+    "institutional_completion_pct": 92
+  },
+  "catalog_gaps": [
+    "No unified warehouse database \u2014 data scattered in JSON registries",
+    "Unified search not live",
+    "Canonical records not enforced \u2014 duplicates possible",
+    "Knowledge lifecycle not tracked in MC",
+    "Data governance metadata missing on most datasets",
+    "Platform dashboard not live",
+    "AI retrieval quality not measured",
+    "Relationship graph partial \u2014 not all entities linked",
+    "Version control for docs not centralized",
+    "Access levels not enforced per record",
+    "Executive intelligence queries not operational"
+  ],
+  "recommended_next_build": {
+    "number": 94,
+    "title": "Executive War Room & Countdown Dashboard Components",
+    "note": "War room UI, unified search, canonical record registry, knowledge lifecycle tracker, platform health dashboard, COMP-* specs."
+  }
+}

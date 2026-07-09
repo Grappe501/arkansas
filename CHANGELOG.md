@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.97.0] - 2026-07-09 — Build #93 Master Civic Data Warehouse & Knowledge Platform
+
+### One Source of Truth — Institutional Intelligence Backbone
+- **Master Civic Data Warehouse & Knowledge Platform v1.0** — single authoritative source for every system
+- Four layers: structured data, institutional knowledge, relationship graph, institutional intelligence
+- Canonical records, version control fields, knowledge lifecycle, data governance, access levels
+- Unified search spec, executive intelligence questions, Mission Control platform dashboard indicators
+- LocalBrains retrieve from platform — not independent copies
+- Honest: unified search not live · canonical not enforced · warehouse not unified · 58% readiness
+- MC dashboard: `/mission-control/civic-knowledge-platform.html`
+
 ## [1.96.0] - 2026-07-09 — Build #92 Master LocalBrain Architecture
 
 ### The Distributed Institutional Intelligence System

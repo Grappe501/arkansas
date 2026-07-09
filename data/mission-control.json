@@ -1,6 +1,6 @@
 {
-  "version": "1.96.0",
-  "build": 92,
+  "version": "1.97.0",
+  "build": 93,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 92,
+    "overall_completion": 93,
     "current_build": {
-      "number": 92,
-      "title": "Citizens United Facts Master LocalBrain Architecture v1.0"
-    },
-    "active_phase": "LocalBrain Architecture \u2192 War Room",
-    "last_completed": "AI Institution",
-    "next_build": {
       "number": 93,
+      "title": "Citizens United Facts Master Arkansas Civic Data Warehouse & Knowledge Platform v1.0"
+    },
+    "active_phase": "Knowledge Platform \u2192 War Room",
+    "last_completed": "LocalBrain Architecture",
+    "next_build": {
+      "number": 94,
       "title": "Executive war room & countdown dashboard components"
     },
     "github_status": "connected",
@@ -28,11 +28,11 @@
     "signup_funnel_readiness": 26,
     "civic_action_readiness": 28,
     "coalition_readiness": 44,
-    "data_model_readiness": 54,
+    "data_model_readiness": 58,
     "route_inventory_readiness": 18,
     "component_registry_readiness": 22,
     "facts_framework_readiness": 14,
-    "knowledge_atlas_readiness": 20,
+    "knowledge_atlas_readiness": 58,
     "platform_architecture_readiness": 24,
     "repository_structure_readiness": 28,
     "database_schema_readiness": 42,
@@ -42,6 +42,7 @@
     "institutional_ai_readiness": 57,
     "ai_institution_readiness": 57,
     "localbrain_architecture_readiness": 60,
+    "civic_knowledge_platform_readiness": 58,
     "coalition_network_readiness": 44,
     "citizen_action_center_readiness": 42,
     "campaign_finance_observatory_readiness": 38,
@@ -99,7 +100,7 @@
     "technical_architecture_readiness": 38,
     "governance_readiness": 46,
     "build_bible_readiness": 49,
-    "data_architecture_readiness": 41,
+    "data_architecture_readiness": 58,
     "ux_architecture_readiness": 39,
     "launch_strategy_readiness": 44,
     "pmo_readiness": 60,
@@ -125,8 +126,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 92,
-      "note": "Build #92 \u2014 LocalBrain Architecture. 176 days to Jan 2027."
+      "value": 93,
+      "note": "Build #93 \u2014 Knowledge Platform. 176 days to Jan 2027."
     },
     {
       "id": "constitution",
@@ -793,7 +794,14 @@
       "label": "LocalBrain Architecture",
       "value": 60,
       "max": 100,
-      "note": "0/20 brains \u00b7 exec dashboard planned."
+      "note": "LocalBrains read from platform \u00b7 search planned."
+    },
+    {
+      "id": "civic_knowledge_platform",
+      "label": "Knowledge Platform",
+      "value": 58,
+      "max": 100,
+      "note": "Unified search planned \u00b7 14 gaps."
     }
   ],
   "public_readiness": {
@@ -1638,6 +1646,12 @@
       "id": "localbrain_architecture",
       "label": "LocalBrain Architecture",
       "href": "/mission-control/localbrain-architecture.html",
+      "status": "complete"
+    },
+    {
+      "id": "civic_knowledge_platform",
+      "label": "Knowledge Platform",
+      "href": "/mission-control/civic-knowledge-platform.html",
       "status": "complete"
     }
   ],
@@ -2664,6 +2678,58 @@
     }
   ],
   "builds": [
+    {
+      "number": 93,
+      "title": "Citizens United Facts Master Arkansas Civic Data Warehouse & Knowledge Platform v1.0",
+      "version": "1.97.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "One source of truth \u2014 institutional intelligence backbone",
+      "summary": "4 layers, 11 structured data types, canonical records, version control, unified search, knowledge lifecycle, data governance, executive intelligence. 58% readiness \u00b7 search not live \u00b7 warehouse not unified.",
+      "files_created": [
+        "data/civic-knowledge-platform.json",
+        "docs/MASTER_CIVIC_DATA_WAREHOUSE_KNOWLEDGE_PLATFORM.md",
+        "builds/093-civic-knowledge-platform.md",
+        "mission-control/civic-knowledge-platform.html",
+        "scripts/gen-civic-knowledge-platform.py",
+        "scripts/update-mc-build93.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/civic-knowledge-platform.html"
+      ],
+      "decisions_made": [
+        "One source of truth \u2014 exist once, maintain once",
+        "Four layers: structured data, knowledge, relationship graph, intelligence",
+        "Canonical records \u2014 everything references authoritative record",
+        "Knowledge lifecycle Draft \u2192 Historical Record",
+        "Data governance + access levels per record",
+        "58% readiness \u2014 blueprint only"
+      ],
+      "open_questions": [
+        "Warehouse DB \u2014 Neon/Postgres vs unified JSON layer?",
+        "Canonical ID scheme \u2014 MRID extension?",
+        "Unified search \u2014 Elasticsearch or MC client-side?",
+        "When do JSON registries migrate to warehouse?"
+      ],
+      "risks": [
+        "No unified warehouse database \u2014 data scattered in JSON registries",
+        "Unified search not live",
+        "Canonical records not enforced \u2014 duplicates possible",
+        "Knowledge lifecycle not tracked in MC"
+      ],
+      "next_recommended": 94,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/civic-knowledge-platform.html",
+      "review_status": "complete"
+    },
     {
       "number": 92,
       "title": "Citizens United Facts Master LocalBrain Architecture v1.0",
@@ -7601,21 +7667,21 @@
     }
   ],
   "briefing": {
-    "what_built": "LocalBrain Architecture v1.0 \u2014 Distributed Institutional Intelligence",
-    "building_now": "92 builds \u2014 executive war room next",
+    "what_built": "Civic Data Warehouse & Knowledge Platform v1.0 \u2014 One Source of Truth",
+    "building_now": "93 builds \u2014 executive war room next",
     "blocked": [
-      "LocalBrain nodes",
-      "Executive dashboard",
-      "Calendar merge",
-      "Inter-brain messaging"
+      "Unified warehouse",
+      "Unified search",
+      "Canonical enforcement",
+      "Platform dashboard"
     ],
     "ready_public": [
-      "20 brain registry",
-      "Cross-brain flow",
-      "Principle stack",
-      "Expansion model"
+      "Four layers",
+      "Canonical model",
+      "Lifecycle",
+      "Governance fields"
     ],
-    "next": "Build #93 \u2014 Executive war room & countdown dashboard components"
+    "next": "Build #94 \u2014 Executive war room & countdown dashboard components"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8553,5 +8619,14 @@
     "localbrains_total": 20,
     "executive_dashboard_live": false,
     "inter_brain_communication": false
+  },
+  "civic_knowledge_platform": "/data/civic-knowledge-platform.json",
+  "civic_knowledge_platform_dashboard": "/mission-control/civic-knowledge-platform.html",
+  "civic_knowledge_platform_inventory": {
+    "readiness_score": 58,
+    "unified_search_live": false,
+    "platform_dashboard_live": false,
+    "canonical_records_enforced": false,
+    "knowledge_gaps_identified": 14
   }
 }

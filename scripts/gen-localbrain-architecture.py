@@ -302,7 +302,7 @@ out = {
         'AI Operations Brain links to #91 — specialists not deployed per brain',
     ],
     'recommended_next_build': {
-        'number': 93,
+        'number': 94,
         'title': 'Executive War Room & Countdown Dashboard Components',
         'note': (
             'War room UI, LocalBrain registry, executive calendar merge, inter-brain '

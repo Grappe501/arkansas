@@ -332,7 +332,7 @@ out = {
         'Education Leader / County AI — no live interfaces',
     ],
     'recommended_next_build': {
-        'number': 93,
+        'number': 94,
         'title': 'Executive War Room & Countdown Dashboard Components',
         'note': (
             'War room UI, live countdown, AI dashboard components, workbench MVP, '

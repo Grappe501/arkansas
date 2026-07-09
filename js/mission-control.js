@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Knowledge Platform <a href="/mission-control/civic-knowledge-platform.html" class="mc-inline-link">One Source of Truth #93 →</a></h2>
+    <p class="mc-bar-note">Build #93 — Civic Data Warehouse & Knowledge Platform. Four layers: structured data, institutional knowledge, relationship graph, intelligence. Canonical records, unified search spec. Search not live · warehouse not unified. 58% readiness.</p>
     <h2 class="mc-section-title">LocalBrain Architecture <a href="/mission-control/localbrain-architecture.html" class="mc-inline-link">Distributed Intelligence #92 →</a></h2>
     <p class="mc-bar-note">Build #92 — Master LocalBrain Architecture. Federation of 20 specialized brains — memory, calendar, tasks, AI per domain. MC = executive layer. 0/20 online · inter-brain not live. ~60% readiness.</p>
     <h2 class="mc-section-title">AI Institution <a href="/mission-control/ai-institution.html" class="mc-inline-link">Every Volunteer Has a Partner #91 →</a></h2>
@@ -5265,6 +5267,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initInstitutionalOperatingManual();
   initAiInstitution();
   initLocalbrainArchitecture();
+  initCivicKnowledgePlatform();
 });
 
 async function initUxArchitecture() {
@@ -9753,6 +9756,121 @@ async function initLocalbrainArchitecture() {
       <a href="/data/localbrain-architecture.json">JSON</a> ·
       <a href="/mission-control/ai-institution.html">AI Institution (#91)</a> ·
       <a href="/mission-control/institutional-digital-twin.html">Digital Twin (#81)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initCivicKnowledgePlatform() {
+  const root = document.getElementById('mc-civic-knowledge-platform-root');
+  if (!root) return;
+
+  const [ckpRes, mcRes] = await Promise.all([
+    fetch('/data/civic-knowledge-platform.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ckp = await ckpRes.json();
+  const mc = await mcRes.json();
+  const s = ckp.summary;
+
+  const layerRows = ckp.four_layers.layers.map(l => `
+    <tr><td>${l.layer}</td><td>${l.name}</td><td>${l.description}</td><td>${l.status}</td></tr>`).join('');
+
+  const dataRows = ckp.structured_data.types.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.type}</td>
+      <td>${typeof d.records === 'number' ? d.records.toLocaleString() : (d.records || '—')}</td>
+      <td>${d.canonical ? 'Yes' : 'No'}</td>
+      <td>${d.get('route') ? `<a href="${d.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  const lifecycleRows = ckp.knowledge_lifecycle.stages.map(st => `
+    <tr><td>${st.stage}</td><td>${st.status}</td></tr>`).join('');
+
+  const dashRows = ckp.mission_control_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td>
+      <td>${typeof d.current === 'number' ? d.current.toLocaleString() : d.current}${d.unit ? d.unit : ''}</td>
+      <td>${d.status}</td></tr>`).join('');
+
+  const systemRows = ckp.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Knowledge Platform</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #93 · ${ckp.title}</p>
+      <h1>${ckp.subtitle}</h1>
+      <p class="mc-header__question">${ckp.governing_principle}</p>
+      <p class="mc-bar-note">${ckp.purpose}</p>
+      <p class="mc-bar-note"><strong>${ckp.tagline}</strong> · ${s.days_remaining} days to ${ckp.completion_target_date}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Platform readiness</div><div class="mc-stat__value">${s.civic_knowledge_platform_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Unified search</div><div class="mc-stat__value">${s.unified_search_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Canonical enforced</div><div class="mc-stat__value">${s.canonical_records_enforced ? 'Yes' : 'No'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">KG nodes</div><div class="mc-stat__value">${s.relationship_graph_nodes}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Knowledge gaps</div><div class="mc-stat__value">${s.knowledge_gaps_identified}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Dashboard</div><div class="mc-stat__value">${s.platform_dashboard_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">${ckp.institutional_philosophy.title}</h2>
+    <p class="mc-bar-note">Exist once, maintain once: ${ckp.institutional_philosophy.exist_once_maintain_once ? 'Yes' : 'No'}</p>
+    <h2 class="mc-section-title">${ckp.four_layers.title}</h2>
+    <table class="mc-table"><thead><tr><th>Layer</th><th>Name</th><th>Description</th><th>Status</th></tr></thead>
+      <tbody>${layerRows}</tbody></table>
+    <h2 class="mc-section-title">${ckp.structured_data.title}</h2>
+    <p class="mc-bar-note">${ckp.structured_data.note} · Unified warehouse: ${ckp.structured_data.unified_warehouse ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Type</th><th>Records</th><th>Canonical</th><th>Route</th></tr></thead>
+      <tbody>${dataRows}</tbody></table>
+    <h2 class="mc-section-title">${ckp.institutional_knowledge.title}</h2>
+    <ul class="mc-deliverables">${ckp.institutional_knowledge.types.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ckp.relationship_graph.title}</h2>
+    <p class="mc-bar-note">Nodes: ${ckp.relationship_graph.nodes} · Edges: ${ckp.relationship_graph.edges} · <a href="${ckp.relationship_graph.route}">Knowledge Graph</a></p>
+    <ul class="mc-deliverables">${ckp.relationship_graph.connects.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ckp.institutional_intelligence.title}</h2>
+    <p class="mc-bar-note">AI interprets, not replaces: ${ckp.institutional_intelligence.ai_interprets_not_replaces ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${ckp.institutional_intelligence.example_questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ckp.canonical_records.title}</h2>
+    <p class="mc-bar-note">Enforced: ${ckp.canonical_records.enforced ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${ckp.canonical_records.record_types.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ckp.version_control.title}</h2>
+    <p class="mc-bar-note">${ckp.version_control.note || ''}</p>
+    <ul class="mc-deliverables">${ckp.version_control.fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ckp.search_everything.title}</h2>
+    <p class="mc-bar-note">Live: ${ckp.search_everything.live ? 'Yes' : 'No'} · Unified experience: ${ckp.search_everything.unified_search_experience ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${ckp.search_everything.categories.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ckp.knowledge_lifecycle.title}</h2>
+    <table class="mc-table"><thead><tr><th>Stage</th><th>Status</th></tr></thead>
+      <tbody>${lifecycleRows}</tbody></table>
+    <h2 class="mc-section-title">${ckp.data_governance.title}</h2>
+    <ul class="mc-deliverables">${ckp.data_governance.fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ckp.executive_intelligence.title}</h2>
+    <ul class="mc-deliverables">${ckp.executive_intelligence.questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ckp.ai_integration.title}</h2>
+    <p class="mc-bar-note">LocalBrains retrieve, not copy: ${ckp.ai_integration.localbrains_retrieve_not_copy ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${ckp.ai_integration.benefits.map(b => `<li>${b}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ckp.public_vs_internal.title}</h2>
+    <ul class="mc-deliverables">${ckp.public_vs_internal.access_levels.map(a => `<li><strong>${a.level}:</strong> ${a.label}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ckp.mission_control_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${ckp.mission_control_dashboard.live ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">Founder's Principle</h2>
+    <p class="mc-bar-note">${ckp.founders_principle}</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${ckp.integration.chain}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${ckp.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ckp.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ckp.recommended_next_build.number} — ${ckp.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ckp.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_CIVIC_DATA_WAREHOUSE_KNOWLEDGE_PLATFORM.md">MASTER_CIVIC_DATA_WAREHOUSE_KNOWLEDGE_PLATFORM.md</a> ·
+      <a href="/data/civic-knowledge-platform.json">JSON</a> ·
+      <a href="/mission-control/localbrain-architecture.html">LocalBrain (#92)</a> ·
+      <a href="/mission-control/knowledge-graph.html">Knowledge Graph</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

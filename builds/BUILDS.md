@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#93** | **Master Civic Data Warehouse & Knowledge Platform** | **1.97.0** | **✅ Complete** | [093](093-civic-knowledge-platform.md) · [/mission-control/civic-knowledge-platform.html](../mission-control/civic-knowledge-platform.html) |
 | **#92** | **Master LocalBrain Architecture** | **1.96.0** | **✅ Complete** | [092](092-localbrain-architecture.md) · [/mission-control/localbrain-architecture.html](../mission-control/localbrain-architecture.html) |
 | **#91** | **Master AI Institution** | **1.95.0** | **✅ Complete** | [091](091-ai-institution.md) · [/mission-control/ai-institution.html](../mission-control/ai-institution.html) |
 | **#90** | **Master Institutional Operating Manual** | **1.94.0** | **✅ Complete** | [090](090-institutional-operating-manual.md) · [/mission-control/institutional-operating-manual.html](../mission-control/institutional-operating-manual.html) |
