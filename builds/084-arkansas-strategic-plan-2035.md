@@ -7,7 +7,7 @@
 
 ## Purpose
 
-Build #84 establishes the **long-range strategic plan** — accomplishment through 2035, distinct from the Master Build Plan (construction).
+Build #84 establishes the decade accomplishment roadmap. **January 2027** is the V1 mission-complete milestone within this plan (see Build #88).
 
 > *Vision • Strategy • Execution*
 

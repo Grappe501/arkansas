@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.91.0 · **First 100 Days:** [/mission-control/launch-campaign-first-100-days.html](/mission-control/launch-campaign-first-100-days.html) · **87 builds complete**  
-**Launch campaign** — 3 phases · 11 indicators · weekly rhythm · county challenge · **Next:** Build #88 Campaign Tracker  
+**Current version:** 1.92.0 · **Execution Schedule:** [/mission-control/execution-schedule.html](/mission-control/execution-schedule.html) · **88 builds complete**  
+**Mission Complete Jan 2027** — countdown · war room · critical path · 10 departments · **Next:** Build #89 War Room Components  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,8 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **88** | **Master Execution Schedule** | **✅ v1.92.0** |
+| **87** | **Launch Campaign & First 100 Days Blueprint** | **✅ v1.91.0** |
 | **86** | **Arkansas Civic Reach & Participation Strategy** | **✅ v1.90.0** |
 | **85** | **Master Launch Plan (January 2027)** | **✅ v1.89.0** |
 | **84** | **Arkansas Strategic Plan 2035** | **✅ v1.88.0** |

@@ -7,7 +7,8 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
 today = '2026-07-09'
-launch_date = '2027-01-01'
+completion_target_date = '2027-01-01'
+launch_date = completion_target_date  # legacy alias — Jan 2027 is completion target
 
 
 def load_json(path):
@@ -206,15 +207,17 @@ out = {
     'updated': today,
     'launch_date': launch_date,
     'title': 'Master Launch Plan v1.0',
-    'subtitle': 'January 2027 Operational Readiness Blueprint',
+    'subtitle': 'January 2027 Mission Complete Readiness Blueprint',
     'tagline': 'From Vision to Reality',
     'platform': 'Citizens United Facts',
     'organization': 'Arkansas Civic Education Initiative',
     'route': '/mission-control/master-launch-plan.html',
     'constitution': '/docs/MASTER_LAUNCH_PLAN.md',
     'purpose': (
-        'Operational checklist for January 2027 launch as a credible, trusted, statewide '
-        'civic education institution. Official Launch Readiness Blueprint for Mission Control.'
+        'Operational checklist for January 2027 mission complete — substantial completion of '
+        'Version 1 as a credible, trusted, statewide civic education institution. Official '
+        'readiness blueprint for Mission Control. January 2027 is the completion target, not '
+        'the start of construction.'
     ),
     'governing_principle': (
         'Launch only when the institution is ready to earn trust — not when every feature is '
@@ -225,11 +228,14 @@ out = {
         'launch_strategy': {'build': 53, 'route': '/mission-control/launch-strategy.html', 'focus': 'Rollout phases'},
         'strategic_plan_2035': {'build': 84, 'route': '/mission-control/arkansas-strategic-plan-2035.html', 'focus': 'Decade accomplishment'},
         'master_build_plan': {'route': '/BUILD_PLAN.md', 'focus': 'Institution construction (85 builds)'},
-        'this_plan_focus': 'January 2027 operational readiness checklist',
+        'this_plan_focus': 'January 2027 mission-complete readiness checklist',
+        'completion_target_date': completion_target_date,
+        'january_2027_is_completion_not_launch_start': True,
     },
     'launch_mission': {
         'title': 'Launch Mission',
-        'date': launch_date,
+        'date': completion_target_date,
+        'completion_target': True,
         'topics': LAUNCH_MISSION_TOPICS,
         'built_by_arkansans_for_arkansans': True,
         'premier_civic_education_platform': True,
@@ -297,13 +303,13 @@ out = {
         ],
     },
     'long_term_vision': (
-        'January 2027 is the opening chapter — not the destination. Launch with capacity to grow '
-        'into statewide Education Leader network, trusted civic research institution, lasting '
-        'volunteer-driven organization, comprehensive Arkansas civic education ecosystem. '
-        'Every future success begins with a disciplined, trustworthy launch.'
+        'January 2027 marks mission complete — V1 substantially built and ready for statewide '
+        'public operation. Growth continues for decades via Strategic Plan 2035. Every future '
+        'success builds on completing the institution by the deadline.'
     ),
     'summary': {
-        'launch_date': launch_date,
+        'launch_date': completion_target_date,
+        'completion_target_date': completion_target_date,
         'checklist_items_total': checklist_items_total,
         'checklist_items_complete': checklist_items_complete,
         'readiness_categories': len(READINESS_CATEGORIES),

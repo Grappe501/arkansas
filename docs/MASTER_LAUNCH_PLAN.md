@@ -1,15 +1,15 @@
 # Citizens United Facts Master Launch Plan
 
-**January 2027 Operational Readiness Blueprint v1.0**  
+**January 2027 Mission Complete Readiness Blueprint v1.0**  
 **Dashboard:** [/mission-control/master-launch-plan.html](/mission-control/master-launch-plan.html) · **Registry:** [/data/master-launch-plan.json](/data/master-launch-plan.json)
 
 ---
 
 # Purpose
 
-**Build #85** defines what must exist **by January 2027** for Citizens United Facts to launch as a credible, trusted, statewide civic education institution.
+**Build #85** defines what must exist **by January 2027** for Citizens United Facts to achieve **substantial completion of Version 1** — ready for statewide public operation.
 
-This is the **operational checklist for launch** — not a wish list.
+January 2027 is the **completion target**, not the start of construction. This is the **mission-complete readiness checklist** — not a wish list.
 
 Mission Control uses this as the official **Launch Readiness Blueprint**.
 
@@ -71,7 +71,7 @@ Counties · Cities · Education Leaders · Coalition organizations · Community 
 | Arkansas Launch Map live | **No** |
 | Launch governance certified | **No** |
 | Counties represented | **0 / 75** |
-| Days to launch (Jan 2027) | **~570** |
+| Days to mission complete (Jan 2027) | **~176** |
 
 Blueprint complete. Launch checklist not yet operational in MC.
 

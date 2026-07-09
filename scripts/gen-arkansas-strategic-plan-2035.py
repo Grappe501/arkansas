@@ -7,6 +7,7 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
 today = '2026-07-09'
+completion_target_date = '2027-01-01'
 
 
 def load_json(path):
@@ -211,8 +212,9 @@ out = {
     'route': '/mission-control/arkansas-strategic-plan-2035.html',
     'constitution': '/docs/MASTER_ARKANSAS_STRATEGIC_PLAN_2035.md',
     'purpose': (
-        'Long-range strategic plan for what the institution will accomplish over the next decade. '
-        'Unlike the Master Build Plan (construction), this focuses on accomplishment through 2035.'
+        'Long-range strategic plan for what the institution will accomplish through 2035. '
+        'Unlike the Master Build Plan (construction), this focuses on accomplishment. '
+        'January 2027 is the V1 mission-complete milestone within this decade plan.'
     ),
     'governing_principle': (
         'Strategic planning is not about predicting the future. It is about preparing the '
@@ -221,8 +223,18 @@ out = {
     ),
     'distinct_from_build_plan': {
         'master_build_plan': '/BUILD_PLAN.md',
-        'build_plan_focus': 'Constructing the institution (83 builds)',
-        'strategic_plan_focus': 'What the institution accomplishes by 2035',
+        'build_plan_focus': 'Constructing the institution (88 builds)',
+        'strategic_plan_focus': 'What the institution accomplishes through 2035',
+        'execution_schedule': '/mission-control/execution-schedule.html',
+        'v1_completion_target': completion_target_date,
+    },
+    'v1_completion_milestone': {
+        'title': 'V1 Mission Complete — January 2027',
+        'date': completion_target_date,
+        'role': 'Substantial completion of Version 1 — institution ready for statewide public operation',
+        'not_construction_start': True,
+        'within_decade_plan': True,
+        'execution_schedule_build': 88,
     },
     'strategic_vision': {
         'title': 'Strategic Vision',

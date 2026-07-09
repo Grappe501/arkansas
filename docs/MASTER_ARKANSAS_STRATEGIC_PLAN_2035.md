@@ -11,6 +11,8 @@
 
 Unlike the [Master Build Plan](/BUILD_PLAN.md) (constructing the institution), this Strategic Plan focuses on **accomplishment** through 2035.
 
+**January 2027** is the **V1 mission-complete milestone** within this decade plan — see [Execution Schedule (#88)](/mission-control/execution-schedule.html).
+
 Used by Mission Control, leadership, Education Leaders, coalition partners, and volunteers.
 
 Integrates [Civic Ecosystem (#83)](/mission-control/arkansas-civic-ecosystem.html), [Legacy Roadmap (#80)](/mission-control/arkansas-civic-institution-roadmap.html), [Command Strategy (#70)](/mission-control/arkansas-command-strategy.html).

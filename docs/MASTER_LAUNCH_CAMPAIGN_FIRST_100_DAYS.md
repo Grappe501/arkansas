@@ -7,13 +7,13 @@
 
 # Purpose
 
-**Build #87** establishes the **First 100 Days** operational campaign after public launch in **January 2027**.
+**Build #87** establishes the **First 100 Days** operational campaign — the first 100 days of **statewide public operation** beginning upon **January 2027 mission complete**.
 
-Launch is not a single day — it is a coordinated campaign for momentum, trust, volunteers, county leadership, and permanent civic education infrastructure.
+January 2027 is when V1 is substantially complete, not when construction begins. The campaign converts a completed institution into a statewide movement.
 
 Mission Control monitors the First 100 Days as a dedicated operational campaign.
 
-Integrates [Master Launch Plan (#85)](/mission-control/master-launch-plan.html) and [Civic Reach Strategy (#86)](/mission-control/arkansas-civic-reach-participation.html).
+Integrates [Execution Schedule (#88)](/mission-control/execution-schedule.html), [Master Launch Plan (#85)](/mission-control/master-launch-plan.html), and [Civic Reach Strategy (#86)](/mission-control/arkansas-civic-reach-participation.html).
 
 ---
 
@@ -65,7 +65,7 @@ Earn trust one conversation, one county, one volunteer, one coalition partner, o
 |--------|-------|
 | Launch campaign readiness | **~57%** (master blueprint only) |
 | Campaign dashboard live | **No** |
-| Campaign started | **No** (launch Jan 2027) |
+| Campaign started | **No** (awaits mission complete Jan 2027) |
 | Day of campaign | **0 / 100** |
 | First 100 Days Report | **Not published** |
 

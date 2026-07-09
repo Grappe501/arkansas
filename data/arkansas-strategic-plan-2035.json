@@ -10,12 +10,22 @@
   "organization": "Arkansas Civic Education Initiative",
   "route": "/mission-control/arkansas-strategic-plan-2035.html",
   "constitution": "/docs/MASTER_ARKANSAS_STRATEGIC_PLAN_2035.md",
-  "purpose": "Long-range strategic plan for what the institution will accomplish over the next decade. Unlike the Master Build Plan (construction), this focuses on accomplishment through 2035.",
+  "purpose": "Long-range strategic plan for what the institution will accomplish through 2035. Unlike the Master Build Plan (construction), this focuses on accomplishment. January 2027 is the V1 mission-complete milestone within this decade plan.",
   "governing_principle": "Strategic planning is not about predicting the future. It is about preparing the institution to serve Arkansas regardless of what the future brings. Every year: more knowledgeable, trusted, connected, resilient, useful, capable, worthy of confidence.",
   "distinct_from_build_plan": {
     "master_build_plan": "/BUILD_PLAN.md",
-    "build_plan_focus": "Constructing the institution (83 builds)",
-    "strategic_plan_focus": "What the institution accomplishes by 2035"
+    "build_plan_focus": "Constructing the institution (88 builds)",
+    "strategic_plan_focus": "What the institution accomplishes through 2035",
+    "execution_schedule": "/mission-control/execution-schedule.html",
+    "v1_completion_target": "2027-01-01"
+  },
+  "v1_completion_milestone": {
+    "title": "V1 Mission Complete \u2014 January 2027",
+    "date": "2027-01-01",
+    "role": "Substantial completion of Version 1 \u2014 institution ready for statewide public operation",
+    "not_construction_start": true,
+    "within_decade_plan": true,
+    "execution_schedule_build": 88
   },
   "strategic_vision": {
     "title": "Strategic Vision",

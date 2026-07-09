@@ -4,13 +4,13 @@
   "updated": "2026-07-09",
   "launch_date": "2027-01-01",
   "title": "Master Launch Plan v1.0",
-  "subtitle": "January 2027 Operational Readiness Blueprint",
+  "subtitle": "January 2027 Mission Complete Readiness Blueprint",
   "tagline": "From Vision to Reality",
   "platform": "Citizens United Facts",
   "organization": "Arkansas Civic Education Initiative",
   "route": "/mission-control/master-launch-plan.html",
   "constitution": "/docs/MASTER_LAUNCH_PLAN.md",
-  "purpose": "Operational checklist for January 2027 launch as a credible, trusted, statewide civic education institution. Official Launch Readiness Blueprint for Mission Control.",
+  "purpose": "Operational checklist for January 2027 mission complete \u2014 substantial completion of Version 1 as a credible, trusted, statewide civic education institution. Official readiness blueprint for Mission Control. January 2027 is the completion target, not the start of construction.",
   "governing_principle": "Launch only when the institution is ready to earn trust \u2014 not when every feature is perfect or every county is fully built, but when research is credible, systems reliable, volunteers prepared, mission clear, and Arkansans can confidently begin learning.",
   "distinct_from": {
     "launch_strategy": {
@@ -27,11 +27,14 @@
       "route": "/BUILD_PLAN.md",
       "focus": "Institution construction (85 builds)"
     },
-    "this_plan_focus": "January 2027 operational readiness checklist"
+    "this_plan_focus": "January 2027 mission-complete readiness checklist",
+    "completion_target_date": "2027-01-01",
+    "january_2027_is_completion_not_launch_start": true
   },
   "launch_mission": {
     "title": "Launch Mission",
     "date": "2027-01-01",
+    "completion_target": true,
     "topics": [
       "Citizens United v. Federal Election Commission",
       "Campaign finance",
@@ -557,9 +560,10 @@
       }
     ]
   },
-  "long_term_vision": "January 2027 is the opening chapter \u2014 not the destination. Launch with capacity to grow into statewide Education Leader network, trusted civic research institution, lasting volunteer-driven organization, comprehensive Arkansas civic education ecosystem. Every future success begins with a disciplined, trustworthy launch.",
+  "long_term_vision": "January 2027 marks mission complete \u2014 V1 substantially built and ready for statewide public operation. Growth continues for decades via Strategic Plan 2035. Every future success builds on completing the institution by the deadline.",
   "summary": {
     "launch_date": "2027-01-01",
+    "completion_target_date": "2027-01-01",
     "checklist_items_total": 36,
     "checklist_items_complete": 3,
     "readiness_categories": 11,

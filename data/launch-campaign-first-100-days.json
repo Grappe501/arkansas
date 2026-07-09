@@ -3,6 +3,7 @@
   "build": 87,
   "updated": "2026-07-09",
   "launch_date": "2027-01-01",
+  "completion_target_date": "2027-01-01",
   "campaign_days": 100,
   "title": "Master Launch Campaign & First 100 Days Blueprint v1.0",
   "subtitle": "The First 100 Days",
@@ -11,8 +12,16 @@
   "organization": "Arkansas Civic Education Initiative",
   "route": "/mission-control/launch-campaign-first-100-days.html",
   "constitution": "/docs/MASTER_LAUNCH_CAMPAIGN_FIRST_100_DAYS.md",
-  "purpose": "First 100 days after January 2027 public launch \u2014 coordinated campaign for momentum, trust, volunteers, county leadership, and permanent civic education infrastructure.",
+  "purpose": "First 100 days of statewide public operation beginning upon January 2027 mission complete \u2014 coordinated campaign for momentum, trust, volunteers, county leadership, and permanent civic education infrastructure. Campaign starts when V1 is substantially complete, not when construction begins.",
   "governing_principle": "Launch creates attention. Trust creates institutions. Earn trust one conversation, one county, one volunteer, one coalition partner, one Arkansan at a time.",
+  "campaign_timing": {
+    "title": "Campaign Timing",
+    "completion_target_date": "2027-01-01",
+    "begins_upon": "mission_complete",
+    "january_2027_is_completion_not_construction_start": true,
+    "first_100_days_of_public_operation": true,
+    "status": "specified"
+  },
   "primary_mission": {
     "title": "Primary Mission",
     "objectives": [
@@ -326,6 +335,7 @@
   "long_term_vision": "First 100 days transition launch into sustainable growth. Momentum becomes infrastructure. Attention becomes trust. Platform becomes statewide movement.",
   "summary": {
     "launch_date": "2027-01-01",
+    "completion_target_date": "2027-01-01",
     "campaign_days": 100,
     "campaign_started": false,
     "campaign_day": 0,
@@ -345,7 +355,7 @@
   },
   "catalog_gaps": [
     "First 100-day campaign dashboard not live",
-    "Campaign not started \u2014 pre-launch (Jan 2027 target)",
+    "Campaign not started \u2014 awaits January 2027 mission complete",
     "0/100 campaign days tracked",
     "0 new participants \u00b7 0 volunteers \u00b7 0 Education Leaders",
     "0 counties/cities represented during campaign",
@@ -358,7 +368,7 @@
     "Build #87 vs Master Launch Plan (#85) \u2014 campaign vs readiness checklist"
   ],
   "recommended_next_build": {
-    "number": 88,
+    "number": 89,
     "title": "First 100 Days Dashboard & Campaign Tracker Components",
     "note": "Campaign dashboard UI, day counter, phase tracker, weekly rhythm checklist, county challenge tracker, First 100 Days report generator, COMP-* specs."
   }

@@ -7,7 +7,7 @@
 
 ## Purpose
 
-Build #85 defines the **January 2027 operational readiness blueprint** — the launch checklist, not a wish list.
+Build #85 defines the **January 2027 mission-complete readiness checklist** — what must exist when V1 is substantially complete.
 
 > *From Vision to Reality*
 

@@ -7,7 +7,7 @@
 
 ## Purpose
 
-Build #87 establishes the **First 100 Days** operational campaign after January 2027 launch.
+Build #87 establishes the **First 100 Days** campaign — first 100 days of statewide public operation **upon mission complete** (January 2027).
 
 > *Turning a Platform into a Statewide Movement*
 

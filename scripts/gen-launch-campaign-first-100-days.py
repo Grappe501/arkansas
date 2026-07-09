@@ -7,7 +7,8 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
 today = '2026-07-09'
-launch_date = '2027-01-01'
+completion_target_date = '2027-01-01'
+launch_date = completion_target_date  # legacy alias — mission complete date
 campaign_days = 100
 
 def load_json(path):
@@ -184,6 +185,7 @@ out = {
     'build': 87,
     'updated': today,
     'launch_date': launch_date,
+    'completion_target_date': completion_target_date,
     'campaign_days': campaign_days,
     'title': 'Master Launch Campaign & First 100 Days Blueprint v1.0',
     'subtitle': 'The First 100 Days',
@@ -193,13 +195,23 @@ out = {
     'route': '/mission-control/launch-campaign-first-100-days.html',
     'constitution': '/docs/MASTER_LAUNCH_CAMPAIGN_FIRST_100_DAYS.md',
     'purpose': (
-        'First 100 days after January 2027 public launch — coordinated campaign for momentum, '
-        'trust, volunteers, county leadership, and permanent civic education infrastructure.'
+        'First 100 days of statewide public operation beginning upon January 2027 mission '
+        'complete — coordinated campaign for momentum, trust, volunteers, county leadership, '
+        'and permanent civic education infrastructure. Campaign starts when V1 is substantially '
+        'complete, not when construction begins.'
     ),
     'governing_principle': (
         'Launch creates attention. Trust creates institutions. Earn trust one conversation, '
         'one county, one volunteer, one coalition partner, one Arkansan at a time.'
     ),
+    'campaign_timing': {
+        'title': 'Campaign Timing',
+        'completion_target_date': completion_target_date,
+        'begins_upon': 'mission_complete',
+        'january_2027_is_completion_not_construction_start': True,
+        'first_100_days_of_public_operation': True,
+        'status': 'specified',
+    },
     'primary_mission': {
         'title': 'Primary Mission',
         'objectives': PRIMARY_OBJECTIVES,
@@ -285,6 +297,7 @@ out = {
     ),
     'summary': {
         'launch_date': launch_date,
+        'completion_target_date': completion_target_date,
         'campaign_days': campaign_days,
         'campaign_started': campaign_started,
         'campaign_day': campaign_day,
@@ -304,7 +317,7 @@ out = {
     },
     'catalog_gaps': [
         'First 100-day campaign dashboard not live',
-        'Campaign not started — pre-launch (Jan 2027 target)',
+        'Campaign not started — awaits January 2027 mission complete',
         '0/100 campaign days tracked',
         '0 new participants · 0 volunteers · 0 Education Leaders',
         '0 counties/cities represented during campaign',
@@ -317,7 +330,7 @@ out = {
         'Build #87 vs Master Launch Plan (#85) — campaign vs readiness checklist',
     ],
     'recommended_next_build': {
-        'number': 88,
+        'number': 89,
         'title': 'First 100 Days Dashboard & Campaign Tracker Components',
         'note': (
             'Campaign dashboard UI, day counter, phase tracker, weekly rhythm checklist, '

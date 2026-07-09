@@ -232,14 +232,16 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
-    <h2 class="mc-section-title">First 100 Days <a href="/mission-control/launch-campaign-first-100-days.html" class="mc-inline-link">Launch Campaign #87 →</a></h2>
-    <p class="mc-bar-note">Build #87 — Launch Campaign & First 100 Days Blueprint. Post-Jan 2027 movement campaign. 3 phases, 11 indicators, weekly rhythm, county challenge. Day 0/100 · campaign not started. ~57% readiness.</p>
+    <h2 class="mc-section-title">Execution Schedule <a href="/mission-control/execution-schedule.html" class="mc-inline-link">Mission Complete Jan 2027 #88 →</a></h2>
+    <p class="mc-bar-note">Build #88 — Master Execution Schedule. January 2027 = V1 completion target, not construction start. Countdown, war room, critical path, 10 departments. War room not live. ~56% readiness.</p>
+    <h2 class="mc-section-title">First 100 Days <a href="/mission-control/launch-campaign-first-100-days.html" class="mc-inline-link">Post-Completion Campaign #87 →</a></h2>
+    <p class="mc-bar-note">Build #87 — First 100 Days upon mission complete. Public operation campaign after Jan 2027 V1 complete. 3 phases, 11 indicators. Day 0/100 · awaits completion. ~57% readiness.</p>
     <h2 class="mc-section-title">Civic Reach <a href="/mission-control/arkansas-civic-reach-participation.html" class="mc-inline-link">15% Engagement #86 →</a></h2>
     <p class="mc-bar-note">Build #86 — Civic Reach & Participation Strategy. 15% Connected Citizen Goal per county and city. 6 engagement levels, reach dashboard, quality metrics. 0 connected · 0/75 at goal · dashboard not live. ~56% readiness.</p>
     <h2 class="mc-section-title">Launch Plan 2027 <a href="/mission-control/master-launch-plan.html" class="mc-inline-link">Jan 2027 Readiness #85 →</a></h2>
-    <p class="mc-bar-note">Build #85 — Master Launch Plan. January 2027 operational readiness blueprint. 36 checklist items, 11 categories, launch map, governance certs. 3/36 complete · dashboard not live. ~54% readiness.</p>
+    <p class="mc-bar-note">Build #85 — Master Launch Plan. Mission-complete readiness checklist for Jan 2027. 36 items, 11 categories. 3/36 complete · completion target not launch start. ~54% readiness.</p>
     <h2 class="mc-section-title">Strategic Plan 2035 <a href="/mission-control/arkansas-strategic-plan-2035.html" class="mc-inline-link">Decade Roadmap #84 →</a></h2>
-    <p class="mc-bar-note">Build #84 — Master Arkansas Strategic Plan 2035. Accomplishment roadmap to statewide civic education institution. 7 goals, 10 metrics, 5yr/10yr milestones, annual review. 0/75 counties · 0/200K · scorecard not live. ~55% readiness.</p>
+    <p class="mc-bar-note">Build #84 — Master Arkansas Strategic Plan 2035. Decade accomplishment roadmap. Jan 2027 = V1 mission-complete milestone. 7 goals, 10 metrics. 0/75 counties · scorecard not live. ~55% readiness.</p>
     <h2 class="mc-section-title">Civic Ecosystem <a href="/mission-control/arkansas-civic-ecosystem.html" class="mc-inline-link">Connected Network #83 →</a></h2>
     <p class="mc-bar-note">Build #83 — Master Arkansas Civic Ecosystem. One institution, one state, one connected network. 12 living systems, 4 loops, health score, executive dashboard. 0/12 instrumented · health score not live. ~54% readiness.</p>
     <h2 class="mc-section-title">Public Trust <a href="/mission-control/public-trust-institutional-credibility.html" class="mc-inline-link">Trust Architecture #82 →</a></h2>
@@ -5250,6 +5252,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMasterLaunchPlan();
   initArkansasCivicReachParticipation();
   initLaunchCampaignFirst100Days();
+  initExecutionSchedule();
 });
 
 async function initUxArchitecture() {
@@ -8833,6 +8836,7 @@ async function initArkansasStrategicPlan2035() {
       <p class="mc-bar-note">${sp.purpose}</p>
       <p class="mc-bar-note"><strong>Horizon:</strong> ${sp.horizon_year} · <strong>Tagline:</strong> ${sp.tagline}</p>
       <p class="mc-bar-note"><strong>Build Plan:</strong> ${sp.distinct_from_build_plan.build_plan_focus} · <strong>This plan:</strong> ${sp.distinct_from_build_plan.strategic_plan_focus}</p>
+      <p class="mc-bar-note"><strong>V1 completion milestone:</strong> ${sp.v1_completion_milestone.date} — ${sp.v1_completion_milestone.role}</p>
     </header>
     <div class="mc-executive mc-executive--hero">
       <div class="mc-stat"><div class="mc-stat__label">Strategic readiness</div><div class="mc-stat__value">${s.arkansas_strategic_plan_2035_readiness_pct}%</div></div>
@@ -8842,6 +8846,8 @@ async function initArkansasStrategicPlan2035() {
       <div class="mc-stat"><div class="mc-stat__label">Participants</div><div class="mc-stat__value">${s.participants_connected.toLocaleString()}/${s.participants_target.toLocaleString()}</div></div>
       <div class="mc-stat"><div class="mc-stat__label">5yr milestones</div><div class="mc-stat__value">${s.five_year_milestones_achieved}/${s.five_year_milestones_total}</div></div>
     </div>
+    <h2 class="mc-section-title">${sp.v1_completion_milestone.title}</h2>
+    <p class="mc-bar-note">Within decade plan: ${sp.v1_completion_milestone.within_decade_plan ? 'Yes' : 'No'} · Not construction start: ${sp.v1_completion_milestone.not_construction_start ? 'Yes' : 'No'} · Execution Schedule: Build #${sp.v1_completion_milestone.execution_schedule_build}</p>
     <h2 class="mc-section-title">${sp.strategic_vision.title}</h2>
     <p class="mc-bar-note">Horizon ${sp.strategic_vision.horizon}: ${sp.strategic_vision.aspiration}</p>
     <ul class="mc-deliverables">${sp.strategic_vision.topics.map(t => `<li>${t}</li>`).join('')}</ul>
@@ -8939,8 +8945,8 @@ async function initMasterLaunchPlan() {
       <h1>${lp.subtitle}</h1>
       <p class="mc-header__question">${lp.governing_principle}</p>
       <p class="mc-bar-note">${lp.purpose}</p>
-      <p class="mc-bar-note"><strong>Launch date:</strong> ${lp.launch_date} · <strong>Tagline:</strong> ${lp.tagline}</p>
-      <p class="mc-bar-note"><strong>This plan:</strong> ${lp.distinct_from.this_plan_focus}</p>
+      <p class="mc-bar-note"><strong>Completion target:</strong> ${lp.distinct_from.completion_target_date || lp.launch_date} · <strong>Tagline:</strong> ${lp.tagline}</p>
+      <p class="mc-bar-note"><strong>This plan:</strong> ${lp.distinct_from.this_plan_focus} · Jan 2027 is completion, not construction start: ${lp.distinct_from.january_2027_is_completion_not_launch_start ? 'Yes' : 'No'}</p>
     </header>
     <div class="mc-executive mc-executive--hero">
       <div class="mc-stat"><div class="mc-stat__label">Launch plan readiness</div><div class="mc-stat__value">${s.master_launch_plan_readiness_pct}%</div></div>
@@ -9121,7 +9127,8 @@ async function initLaunchCampaignFirst100Days() {
       <h1>${lc.subtitle}</h1>
       <p class="mc-header__question">${lc.governing_principle}</p>
       <p class="mc-bar-note">${lc.purpose}</p>
-      <p class="mc-bar-note"><strong>Launch:</strong> ${lc.launch_date} · <strong>Tagline:</strong> ${lc.tagline}</p>
+      <p class="mc-bar-note"><strong>Begins upon mission complete:</strong> ${lc.campaign_timing.completion_target_date} · <strong>Tagline:</strong> ${lc.tagline}</p>
+      <p class="mc-bar-note">Jan 2027 is completion, not construction start: ${lc.campaign_timing.january_2027_is_completion_not_construction_start ? 'Yes' : 'No'} · First 100 days of public operation: ${lc.campaign_timing.first_100_days_of_public_operation ? 'Yes' : 'No'}</p>
     </header>
     <div class="mc-executive mc-executive--hero">
       <div class="mc-stat"><div class="mc-stat__label">Campaign readiness</div><div class="mc-stat__value">${s.launch_campaign_first_100_days_readiness_pct}%</div></div>
@@ -9173,6 +9180,111 @@ async function initLaunchCampaignFirst100Days() {
       <a href="/data/launch-campaign-first-100-days.json">JSON</a> ·
       <a href="/mission-control/master-launch-plan.html">Launch Plan (#85)</a> ·
       <a href="/mission-control/arkansas-civic-reach-participation.html">Civic Reach (#86)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initExecutionSchedule() {
+  const root = document.getElementById('mc-execution-schedule-root');
+  if (!root) return;
+
+  const [esRes, mcRes] = await Promise.all([
+    fetch('/data/execution-schedule.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const es = await esRes.json();
+  const mc = await mcRes.json();
+  const s = es.summary;
+
+  const countdownRows = es.mission_control_countdown.indicators.map(c => `
+    <tr><td><code>${c.id}</code></td><td>${c.indicator}</td>
+      <td>${typeof c.current === 'number' ? c.current.toLocaleString() : c.current}${c.unit ? c.unit : ''}${c.target ? ` / ${c.target.toLocaleString()}` : ''}</td>
+      <td>${c.status}</td></tr>`).join('');
+
+  const criticalPathRows = es.critical_path_management.categories.map(c => `
+    <tr><td><code>${c.id}</code></td><td>${c.label}</td><td>${c.count}</td></tr>`).join('');
+
+  const deptRows = es.department_readiness.departments.map(d => `
+    <tr><td>${d.name}</td><td>${d.stage}</td><td>${d.readiness_pct}%</td></tr>`).join('');
+
+  const progressRows = es.arkansas_progress_dashboard.indicators.map(p => `
+    <tr><td><code>${p.id}</code></td><td>${p.indicator}</td>
+      <td>${typeof p.current === 'number' ? p.current.toLocaleString() : p.current}${p.target ? ` / ${p.target.toLocaleString()}` : ''}${p.unit ? ` ${p.unit}` : ''}</td></tr>`).join('');
+
+  const timelineRows = es.timeline_alignment.builds.map(b => `
+    <tr><td>#${b.build}</td><td>${b.title}</td><td>${b.jan_2027_role}</td></tr>`).join('');
+
+  const systemRows = es.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Execution Schedule</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #88 · ${es.title}</p>
+      <h1>${es.subtitle}</h1>
+      <p class="mc-header__question">${es.governing_principle}</p>
+      <p class="mc-bar-note">${es.purpose}</p>
+      <p class="mc-bar-note"><strong>${es.completion_target_label}</strong> · Target: ${es.completion_target_date}</p>
+      <p class="mc-bar-note">Jan 2027 is completion, not construction start: ${es.execution_philosophy.january_2027_is_completion_not_construction_start ? 'Yes' : 'No'} · V1 substantial completion: ${es.execution_philosophy.v1_substantial_completion ? 'Yes' : 'No'}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Days remaining</div><div class="mc-stat__value">${s.days_remaining}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Execution readiness</div><div class="mc-stat__value">${s.execution_schedule_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Institutional completion</div><div class="mc-stat__value">${s.overall_institutional_completion_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">War room live</div><div class="mc-stat__value">${s.executive_war_room_live ? 'Yes' : 'No'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Countdown live</div><div class="mc-stat__value">${s.countdown_dashboard_live ? 'Yes' : 'No'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Departments complete</div><div class="mc-stat__value">${s.departments_complete}/${s.departments_total}</div></div>
+    </div>
+    <h2 class="mc-section-title">${es.the_mission.title}</h2>
+    <p class="mc-bar-note">Completion: ${es.the_mission.completion_date} · Status: ${es.the_mission.status} · ${es.the_mission.deliverables_total} deliverables</p>
+    <ul class="mc-deliverables">${es.the_mission.deliverables.map(d => `<li>${d}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${es.completion_targets.title}</h2>
+    <p class="mc-bar-note">By ${es.completion_targets.by_completion_date} · Status: ${es.completion_targets.status}</p>
+    <ul class="mc-deliverables">${es.completion_targets.targets.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${es.mission_control_countdown.title}</h2>
+    <p class="mc-bar-note">Live: ${es.mission_control_countdown.live ? 'Yes' : 'No'} · Always displayed: ${es.mission_control_countdown.always_displayed ? 'Yes' : 'No'} · ${s.days_remaining} days remaining</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${countdownRows}</tbody></table>
+    <h2 class="mc-section-title">${es.critical_path_management.title}</h2>
+    <p class="mc-bar-note">Health indicators on every deliverable: ${es.critical_path_management.every_deliverable_health_indicator ? 'Yes' : 'No'} · Status: ${es.critical_path_management.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Category</th><th>Count</th></tr></thead>
+      <tbody>${criticalPathRows}</tbody></table>
+    <h2 class="mc-section-title">${es.executive_war_room.title}</h2>
+    <p class="mc-bar-note">Live: ${es.executive_war_room.live ? 'Yes' : 'No'} · Daily operating screen: ${es.executive_war_room.daily_operating_screen ? 'Yes' : 'No'} · Status: ${es.executive_war_room.status}</p>
+    <ul class="mc-deliverables">${es.executive_war_room.panels.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${es.department_readiness.title}</h2>
+    <p class="mc-bar-note">Stages: ${es.department_readiness.stages.join(' → ')} · Complete: ${es.department_readiness.departments_complete}/${es.department_readiness.departments_total} · Auto-summarize: ${es.department_readiness.auto_summarize_institutional_readiness ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>Department</th><th>Stage</th><th>Readiness</th></tr></thead>
+      <tbody>${deptRows}</tbody></table>
+    <h2 class="mc-section-title">${es.arkansas_progress_dashboard.title}</h2>
+    <p class="mc-bar-note">Primary statewide performance indicators · Status: ${es.arkansas_progress_dashboard.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th></tr></thead>
+      <tbody>${progressRows}</tbody></table>
+    <h2 class="mc-section-title">${es.weekly_executive_review.title}</h2>
+    <p class="mc-bar-note">Ends with updated priorities: ${es.weekly_executive_review.ends_with_updated_priorities ? 'Yes' : 'No'} · Status: ${es.weekly_executive_review.status}</p>
+    <ul class="mc-deliverables">${es.weekly_executive_review.review_items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${es.success_definition.title}</h2>
+    <p class="mc-bar-note">${es.success_definition.text}</p>
+    <h2 class="mc-section-title">${es.timeline_alignment.title}</h2>
+    <p class="mc-bar-note">January 2027 is completion target: ${es.timeline_alignment.january_2027_is_completion_target ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>Build</th><th>Title</th><th>Jan 2027 Role</th></tr></thead>
+      <tbody>${timelineRows}</tbody></table>
+    <h2 class="mc-section-title">System Integration</h2>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${es.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${es.recommended_next_build.number} — ${es.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${es.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_EXECUTION_SCHEDULE.md">MASTER_EXECUTION_SCHEDULE.md</a> ·
+      <a href="/data/execution-schedule.json">JSON</a> ·
+      <a href="/mission-control/master-launch-plan.html">Launch Plan (#85)</a> ·
+      <a href="/mission-control/arkansas-strategic-plan-2035.html">Strategic Plan (#84)</a> ·
+      <a href="/mission-control/launch-campaign-first-100-days.html">First 100 Days (#87)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 
