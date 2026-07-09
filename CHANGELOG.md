@@ -3,6 +3,21 @@
 All notable changes to Citizens Facts are documented here.
 Each entry from Ernie corresponds to a new version and GitHub commit.
 
+## [1.2.0] - 2026-07-09
+
+### Added — Master Build Plan (100 steps)
+- `BUILD_PLAN.md` — full 100-step tracker with completion status
+- Project constitution, style guide, citation guide, editorial checklist
+- `CONTRIBUTING.md` + GitHub issue templates (content, research, data, design, bug)
+- Content inventories: topics, cases, timeline, spending, reform
+- Claims ledger (`data/claims-ledger.json`)
+- **§3 What the Court Decided** hall page
+- **Source Library** at `/library/`
+- Homepage: timeline preview, money flow preview, proof section, current fight
+- Persistent "Lead Education Locally" sticky CTA
+- Form privacy notice
+- `develop` branch for PR workflow
+
 ## [1.1.0] - 2026-07-09
 
 ### Added — Civic Education Engine (Phase 1)

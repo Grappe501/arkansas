@@ -1,0 +1,14 @@
+{
+  "version": "1.2.0",
+  "planned_charts": [
+    { "id": "spending-before-after", "title": "Outside spending before/after 2010", "status": "planned", "sources": ["FEC", "OpenSecrets"] },
+    { "id": "super-pac-growth", "title": "Super PAC growth over time", "status": "planned", "sources": ["OpenSecrets"] },
+    { "id": "dark-money", "title": "Dark money estimates", "status": "planned", "sources": ["OpenSecrets", "Issue One"] },
+    { "id": "donor-concentration", "title": "Donor concentration", "status": "planned", "sources": ["OpenSecrets"] },
+    { "id": "independent-expenditures", "title": "Independent expenditures by cycle", "status": "planned", "sources": ["FEC"] }
+  ],
+  "data_sources": [
+    { "name": "FEC", "url": "https://www.fec.gov/", "use": "Official campaign finance filings" },
+    { "name": "OpenSecrets", "url": "https://www.opensecrets.org/", "use": "Aggregated spending analysis" }
+  ]
+}

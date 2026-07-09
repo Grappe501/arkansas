@@ -374,6 +374,132 @@
   opacity: 0.8;
 }
 
+/* Homepage previews — v1.2.0 */
+.preview-section {
+  margin: 2.5rem 0;
+}
+
+.timeline-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.timeline-preview__item {
+  display: flex;
+  flex-direction: column;
+  padding: 0.85rem 1.1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  min-width: 120px;
+  transition: border-color 0.2s;
+}
+
+.timeline-preview__item:hover {
+  border-color: var(--color-accent-light);
+  color: inherit;
+}
+
+.timeline-preview__item--highlight {
+  border-color: var(--color-highlight);
+  background: #fef8f4;
+}
+
+.timeline-preview__item--live {
+  border-left: 4px solid var(--color-montana);
+}
+
+.timeline-preview__year {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-highlight);
+  margin-bottom: 0.25rem;
+}
+
+.money-flow-preview {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+  padding: 1.25rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.money-flow-preview__node {
+  padding: 0.5rem 0.85rem;
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.money-flow-preview__arrow {
+  color: var(--color-highlight);
+  font-weight: 700;
+}
+
+.preview-cta {
+  font-size: 0.95rem;
+}
+
+.proof-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.proof-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.proof-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--color-accent);
+}
+
+.proof-card p {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* Persistent CTA */
+.sticky-cta {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  background: var(--color-highlight);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.sticky-cta:hover {
+  background: #a34a1e;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
 /* Halls index */
 .halls-index-intro {
   margin-bottom: 2rem;

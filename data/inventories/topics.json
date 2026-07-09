@@ -1,0 +1,24 @@
+{
+  "version": "1.2.0",
+  "topics": [
+    { "id": "tillman-act", "title": "1907 Tillman Act", "hall": "story-before", "status": "stub" },
+    { "id": "watergate", "title": "Watergate & FECA", "hall": "story-before", "status": "stub" },
+    { "id": "buckley", "title": "Buckley v. Valeo", "hall": "story-before", "status": "stub" },
+    { "id": "pacs", "title": "Rise of PACs", "hall": "story-before", "status": "stub" },
+    { "id": "mcCain-feingold", "title": "McCain-Feingold (BCRA)", "hall": "story-before", "status": "stub" },
+    { "id": "who-is-cu", "title": "Who was Citizens United?", "hall": "the-case", "status": "stub" },
+    { "id": "hillary-movie", "title": "Hillary: The Movie", "hall": "the-case", "status": "stub" },
+    { "id": "fec-involvement", "title": "Why the FEC got involved", "hall": "the-case", "status": "stub" },
+    { "id": "court-question", "title": "What question did the Court answer?", "hall": "what-court-decided", "status": "stub" },
+    { "id": "majority-opinion", "title": "Majority opinion (Kennedy)", "hall": "what-court-decided", "status": "stub" },
+    { "id": "dissent", "title": "Dissent (Stevens)", "hall": "what-court-decided", "status": "stub" },
+    { "id": "super-pacs", "title": "Super PAC explosion", "hall": "after-2010", "status": "stub" },
+    { "id": "dark-money", "title": "Dark money growth", "hall": "after-2010", "status": "stub" },
+    { "id": "money-flow", "title": "Money flow channels", "hall": "money-map", "status": "stub" },
+    { "id": "free-speech-arg", "title": "Free speech argument", "hall": "debate", "status": "stub" },
+    { "id": "anti-corruption-arg", "title": "Anti-corruption argument", "hall": "debate", "status": "stub" },
+    { "id": "federal-amendment", "title": "Federal constitutional amendment", "hall": "reform", "status": "stub" },
+    { "id": "montana-i194", "title": "Montana Initiative 194", "hall": "montana-hawaii", "status": "published" },
+    { "id": "hawaii-act11", "title": "Hawaii Act 11", "hall": "montana-hawaii", "status": "published" }
+  ]
+}

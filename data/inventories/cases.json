@@ -1,0 +1,10 @@
+{
+  "version": "1.2.0",
+  "cases": [
+    { "id": "buckley-1976", "name": "Buckley v. Valeo", "year": 1976, "holding": "Spending money is speech; contribution limits allowed", "relation": "precursor" },
+    { "id": "mcconnell-2003", "name": "McConnell v. FEC", "year": 2003, "holding": "Upheld much of McCain-Feingold", "relation": "precursor" },
+    { "id": "cu-2010", "name": "Citizens United v. FEC", "year": 2010, "holding": "Independent corporate/union political spending protected", "relation": "hub" },
+    { "id": "speechnow-2010", "name": "SpeechNow.org v. FEC", "year": 2010, "holding": "Unlimited contributions to independent expenditure groups", "relation": "aftermath" },
+    { "id": "montana-2012", "name": "American Tradition Partnership v. Bullock", "year": 2012, "holding": "Summarily reversed Montana corporate spending limits", "relation": "aftermath" }
+  ]
+}

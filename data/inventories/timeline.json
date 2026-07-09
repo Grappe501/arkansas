@@ -1,0 +1,16 @@
+{
+  "version": "1.2.0",
+  "events": [
+    { "year": 1907, "title": "Tillman Act", "category": "legislation", "hall": "story-before" },
+    { "year": 1972, "title": "Watergate scandal", "category": "scandal", "hall": "story-before" },
+    { "year": 1974, "title": "FECA enacted", "category": "legislation", "hall": "story-before" },
+    { "year": 1976, "title": "Buckley v. Valeo", "category": "case", "hall": "story-before" },
+    { "year": 2002, "title": "McCain-Feingold (BCRA)", "category": "legislation", "hall": "story-before" },
+    { "year": 2008, "title": "Hillary: The Movie / FEC dispute", "category": "litigation", "hall": "the-case" },
+    { "year": 2010, "title": "Citizens United v. FEC decided", "category": "case", "hall": "what-court-decided", "highlight": true },
+    { "year": 2010, "title": "SpeechNow — Super PACs enabled", "category": "case", "hall": "after-2010" },
+    { "year": 2024, "title": "Maine Question 1 — Super PAC contribution limits", "category": "reform", "hall": "reform" },
+    { "year": 2026, "title": "Montana Initiative 194 signatures submitted", "category": "reform", "hall": "montana-hawaii", "live": true },
+    { "year": 2026, "title": "Hawaii Act 11 signed", "category": "reform", "hall": "montana-hawaii", "live": true }
+  ]
+}

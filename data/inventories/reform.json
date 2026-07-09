@@ -1,0 +1,13 @@
+{
+  "version": "1.2.0",
+  "proposals": [
+    { "id": "constitutional-amendment", "title": "Federal constitutional amendment", "example": "American Promise — For Our Freedom Amendment", "hall": "reform" },
+    { "id": "state-ballot", "title": "State ballot initiatives", "example": "Montana Initiative 194", "hall": "montana-hawaii", "live": true },
+    { "id": "state-corporate-law", "title": "State corporate charter theory", "example": "Hawaii Act 11", "hall": "montana-hawaii", "live": true },
+    { "id": "disclosure", "title": "Enhanced disclosure laws", "hall": "reform" },
+    { "id": "public-financing", "title": "Public campaign financing", "hall": "reform" },
+    { "id": "anti-coordination", "title": "Anti-coordination rules", "hall": "reform" },
+    { "id": "shareholder-consent", "title": "Shareholder/member consent", "hall": "reform" },
+    { "id": "litigation", "title": "Litigation strategy", "hall": "reform" }
+  ]
+}

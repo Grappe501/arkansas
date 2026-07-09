@@ -1,0 +1,32 @@
+{
+  "version": "1.2.0",
+  "claims": [
+    {
+      "id": "claim-001",
+      "claim_text": "Citizens United held that government may not restrict independent political spending by corporations and unions.",
+      "hall": "what-court-decided",
+      "sources": [
+        { "type": "court", "title": "Citizens United v. FEC, 558 U.S. 310 (2010)", "url": "https://www.supremecourt.gov/opinions/09pdf/08-205.pdf" }
+      ],
+      "last_verified": "2026-07-09"
+    },
+    {
+      "id": "claim-002",
+      "claim_text": "Montana Initiative 194 would prohibit artificial persons from contributing to campaigns, ballot measures, or political parties.",
+      "hall": "montana-hawaii",
+      "sources": [
+        { "type": "ngo", "title": "Ballotpedia — Montana Initiative 194", "url": "https://ballotpedia.org/Montana_Initiative_194%2C_Exclude_Political_Spending_from_Artificial_Persons%E2%80%99_Charter_Powers_Initiative_%282026%29" }
+      ],
+      "last_verified": "2026-07-09"
+    },
+    {
+      "id": "claim-003",
+      "claim_text": "Hawaii Act 11 restricts corporate election spending; effective July 1, 2027.",
+      "hall": "montana-hawaii",
+      "sources": [
+        { "type": "news", "title": "AP News — Hawaii corporate influence law", "url": "https://apnews.com/article/71a28bc7e8f6e0279b31e999f222519a" }
+      ],
+      "last_verified": "2026-07-09"
+    }
+  ]
+}
