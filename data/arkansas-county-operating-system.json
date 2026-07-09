@@ -1,0 +1,443 @@
+{
+  "version": "1.0",
+  "build": 77,
+  "updated": "2026-07-09",
+  "title": "Master Arkansas County Operating System (ACOS) v1.0",
+  "subtitle": "Seventy-Five Counties. One Institution.",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/arkansas-county-operating-system.html",
+  "constitution": "/docs/MASTER_ARKANSAS_COUNTY_OPERATING_SYSTEM.md",
+  "purpose": "Standardized framework for building civic education in every county while preserving local identity \u2014 primary operational framework for statewide expansion.",
+  "governing_principle": "Statewide change is achieved through strong local communities. Seventy-five strong counties create one strong statewide institution.",
+  "county_philosophy": {
+    "title": "Institutional Philosophy",
+    "every_county_living_system": true,
+    "questions": [
+      "Who are our Education Leaders?",
+      "Which organizations are involved?",
+      "Where are community conversations happening?",
+      "What educational resources are available?",
+      "What questions are people asking?",
+      "What progress have we made?",
+      "What do we need next?"
+    ]
+  },
+  "county_digital_twin": {
+    "title": "County Digital Twin",
+    "description": "Each county has a digital workspace \u2014 operational dashboard, not just a webpage",
+    "counties_total": 75,
+    "digital_twins_operational": 0,
+    "mc_generates_all": true,
+    "status": "specified"
+  },
+  "county_profile": {
+    "title": "County Profile",
+    "sections_total": 13,
+    "sections": [
+      {
+        "id": "ACOS-CP-01",
+        "section": "County history",
+        "status": "specified"
+      },
+      {
+        "id": "ACOS-CP-02",
+        "section": "Population overview",
+        "status": "specified"
+      },
+      {
+        "id": "ACOS-CP-03",
+        "section": "Major cities",
+        "status": "specified"
+      },
+      {
+        "id": "ACOS-CP-04",
+        "section": "Legislative districts",
+        "status": "specified"
+      },
+      {
+        "id": "ACOS-CP-05",
+        "section": "Congressional district",
+        "status": "specified"
+      },
+      {
+        "id": "ACOS-CP-06",
+        "section": "Libraries",
+        "status": "specified"
+      },
+      {
+        "id": "ACOS-CP-07",
+        "section": "Colleges (if applicable)",
+        "status": "specified"
+      },
+      {
+        "id": "ACOS-CP-08",
+        "section": "Historical societies",
+        "status": "specified"
+      },
+      {
+        "id": "ACOS-CP-09",
+        "section": "Coalition organizations",
+        "status": "partial"
+      },
+      {
+        "id": "ACOS-CP-10",
+        "section": "Education Leaders",
+        "status": "partial"
+      },
+      {
+        "id": "ACOS-CP-11",
+        "section": "Upcoming educational events",
+        "status": "specified"
+      },
+      {
+        "id": "ACOS-CP-12",
+        "section": "Community conversations",
+        "status": "specified"
+      },
+      {
+        "id": "ACOS-CP-13",
+        "section": "Educational Coverage Score",
+        "status": "planned"
+      }
+    ],
+    "living_civic_profile": true
+  },
+  "county_leadership_team": {
+    "title": "County Leadership Team",
+    "roles_total": 8,
+    "one_volunteer_multiple_roles_initially": true,
+    "roles": [
+      {
+        "id": "ACOS-LR-01",
+        "role": "County Education Director",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ACOS-LR-02",
+        "role": "City Education Leaders",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ACOS-LR-03",
+        "role": "Neighborhood Education Leaders",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ACOS-LR-04",
+        "role": "Academy Mentors",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ACOS-LR-05",
+        "role": "Coalition Coordinator",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ACOS-LR-06",
+        "role": "Volunteer Coordinator",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ACOS-LR-07",
+        "role": "Research Liaison",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ACOS-LR-08",
+        "role": "Media Liaison",
+        "filled": 0,
+        "status": "specified"
+      }
+    ]
+  },
+  "county_goals": {
+    "title": "County Goals",
+    "annual_educational_goals": true,
+    "examples": [
+      "Recruit Education Leaders",
+      "Host community conversations",
+      "Expand coalition partnerships",
+      "Complete Academy certifications",
+      "Develop local educational resources",
+      "Strengthen neighborhood coverage"
+    ],
+    "mc_tracks_progress": true,
+    "status": "specified"
+  },
+  "county_dashboard": {
+    "title": "County Dashboard",
+    "domains": [
+      {
+        "id": "ACOS-CD-L",
+        "domain": "Leadership",
+        "indicators": [
+          "Education Leaders",
+          "Mentors",
+          "Academy graduates"
+        ],
+        "status": "planned"
+      },
+      {
+        "id": "ACOS-CD-C",
+        "domain": "Community",
+        "indicators": [
+          "Events",
+          "Conversations",
+          "Organizations"
+        ],
+        "status": "planned"
+      },
+      {
+        "id": "ACOS-CD-LN",
+        "domain": "Learning",
+        "indicators": [
+          "Course completion",
+          "Resource downloads",
+          "Research participation"
+        ],
+        "status": "planned"
+      },
+      {
+        "id": "ACOS-CD-G",
+        "domain": "Growth",
+        "indicators": [
+          "Participant growth",
+          "Volunteer growth",
+          "Neighborhood expansion"
+        ],
+        "status": "planned"
+      }
+    ],
+    "live": false,
+    "status": "specified"
+  },
+  "county_resource_library": {
+    "title": "County Resource Library",
+    "items": [
+      "Presentation materials",
+      "Fact sheets",
+      "Community discussion guides",
+      "Educational videos",
+      "Print-ready resources",
+      "Frequently asked questions",
+      "County-specific educational opportunities"
+    ],
+    "items_total": 7,
+    "live": false,
+    "status": "specified"
+  },
+  "county_event_calendar": {
+    "title": "County Event Calendar",
+    "event_types": [
+      "Community conversations",
+      "Academy sessions",
+      "Presentations",
+      "Coalition meetings",
+      "Volunteer gatherings",
+      "Educational workshops"
+    ],
+    "statewide_calendar_sync": false,
+    "live": false,
+    "status": "specified"
+  },
+  "county_listening_reports": {
+    "title": "County Listening Reports",
+    "items": [
+      "Community questions",
+      "Educational needs",
+      "Research requests",
+      "Suggested improvements",
+      "Leadership observations"
+    ],
+    "reports_submitted": 0,
+    "mc_aggregates_statewide": true,
+    "preserves_county_perspectives": true,
+    "status": "specified"
+  },
+  "county_readiness_levels": {
+    "title": "County Readiness Levels",
+    "levels_total": 6,
+    "levels": [
+      {
+        "level": 1,
+        "id": "awareness",
+        "title": "Awareness",
+        "counties_at_level": 75
+      },
+      {
+        "level": 2,
+        "id": "founding_leader",
+        "title": "Founding Education Leader",
+        "counties_at_level": 0
+      },
+      {
+        "level": 3,
+        "id": "leadership_team",
+        "title": "Leadership Team",
+        "counties_at_level": 0
+      },
+      {
+        "level": 4,
+        "id": "community_activity",
+        "title": "Community Activity",
+        "counties_at_level": 0
+      },
+      {
+        "level": 5,
+        "id": "coalition_network",
+        "title": "Coalition Network",
+        "counties_at_level": 0
+      },
+      {
+        "level": 6,
+        "id": "sustainable_system",
+        "title": "Sustainable County Education System",
+        "counties_at_level": 0
+      }
+    ],
+    "counties_past_awareness": 0,
+    "mc_visualizes_all_counties": true,
+    "status": "specified",
+    "note": "6-stage model; extends Command Strategy (#70) 5-stage model"
+  },
+  "county_health_index": {
+    "title": "County Health Index",
+    "factors": [
+      "Leadership",
+      "Volunteer activity",
+      "Academy participation",
+      "Community conversations",
+      "Coalition participation",
+      "Learning engagement",
+      "Educational Coverage Score",
+      "Resource utilization"
+    ],
+    "factors_total": 8,
+    "computed": false,
+    "highlights_strengths_and_support": true,
+    "status": "planned"
+  },
+  "county_mentorship": {
+    "title": "County Mentorship",
+    "stronger_help_emerging": true,
+    "types": [
+      "Shared presentations",
+      "Joint workshops",
+      "Leadership mentoring",
+      "Resource sharing",
+      "Regional planning"
+    ],
+    "pairs_active": 0,
+    "collaboration_not_competition": true,
+    "status": "specified"
+  },
+  "integration": {
+    "chain": "Mission Control \u2192 Civic Atlas \u2192 Education Academy \u2192 Relationship OS \u2192 Coalition Network \u2192 Citizen Action Center \u2192 Knowledge Graph \u2192 Campaign Finance Observatory",
+    "each_county_operational_node": true,
+    "systems": [
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      },
+      {
+        "system": "Arkansas Civic Atlas (#58)",
+        "route": "/mission-control/civic-atlas.html",
+        "status": "live"
+      },
+      {
+        "system": "Community Education Academy (#68)",
+        "route": "/mission-control/citizen-leadership-academy.html",
+        "status": "live"
+      },
+      {
+        "system": "Relationship Operating System (#59)",
+        "route": "/mission-control/relationship-os.html",
+        "status": "live"
+      },
+      {
+        "system": "Coalition Network (#61)",
+        "route": "/mission-control/coalition-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Citizen Action Center (#62)",
+        "route": "/mission-control/citizen-action-center.html",
+        "status": "live"
+      },
+      {
+        "system": "Knowledge Graph",
+        "route": "/mission-control/knowledge-graph.html",
+        "status": "live"
+      },
+      {
+        "system": "Campaign Finance Observatory (#63)",
+        "route": "/mission-control/campaign-finance-observatory.html",
+        "status": "live"
+      },
+      {
+        "system": "County OS (#31)",
+        "route": "/mission-control/county-os.html",
+        "status": "live",
+        "note": "Extended by ACOS"
+      },
+      {
+        "system": "Arkansas Command Strategy (#70)",
+        "route": "/mission-control/arkansas-command-strategy.html",
+        "status": "live"
+      },
+      {
+        "system": "Organizational Constitution (#76)",
+        "route": "/mission-control/organizational-constitution.html",
+        "status": "live"
+      }
+    ],
+    "extends": "County Operating System (#31)"
+  },
+  "long_term_vision": "Twenty years after launch: every county has an active educational dashboard; local leaders know one another; community conversations year-round; libraries and civic organizations collaborate; students, teachers, journalists, and citizens find reliable resources. Every county contributes to statewide civic learning while maintaining local character.",
+  "summary": {
+    "counties_total": 75,
+    "counties_scaffolded": 75,
+    "counties_with_digital_twin": 0,
+    "county_dashboards_live": 0,
+    "counties_past_awareness": 0,
+    "readiness_levels": 6,
+    "profile_sections": 13,
+    "leadership_roles": 8,
+    "county_health_index_computed": false,
+    "county_listening_reports_submitted": 0,
+    "county_mentorship_pairs": 0,
+    "arkansas_county_operating_system_readiness_pct": 47,
+    "county_os_readiness_pct": 28,
+    "arkansas_command_strategy_readiness_pct": 39,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "0/75 county digital twins operational \u2014 MC generation not implemented",
+    "0 counties past Awareness \u2014 no founding Education Leaders",
+    "0 county dashboards live \u2014 operational headquarters not built",
+    "County Health Index not computed \u2014 factors specified only",
+    "County listening reports \u2014 0 submitted; aggregation not live",
+    "County event calendars \u2014 not per-county; statewide sync off",
+    "County resource libraries \u2014 not per-county",
+    "6-stage readiness vs Command Strategy 5-stage \u2014 reconcile models?",
+    "Build #77 vs County OS (#31) \u2014 ACOS extends but does not replace",
+    "Population, districts, libraries not populated on county profiles",
+    "County mentorship \u2014 0 pairs; regional planning not operational",
+    "Canonical /arkansas/[county] routes still not built",
+    "Educational Coverage Score not computed per county"
+  ],
+  "recommended_next_build": {
+    "number": 78,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "County digital twin pages, readiness visualization, health index, listening report intake, event calendar sync, COMP-* specs, GitHub backlog."
+  }
+}

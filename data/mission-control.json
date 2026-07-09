@@ -1,6 +1,6 @@
 {
-  "version": "1.80.0",
-  "build": 76,
+  "version": "1.81.0",
+  "build": 77,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 76,
+    "overall_completion": 77,
     "current_build": {
-      "number": 76,
-      "title": "Citizens United Facts Master Organizational Constitution & Operating Charter v1.0"
-    },
-    "active_phase": "Founding Constitution \u2192 Implementation Translation",
-    "last_completed": "Volunteer & Funding Constitution",
-    "next_build": {
       "number": 77,
+      "title": "Citizens United Facts Master Arkansas County Operating System (ACOS) v1.0"
+    },
+    "active_phase": "County Execution \u2192 Implementation Translation",
+    "last_completed": "Organizational Constitution",
+    "next_build": {
+      "number": 78,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
@@ -56,6 +56,7 @@
     "arkansas_civic_innovation_reform_readiness": 44,
     "volunteer_funding_constitution_readiness": 45,
     "organizational_constitution_readiness": 46,
+    "arkansas_county_operating_system_readiness": 47,
     "mc2_readiness": 42,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
@@ -104,8 +105,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 76,
-      "note": "Build #76 \u2014 Founding Organizational Constitution."
+      "value": 77,
+      "note": "Build #77 \u2014 Master Arkansas County Operating System."
     },
     {
       "id": "constitution",
@@ -343,9 +344,9 @@
     {
       "id": "county_os",
       "label": "County Operating System",
-      "value": 28,
+      "value": 47,
       "max": 100,
-      "note": "0 counties with partners \u2014 75 scaffolds at 0% completeness."
+      "note": "ACOS \u2014 75/75 counties \u00b7 0 digital twins."
     },
     {
       "id": "campaign_os",
@@ -661,6 +662,13 @@
       "value": 46,
       "max": 100,
       "note": "0 amendments \u00b7 adherence planned."
+    },
+    {
+      "id": "arkansas_county_operating_system",
+      "label": "County Operating System",
+      "value": 47,
+      "max": 100,
+      "note": "0/75 past Awareness \u00b7 health index planned."
     }
   ],
   "public_readiness": {
@@ -1409,6 +1417,12 @@
       "id": "organizational_constitution",
       "label": "Founding Constitution",
       "href": "/mission-control/organizational-constitution.html",
+      "status": "complete"
+    },
+    {
+      "id": "arkansas_county_operating_system",
+      "label": "County Operating System",
+      "href": "/mission-control/arkansas-county-operating-system.html",
       "status": "complete"
     }
   ],
@@ -2435,6 +2449,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 77,
+      "title": "Citizens United Facts Master Arkansas County Operating System (ACOS) v1.0",
+      "version": "1.81.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Master ACOS \u2014 county execution framework for 75 Arkansas counties",
+      "summary": "County digital twin, 6 readiness levels, health index, leadership team, 47% readiness. 75/75 scaffolded \u00b7 0 digital twins.",
+      "files_created": [
+        "data/arkansas-county-operating-system.json",
+        "docs/MASTER_ARKANSAS_COUNTY_OPERATING_SYSTEM.md",
+        "builds/077-arkansas-county-operating-system.md",
+        "mission-control/arkansas-county-operating-system.html",
+        "scripts/gen-arkansas-county-operating-system.py",
+        "scripts/update-mc-build77.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/arkansas-county-operating-system.html"
+      ],
+      "decisions_made": [
+        "ACOS as primary statewide expansion framework",
+        "6-stage county readiness model",
+        "County digital twin \u2014 operational dashboard per county",
+        "8-role county leadership team",
+        "County Health Index \u2014 8 factors",
+        "Extends County OS (#31), integrates Command Strategy (#70)",
+        "47% readiness \u2014 blueprint only"
+      ],
+      "open_questions": [
+        "Reconcile ACOS 6-stage vs Command Strategy 5-stage readiness?",
+        "ACOS vs County OS (#31) \u2014 single dashboard or two?",
+        "County digital twin route: /arkansas/[county] or MC-native?",
+        "Health index weighting formula?"
+      ],
+      "risks": [
+        "0/75 county digital twins operational \u2014 MC generation not implemented",
+        "0 counties past Awareness \u2014 no founding Education Leaders",
+        "0 county dashboards live \u2014 operational headquarters not built",
+        "County Health Index not computed \u2014 factors specified only"
+      ],
+      "next_recommended": 78,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-county-operating-system.html",
+      "review_status": "complete"
+    },
     {
       "number": 76,
       "title": "Citizens United Facts Master Organizational Constitution & Operating Charter v1.0",
@@ -6355,22 +6422,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Organizational Constitution v1.0 \u2014 founding charter, 15 articles",
-    "building_now": "76 builds specified \u2014 implementation translation next",
+    "what_built": "Master ACOS v1.0 \u2014 75-county execution framework",
+    "building_now": "77 builds specified \u2014 county digital twins next",
     "blocked": [
-      "Department registry",
-      "Amendment log",
-      "Adherence monitoring",
-      "Public constitution page"
+      "County digital twins",
+      "County dashboards",
+      "Health index",
+      "Listening reports"
     ],
     "ready_public": [
-      "15 articles",
-      "6 values",
-      "Motto",
-      "Creed",
-      "Founder principle"
+      "6 readiness levels",
+      "13 profile sections",
+      "8 leadership roles",
+      "Integration chain"
     ],
-    "next": "Build #77 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #78 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -7166,5 +7232,14 @@
     "articles_ratified": 15,
     "departments_total": 10,
     "founding_constitution": true
+  },
+  "arkansas_county_operating_system": "/data/arkansas-county-operating-system.json",
+  "arkansas_county_operating_system_dashboard": "/mission-control/arkansas-county-operating-system.html",
+  "arkansas_county_operating_system_inventory": {
+    "readiness_score": 47,
+    "counties_scaffolded": 75,
+    "counties_total": 75,
+    "digital_twins_operational": 0,
+    "master_acos": true
   }
 }

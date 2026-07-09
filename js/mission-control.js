@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">County Operating System <a href="/mission-control/arkansas-county-operating-system.html" class="mc-inline-link">ACOS #77 →</a></h2>
+    <p class="mc-bar-note">Build #77 — Master Arkansas County Operating System. 75 counties, digital twins, 6 readiness levels, health index. One county at a time. 0/75 digital twins · 0 past Awareness. ~47% readiness.</p>
     <h2 class="mc-section-title">Founding Constitution <a href="/mission-control/organizational-constitution.html" class="mc-inline-link">Organizational Charter #76 →</a></h2>
     <p class="mc-bar-note">Build #76 — Master Organizational Constitution. 15 articles, 6 values, 10 departments, motto, creed, founder principle. Everything flows from this document. 0/10 departments · 0 amendments. ~46% readiness.</p>
     <h2 class="mc-section-title">Volunteer & Funding <a href="/mission-control/volunteer-funding-constitution.html" class="mc-inline-link">Independence Charter #75 →</a></h2>
@@ -5217,6 +5219,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initArkansasCivicInnovationReform();
   initVolunteerFundingConstitution();
   initOrganizationalConstitution();
+  initArkansasCountyOperatingSystem();
 });
 
 async function initUxArchitecture() {
@@ -8000,6 +8003,129 @@ async function initOrganizationalConstitution() {
       <a href="/mission-control/governance.html">Governance (#49)</a> ·
       <a href="/mission-control/volunteer-funding-constitution.html">Volunteer & Funding (#75)</a> ·
       <a href="/mission-control/master-plan.html">Master Plan (#55)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initArkansasCountyOperatingSystem() {
+  const root = document.getElementById('mc-arkansas-county-operating-system-root');
+  if (!root) return;
+
+  const [acosRes, cciRes, mcRes] = await Promise.all([
+    fetch('/data/arkansas-county-operating-system.json'),
+    fetch('/data/county-coalition-index.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const acos = await acosRes.json();
+  const cci = await cciRes.json();
+  const mc = await mcRes.json();
+  const s = acos.summary;
+
+  const readinessRows = acos.county_readiness_levels.levels.map(l => `
+    <tr><td>${l.level}</td><td><code>${l.id}</code></td><td>${l.title}</td>
+      <td>${l.counties_at_level}</td></tr>`).join('');
+
+  const profileRows = acos.county_profile.sections.map(sec => `
+    <tr><td><code>${sec.id}</code></td><td>${sec.section}</td><td>${sec.status}</td></tr>`).join('');
+
+  const roleRows = acos.county_leadership_team.roles.map(r => `
+    <tr><td><code>${r.id}</code></td><td>${r.role}</td><td>${r.filled}</td><td>${r.status}</td></tr>`).join('');
+
+  const dashRows = acos.county_dashboard.domains.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.domain}</td>
+      <td>${d.indicators.join(', ')}</td><td>${d.status}</td></tr>`).join('');
+
+  const systemRows = acos.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td><td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  const countySample = (cci.counties || []).slice(0, 12).map(c => `
+    <tr><td>${c.name}</td><td><a href="${c.route}">${c.slug}</a></td>
+      <td>${c.education_leaders}</td><td>${c.organizations}</td>
+      <td>${c.completeness_pct}%</td><td>${c.status}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Arkansas County Operating System</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #77 · ${acos.title}</p>
+      <h1>${acos.subtitle}</h1>
+      <p class="mc-header__question">${acos.governing_principle}</p>
+      <p class="mc-bar-note">${acos.purpose}</p>
+      <p class="mc-bar-note"><strong>Extends:</strong> ${acos.integration.extends}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">ACOS readiness</div><div class="mc-stat__value">${s.arkansas_county_operating_system_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Counties</div><div class="mc-stat__value">${s.counties_scaffolded}/${s.counties_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Digital twins</div><div class="mc-stat__value">${s.counties_with_digital_twin}/${s.counties_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Past Awareness</div><div class="mc-stat__value">${s.counties_past_awareness}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Dashboards live</div><div class="mc-stat__value">${s.county_dashboards_live}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Health index</div><div class="mc-stat__value">${s.county_health_index_computed ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">${acos.county_philosophy.title}</h2>
+    <p class="mc-bar-note">Every county a living system: ${acos.county_philosophy.every_county_living_system ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${acos.county_philosophy.questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acos.county_digital_twin.title}</h2>
+    <p class="mc-bar-note">${acos.county_digital_twin.description}</p>
+    <p class="mc-bar-note">Operational: ${acos.county_digital_twin.digital_twins_operational}/${acos.county_digital_twin.counties_total} · MC generates all: ${acos.county_digital_twin.mc_generates_all ? 'Yes' : 'No'} · ${acos.county_digital_twin.status}</p>
+    <h2 class="mc-section-title">${acos.county_profile.title} (${acos.county_profile.sections_total} sections)</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Section</th><th>Status</th></tr></thead>
+      <tbody>${profileRows}</tbody></table>
+    <h2 class="mc-section-title">${acos.county_leadership_team.title}</h2>
+    <p class="mc-bar-note">One volunteer, multiple roles initially: ${acos.county_leadership_team.one_volunteer_multiple_roles_initially ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Role</th><th>Filled</th><th>Status</th></tr></thead>
+      <tbody>${roleRows}</tbody></table>
+    <h2 class="mc-section-title">${acos.county_goals.title}</h2>
+    <p class="mc-bar-note">Annual goals · MC tracks: ${acos.county_goals.mc_tracks_progress ? 'Yes' : 'No'} · ${acos.county_goals.status}</p>
+    <ul class="mc-deliverables">${acos.county_goals.examples.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acos.county_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${acos.county_dashboard.live ? 'Yes' : 'No'} · ${acos.county_dashboard.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Domain</th><th>Indicators</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">${acos.county_resource_library.title}</h2>
+    <p class="mc-bar-note">Live: ${acos.county_resource_library.live ? 'Yes' : 'No'} · ${acos.county_resource_library.status}</p>
+    <ul class="mc-deliverables">${acos.county_resource_library.items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acos.county_event_calendar.title}</h2>
+    <p class="mc-bar-note">Statewide sync: ${acos.county_event_calendar.statewide_calendar_sync ? 'Yes' : 'No'} · Live: ${acos.county_event_calendar.live ? 'Yes' : 'No'} · ${acos.county_event_calendar.status}</p>
+    <ul class="mc-deliverables">${acos.county_event_calendar.event_types.map(e => `<li>${e}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acos.county_listening_reports.title}</h2>
+    <p class="mc-bar-note">Submitted: ${acos.county_listening_reports.reports_submitted} · MC aggregates statewide: ${acos.county_listening_reports.mc_aggregates_statewide ? 'Yes' : 'No'} · ${acos.county_listening_reports.status}</p>
+    <ul class="mc-deliverables">${acos.county_listening_reports.items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acos.county_readiness_levels.title}</h2>
+    <p class="mc-bar-note">Past Awareness: ${acos.county_readiness_levels.counties_past_awareness} · MC visualizes all: ${acos.county_readiness_levels.mc_visualizes_all_counties ? 'Yes' : 'No'}</p>
+    <p class="mc-bar-note">${acos.county_readiness_levels.note ?? ''}</p>
+    <table class="mc-table"><thead><tr><th>Level</th><th>ID</th><th>Stage</th><th>Counties</th></tr></thead>
+      <tbody>${readinessRows}</tbody></table>
+    <h2 class="mc-section-title">${acos.county_health_index.title}</h2>
+    <p class="mc-bar-note">Computed: ${acos.county_health_index.computed ? 'Yes' : 'No'} · ${acos.county_health_index.status}</p>
+    <ul class="mc-deliverables">${acos.county_health_index.factors.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acos.county_mentorship.title}</h2>
+    <p class="mc-bar-note">Pairs active: ${acos.county_mentorship.pairs_active} · Collaboration not competition: ${acos.county_mentorship.collaboration_not_competition ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${acos.county_mentorship.types.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">75 Counties <a href="/coalition/counties.html" class="mc-inline-link">County map →</a></h2>
+    <div class="mc-card mc-inv-table-wrap" style="max-height:280px;overflow-y:auto">
+      <table class="mc-table"><thead><tr><th>County</th><th>Slug</th><th>Leaders</th><th>Orgs</th><th>Complete</th><th>Status</th></tr></thead>
+        <tbody>${countySample}</tbody></table>
+    </div>
+    <p class="mc-bar-note">Showing 12 of ${s.counties_scaffolded} — full index in county-coalition-index.json</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${acos.integration.chain}</p>
+    <p class="mc-bar-note"><strong>Each county operational node:</strong> ${acos.integration.each_county_operational_node ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${acos.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${acos.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${acos.recommended_next_build.number} — ${acos.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${acos.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_ARKANSAS_COUNTY_OPERATING_SYSTEM.md">MASTER_ARKANSAS_COUNTY_OPERATING_SYSTEM.md</a> ·
+      <a href="/data/arkansas-county-operating-system.json">JSON</a> ·
+      <a href="/mission-control/county-os.html">County OS (#31)</a> ·
+      <a href="/mission-control/arkansas-command-strategy.html">Command Strategy (#70)</a> ·
+      <a href="/mission-control/civic-atlas.html">Civic Atlas (#58)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

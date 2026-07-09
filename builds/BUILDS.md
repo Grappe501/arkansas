@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#77** | **Arkansas County Operating System (ACOS)** | **1.81.0** | **✅ Complete** | [077](077-arkansas-county-operating-system.md) · [/mission-control/arkansas-county-operating-system.html](../mission-control/arkansas-county-operating-system.html) |
 | **#76** | **Organizational Constitution** | **1.80.0** | **✅ Complete** | [076](076-organizational-constitution.md) · [/mission-control/organizational-constitution.html](../mission-control/organizational-constitution.html) |
 | **#75** | **Volunteer & Funding Constitution** | **1.79.0** | **✅ Complete** | [075](075-volunteer-funding-constitution.md) · [/mission-control/volunteer-funding-constitution.html](../mission-control/volunteer-funding-constitution.html) |
 | **#74** | **Civic Innovation & Reform Center** | **1.78.0** | **✅ Complete** | [074](074-arkansas-civic-innovation-reform.md) · [/mission-control/arkansas-civic-innovation-reform.html](../mission-control/arkansas-civic-innovation-reform.html) |

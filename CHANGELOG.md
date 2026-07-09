@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.81.0] - 2026-07-09 — Build #77 Arkansas County Operating System (ACOS)
+
+### Seventy-Five Counties. One Institution.
+- **Master Arkansas County Operating System (ACOS) v1.0** — primary framework for statewide county expansion
+- County digital twin, 13-section profile, 8-role leadership team, 6 readiness levels, County Health Index
+- County dashboard (Leadership · Community · Learning · Growth), resource library, event calendar, listening reports
+- County mentorship; integrates Civic Atlas, Academy, ROS, Coalition, Action Center, Knowledge Graph, Observatory
+- Extends County OS (#31); aligns with Command Strategy (#70) and Organizational Constitution (#76)
+- Honest: 75/75 scaffolded · 0/75 digital twins · 0 past Awareness · health index not computed · ~47% readiness
+- MC dashboard: `/mission-control/arkansas-county-operating-system.html`
+
 ## [1.80.0] - 2026-07-09 — Build #76 Organizational Constitution
 
 ### The Founding Constitution
