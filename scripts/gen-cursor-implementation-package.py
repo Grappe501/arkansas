@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 16  # IMP-01 through IMP-16 (doctrinal)
+steps_documented = 17  # IMP-01 through IMP-17 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3230,6 +3230,174 @@ COMMUNICATION_PLATFORM_MANIFEST = {
     'implemented': False,
 }
 
+TIME_PHILOSOPHY_REQUIREMENTS = [
+    'purpose', 'participants', 'preparation', 'resources', 'follow_up',
+]
+
+PERSONAL_CALENDAR_FEATURES = [
+    'learning_schedule', 'volunteer_assignments', 'events', 'community_conversations',
+    'organization_meetings', 'academy_classes', 'presentation_schedule', 'personal_reminders',
+]
+
+LOCALBRAIN_CALENDARS = [
+    'mission_control', 'research', 'academy', 'volunteer', 'county', 'city',
+    'neighborhood', 'coalition', 'technology', 'communications', 'pmo',
+]
+
+COUNTY_CALENDAR_EVENTS = [
+    'community_conversations', 'academy_classes', 'volunteer_meetings',
+    'public_education_events', 'coalition_activities', 'county_planning_meetings',
+    'leadership_development',
+]
+
+CITY_CALENDAR_EVENTS = [
+    'community_presentations', 'volunteer_recruitment', 'neighborhood_meetings',
+    'educational_events', 'leadership_training', 'city_projects',
+]
+
+NEIGHBORHOOD_CALENDAR_EVENTS = [
+    'community_conversations', 'volunteer_gatherings', 'educational_workshops',
+    'listening_sessions', 'neighborhood_projects', 'local_leadership_meetings',
+]
+
+ACADEMY_CALENDAR_EVENTS = [
+    'course_launches', 'live_classes', 'workshops', 'certification_sessions',
+    'office_hours', 'education_leader_training', 'continuing_education',
+]
+
+PROJECT_CALENDAR_FIELDS = [
+    'milestones', 'deadlines', 'dependencies', 'reviews', 'launches', 'completion_dates',
+]
+
+EXECUTIVE_CALENDAR_ITEMS = [
+    'leadership_meetings', 'mission_control_reviews', 'pmo_milestones',
+    'research_releases', 'strategic_planning', 'community_events',
+    'annual_reviews', 'critical_deadlines',
+]
+
+EVENT_MANAGEMENT_FIELDS = [
+    'purpose', 'agenda', 'location', 'virtual_option', 'participants', 'resources',
+    'attendance', 'follow_up_actions', 'related_documents', 'related_research',
+]
+
+RECURRING_EVENT_TYPES = [
+    'county_meetings', 'leadership_meetings', 'community_conversations',
+    'academy_classes', 'research_reviews', 'volunteer_onboarding',
+    'organization_meetings', 'annual_events',
+]
+
+SCHEDULING_INTELLIGENCE_CAPABILITIES = [
+    'avoid_conflicts', 'recommend_meeting_times', 'balance_volunteer_workload',
+    'identify_resource_conflicts', 'optimize_travel', 'coordinate_statewide_activities',
+]
+
+EXTERNAL_CALENDAR_SYNC = [
+    'google_calendar', 'microsoft_outlook', 'apple_calendar', 'ics_export', 'ics_import',
+]
+
+PERSONAL_AI_SCHEDULER_EXAMPLES = [
+    'meetings_this_week', 'when_complete_course', 'meet_mentor_time',
+    'schedule_community_conversation',
+]
+
+EXECUTIVE_AI_SCHEDULER_CAPABILITIES = [
+    'scheduling_conflicts', 'county_event_overlap', 'volunteer_overload',
+    'travel_efficiency', 'strategic_opportunities', 'important_anniversaries',
+    'upcoming_deadlines',
+]
+
+TIME_ANALYTICS_METRICS = [
+    'events_held', 'attendance', 'volunteer_participation', 'academy_sessions',
+    'community_conversations', 'leadership_meetings', 'event_growth', 'calendar_utilization',
+]
+
+TRAVEL_COORDINATION_FEATURES = [
+    'travel_routes', 'travel_time_estimates', 'regional_scheduling',
+    'multi_county_tours', 'community_visit_planning', 'leadership_itineraries',
+]
+
+OCTOBER_TIME_COORDINATION = [
+    'remaining_county_visits', 'education_leader_training', 'community_conversations',
+    'volunteer_onboarding', 'coalition_meetings', 'research_completion', 'county_readiness',
+]
+
+TIME_SYSTEM_CHAIN = [
+    'mission_control', 'localbrains', 'volunteer_network', 'community_education_academy',
+    'county_operating_system', 'city_operating_system', 'neighborhood_operating_system',
+    'coalition_network', 'knowledge_platform', 'communications', 'pmo',
+]
+
+INSTITUTIONAL_OS_SYSTEMS = [
+    'technical_foundation', 'mission_control', 'localbrains', 'knowledge_platform',
+    'research_institute', 'community_education_academy', 'volunteer_network',
+    'coalition_network', 'local_operating_systems', 'communication_platform',
+    'institutional_time_intelligence',
+]
+
+TIME_INTELLIGENCE_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-17',
+    'updated': today,
+    'title': 'Master Calendar, Scheduling, Event Management & Time Intelligence System',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_17_TIME_INTELLIGENCE.md',
+    'source_registries': {
+        'execution_schedule': '/data/execution-schedule.json',
+        'coalition_events': '/data/coalition-events.json',
+        'communication_platform': '/data/communication-platform-manifest.json',
+        'local_operating_systems': '/data/local-operating-systems-manifest.json',
+        'localbrain_network': '/data/localbrain-network-manifest.json',
+    },
+    'philosophy': 'Every LocalBrain owns its calendar; Mission Control understands them all',
+    'governing_principle': (
+        'Institutions run on people; people live by calendars; '
+        'Citizens United Facts always knows what matters next'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'time_philosophy_requirements': TIME_PHILOSOPHY_REQUIREMENTS,
+    'personal_calendar_features': PERSONAL_CALENDAR_FEATURES,
+    'localbrain_calendars': LOCALBRAIN_CALENDARS,
+    'localbrain_calendar_count': len(LOCALBRAIN_CALENDARS),
+    'county_calendar_events': COUNTY_CALENDAR_EVENTS,
+    'city_calendar_events': CITY_CALENDAR_EVENTS,
+    'neighborhood_calendar_events': NEIGHBORHOOD_CALENDAR_EVENTS,
+    'academy_calendar_events': ACADEMY_CALENDAR_EVENTS,
+    'project_calendar_fields': PROJECT_CALENDAR_FIELDS,
+    'executive_calendar_items': EXECUTIVE_CALENDAR_ITEMS,
+    'event_management_fields': EVENT_MANAGEMENT_FIELDS,
+    'recurring_event_types': RECURRING_EVENT_TYPES,
+    'scheduling_intelligence': SCHEDULING_INTELLIGENCE_CAPABILITIES,
+    'external_calendar_sync': EXTERNAL_CALENDAR_SYNC,
+    'personal_ai_scheduler': PERSONAL_AI_SCHEDULER_EXAMPLES,
+    'executive_ai_scheduler': EXECUTIVE_AI_SCHEDULER_CAPABILITIES,
+    'time_analytics_metrics': TIME_ANALYTICS_METRICS,
+    'travel_coordination': TRAVEL_COORDINATION_FEATURES,
+    'october_coordination': {
+        'target_date': county_milestone_date,
+        'monitored_activities': OCTOBER_TIME_COORDINATION,
+    },
+    'organizational_goals': {
+        'counties_total': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'time_system_chain': TIME_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'packages_completed': 17,
+    'packages_total': 50,
+    'packages_complete_pct': 34,
+    'engineering_note': 'Doctrinal IMP-17 Time Intelligence; engineering IMP-17 is COMP-01–05 primitive specs',
+    'status': 'documented',
+    'implemented': False,
+}
+
 ROUTE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -3298,11 +3466,12 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D17', 'indicator': 'Coalition Network (IMP-14)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D18', 'indicator': 'Local Operating Systems (IMP-15)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D19', 'indicator': 'Communication Platform (IMP-16)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D20', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D20', 'indicator': 'Time Intelligence (IMP-17)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D21', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
-    92,
+    94,
     14
     + len(IMPLEMENTATION_STEPS) // 2
     + len(BANDS) * 2
@@ -3707,7 +3876,29 @@ out = {
             'number': 17,
             'id': 'IMP-17',
             'title': 'Master Calendar, Scheduling, Event Management & Time Intelligence System',
-            'note': 'Doctrinal package 17; engineering IMP-17 is COMP-01–05 primitive specs',
+            'status': 'documented',
+        },
+    },
+    'time_intelligence': {
+        'title': 'Master Calendar, Scheduling, Event Management & Time Intelligence System',
+        'package': 'Implementation Package 17 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_17_TIME_INTELLIGENCE.md',
+        'manifest': '/data/time-intelligence-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': TIME_INTELLIGENCE_MANIFEST['philosophy'],
+        'localbrain_calendar_count': TIME_INTELLIGENCE_MANIFEST['localbrain_calendar_count'],
+        'external_sync_count': len(EXTERNAL_CALENDAR_SYNC),
+        'recurring_event_type_count': len(RECURRING_EVENT_TYPES),
+        'packages_completed': TIME_INTELLIGENCE_MANIFEST['packages_completed'],
+        'packages_complete_pct': TIME_INTELLIGENCE_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engineering_note': TIME_INTELLIGENCE_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 18,
+            'id': 'IMP-18',
+            'title': 'Master Relationship Intelligence, Contact Network & Community Graph',
+            'note': 'Doctrinal package 18; engineering IMP-18 is COMP-06–10 interactive specs',
         },
     },
     'master_timeline': MASTER_TIMELINE,
@@ -3863,6 +4054,10 @@ with open(root / 'data/local-operating-systems-manifest.json', 'w', newline='\n'
 
 with open(root / 'data/communication-platform-manifest.json', 'w', newline='\n') as f:
     json.dump(COMMUNICATION_PLATFORM_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/time-intelligence-manifest.json', 'w', newline='\n') as f:
+    json.dump(TIME_INTELLIGENCE_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

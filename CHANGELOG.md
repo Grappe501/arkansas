@@ -13,6 +13,18 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.17] - 2026-07-09 — IMP-17 Time Intelligence & Calendar System
+
+### Implementation Package 17 of 50
+- **Master Calendar, Scheduling, Event Management & Time Intelligence System**
+- 11 LocalBrain calendars · personal/county/city/neighborhood/academy/executive/project calendars
+- Event management, recurring events, scheduling intelligence, external sync (Google/Outlook/Apple/ICS)
+- Personal & executive AI schedulers, time analytics, travel coordination, Oct 1 milestone coordination
+- Machine-readable **time-intelligence-manifest.json**
+- Institutional OS evolution: 17/50 packages (**34%**)
+- IMP-18 next (doctrinal): Relationship Intelligence, Contact Network & Community Graph
+- Honest: 17/50 documented · 0/50 implemented · 94% package readiness
+
 ## [2.05.16] - 2026-07-09 — IMP-16 Communication Platform & Civic Media
 
 ### Implementation Package 16 of 50

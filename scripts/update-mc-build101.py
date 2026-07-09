@@ -26,7 +26,7 @@ tl = cip.get('master_timeline', {})
 
 
 
-mc['version'] = '2.05.16'
+mc['version'] = '2.05.17'
 
 mc['updated'] = '2026-07-09'
 
@@ -96,21 +96,21 @@ for bar in mc['progress_bars']:
 
 mc['briefing'] = {
 
-    'what_built': 'IMP-01–16 documented — communication platform + civic media (32%)',
+    'what_built': 'IMP-01–17 documented — institutional time intelligence (34%)',
 
-    'building_now': 'IMP-17 Calendar & Time Intelligence next; Sprint Zero pending',
+    'building_now': 'IMP-18 Relationship Intelligence & Community Graph next; Sprint Zero pending',
 
     'blocked': ['Sprint Zero not complete', '0/50 code-implemented', f"{s.get('days_to_software', 0)} days to software target"],
 
     'ready_public': [
 
-        'Communication Platform', 'communication-platform-manifest.json', 'Arkansas Civic Media Network',
+        'Time Intelligence', 'time-intelligence-manifest.json', 'Calendar Brain architecture',
 
-        'Local Operating Systems', '15% engagement · 200K connected goals',
+        'Communication Platform', 'Local Operating Systems', 'Oct 1 coordination',
 
     ],
 
-    'next': 'IMP-17 — Master Calendar, Scheduling, Event Management & Time Intelligence System',
+    'next': 'IMP-18 — Master Relationship Intelligence, Contact Network & Community Graph',
 
 }
 

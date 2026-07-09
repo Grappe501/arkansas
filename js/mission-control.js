@@ -10663,6 +10663,11 @@ async function initCursorImplementationPackage() {
     <h2 class="mc-section-title">Master Timeline</h2>
     <p class="mc-bar-note"><strong>Software complete:</strong> ${cip.software_completion_date || '2026-07-11'} · <strong>75 counties:</strong> ${cip.county_milestone_date || '2026-10-01'} · <strong>Organizational readiness:</strong> ${cip.organizational_readiness_date || '2027-01-01'}</p>
     <p class="mc-bar-note">${cip.master_timeline?.sequence || 'Software Complete → 75 Counties → Organizational Readiness'}</p>
+    <h2 class="mc-section-title">Time Intelligence (IMP-17)</h2>
+    <p class="mc-bar-note"><strong>${cip.time_intelligence.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.time_intelligence.localbrain_calendar_count} LocalBrain calendars · ${cip.time_intelligence.external_sync_count} external sync providers · ${cip.time_intelligence.recurring_event_type_count} recurring event types · ${cip.time_intelligence.packages_complete_pct}% complete (${cip.time_intelligence.packages_completed}/50)</p>
+    <p class="mc-bar-note"><strong>Oct 1 coordination:</strong> county visits, Education Leader training, conversations, onboarding, coalition meetings, research, county readiness</p>
+    <p class="mc-bar-note"><a href="${cip.time_intelligence.route}">IMPLEMENTATION_PACKAGE_17_TIME_INTELLIGENCE.md</a> · <a href="${cip.time_intelligence.manifest}">time-intelligence-manifest.json</a> · <a href="/mission-control/execution-schedule.html">Execution Schedule</a></p>
+    <p class="mc-bar-note">${cip.time_intelligence.philosophy}</p>
     <h2 class="mc-section-title">Communication Platform (IMP-16)</h2>
     <p class="mc-bar-note"><strong>${cip.communication_platform.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.communication_platform.communication_layer_count} communication layers · ${cip.communication_platform.civic_media_format_count} media formats · ${cip.communication_platform.newsletter_channel_count} newsletter channels · ${cip.communication_platform.packages_complete_pct}% complete (${cip.communication_platform.packages_completed}/50)</p>
     <p class="mc-bar-note"><strong>Growth goals:</strong> 75 counties · 250 cities · ${cip.communication_platform.engagement_goal_pct}% engagement · ${cip.communication_platform.arkansans_connected_goal.toLocaleString()} Arkansans connected</p>

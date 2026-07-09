@@ -1,0 +1,289 @@
+{
+  "version": "1.0",
+  "build": 101,
+  "package": "IMP-17",
+  "updated": "2026-07-09",
+  "title": "Master Calendar, Scheduling, Event Management & Time Intelligence System",
+  "constitution": "/docs/IMPLEMENTATION_PACKAGE_17_TIME_INTELLIGENCE.md",
+  "source_registries": {
+    "execution_schedule": "/data/execution-schedule.json",
+    "coalition_events": "/data/coalition-events.json",
+    "communication_platform": "/data/communication-platform-manifest.json",
+    "local_operating_systems": "/data/local-operating-systems-manifest.json",
+    "localbrain_network": "/data/localbrain-network-manifest.json"
+  },
+  "philosophy": "Every LocalBrain owns its calendar; Mission Control understands them all",
+  "governing_principle": "Institutions run on people; people live by calendars; Citizens United Facts always knows what matters next",
+  "master_timeline": {
+    "phase_one": {
+      "id": "software_completion",
+      "title": "Software Completion",
+      "target_date": "2026-07-11",
+      "days_remaining": 2,
+      "scope": [
+        "Public website",
+        "Mission Control",
+        "LocalBrains",
+        "Community Education Academy",
+        "Knowledge Platform",
+        "Research system",
+        "Volunteer system",
+        "Coalition system",
+        "County, City, and Neighborhood systems",
+        "AI infrastructure",
+        "Administrative tools"
+      ]
+    },
+    "phase_two": {
+      "id": "county_milestone",
+      "title": "75 Counties by October 1",
+      "target_date": "2026-10-01",
+      "days_remaining": 84,
+      "scope": [
+        "Completed county profile for all 75 counties",
+        "Education Leader or active recruitment contact per county",
+        "County dashboard operational in Mission Control",
+        "Initial local resource information",
+        "Development plan for continued growth per county"
+      ]
+    },
+    "phase_three": {
+      "id": "organizational_readiness",
+      "title": "Organizational Readiness",
+      "target_date": "2027-01-01",
+      "days_remaining": 176,
+      "focus": [
+        "Recruiting Education Leaders",
+        "Expanding county coverage",
+        "Growing city leadership",
+        "Coalition development",
+        "Volunteer training",
+        "Community conversations",
+        "Research expansion",
+        "Public testing",
+        "User feedback",
+        "System refinement",
+        "Launch certification",
+        "City and neighborhood systems mature",
+        "Statewide volunteer development expanded"
+      ]
+    },
+    "sequence": "Software Complete (Jul 11, 2026) \u2192 75 Counties (Oct 1, 2026) \u2192 Organizational Readiness (Jan 2027)",
+    "build_out_months_approx": 6,
+    "county_milestone": {
+      "target_date": "2026-10-01",
+      "counties_total": 75,
+      "days_remaining": 84,
+      "label": "75-by-October-1 Milestone"
+    }
+  },
+  "software_completion_date": "2026-07-11",
+  "county_milestone_date": "2026-10-01",
+  "organizational_readiness_date": "2027-01-01",
+  "days_to_software": 2,
+  "days_to_county_milestone": 84,
+  "days_to_organizational": 176,
+  "time_philosophy_requirements": [
+    "purpose",
+    "participants",
+    "preparation",
+    "resources",
+    "follow_up"
+  ],
+  "personal_calendar_features": [
+    "learning_schedule",
+    "volunteer_assignments",
+    "events",
+    "community_conversations",
+    "organization_meetings",
+    "academy_classes",
+    "presentation_schedule",
+    "personal_reminders"
+  ],
+  "localbrain_calendars": [
+    "mission_control",
+    "research",
+    "academy",
+    "volunteer",
+    "county",
+    "city",
+    "neighborhood",
+    "coalition",
+    "technology",
+    "communications",
+    "pmo"
+  ],
+  "localbrain_calendar_count": 11,
+  "county_calendar_events": [
+    "community_conversations",
+    "academy_classes",
+    "volunteer_meetings",
+    "public_education_events",
+    "coalition_activities",
+    "county_planning_meetings",
+    "leadership_development"
+  ],
+  "city_calendar_events": [
+    "community_presentations",
+    "volunteer_recruitment",
+    "neighborhood_meetings",
+    "educational_events",
+    "leadership_training",
+    "city_projects"
+  ],
+  "neighborhood_calendar_events": [
+    "community_conversations",
+    "volunteer_gatherings",
+    "educational_workshops",
+    "listening_sessions",
+    "neighborhood_projects",
+    "local_leadership_meetings"
+  ],
+  "academy_calendar_events": [
+    "course_launches",
+    "live_classes",
+    "workshops",
+    "certification_sessions",
+    "office_hours",
+    "education_leader_training",
+    "continuing_education"
+  ],
+  "project_calendar_fields": [
+    "milestones",
+    "deadlines",
+    "dependencies",
+    "reviews",
+    "launches",
+    "completion_dates"
+  ],
+  "executive_calendar_items": [
+    "leadership_meetings",
+    "mission_control_reviews",
+    "pmo_milestones",
+    "research_releases",
+    "strategic_planning",
+    "community_events",
+    "annual_reviews",
+    "critical_deadlines"
+  ],
+  "event_management_fields": [
+    "purpose",
+    "agenda",
+    "location",
+    "virtual_option",
+    "participants",
+    "resources",
+    "attendance",
+    "follow_up_actions",
+    "related_documents",
+    "related_research"
+  ],
+  "recurring_event_types": [
+    "county_meetings",
+    "leadership_meetings",
+    "community_conversations",
+    "academy_classes",
+    "research_reviews",
+    "volunteer_onboarding",
+    "organization_meetings",
+    "annual_events"
+  ],
+  "scheduling_intelligence": [
+    "avoid_conflicts",
+    "recommend_meeting_times",
+    "balance_volunteer_workload",
+    "identify_resource_conflicts",
+    "optimize_travel",
+    "coordinate_statewide_activities"
+  ],
+  "external_calendar_sync": [
+    "google_calendar",
+    "microsoft_outlook",
+    "apple_calendar",
+    "ics_export",
+    "ics_import"
+  ],
+  "personal_ai_scheduler": [
+    "meetings_this_week",
+    "when_complete_course",
+    "meet_mentor_time",
+    "schedule_community_conversation"
+  ],
+  "executive_ai_scheduler": [
+    "scheduling_conflicts",
+    "county_event_overlap",
+    "volunteer_overload",
+    "travel_efficiency",
+    "strategic_opportunities",
+    "important_anniversaries",
+    "upcoming_deadlines"
+  ],
+  "time_analytics_metrics": [
+    "events_held",
+    "attendance",
+    "volunteer_participation",
+    "academy_sessions",
+    "community_conversations",
+    "leadership_meetings",
+    "event_growth",
+    "calendar_utilization"
+  ],
+  "travel_coordination": [
+    "travel_routes",
+    "travel_time_estimates",
+    "regional_scheduling",
+    "multi_county_tours",
+    "community_visit_planning",
+    "leadership_itineraries"
+  ],
+  "october_coordination": {
+    "target_date": "2026-10-01",
+    "monitored_activities": [
+      "remaining_county_visits",
+      "education_leader_training",
+      "community_conversations",
+      "volunteer_onboarding",
+      "coalition_meetings",
+      "research_completion",
+      "county_readiness"
+    ]
+  },
+  "organizational_goals": {
+    "counties_total": 75,
+    "target_cities": 250,
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000
+  },
+  "time_system_chain": [
+    "mission_control",
+    "localbrains",
+    "volunteer_network",
+    "community_education_academy",
+    "county_operating_system",
+    "city_operating_system",
+    "neighborhood_operating_system",
+    "coalition_network",
+    "knowledge_platform",
+    "communications",
+    "pmo"
+  ],
+  "institutional_systems": [
+    "technical_foundation",
+    "mission_control",
+    "localbrains",
+    "knowledge_platform",
+    "research_institute",
+    "community_education_academy",
+    "volunteer_network",
+    "coalition_network",
+    "local_operating_systems",
+    "communication_platform",
+    "institutional_time_intelligence"
+  ],
+  "packages_completed": 17,
+  "packages_total": 50,
+  "packages_complete_pct": 34,
+  "engineering_note": "Doctrinal IMP-17 Time Intelligence; engineering IMP-17 is COMP-01\u201305 primitive specs",
+  "status": "documented",
+  "implemented": false
+}

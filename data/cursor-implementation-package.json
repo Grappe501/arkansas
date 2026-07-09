@@ -504,7 +504,29 @@
       "number": 17,
       "id": "IMP-17",
       "title": "Master Calendar, Scheduling, Event Management & Time Intelligence System",
-      "note": "Doctrinal package 17; engineering IMP-17 is COMP-01\u201305 primitive specs"
+      "status": "documented"
+    }
+  },
+  "time_intelligence": {
+    "title": "Master Calendar, Scheduling, Event Management & Time Intelligence System",
+    "package": "Implementation Package 17 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_17_TIME_INTELLIGENCE.md",
+    "manifest": "/data/time-intelligence-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Every LocalBrain owns its calendar; Mission Control understands them all",
+    "localbrain_calendar_count": 11,
+    "external_sync_count": 5,
+    "recurring_event_type_count": 8,
+    "packages_completed": 17,
+    "packages_complete_pct": 34,
+    "county_milestone_date": "2026-10-01",
+    "engineering_note": "Doctrinal IMP-17 Time Intelligence; engineering IMP-17 is COMP-01\u201305 primitive specs",
+    "next_package": {
+      "number": 18,
+      "id": "IMP-18",
+      "title": "Master Relationship Intelligence, Contact Network & Community Graph",
+      "note": "Doctrinal package 18; engineering IMP-18 is COMP-06\u201310 interactive specs"
     }
   },
   "master_timeline": {
@@ -1906,7 +1928,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 16,
+        "current": 17,
         "status": "partial"
       },
       {
@@ -2013,6 +2035,12 @@
       },
       {
         "id": "CIP-D20",
+        "indicator": "Time Intelligence (IMP-17)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D21",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -2065,9 +2093,9 @@
     "arkansans_connected_goal": 200000,
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "implementation_package_readiness_pct": 92,
+    "implementation_package_readiness_pct": 94,
     "steps_total": 50,
-    "steps_documented": 16,
+    "steps_documented": 17,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,
