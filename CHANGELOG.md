@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.58.0] - 2026-07-09 — Build #54 Master Project Management Office (PMO)
+
+### The Institutional Execution System
+- **Master PMO v1.0** — how the institution gets built; Mission Control = operational cockpit
+- 10 permanent departments (100–1000), 10-stage workflow, universal work item schema
+- Living risk register (10 risks), dependency maps, resource allocation, institutional calendar model
+- Daily five questions — 3/5 instantly answerable; 0/10 department owners assigned
+- Honest: ~35% avg department readiness, ~46% PMO readiness, Sprint Zero not started
+- MC dashboard: `/mission-control/pmo.html`
+
 ## [1.57.0] - 2026-07-09 — Build #53 Master Launch Strategy & Arkansas Rollout Blueprint
 
 ### From Internal Build to Public Institution

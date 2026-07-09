@@ -1,0 +1,860 @@
+{
+  "version": "1.0",
+  "build": 54,
+  "updated": "2026-07-09",
+  "title": "Master Project Management Office (PMO) v1.0",
+  "subtitle": "The Institutional Execution System \u2014 Turning Vision Into Reality",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/pmo.html",
+  "constitution": "/docs/MASTER_PMO.md",
+  "purpose": "How the institution gets built \u2014 PMO coordinates every phase toward one mission.",
+  "governing_principle": "Planning without execution is aspiration. Execution without planning is confusion. The PMO unites every department into disciplined execution.",
+  "pmo_mission": {
+    "daily_questions": [
+      {
+        "q": "What are we building?",
+        "status": "live",
+        "source": "mc.briefing + builds[]"
+      },
+      {
+        "q": "Why are we building it?",
+        "status": "live",
+        "source": "Build purpose fields"
+      },
+      {
+        "q": "Who owns it?",
+        "status": "planned",
+        "source": "0 department owners assigned"
+      },
+      {
+        "q": "What is blocked?",
+        "status": "partial",
+        "source": "mc.briefing.blocked"
+      },
+      {
+        "q": "What should happen next?",
+        "status": "live",
+        "source": "recommended_next_build"
+      }
+    ],
+    "questions_answerable_instantly": 3
+  },
+  "extends": [
+    {
+      "title": "Master Build Bible",
+      "build": 50,
+      "route": "/data/build-bible.json"
+    },
+    {
+      "title": "Launch Strategy",
+      "build": 53,
+      "route": "/data/launch-strategy.json"
+    },
+    {
+      "title": "Data Architecture",
+      "build": 51,
+      "route": "/data/data-architecture.json"
+    },
+    {
+      "title": "Governance Constitution",
+      "build": 49,
+      "route": "/data/governance-constitution.json"
+    },
+    {
+      "title": "Systems Integration",
+      "build": 45,
+      "route": "/data/systems-integration.json"
+    }
+  ],
+  "departments": {
+    "title": "Ten Permanent Departments",
+    "departments": [
+      {
+        "id": "DEPT-100",
+        "number": 100,
+        "title": "Executive Office",
+        "responsibilities": [
+          "Institutional vision",
+          "Strategic planning",
+          "Major decisions",
+          "Governance",
+          "Annual planning",
+          "Cross-department coordination"
+        ],
+        "primary_dashboard": "Institution Health",
+        "route": "/mission-control/executive.html",
+        "readiness_pct": 44,
+        "status": "partial",
+        "owner_assigned": false,
+        "note": "0/7 stewards formally assigned \u2014 vision documented"
+      },
+      {
+        "id": "DEPT-200",
+        "number": 200,
+        "title": "Research Office",
+        "responsibilities": [
+          "Research Observatory",
+          "Source Library",
+          "Evidence Ledger",
+          "Claims Registry",
+          "Research standards",
+          "Citation review"
+        ],
+        "primary_dashboard": "Research Health",
+        "route": "/mission-control/research-observatory.html",
+        "readiness_pct": 23,
+        "status": "partial",
+        "owner_assigned": false,
+        "note": "14 evidence IDs \u00b7 3 claims \u2014 ledger partial"
+      },
+      {
+        "id": "DEPT-300",
+        "number": 300,
+        "title": "Editorial Office",
+        "responsibilities": [
+          "Educational writing",
+          "Encyclopedia",
+          "Curriculum",
+          "Storytelling",
+          "Editing",
+          "Publication workflows"
+        ],
+        "primary_dashboard": "Content Production",
+        "route": "/mission-control/content-production-matrix.html",
+        "readiness_pct": 28,
+        "status": "partial",
+        "owner_assigned": false,
+        "note": "15 published / ~2700 target \u2014 factory designed not operational"
+      },
+      {
+        "id": "DEPT-400",
+        "number": 400,
+        "title": "Technology Office",
+        "responsibilities": [
+          "Engineering",
+          "Infrastructure",
+          "GitHub",
+          "Netlify",
+          "Database",
+          "APIs",
+          "Security",
+          "Performance"
+        ],
+        "primary_dashboard": "Technical Health",
+        "route": "/mission-control/technical-architecture.html",
+        "readiness_pct": 38,
+        "status": "partial",
+        "owner_assigned": false,
+        "note": "Static Netlify live \u2014 Neon/Prisma not provisioned"
+      },
+      {
+        "id": "DEPT-500",
+        "number": 500,
+        "title": "Design Office",
+        "responsibilities": [
+          "User experience",
+          "Accessibility",
+          "Visual identity",
+          "Infographics",
+          "Interactive experiences",
+          "Design system"
+        ],
+        "primary_dashboard": "Experience Health",
+        "route": "/mission-control/ux-architecture.html",
+        "readiness_pct": 38,
+        "status": "partial",
+        "owner_assigned": false,
+        "note": "v1.1 design tokens \u2014 WCAG audit not done"
+      },
+      {
+        "id": "DEPT-600",
+        "number": 600,
+        "title": "Community Office",
+        "responsibilities": [
+          "Education Leaders",
+          "Contact Network",
+          "Community conversations",
+          "Events",
+          "Academy"
+        ],
+        "primary_dashboard": "Community Growth",
+        "route": "/mission-control/education-academy.html",
+        "readiness_pct": 28,
+        "status": "planned",
+        "owner_assigned": false,
+        "note": "0 Education Leaders \u00b7 0 contact signups"
+      },
+      {
+        "id": "DEPT-700",
+        "number": 700,
+        "title": "Coalition Office",
+        "responsibilities": [
+          "Organization partnerships",
+          "Coalition onboarding",
+          "County outreach",
+          "Resource distribution",
+          "Social media partnerships"
+        ],
+        "primary_dashboard": "Coalition Health",
+        "route": "/mission-control/coalition.html",
+        "readiness_pct": 23,
+        "status": "planned",
+        "owner_assigned": false,
+        "note": "0 coalition organizations"
+      },
+      {
+        "id": "DEPT-800",
+        "number": 800,
+        "title": "Media Office",
+        "responsibilities": [
+          "Documentary production",
+          "Video",
+          "Audio",
+          "Presentations",
+          "Graphics",
+          "Classroom resources"
+        ],
+        "primary_dashboard": "Media Production",
+        "route": "/mission-control/media-studio.html",
+        "readiness_pct": 18,
+        "status": "planned",
+        "owner_assigned": false,
+        "note": "0 videos catalogued"
+      },
+      {
+        "id": "DEPT-900",
+        "number": 900,
+        "title": "Mission Control Office",
+        "responsibilities": [
+          "Executive reporting",
+          "Progress tracking",
+          "Analytics",
+          "Alerts",
+          "Readiness",
+          "Institutional intelligence"
+        ],
+        "primary_dashboard": "Executive Overview",
+        "route": "/mission-control/",
+        "readiness_pct": 72,
+        "status": "live",
+        "owner_assigned": false,
+        "note": "55 builds logged \u00b7 executive dashboard live"
+      },
+      {
+        "id": "DEPT-1000",
+        "number": 1000,
+        "title": "Operations Office",
+        "responsibilities": [
+          "Project scheduling",
+          "Sprint planning",
+          "Documentation",
+          "Build sequencing",
+          "Risk management",
+          "Institutional memory"
+        ],
+        "primary_dashboard": "Execution Status",
+        "route": "/mission-control/launch-strategy.html",
+        "readiness_pct": 40,
+        "status": "partial",
+        "owner_assigned": false,
+        "note": "Build registry live \u2014 unified sprint backlog not built"
+      }
+    ],
+    "departments_total": 10,
+    "departments_live": 1,
+    "departments_partial": 6,
+    "departments_planned": 3,
+    "avg_readiness_pct": 35,
+    "owners_assigned": 0
+  },
+  "pmo_workflow": {
+    "title": "Initiative Lifecycle",
+    "stages": [
+      {
+        "stage": "idea",
+        "order": 1,
+        "title": "Idea",
+        "mc_tracked": "partial"
+      },
+      {
+        "stage": "research",
+        "order": 2,
+        "title": "Research",
+        "mc_tracked": "partial"
+      },
+      {
+        "stage": "approval",
+        "order": 3,
+        "title": "Approval",
+        "mc_tracked": "partial"
+      },
+      {
+        "stage": "planning",
+        "order": 4,
+        "title": "Planning",
+        "mc_tracked": "live"
+      },
+      {
+        "stage": "design",
+        "order": 5,
+        "title": "Design",
+        "mc_tracked": "partial"
+      },
+      {
+        "stage": "development",
+        "order": 6,
+        "title": "Development",
+        "mc_tracked": "partial"
+      },
+      {
+        "stage": "review",
+        "order": 7,
+        "title": "Review",
+        "mc_tracked": "planned"
+      },
+      {
+        "stage": "testing",
+        "order": 8,
+        "title": "Testing",
+        "mc_tracked": "planned"
+      },
+      {
+        "stage": "publication",
+        "order": 9,
+        "title": "Publication",
+        "mc_tracked": "partial"
+      },
+      {
+        "stage": "maintenance",
+        "order": 10,
+        "title": "Maintenance",
+        "mc_tracked": "planned"
+      }
+    ],
+    "flow": "Idea \u2192 Research \u2192 Approval \u2192 Planning \u2192 Design \u2192 Development \u2192 Review \u2192 Testing \u2192 Publication \u2192 Maintenance"
+  },
+  "work_item_structure": {
+    "title": "Universal Task Schema",
+    "fields": [
+      {
+        "field": "project_id",
+        "required": true,
+        "enforced": "partial"
+      },
+      {
+        "field": "department",
+        "required": true,
+        "enforced": "partial"
+      },
+      {
+        "field": "owner",
+        "required": true,
+        "enforced": "planned"
+      },
+      {
+        "field": "priority",
+        "required": true,
+        "enforced": "planned"
+      },
+      {
+        "field": "dependencies",
+        "required": false,
+        "enforced": "planned"
+      },
+      {
+        "field": "estimated_effort",
+        "required": false,
+        "enforced": "planned"
+      },
+      {
+        "field": "status",
+        "required": true,
+        "enforced": "live"
+      },
+      {
+        "field": "review_date",
+        "required": false,
+        "enforced": "planned"
+      },
+      {
+        "field": "completion_date",
+        "required": false,
+        "enforced": "partial"
+      },
+      {
+        "field": "documentation_links",
+        "required": true,
+        "enforced": "partial"
+      }
+    ],
+    "enforcement": "partial",
+    "current": "Builds registry = 55 work items with partial schema"
+  },
+  "executive_weekly_review": {
+    "title": "Executive Weekly Review",
+    "frequency": "Weekly",
+    "status": "partial",
+    "current_briefing": {
+      "what_built": "Launch Strategy v1.0 \u2014 6 phases, readiness checklist, Launch Command Center, Arkansas growth plan",
+      "building_now": "Phase 0 Private Development \u2014 public launch not recommended",
+      "blocked": [
+        "Privacy policy",
+        "Accessibility audit",
+        "Review Feedback dashboard",
+        "Launch metrics instrumentation"
+      ],
+      "ready_public": [
+        "Launch Command Center dashboard",
+        "Six-phase rollout model",
+        "Readiness checklist"
+      ],
+      "next": "Build #54 \u2014 Master implementation roadmap & sprint zero"
+    },
+    "topics": [
+      "Overall completion",
+      "Department progress",
+      "Major accomplishments",
+      "Current blockers",
+      "Upcoming priorities",
+      "Research updates",
+      "Technology status",
+      "Community growth",
+      "Coalition activity"
+    ],
+    "automation": "planned",
+    "note": "mc.briefing updated per build \u2014 not auto-generated weekly"
+  },
+  "monthly_institutional_review": {
+    "title": "Monthly Institutional Review",
+    "frequency": "Monthly",
+    "status": "planned",
+    "dimensions": [
+      "Mission alignment",
+      "Budget (future)",
+      "Research quality",
+      "Educational progress",
+      "County expansion",
+      "Community engagement",
+      "Technology",
+      "Institutional risks"
+    ],
+    "note": "Governance annual review planned \u2014 monthly cycle not scheduled"
+  },
+  "risk_register": {
+    "title": "Living Risk Register",
+    "risks": [
+      {
+        "id": "RISK-01",
+        "risk": "Research delays",
+        "likelihood": "high",
+        "impact": "high",
+        "mitigation": "Research Observatory + methodology",
+        "owner": "unassigned",
+        "status": "open"
+      },
+      {
+        "id": "RISK-02",
+        "risk": "Citation gaps",
+        "likelihood": "high",
+        "impact": "high",
+        "mitigation": "Evidence Ledger expansion",
+        "owner": "unassigned",
+        "status": "open"
+      },
+      {
+        "id": "RISK-03",
+        "risk": "Technical debt",
+        "likelihood": "medium",
+        "impact": "high",
+        "mitigation": "Next.js migration plan",
+        "owner": "unassigned",
+        "status": "open"
+      },
+      {
+        "id": "RISK-04",
+        "risk": "Volunteer shortages",
+        "likelihood": "high",
+        "impact": "medium",
+        "mitigation": "Education Leader pipeline",
+        "owner": "unassigned",
+        "status": "open"
+      },
+      {
+        "id": "RISK-05",
+        "risk": "Accessibility issues",
+        "likelihood": "high",
+        "impact": "high",
+        "mitigation": "WCAG audit sprint",
+        "owner": "unassigned",
+        "status": "open"
+      },
+      {
+        "id": "RISK-06",
+        "risk": "Infrastructure risks",
+        "likelihood": "medium",
+        "impact": "high",
+        "mitigation": "Neon provisioning + backups",
+        "owner": "unassigned",
+        "status": "open"
+      },
+      {
+        "id": "RISK-07",
+        "risk": "Knowledge loss",
+        "likelihood": "medium",
+        "impact": "high",
+        "mitigation": "PMO documentation + git",
+        "owner": "unassigned",
+        "status": "partial"
+      },
+      {
+        "id": "RISK-08",
+        "risk": "Blueprint fatigue",
+        "likelihood": "medium",
+        "impact": "medium",
+        "mitigation": "PMO execution focus \u2014 Build #54",
+        "owner": "unassigned",
+        "status": "open"
+      },
+      {
+        "id": "RISK-09",
+        "risk": "Premature public launch",
+        "likelihood": "medium",
+        "impact": "high",
+        "mitigation": "Launch Strategy Phase 0 gate",
+        "owner": "unassigned",
+        "status": "partial"
+      },
+      {
+        "id": "RISK-10",
+        "risk": "0 signups breaks community funnel",
+        "likelihood": "high",
+        "impact": "high",
+        "mitigation": "Pilot cohort + Academy test",
+        "owner": "unassigned",
+        "status": "open"
+      }
+    ],
+    "open_count": 8,
+    "total": 10
+  },
+  "dependency_management": {
+    "title": "Dependency Maps",
+    "chains": [
+      {
+        "id": "DEP-01",
+        "from": "Evidence Ledger",
+        "to": "Claims Registry",
+        "status": "partial"
+      },
+      {
+        "id": "DEP-02",
+        "from": "Claims Registry",
+        "to": "Educational Articles",
+        "status": "partial"
+      },
+      {
+        "id": "DEP-03",
+        "from": "Educational Articles",
+        "to": "Curriculum",
+        "status": "planned"
+      },
+      {
+        "id": "DEP-04",
+        "from": "Curriculum",
+        "to": "Academy",
+        "status": "planned"
+      },
+      {
+        "id": "DEP-05",
+        "from": "Academy",
+        "to": "Community Conversations",
+        "status": "planned"
+      },
+      {
+        "id": "DEP-06",
+        "from": "Data Architecture",
+        "to": "Database Schema",
+        "status": "partial"
+      },
+      {
+        "id": "DEP-07",
+        "from": "Database Schema",
+        "to": "Domain APIs",
+        "status": "planned"
+      },
+      {
+        "id": "DEP-08",
+        "from": "UX Architecture",
+        "to": "Learning Compass UI",
+        "status": "planned"
+      }
+    ],
+    "visualization": "planned"
+  },
+  "resource_allocation": {
+    "title": "Effort Tracking",
+    "areas": [
+      {
+        "area": "Research",
+        "effort_pct": 20,
+        "readiness_pct": 25,
+        "bottleneck": "Citation verification"
+      },
+      {
+        "area": "Writing",
+        "effort_pct": 25,
+        "readiness_pct": 28,
+        "bottleneck": "15/2700 published"
+      },
+      {
+        "area": "Engineering",
+        "effort_pct": 20,
+        "readiness_pct": 38,
+        "bottleneck": "No database"
+      },
+      {
+        "area": "Design",
+        "effort_pct": 10,
+        "readiness_pct": 39,
+        "bottleneck": "Compass UI"
+      },
+      {
+        "area": "Media",
+        "effort_pct": 5,
+        "readiness_pct": 18,
+        "bottleneck": "0 videos"
+      },
+      {
+        "area": "Community",
+        "effort_pct": 10,
+        "readiness_pct": 26,
+        "bottleneck": "0 leaders"
+      },
+      {
+        "area": "Coalition",
+        "effort_pct": 5,
+        "readiness_pct": 18,
+        "bottleneck": "0 orgs"
+      },
+      {
+        "area": "Operations",
+        "effort_pct": 5,
+        "readiness_pct": 39,
+        "bottleneck": "No sprint backlog"
+      }
+    ]
+  },
+  "institutional_calendar": {
+    "status": "planned",
+    "event_types": [
+      "Research reviews",
+      "Editorial deadlines",
+      "Sprint cycles",
+      "Community events",
+      "Coalition meetings",
+      "Annual reports",
+      "Platform updates"
+    ],
+    "integrations_planned": [
+      "Google Calendar",
+      "Microsoft Outlook",
+      "Apple Calendar"
+    ],
+    "current": "No unified calendar \u2014 build dates in registry only"
+  },
+  "pmo_dashboard": {
+    "title": "Mission Control PMO Dashboard",
+    "route": "/mission-control/pmo.html",
+    "widgets": [
+      {
+        "id": "W-01",
+        "widget": "Overall completion",
+        "status": "live",
+        "source": "executive.overall_completion"
+      },
+      {
+        "id": "W-02",
+        "widget": "Department completion",
+        "status": "partial",
+        "source": "This dashboard"
+      },
+      {
+        "id": "W-03",
+        "widget": "Sprint status",
+        "status": "planned",
+        "source": "Sprint Zero not started"
+      },
+      {
+        "id": "W-04",
+        "widget": "Open risks",
+        "status": "partial",
+        "source": "Risk register \u2014 manual"
+      },
+      {
+        "id": "W-05",
+        "widget": "Blocked work",
+        "status": "partial",
+        "source": "mc.briefing.blocked"
+      },
+      {
+        "id": "W-06",
+        "widget": "Upcoming milestones",
+        "status": "partial",
+        "source": "Launch phases + builds"
+      },
+      {
+        "id": "W-07",
+        "widget": "Launch readiness",
+        "status": "live",
+        "source": "launch-strategy.json"
+      },
+      {
+        "id": "W-08",
+        "widget": "Institution health",
+        "status": "partial",
+        "source": "executive + progress_bars"
+      }
+    ],
+    "widgets_live": 2
+  },
+  "long_term_vision": "PMO operates like a university or presidential library administrative office \u2014 every project advances educational mission with quality, transparency, and public trust.",
+  "mc_integration": {
+    "title": "Mission Control PMO Metrics",
+    "status": "partial",
+    "metrics": [
+      {
+        "id": "PMO-01",
+        "title": "Departments defined",
+        "status": "live",
+        "current": "10/10"
+      },
+      {
+        "id": "PMO-02",
+        "title": "Department owners assigned",
+        "status": "planned",
+        "current": "0/10"
+      },
+      {
+        "id": "PMO-03",
+        "title": "Avg department readiness",
+        "status": "partial",
+        "current": "35%"
+      },
+      {
+        "id": "PMO-04",
+        "title": "Daily five questions answerable",
+        "status": "partial",
+        "current": "3/5 instant"
+      },
+      {
+        "id": "PMO-05",
+        "title": "Workflow stages in MC",
+        "status": "partial",
+        "current": "10 stages defined"
+      },
+      {
+        "id": "PMO-06",
+        "title": "Work items in PMO registry",
+        "status": "partial",
+        "current": "55 builds \u2014 no unified task DB"
+      },
+      {
+        "id": "PMO-07",
+        "title": "Weekly briefing automated",
+        "status": "planned",
+        "current": "Manual per build"
+      },
+      {
+        "id": "PMO-08",
+        "title": "Monthly institutional review",
+        "status": "planned",
+        "current": "Not scheduled"
+      },
+      {
+        "id": "PMO-09",
+        "title": "Risk register maintained",
+        "status": "partial",
+        "current": "10 risks \u00b7 8 open"
+      },
+      {
+        "id": "PMO-10",
+        "title": "Dependency map visible",
+        "status": "partial",
+        "current": "8 chains documented"
+      },
+      {
+        "id": "PMO-11",
+        "title": "Institutional calendar",
+        "status": "planned",
+        "current": "Not built"
+      },
+      {
+        "id": "PMO-12",
+        "title": "PMO dashboard widgets live",
+        "status": "partial",
+        "current": "2/8"
+      }
+    ],
+    "mc_as_pmo_cockpit": true
+  },
+  "related_blueprints": [
+    {
+      "title": "Build Bible (#50)",
+      "route": "/mission-control/build-bible.html",
+      "build": 50
+    },
+    {
+      "title": "Launch Strategy (#53)",
+      "route": "/mission-control/launch-strategy.html",
+      "build": 53
+    },
+    {
+      "title": "Content Production Matrix (#46)",
+      "route": "/mission-control/content-production-matrix.html",
+      "build": 46
+    },
+    {
+      "title": "Executive Command Center",
+      "route": "/mission-control/executive.html",
+      "build": 25
+    }
+  ],
+  "summary": {
+    "departments_total": 10,
+    "departments_live": 1,
+    "departments_partial": 6,
+    "departments_planned": 3,
+    "avg_department_readiness_pct": 35,
+    "owners_assigned": 0,
+    "workflow_stages": 10,
+    "work_items_logged": 55,
+    "risks_open": 8,
+    "risks_total": 10,
+    "dependencies_documented": 8,
+    "daily_questions_live": 3,
+    "pmo_widgets_live": 2,
+    "weekly_briefing_automated": false,
+    "monthly_review_scheduled": false,
+    "calendar_live": false,
+    "pmo_readiness_pct": 46
+  },
+  "catalog_gaps": [
+    "0/10 department owners assigned \u2014 stewardship roles undefined in PMO",
+    "No unified work item database \u2014 builds[] only partial PMO schema",
+    "Weekly briefing manual per build \u2014 not auto-generated",
+    "Monthly institutional review not scheduled",
+    "Institutional calendar not built \u2014 no sprint cycles tracked",
+    "Sprint status widget planned \u2014 Sprint Zero not started",
+    "Dependency map documented \u2014 not visualized in MC",
+    "Risk register manual \u2014 no MC risk triage workflow",
+    "Community + Coalition departments planned \u2014 0 leaders, 0 orgs",
+    "PMO cockpit partial \u2014 3/8 dashboard widgets live",
+    "Owner field on work items not enforced"
+  ],
+  "recommended_next_build": {
+    "number": 55,
+    "title": "Master Implementation Roadmap & Sprint Zero",
+    "note": "First sprint backlog, department owner assignment, work item schema in Neon, weekly briefing generator."
+  }
+}

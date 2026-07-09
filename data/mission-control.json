@@ -1,6 +1,6 @@
 {
-  "version": "1.57.0",
-  "build": 53,
+  "version": "1.58.0",
+  "build": 54,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 53,
+    "overall_completion": 54,
     "current_build": {
-      "number": 53,
-      "title": "Citizens United Facts Master Launch Strategy & Arkansas Rollout Blueprint v1.0"
-    },
-    "active_phase": "Rollout \u2014 Phase 0 Private Development",
-    "last_completed": "Master User Experience Architecture",
-    "next_build": {
       "number": 54,
+      "title": "Citizens United Facts Master Project Management Office (PMO) v1.0"
+    },
+    "active_phase": "PMO \u2014 Institutional Execution System",
+    "last_completed": "Master Launch Strategy & Arkansas Rollout Blueprint",
+    "next_build": {
+      "number": 55,
       "title": "Master implementation roadmap & sprint zero"
     },
     "github_status": "connected",
@@ -57,7 +57,7 @@
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 25,
-    "institutional_maturity_pct": 39,
+    "institutional_maturity_pct": 40,
     "current_institutional_version": "V1",
     "systems_integration_readiness": 28,
     "production_matrix_readiness": 39,
@@ -68,10 +68,11 @@
     "data_architecture_readiness": 41,
     "ux_architecture_readiness": 39,
     "launch_strategy_readiness": 39,
+    "pmo_readiness": 46,
     "rollout_phase": 0,
     "rollout_phase_title": "Private Development",
     "planning_phase_complete": true,
-    "implementation_phase": "phase_0_private_development",
+    "implementation_phase": "pmo_established",
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation",
     "public_launch_recommended": false
@@ -80,8 +81,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 53,
-      "note": "Build #53 \u2014 Master Launch Strategy & Arkansas Rollout Blueprint complete."
+      "value": 54,
+      "note": "Build #54 \u2014 Master PMO established. Execution system live."
     },
     {
       "id": "constitution",
@@ -410,9 +411,9 @@
     {
       "id": "institutional_maturity",
       "label": "Institutional Maturity (V1\u2013V10)",
-      "value": 39,
+      "value": 40,
       "max": 100,
-      "note": "Phase 0 Private Development \u2014 public launch not recommended."
+      "note": "10 departments \u00b7 PMO cockpit operational."
     },
     {
       "id": "systems_integration",
@@ -476,6 +477,13 @@
       "value": 39,
       "max": 100,
       "note": "Phase 0 active \u00b7 8% public launch readiness."
+    },
+    {
+      "id": "pmo",
+      "label": "Project Management Office",
+      "value": 46,
+      "max": 100,
+      "note": "35% avg dept readiness \u00b7 0/10 owners."
     }
   ],
   "public_readiness": {
@@ -1086,6 +1094,12 @@
       "id": "launch_strategy",
       "label": "Launch Strategy",
       "href": "/mission-control/launch-strategy.html",
+      "status": "complete"
+    },
+    {
+      "id": "pmo",
+      "label": "Project Management Office",
+      "href": "/mission-control/pmo.html",
       "status": "complete"
     }
   ],
@@ -2112,6 +2126,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 54,
+      "title": "Citizens United Facts Master Project Management Office (PMO) v1.0",
+      "version": "1.58.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Institutional execution system \u2014 10 departments, PMO workflow, risk register",
+      "summary": "10 departments, 35% avg readiness, 8 open risks, 46% PMO readiness.",
+      "files_created": [
+        "data/pmo.json",
+        "docs/MASTER_PMO.md",
+        "builds/054-master-pmo.md",
+        "mission-control/pmo.html",
+        "scripts/gen-pmo.py",
+        "scripts/update-mc-build54.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/pmo.html"
+      ],
+      "decisions_made": [
+        "10 permanent PMO departments (100\u20131000) with primary dashboards",
+        "10-stage initiative lifecycle \u2014 Idea through Maintenance",
+        "Universal work item schema \u2014 builds registry as interim store",
+        "Living risk register \u2014 10 institutional risks documented",
+        "Dependency chain Evidence \u2192 Claims \u2192 Articles \u2192 Curriculum \u2192 Academy \u2192 Conversations",
+        "Mission Control = PMO operational cockpit",
+        "46% PMO readiness \u2014 owners and sprint backlog pending"
+      ],
+      "open_questions": [
+        "Department owner assignments?",
+        "Sprint Zero start date?",
+        "Weekly briefing automation?",
+        "Work items in Neon vs builds[]?"
+      ],
+      "risks": [
+        "0/10 department owners assigned \u2014 stewardship roles undefined in PMO",
+        "No unified work item database \u2014 builds[] only partial PMO schema",
+        "Weekly briefing manual per build \u2014 not auto-generated",
+        "Monthly institutional review not scheduled"
+      ],
+      "next_recommended": 55,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/pmo.html",
+      "review_status": "complete"
+    },
     {
       "number": 53,
       "title": "Citizens United Facts Master Launch Strategy & Arkansas Rollout Blueprint v1.0",
@@ -4701,20 +4768,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Launch Strategy v1.0 \u2014 6 phases, readiness checklist, Launch Command Center, Arkansas growth plan",
-    "building_now": "Phase 0 Private Development \u2014 public launch not recommended",
+    "what_built": "PMO v1.0 \u2014 10 departments, workflow, risk register, dependency maps, PMO dashboard",
+    "building_now": "PMO established \u2014 Sprint Zero and department owners next",
     "blocked": [
-      "Privacy policy",
-      "Accessibility audit",
-      "Review Feedback dashboard",
-      "Launch metrics instrumentation"
+      "0 department owners",
+      "No sprint backlog",
+      "Unified task DB",
+      "Calendar integration"
     ],
     "ready_public": [
-      "Launch Command Center dashboard",
-      "Six-phase rollout model",
-      "Readiness checklist"
+      "PMO dashboard",
+      "Department readiness matrix",
+      "Risk register",
+      "Daily five questions"
     ],
-    "next": "Build #54 \u2014 Master implementation roadmap & sprint zero"
+    "next": "Build #55 \u2014 Master implementation roadmap & sprint zero"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -5301,5 +5369,15 @@
     "public_launch_recommended": false,
     "checklist_live": 1,
     "checklist_partial": 9
+  },
+  "pmo": "/data/pmo.json",
+  "pmo_dashboard": "/mission-control/pmo.html",
+  "pmo_inventory": {
+    "readiness_score": 46,
+    "departments_total": 10,
+    "avg_department_readiness_pct": 35,
+    "owners_assigned": 0,
+    "risks_open": 8,
+    "work_items_logged": 55
   }
 }

@@ -240,6 +240,8 @@ async function initMissionControl() {
     <p class="mc-bar-note">Build #52 — Master User Experience Architecture. 7 emotional stages, Learning + Civic Compass, Action Hub live. 0 delight moments. 39% UX readiness.</p>
     <h2 class="mc-section-title">Launch Strategy <a href="/mission-control/launch-strategy.html" class="mc-inline-link">Arkansas Rollout →</a></h2>
     <p class="mc-bar-note">Build #53 — Master Launch Strategy. Phase 0 Private Development. 8% public launch readiness — not recommended. 39% launch strategy readiness.</p>
+    <h2 class="mc-section-title">PMO <a href="/mission-control/pmo.html" class="mc-inline-link">Execution System →</a></h2>
+    <p class="mc-bar-note">Build #54 — Master Project Management Office. 10 departments, risk register, dependency maps. 0 owners assigned. 46% PMO readiness.</p>
     <h2 class="mc-section-title">Governance & Constitution <a href="/mission-control/governance.html" class="mc-inline-link">Institutional Rules →</a></h2>
     <p class="mc-bar-note">Build #49 — Master governance & institutional constitution. 6 values, 7 steward roles. 0 stewards assigned. 44% governance readiness.</p>
     <h2 class="mc-section-title">Technical Architecture <a href="/mission-control/technical-architecture.html" class="mc-inline-link">Production Engineering →</a></h2>
@@ -5148,6 +5150,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDataArchitecture();
   initUxArchitecture();
   initLaunchStrategy();
+  initPmo();
 });
 
 async function initUxArchitecture() {
@@ -5401,6 +5404,134 @@ async function initLaunchStrategy() {
       <a href="/mission-control/institutional-roadmap.html">Institutional Roadmap</a> ·
       <a href="/mission-control/outreach.html">Outreach Engine</a> ·
       <a href="/mission-control/county-os.html">County OS</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initPmo() {
+  const root = document.getElementById('mc-pmo-root');
+  if (!root) return;
+
+  const [pmoRes, mcRes] = await Promise.all([
+    fetch('/data/pmo.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const pmo = await pmoRes.json();
+  const mc = await mcRes.json();
+  const s = pmo.summary;
+  const depts = pmo.departments;
+
+  const deptRows = depts.departments.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.number}</td><td>${d.title}</td>
+      <td>${d.readiness_pct}%</td><td>${d.status}</td><td>${d.primary_dashboard}</td>
+      <td>${d.owner_assigned ? 'Yes' : 'No'}</td>
+      <td>${d.route ? `<a href="${d.route}">dashboard</a>` : '—'}</td>
+      <td>${d.note}</td></tr>`).join('');
+
+  const questionRows = pmo.pmo_mission.daily_questions.map(q => `
+    <tr><td>${q.q}</td><td>${q.status}</td><td>${q.source}</td></tr>`).join('');
+
+  const workflowRows = pmo.pmo_workflow.stages.map(w => `
+    <tr><td>${w.order}</td><td>${w.title}</td><td>${w.mc_tracked}</td></tr>`).join('');
+
+  const fieldRows = pmo.work_item_structure.fields.map(f => `
+    <tr><td><code>${f.field}</code></td><td>${f.required ? 'Yes' : 'No'}</td><td>${f.enforced}</td></tr>`).join('');
+
+  const riskRows = pmo.risk_register.risks.map(r => `
+    <tr><td><code>${r.id}</code></td><td>${r.risk}</td><td>${r.likelihood}</td><td>${r.impact}</td>
+      <td>${r.status}</td><td>${r.mitigation}</td></tr>`).join('');
+
+  const depRows = pmo.dependency_management.chains.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.from}</td><td>→</td><td>${d.to}</td><td>${d.status}</td></tr>`).join('');
+
+  const resourceRows = pmo.resource_allocation.areas.map(a => `
+    <tr><td>${a.area}</td><td>${a.effort_pct}%</td><td>${a.readiness_pct}%</td><td>${a.bottleneck}</td></tr>`).join('');
+
+  const widgetRows = pmo.pmo_dashboard.widgets.map(w => `
+    <tr><td><code>${w.id}</code></td><td>${w.widget}</td><td>${w.status}</td><td>${w.source}</td></tr>`).join('');
+
+  const metricRows = pmo.mc_integration.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('');
+
+  const extendLinks = pmo.extends.map(e =>
+    `<a href="${e.route}">Build #${e.build} ${e.title}</a>`).join(' · ');
+
+  const briefing = pmo.executive_weekly_review.current_briefing || {};
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → PMO</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #54 · ${pmo.title}</p>
+      <h1>Master Project Management Office</h1>
+      <p class="mc-header__question">${pmo.governing_principle}</p>
+      <p class="mc-bar-note">${pmo.purpose}</p>
+      <p class="mc-bar-note">Extends ${extendLinks}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">PMO readiness</div><div class="mc-stat__value">${s.pmo_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Departments</div><div class="mc-stat__value">${depts.departments_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Avg dept readiness</div><div class="mc-stat__value">${s.avg_department_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Owners assigned</div><div class="mc-stat__value">${s.owners_assigned}/10</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Open risks</div><div class="mc-stat__value">${s.risks_open}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Work items</div><div class="mc-stat__value">${s.work_items_logged}</div></div>
+    </div>
+    <h2 class="mc-section-title">Daily Five Questions</h2>
+    <p class="mc-bar-note">${s.daily_questions_live}/5 answerable instantly in Mission Control</p>
+    <table class="mc-table"><thead><tr><th>Question</th><th>Status</th><th>Source</th></tr></thead>
+      <tbody>${questionRows}</tbody></table>
+    <h2 class="mc-section-title">Ten PMO Departments</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>#</th><th>Department</th><th>Readiness</th><th>Status</th><th>Dashboard</th><th>Owner</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${deptRows}</tbody></table>
+    <h2 class="mc-section-title">PMO Workflow</h2>
+    <p class="mc-bar-note">${pmo.pmo_workflow.flow}</p>
+    <table class="mc-table"><thead><tr><th>#</th><th>Stage</th><th>MC Tracked</th></tr></thead>
+      <tbody>${workflowRows}</tbody></table>
+    <h2 class="mc-section-title">Work Item Structure</h2>
+    <p class="mc-bar-note">${pmo.work_item_structure.current}</p>
+    <table class="mc-table"><thead><tr><th>Field</th><th>Required</th><th>Enforced</th></tr></thead>
+      <tbody>${fieldRows}</tbody></table>
+    <h2 class="mc-section-title">Executive Weekly Review</h2>
+    <p class="mc-bar-note">${pmo.executive_weekly_review.frequency} — ${pmo.executive_weekly_review.status} · ${pmo.executive_weekly_review.note}</p>
+    <p class="mc-bar-note"><strong>What built:</strong> ${briefing.what_built || '—'}</p>
+    <p class="mc-bar-note"><strong>Building now:</strong> ${briefing.building_now || '—'}</p>
+    <p class="mc-bar-note"><strong>Blocked:</strong> ${(briefing.blocked || []).join(' · ')}</p>
+    <p class="mc-bar-note"><strong>Next:</strong> ${briefing.next || '—'}</p>
+    <h2 class="mc-section-title">Monthly Institutional Review</h2>
+    <p class="mc-bar-note">${pmo.monthly_institutional_review.title} — ${pmo.monthly_institutional_review.status}</p>
+    <ul class="mc-deliverables">${pmo.monthly_institutional_review.dimensions.map(d => `<li>${d}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Risk Register</h2>
+    <p class="mc-bar-note">${s.risks_open} open / ${s.risks_total} documented</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Status</th><th>Mitigation</th></tr></thead>
+      <tbody>${riskRows}</tbody></table>
+    <h2 class="mc-section-title">Dependency Management</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>From</th><th></th><th>To</th><th>Status</th></tr></thead>
+      <tbody>${depRows}</tbody></table>
+    <h2 class="mc-section-title">Resource Allocation</h2>
+    <table class="mc-table"><thead><tr><th>Area</th><th>Effort</th><th>Readiness</th><th>Bottleneck</th></tr></thead>
+      <tbody>${resourceRows}</tbody></table>
+    <h2 class="mc-section-title">Institutional Calendar</h2>
+    <p class="mc-bar-note">${pmo.institutional_calendar.status} — ${pmo.institutional_calendar.current}</p>
+    <h2 class="mc-section-title">PMO Dashboard Widgets</h2>
+    <p class="mc-bar-note">${s.pmo_widgets_live}/${pmo.pmo_dashboard.widgets.length} widgets live</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Widget</th><th>Status</th><th>Source</th></tr></thead>
+      <tbody>${widgetRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${pmo.long_term_vision}</p>
+    <h2 class="mc-section-title">PMO Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${pmo.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${pmo.recommended_next_build.number} — ${pmo.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${pmo.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_PMO.md">MASTER_PMO.md</a> ·
+      <a href="/data/pmo.json">JSON</a> ·
+      <a href="/mission-control/executive.html">Executive Office</a> ·
+      <a href="/mission-control/build-bible.html">Build Bible</a> ·
+      <a href="/mission-control/launch-strategy.html">Launch Strategy</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 
