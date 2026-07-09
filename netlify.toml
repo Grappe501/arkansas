@@ -417,6 +417,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/data-architecture"
+  to = "/mission-control/data-architecture.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301

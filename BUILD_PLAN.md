@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.54.0 · **Build Bible:** [/mission-control/build-bible.html](/mission-control/build-bible.html) ★ **Milestone #50** · **OS:** [Mission Control](/mission-control/)  
-**Planning complete** → **Implementation begins** · **Next:** Build #51 Sprint Zero  
+**Current version:** 1.55.0 · **Data Architecture:** [/mission-control/data-architecture.html](/mission-control/data-architecture.html) · **Build Bible:** [/mission-control/build-bible.html](/mission-control/build-bible.html) ★ **Milestone #50** · **OS:** [Mission Control](/mission-control/)  
+**Implementation** — Data Constitution established · **Next:** Build #52 Sprint Zero  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **51** | **Master Data Architecture & Canonical Data Dictionary** | **✅ v1.55.0** |
 | **50** | **Master Build Bible** ★ | **✅ v1.54.0** |
 | **49** | **Master Governance & Institutional Constitution** | **✅ v1.53.0** |
 | **48** | **Master Technical Architecture & Deployment Blueprint** | **✅ v1.52.0** |
@@ -290,7 +291,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **37** | **Master Research Library** | **✅ v1.41.0** |
 | **36** | **Trust Framework** | **✅ v1.40.0** |
 
-**Next:** Build #51 — Master implementation roadmap & sprint zero.
+**Next:** Build #52 — Master implementation roadmap & sprint zero.
 
 ---
 

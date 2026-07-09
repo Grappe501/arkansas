@@ -1,6 +1,6 @@
 {
-  "version": "1.54.0",
-  "build": 50,
+  "version": "1.55.0",
+  "build": 51,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 50,
+    "overall_completion": 51,
     "current_build": {
-      "number": 50,
-      "title": "Citizens United Facts Master Build Bible v1.0"
-    },
-    "active_phase": "Implementation \u2014 Design Complete, Engineering Begins",
-    "last_completed": "Master Governance & Institutional Constitution",
-    "next_build": {
       "number": 51,
+      "title": "Citizens United Facts Master Data Architecture & Canonical Data Dictionary v1.0"
+    },
+    "active_phase": "Implementation \u2014 Data Constitution Established",
+    "last_completed": "Master Build Bible",
+    "next_build": {
+      "number": 52,
       "title": "Master implementation roadmap & sprint zero"
     },
     "github_status": "connected",
@@ -28,14 +28,14 @@
     "signup_funnel_readiness": 22,
     "civic_action_readiness": 26,
     "coalition_readiness": 18,
-    "data_model_readiness": 38,
+    "data_model_readiness": 52,
     "route_inventory_readiness": 18,
     "component_registry_readiness": 22,
     "facts_framework_readiness": 14,
     "knowledge_atlas_readiness": 20,
     "platform_architecture_readiness": 24,
     "repository_structure_readiness": 28,
-    "database_schema_readiness": 36,
+    "database_schema_readiness": 40,
     "wireframe_readiness": 38,
     "contact_intelligence_readiness": 31,
     "mc2_readiness": 33,
@@ -57,7 +57,7 @@
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 25,
-    "institutional_maturity_pct": 36,
+    "institutional_maturity_pct": 37,
     "current_institutional_version": "V1",
     "systems_integration_readiness": 28,
     "production_matrix_readiness": 39,
@@ -65,8 +65,9 @@
     "technical_architecture_readiness": 38,
     "governance_readiness": 44,
     "build_bible_readiness": 49,
+    "data_architecture_readiness": 41,
     "planning_phase_complete": true,
-    "implementation_phase": "sprint_zero_pending",
+    "implementation_phase": "data_constitution_established",
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -74,8 +75,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 50,
-      "note": "Build Bible \u2014 50 planning builds complete. Implementation phase begins."
+      "value": 51,
+      "note": "Build #51 \u2014 Master Data Architecture & Canonical Data Dictionary complete."
     },
     {
       "id": "constitution",
@@ -404,9 +405,9 @@
     {
       "id": "institutional_maturity",
       "label": "Institutional Maturity (V1\u2013V10)",
-      "value": 36,
+      "value": 37,
       "max": 100,
-      "note": "Planning foundation complete \u2014 V1 implementation starting."
+      "note": "12-domain data constitution \u2014 implementation continues."
     },
     {
       "id": "systems_integration",
@@ -449,6 +450,13 @@
       "value": 49,
       "max": 100,
       "note": "50 builds indexed \u2014 26% avg engine readiness."
+    },
+    {
+      "id": "data_architecture",
+      "label": "Master Data Architecture",
+      "value": 41,
+      "max": 100,
+      "note": "1 live + 5 partial domains \u00b7 0 edges."
     }
   ],
   "public_readiness": {
@@ -1041,6 +1049,12 @@
       "id": "build_bible",
       "label": "Master Build Bible",
       "href": "/mission-control/build-bible.html",
+      "status": "complete"
+    },
+    {
+      "id": "data_architecture",
+      "label": "Master Data Architecture",
+      "href": "/mission-control/data-architecture.html",
       "status": "complete"
     }
   ],
@@ -2067,6 +2081,58 @@
     }
   ],
   "builds": [
+    {
+      "number": 51,
+      "title": "Citizens United Facts Master Data Architecture & Canonical Data Dictionary v1.0",
+      "version": "1.55.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Institutional Data Constitution \u2014 12 canonical domains, single source of truth",
+      "summary": "12 domains (100\u20131200), 10 relationship verbs, 41% readiness \u2014 0 edges.",
+      "files_created": [
+        "data/data-architecture.json",
+        "docs/MASTER_DATA_ARCHITECTURE.md",
+        "builds/051-master-data-architecture.md",
+        "mission-control/data-architecture.html",
+        "scripts/gen-data-architecture.py",
+        "scripts/update-mc-build51.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/data-architecture.html"
+      ],
+      "decisions_made": [
+        "12 canonical data domains (100\u20131200) \u2014 permanent institutional taxonomy",
+        "Canonical object model \u2014 12 shared fields on every major object",
+        "10 institutional relationship verbs \u2014 graph built from structured edges",
+        "6-state publishing lifecycle \u2014 Draft through Scheduled Review",
+        "8 domain APIs defined \u2014 none deployed; raw data access prohibited",
+        "41% readiness \u2014 constitution live, database/APIs pending"
+      ],
+      "open_questions": [
+        "Migrate Build #15 canonical objects to 12-domain model?",
+        "First domain API \u2014 Identity or Knowledge?",
+        "Neon provisioning timeline?",
+        "Relationship edge pilot scope?"
+      ],
+      "risks": [
+        "Two data models coexist (Build #15 + Build #51) until migration",
+        "0 relationship edges \u2014 knowledge graph remains theoretical",
+        "Metadata standards defined but not enforced",
+        "Constitution without database = documentation only"
+      ],
+      "next_recommended": 52,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/data-architecture.html",
+      "review_status": "complete"
+    },
     {
       "number": 50,
       "title": "Citizens United Facts Master Build Bible v1.0",
@@ -4500,19 +4566,20 @@
     }
   ],
   "briefing": {
-    "what_built": "Build Bible v1.0 \u2014 master index, pillars, engines, workstreams, implementation phases",
-    "building_now": "SHIFT: Design complete \u2192 Implementation (Sprint Zero next)",
+    "what_built": "Data Architecture v1.0 \u2014 12 domains, canonical dictionary, relationship standards, API philosophy",
+    "building_now": "Implementation \u2014 data constitution established; Sprint Zero next",
     "blocked": [
-      "Component specs",
       "Neon provisioning",
-      "Sprint backlog"
+      "Domain APIs",
+      "Relationship edge population",
+      "Search index"
     ],
     "ready_public": [
-      "Build Bible MC dashboard",
-      "Complete blueprint index",
-      "Governing question"
+      "Data Architecture MC dashboard",
+      "12-domain taxonomy",
+      "Institutional data philosophy"
     ],
-    "next": "Build #51 \u2014 Master implementation roadmap & sprint zero"
+    "next": "Build #52 \u2014 Master implementation roadmap & sprint zero"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -5066,5 +5133,17 @@
     "avg_engine_readiness_pct": 26,
     "planning_phase_complete": true,
     "implementation_started": false
+  },
+  "data_architecture": "/data/data-architecture.json",
+  "data_architecture_dashboard": "/mission-control/data-architecture.html",
+  "data_architecture_inventory": {
+    "readiness_score": 41,
+    "domains_total": 12,
+    "domains_live": 1,
+    "domains_partial": 5,
+    "relationship_edges": 0,
+    "knowledge_published": 15,
+    "evidence_records": 14,
+    "database_provisioned": false
   }
 }

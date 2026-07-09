@@ -1,43 +1,42 @@
 /**
- * Citizens United Education Platform — Design Tokens v1.0
- * Build #9 — Visual Design System
- * Neutrality, trust, institutional civic education
+ * Citizens United Education Platform — Design Tokens v1.1
+ * Institutional Authority palette — cool neutrals, high contrast, sharp edges
  */
 
 :root {
-  /* Core — integrity, transparency, stability */
-  --ds-bg: #f7f5f0;
+  /* Core — crisp, not cream */
+  --ds-bg: #e8ebf0;
   --ds-surface: #ffffff;
-  --ds-surface-alt: #f0ece4;
+  --ds-surface-alt: #d4dae3;
   --ds-surface-elevated: #ffffff;
-  --ds-text: #1a1f2e;
-  --ds-text-muted: #5c6478;
-  --ds-border: #ddd6c8;
-  --ds-border-strong: #c5bdb0;
+  --ds-text: #0c1220;
+  --ds-text-muted: #3d4a5c;
+  --ds-border: #a8b2c0;
+  --ds-border-strong: #6b7789;
 
-  /* Primary institutional */
-  --ds-primary: #1e4d6b;
-  --ds-primary-light: #2a6f96;
-  --ds-primary-dark: #153a52;
+  /* Primary institutional — deep navy */
+  --ds-primary: #0c2340;
+  --ds-primary-light: #1a4a7a;
+  --ds-primary-dark: #071525;
 
-  /* Accent — intentional, not partisan */
-  --ds-accent-warm: #8b6914;
-  --ds-highlight: #c45c26;
+  /* Accent — deliberate, high-contrast */
+  --ds-accent-warm: #92400e;
+  --ds-highlight: #c2410c;
 
-  /* Domain accents — organize information */
-  --ds-domain-history: #5c4a3a;
-  --ds-domain-legal: #1e4d6b;
-  --ds-domain-data: #2d5a6f;
-  --ds-domain-civic: #3d5a45;
-  --ds-domain-research: #4a5568;
+  /* Domain accents */
+  --ds-domain-history: #3d3428;
+  --ds-domain-legal: #0c2340;
+  --ds-domain-data: #1e3a5f;
+  --ds-domain-civic: #1f4d2e;
+  --ds-domain-research: #374151;
 
   /* Semantic */
-  --ds-success: #2d5a3d;
-  --ds-warning: #8b6914;
-  --ds-info: #1a4a6e;
-  --ds-trust: #1e4d6b;
+  --ds-success: #166534;
+  --ds-warning: #b45309;
+  --ds-info: #1e40af;
+  --ds-trust: #0c2340;
 
-  /* Typography scale */
+  /* Typography */
   --ds-font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --ds-font-sans: "Source Sans 3", system-ui, -apple-system, sans-serif;
   --ds-font-mono: "Consolas", "Monaco", monospace;
@@ -52,9 +51,9 @@
   --ds-text-caption: 0.75rem;
   --ds-text-data: 0.8rem;
 
-  --ds-leading-tight: 1.25;
-  --ds-leading-body: 1.65;
-  --ds-leading-loose: 1.8;
+  --ds-leading-tight: 1.2;
+  --ds-leading-body: 1.6;
+  --ds-leading-loose: 1.75;
   --ds-measure: 65ch;
   --ds-measure-narrow: 45ch;
 
@@ -66,21 +65,21 @@
   --ds-space-xl: 2rem;
   --ds-space-2xl: 3rem;
 
-  /* Layout */
+  /* Layout — sharper, more institutional */
   --ds-max-width: 1100px;
   --ds-max-width-reading: 720px;
-  --ds-radius: 8px;
-  --ds-radius-sm: 4px;
-  --ds-shadow: 0 2px 12px rgba(26, 31, 46, 0.08);
-  --ds-shadow-lg: 0 8px 32px rgba(26, 31, 46, 0.1);
+  --ds-radius: 3px;
+  --ds-radius-sm: 2px;
+  --ds-shadow: 0 1px 2px rgba(12, 18, 32, 0.1);
+  --ds-shadow-lg: 0 3px 10px rgba(12, 18, 32, 0.14);
 
-  /* Motion — subtle, purposeful */
-  --ds-duration-fast: 150ms;
-  --ds-duration: 250ms;
-  --ds-duration-slow: 400ms;
+  /* Motion */
+  --ds-duration-fast: 120ms;
+  --ds-duration: 200ms;
+  --ds-duration-slow: 300ms;
   --ds-ease: cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Legacy aliases (backward compatible) */
+  /* Legacy aliases */
   --color-bg: var(--ds-bg);
   --color-surface: var(--ds-surface);
   --color-surface-alt: var(--ds-surface-alt);
@@ -90,6 +89,7 @@
   --color-accent-light: var(--ds-primary-light);
   --color-highlight: var(--ds-highlight);
   --color-border: var(--ds-border);
+  --color-border-strong: var(--ds-border-strong);
   --color-montana: var(--ds-success);
   --color-hawaii: var(--ds-info);
   --font-serif: var(--ds-font-serif);
@@ -99,7 +99,6 @@
   --shadow: var(--ds-shadow);
 }
 
-/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -112,14 +111,13 @@
 }
 
 :focus-visible {
-  outline: 2px solid var(--ds-primary-light);
+  outline: 2px solid var(--ds-highlight);
   outline-offset: 2px;
 }
 
-/* High contrast preference */
 @media (prefers-contrast: more) {
   :root {
-    --ds-text-muted: #3d4454;
-    --ds-border: #9a9285;
+    --ds-text-muted: #1f2937;
+    --ds-border: #4b5563;
   }
 }

@@ -234,6 +234,8 @@ async function initMissionControl() {
     <p class="mc-bar-note">${reg.guiding_principle}</p>
     <h2 class="mc-section-title">Build Bible <a href="/mission-control/build-bible.html" class="mc-inline-link">★ Milestone #50 →</a></h2>
     <p class="mc-bar-note">Build #50 — Master Build Bible. Planning phase complete — 50 builds, 28 systems, 12 pillars. Implementation begins. 49% bible readiness.</p>
+    <h2 class="mc-section-title">Data Architecture <a href="/mission-control/data-architecture.html" class="mc-inline-link">Canonical Dictionary →</a></h2>
+    <p class="mc-bar-note">Build #51 — Master Data Architecture & Canonical Data Dictionary. 12 domains (100–1200), single source of truth. 0 relationship edges. 41% data architecture readiness.</p>
     <h2 class="mc-section-title">Governance & Constitution <a href="/mission-control/governance.html" class="mc-inline-link">Institutional Rules →</a></h2>
     <p class="mc-bar-note">Build #49 — Master governance & institutional constitution. 6 values, 7 steward roles. 0 stewards assigned. 44% governance readiness.</p>
     <h2 class="mc-section-title">Technical Architecture <a href="/mission-control/technical-architecture.html" class="mc-inline-link">Production Engineering →</a></h2>
@@ -4847,6 +4849,140 @@ async function initGovernanceConstitution() {
   initDevConsole(mc);
 }
 
+async function initDataArchitecture() {
+  const root = document.getElementById('mc-data-architecture-root');
+  if (!root) return;
+
+  const [daRes, mcRes] = await Promise.all([
+    fetch('/data/data-architecture.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const da = await daRes.json();
+  const mc = await mcRes.json();
+  const s = da.summary;
+  const dom = da.canonical_domains;
+
+  const domainRows = dom.domains.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.number}</td><td>${d.title}</td>
+      <td><code>${d.id_field}</code></td><td>${d.status}</td><td>${d.records}</td>
+      <td>${d.implementation}</td>
+      <td>${d.route ? `<a href="${d.route}">registry</a>` : '—'}</td></tr>`).join('');
+
+  const fieldRows = da.canonical_object_model.fields.map(f => `
+    <tr><td><code>${f.field}</code></td><td>${f.title}</td><td>${f.required ? 'Yes' : 'No'}</td><td>${f.enforced}</td></tr>`).join('');
+
+  const metaRows = da.metadata_standards.fields.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.field}</td><td>${m.status}</td></tr>`).join('');
+
+  const verbRows = da.relationship_standards.verbs.map(v => `
+    <tr><td><code>${v.verb}</code></td><td>${v.description}</td></tr>`).join('');
+
+  const stateRows = da.publishing_states.states.map(st => `
+    <tr><td>${st.state}</td><td>${st.order}</td><td>${st.mc_tracked}</td></tr>`).join('');
+
+  const apiRows = da.api_philosophy.apis.map(a => `
+    <tr><td><code>${a.id}</code></td><td>${a.name}</td><td>${a.status}</td></tr>`).join('');
+
+  const metricRows = da.mc_integration.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('');
+
+  const counts = da.mc_data_dashboard.current_counts;
+  const extendLinks = da.extends.map(e =>
+    `<a href="${e.route}">Build #${e.build} ${e.title}</a>`).join(' · ');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Data Architecture</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #51 · ${da.title}</p>
+      <h1>Master Data Architecture & Canonical Data Dictionary</h1>
+      <p class="mc-header__question">${da.governing_principle}</p>
+      <p class="mc-bar-note">${da.purpose}</p>
+      <p class="mc-bar-note">Extends ${extendLinks}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Data architecture readiness</div><div class="mc-stat__value">${s.data_architecture_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Domains</div><div class="mc-stat__value">${dom.domains_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Live / partial</div><div class="mc-stat__value">${dom.domains_live} / ${dom.domains_partial}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Knowledge published</div><div class="mc-stat__value">${counts.knowledge_published}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Evidence records</div><div class="mc-stat__value">${counts.evidence_records}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Relationship edges</div><div class="mc-stat__value">${counts.relationship_edges}</div></div>
+    </div>
+    <h2 class="mc-section-title">Data Philosophy</h2>
+    <p class="mc-bar-note"><strong>Wrong question:</strong> ${da.data_philosophy.wrong_question}</p>
+    <p class="mc-bar-note"><strong>Right question:</strong> ${da.data_philosophy.right_question}</p>
+    <ul class="mc-deliverables">${da.data_philosophy.rules.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Twelve Canonical Data Domains</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>#</th><th>Domain</th><th>ID Field</th><th>Status</th><th>Records</th><th>Implementation</th><th>Registry</th></tr></thead>
+      <tbody>${domainRows}</tbody></table>
+    <h2 class="mc-section-title">Canonical Object Model</h2>
+    <p class="mc-bar-note">${da.canonical_object_model.note} · ${da.canonical_object_model.legacy_objects} legacy objects in Build #15 model.</p>
+    <table class="mc-table"><thead><tr><th>Field</th><th>Title</th><th>Required</th><th>Enforced</th></tr></thead>
+      <tbody>${fieldRows}</tbody></table>
+    <h2 class="mc-section-title">Metadata Standards</h2>
+    <p class="mc-bar-note">${da.metadata_standards.mc_dependency}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Field</th><th>Status</th></tr></thead>
+      <tbody>${metaRows}</tbody></table>
+    <h2 class="mc-section-title">Relationship Standards</h2>
+    <p class="mc-bar-note">${da.relationship_standards.principle} · ${da.relationship_standards.legacy_types} legacy types · ${da.relationship_standards.edges_recorded} edges recorded</p>
+    <table class="mc-table"><thead><tr><th>Verb</th><th>Description</th></tr></thead>
+      <tbody>${verbRows}</tbody></table>
+    <h2 class="mc-section-title">Versioning</h2>
+    <p class="mc-bar-note">${da.versioning.chain.join(' → ')}</p>
+    <p class="mc-bar-note">${da.versioning.current}</p>
+    <h2 class="mc-section-title">Publishing States</h2>
+    <p class="mc-bar-note">${da.publishing_states.flow}</p>
+    <table class="mc-table"><thead><tr><th>State</th><th>Order</th><th>MC Tracked</th></tr></thead>
+      <tbody>${stateRows}</tbody></table>
+    <h2 class="mc-section-title">Search Index</h2>
+    <p class="mc-bar-note">${da.search_index.status} — ${da.search_index.current}</p>
+    <ul class="mc-deliverables">${da.search_index.indexed_fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">API Philosophy</h2>
+    <p class="mc-bar-note">${da.api_philosophy.principle}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>API</th><th>Status</th></tr></thead>
+      <tbody>${apiRows}</tbody></table>
+    <h2 class="mc-section-title">Database Philosophy</h2>
+    <p class="mc-bar-note">${da.database_philosophy.current}</p>
+    <ul class="mc-deliverables">
+      <li>Normalize: ${da.database_philosophy.normalize ? 'yes' : 'no'}</li>
+      <li>Denormalize when: ${da.database_philosophy.denormalize_when}</li>
+      <li>Referential integrity: ${da.database_philosophy.referential_integrity}</li>
+      <li>Historical records: ${da.database_philosophy.historical_records}</li>
+    </ul>
+    <h2 class="mc-section-title">Institutional Data Health</h2>
+    <table class="mc-table"><thead><tr><th>Metric</th><th>Count</th></tr></thead>
+      <tbody>
+        <tr><td>Knowledge assets published</td><td>${counts.knowledge_published}</td></tr>
+        <tr><td>Evidence records</td><td>${counts.evidence_records}</td></tr>
+        <tr><td>Counties indexed</td><td>${counts.counties_indexed}</td></tr>
+        <tr><td>Organizations</td><td>${counts.organizations}</td></tr>
+        <tr><td>Relationship edges</td><td>${counts.relationship_edges}</td></tr>
+        <tr><td>Builds logged</td><td>${counts.builds_logged}</td></tr>
+        <tr><td>Media assets</td><td>${counts.media_assets}</td></tr>
+        <tr><td>Education Leaders</td><td>${counts.education_leaders}</td></tr>
+      </tbody></table>
+    <h2 class="mc-section-title">Future Expansion</h2>
+    <ul class="mc-deliverables">${da.future_expansion.map(x => `<li>${x}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${da.long_term_vision}</p>
+    <h2 class="mc-section-title">Data Architecture Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${da.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${da.recommended_next_build.number} — ${da.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${da.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_DATA_ARCHITECTURE.md">MASTER_DATA_ARCHITECTURE.md</a> ·
+      <a href="/data/data-architecture.json">JSON</a> ·
+      <a href="/mission-control/data-model.html">Canonical Data Model (#15)</a> ·
+      <a href="/mission-control/database.html">Database Schema (#22)</a> ·
+      <a href="/mission-control/knowledge-graph.html">Knowledge Graph</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 async function initBuildBible() {
   const root = document.getElementById('mc-build-bible-root');
   if (!root) return;
@@ -5005,4 +5141,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initTechnicalArchitecture();
   initGovernanceConstitution();
   initBuildBible();
+  initDataArchitecture();
 });

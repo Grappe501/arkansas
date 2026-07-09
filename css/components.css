@@ -1,6 +1,6 @@
 /**
- * Citizens United — Component Library v1.0
- * Build #9 — reusable visual components
+ * Citizens United — Component Library v1.1
+ * Institutional Authority — sharp edges, high contrast
  */
 
 .ds-page {
@@ -15,7 +15,8 @@
   gap: var(--ds-space-sm) var(--ds-space-lg);
   padding: var(--ds-space-sm) var(--ds-space-md);
   background: var(--ds-surface-alt);
-  border: 1px solid var(--ds-border);
+  border: 1px solid var(--ds-border-strong);
+  border-left: 4px solid var(--ds-primary);
   border-radius: var(--ds-radius-sm);
   font-size: var(--ds-text-caption);
   color: var(--ds-text-muted);
@@ -29,10 +30,11 @@
 
 .ds-timeline-card {
   background: var(--ds-surface);
+  border: 1px solid var(--ds-border-strong);
   border-left: 4px solid var(--ds-domain-history);
-  border-radius: 0 var(--ds-radius) var(--ds-radius) 0;
+  border-radius: var(--ds-radius);
   padding: var(--ds-space-lg);
-  box-shadow: var(--ds-shadow);
+  box-shadow: none;
   margin-bottom: var(--ds-space-md);
 }
 
@@ -53,11 +55,11 @@
 
 .ds-case-card {
   background: var(--ds-surface);
-  border: 1px solid var(--ds-border);
+  border: 1px solid var(--ds-border-strong);
   border-top: 4px solid var(--ds-domain-legal);
   border-radius: var(--ds-radius);
   padding: var(--ds-space-lg);
-  box-shadow: var(--ds-shadow);
+  box-shadow: none;
 }
 
 .ds-case-card__label {
@@ -69,8 +71,9 @@
 }
 
 .ds-concept-card {
-  background: linear-gradient(180deg, var(--ds-surface) 0%, var(--ds-surface-alt) 100%);
-  border: 1px solid var(--ds-border);
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border-strong);
+  border-left: 4px solid var(--ds-domain-legal);
   border-radius: var(--ds-radius);
   padding: var(--ds-space-lg);
 }
@@ -83,11 +86,11 @@
 }
 
 .ds-fact-callout {
-  background: #f0f6fa;
+  background: #e8eef5;
   border-left: 4px solid var(--ds-domain-data);
   padding: var(--ds-space-md) var(--ds-space-lg);
   margin: var(--ds-space-lg) 0;
-  border-radius: 0 var(--ds-radius-sm) var(--ds-radius-sm) 0;
+  border-radius: 0;
 }
 
 .ds-fact-callout__label {
@@ -113,8 +116,8 @@
   padding: var(--ds-space-md);
   border-radius: var(--ds-radius);
   font-size: var(--ds-text-small);
-  background: #faf8f5;
-  border: 1px dashed var(--ds-border-strong);
+  background: var(--ds-surface-alt);
+  border: 1px solid var(--ds-border-strong);
 }
 
 .ds-myth-fact__myth strong { color: var(--ds-warning); }
@@ -123,8 +126,9 @@
   padding: var(--ds-space-md);
   border-radius: var(--ds-radius);
   font-size: var(--ds-text-small);
-  background: #f2f7f4;
-  border: 1px solid #c5dcc8;
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-success);
+  border-left: 4px solid var(--ds-success);
 }
 
 .ds-myth-fact__fact strong { color: var(--ds-success); }
@@ -224,9 +228,10 @@
 }
 
 .ds-leadership-invite {
-  background: linear-gradient(135deg, var(--ds-primary) 0%, var(--ds-primary-light) 100%);
+  background: var(--ds-primary);
   color: #fff;
   border-radius: var(--ds-radius);
+  border-left: 4px solid var(--ds-highlight);
   padding: var(--ds-space-xl);
   text-align: center;
   margin: var(--ds-space-2xl) 0;
@@ -240,8 +245,8 @@
 
 .ds-leadership-invite p {
   margin: 0 auto var(--ds-space-lg);
-  opacity: 0.92;
   max-width: var(--ds-measure-narrow);
+  font-weight: 500;
 }
 
 .ds-leadership-invite .ds-btn {
@@ -266,8 +271,9 @@
   padding: var(--ds-space-sm) var(--ds-space-md);
   background: var(--ds-surface);
   border: 1px solid var(--ds-domain-civic);
-  border-radius: 999px;
+  border-radius: var(--ds-radius);
   font-size: var(--ds-text-small);
+  font-weight: 600;
   color: var(--ds-domain-civic);
   text-decoration: none;
 }
@@ -281,8 +287,12 @@
 
 .ds-emotion-step {
   font-size: var(--ds-text-caption);
-  padding: 0.2rem 0.5rem;
-  background: var(--ds-surface-alt);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.25rem 0.55rem;
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border-strong);
   border-radius: var(--ds-radius-sm);
   color: var(--ds-text-muted);
 }

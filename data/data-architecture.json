@@ -1,0 +1,770 @@
+{
+  "version": "1.0",
+  "build": 51,
+  "updated": "2026-07-09",
+  "title": "Master Data Architecture & Canonical Data Dictionary v1.0",
+  "subtitle": "The Institutional Data Constitution",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/data-architecture.html",
+  "constitution": "/docs/MASTER_DATA_ARCHITECTURE.md",
+  "purpose": "How the institution thinks about information \u2014 single source of truth for every person, place, idea, and document.",
+  "governing_principle": "One integrated knowledge institution \u2014 never a collection of disconnected databases. Every object exists once and is referenced everywhere else.",
+  "data_philosophy": {
+    "wrong_question": "Where else did we write this?",
+    "right_question": "Where is the single source of truth?",
+    "rules": [
+      "No duplication",
+      "No conflicting versions",
+      "No disconnected data"
+    ]
+  },
+  "extends": [
+    {
+      "title": "Canonical Data Model",
+      "build": 15,
+      "route": "/data/canonical-data-model.json"
+    },
+    {
+      "title": "Database Schema",
+      "build": 22,
+      "route": "/data/database-schema.json"
+    },
+    {
+      "title": "Knowledge Graph",
+      "build": 11,
+      "route": "/data/knowledge-graph.json"
+    },
+    {
+      "title": "Technical Architecture",
+      "build": 48,
+      "route": "/data/technical-architecture.json"
+    },
+    {
+      "title": "Master Build Bible",
+      "build": 50,
+      "route": "/data/build-bible.json"
+    }
+  ],
+  "canonical_domains": {
+    "title": "Twelve Canonical Data Domains",
+    "domains": [
+      {
+        "id": "DOM-100",
+        "number": 100,
+        "title": "Identity",
+        "id_field": "Person ID",
+        "stores": [
+          "Users",
+          "Education Leaders",
+          "Researchers",
+          "Coalition contacts",
+          "Administrators",
+          "Volunteers",
+          "Public officials"
+        ],
+        "status": "planned",
+        "implementation": "Participant profile schema \u2014 no live Person records",
+        "route": "/data/participant-profile-schema.json",
+        "records": 0
+      },
+      {
+        "id": "DOM-200",
+        "number": 200,
+        "title": "Organizations",
+        "id_field": "Organization ID",
+        "stores": [
+          "Coalition organizations",
+          "Government agencies",
+          "Educational institutions",
+          "Libraries",
+          "Community groups",
+          "Universities",
+          "Media organizations"
+        ],
+        "status": "planned",
+        "implementation": "Coalition directory \u2014 0 organizations",
+        "route": "/data/coalition-directory.json",
+        "records": 0
+      },
+      {
+        "id": "DOM-300",
+        "number": 300,
+        "title": "Geography",
+        "id_field": "Geography ID",
+        "stores": [
+          "Arkansas",
+          "Regions",
+          "Counties",
+          "Cities",
+          "Legislative districts",
+          "Congressional districts",
+          "ZIP codes",
+          "Precinct references (future)"
+        ],
+        "status": "partial",
+        "implementation": "75 counties indexed \u2014 districts/ZIPs not modeled",
+        "route": "/data/arkansas-counties.json",
+        "records": 75
+      },
+      {
+        "id": "DOM-400",
+        "number": 400,
+        "title": "Knowledge",
+        "id_field": "Knowledge ID",
+        "stores": [
+          "Articles",
+          "Lessons",
+          "Encyclopedia entries",
+          "FAQ entries",
+          "Definitions",
+          "Learning modules"
+        ],
+        "status": "partial",
+        "implementation": "15 published / ~2700 target",
+        "route": "/data/content-inventory.json",
+        "records": 15
+      },
+      {
+        "id": "DOM-500",
+        "number": 500,
+        "title": "Research",
+        "id_field": "Research ID",
+        "stores": [
+          "Research projects",
+          "Research notes",
+          "Source summaries",
+          "Literature reviews",
+          "Research tasks",
+          "Research status"
+        ],
+        "status": "partial",
+        "implementation": "Research framework + methodology \u2014 no Research ID registry",
+        "route": "/data/research-framework.json",
+        "records": 0
+      },
+      {
+        "id": "DOM-600",
+        "number": 600,
+        "title": "Evidence",
+        "id_field": "Evidence ID",
+        "stores": [
+          "Claims",
+          "Sources",
+          "Evidence ratings",
+          "Verification status",
+          "Citation relationships",
+          "Review history"
+        ],
+        "status": "partial",
+        "implementation": "14 evidence records \u2014 Evidence Ledger partial",
+        "route": "/data/evidence-registry.json",
+        "records": 14
+      },
+      {
+        "id": "DOM-700",
+        "number": 700,
+        "title": "Law",
+        "id_field": "Legal ID",
+        "stores": [
+          "Court cases",
+          "Statutes",
+          "Regulations",
+          "Constitutional provisions",
+          "Legislative proposals",
+          "Ballot initiative concepts"
+        ],
+        "status": "planned",
+        "implementation": "Educational halls reference cases \u2014 no Legal ID registry",
+        "route": "/halls/the-case.html",
+        "records": 0
+      },
+      {
+        "id": "DOM-800",
+        "number": 800,
+        "title": "Media",
+        "id_field": "Media ID",
+        "stores": [
+          "Videos",
+          "Audio",
+          "Images",
+          "Infographics",
+          "Animations",
+          "Presentations",
+          "PDFs"
+        ],
+        "status": "planned",
+        "implementation": "Media Studio designed \u2014 0 media assets catalogued",
+        "route": "/mission-control/media-studio.html",
+        "records": 0
+      },
+      {
+        "id": "DOM-900",
+        "number": 900,
+        "title": "Community",
+        "id_field": "Activity ID",
+        "stores": [
+          "Community conversations",
+          "Events",
+          "Presentations",
+          "Academy sessions",
+          "Volunteer activities",
+          "Education Leader activities"
+        ],
+        "status": "planned",
+        "implementation": "0 Education Leaders \u00b7 0 coalition events live",
+        "route": "/coalition/events.html",
+        "records": 0
+      },
+      {
+        "id": "DOM-1000",
+        "number": 1000,
+        "title": "Mission Control",
+        "id_field": "Operations ID",
+        "stores": [
+          "Projects",
+          "Builds",
+          "Tasks",
+          "Milestones",
+          "Progress",
+          "Reports",
+          "Institutional metrics"
+        ],
+        "status": "live",
+        "implementation": "52 builds logged in mission-control.json",
+        "route": "/data/mission-control.json",
+        "records": 52
+      },
+      {
+        "id": "DOM-1100",
+        "number": 1100,
+        "title": "Analytics",
+        "id_field": "Analytics ID",
+        "stores": [
+          "Learning progress",
+          "Search activity",
+          "Downloads",
+          "Learning paths",
+          "Resource usage",
+          "Community engagement"
+        ],
+        "status": "planned",
+        "implementation": "No analytics store \u2014 static site only",
+        "route": null,
+        "records": 0
+      },
+      {
+        "id": "DOM-1200",
+        "number": 1200,
+        "title": "Relationships",
+        "id_field": "Relationship ID",
+        "stores": [
+          "Cross-domain edges",
+          "Knowledge graph links",
+          "Citation chains",
+          "Geographic associations",
+          "Institutional connections"
+        ],
+        "status": "partial",
+        "implementation": "20 relationship types defined \u00b7 0 edges recorded",
+        "route": "/data/relationship-registry.json",
+        "records": 0
+      }
+    ],
+    "domains_total": 12,
+    "domains_live": 1,
+    "domains_partial": 5,
+    "domains_planned": 6
+  },
+  "canonical_object_model": {
+    "title": "Shared Object Structure",
+    "fields": [
+      {
+        "field": "id",
+        "title": "Unique ID",
+        "required": true,
+        "enforced": "partial"
+      },
+      {
+        "field": "title",
+        "title": "Title",
+        "required": true,
+        "enforced": "partial"
+      },
+      {
+        "field": "description",
+        "title": "Description",
+        "required": true,
+        "enforced": "partial"
+      },
+      {
+        "field": "created_date",
+        "title": "Created Date",
+        "required": true,
+        "enforced": "partial"
+      },
+      {
+        "field": "updated_date",
+        "title": "Updated Date",
+        "required": true,
+        "enforced": "live"
+      },
+      {
+        "field": "status",
+        "title": "Status",
+        "required": true,
+        "enforced": "partial"
+      },
+      {
+        "field": "owner",
+        "title": "Owner",
+        "required": false,
+        "enforced": "planned"
+      },
+      {
+        "field": "review_date",
+        "title": "Review Date",
+        "required": false,
+        "enforced": "planned"
+      },
+      {
+        "field": "tags",
+        "title": "Tags",
+        "required": false,
+        "enforced": "planned"
+      },
+      {
+        "field": "relationships",
+        "title": "Relationships",
+        "required": false,
+        "enforced": "planned"
+      },
+      {
+        "field": "version",
+        "title": "Version",
+        "required": true,
+        "enforced": "partial"
+      },
+      {
+        "field": "visibility",
+        "title": "Visibility",
+        "required": false,
+        "enforced": "planned"
+      }
+    ],
+    "fields_total": 12,
+    "note": "Build #15 canonical objects map into domains 100\u2013900; MC objects map to domain 1000.",
+    "legacy_objects": 10,
+    "legacy_route": "/data/canonical-data-model.json"
+  },
+  "metadata_standards": {
+    "title": "Required Metadata",
+    "fields": [
+      {
+        "id": "META-01",
+        "field": "keywords",
+        "status": "planned"
+      },
+      {
+        "id": "META-02",
+        "field": "reading_level",
+        "status": "planned"
+      },
+      {
+        "id": "META-03",
+        "field": "topic",
+        "status": "partial"
+      },
+      {
+        "id": "META-04",
+        "field": "category",
+        "status": "partial"
+      },
+      {
+        "id": "META-05",
+        "field": "county_relevance",
+        "status": "planned"
+      },
+      {
+        "id": "META-06",
+        "field": "arkansas_relevance",
+        "status": "partial"
+      },
+      {
+        "id": "META-07",
+        "field": "educational_level",
+        "status": "partial"
+      },
+      {
+        "id": "META-08",
+        "field": "review_cycle",
+        "status": "planned"
+      },
+      {
+        "id": "META-09",
+        "field": "primary_source_availability",
+        "status": "partial"
+      }
+    ],
+    "enforcement": "planned",
+    "mc_dependency": "Mission Control reporting requires high-quality metadata on all published objects."
+  },
+  "relationship_standards": {
+    "title": "Institutional Relationship Verbs",
+    "principle": "Relationships never hardcoded \u2014 structured data only",
+    "verbs": [
+      {
+        "verb": "SUPPORTED_BY",
+        "description": "Claim or assertion backed by source/evidence"
+      },
+      {
+        "verb": "RELATED_TO",
+        "description": "General associative link between objects"
+      },
+      {
+        "verb": "PRECEDES",
+        "description": "Temporal ordering \u2014 earlier object"
+      },
+      {
+        "verb": "FOLLOWS",
+        "description": "Temporal ordering \u2014 later object"
+      },
+      {
+        "verb": "LOCATED_IN",
+        "description": "Geographic containment"
+      },
+      {
+        "verb": "MENTORS",
+        "description": "Person guides another person"
+      },
+      {
+        "verb": "USES",
+        "description": "Object employs another object (e.g. presentation uses video)"
+      },
+      {
+        "verb": "PART_OF",
+        "description": "Hierarchical membership"
+      },
+      {
+        "verb": "CITED_BY",
+        "description": "Citation inbound reference"
+      },
+      {
+        "verb": "REFERRED_TO",
+        "description": "Outbound reference link"
+      }
+    ],
+    "legacy_types": 20,
+    "edges_recorded": 0,
+    "registry_route": "/data/relationship-registry.json",
+    "knowledge_graph_route": "/mission-control/knowledge-graph.html"
+  },
+  "versioning": {
+    "chain": [
+      "Current Version",
+      "Historical Versions",
+      "Revision Notes",
+      "Review History",
+      "Publication History"
+    ],
+    "status": "partial",
+    "current": "Git + VERSION + CHANGELOG for repo; per-object versioning not unified"
+  },
+  "publishing_states": {
+    "title": "Publication Lifecycle",
+    "states": [
+      {
+        "state": "draft",
+        "order": 1,
+        "mc_tracked": "partial"
+      },
+      {
+        "state": "research",
+        "order": 2,
+        "mc_tracked": "partial"
+      },
+      {
+        "state": "review",
+        "order": 3,
+        "mc_tracked": "partial"
+      },
+      {
+        "state": "approved",
+        "order": 4,
+        "mc_tracked": "planned"
+      },
+      {
+        "state": "published",
+        "order": 5,
+        "mc_tracked": "partial"
+      },
+      {
+        "state": "scheduled_review",
+        "order": 6,
+        "mc_tracked": "planned"
+      }
+    ],
+    "flow": "Draft \u2192 Research \u2192 Review \u2192 Approved \u2192 Published \u2192 Scheduled Review"
+  },
+  "search_index": {
+    "status": "planned",
+    "indexed_fields": [
+      "title",
+      "description",
+      "keywords",
+      "relationships",
+      "topics",
+      "arkansas_relevance",
+      "counties",
+      "organizations",
+      "people",
+      "cases",
+      "sources"
+    ],
+    "current": "Static HTML \u2014 no search index service"
+  },
+  "api_philosophy": {
+    "principle": "Future systems never access raw data directly \u2014 documented services only",
+    "apis": [
+      {
+        "id": "API-100",
+        "name": "Identity API",
+        "status": "planned"
+      },
+      {
+        "id": "API-200",
+        "name": "Knowledge API",
+        "status": "planned"
+      },
+      {
+        "id": "API-300",
+        "name": "Research API",
+        "status": "planned"
+      },
+      {
+        "id": "API-400",
+        "name": "Evidence API",
+        "status": "planned"
+      },
+      {
+        "id": "API-500",
+        "name": "Coalition API",
+        "status": "planned"
+      },
+      {
+        "id": "API-600",
+        "name": "Mission Control API",
+        "status": "planned"
+      },
+      {
+        "id": "API-700",
+        "name": "Media API",
+        "status": "planned"
+      },
+      {
+        "id": "API-800",
+        "name": "Analytics API",
+        "status": "planned"
+      }
+    ],
+    "apis_deployed": 0
+  },
+  "database_philosophy": {
+    "normalize": true,
+    "denormalize_when": "Performance requires it only",
+    "referential_integrity": "planned",
+    "historical_records": "partial",
+    "current": "Neon/Prisma documented in Technical Architecture \u2014 not provisioned",
+    "schema_route": "/data/database-schema.json"
+  },
+  "mc_data_dashboard": {
+    "title": "Institutional Data Health",
+    "reports": [
+      "Objects created",
+      "Relationships created",
+      "Evidence records",
+      "Research records",
+      "Knowledge assets",
+      "Media assets",
+      "County coverage",
+      "Community activity",
+      "Overall institutional data health"
+    ],
+    "current_counts": {
+      "knowledge_published": 15,
+      "evidence_records": 14,
+      "counties_indexed": 75,
+      "organizations": 0,
+      "relationship_edges": 0,
+      "builds_logged": 52,
+      "media_assets": 0,
+      "education_leaders": 0
+    }
+  },
+  "future_expansion": [
+    "Additional civic education topics",
+    "New Arkansas initiatives",
+    "Expanded research collections",
+    "Future AI capabilities",
+    "Additional states (if ever desired)"
+  ],
+  "long_term_vision": "Whether the platform contains 5,000 records or 5 million, every piece of information fits the same coherent structure. Future developers immediately understand how the institution thinks about knowledge.",
+  "mc_integration": {
+    "title": "Mission Control Data Architecture Metrics",
+    "status": "partial",
+    "metrics": [
+      {
+        "id": "DATA-01",
+        "title": "Canonical domains defined",
+        "status": "live",
+        "current": "12/12"
+      },
+      {
+        "id": "DATA-02",
+        "title": "Domains with live registries",
+        "status": "partial",
+        "current": "1 live, 5 partial"
+      },
+      {
+        "id": "DATA-03",
+        "title": "Canonical object fields specified",
+        "status": "live",
+        "current": "12 fields"
+      },
+      {
+        "id": "DATA-04",
+        "title": "Metadata standards enforced",
+        "status": "planned",
+        "current": "5 partial, 4 planned"
+      },
+      {
+        "id": "DATA-05",
+        "title": "Relationship verbs institutional",
+        "status": "live",
+        "current": "10 verbs + 20 legacy types"
+      },
+      {
+        "id": "DATA-06",
+        "title": "Relationship edges recorded",
+        "status": "planned",
+        "current": "0 edges"
+      },
+      {
+        "id": "DATA-07",
+        "title": "Publishing state machine",
+        "status": "partial",
+        "current": "6 states defined \u2014 partial MC tracking"
+      },
+      {
+        "id": "DATA-08",
+        "title": "Search index operational",
+        "status": "planned",
+        "current": "No index service"
+      },
+      {
+        "id": "DATA-09",
+        "title": "Domain APIs deployed",
+        "status": "planned",
+        "current": "0/8 APIs"
+      },
+      {
+        "id": "DATA-10",
+        "title": "Database provisioned",
+        "status": "planned",
+        "current": "Schema blueprint only"
+      },
+      {
+        "id": "DATA-11",
+        "title": "Knowledge assets (Domain 400)",
+        "status": "partial",
+        "current": "15"
+      },
+      {
+        "id": "DATA-12",
+        "title": "Evidence records (Domain 600)",
+        "status": "partial",
+        "current": "14"
+      },
+      {
+        "id": "DATA-13",
+        "title": "County coverage (Domain 300)",
+        "status": "partial",
+        "current": "75 counties \u00b7 0 with participants"
+      },
+      {
+        "id": "DATA-14",
+        "title": "Institutional data health score",
+        "status": "partial",
+        "current": "See summary.data_architecture_readiness_pct"
+      }
+    ],
+    "authoritative_reference": true
+  },
+  "related_blueprints": [
+    {
+      "title": "Canonical Data Model (Build #15)",
+      "route": "/mission-control/data-model.html",
+      "build": 15
+    },
+    {
+      "title": "Database Schema (Build #22)",
+      "route": "/mission-control/database.html",
+      "build": 22
+    },
+    {
+      "title": "Knowledge Graph (Build #11)",
+      "route": "/mission-control/knowledge-graph.html",
+      "build": 11
+    },
+    {
+      "title": "Systems Integration (Build #45)",
+      "route": "/mission-control/systems-integration.html",
+      "build": 45
+    },
+    {
+      "title": "Technical Architecture (Build #48)",
+      "route": "/mission-control/technical-architecture.html",
+      "build": 48
+    }
+  ],
+  "summary": {
+    "domains_total": 12,
+    "domains_live": 1,
+    "domains_partial": 5,
+    "domains_planned": 6,
+    "canonical_fields": 12,
+    "metadata_fields": 9,
+    "relationship_verbs": 10,
+    "relationship_types_legacy": 20,
+    "relationship_edges": 0,
+    "publishing_states": 6,
+    "apis_defined": 8,
+    "apis_deployed": 0,
+    "search_index_live": false,
+    "database_provisioned": false,
+    "knowledge_published": 15,
+    "evidence_records": 14,
+    "counties_indexed": 75,
+    "builds_logged": 52,
+    "data_architecture_readiness_pct": 41
+  },
+  "catalog_gaps": [
+    "0 relationship edges recorded \u2014 schema ready, graph empty",
+    "0/8 domain APIs deployed \u2014 philosophy documented only",
+    "No search index service \u2014 static HTML site",
+    "Neon/Prisma database not provisioned \u2014 schema blueprint from Build #22",
+    "Build #15 canonical objects (10 types) predate 12-domain model \u2014 mapping documented, migration pending",
+    "Metadata standards defined \u2014 not enforced on published content",
+    "Domain 700 Law \u2014 no Legal ID registry despite educational hall content",
+    "Domain 800 Media \u2014 0 catalogued media assets",
+    "Domain 900 Community \u2014 0 Education Leaders, 0 coalition orgs, 0 events",
+    "Domain 1100 Analytics \u2014 no learning progress or engagement store",
+    "Unified Person ID / Knowledge ID / Legal ID issuance not operational",
+    "Publishing state machine partial \u2014 approved and scheduled_review not tracked in MC"
+  ],
+  "recommended_next_build": {
+    "number": 52,
+    "title": "Master Implementation Roadmap & Sprint Zero",
+    "note": "Neon/Prisma provisioning, COMP-* specs, first domain API, relationship edge pilot, Sprint backlog from Build Bible phases A\u2013E."
+  }
+}

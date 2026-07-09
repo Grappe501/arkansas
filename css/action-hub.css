@@ -16,17 +16,19 @@
   color: #fff;
   border: none;
   padding: 0.85rem 1.25rem;
-  border-radius: 999px;
-  font-weight: 600;
-  font-size: 0.95rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   cursor: pointer;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(12, 18, 32, 0.25);
+  transition: background var(--ds-duration), transform var(--ds-duration);
 }
 
 .action-hub__toggle:hover {
-  background: #a34a1e;
-  transform: translateY(-2px);
+  background: #9a3412;
+  transform: translateY(-1px);
 }
 
 .action-hub--open .action-hub__toggle {
@@ -43,9 +45,9 @@
   right: 0;
   width: 280px;
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-border-strong);
   border-radius: var(--radius) var(--radius) 0 var(--radius);
-  box-shadow: 0 -4px 24px rgba(26, 31, 46, 0.15);
+  box-shadow: 0 -3px 12px rgba(12, 18, 32, 0.14);
   padding: 1rem;
   margin-bottom: -1px;
 }
@@ -58,8 +60,8 @@
   margin: 0 0 0.25rem;
   font-family: var(--font-serif);
   font-size: 1rem;
-  font-weight: 600;
-  color: var(--color-accent);
+  font-weight: 700;
+  color: var(--color-text);
 }
 
 .action-hub__subtitle {
@@ -79,11 +81,12 @@
 .action-hub__link {
   display: block;
   padding: 0.55rem 0.75rem;
-  border-radius: 6px;
+  border-radius: var(--radius);
   text-decoration: none;
   font-size: 0.9rem;
+  font-weight: 600;
   color: var(--color-text);
-  transition: background 0.15s;
+  transition: background var(--ds-duration);
 }
 
 .action-hub__link:hover {

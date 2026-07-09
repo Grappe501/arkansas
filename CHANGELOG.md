@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.55.0] - 2026-07-09 — Build #51 Master Data Architecture & Canonical Data Dictionary
+
+### The Institutional Data Constitution
+- **Master Data Architecture v1.0** — how the institution thinks about information
+- 12 canonical domains (100–1200), canonical object model, metadata standards, relationship verbs
+- 6-state publishing lifecycle, 8 domain APIs defined (0 deployed), database philosophy
+- Extends Build #15 Canonical Data Model · Build #22 Database Schema · Build #48 Technical Architecture
+- Honest: 1 live domain, 5 partial, 0 relationship edges, ~43% data architecture readiness
+- MC dashboard: `/mission-control/data-architecture.html`
+
 ## [1.54.0] - 2026-07-09 — Build #50 Master Build Bible ★ MILESTONE
 
 ### The First Complete Architecture

@@ -10,16 +10,18 @@
   gap: 0.35rem;
   margin: 1rem 0 2rem;
   padding: 1rem;
-  background: var(--surface-alt, #f4f6f8);
-  border-radius: 8px;
+  background: var(--ds-surface-alt);
+  border: 1px solid var(--ds-border-strong);
+  border-radius: var(--ds-radius);
   font-size: 0.85rem;
 }
 
 .site-map-journey__stage {
-  background: #fff;
-  border: 1px solid var(--border, #dde3ea);
+  background: var(--ds-surface);
+  border: 1px solid var(--ds-border-strong);
   padding: 0.35rem 0.65rem;
-  border-radius: 4px;
+  border-radius: var(--ds-radius-sm);
+  font-weight: 600;
 }
 
 .site-map-journey__arrow {
@@ -121,8 +123,10 @@
 
 .site-map-cta {
   margin-top: 2rem;
-  padding: 1rem;
-  background: var(--surface-alt, #f4f6f8);
-  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  background: var(--ds-surface-alt);
+  border: 1px solid var(--ds-border-strong);
+  border-left: 4px solid var(--ds-highlight);
+  border-radius: var(--ds-radius);
   font-size: 0.9rem;
 }
