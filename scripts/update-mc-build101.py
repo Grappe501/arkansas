@@ -14,7 +14,7 @@ s = cip['summary']
 prior_maturity = mc.get('executive', {}).get('institutional_maturity_pct', 32)
 prior_ex = mc.get('executive', {})
 
-mc['version'] = '2.05.1'
+mc['version'] = '2.05.2'
 mc['build'] = 101
 mc['updated'] = '2026-07-09'
 mc['cursor_implementation_package'] = '/data/cursor-implementation-package.json'
@@ -86,7 +86,7 @@ else:
 build_entry = {
     'number': 101,
     'title': title,
-    'version': '2.05.1',
+    'version': '2.05.2',
     'status': 'complete',
     'started': '2026-07-09',
     'completed': '2026-07-09',

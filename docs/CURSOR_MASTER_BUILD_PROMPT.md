@@ -16,7 +16,8 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 
 ## Governing principles (always apply)
 
-0. **Technical Constitution (IMP-01):** [/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md) — Prime Directive, four-layer architecture, build order rule, MC-first, AI-first, knowledge-first, Arkansas-first, volunteer-first.
+0. **Technical Constitution (IMP-01):** [/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
+0b. **Technical Architecture (IMP-02):** [/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md) — repository layers, module standards, stack, MC/AI placement.
 1. **Manifesto (#99):** Will this help an ordinary Arkansan understand how self-government works?
 2. **Charter (#100):** Knowledge → Citizens → Communities → Arkansas → self-government.
 3. **Education before advocacy** — present evidence; Arkansans draw conclusions.
@@ -108,8 +109,10 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 
 ## First step to implement
 
-**IMP-01** is **documented** — [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md).
+**IMP-01** and **IMP-02** are **documented**:
+- [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
+- [Technical Architecture & Repository Blueprint](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
 
-**IMP-02** is next: Master Technical Architecture & Repository Blueprint — migration plan, repo audit, stack lock, folder scaffold.
+**IMP-03** is next: Master Route Map & Complete Application Navigation.
 
-Do not start IMP-03 until IMP-02 acceptance criteria pass.
+Engineering execution (migration, stack lock, env, CI) begins at **IMP-04** after route map is documented.

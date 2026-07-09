@@ -233,7 +233,7 @@ async function initMissionControl() {
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
     <h2 class="mc-section-title">Implementation Package <a href="/mission-control/cursor-implementation-package.html" class="mc-inline-link">50 Steps #101 →</a></h2>
-    <p class="mc-bar-note">Build #101 — Cursor Implementation Package. IMP-01 Technical Constitution documented · 1/50 documented · 0/50 implemented · 59% readiness.</p>
+    <p class="mc-bar-note">Build #101 — Cursor Implementation Package. IMP-01 Constitution + IMP-02 Architecture documented · 2/50 documented · 0/50 implemented · 61% readiness.</p>
     <h2 class="mc-section-title">Founding Charter <a href="/mission-control/founding-charter.html" class="mc-inline-link">Arkansas Declaration #100 →</a></h2>
     <p class="mc-bar-note">Build #100 — Master Founding Charter. Completion of the founding blueprint — 14 charter sections, 9 commitments, institutional covenant. Knowledge strengthens citizens · Citizens strengthen communities. 0 acknowledgments · blueprint documented. 56% readiness.</p>
     <h2 class="mc-section-title">Institutional Manifesto <a href="/mission-control/institutional-manifesto.html" class="mc-inline-link">Why We Build #99 →</a></h2>
@@ -10658,6 +10658,11 @@ async function initCursorImplementationPackage() {
       <div class="mc-stat"><div class="mc-stat__label">MVP in scope</div><div class="mc-stat__value">${s.mvp_in_scope_count}</div></div>
       <div class="mc-stat"><div class="mc-stat__label">Days to Jan 2027</div><div class="mc-stat__value">${s.days_remaining}</div></div>
     </div>
+    <h2 class="mc-section-title">Technical Architecture (IMP-02)</h2>
+    <p class="mc-bar-note"><strong>${cip.technical_architecture.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.technical_architecture.philosophy}</p>
+    <p class="mc-bar-note"><a href="${cip.technical_architecture.route}">IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md</a></p>
+    <h3 class="mc-subsection-title">Repository Layers</h3>
+    <ul class="mc-deliverables">${cip.technical_architecture.repository_layers.map(l => `<li><code>${l}/</code></li>`).join('')}</ul>
     <h2 class="mc-section-title">Technical Constitution (IMP-01)</h2>
     <p class="mc-bar-note"><strong>${cip.technical_constitution.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.technical_constitution.prime_directive}</p>
     <p class="mc-bar-note"><a href="${cip.technical_constitution.route}">IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md</a></p>

@@ -1,6 +1,6 @@
 {
   "name": "arkansas-citizens-facts",
-  "version": "2.05.1",
+  "version": "2.05.2",
   "description": "Research and tracking system for Citizens United reform, ballot initiatives, and democratic finance policy.",
   "private": true,
   "scripts": {
