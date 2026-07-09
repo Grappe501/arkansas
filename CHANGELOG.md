@@ -13,6 +13,19 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.95.0] - 2026-07-09 — Build #91 Master AI Institution
+
+### Every Volunteer Has an AI Partner
+- **Master AI Institution v1.0** — AI amplifies volunteers, does not replace them
+- 3 philosophy layers (Human Judgment → AI Assistance → MC Oversight); 21 specialized AI partners
+- Personal AI workbench; 10 institutional knowledge sources; 8 AI safety rules
+- Collaboration prompts, Education Leader AI, County AI, Mission Control AI, learning system
+- AI dashboard (8 indicators) — usage, productivity, time saved, knowledge gaps
+- Extends Institutional AI (#60), AI Knowledge Engine (#26), Operating Manual (#90)
+- Founder principle — technology handles information, people build relationships
+- Honest: 0/21 specialists deployed · workbench not live · dashboard not live · 0 volunteers · no RAG · ~57% readiness
+- MC dashboard: `/mission-control/ai-institution.html`
+
 ## [1.94.0] - 2026-07-09 — Build #90 Master Institutional Operating Manual
 
 ### If Every Founder Walked Away Tomorrow

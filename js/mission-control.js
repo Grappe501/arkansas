@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">AI Institution <a href="/mission-control/ai-institution.html" class="mc-inline-link">Every Volunteer Has a Partner #91 →</a></h2>
+    <p class="mc-bar-note">Build #91 — Master AI Institution. AI amplifies volunteers, does not replace them. 21 specialists, personal workbench, institutional knowledge grounding. 0/21 deployed · workbench not live. ~57% readiness.</p>
     <h2 class="mc-section-title">Operating Manual <a href="/mission-control/institutional-operating-manual.html" class="mc-inline-link">Institutional Continuity #90 →</a></h2>
     <p class="mc-bar-note">Build #90 — Institutional Operating Manual. If every founder walked away tomorrow, the institution continues. 13 playbooks, 10 SOPs, role manuals, institutional memory. 0/13 manuals · 0 SOPs · dashboard not live. ~60% readiness.</p>
     <h2 class="mc-section-title">PMO Execution Office <a href="/mission-control/pmo-execution-office.html" class="mc-inline-link">Central Execution #89 →</a></h2>
@@ -292,8 +294,8 @@ async function initMissionControl() {
     <p class="mc-bar-note">Build #62 — Citizen Action Center. 6 pathways, learn→participate bridge. Not advocacy. 0 registered · 2 action hub items. ~42% readiness.</p>
     <h2 class="mc-section-title">Coalition Network <a href="/mission-control/coalition-network.html" class="mc-inline-link">Building Arkansas #61 →</a></h2>
     <p class="mc-bar-note">Build #61 — Master Coalition & Civic Alliance Network. 6 categories, 4 levels, resource center. 0 orgs · 0/75 counties. Highest strategic priority. ~44% coalition readiness.</p>
-    <h2 class="mc-section-title">Institutional AI <a href="/mission-control/institutional-ai.html" class="mc-inline-link">Civic Intelligence #60 →</a></h2>
-    <p class="mc-bar-note">Build #60 — Institutional AI Brain. 7 roles, Rule #1 source grounding, confidence levels. Not a chatbot — evidence is authority. 0 answered · no RAG. ~42% AI readiness.</p>
+    <h2 class="mc-section-title">Institutional AI <a href="/mission-control/institutional-ai.html" class="mc-inline-link">Civic Intelligence #60 →</a> · <a href="/mission-control/ai-institution.html" class="mc-inline-link">AI Institution #91 →</a></h2>
+    <p class="mc-bar-note">Build #60 — AI Brain (7 roles). Build #91 — AI Institution (21 specialists, workbench). AI amplifies volunteers. 0 deployed · no RAG · workbench not live.</p>
     <h2 class="mc-section-title">Relationship OS <a href="/mission-control/relationship-os.html" class="mc-inline-link">Institutional CRM #59 →</a></h2>
     <p class="mc-bar-note">Build #59 — Relationship Operating System. 5 networks, CRM dashboard, health score model. 0 active relationships · 0 edges. ~54% ROS readiness.</p>
     <h2 class="mc-section-title">Civic Atlas <a href="/mission-control/civic-atlas.html" class="mc-inline-link">Geographic Intelligence #58 →</a></h2>
@@ -5259,6 +5261,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initExecutionSchedule();
   initPmoExecutionOffice();
   initInstitutionalOperatingManual();
+  initAiInstitution();
 });
 
 async function initUxArchitecture() {
@@ -9527,6 +9530,114 @@ async function initInstitutionalOperatingManual() {
       <a href="/data/institutional-operating-manual.json">JSON</a> ·
       <a href="/mission-control/pmo-execution-office.html">PMO (#89)</a> ·
       <a href="/mission-control/organizational-constitution.html">Constitution (#76)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initAiInstitution() {
+  const root = document.getElementById('mc-ai-institution-root');
+  if (!root) return;
+
+  const [aiRes, mcRes] = await Promise.all([
+    fetch('/data/ai-institution.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ai = await aiRes.json();
+  const mc = await mcRes.json();
+  const s = ai.summary;
+
+  const layerRows = ai.institutional_philosophy.layers.map(l => `
+    <tr><td>${l.layer}</td><td>${l.name}</td><td>${l.role}</td></tr>`).join('');
+
+  const specialistRows = ai.institutional_ai_team.specialists.map(sp => `
+    <tr><td><code>${sp.id}</code></td><td>${sp.name}</td><td>${sp.domain}</td>
+      <td>${sp.deployed ? 'Yes' : 'No'}</td><td>${sp.status}</td></tr>`).join('');
+
+  const sourceRows = ai.ai_knowledge_sources.sources.map(src => `
+    <tr><td>${src.source}</td><td>${src.grounded}</td>
+      <td><a href="${src.route}">→</a></td></tr>`).join('');
+
+  const dashRows = ai.ai_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td>
+      <td>${typeof d.current === 'number' ? d.current.toLocaleString() : d.current}${d.unit ? d.unit : ''}</td>
+      <td>${d.status}</td></tr>`).join('');
+
+  const systemRows = ai.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → AI Institution</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #91 · ${ai.title}</p>
+      <h1>${ai.subtitle}</h1>
+      <p class="mc-header__question">${ai.governing_principle}</p>
+      <p class="mc-bar-note">${ai.purpose}</p>
+      <p class="mc-bar-note"><strong>${ai.tagline}</strong> · ${s.days_remaining} days to ${ai.completion_target_date}</p>
+      <p class="mc-bar-note">AI does not replace volunteers: ${ai.institutional_philosophy.ai_does_not_replace_volunteers ? 'Yes' : 'No'} · AI amplifies: ${ai.institutional_philosophy.ai_amplifies_volunteers ? 'Yes' : 'No'}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">AI readiness</div><div class="mc-stat__value">${s.ai_institution_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Specialists</div><div class="mc-stat__value">${s.ai_specialists_deployed}/${s.ai_specialists_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Volunteers w/ AI</div><div class="mc-stat__value">${s.volunteers_with_ai_partner}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Workbench</div><div class="mc-stat__value">${s.personal_workbench_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">AI dashboard</div><div class="mc-stat__value">${s.ai_dashboard_live ? 'Live' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Usage sessions</div><div class="mc-stat__value">${s.ai_usage_sessions}</div></div>
+    </div>
+    <h2 class="mc-section-title">${ai.institutional_philosophy.title}</h2>
+    <p class="mc-bar-note">MC monitors human + AI capacity: ${ai.institutional_philosophy.mc_monitors_human_and_ai_capacity ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>Layer</th><th>Name</th><th>Role</th></tr></thead>
+      <tbody>${layerRows}</tbody></table>
+    <h2 class="mc-section-title">${ai.institutional_ai_team.title}</h2>
+    <p class="mc-bar-note">Deployed: ${ai.institutional_ai_team.specialists_deployed}/${ai.institutional_ai_team.specialists_total} · Specialized partners: ${ai.institutional_ai_team.specialized_partners_not_one_assistant ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Specialist</th><th>Domain</th><th>Deployed</th><th>Status</th></tr></thead>
+      <tbody>${specialistRows}</tbody></table>
+    <h2 class="mc-section-title">${ai.personal_ai_workbench.title}</h2>
+    <p class="mc-bar-note">Live: ${ai.personal_ai_workbench.live ? 'Yes' : 'No'} · Daily partner: ${ai.personal_ai_workbench.daily_working_partner ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${ai.personal_ai_workbench.fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ai.ai_knowledge_sources.title}</h2>
+    <p class="mc-bar-note">Institutional knowledge only: ${ai.ai_knowledge_sources.not_random_internet_opinions ? 'Yes' : 'No'} · Status: ${ai.ai_knowledge_sources.status}</p>
+    <table class="mc-table"><thead><tr><th>Source</th><th>Grounded</th><th>Route</th></tr></thead>
+      <tbody>${sourceRows}</tbody></table>
+    <h2 class="mc-section-title">${ai.ai_safety_rules.title}</h2>
+    <ul class="mc-deliverables">${ai.ai_safety_rules.rules.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ai.ai_collaboration.title}</h2>
+    <p class="mc-bar-note">Volunteers focus on people: ${ai.ai_collaboration.volunteers_focus_on_people ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${ai.ai_collaboration.example_prompts.map(p => `<li><em>${p}</em></li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ai.ai_for_education_leaders.title}</h2>
+    <ul class="mc-deliverables">${ai.ai_for_education_leaders.assistance_areas.map(a => `<li>${a}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ai.ai_for_county_teams.title}</h2>
+    <ul class="mc-deliverables">${ai.ai_for_county_teams.capabilities.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ai.ai_for_mission_control.title}</h2>
+    <p class="mc-bar-note">Proactive recommendations: ${ai.ai_for_mission_control.proactive_recommendations ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${ai.ai_for_mission_control.identifies.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ai.ai_learning_system.title}</h2>
+    <p class="mc-bar-note">Institution continuously smarter: ${ai.ai_learning_system.institution_continuously_smarter ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${ai.ai_learning_system.tracks.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${ai.ai_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${ai.ai_dashboard.live ? 'Yes' : 'No'} · Measurable: ${ai.ai_dashboard.ai_becomes_measurable ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">Founder's Principle</h2>
+    <p class="mc-bar-note">${ai.founders_principle}</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${ai.integration.chain}</p>
+    <p class="mc-bar-note">Every system AI-assisted: ${ai.integration.every_system_ai_assisted ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${ai.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ai.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ai.recommended_next_build.number} — ${ai.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ai.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_AI_INSTITUTION.md">MASTER_AI_INSTITUTION.md</a> ·
+      <a href="/data/ai-institution.json">JSON</a> ·
+      <a href="/mission-control/institutional-ai.html">Institutional AI (#60)</a> ·
+      <a href="/mission-control/institutional-operating-manual.html">Operating Manual (#90)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

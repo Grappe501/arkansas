@@ -1,0 +1,493 @@
+{
+  "version": "1.0",
+  "build": 91,
+  "updated": "2026-07-09",
+  "completion_target_date": "2027-01-01",
+  "title": "Master AI Institution v1.0",
+  "subtitle": "Every Volunteer Has an AI Partner",
+  "tagline": "AI Amplifies Volunteers",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/ai-institution.html",
+  "constitution": "/docs/MASTER_AI_INSTITUTION.md",
+  "purpose": "Embed artificial intelligence throughout every department to multiply volunteer effectiveness. AI does not replace volunteers \u2014 AI amplifies volunteers. Every volunteer should feel like they have a knowledgeable assistant. Mission Control monitors human and AI capacity together.",
+  "governing_principle": "Artificial intelligence should never replace the heart of Citizens United Facts. It should strengthen it. Every AI should make volunteers more informed. Every volunteer should make communities stronger. Every stronger community should strengthen Arkansas.",
+  "founders_principle": "The purpose of AI is not automation for its own sake. The purpose is to free volunteers to do the work only people can do: build trust, listen, teach, mentor, encourage, lead. Technology handles information. People build relationships.",
+  "institutional_philosophy": {
+    "title": "Institutional Philosophy",
+    "layers": [
+      {
+        "layer": 1,
+        "name": "Human Judgment",
+        "role": "Responsible for important decisions"
+      },
+      {
+        "layer": 2,
+        "name": "AI Assistance",
+        "role": "Accelerates research, organization, writing, planning, education"
+      },
+      {
+        "layer": 3,
+        "name": "Mission Control Oversight",
+        "role": "Ensures accountability"
+      }
+    ],
+    "ai_does_not_replace_volunteers": true,
+    "ai_amplifies_volunteers": true,
+    "mc_monitors_human_and_ai_capacity": true
+  },
+  "institutional_ai_team": {
+    "title": "Institutional AI Team",
+    "specialists": [
+      {
+        "id": "AI-01",
+        "name": "Research AI",
+        "domain": "Research",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-02",
+        "name": "Editorial AI",
+        "domain": "Editorial",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-03",
+        "name": "Legal Research AI",
+        "domain": "Legal",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-04",
+        "name": "Constitutional AI",
+        "domain": "Constitutional",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-05",
+        "name": "Campaign Finance AI",
+        "domain": "Campaign Finance",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-06",
+        "name": "Volunteer AI",
+        "domain": "Volunteers",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-07",
+        "name": "County Operations AI",
+        "domain": "County",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-08",
+        "name": "City Operations AI",
+        "domain": "City",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-09",
+        "name": "Neighborhood Operations AI",
+        "domain": "Neighborhood",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-10",
+        "name": "Coalition AI",
+        "domain": "Coalition",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-11",
+        "name": "Mission Control AI",
+        "domain": "Mission Control",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-12",
+        "name": "Communications AI",
+        "domain": "Communications",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-13",
+        "name": "Social Media AI",
+        "domain": "Social Media",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-14",
+        "name": "Curriculum AI",
+        "domain": "Curriculum",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-15",
+        "name": "Presentation AI",
+        "domain": "Presentations",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-16",
+        "name": "Grant Writing AI",
+        "domain": "Grants",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-17",
+        "name": "Fundraising Support AI",
+        "domain": "Fundraising",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-18",
+        "name": "Technology AI",
+        "domain": "Technology",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-19",
+        "name": "Data Analysis AI",
+        "domain": "Data",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-20",
+        "name": "Relationship AI",
+        "domain": "Relationships",
+        "deployed": false,
+        "status": "planned"
+      },
+      {
+        "id": "AI-21",
+        "name": "Education Leader AI",
+        "domain": "Education Leaders",
+        "deployed": false,
+        "status": "planned"
+      }
+    ],
+    "specialists_total": 21,
+    "specialists_deployed": 0,
+    "specialized_partners_not_one_assistant": true,
+    "status": "planned"
+  },
+  "personal_ai_workbench": {
+    "title": "Personal AI Workbench",
+    "fields": [
+      "Assigned projects",
+      "Department",
+      "Role",
+      "Current tasks",
+      "Relevant documentation",
+      "Training completed",
+      "Institutional standards"
+    ],
+    "live": false,
+    "every_volunteer_receives_workspace": true,
+    "daily_working_partner": true,
+    "status": "planned"
+  },
+  "ai_knowledge_sources": {
+    "title": "AI Knowledge Sources",
+    "sources": [
+      {
+        "source": "Institution Constitution",
+        "route": "/mission-control/organizational-constitution.html",
+        "grounded": true
+      },
+      {
+        "source": "Research Library",
+        "route": "/mission-control/research-library.html",
+        "grounded": true
+      },
+      {
+        "source": "Evidence Ledger",
+        "route": "/mission-control/evidence-ledger.html",
+        "grounded": true
+      },
+      {
+        "source": "Claims Registry",
+        "route": "/data/facts-registry.json",
+        "grounded": "partial"
+      },
+      {
+        "source": "Knowledge Graph",
+        "route": "/mission-control/knowledge-graph.html",
+        "grounded": "partial"
+      },
+      {
+        "source": "Operating Manual",
+        "route": "/mission-control/institutional-operating-manual.html",
+        "grounded": true
+      },
+      {
+        "source": "Mission Control",
+        "route": "/mission-control/",
+        "grounded": true
+      },
+      {
+        "source": "Editorial Standards",
+        "route": "/mission-control/trust.html",
+        "grounded": "partial"
+      },
+      {
+        "source": "Volunteer Handbook",
+        "route": "/mission-control/volunteer-funding-constitution.html",
+        "grounded": "partial"
+      },
+      {
+        "source": "Governance documents",
+        "route": "/mission-control/governance.html",
+        "grounded": true
+      }
+    ],
+    "sources_total": 10,
+    "grounded_in_institutional_knowledge": true,
+    "not_random_internet_opinions": true,
+    "status": "partial"
+  },
+  "ai_safety_rules": {
+    "title": "AI Safety Rules",
+    "rules": [
+      "Identify uncertainty",
+      "Cite institutional sources whenever possible",
+      "Distinguish facts from recommendations",
+      "Respect volunteer privacy",
+      "Protect confidential information",
+      "Avoid inventing facts",
+      "Escalate important decisions to human leadership",
+      "Trust remains paramount"
+    ],
+    "trust_remains_paramount": true,
+    "status": "specified"
+  },
+  "ai_collaboration": {
+    "title": "AI Collaboration",
+    "example_prompts": [
+      "What should I work on today?",
+      "What county needs help?",
+      "Summarize this research",
+      "Draft a presentation",
+      "Prepare discussion questions",
+      "Compare these sources",
+      "Help organize tonight's meeting"
+    ],
+    "reduces_administrative_workload": true,
+    "volunteers_focus_on_people": true,
+    "status": "specified"
+  },
+  "ai_for_education_leaders": {
+    "title": "AI for Education Leaders",
+    "assistance_areas": [
+      "Lesson planning",
+      "Presentation preparation",
+      "Community discussion questions",
+      "Follow-up emails",
+      "Frequently asked questions",
+      "Local resource recommendations"
+    ],
+    "every_education_leader_gains_support": true,
+    "status": "planned"
+  },
+  "ai_for_county_teams": {
+    "title": "AI for County Teams",
+    "capabilities": [
+      "Track progress",
+      "Organize volunteers",
+      "Schedule conversations",
+      "Coordinate coalition partners",
+      "Monitor county goals",
+      "Generate reports"
+    ],
+    "county_leadership_easier": true,
+    "status": "planned"
+  },
+  "ai_for_mission_control": {
+    "title": "AI for Mission Control",
+    "identifies": [
+      "Projects falling behind",
+      "Volunteer overload",
+      "Research gaps",
+      "Community trends",
+      "Growth opportunities",
+      "Technology risks"
+    ],
+    "proactive_recommendations": true,
+    "status": "planned"
+  },
+  "ai_learning_system": {
+    "title": "AI Learning System",
+    "tracks": [
+      "Frequently asked questions",
+      "Research requests",
+      "Volunteer needs",
+      "Documentation gaps",
+      "Training improvements"
+    ],
+    "every_interaction_improves_institution": true,
+    "institution_continuously_smarter": true,
+    "status": "planned"
+  },
+  "ai_dashboard": {
+    "title": "AI Dashboard",
+    "indicators": [
+      {
+        "id": "AI-D01",
+        "indicator": "AI usage",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "AI-D02",
+        "indicator": "Volunteer productivity",
+        "current": 0,
+        "unit": "%",
+        "status": "planned"
+      },
+      {
+        "id": "AI-D03",
+        "indicator": "Questions answered",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "AI-D04",
+        "indicator": "Documents generated",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "AI-D05",
+        "indicator": "Research assisted",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "AI-D06",
+        "indicator": "Time saved (hours)",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "AI-D07",
+        "indicator": "Knowledge gaps identified",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "AI-D08",
+        "indicator": "AI confidence levels",
+        "current": "not tracked",
+        "status": "planned"
+      }
+    ],
+    "live": false,
+    "ai_becomes_measurable": true,
+    "status": "planned"
+  },
+  "integration": {
+    "chain": "Mission Control \u2192 Knowledge Graph \u2192 Research Institute \u2192 Community Education Academy \u2192 Operating Manual \u2192 Relationship OS \u2192 County OS \u2192 Coalition Network",
+    "every_system_ai_assisted": true,
+    "systems": [
+      {
+        "system": "Institutional AI (#60)",
+        "route": "/mission-control/institutional-ai.html",
+        "status": "live"
+      },
+      {
+        "system": "Operating Manual (#90)",
+        "route": "/mission-control/institutional-operating-manual.html",
+        "status": "live"
+      },
+      {
+        "system": "Knowledge Graph",
+        "route": "/mission-control/knowledge-graph.html",
+        "status": "partial"
+      },
+      {
+        "system": "Research Institute (#73)",
+        "route": "/mission-control/arkansas-research-institute.html",
+        "status": "live"
+      },
+      {
+        "system": "Relationship OS (#59)",
+        "route": "/mission-control/relationship-os.html",
+        "status": "live"
+      },
+      {
+        "system": "County OS (#77)",
+        "route": "/mission-control/arkansas-county-operating-system.html",
+        "status": "live"
+      }
+    ],
+    "extends": [
+      {
+        "build": 60,
+        "title": "Institutional AI Brain",
+        "route": "/mission-control/institutional-ai.html"
+      },
+      {
+        "build": 26,
+        "title": "AI Knowledge Engine",
+        "route": "/mission-control/ai-knowledge.html"
+      }
+    ]
+  },
+  "long_term_vision": "By January 2027, every volunteer should feel like they have an experienced teammate available at any hour. The AI remembers institutional knowledge, finds documentation instantly, suggests improvements, organizes work, answers questions, prepares materials. Not fewer volunteers \u2014 volunteers with dramatically greater capacity.",
+  "summary": {
+    "completion_target_date": "2027-01-01",
+    "days_remaining": 176,
+    "ai_institution_readiness_pct": 57,
+    "institutional_ai_v60_readiness_pct": 42,
+    "operating_manual_readiness_pct": 60,
+    "ai_specialists_deployed": 0,
+    "ai_specialists_total": 21,
+    "volunteers_with_ai_partner": 0,
+    "personal_workbench_live": false,
+    "ai_dashboard_live": false,
+    "ai_usage_sessions": 0,
+    "questions_answered": 0,
+    "documents_generated": 0,
+    "time_saved_hours": 0,
+    "institutional_completion_pct": 91
+  },
+  "catalog_gaps": [
+    "0/21 AI specialists deployed \u2014 blueprint only",
+    "Personal AI workbench not live",
+    "AI dashboard not live \u2014 usage not measurable",
+    "0 volunteers with AI partner",
+    "No RAG pipeline to institutional knowledge sources",
+    "AI safety rules specified \u2014 not enforced in product",
+    "Extends Institutional AI #60 \u2014 two AI dashboards until unified",
+    "Knowledge Graph partial \u2014 AI grounding incomplete",
+    "No AI learning loop \u2014 FAQ/volunteer needs not tracked",
+    "MC AI proactive recommendations not operational",
+    "Education Leader / County AI \u2014 no live interfaces"
+  ],
+  "recommended_next_build": {
+    "number": 92,
+    "title": "Executive War Room & Countdown Dashboard Components",
+    "note": "War room UI, live countdown, AI dashboard components, workbench MVP, RAG grounding pipeline, COMP-* specs."
+  }
+}

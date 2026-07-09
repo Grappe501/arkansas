@@ -334,7 +334,7 @@ out = {
         'Decision register from PMO #89 empty — not linked to institutional memory',
     ],
     'recommended_next_build': {
-        'number': 91,
+        'number': 92,
         'title': 'Executive War Room & Countdown Dashboard Components',
         'note': (
             'War room UI, live countdown, documentation health dashboard, SOP registry, '

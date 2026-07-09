@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#91** | **Master AI Institution** | **1.95.0** | **✅ Complete** | [091](091-ai-institution.md) · [/mission-control/ai-institution.html](../mission-control/ai-institution.html) |
 | **#90** | **Master Institutional Operating Manual** | **1.94.0** | **✅ Complete** | [090](090-institutional-operating-manual.md) · [/mission-control/institutional-operating-manual.html](../mission-control/institutional-operating-manual.html) |
 | **#89** | **Master PMO & Execution Office** | **1.93.0** | **✅ Complete** | [089](089-pmo-execution-office.md) · [/mission-control/pmo-execution-office.html](../mission-control/pmo-execution-office.html) |
 | **#88** | **Master Execution Schedule** | **1.92.0** | **✅ Complete** | [088](088-execution-schedule.md) · [/mission-control/execution-schedule.html](../mission-control/execution-schedule.html) |

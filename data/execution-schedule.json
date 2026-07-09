@@ -65,7 +65,7 @@
       {
         "id": "ES-C02",
         "indicator": "Overall Institutional Completion",
-        "current": 90,
+        "current": 91,
         "unit": "%",
         "status": "partial"
       },
@@ -414,8 +414,8 @@
   "summary": {
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "overall_institutional_completion_pct": 90,
-    "builds_complete": 90,
+    "overall_institutional_completion_pct": 91,
+    "builds_complete": 91,
     "countdown_dashboard_live": false,
     "executive_war_room_live": false,
     "critical_path_blocked": 0,

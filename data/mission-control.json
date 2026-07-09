@@ -1,6 +1,6 @@
 {
-  "version": "1.94.0",
-  "build": 90,
+  "version": "1.95.0",
+  "build": 91,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 90,
+    "overall_completion": 91,
     "current_build": {
-      "number": 90,
-      "title": "Citizens United Facts Master Institutional Operating Manual v1.0"
-    },
-    "active_phase": "Institutional Operating Manual \u2192 War Room",
-    "last_completed": "PMO & Execution Office",
-    "next_build": {
       "number": 91,
+      "title": "Citizens United Facts Master AI Institution v1.0"
+    },
+    "active_phase": "AI Institution \u2192 War Room",
+    "last_completed": "Institutional Operating Manual",
+    "next_build": {
+      "number": 92,
       "title": "Executive war room & countdown dashboard components"
     },
     "github_status": "connected",
@@ -39,7 +39,8 @@
     "wireframe_readiness": 38,
     "contact_intelligence_readiness": 34,
     "relationship_os_readiness": 54,
-    "institutional_ai_readiness": 42,
+    "institutional_ai_readiness": 57,
+    "ai_institution_readiness": 57,
     "coalition_network_readiness": 44,
     "citizen_action_center_readiness": 42,
     "campaign_finance_observatory_readiness": 38,
@@ -71,7 +72,7 @@
     "pmo_execution_office_readiness": 60,
     "institutional_operating_manual_readiness": 60,
     "mc2_readiness": 42,
-    "ai_engine_readiness": 34,
+    "ai_engine_readiness": 57,
     "content_factory_readiness": 30,
     "education_academy_readiness": 26,
     "observatory_readiness": 43,
@@ -123,8 +124,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 90,
-      "note": "Build #90 \u2014 Operating Manual. 176 days to Jan 2027."
+      "value": 91,
+      "note": "Build #91 \u2014 AI Institution. 176 days to Jan 2027."
     },
     {
       "id": "constitution",
@@ -777,7 +778,14 @@
       "label": "Operating Manual",
       "value": 60,
       "max": 100,
-      "note": "0/13 manuals \u00b7 dashboard planned."
+      "note": "Operating manual \u00b7 AI grounded in institutional knowledge."
+    },
+    {
+      "id": "ai_institution",
+      "label": "AI Institution",
+      "value": 57,
+      "max": 100,
+      "note": "0/21 specialists \u00b7 workbench planned."
     }
   ],
   "public_readiness": {
@@ -1610,6 +1618,12 @@
       "id": "institutional_operating_manual",
       "label": "Operating Manual",
       "href": "/mission-control/institutional-operating-manual.html",
+      "status": "complete"
+    },
+    {
+      "id": "ai_institution",
+      "label": "AI Institution",
+      "href": "/mission-control/ai-institution.html",
       "status": "complete"
     }
   ],
@@ -2636,6 +2650,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 91,
+      "title": "Citizens United Facts Master AI Institution v1.0",
+      "version": "1.95.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "AI amplifies volunteers \u2014 every volunteer has an AI partner",
+      "summary": "21 AI specialists, personal workbench, knowledge grounding, safety rules, collaboration, education/county/MC AI, learning system, dashboard. 57% readiness \u00b7 0/21 deployed \u00b7 workbench not live.",
+      "files_created": [
+        "data/ai-institution.json",
+        "docs/MASTER_AI_INSTITUTION.md",
+        "builds/091-ai-institution.md",
+        "mission-control/ai-institution.html",
+        "scripts/gen-ai-institution.py",
+        "scripts/update-mc-build91.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/ai-institution.html"
+      ],
+      "decisions_made": [
+        "AI amplifies volunteers \u2014 does not replace them",
+        "21 specialized AI partners \u2014 not one generic assistant",
+        "Grounded in institutional knowledge \u2014 not random internet",
+        "Human judgment \u2192 AI assistance \u2192 MC oversight",
+        "8 AI safety rules \u2014 trust paramount",
+        "Personal workbench for every volunteer",
+        "57% readiness \u2014 blueprint only"
+      ],
+      "open_questions": [
+        "Unify AI #60 and #91 dashboards?",
+        "RAG pipeline \u2014 which sources first?",
+        "Workbench \u2014 embedded in MC or separate app?",
+        "AI usage metrics \u2014 privacy boundaries?"
+      ],
+      "risks": [
+        "0/21 AI specialists deployed \u2014 blueprint only",
+        "Personal AI workbench not live",
+        "AI dashboard not live \u2014 usage not measurable",
+        "0 volunteers with AI partner"
+      ],
+      "next_recommended": 92,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/ai-institution.html",
+      "review_status": "complete"
+    },
     {
       "number": 90,
       "title": "Citizens United Facts Master Institutional Operating Manual v1.0",
@@ -7468,21 +7535,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Institutional Operating Manual v1.0 \u2014 If Every Founder Walked Away Tomorrow",
-    "building_now": "90 builds \u2014 executive war room next",
+    "what_built": "AI Institution v1.0 \u2014 Every Volunteer Has an AI Partner",
+    "building_now": "91 builds \u2014 executive war room next",
     "blocked": [
-      "Operations dashboard",
-      "SOP registry",
-      "Institutional memory store",
-      "Role manuals"
+      "AI workbench UI",
+      "Specialist deployment",
+      "RAG grounding",
+      "AI dashboard"
     ],
     "ready_public": [
-      "Playbook structure",
-      "Decision framework",
-      "Documentation standards",
-      "Founder legacy"
+      "21 specialist model",
+      "Safety rules",
+      "Knowledge sources",
+      "Philosophy layers"
     ],
-    "next": "Build #91 \u2014 Executive war room & countdown dashboard components"
+    "next": "Build #92 \u2014 Executive war room & countdown dashboard components"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8401,5 +8468,15 @@
     "sops_written": 0,
     "operations_dashboard_live": false,
     "institutional_memory_entries": 0
+  },
+  "ai_institution": "/data/ai-institution.json",
+  "ai_institution_dashboard": "/mission-control/ai-institution.html",
+  "ai_institution_inventory": {
+    "readiness_score": 57,
+    "specialists_deployed": 0,
+    "specialists_total": 21,
+    "volunteers_with_ai_partner": 0,
+    "ai_dashboard_live": false,
+    "personal_workbench_live": false
   }
 }
