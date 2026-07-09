@@ -1,11 +1,12 @@
 /**
- * Citizens Facts — Shared layout v1.14.0
+ * Citizens Facts — Shared layout v1.15.0
  */
 
 const SITE_CSS = '/css/action-hub.css';
 const SITE_JS = '/js/action-hub.js';
 const JOURNEY_CSS = '/css/journey-panel.css';
 const JOURNEY_JS = '/js/journey.js';
+const EXPLORE_JS = '/js/explore-further.js';
 
 function ensureActionHubAssets() {
   if (!document.querySelector(`link[href="${SITE_CSS}"]`)) {
@@ -31,6 +32,12 @@ function ensureActionHubAssets() {
     script.src = SITE_JS;
     script.defer = true;
     document.body.appendChild(script);
+  }
+  if (!document.body.classList.contains('mc-body') && !document.querySelector(`script[src="${EXPLORE_JS}"]`)) {
+    const explore = document.createElement('script');
+    explore.src = EXPLORE_JS;
+    explore.defer = true;
+    document.body.appendChild(explore);
   }
 }
 
@@ -66,11 +73,11 @@ function renderSiteFooter() {
   return `
   <footer class="site-footer">
     <p>
-      Citizens Facts · v<span data-site-version>1.14.0</span> ·
+      Citizens Facts · v<span data-site-version>1.15.0</span> ·
       <a href="/explore/">Site Map</a> ·
       <a href="/library/">Sources</a> ·
       <a href="/solutions/">Solutions Center</a> ·
-      <a href="/mission-control/journey.html">Journey</a> ·
+      <a href="/mission-control/knowledge-graph.html">Knowledge Graph</a> ·
       <a href="/mission-control/">Mission Control</a> ·
       <a href="/mission-control/phases.html">Phase Registry</a> ·
       <a href="/mission-control/architecture.html">Architecture</a> ·

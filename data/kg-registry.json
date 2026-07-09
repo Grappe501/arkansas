@@ -1,0 +1,630 @@
+{
+  "version": "1.0",
+  "build": 11,
+  "updated": "2026-07-09",
+  "title": "Knowledge Graph Registry",
+  "hub_node": "KG-CASE-000003",
+  "summary": {
+    "total_nodes": 38,
+    "total_edges": 40,
+    "by_type": {
+      "case": 7,
+      "event": 8,
+      "principle": 5,
+      "organization": 4,
+      "person": 2,
+      "law": 4,
+      "data": 2,
+      "reform": 6
+    },
+    "by_cluster": {
+      "cases": 12,
+      "history": 4,
+      "impact": 1,
+      "solutions": 9,
+      "constitution": 6,
+      "law": 4,
+      "money": 2
+    },
+    "avg_completion_pct": 15,
+    "fully_connected_hub": true,
+    "orphan_nodes": 4,
+    "v1_target_nodes": 500
+  },
+  "page_bindings": {
+    "/halls/what-court-decided.html": "KG-CASE-000003",
+    "/halls/the-case.html": "KG-CASE-000003",
+    "/halls/story-before.html": "KG-EVENT-000001",
+    "/halls/after-2010.html": "KG-EVENT-000007",
+    "/halls/money-map.html": "KG-DATA-000001",
+    "/halls/debate.html": "KG-PRIN-000001",
+    "/solutions/": "KG-REFORM-000001",
+    "/halls/montana-hawaii.html": "KG-REFORM-000004",
+    "/library/": "KG-ORG-000001"
+  },
+  "nodes": [
+    {
+      "kg_id": "KG-CASE-000001",
+      "type": "case",
+      "title": "Buckley v. Valeo",
+      "year": 1976,
+      "cluster": "cases",
+      "summary": "Held that spending money on political speech is protected; contribution limits permitted.",
+      "url": "/halls/story-before.html",
+      "evidence_ids": [],
+      "completion": {
+        "research": 20,
+        "writing": 10,
+        "fact_checking": 10,
+        "sources": 15,
+        "visuals": 0,
+        "related_links": 40,
+        "downloads": 0,
+        "teaching_resources": 0
+      },
+      "completion_pct": 12
+    },
+    {
+      "kg_id": "KG-CASE-000002",
+      "type": "case",
+      "title": "McConnell v. FEC",
+      "year": 2003,
+      "cluster": "cases",
+      "summary": "Upheld much of the Bipartisan Campaign Reform Act before later limits were struck down.",
+      "url": "/halls/story-before.html",
+      "completion_pct": 8
+    },
+    {
+      "kg_id": "KG-CASE-000003",
+      "type": "case",
+      "title": "Citizens United v. FEC",
+      "year": 2010,
+      "cluster": "cases",
+      "summary": "Hub case \u00e2\u20ac\u201d independent corporate and union political spending protected as speech.",
+      "url": "/halls/what-court-decided.html",
+      "evidence_ids": [
+        "EV-000001"
+      ],
+      "holding": "Government may not restrict independent political spending by corporations and unions.",
+      "completion_pct": 35
+    },
+    {
+      "kg_id": "KG-CASE-000004",
+      "type": "case",
+      "title": "Austin v. Michigan Chamber of Commerce",
+      "year": 1990,
+      "cluster": "cases",
+      "summary": "Upheld corporate independent expenditure restrictions \u00e2\u20ac\u201d overturned by Citizens United.",
+      "completion_pct": 5
+    },
+    {
+      "kg_id": "KG-CASE-000005",
+      "type": "case",
+      "title": "First National Bank of Boston v. Bellotti",
+      "year": 1978,
+      "cluster": "cases",
+      "summary": "Recognized corporate speech rights on ballot measures \u00e2\u20ac\u201d precursor to corporate speech doctrine.",
+      "completion_pct": 5
+    },
+    {
+      "kg_id": "KG-CASE-000006",
+      "type": "case",
+      "title": "SpeechNow.org v. FEC",
+      "year": 2010,
+      "cluster": "cases",
+      "summary": "Enabled unlimited contributions to independent expenditure committees \u00e2\u20ac\u201d Super PACs.",
+      "url": "/halls/after-2010.html",
+      "completion_pct": 15
+    },
+    {
+      "kg_id": "KG-CASE-000007",
+      "type": "case",
+      "title": "American Tradition Partnership v. Bullock",
+      "year": 2012,
+      "cluster": "cases",
+      "summary": "Summarily reversed Montana corporate spending limits citing Citizens United.",
+      "completion_pct": 10
+    },
+    {
+      "kg_id": "KG-EVENT-000001",
+      "type": "event",
+      "title": "Tillman Act (1907)",
+      "year": 1907,
+      "cluster": "history",
+      "summary": "First federal ban on corporate contributions to federal campaigns.",
+      "url": "/halls/story-before.html",
+      "completion_pct": 10
+    },
+    {
+      "kg_id": "KG-EVENT-000002",
+      "type": "event",
+      "title": "Watergate scandal",
+      "year": 1972,
+      "cluster": "history",
+      "summary": "Campaign finance abuses led to FECA and modern disclosure framework.",
+      "completion_pct": 8
+    },
+    {
+      "kg_id": "KG-EVENT-000003",
+      "type": "event",
+      "title": "Bipartisan Campaign Reform Act (2002)",
+      "year": 2002,
+      "cluster": "history",
+      "summary": "McCain-Feingold \u00e2\u20ac\u201d soft money limits and issue-ad restrictions.",
+      "completion_pct": 10
+    },
+    {
+      "kg_id": "KG-EVENT-000004",
+      "type": "event",
+      "title": "Hillary: The Movie / FEC dispute",
+      "year": 2008,
+      "cluster": "cases",
+      "summary": "Documentary at center of Citizens United litigation.",
+      "url": "/halls/the-case.html",
+      "completion_pct": 12
+    },
+    {
+      "kg_id": "KG-EVENT-000005",
+      "type": "event",
+      "title": "Citizens United decision",
+      "year": 2010,
+      "cluster": "cases",
+      "summary": "January 21, 2010 \u00e2\u20ac\u201d landmark Supreme Court ruling.",
+      "url": "/halls/what-court-decided.html",
+      "completion_pct": 30
+    },
+    {
+      "kg_id": "KG-EVENT-000006",
+      "type": "event",
+      "title": "Super PAC era begins",
+      "year": 2010,
+      "cluster": "impact",
+      "summary": "SpeechNow and Citizens United together reshape outside spending.",
+      "url": "/halls/after-2010.html",
+      "completion_pct": 15
+    },
+    {
+      "kg_id": "KG-EVENT-000007",
+      "type": "event",
+      "title": "Montana Initiative 194 signatures submitted",
+      "year": 2026,
+      "cluster": "solutions",
+      "summary": "Live state ballot initiative path against corporate political spending.",
+      "url": "/halls/montana-hawaii.html#montana",
+      "evidence_ids": [
+        "EV-000004",
+        "EV-000005"
+      ],
+      "completion_pct": 40
+    },
+    {
+      "kg_id": "KG-EVENT-000008",
+      "type": "event",
+      "title": "Hawaii Act 11 signed",
+      "year": 2026,
+      "cluster": "solutions",
+      "summary": "Corporate charter restrictions on election spending \u00e2\u20ac\u201d legislative test case.",
+      "url": "/halls/montana-hawaii.html#hawaii",
+      "evidence_ids": [
+        "EV-000006"
+      ],
+      "completion_pct": 35
+    },
+    {
+      "kg_id": "KG-PRIN-000001",
+      "type": "principle",
+      "title": "Political Speech",
+      "cluster": "constitution",
+      "summary": "First Amendment protection for political expression \u00e2\u20ac\u201d core to Citizens United holding.",
+      "url": "/halls/what-court-decided.html",
+      "completion_pct": 18
+    },
+    {
+      "kg_id": "KG-PRIN-000002",
+      "type": "principle",
+      "title": "Freedom of Association",
+      "cluster": "constitution",
+      "summary": "Right to band together for political purposes \u00e2\u20ac\u201d PACs, parties, and groups.",
+      "completion_pct": 8
+    },
+    {
+      "kg_id": "KG-PRIN-000003",
+      "type": "principle",
+      "title": "Corporate Speech",
+      "cluster": "constitution",
+      "summary": "Whether corporations have First Amendment rights in elections \u00e2\u20ac\u201d central controversy.",
+      "completion_pct": 20
+    },
+    {
+      "kg_id": "KG-PRIN-000004",
+      "type": "principle",
+      "title": "Judicial Review",
+      "cluster": "constitution",
+      "summary": "Courts' role in defining campaign finance constitutional boundaries.",
+      "completion_pct": 5
+    },
+    {
+      "kg_id": "KG-PRIN-000005",
+      "type": "principle",
+      "title": "Strict Scrutiny",
+      "cluster": "constitution",
+      "summary": "Standard applied to speech restrictions \u00e2\u20ac\u201d high bar for government limits.",
+      "completion_pct": 5
+    },
+    {
+      "kg_id": "KG-ORG-000001",
+      "type": "organization",
+      "title": "Federal Election Commission",
+      "cluster": "law",
+      "summary": "Federal campaign finance disclosure and enforcement agency.",
+      "url": "https://www.fec.gov/",
+      "evidence_ids": [
+        "EV-000003"
+      ],
+      "completion_pct": 25
+    },
+    {
+      "kg_id": "KG-ORG-000002",
+      "type": "organization",
+      "title": "Supreme Court of the United States",
+      "cluster": "cases",
+      "summary": "Final arbiter of constitutional questions in campaign finance.",
+      "completion_pct": 15
+    },
+    {
+      "kg_id": "KG-ORG-000003",
+      "type": "organization",
+      "title": "U.S. Congress",
+      "cluster": "law",
+      "summary": "Federal legislation authority for campaign finance statutes.",
+      "completion_pct": 10
+    },
+    {
+      "kg_id": "KG-ORG-000004",
+      "type": "organization",
+      "title": "American Promise",
+      "cluster": "solutions",
+      "summary": "Advocacy organization pursuing federal constitutional amendment.",
+      "evidence_ids": [
+        "EV-000009"
+      ],
+      "completion_pct": 12
+    },
+    {
+      "kg_id": "KG-PERSON-000001",
+      "type": "person",
+      "title": "Anthony M. Kennedy",
+      "role": "Associate Justice",
+      "cluster": "cases",
+      "summary": "Authored Citizens United majority opinion.",
+      "completion_pct": 10
+    },
+    {
+      "kg_id": "KG-PERSON-000002",
+      "type": "person",
+      "title": "John Paul Stevens",
+      "role": "Associate Justice",
+      "cluster": "cases",
+      "summary": "Authored Citizens United dissent \u00e2\u20ac\u201d corporate personhood critique.",
+      "completion_pct": 10
+    },
+    {
+      "kg_id": "KG-LAW-000001",
+      "type": "law",
+      "title": "Tillman Act",
+      "year": 1907,
+      "cluster": "history",
+      "jurisdiction": "Federal",
+      "completion_pct": 8
+    },
+    {
+      "kg_id": "KG-LAW-000002",
+      "type": "law",
+      "title": "Federal Election Campaign Act (FECA)",
+      "year": 1974,
+      "cluster": "law",
+      "jurisdiction": "Federal",
+      "completion_pct": 8
+    },
+    {
+      "kg_id": "KG-LAW-000003",
+      "type": "law",
+      "title": "Bipartisan Campaign Reform Act",
+      "year": 2002,
+      "cluster": "law",
+      "jurisdiction": "Federal",
+      "completion_pct": 10
+    },
+    {
+      "kg_id": "KG-LAW-000004",
+      "type": "law",
+      "title": "First Amendment",
+      "cluster": "constitution",
+      "jurisdiction": "Federal",
+      "evidence_ids": [
+        "EV-000002"
+      ],
+      "completion_pct": 20
+    },
+    {
+      "kg_id": "KG-DATA-000001",
+      "type": "data",
+      "title": "Political spending trends (2010\u00e2\u20ac\u201cpresent)",
+      "cluster": "money",
+      "summary": "Outside spending growth post-Citizens United \u00e2\u20ac\u201d chart plan in spending.json.",
+      "url": "/data/inventories/spending.json",
+      "completion_pct": 5
+    },
+    {
+      "kg_id": "KG-DATA-000002",
+      "type": "data",
+      "title": "Money flow channels diagram",
+      "cluster": "money",
+      "url": "/halls/money-map.html",
+      "completion_pct": 8
+    },
+    {
+      "kg_id": "KG-REFORM-000001",
+      "type": "reform",
+      "title": "Federal constitutional amendment",
+      "cluster": "solutions",
+      "authority_level": "constitutional",
+      "url": "/solutions/#federal",
+      "completion_pct": 12
+    },
+    {
+      "kg_id": "KG-REFORM-000002",
+      "type": "reform",
+      "title": "Federal disclosure legislation",
+      "cluster": "solutions",
+      "authority_level": "federal",
+      "url": "/solutions/#federal",
+      "completion_pct": 5
+    },
+    {
+      "kg_id": "KG-REFORM-000003",
+      "type": "reform",
+      "title": "FEC reform proposals",
+      "cluster": "solutions",
+      "authority_level": "federal",
+      "url": "/solutions/#federal",
+      "completion_pct": 5
+    },
+    {
+      "kg_id": "KG-REFORM-000004",
+      "type": "reform",
+      "title": "Montana Initiative 194",
+      "cluster": "solutions",
+      "authority_level": "state",
+      "status": "in_progress",
+      "url": "/halls/montana-hawaii.html#montana",
+      "completion_pct": 40
+    },
+    {
+      "kg_id": "KG-REFORM-000005",
+      "type": "reform",
+      "title": "Hawaii Act 11",
+      "cluster": "solutions",
+      "authority_level": "state",
+      "status": "in_progress",
+      "url": "/halls/montana-hawaii.html#hawaii",
+      "completion_pct": 35
+    },
+    {
+      "kg_id": "KG-REFORM-000006",
+      "type": "reform",
+      "title": "Arkansas General Assembly policy options",
+      "cluster": "solutions",
+      "authority_level": "state",
+      "url": "/solutions/#arkansas",
+      "completion_pct": 8
+    }
+  ],
+  "edges": [
+    {
+      "from": "KG-CASE-000001",
+      "to": "KG-CASE-000003",
+      "type": "precursor"
+    },
+    {
+      "from": "KG-CASE-000002",
+      "to": "KG-CASE-000003",
+      "type": "precursor"
+    },
+    {
+      "from": "KG-CASE-000004",
+      "to": "KG-CASE-000003",
+      "type": "overturned_by",
+      "type_display": "overturned by"
+    },
+    {
+      "from": "KG-CASE-000005",
+      "to": "KG-CASE-000003",
+      "type": "precursor"
+    },
+    {
+      "from": "KG-CASE-000003",
+      "to": "KG-CASE-000006",
+      "type": "enables"
+    },
+    {
+      "from": "KG-CASE-000003",
+      "to": "KG-CASE-000007",
+      "type": "cited_by"
+    },
+    {
+      "from": "KG-CASE-000003",
+      "to": "KG-PRIN-000001",
+      "type": "addresses"
+    },
+    {
+      "from": "KG-CASE-000003",
+      "to": "KG-PRIN-000003",
+      "type": "addresses"
+    },
+    {
+      "from": "KG-CASE-000003",
+      "to": "KG-PRIN-000005",
+      "type": "applies",
+      "type_display": "applies"
+    },
+    {
+      "from": "KG-CASE-000003",
+      "to": "KG-LAW-000004",
+      "type": "interprets",
+      "type_display": "interprets"
+    },
+    {
+      "from": "KG-CASE-000003",
+      "to": "KG-ORG-000002",
+      "type": "authored_by",
+      "type_display": "decided by"
+    },
+    {
+      "from": "KG-CASE-000003",
+      "to": "KG-PERSON-000001",
+      "type": "authored_by"
+    },
+    {
+      "from": "KG-CASE-000003",
+      "to": "KG-PERSON-000002",
+      "type": "authored_by"
+    },
+    {
+      "from": "KG-CASE-000003",
+      "to": "KG-EVENT-000005",
+      "type": "related_to"
+    },
+    {
+      "from": "KG-CASE-000003",
+      "to": "KG-EVENT-000006",
+      "type": "influenced"
+    },
+    {
+      "from": "KG-CASE-000003",
+      "to": "KG-DATA-000001",
+      "type": "measures"
+    },
+    {
+      "from": "KG-CASE-000003",
+      "to": "KG-REFORM-000001",
+      "type": "challenges"
+    },
+    {
+      "from": "KG-CASE-000003",
+      "to": "KG-REFORM-000004",
+      "type": "challenges"
+    },
+    {
+      "from": "KG-CASE-000003",
+      "to": "KG-REFORM-000005",
+      "type": "challenges"
+    },
+    {
+      "from": "KG-EVENT-000001",
+      "to": "KG-LAW-000001",
+      "type": "implements"
+    },
+    {
+      "from": "KG-EVENT-000002",
+      "to": "KG-LAW-000002",
+      "type": "influenced"
+    },
+    {
+      "from": "KG-EVENT-000003",
+      "to": "KG-LAW-000003",
+      "type": "implements"
+    },
+    {
+      "from": "KG-LAW-000003",
+      "to": "KG-CASE-000002",
+      "type": "upheld_by",
+      "type_display": "upheld by"
+    },
+    {
+      "from": "KG-EVENT-000004",
+      "to": "KG-CASE-000003",
+      "type": "precursor"
+    },
+    {
+      "from": "KG-EVENT-000005",
+      "to": "KG-CASE-000003",
+      "type": "related_to"
+    },
+    {
+      "from": "KG-EVENT-000006",
+      "to": "KG-CASE-000006",
+      "type": "related_to"
+    },
+    {
+      "from": "KG-EVENT-000006",
+      "to": "KG-DATA-000001",
+      "type": "measures"
+    },
+    {
+      "from": "KG-EVENT-000007",
+      "to": "KG-REFORM-000004",
+      "type": "related_to"
+    },
+    {
+      "from": "KG-EVENT-000008",
+      "to": "KG-REFORM-000005",
+      "type": "related_to"
+    },
+    {
+      "from": "KG-ORG-000001",
+      "to": "KG-DATA-000001",
+      "type": "measures"
+    },
+    {
+      "from": "KG-ORG-000004",
+      "to": "KG-REFORM-000001",
+      "type": "supports"
+    },
+    {
+      "from": "KG-REFORM-000004",
+      "to": "KG-CASE-000007",
+      "type": "challenges"
+    },
+    {
+      "from": "KG-REFORM-000005",
+      "to": "KG-PRIN-000003",
+      "type": "addresses"
+    },
+    {
+      "from": "KG-PRIN-000001",
+      "to": "KG-CASE-000001",
+      "type": "cited_by"
+    },
+    {
+      "from": "KG-DATA-000002",
+      "to": "KG-EVENT-000006",
+      "type": "measures"
+    },
+    {
+      "from": "KG-CASE-000001",
+      "to": "KG-EVENT-000001",
+      "type": "influenced_by"
+    },
+    {
+      "from": "KG-CASE-000003",
+      "to": "KG-ORG-000001",
+      "type": "related_to"
+    },
+    {
+      "from": "KG-CASE-000003",
+      "to": "KG-ORG-000003",
+      "type": "related_to"
+    },
+    {
+      "from": "KG-REFORM-000006",
+      "to": "KG-REFORM-000004",
+      "type": "related_to"
+    },
+    {
+      "from": "KG-REFORM-000006",
+      "to": "KG-REFORM-000005",
+      "type": "related_to"
+    }
+  ]
+}

@@ -35,4 +35,4 @@ Framework and registry are **live** with 14 cataloged sources (v1 target: ~500 p
 
 ## Next Recommended Build
 
-**Build #11 — First Deep Content** — L2 articles with `ds-*` components, Evidence IDs, and MRIDs (`HIST-002`, `CASE-002`).
+**Build #12 — First Deep Content** — L2 articles with `ds-*` components, KG-IDs, Evidence IDs, and MRIDs (`HIST-002`, `CASE-002`).

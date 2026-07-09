@@ -1,0 +1,169 @@
+{
+  "version": "1.0",
+  "build": 11,
+  "updated": "2026-07-09",
+  "title": "Knowledge Graph Constitution v1.0",
+  "route": "/mission-control/knowledge-graph.html",
+  "registry": "/data/kg-registry.json",
+  "data_file": "/data/knowledge-graph.json",
+  "principle": "Knowledge should never end at the page where it began. Every page strengthens understanding; every connection encourages discovery; every discovery equips someone to educate another person.",
+  "vision": "A connected civic knowledge network — like the Library of Congress where every court case points to earlier cases, every law to the problem it addressed, every statistic to its source.",
+  "object_types": [
+    {
+      "id": "case",
+      "title": "Supreme Court Cases",
+      "prefix": "KG-CASE",
+      "fields": ["summary", "timeline", "opinions", "holding", "constitutional_issues", "related_cases", "related_laws", "related_reforms"]
+    },
+    {
+      "id": "event",
+      "title": "Historical Events",
+      "prefix": "KG-EVENT",
+      "fields": ["date", "category", "people", "laws", "cases", "spending_changes", "reform_proposals"]
+    },
+    {
+      "id": "principle",
+      "title": "Constitutional Principles",
+      "prefix": "KG-PRIN",
+      "fields": ["opinions", "historical_development", "supporting_arguments", "critical_arguments", "current_reforms"]
+    },
+    {
+      "id": "organization",
+      "title": "Organizations",
+      "prefix": "KG-ORG",
+      "fields": ["type", "jurisdiction", "role", "related_cases", "related_data"]
+    },
+    {
+      "id": "person",
+      "title": "People",
+      "prefix": "KG-PERSON",
+      "fields": ["role", "cases", "opinions", "legislation", "speeches", "research"]
+    },
+    {
+      "id": "law",
+      "title": "Laws",
+      "prefix": "KG-LAW",
+      "fields": ["jurisdiction", "text_url", "problem_addressed", "related_cases", "status"]
+    },
+    {
+      "id": "data",
+      "title": "Data Objects",
+      "prefix": "KG-DATA",
+      "fields": ["measured", "source", "chart_url", "plain_language"]
+    },
+    {
+      "id": "reform",
+      "title": "Reform Objects",
+      "prefix": "KG-REFORM",
+      "fields": ["authority_level", "mechanism", "status", "constitutional_questions", "related_cases"]
+    }
+  ],
+  "relationship_types": [
+    "precursor",
+    "aftermath",
+    "cites",
+    "cited_by",
+    "addresses",
+    "challenges",
+    "enables",
+    "influenced_by",
+    "influenced",
+    "supports",
+    "opposes",
+    "implements",
+    "measures",
+    "authored_by",
+    "related_to"
+  ],
+  "knowledge_clusters": [
+    { "id": "history", "title": "History", "order": 1 },
+    { "id": "law", "title": "Law", "order": 2 },
+    { "id": "cases", "title": "Court Cases", "order": 3 },
+    { "id": "constitution", "title": "Constitution", "order": 4 },
+    { "id": "money", "title": "Money", "order": 5 },
+    { "id": "impact", "title": "Impact", "order": 6 },
+    { "id": "debate", "title": "Debate", "order": 7 },
+    { "id": "solutions", "title": "Solutions", "order": 8 },
+    { "id": "education", "title": "Community Education", "order": 9 },
+    { "id": "leadership", "title": "Leadership", "order": 10 }
+  ],
+  "explore_further_sections": [
+    { "id": "also_explored", "title": "People also explored…" },
+    { "id": "principles", "title": "Related constitutional principles…" },
+    { "id": "cases", "title": "Related Supreme Court cases…" },
+    { "id": "historical", "title": "Historical events that led here…" },
+    { "id": "later", "title": "Later events influenced by this…" },
+    { "id": "reforms", "title": "Current reform efforts…" },
+    { "id": "data", "title": "Relevant spending data…" },
+    { "id": "sources", "title": "Primary sources…" },
+    { "id": "teach", "title": "Educational toolkit…" },
+    { "id": "lead", "title": "Become an Education Leader…" }
+  ],
+  "completeness_dimensions": [
+    "research",
+    "writing",
+    "fact_checking",
+    "sources",
+    "visuals",
+    "related_links",
+    "downloads",
+    "teaching_resources"
+  ],
+  "educational_intelligence": [
+    {
+      "id": "case-not-constitution",
+      "condition": "Studied case but not constitutional principles",
+      "recommend": ["constitutional principles", "majority opinion analysis"],
+      "target_cluster": "constitution"
+    },
+    {
+      "id": "understands-spending",
+      "condition": "Understands spending mechanics",
+      "recommend": ["reform proposals", "disclosure debates"],
+      "target_cluster": "solutions"
+    },
+    {
+      "id": "modules-complete",
+      "condition": "Finished core learning modules",
+      "recommend": ["teaching resources", "community conversation guides"],
+      "target_cluster": "education"
+    },
+    {
+      "id": "reform-curious",
+      "condition": "Visited solutions center",
+      "recommend": ["Montana/Hawaii live examples", "comparison matrix"],
+      "target_cluster": "solutions"
+    }
+  ],
+  "future_ai_layer": {
+    "status": "planned",
+    "capabilities": [
+      "Ask questions in plain English",
+      "Explain legal concepts at different reading levels",
+      "Build personalized learning paths",
+      "Recommend related topics",
+      "Generate classroom lesson plans",
+      "Compare historical developments",
+      "Summarize Supreme Court opinions",
+      "Guide readers toward primary sources"
+    ],
+    "rule": "AI must always cite the platform's verified knowledge base — never invent information."
+  },
+  "civic_knowledge_network": {
+    "connects_to": [
+      "Community discussion guides",
+      "Presentation materials",
+      "Printable handouts",
+      "Shareable summaries",
+      "Educational videos",
+      "Leadership opportunities",
+      "Relational organizing tools"
+    ],
+    "question": "How can someone use this to help another person understand?"
+  },
+  "governance": {
+    "rule": "No knowledge object published without KG-ID and at least one relationship edge.",
+    "evidence_link": "/data/evidence-registry.json",
+    "mrid_link": "/data/mrid-registry.json"
+  }
+}

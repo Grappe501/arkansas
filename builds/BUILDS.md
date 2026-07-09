@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#11** | **Knowledge Graph & Intelligence** | **1.15.0** | **✅ Complete** | [011](011-knowledge-graph.md) · [/mission-control/knowledge-graph.html](../mission-control/knowledge-graph.html) |
 | **#10** | **Research & Evidence Framework** | **1.14.0** | **✅ Complete** | [010](010-master-research-evidence-framework.md) · [/mission-control/research.html](../mission-control/research.html) |
 | **#9** | **Visual Design System** | **1.13.0** | **✅ Complete** | [009](009-visual-design-system.md) · [/design-system/](../design-system/) |
 | **#8** | **UX Architecture & Journey** | **1.12.0** | **✅ Complete** | [008](008-user-experience-architecture.md) · [/mission-control/journey.html](../mission-control/journey.html) |
@@ -10,7 +11,7 @@
 | **#5** | **Site Architecture** | **1.9.0** | **✅ Complete** | [005](005-master-site-architecture.md) |
 | **#4** | **Phase Registry** | **1.8.0** | **✅ Complete** | [004](004-master-phase-registry.md) |
 
-## Platform Stack (Builds #4–#10)
+## Platform Stack (Builds #4–#11)
 
 | Layer | Route | Focus |
 |-------|-------|-------|
@@ -20,8 +21,9 @@
 | MRID System | `/mission-control/mrid.html` | Requirement IDs |
 | Citizen Journey | `/mission-control/journey.html` | People & UX |
 | Design Language | `/mission-control/design.html` | Visual system |
-| **Research Constitution** | `/mission-control/research.html` | **Evidence & sources** |
+| Research Constitution | `/mission-control/research.html` | Evidence & sources |
+| **Knowledge Graph** | `/mission-control/knowledge-graph.html` | **Connected knowledge** |
 
-## Research Rule (Build #10)
+## Knowledge Rule (Build #11)
 
-Not built on opinions — built on evidence. Every claim traceable to an Evidence ID. Primary sources first.
+Knowledge should never end at the page where it began. Every object has a KG-ID and relationships. Explore Further on every page.

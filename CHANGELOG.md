@@ -13,6 +13,14 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.15.0] - 2026-07-09 — Build #11 Complete
+
+### Build #11: Citizens United Knowledge Graph & Educational Intelligence Architecture
+- **Knowledge Graph Constitution v1.0** — 8 object types, 10 clusters, relationship engine
+- `data/knowledge-graph.json` + `data/kg-registry.json` (38 nodes, 40 edges)
+- `js/explore-further.js` — universal Explore Further on content pages
+- Educational intelligence rules · future AI layer spec · Mission Control knowledge map
+
 ## [1.14.0] - 2026-07-09 — Build #10 Complete
 
 ### Build #10: Master Research & Evidence Framework

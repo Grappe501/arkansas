@@ -4,11 +4,11 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.14.0 · **Research:** [/mission-control/research.html](/mission-control/research.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #10:** ✅ Research Framework · **Build #9:** ✅ Design System · **Build #8:** ✅ UX Journey  
+**Current version:** 1.15.0 · **Knowledge Graph:** [/mission-control/knowledge-graph.html](/mission-control/knowledge-graph.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #11:** ✅ Knowledge Graph · **Build #10:** ✅ Research · **Build #9:** ✅ Design  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
-> **Seven registries + UX + Design + Research:** Phase · Architecture · Content · MRID · Citizen Journey · Design Language · **Research Constitution**
+> **Eight registries + UX + Design + Research + Knowledge Graph:** Phase · Architecture · Content · MRID · Journey · Design · Research · **KG**
 
 ---
 
@@ -212,7 +212,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions
 | **7** | **Civic Action Layer** | **🟡 Scaffolded v1.4.0** |
 | 8–12 | Forms, tech, launch | 🟡 |
 
-**Next:** Build #11 — First Deep Content with MRIDs, Evidence IDs, and journey-aware cross-links.
+**Next:** Build #12 — First Deep Content with KG-IDs, Evidence IDs, and journey-aware cross-links.
 
 ---
 
@@ -270,7 +270,7 @@ Each proposal explains: what it is · problem addressed · legal authority · co
 | S4 | Expand `reform.json` with matrix fields | ✅ |
 | S5 | Federal share tool scaffold | 🟡 |
 | S6 | Arkansas legislator share scaffold | 🟡 |
-| S7 | L2 per-proposal deep pages | ⬜ Build #11+ |
+| S7 | L2 per-proposal deep pages | ⬜ Build #12+ |
 | S8 | ZIP-based legislator lookup | ⬜ |
 | S9 | Printable share packets (PDF) | ⬜ |
 | S10 | Evidence IDs on every proposal claim | ⬜ |

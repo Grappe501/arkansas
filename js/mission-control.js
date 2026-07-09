@@ -1,5 +1,5 @@
 /**
- * Citizens United Mission Control v1.14.0 — Build #10
+ * Citizens United Mission Control v1.15.0 — Build #11
  */
 
 const isAdmin = () =>
@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Knowledge Graph <a href="/mission-control/knowledge-graph.html" class="mc-inline-link">Educational Intelligence →</a></h2>
+    <p class="mc-bar-note">Build #11 — 38 KG nodes, 62 edges, Explore Further on all content pages, 10 knowledge clusters.</p>
     <h2 class="mc-section-title">Research Framework <a href="/mission-control/research.html" class="mc-inline-link">Evidence Registry →</a></h2>
     <p class="mc-bar-note">Build #10 — Research Constitution v1.0, Evidence IDs, 5-tier source hierarchy, claim verification.</p>
     <h2 class="mc-section-title">Design System <a href="/mission-control/design.html" class="mc-inline-link">Design Language →</a></h2>
@@ -1029,6 +1031,145 @@ async function initResearchBlueprint() {
   }
 }
 
+function renderKgRow(node) {
+  const url = node.url
+    ? (node.url.startsWith('http') ? `<a href="${node.url}" target="_blank" rel="noopener">↗</a>` : `<a href="${node.url}">↗</a>`)
+    : '';
+  return `
+    <tr class="mc-table__row--${node.type}" id="${node.kg_id}" data-kg="${node.kg_id}">
+      <td><code>${node.kg_id}</code></td>
+      <td>${node.type}</td>
+      <td>${node.title}</td>
+      <td>${node.cluster || '—'}</td>
+      <td>${node.completion_pct ?? '—'}%</td>
+      <td>${url}</td>
+    </tr>`;
+}
+
+function initKgFilters(items, onFilter) {
+  const root = document.getElementById('mc-kg-filters');
+  if (!root) return;
+  const types = [...new Set(items.map(i => i.type))].sort();
+  const clusters = [...new Set(items.map(i => i.cluster).filter(Boolean))].sort();
+
+  root.innerHTML = `
+    <label>Type <select id="mc-kg-type"><option value="">All</option>
+      ${types.map(t => `<option value="${t}">${t}</option>`).join('')}</select></label>
+    <label>Cluster <select id="mc-kg-cluster"><option value="">All</option>
+      ${clusters.map(c => `<option value="${c}">${c}</option>`).join('')}</select></label>
+    <label>Search <input type="search" id="mc-kg-search" placeholder="KG-ID or title…"></label>`;
+
+  const apply = () => {
+    const type = root.querySelector('#mc-kg-type').value;
+    const cluster = root.querySelector('#mc-kg-cluster').value;
+    const q = root.querySelector('#mc-kg-search').value.toLowerCase();
+    const filtered = items.filter(i => {
+      if (type && i.type !== type) return false;
+      if (cluster && i.cluster !== cluster) return false;
+      if (q && !i.kg_id.toLowerCase().includes(q) && !i.title.toLowerCase().includes(q)) return false;
+      return true;
+    });
+    onFilter(filtered);
+  };
+
+  root.querySelectorAll('select, input').forEach(el => {
+    el.addEventListener('input', apply);
+    el.addEventListener('change', apply);
+  });
+}
+
+async function initKnowledgeGraphBlueprint() {
+  const root = document.getElementById('mc-kg-root');
+  if (!root) return;
+
+  const [kgRes, regRes, mcRes] = await Promise.all([
+    fetch('/data/knowledge-graph.json'),
+    fetch('/data/kg-registry.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const kg = await kgRes.json();
+  const reg = await regRes.json();
+  const mc = await mcRes.json();
+  const s = reg.summary;
+
+  const renderTable = (items) => {
+    const el = document.getElementById('mc-kg-table-body');
+    if (!el) return;
+    el.innerHTML = items.map(renderKgRow).join('');
+    const count = document.getElementById('mc-kg-count');
+    if (count) count.textContent = `${items.length} of ${reg.nodes.length} nodes`;
+  };
+
+  const hub = reg.nodes.find(n => n.kg_id === reg.hub_node);
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Knowledge Graph</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #11 · ${kg.title}</p>
+      <h1>Knowledge Graph &amp; Educational Intelligence</h1>
+      <p class="mc-header__question">${kg.principle}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Nodes</div><div class="mc-stat__value">${s.total_nodes}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Edges</div><div class="mc-stat__value">${s.total_edges}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Hub</div><div class="mc-stat__value" style="font-size:1rem">${hub?.title || '—'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Avg Complete</div><div class="mc-stat__value">${s.avg_completion_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Orphans</div><div class="mc-stat__value">${s.orphan_nodes}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">V1 Target</div><div class="mc-stat__value">~${s.v1_target_nodes}</div></div>
+    </div>
+    <h2 class="mc-section-title">Knowledge Map</h2>
+    <div class="mc-dep-map">
+      ${kg.knowledge_clusters.map((c, i) => `
+        <span class="mc-dep-map__node"><span class="mc-dep-map__num">${c.order}</span><span class="mc-dep-map__label">${c.title}<br><small>${s.by_cluster[c.id] || 0} nodes</small></span></span>
+        ${i < kg.knowledge_clusters.length - 1 ? '<span class="mc-dep-map__arrow">↓</span>' : ''}`).join('')}
+    </div>
+    <h2 class="mc-section-title">Object Types (${kg.object_types.length})</h2>
+    <div class="mc-card">
+      <table class="mc-table">
+        <thead><tr><th>Type</th><th>Prefix</th><th>Registered</th></tr></thead>
+        <tbody>${kg.object_types.map(t => `
+          <tr><td>${t.title}</td><td><code>${t.prefix}</code></td><td>${s.by_type[t.id] || 0}</td></tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+    <h2 class="mc-section-title">Educational Intelligence</h2>
+    <ul class="mc-deliverables">${kg.educational_intelligence.map(r => `
+      <li><strong>${r.condition}</strong> → ${r.recommend.join(', ')}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Future AI Layer <span class="mc-bar-note">(${kg.future_ai_layer.status})</span></h2>
+    <ul class="mc-deliverables">${kg.future_ai_layer.capabilities.map(c => `<li>${c}</li>`).join('')}</ul>
+    <p class="mc-bar-note"><strong>Rule:</strong> ${kg.future_ai_layer.rule}</p>
+    <h2 class="mc-section-title">Knowledge Registry</h2>
+    <div class="mc-inv-filters" id="mc-kg-filters"></div>
+    <p class="mc-bar-note" id="mc-kg-count">${reg.nodes.length} nodes</p>
+    <div class="mc-card mc-inv-table-wrap">
+      <table class="mc-table mc-inv-table">
+        <thead><tr><th>KG-ID</th><th>Type</th><th>Title</th><th>Cluster</th><th>%</th><th>URL</th></tr></thead>
+        <tbody id="mc-kg-table-body"></tbody>
+      </table>
+    </div>
+    <h2 class="mc-section-title">Completeness Dimensions</h2>
+    <ul class="mc-deliverables">${kg.completeness_dimensions.map(d => `<li>${d.replace(/_/g, ' ')}</li>`).join('')}</ul>
+    <p class="mc-bar-note">
+      <a href="/docs/KNOWLEDGE_GRAPH.md">KNOWLEDGE_GRAPH.md</a> ·
+      <a href="/data/kg-registry.json">Registry JSON</a> ·
+      <a href="/halls/what-court-decided.html">Try Explore Further live</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  renderTable(reg.nodes);
+  initKgFilters(reg.nodes, renderTable);
+  initDevConsole(mc);
+
+  const hash = window.location.hash.slice(1);
+  if (hash) {
+    const row = document.getElementById(hash);
+    if (row) {
+      row.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      row.classList.add('mc-inv-highlight');
+    }
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -1039,4 +1180,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initJourneyBlueprint();
   initDesignBlueprint();
   initResearchBlueprint();
+  initKnowledgeGraphBlueprint();
 });

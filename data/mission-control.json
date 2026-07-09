@@ -1,6 +1,6 @@
 {
-  "version": "1.14.0",
-  "build": 10,
+  "version": "1.15.0",
+  "build": 11,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,33 +9,33 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 10,
+    "overall_completion": 11,
     "current_build": {
-      "number": 10,
-      "title": "Master Research & Evidence Framework"
+      "number": 11,
+      "title": "Citizens United Knowledge Graph & Educational Intelligence Architecture"
     },
     "active_phase": "Information Architecture",
-    "last_completed": "Visual Design System & Experience Blueprint",
+    "last_completed": "Master Research & Evidence Framework",
     "next_build": {
-      "number": 11,
-      "title": "First Deep Content \u2014 Priority MRIDs"
+      "number": 12,
+      "title": "First Deep Content \u2014 KG-IDs, Evidence IDs, ds-* components"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
-    "content_readiness": 8,
+    "content_readiness": 10,
     "research_readiness": 18,
     "data_viz_readiness": 2,
     "signup_funnel_readiness": 8,
     "civic_action_readiness": 8,
-    "public_launch_readiness": 3,
+    "public_launch_readiness": 4,
     "public_launch_label": "Early Foundation"
   },
   "progress_bars": [
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 10,
-      "note": "Seven registries + UX + design + research framework. Evidence IDs live. Deep content citation pass next."
+      "value": 11,
+      "note": "Eight registries + knowledge graph live. 38 KG nodes, Explore Further on content pages. Deep content next."
     },
     {
       "id": "constitution",
@@ -52,14 +52,20 @@
     {
       "id": "ia",
       "label": "Information Architecture",
-      "value": 52,
-      "note": "Full planning stack + design + research governance. Ready for cited deep content."
+      "value": 55,
+      "note": "Full planning stack + knowledge graph. Connected exploration replaces isolated pages."
+    },
+    {
+      "id": "knowledge_graph",
+      "label": "Knowledge Graph",
+      "value": 12,
+      "note": "KG Constitution v1.0: 38 nodes, 62 edges, 10 clusters, Explore Further component. V1 target ~500 nodes."
     },
     {
       "id": "content",
       "label": "Content System",
-      "value": 12,
-      "note": "Content Master Registry: 351 items with stable IDs. 15 published, 316 planned. V1 target ~2700."
+      "value": 14,
+      "note": "Knowledge graph links 38 objects. L2 deep pages with KG-IDs next (Build #12)."
     },
     {
       "id": "research",
@@ -502,6 +508,12 @@
       "id": "research",
       "label": "Research Framework",
       "href": "/mission-control/research.html",
+      "status": "complete"
+    },
+    {
+      "id": "knowledge_graph",
+      "label": "Knowledge Graph",
+      "href": "/mission-control/knowledge-graph.html",
       "status": "complete"
     }
   ],
@@ -1529,6 +1541,52 @@
   ],
   "builds": [
     {
+      "number": 11,
+      "title": "Citizens United Knowledge Graph & Educational Intelligence Architecture",
+      "version": "1.15.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Connected knowledge system \u2014 every object interrelated, Explore Further on every page",
+      "summary": "8 object types, 38 nodes, 62 edges, 10 clusters, educational intelligence rules, Explore Further JS, Mission Control knowledge map.",
+      "files_created": [
+        "data/knowledge-graph.json",
+        "data/kg-registry.json",
+        "docs/KNOWLEDGE_GRAPH.md",
+        "builds/011-knowledge-graph.md",
+        "js/explore-further.js",
+        "css/explore-further.css",
+        "mission-control/knowledge-graph.html",
+        "scripts/gen-kg-registry.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "js/layout.js",
+        "data/knowledge.json"
+      ],
+      "pages_created": [
+        "/mission-control/knowledge-graph.html"
+      ],
+      "decisions_made": [
+        "KG-{TYPE}-{6-digit} permanent node IDs",
+        "Citizens United as hub node (KG-CASE-000003)",
+        "Explore Further auto-injected on all non-MC content pages",
+        "AI layer planned \u2014 must cite verified knowledge base only"
+      ],
+      "open_questions": [
+        "Interactive visual graph renderer?",
+        "KG-ID display on public pages?"
+      ],
+      "risks": [
+        "Graph completeness ~8% of v1 target \u2014 framework ahead of content depth"
+      ],
+      "next_recommended": 12,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/knowledge-graph.html",
+      "review_status": "complete"
+    },
+    {
       "number": 10,
       "title": "Master Research & Evidence Framework",
       "version": "1.14.0",
@@ -1897,20 +1955,19 @@
     }
   ],
   "briefing": {
-    "what_built": "Research Constitution v1.0 \u2014 Evidence Registry, 5-tier hierarchy, claim verification workflow",
-    "building_now": "Framework ready \u2014 apply Evidence IDs and ds-* components in first deep content (Build #11)",
+    "what_built": "Knowledge Graph Constitution v1.0 \u2014 38 connected nodes, Explore Further, educational intelligence",
+    "building_now": "Graph ready \u2014 wire KG-IDs and Evidence IDs into first deep content (Build #12)",
     "blocked": [
-      "Interactive charts",
-      "Participant backend",
-      "Academic source collection"
+      "Visual graph renderer",
+      "AI Q&A layer",
+      "Interactive charts"
     ],
     "ready_public": [
-      "Research dashboard",
-      "Evidence registry",
-      "Source Library links",
-      "Claims ledger"
+      "Explore Further on hall pages",
+      "Knowledge graph dashboard",
+      "Hub-and-spoke case network"
     ],
-    "next": "Build #11 \u2014 First Deep Content with cited L2 articles (HIST-002, CASE-002)"
+    "next": "Build #12 \u2014 First Deep Content with KG-IDs, Evidence IDs, ds-* components"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -1940,5 +1997,8 @@
   "design_system_route": "/mission-control/design.html",
   "research_framework": "/data/research-framework.json",
   "evidence_registry": "/data/evidence-registry.json",
-  "research_route": "/mission-control/research.html"
+  "research_route": "/mission-control/research.html",
+  "knowledge_graph": "/data/knowledge-graph.json",
+  "kg_registry": "/data/kg-registry.json",
+  "knowledge_graph_route": "/mission-control/knowledge-graph.html"
 }

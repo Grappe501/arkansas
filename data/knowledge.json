@@ -5,6 +5,8 @@
     "mission": "Educate—not merely inform. Education is primary; leadership is the outcome.",
     "path": ["Discover", "Understand", "Explore", "Evaluate", "Discuss", "Teach", "Lead"],
     "architecture": "/data/site-architecture.json",
+    "knowledge_graph": "/data/knowledge-graph.json",
+    "kg_registry": "/data/kg-registry.json",
     "site_map": "/explore/",
     "ux_journey": "/data/ux-journey.json",
     "governance_test": [
