@@ -1,6 +1,6 @@
 {
-  "version": "1.62.0",
-  "build": 58,
+  "version": "1.63.0",
+  "build": 59,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 58,
+    "overall_completion": 59,
     "current_build": {
-      "number": 58,
-      "title": "Citizens United Facts Arkansas Civic Intelligence & Community Mapping System v1.0"
-    },
-    "active_phase": "Civic Atlas Intelligence \u2192 Implementation Translation",
-    "last_completed": "Neighborhood Organizing & Relational Network",
-    "next_build": {
       "number": 59,
+      "title": "Citizens United Facts Arkansas Civic Action CRM & Relationship Operating System v1.0"
+    },
+    "active_phase": "Relationship OS \u2192 Implementation Translation",
+    "last_completed": "Arkansas Civic Atlas",
+    "next_build": {
+      "number": 60,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
@@ -26,18 +26,19 @@
     "research_readiness": 25,
     "data_viz_readiness": 8,
     "signup_funnel_readiness": 22,
-    "civic_action_readiness": 26,
+    "civic_action_readiness": 28,
     "coalition_readiness": 18,
-    "data_model_readiness": 52,
+    "data_model_readiness": 54,
     "route_inventory_readiness": 18,
     "component_registry_readiness": 22,
     "facts_framework_readiness": 14,
     "knowledge_atlas_readiness": 20,
     "platform_architecture_readiness": 24,
     "repository_structure_readiness": 28,
-    "database_schema_readiness": 40,
+    "database_schema_readiness": 42,
     "wireframe_readiness": 38,
-    "contact_intelligence_readiness": 31,
+    "contact_intelligence_readiness": 34,
+    "relationship_os_readiness": 54,
     "mc2_readiness": 33,
     "ai_engine_readiness": 14,
     "content_factory_readiness": 30,
@@ -57,9 +58,9 @@
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 25,
-    "institutional_maturity_pct": 45,
+    "institutional_maturity_pct": 46,
     "current_institutional_version": "V1",
-    "systems_integration_readiness": 28,
+    "systems_integration_readiness": 30,
     "production_matrix_readiness": 39,
     "visitor_journey_readiness": 40,
     "technical_architecture_readiness": 38,
@@ -86,8 +87,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 58,
-      "note": "Build #58 \u2014 Arkansas Civic Atlas."
+      "value": 59,
+      "note": "Build #59 \u2014 Relationship Operating System (ROS)."
     },
     {
       "id": "constitution",
@@ -416,9 +417,9 @@
     {
       "id": "institutional_maturity",
       "label": "Institutional Maturity (V1\u2013V10)",
-      "value": 45,
+      "value": 46,
       "max": 100,
-      "note": "Geographic intelligence layer live \u2014 map planned."
+      "note": "Institutional relationship brain live \u2014 0 active relationships."
     },
     {
       "id": "systems_integration",
@@ -517,6 +518,13 @@
       "value": 52,
       "max": 100,
       "note": "75 counties ECS=0 \u00b7 0 assets \u00b7 map planned."
+    },
+    {
+      "id": "relationship_os",
+      "label": "Relationship OS",
+      "value": 54,
+      "max": 100,
+      "note": "5 networks \u00b7 0 edges \u00b7 0 active."
     }
   ],
   "public_readiness": {
@@ -1157,6 +1165,12 @@
       "id": "civic_atlas",
       "label": "Civic Atlas",
       "href": "/mission-control/civic-atlas.html",
+      "status": "complete"
+    },
+    {
+      "id": "relationship_os",
+      "label": "Relationship OS",
+      "href": "/mission-control/relationship-os.html",
       "status": "complete"
     }
   ],
@@ -2183,6 +2197,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 59,
+      "title": "Citizens United Facts Arkansas Civic Action CRM & Relationship Operating System v1.0",
+      "version": "1.63.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Relationship Operating System \u2014 institutional CRM for civic education",
+      "summary": "5 relationship networks; CRM dashboard; health score model; 54% ROS readiness. 0 active relationships \u00b7 0 edges.",
+      "files_created": [
+        "data/relationship-os.json",
+        "docs/MASTER_RELATIONSHIP_OS.md",
+        "builds/059-relationship-os.md",
+        "mission-control/relationship-os.html",
+        "scripts/gen-relationship-os.py",
+        "scripts/update-mc-build59.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/relationship-os.html"
+      ],
+      "decisions_made": [
+        "ROS = institutional relationship brain \u2014 not sales/fundraising CRM",
+        "Five networks: Individual, Organization, Community, Public Official, Institutional",
+        "Relationship philosophy: story not contact",
+        "Extends Contact Intelligence (#24) and Relationship Registry (#15)",
+        "Relationship Health Score \u2014 6 indicators defined",
+        "10 CRM dashboard widgets \u2014 5 live with zero counts",
+        "54% readiness \u2014 architecture documented, CRM empty"
+      ],
+      "open_questions": [
+        "ROS vs Contact Intelligence UI consolidation?",
+        "Public official tracking: opt-in vs public record only?",
+        "Health score weighting and decay model?",
+        "Timeline events: single table vs activity stream?"
+      ],
+      "risks": [
+        "0 active relationships \u00b7 0 participants \u2014 CRM empty",
+        "0/20 relationship edge types in use \u2014 schema only",
+        "Relationship Health Score model defined \u2014 0 profiles scored",
+        "Timeline and communication history not implemented \u2014 0 events logged"
+      ],
+      "next_recommended": 60,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/relationship-os.html",
+      "review_status": "complete"
+    },
     {
       "number": 58,
       "title": "Citizens United Facts Arkansas Civic Intelligence & Community Mapping System v1.0",
@@ -5043,21 +5110,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Arkansas Civic Atlas v1.0 \u2014 geographic intelligence, ECS scores, assets directory",
-    "building_now": "Community growth stack complete (#56\u2013#58) \u2014 implementation translation next",
+    "what_built": "Relationship OS v1.0 \u2014 5 networks, CRM dashboard, institutional relationship brain",
+    "building_now": "Community + relationship intelligence stack (#56\u2013#59) \u2014 translation next",
     "blocked": [
-      "Interactive map",
-      "Civic calendar",
-      "Asset ingestion",
-      "Story archive"
+      "Neon participant schema",
+      "Timeline events",
+      "Health scoring",
+      "Mentorship graph"
     ],
     "ready_public": [
-      "75 county ECS baseline",
-      "7 regions",
-      "Planning questions",
-      "Needs assessment"
+      "5 network model",
+      "CRM widgets",
+      "Privacy framework",
+      "Opportunity tracker"
     ],
-    "next": "Build #59 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #60 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -5696,5 +5763,15 @@
     "communities_joined": 0,
     "assets_cataloged": 0,
     "interactive_map_status": "planned"
+  },
+  "relationship_os": "/data/relationship-os.json",
+  "relationship_os_dashboard": "/mission-control/relationship-os.html",
+  "relationship_os_inventory": {
+    "readiness_score": 54,
+    "five_networks": 5,
+    "active_relationships": 0,
+    "relationship_edges": 0,
+    "crm_widgets_live": 6,
+    "core_intelligence_system": true
   }
 }

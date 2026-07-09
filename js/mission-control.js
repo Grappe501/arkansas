@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Relationship OS <a href="/mission-control/relationship-os.html" class="mc-inline-link">Institutional CRM #59 →</a></h2>
+    <p class="mc-bar-note">Build #59 — Relationship Operating System. 5 networks, CRM dashboard, health score model. 0 active relationships · 0 edges. ~54% ROS readiness.</p>
     <h2 class="mc-section-title">Civic Atlas <a href="/mission-control/civic-atlas.html" class="mc-inline-link">Geographic Intelligence #58 →</a></h2>
     <p class="mc-bar-note">Build #58 — Arkansas Civic Atlas. 7-level hierarchy, Educational Coverage Score, 75 counties at ECS=0. 0 communities · map planned. ~52% atlas readiness.</p>
     <h2 class="mc-section-title">Neighborhood Organizing <a href="/mission-control/neighborhood-organizing.html" class="mc-inline-link">Last Mile #57 →</a></h2>
@@ -5163,6 +5165,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStatewideGrowth();
   initNeighborhoodOrganizing();
   initCivicAtlas();
+  initRelationshipOs();
 });
 
 async function initUxArchitecture() {
@@ -6046,6 +6049,114 @@ async function initCivicAtlas() {
       <a href="/data/community-assets.json">Assets</a> ·
       <a href="/mission-control/statewide-growth.html">Statewide Growth</a> ·
       <a href="/mission-control/neighborhood-organizing.html">Neighborhood (#57)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initRelationshipOs() {
+  const root = document.getElementById('mc-relationship-os-root');
+  if (!root) return;
+
+  const [rosRes, mcRes] = await Promise.all([
+    fetch('/data/relationship-os.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ros = await rosRes.json();
+  const mc = await mcRes.json();
+  const s = ros.summary;
+
+  const networkRows = ros.five_networks.map(n => `
+    <tr><td>${n.number}</td><td><code>${n.id}</code></td><td>${n.title}</td>
+      <td>${n.tracks.slice(0, 3).join(', ')}…</td><td>${n.status}</td></tr>`).join('');
+
+  const timelineRows = ros.relationship_timeline.stages.map(st => `
+    <tr><td>${st.stage}</td><td><code>${st.id}</code></td><td>${st.event}</td><td>${st.status}</td></tr>`).join('');
+
+  const healthRows = ros.relationship_health_score.indicators.map(h => `
+    <tr><td><code>${h.id}</code></td><td>${h.indicator}</td><td>${h.weight_pct}%</td><td>${h.status}</td></tr>`).join('');
+
+  const oppRows = ros.opportunity_tracker.opportunities.map(o => `
+    <tr><td><code>${o.id}</code></td><td>${o.opportunity}</td><td>${o.count}</td><td>${o.status}</td></tr>`).join('');
+
+  const widgetRows = ros.crm_dashboard.widgets.map(w => `
+    <tr><td><code>${w.id}</code></td><td>${w.widget}</td><td>${w.current}</td><td>${w.status}</td></tr>`).join('');
+
+  const mentorRows = ros.mentorship_mapping.levels.map(m => `
+    <tr><td>${m.level}</td><td>${m.role}</td><td>${m.status}</td></tr>`).join('');
+
+  const systemRows = ros.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td>${sys.route ? `<a href="${sys.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Relationship OS</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #59 · ${ros.title} · ${ros.acronym}</p>
+      <h1>Institutional Relationship Brain</h1>
+      <p class="mc-header__question">${ros.governing_principle}</p>
+      <p class="mc-bar-note">${ros.purpose}</p>
+      <p class="mc-bar-note"><strong>Not traditional CRM:</strong> Civic education relationships — not sales or fundraising</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">ROS readiness</div><div class="mc-stat__value">${s.relationship_os_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Participants</div><div class="mc-stat__value">${s.total_participants}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Active relationships</div><div class="mc-stat__value">${s.active_relationships}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Relationship edges</div><div class="mc-stat__value">${s.relationship_edges}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Edge types defined</div><div class="mc-stat__value">${s.relationship_types_defined}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">CRM widgets live</div><div class="mc-stat__value">${s.crm_widgets_live}/10</div></div>
+    </div>
+    <h2 class="mc-section-title">Relationship Philosophy</h2>
+    <p class="mc-bar-note">${ros.relationship_philosophy.principle}</p>
+    <ul class="mc-deliverables">${ros.relationship_philosophy.questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Five Relationship Networks</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Network</th><th>Tracks</th><th>Status</th></tr></thead>
+      <tbody>${networkRows}</tbody></table>
+    <h2 class="mc-section-title">Relationship Timeline</h2>
+    <p class="mc-bar-note">${ros.relationship_timeline.flow}</p>
+    <p class="mc-bar-note">${ros.relationship_timeline.events_recorded} events recorded</p>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Event</th><th>Status</th></tr></thead>
+      <tbody>${timelineRows}</tbody></table>
+    <h2 class="mc-section-title">Relationship Health Score</h2>
+    <p class="mc-bar-note">${ros.relationship_health_score.purpose} · Avg: ${s.statewide_avg_health_score}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Weight</th><th>Status</th></tr></thead>
+      <tbody>${healthRows}</tbody></table>
+    <h2 class="mc-section-title">Communication History</h2>
+    <p class="mc-bar-note">${ros.communication_history.communications_logged} communications logged</p>
+    <ul class="mc-deliverables">${ros.communication_history.types.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Opportunity Tracker</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Opportunity</th><th>Count</th><th>Status</th></tr></thead>
+      <tbody>${oppRows}</tbody></table>
+    <h2 class="mc-section-title">Mentorship Mapping</h2>
+    <p class="mc-bar-note">${ros.mentorship_mapping.chain} · ${s.mentor_pairs} pairs</p>
+    <table class="mc-table"><thead><tr><th>Level</th><th>Role</th><th>Status</th></tr></thead>
+      <tbody>${mentorRows}</tbody></table>
+    <h2 class="mc-section-title">Privacy Framework</h2>
+    <ul class="mc-deliverables">${ros.privacy_framework.principles.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">CRM Dashboard Widgets</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Widget</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${widgetRows}</tbody></table>
+    <h2 class="mc-section-title">Relationship Registry</h2>
+    <p class="mc-bar-note">${s.relationship_types_defined} types · ${s.relationship_edges} edges · <a href="${ros.relationship_registry.route}">Registry</a></p>
+    <h2 class="mc-section-title">Contact Intelligence Link</h2>
+    <p class="mc-bar-note">Build #${ros.contact_intelligence_link.build} · ${ros.contact_intelligence_link.modules} modules · <a href="${ros.contact_intelligence_link.route}">Contact Intelligence</a></p>
+    <h2 class="mc-section-title">Integration Stack</h2>
+    <p class="mc-bar-note">${ros.integration.flow}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <ul class="mc-deliverables">${ros.long_term_vision.map(v => `<li>${v}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ros.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ros.recommended_next_build.number} — ${ros.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ros.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_RELATIONSHIP_OS.md">MASTER_RELATIONSHIP_OS.md</a> ·
+      <a href="/data/relationship-os.json">JSON</a> ·
+      <a href="/data/relationship-registry.json">Edge Registry</a> ·
+      <a href="/mission-control/contact-intelligence.html">Contact Intelligence</a> ·
+      <a href="/mission-control/civic-atlas.html">Civic Atlas</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

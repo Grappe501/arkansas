@@ -457,6 +457,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/relationship-os"
+  to = "/mission-control/relationship-os.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301

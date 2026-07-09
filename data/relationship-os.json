@@ -1,0 +1,566 @@
+{
+  "version": "1.0",
+  "build": 59,
+  "updated": "2026-07-09",
+  "title": "Relationship Operating System v1.0",
+  "subtitle": "Arkansas Civic Action CRM \u2014 The Institutional Relationship Brain",
+  "acronym": "ROS",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/relationship-os.html",
+  "constitution": "/docs/MASTER_RELATIONSHIP_OS.md",
+  "purpose": "Institutional CRM managing every meaningful relationship \u2014 people, organizations, communities, conversations, commitments, and opportunities. Civic education, not sales or fundraising.",
+  "governing_principle": "The institution is built by people. ROS exists so no person, organization, community, or contribution is forgotten.",
+  "not_traditional_crm": true,
+  "relationship_philosophy": {
+    "principle": "Every participant is a relationship with a story \u2014 never just a contact",
+    "questions": [
+      "How do we know this person?",
+      "What interests them?",
+      "What have they learned?",
+      "How have they participated?",
+      "What organizations are they connected to?",
+      "How can we continue serving them?"
+    ],
+    "foundation": "Relationships\u2014not transactions"
+  },
+  "five_networks": [
+    {
+      "id": "NET-1",
+      "number": 1,
+      "title": "Individual Network",
+      "tracks": [
+        "Learners",
+        "Volunteers",
+        "Education Leaders",
+        "Researchers",
+        "Presenters",
+        "Community participants"
+      ],
+      "current": {
+        "profiles": 0,
+        "education_leaders": 0
+      },
+      "status": "scaffolded",
+      "extends": "Contact Intelligence (#24)"
+    },
+    {
+      "id": "NET-2",
+      "number": 2,
+      "title": "Organization Network",
+      "tracks": [
+        "Coalition organizations",
+        "Libraries",
+        "Colleges",
+        "Universities",
+        "Community organizations",
+        "Civic clubs",
+        "Historical societies",
+        "Participating nonprofits",
+        "Other educational partners"
+      ],
+      "current": {
+        "organizations": 0
+      },
+      "status": "scaffolded",
+      "registry": "/data/community-assets.json"
+    },
+    {
+      "id": "NET-3",
+      "number": 3,
+      "title": "Community Network",
+      "tracks": [
+        "Counties",
+        "Cities",
+        "Neighborhoods",
+        "Community conversations",
+        "Educational events",
+        "Local partnerships"
+      ],
+      "current": {
+        "counties": 75,
+        "cities_indexed": 250,
+        "neighborhoods": 0,
+        "conversations": 0
+      },
+      "status": "scaffolded",
+      "extends": "Civic Atlas (#58)"
+    },
+    {
+      "id": "NET-4",
+      "number": 4,
+      "title": "Public Official Network",
+      "tracks": [
+        "Arkansas U.S. Representatives",
+        "Arkansas U.S. Senators",
+        "Arkansas General Assembly members",
+        "Local elected officials (educational outreach)"
+      ],
+      "records": [
+        "Educational resource packets shared",
+        "Meetings requested",
+        "Responses received",
+        "Follow-up opportunities"
+      ],
+      "current": {
+        "officials_tracked": 0,
+        "outreach_logged": 0
+      },
+      "status": "planned",
+      "note": "Institutional relationship management \u2014 not lobbying scores"
+    },
+    {
+      "id": "NET-5",
+      "number": 5,
+      "title": "Institutional Network",
+      "tracks": [
+        "Universities",
+        "Researchers",
+        "Historians",
+        "Constitutional scholars",
+        "Journalists",
+        "Subject-matter experts"
+      ],
+      "current": {
+        "experts_tracked": 0
+      },
+      "status": "planned"
+    }
+  ],
+  "relationship_timeline": {
+    "title": "Chronological Institutional Memory",
+    "flow": "Joined platform \u2192 Completed learning path \u2192 Attended event \u2192 Hosted conversation \u2192 Joined coalition \u2192 Presented workshop \u2192 Mentored Education Leader \u2192 Contributed research",
+    "stages": [
+      {
+        "stage": 1,
+        "id": "joined",
+        "event": "Joined platform",
+        "status": "planned"
+      },
+      {
+        "stage": 2,
+        "id": "learning",
+        "event": "Completed learning path",
+        "status": "planned"
+      },
+      {
+        "stage": 3,
+        "id": "event",
+        "event": "Attended event",
+        "status": "planned"
+      },
+      {
+        "stage": 4,
+        "id": "conversation",
+        "event": "Hosted conversation",
+        "status": "planned"
+      },
+      {
+        "stage": 5,
+        "id": "coalition",
+        "event": "Joined coalition",
+        "status": "planned"
+      },
+      {
+        "stage": 6,
+        "id": "workshop",
+        "event": "Presented workshop",
+        "status": "planned"
+      },
+      {
+        "stage": 7,
+        "id": "mentor",
+        "event": "Mentored Education Leader",
+        "status": "planned"
+      },
+      {
+        "stage": 8,
+        "id": "research",
+        "event": "Contributed research",
+        "status": "planned"
+      }
+    ],
+    "events_recorded": 0,
+    "status": "planned"
+  },
+  "relationship_health_score": {
+    "title": "Relationship Health Score",
+    "scale": "0\u2013100 per profile",
+    "indicators": [
+      {
+        "id": "RHS-1",
+        "indicator": "Recent engagement",
+        "weight_pct": 20,
+        "status": "planned"
+      },
+      {
+        "id": "RHS-2",
+        "indicator": "Educational participation",
+        "weight_pct": 20,
+        "status": "planned"
+      },
+      {
+        "id": "RHS-3",
+        "indicator": "Community involvement",
+        "weight_pct": 15,
+        "status": "planned"
+      },
+      {
+        "id": "RHS-4",
+        "indicator": "Volunteer activity",
+        "weight_pct": 15,
+        "status": "planned"
+      },
+      {
+        "id": "RHS-5",
+        "indicator": "Leadership development",
+        "weight_pct": 15,
+        "status": "planned"
+      },
+      {
+        "id": "RHS-6",
+        "indicator": "Coalition participation",
+        "weight_pct": 15,
+        "status": "planned"
+      }
+    ],
+    "statewide_avg": 0,
+    "profiles_scored": 0,
+    "purpose": "Identify relationships benefiting from renewed communication",
+    "status": "planned"
+  },
+  "communication_history": {
+    "title": "Institutional Communications Log",
+    "types": [
+      "Newsletters received",
+      "Event invitations",
+      "Presentation requests",
+      "Resource requests",
+      "Volunteer follow-up",
+      "Research collaboration"
+    ],
+    "communications_logged": 0,
+    "status": "planned"
+  },
+  "opportunity_tracker": {
+    "title": "Proactive Educational Outreach",
+    "opportunities": [
+      {
+        "id": "OPP-1",
+        "opportunity": "Ready to become Education Leader",
+        "count": 0,
+        "status": "planned"
+      },
+      {
+        "id": "OPP-2",
+        "opportunity": "Coalition org interested in hosting event",
+        "count": 0,
+        "status": "planned"
+      },
+      {
+        "id": "OPP-3",
+        "opportunity": "Library requesting materials",
+        "count": 0,
+        "status": "planned"
+      },
+      {
+        "id": "OPP-4",
+        "opportunity": "Researcher willing to contribute",
+        "count": 0,
+        "status": "planned"
+      },
+      {
+        "id": "OPP-5",
+        "opportunity": "County needing mentorship",
+        "count": 75,
+        "status": "active"
+      }
+    ],
+    "open_count": 0,
+    "status": "partial"
+  },
+  "mentorship_mapping": {
+    "title": "Mentorship Relationship Visualization",
+    "chain": "Education Leader \u2192 Neighborhood Leader \u2192 Community Volunteer \u2192 New Learner",
+    "levels": [
+      {
+        "level": 1,
+        "role": "Education Leader",
+        "status": "planned"
+      },
+      {
+        "level": 2,
+        "role": "Neighborhood Leader",
+        "status": "planned"
+      },
+      {
+        "level": 3,
+        "role": "Community Volunteer",
+        "status": "planned"
+      },
+      {
+        "level": 4,
+        "role": "New Learner",
+        "status": "planned"
+      }
+    ],
+    "mentor_pairs": 0,
+    "registry_edge_type": "mentors",
+    "status": "planned"
+  },
+  "privacy_framework": {
+    "title": "Trust-Centered Relationship Management",
+    "principles": [
+      "Collect only information that supports the educational mission",
+      "Clearly distinguish private administrative information from publicly shared profiles",
+      "Allow participants to manage their communication preferences",
+      "Never sell participant information",
+      "Explain data practices in plain language"
+    ],
+    "aligned_with": "Contact Intelligence privacy (#24)",
+    "status": "documented"
+  },
+  "crm_dashboard": {
+    "title": "Mission Control CRM Dashboard",
+    "subtitle": "Living view of the institution human network",
+    "widgets": [
+      {
+        "id": "CRM-1",
+        "widget": "Total participants",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CRM-2",
+        "widget": "Active relationships",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CRM-3",
+        "widget": "Education Leaders",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CRM-4",
+        "widget": "Coalition organizations",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CRM-5",
+        "widget": "Community conversations",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CRM-6",
+        "widget": "Relationship Health (avg)",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "CRM-7",
+        "widget": "Mentor network pairs",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "CRM-8",
+        "widget": "Public official outreach",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "CRM-9",
+        "widget": "Organization partnerships",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "CRM-10",
+        "widget": "Counties with relationship gaps",
+        "current": 75,
+        "status": "live"
+      }
+    ],
+    "widgets_live": 6,
+    "status": "partial"
+  },
+  "relationship_registry": {
+    "title": "Canonical Edge Types",
+    "route": "/data/relationship-registry.json",
+    "relationship_types": 20,
+    "edges_recorded": 0,
+    "status": "schema_ready"
+  },
+  "contact_intelligence_link": {
+    "title": "Contact Intelligence Foundation",
+    "route": "/data/contact-intelligence.json",
+    "build": 24,
+    "modules": 14,
+    "status": "partial"
+  },
+  "integration": {
+    "title": "ROS Integration Stack",
+    "flow": "Mission Control \u2192 Academy \u2192 Coalition \u2192 County OS \u2192 Civic Atlas \u2192 Calendar \u2192 KG \u2192 Contact \u2192 Outreach",
+    "systems": [
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      },
+      {
+        "system": "Community Education Academy",
+        "route": "/mission-control/education-academy.html",
+        "status": "partial"
+      },
+      {
+        "system": "Coalition Network",
+        "route": "/coalition/",
+        "status": "planned"
+      },
+      {
+        "system": "County Operating System",
+        "route": "/mission-control/county-os.html",
+        "status": "partial"
+      },
+      {
+        "system": "Arkansas Civic Atlas",
+        "route": "/mission-control/civic-atlas.html",
+        "status": "live"
+      },
+      {
+        "system": "Event Calendar",
+        "route": null,
+        "status": "planned"
+      },
+      {
+        "system": "Knowledge Graph",
+        "route": "/mission-control/civic-intelligence.html",
+        "status": "partial"
+      },
+      {
+        "system": "Contact Network",
+        "route": "/mission-control/contact-intelligence.html",
+        "status": "partial"
+      },
+      {
+        "system": "Outreach Engine",
+        "route": "/mission-control/outreach.html",
+        "status": "partial"
+      }
+    ],
+    "systems_live": 2
+  },
+  "long_term_vision": [
+    "Remember who learned, who taught, who asked questions",
+    "Who hosted conversations and strengthened their county",
+    "Who built coalition partnerships and contributed research",
+    "Who mentored others \u2014 relationships as institutional history"
+  ],
+  "mc_integration": {
+    "title": "Core Intelligence System",
+    "core_system": true,
+    "metrics": [
+      {
+        "id": "CRM-1",
+        "widget": "Total participants",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CRM-2",
+        "widget": "Active relationships",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CRM-3",
+        "widget": "Education Leaders",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CRM-4",
+        "widget": "Coalition organizations",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CRM-5",
+        "widget": "Community conversations",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "CRM-6",
+        "widget": "Relationship Health (avg)",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "CRM-7",
+        "widget": "Mentor network pairs",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "CRM-8",
+        "widget": "Public official outreach",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "CRM-9",
+        "widget": "Organization partnerships",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "CRM-10",
+        "widget": "Counties with relationship gaps",
+        "current": 75,
+        "status": "live"
+      }
+    ]
+  },
+  "summary": {
+    "total_participants": 0,
+    "active_relationships": 0,
+    "education_leaders": 0,
+    "coalition_orgs": 0,
+    "community_conversations": 0,
+    "relationship_edges": 0,
+    "relationship_types_defined": 20,
+    "timeline_events": 0,
+    "communications_logged": 0,
+    "mentor_pairs": 0,
+    "opportunities_open": 0,
+    "statewide_avg_health_score": 0,
+    "counties_with_gaps": 75,
+    "crm_widgets_live": 6,
+    "relationship_os_readiness_pct": 54,
+    "contact_intelligence_readiness_pct": 31,
+    "civic_atlas_readiness_pct": 52,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "0 active relationships \u00b7 0 participants \u2014 CRM empty",
+    "0/20 relationship edge types in use \u2014 schema only",
+    "Relationship Health Score model defined \u2014 0 profiles scored",
+    "Timeline and communication history not implemented \u2014 0 events logged",
+    "Mentorship mapping planned \u2014 0 mentor pairs",
+    "Public Official Network scaffold only \u2014 no officials tracked",
+    "Opportunity tracker partial \u2014 75 counties need mentorship signal only",
+    "ROS vs Contact Intelligence (#24) overlap \u2014 ROS supersedes as institutional brain",
+    "Neon/Prisma participant schema not migrated \u2014 Netlify Forms only",
+    "Event calendar integration blocked \u2014 calendar not built"
+  ],
+  "recommended_next_build": {
+    "number": 60,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "Neon schema for ROS profiles, timeline events, health scores, mentorship edges; CRM API contracts; route inventory, COMP-* specs, GitHub issue backlog."
+  }
+}

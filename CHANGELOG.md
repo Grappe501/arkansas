@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.63.0] - 2026-07-09 — Build #59 Relationship Operating System (ROS)
+
+### Arkansas Civic Action CRM — Institutional Relationship Brain
+- **Relationship OS v1.0** — civic education CRM, not sales/fundraising
+- Five networks: Individual, Organization, Community, Public Official, Institutional
+- Relationship timeline, health score, opportunity tracker, mentorship mapping
+- 10 CRM dashboard widgets; extends Contact Intelligence (#24) and Relationship Registry (#15)
+- Honest: 0 active relationships · 0 edges · 0 timeline events
+- MC dashboard: `/mission-control/relationship-os.html`
+
 ## [1.62.0] - 2026-07-09 — Build #58 Arkansas Civic Atlas
 
 ### Civic Intelligence & Community Mapping System
