@@ -500,6 +500,20 @@
   transform: translateY(-2px);
 }
 
+.ladder-strip--seven .ladder-step {
+  font-size: 0.68rem;
+  padding: 0.25rem 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .ladder-strip--seven {
+    gap: 0.35rem;
+  }
+  .ladder-strip--seven .ladder-step {
+    font-size: 0.6rem;
+  }
+}
+
 /* Halls index */
 .halls-index-intro {
   margin-bottom: 2rem;

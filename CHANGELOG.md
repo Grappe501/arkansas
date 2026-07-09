@@ -3,6 +3,35 @@
 All notable changes to Citizens Facts are documented here.
 Each entry from Ernie corresponds to a new version and GitHub commit.
 
+## [1.5.0] - 2026-07-09 — Build #2 Complete
+
+### Build #2: Project Constitution v1.0 (Governing)
+- Canonical constitution in `builds/002-project-constitution.md` + HTML
+- Supersedes Build #1 as governing document
+- Reader journey: Discover → Understand → Explore → Evaluate → Discuss → Teach → Lead
+- Governance test for all future features (3 objectives)
+- Action Hub labels aligned to Constitution §8
+- Front Door + footer updated to Constitution v1.0
+
+## [1.6.0] - 2026-07-09 — Build #3: Mission Control OS
+
+### Added
+- **/mission-control/** — NASA-style project operating system dashboard
+- `data/mission-control.json` — live BUILD_PLAN data source
+- Executive summary, phase cards, build dimensions, public readiness
+- Living build map (color-coded nodes)
+- Build DNA pages at `/mission-control/build.html?b=N`
+- Daily mission briefing, dev console (`?dev=1`)
+- Research, content, leadership, repository status cards
+
+## [1.5.0] - 2026-07-09 — Build #2: Project Constitution v1.0
+
+### Added
+- Governing constitution (Build #2)
+- Reader journey: Discover → Understand → Explore → Evaluate → Discuss → Teach → Lead
+- Action Hub aligned to Constitution §8
+- Governance test for all features
+
 ## [1.4.0] - 2026-07-09 — Civic Action Layer
 
 ### Added — Phase 7: Civic Organizing Platform

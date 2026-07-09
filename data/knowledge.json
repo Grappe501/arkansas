@@ -1,8 +1,14 @@
 {
   "system": {
-    "name": "Citizens United Civic Education Ladder",
-    "mission": "Turn a curious reader into a local educator.",
-    "path": ["Understand", "Trust", "Care", "Teach", "Lead"],
+    "name": "Citizens United Education Platform",
+    "constitution": "v1.0",
+    "mission": "Educate—not merely inform. Education is primary; leadership is the outcome.",
+    "path": ["Discover", "Understand", "Explore", "Evaluate", "Discuss", "Teach", "Lead"],
+    "governance_test": [
+      "Increase public understanding",
+      "Deepen evidence-based learning",
+      "Develop community education leaders"
+    ],
     "core_question": "How did one Supreme Court decision change American politics?"
   },
   "ladder": [

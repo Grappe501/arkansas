@@ -1,0 +1,335 @@
+{
+  "version": "1.6.0",
+  "updated": "2026-07-09",
+  "platform": "Citizens United Education Platform",
+  "tagline": "Mission Control — project operating system",
+  "executive": {
+    "overall_completion": 34,
+    "last_build": { "number": 3, "title": "Mission Control", "version": "1.6.0" },
+    "repository": { "status": "connected", "url": "https://github.com/Grappe501/arkansas", "branch": "main" },
+    "deployment": { "status": "healthy", "url": "https://arkansas-facts.netlify.app", "preview": "ready" },
+    "content_pages": { "complete": 28, "target": 312 },
+    "research_complete": 18,
+    "data_visualizations": { "complete": 0, "target": 43 },
+    "action_platform": 12,
+    "testing": 8,
+    "volunteer_pipeline": 0,
+    "todays_goal": "Mission Control OS + Constitution v1.0 lock",
+    "estimated_days_remaining": 164
+  },
+  "dimensions": {
+    "research": 18,
+    "writing": 22,
+    "design": 45,
+    "development": 34,
+    "testing": 8,
+    "deployment": 85,
+    "volunteer_system": 2
+  },
+  "public_readiness": {
+    "historical_narrative": 15,
+    "legal_explanations": 20,
+    "data_visualizations": 0,
+    "primary_source_coverage": 12,
+    "accessibility_readability": 40,
+    "fact_check_verification": 10,
+    "citation_coverage": 15,
+    "mobile_experience": 55,
+    "community_engagement": 12,
+    "leadership_recruitment": 25
+  },
+  "repository": {
+    "connected": true,
+    "branch": "main",
+    "last_commit": "pending — Build #2 + #3",
+    "open_prs": 0,
+    "open_issues": 0,
+    "deploy_preview": "ready",
+    "production": "healthy"
+  },
+  "research_inventory": {
+    "primary_sources": { "collected": 12, "target": 147 },
+    "academic_papers": { "collected": 2, "target": 84 },
+    "supreme_court_cases": { "collected": 5, "target": 38 },
+    "historical_laws": { "collected": 4, "target": 29 },
+    "charts": { "collected": 0, "target": 11 },
+    "datasets": { "collected": 5, "target": 15 },
+    "videos": { "collected": 0, "target": 4 },
+    "books": { "collected": 0, "target": 93 }
+  },
+  "content_areas": {
+    "landing_pages": 85,
+    "historical_timeline": 25,
+    "case_analysis": 20,
+    "constitution_explanations": 15,
+    "money_maps": 8,
+    "reform": 18,
+    "faq": 0,
+    "media_library": 30
+  },
+  "leadership_pipeline": {
+    "education_leaders": 0,
+    "researchers": 0,
+    "law_draft_team": 0,
+    "ballot_initiative_team": 0,
+    "newsletter": 0,
+    "counties": 0,
+    "states": 0
+  },
+  "phases": [
+    {
+      "id": 1,
+      "title": "Project Constitution",
+      "completion": 100,
+      "tasks": 7,
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "items": [
+        { "name": "Mission", "status": "complete" },
+        { "name": "Vision", "status": "complete" },
+        { "name": "Reader Journey", "status": "complete" },
+        { "name": "Conversion Goals", "status": "complete" },
+        { "name": "Editorial Standards", "status": "complete" },
+        { "name": "Constitution v1.0", "status": "complete" },
+        { "name": "Governance Test", "status": "complete", "note": "Locked" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Information Architecture",
+      "completion": 100,
+      "tasks": 12,
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "items": [
+        { "name": "Landing page", "status": "complete" },
+        { "name": "10 content sections", "status": "complete" },
+        { "name": "Teach Locally", "status": "complete" },
+        { "name": "Source Library", "status": "complete" },
+        { "name": "Signup forms", "status": "complete" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Depth Model",
+      "completion": 55,
+      "tasks": 8,
+      "started": "2026-07-09",
+      "items": [
+        { "name": "L1–L4 templates", "status": "complete" },
+        { "name": "Depth toggle", "status": "complete" },
+        { "name": "Hall 7 full depth", "status": "complete" },
+        { "name": "Halls 1–6 L2–L4", "status": "building" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Content System",
+      "completion": 100,
+      "tasks": 10,
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "items": [
+        { "name": "Inventories", "status": "complete" },
+        { "name": "Claims ledger", "status": "complete" },
+        { "name": "MT/HI research files", "status": "complete" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Data & Visual Layer",
+      "completion": 15,
+      "tasks": 7,
+      "items": [
+        { "name": "Chart definitions", "status": "complete" },
+        { "name": "Static charts", "status": "not_started" },
+        { "name": "Interactive dashboards", "status": "planning" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Website Experience",
+      "completion": 100,
+      "tasks": 9,
+      "completed": "2026-07-09",
+      "items": [
+        { "name": "Front Door", "status": "complete" },
+        { "name": "Timeline preview", "status": "complete" },
+        { "name": "Money flow preview", "status": "complete" },
+        { "name": "Current fight section", "status": "complete" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Civic Action Layer",
+      "completion": 35,
+      "tasks": 12,
+      "started": "2026-07-09",
+      "items": [
+        { "name": "Action Hub", "status": "complete" },
+        { "name": "Share / invite", "status": "complete" },
+        { "name": "Join network", "status": "complete" },
+        { "name": "Draft laws workspace", "status": "planning" },
+        { "name": "Ballot lab", "status": "planning" },
+        { "name": "Participant backend", "status": "not_started" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Education Funnel & Forms",
+      "completion": 85,
+      "tasks": 8,
+      "items": [
+        { "name": "Education lead form", "status": "complete" },
+        { "name": "Netlify notifications", "status": "building" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Technical Stack",
+      "completion": 80,
+      "tasks": 9,
+      "items": [
+        { "name": "GitHub + Netlify", "status": "complete" },
+        { "name": "Deploy previews", "status": "building" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "GitHub Workflow",
+      "completion": 70,
+      "tasks": 9,
+      "items": [
+        { "name": "Issue templates", "status": "complete" },
+        { "name": "develop branch", "status": "complete" },
+        { "name": "Project board", "status": "planning" }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Netlify Deployment",
+      "completion": 75,
+      "tasks": 6,
+      "items": [
+        { "name": "Production deploy", "status": "complete" },
+        { "name": "Form testing", "status": "building" }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Launch & Expansion",
+      "completion": 20,
+      "tasks": 3,
+      "items": [
+        { "name": "Content expansion", "status": "building" },
+        { "name": "Participant backend", "status": "not_started" }
+      ]
+    },
+    {
+      "id": 0,
+      "title": "Mission Control OS",
+      "completion": 100,
+      "tasks": 1,
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "items": [
+        { "name": "Dashboard", "status": "complete" },
+        { "name": "Build map", "status": "complete" },
+        { "name": "Public readiness", "status": "complete" },
+        { "name": "Build DNA pages", "status": "complete" }
+      ]
+    }
+  ],
+  "build_map": [
+    { "id": "landing", "label": "Landing Page", "href": "/", "status": "complete" },
+    { "id": "history", "label": "History", "href": "/halls/story-before.html", "status": "building" },
+    { "id": "court", "label": "Supreme Court", "href": "/halls/the-case.html", "status": "building" },
+    { "id": "money", "label": "Money", "href": "/halls/money-map.html", "status": "planning" },
+    { "id": "data", "label": "Data", "href": "/halls/after-2010.html", "status": "planning" },
+    { "id": "timeline", "label": "Timeline", "href": "/", "status": "building" },
+    { "id": "solutions", "label": "Solutions", "href": "/halls/reform.html", "status": "building" },
+    { "id": "leadership", "label": "Leadership", "href": "/educate/", "status": "complete" },
+    { "id": "signup", "label": "Signup", "href": "/educate/", "status": "complete" },
+    { "id": "community", "label": "Community", "href": "/action/ideas.html", "status": "building" },
+    { "id": "action-hub", "label": "Action Hub", "href": "/action/share.html", "status": "complete" },
+    { "id": "mission-control", "label": "Mission Control", "href": "/mission-control/", "status": "complete" }
+  ],
+  "builds": [
+    {
+      "number": 1,
+      "title": "Project Mission Statement",
+      "version": "1.3.0",
+      "status": "complete",
+      "phase": 1,
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "estimated_hours": 2,
+      "actual_hours": 2,
+      "files": ["builds/001-mission-statement.md", "builds/001-mission-statement.html"],
+      "pages": ["/builds/001-mission-statement.html"],
+      "dependencies": [],
+      "git_commit": "4c2ab79",
+      "netlify_deploy": "arkansas-facts.netlify.app",
+      "notes": "Initial mission lock. Historical — superseded by Build #2.",
+      "next_builds": [2],
+      "related_builds": [2],
+      "lessons": "Narrow to one case. Front door must stay simple.",
+      "review_status": "locked",
+      "documentation_status": "complete",
+      "testing_status": "complete"
+    },
+    {
+      "number": 2,
+      "title": "Project Constitution v1.0",
+      "version": "1.5.0",
+      "status": "complete",
+      "phase": 1,
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "estimated_hours": 3,
+      "actual_hours": 3,
+      "files": ["builds/002-project-constitution.md", "docs/CONSTITUTION.md"],
+      "pages": ["/builds/002-project-constitution.html"],
+      "dependencies": [1],
+      "git_commit": "pending",
+      "netlify_deploy": "arkansas-facts.netlify.app",
+      "notes": "Governing document. Reader journey: Discover→Lead. Governance test for all features.",
+      "next_builds": [3],
+      "related_builds": [1, 3],
+      "lessons": "Constitution before features. People learn in layers.",
+      "review_status": "locked",
+      "documentation_status": "complete",
+      "testing_status": "complete"
+    },
+    {
+      "number": 3,
+      "title": "Mission Control OS",
+      "version": "1.6.0",
+      "status": "complete",
+      "phase": 0,
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "estimated_hours": 4,
+      "actual_hours": 4,
+      "files": ["data/mission-control.json", "mission-control/index.html", "css/mission-control.css", "js/mission-control.js"],
+      "pages": ["/mission-control/", "/mission-control/build.html"],
+      "dependencies": [2],
+      "git_commit": "pending",
+      "netlify_deploy": "arkansas-facts.netlify.app",
+      "notes": "Project operating system. BUILD_PLAN becomes live dashboard data.",
+      "next_builds": [4],
+      "related_builds": [2],
+      "lessons": "Build the OS first after repo — track mission readiness not just code.",
+      "review_status": "complete",
+      "documentation_status": "complete",
+      "testing_status": "building",
+      "cursor_prompt": "Mission Control dashboard at /mission-control"
+    }
+  ],
+  "briefing": {
+    "yesterday_completed": 6,
+    "biggest_risk": "Timeline data + spending charts not started",
+    "today_focus": "Mission Control + Constitution lock",
+    "blocked_tasks": ["Participant profile backend", "Static spending charts", "Halls 1–6 L2 content"]
+  }
+}

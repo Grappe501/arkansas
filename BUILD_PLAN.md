@@ -2,9 +2,25 @@
 
 100 steps across **12 phases**. Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.4.0  
-**Platform model:** Learn → Participate → Organize → Build Solutions  
+**Current version:** 1.6.0 · **OS:** [Mission Control](/mission-control/)  
+**Build #3:** ✅ Mission Control · **Build #2:** ✅ Constitution  
 **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
+
+---
+
+## Phase 0 — Mission Control OS
+
+| Component | Status | Route |
+|-----------|--------|-------|
+| Executive dashboard | ✅ | `/mission-control/` |
+| Phase cards (expandable) | ✅ | |
+| Build DNA pages | ✅ | `/mission-control/build.html?b=N` |
+| Living build map | ✅ | |
+| Public readiness tracker | ✅ | |
+| Dev console | ✅ | `?dev=1` |
+| Data source | ✅ | `data/mission-control.json` |
+
+> **Update rule:** Every build updates `mission-control.json`.
 
 ---
 

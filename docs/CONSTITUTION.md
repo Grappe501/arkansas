@@ -1,87 +1,106 @@
-# Project Constitution
+# Project Constitution v1.0
 
-> Canonical mission: [Build #1 — Project Mission Statement](../builds/001-mission-statement.md) ✅ Complete
+> **Governing document:** [Build #2 — Project Constitution](../builds/002-project-constitution.md) ✅ Complete  
+> Historical: [Build #1 — Mission Statement](../builds/001-mission-statement.md)
 
-## Why This Site Exists
+---
 
-This website exists to help ordinary Americans develop a deep, clear, evidence-based understanding of *Citizens United v. Federal Election Commission*.
+## 1. Purpose
 
-Its purpose is not simply to tell people that *Citizens United* was important. Its purpose is to show them **why** it was important, what came before it, what the Supreme Court actually decided, how political spending changed afterward, and why the decision still shapes American democracy today.
+Create the most comprehensive public education resource ever built about *Citizens United v. Federal Election Commission*.
 
-## Core Mission
+Educate—not merely inform. From little or no knowledge to deep understanding: historical context, constitutional foundations, measurable impacts, proposed reforms.
 
-Build the most accessible, layered, and deeply sourced public education platform focused specifically on *Citizens United* and its consequences.
+- **Primary mission:** Education
+- **Ultimate outcome:** Leadership development
 
-## Core Outcome
+---
 
-**Understand → Trust → Care → Teach → Lead**
+## 2. Vision
 
-Mapped to the **Citizens United Civic Education Ladder:**
+An informed public is essential to a healthy representative democracy. Every citizen deserves clear, accurate, evidence-based explanations — not just attorneys and academics.
 
-1. Awareness
-2. Understanding
-3. Evidence
-4. Conviction
-5. Local Leadership
-6. Community Education
-7. Movement Growth
+**Definitive educational resource** dedicated exclusively to understanding *Citizens United*.
 
-## Primary Conversion Goal
+---
 
-Recruit people willing to become local education leaders in their city, county, campus, civic group, church, or community network.
+## 3. Guiding Philosophy
 
-> **Become a Citizens United Education Lead in your area.** → [/educate/](../educate/)
+**People learn in layers.**
 
-## Guiding Principle
+Never overwhelm before basics. Simple explanations first, structured paths deeper. Self-directed learning. Curiosity determines depth.
 
-**Never overwhelm the reader at the front door.**
+---
 
-Start simple. Let people go as deep as they want.
+## 4. Core Reader Journey
 
-- First-time visitor: basic issue in five minutes
-- Serious reader: legal history, spending data, doctrine, reform, ballot initiatives, primary sources
+**Discover → Understand → Explore → Evaluate → Discuss → Teach → Lead**
 
-## Site Promise
+---
 
-Plain-language education at the surface. Deep research, sources, and data underneath — always one click away. The reader controls depth.
+## 5. Project Principles
 
-Every major topic moves from plain-language explanation to deeper research.
+- Education before advocacy
+- Facts distinguished from interpretation
+- Primary sources whenever possible
+- Plain language before legal terminology
+- Thoughtful civic participation
+- Respect differing viewpoints; evidence-grounded discussion
+- Continuous expansion (research, legislation, courts, reform)
 
-## Editorial Standard
+---
 
-- **Accurate** — every major claim traceable to a source
-- **Sourced** — citations in L4 research files; claims ledger maintained
-- **Non-hysterical** — no outrage framing; evidence over emotion
-- **Persuasive through evidence** — strongest arguments on both sides presented fairly
+## 6. Civic Learning Model
 
-## Primary Audiences
+| Level | Format |
+|-------|--------|
+| L1 | One-minute overview |
+| L2 | Five-minute explanation |
+| L3 | Comprehensive educational article |
+| L4 | Research archive (sources, opinions, data, citations) |
 
-| Audience | Primary need |
-|----------|--------------|
-| Voters | Why should I care? (Level 0) |
-| Students | Structured learning halls |
-| Teachers | Toolkit + teach-locally pathway |
-| Organizers | Reform paths + live state examples |
-| Journalists | Research files + claims ledger |
-| Civic groups | Host-a-conversation pathway |
-| Legal/policy readers | L4 sources, case inventory, citations |
+---
 
-## Success Metric
+## 7. Civic Action Philosophy
 
-**Completed local education lead signups** via `/educate/` form.
+Education is the beginning—not the endpoint. Voluntary participation through Action Hub. **Empower citizens to educate others; do not pressure predetermined actions.**
 
-Secondary: depth engagement (hall visits, L3/L4 toggles), return visits, toolkit requests.
+Platform progression: **Learn → Participate → Organize → Build Solutions**  
+See [CIVIC_ACTION.md](CIVIC_ACTION.md)
+
+---
+
+## 8. Persistent Action Hub
+
+Floating hub on every page. See Build #2 §8 and `data/action-hub.json`.
+
+---
+
+## 9. Leadership Development
+
+Pathways: community educator, research volunteer, writer/editor, data researcher, speaker, event host, campus organizer, faith/civic outreach, legislative research, ballot initiative researcher.
+
+→ [/educate/](../educate/)
+
+---
+
+## 10. Governance Test
+
+Every feature, page, or component must support **at least one**:
+
+1. **Increase public understanding**
+2. **Deepen evidence-based learning**
+3. **Develop community education leaders**
+
+---
+
+## Success Metrics
+
+- Education lead signups
+- Network joins, shares, referrals
+- Depth engagement (L3/L4 usage)
+- Community ideas and research contributions
 
 ## Core Question
 
-Every page answers some version of:
-
 > **How did one Supreme Court decision change American politics?**
-
-## Ultimate Goal
-
-Turn understanding into leadership — and collective civic action.
-
-**Platform progression:** Learn → Participate → Organize → Build Solutions
-
-See `docs/CIVIC_ACTION.md` for the Action Hub, participant profiles, draft legislation, and ballot initiative workspaces.

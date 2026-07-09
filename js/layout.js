@@ -48,13 +48,14 @@ function renderSiteFooter() {
   return `
   <footer class="site-footer">
     <p>
-      Citizens Facts · v<span data-site-version>1.4.0</span> ·
+      Citizens Facts · v<span data-site-version>1.6.0</span> ·
+      <a href="/mission-control/">Mission Control</a> ·
       <a href="/builds/">Builds</a> ·
       <a href="/BUILD_PLAN.md">Build Plan</a> ·
       <a href="/docs/CIVIC_ACTION.md">Civic Action</a> ·
       <a href="https://github.com/Grappe501/arkansas" rel="noopener">GitHub</a>
     </p>
-    <p class="site-footer__mission">Understand → Trust → Care → Teach → Lead</p>
+    <p class="site-footer__mission">Discover → Understand → Explore → Evaluate → Discuss → Teach → Lead</p>
   </footer>`;
 }
 

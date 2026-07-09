@@ -43,16 +43,18 @@ function renderActionHub() {
     </button>
     <div id="action-hub-panel" class="action-hub__panel" hidden>
       <p class="action-hub__title">Civic Action Hub</p>
-      <p class="action-hub__subtitle">Learn → Participate → Organize → Build</p>
+      <p class="action-hub__subtitle">Education → Participation</p>
       <nav class="action-hub__nav" aria-label="Civic actions">
-        <a href="/educate/" class="action-hub__link action-hub__link--primary">★ Become a Leader</a>
-        <a href="/action/join-network.html" class="action-hub__link">◎ Join the Network</a>
+        <a href="/educate/" class="action-hub__link action-hub__link--primary">★ Become an Education Leader</a>
+        <a href="/action/join-network.html" class="action-hub__link">◎ Join the Education Network</a>
         <a href="/action/share.html" class="action-hub__link">↗ Share This Page</a>
-        <a href="/action/share.html#invite" class="action-hub__link">👥 Invite Friends</a>
+        <a href="/action/share.html#invite" class="action-hub__link">👥 Invite Friends and Family</a>
+        <a href="/action/join-network.html" class="action-hub__link">📋 Contact List Signup</a>
         <a href="/action/draft-laws.html" class="action-hub__link">§ Draft a Law</a>
-        <a href="/action/ballot-lab.html" class="action-hub__link">✓ Build a Ballot Initiative</a>
-        <a href="/action/contact-legislators.html" class="action-hub__link">✉ Contact Legislators</a>
+        <a href="/action/ballot-lab.html" class="action-hub__link">✓ Ballot Initiative Lab</a>
+        <a href="/action/ideas.html" class="action-hub__link">💡 Community Ideas</a>
         <a href="/action/ideas.html" class="action-hub__link">? Ask a Question</a>
+        <a href="/action/ideas.html#feedback" class="action-hub__link">💬 Give Feedback</a>
       </nav>
     </div>`;
 

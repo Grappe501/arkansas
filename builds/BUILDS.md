@@ -1,15 +1,17 @@
 # Build Registry
 
-Canonical record of numbered builds. Each build = one commit + version bump.
-
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
-| **#1** | Project Mission Statement | 1.3.0 | ✅ Complete | [001](001-mission-statement.html) |
-| **—** | Civic Action Layer (Phase 7) | 1.4.0 | 🟡 Scaffolded | [CIVIC_ACTION.md](../docs/CIVIC_ACTION.md) |
-| #2 | — | — | ⬜ Pending | — |
+| **#3** | **Mission Control OS** | **1.6.0** | **✅ Complete** | [003](003-mission-control.md) · [/mission-control/](../mission-control/) |
+| **#2** | **Project Constitution v1.0** | **1.5.0** | **✅ Governing** | [002](002-project-constitution.html) |
+| #1 | Project Mission Statement | 1.3.0 | ✅ Historical | [001](001-mission-statement.html) |
 
-## Build #1 Summary
+## Mission Control
 
-Locks the project mission, outcome journey, conversion goal, and guiding principle. All future content, design, and architecture decisions must align with Build #1.
+**[/mission-control/](../mission-control/)** — Project operating system. BUILD_PLAN lives as `data/mission-control.json`.
 
-**Guiding principle:** Never overwhelm at the front door. Start simple. Let readers go as deep as they want.
+Add `?dev=1` for developer console.
+
+## Governance (Build #2)
+
+Every feature must support: (1) public understanding, (2) evidence-based learning, (3) education leaders.
