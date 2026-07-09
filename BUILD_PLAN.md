@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.81.0 · **County OS (ACOS):** [/mission-control/arkansas-county-operating-system.html](/mission-control/arkansas-county-operating-system.html) · **Founding Constitution:** [/mission-control/organizational-constitution.html](/mission-control/organizational-constitution.html)  
-**75 counties** — digital twins · 6 readiness levels · health index · **Next:** Build #78 Implementation Translation Layer  
+**Current version:** 1.82.0 · **City OS (ArCOS):** [/mission-control/arkansas-city-operating-system.html](/mission-control/arkansas-city-operating-system.html) · **County OS (ACOS):** [/mission-control/arkansas-county-operating-system.html](/mission-control/arkansas-county-operating-system.html)  
+**250 cities** — digital twins · 6 readiness levels · neighborhood bridge · **Next:** Build #79 Implementation Translation Layer  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **78** | **Arkansas City Operating System (ArCOS)** | **✅ v1.82.0** |
 | **77** | **Arkansas County Operating System (ACOS)** | **✅ v1.81.0** |
 | **76** | **Organizational Constitution** | **✅ v1.80.0** |
 | **75** | **Volunteer & Funding Constitution** | **✅ v1.79.0** |

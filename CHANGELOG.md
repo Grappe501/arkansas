@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.82.0] - 2026-07-09 — Build #78 Arkansas City Operating System (ArCOS)
+
+### Two Hundred Fifty Cities. One Shared Mission.
+- **Master Arkansas City Operating System (ArCOS) v1.0** — city execution framework for 250 largest Arkansas cities
+- City digital twin (8 sections), 7-role leadership team, 6 readiness levels, City Health Index
+- City dashboard (Leadership · Community · Learning · Growth), resource center, calendar, listening reports
+- Neighborhood integration — cities as hubs bridging county leadership and neighborhood trust
+- City-to-city collaboration; integrates ACOS (#77), Neighborhood Organizing (#57), Command Strategy (#70)
+- Honest: 250/250 scaffolded · 0/250 digital twins · 0 past initial interest · health index not computed · ~48% readiness
+- MC dashboard: `/mission-control/arkansas-city-operating-system.html`
+
 ## [1.81.0] - 2026-07-09 — Build #77 Arkansas County Operating System (ACOS)
 
 ### Seventy-Five Counties. One Institution.

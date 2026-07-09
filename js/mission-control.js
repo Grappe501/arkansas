@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">City Operating System <a href="/mission-control/arkansas-city-operating-system.html" class="mc-inline-link">ArCOS #78 →</a></h2>
+    <p class="mc-bar-note">Build #78 — Master Arkansas City Operating System. 250 cities, digital twins, 6 readiness levels, neighborhood integration. Counties structure · cities connect · neighborhoods trust. 0/250 digital twins · 0 past initial interest. ~48% readiness.</p>
     <h2 class="mc-section-title">County Operating System <a href="/mission-control/arkansas-county-operating-system.html" class="mc-inline-link">ACOS #77 →</a></h2>
     <p class="mc-bar-note">Build #77 — Master Arkansas County Operating System. 75 counties, digital twins, 6 readiness levels, health index. One county at a time. 0/75 digital twins · 0 past Awareness. ~47% readiness.</p>
     <h2 class="mc-section-title">Founding Constitution <a href="/mission-control/organizational-constitution.html" class="mc-inline-link">Organizational Charter #76 →</a></h2>
@@ -5220,6 +5222,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initVolunteerFundingConstitution();
   initOrganizationalConstitution();
   initArkansasCountyOperatingSystem();
+  initArkansasCityOperatingSystem();
 });
 
 async function initUxArchitecture() {
@@ -8126,6 +8129,131 @@ async function initArkansasCountyOperatingSystem() {
       <a href="/mission-control/county-os.html">County OS (#31)</a> ·
       <a href="/mission-control/arkansas-command-strategy.html">Command Strategy (#70)</a> ·
       <a href="/mission-control/civic-atlas.html">Civic Atlas (#58)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initArkansasCityOperatingSystem() {
+  const root = document.getElementById('mc-arkansas-city-operating-system-root');
+  if (!root) return;
+
+  const [arcityRes, citiesRes, mcRes] = await Promise.all([
+    fetch('/data/arkansas-city-operating-system.json'),
+    fetch('/data/arkansas-cities.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const arcity = await arcityRes.json();
+  const cities = await citiesRes.json();
+  const mc = await mcRes.json();
+  const s = arcity.summary;
+
+  const readinessRows = arcity.city_readiness_levels.levels.map(l => `
+    <tr><td>${l.level}</td><td><code>${l.id}</code></td><td>${l.title}</td>
+      <td>${l.cities_at_level}</td></tr>`).join('');
+
+  const twinRows = arcity.city_digital_twin.sections.map(sec => `
+    <tr><td><code>${sec.id}</code></td><td>${sec.section}</td><td>${sec.status}</td></tr>`).join('');
+
+  const roleRows = arcity.city_leadership_team.roles.map(r => `
+    <tr><td><code>${r.id}</code></td><td>${r.role}</td><td>${r.filled}</td><td>${r.status}</td></tr>`).join('');
+
+  const dashRows = arcity.city_dashboard.domains.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.domain}</td>
+      <td>${d.indicators.join(', ')}</td><td>${d.status}</td></tr>`).join('');
+
+  const systemRows = arcity.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td><td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  const citySample = (cities.cities || []).slice(0, 12).map(c => `
+    <tr><td>${c.rank}</td><td>${c.name}</td><td>${c.population_estimate?.toLocaleString() ?? '—'}</td>
+      <td>${c.education_leaders}</td><td>${c.coalition_orgs}</td><td>${c.status}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Arkansas City Operating System</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #78 · ${arcity.title}</p>
+      <h1>${arcity.subtitle}</h1>
+      <p class="mc-header__question">${arcity.governing_principle}</p>
+      <p class="mc-bar-note">${arcity.purpose}</p>
+      <p class="mc-bar-note"><strong>Bridge:</strong> county leadership ↔ neighborhood relationships</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">ArCOS readiness</div><div class="mc-stat__value">${s.arkansas_city_operating_system_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Cities</div><div class="mc-stat__value">${s.cities_scaffolded}/${s.cities_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Digital twins</div><div class="mc-stat__value">${s.cities_with_digital_twin}/${s.cities_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Past initial interest</div><div class="mc-stat__value">${s.cities_past_initial_interest}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Dashboards live</div><div class="mc-stat__value">${s.city_dashboards_live}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Health index</div><div class="mc-stat__value">${s.city_health_index_computed ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">${arcity.city_philosophy.title}</h2>
+    <p class="mc-bar-note">Active learning community: ${arcity.city_philosophy.every_city_active_learning_community ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${arcity.city_philosophy.questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${arcity.city_digital_twin.title}</h2>
+    <p class="mc-bar-note">${arcity.city_digital_twin.description}</p>
+    <p class="mc-bar-note">Operational: ${arcity.city_digital_twin.digital_twins_operational}/${arcity.city_digital_twin.cities_total} · ${arcity.city_digital_twin.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Section</th><th>Status</th></tr></thead>
+      <tbody>${twinRows}</tbody></table>
+    <h2 class="mc-section-title">${arcity.city_leadership_team.title}</h2>
+    <p class="mc-bar-note">One person, multiple roles initially: ${arcity.city_leadership_team.one_person_multiple_roles_initially ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Role</th><th>Filled</th><th>Status</th></tr></thead>
+      <tbody>${roleRows}</tbody></table>
+    <h2 class="mc-section-title">${arcity.city_goals.title}</h2>
+    <p class="mc-bar-note">Annual measurable objectives · MC tracks: ${arcity.city_goals.mc_tracks_progress ? 'Yes' : 'No'} · ${arcity.city_goals.status}</p>
+    <ul class="mc-deliverables">${arcity.city_goals.examples.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${arcity.city_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${arcity.city_dashboard.live ? 'Yes' : 'No'} · ${arcity.city_dashboard.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Domain</th><th>Indicators</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">${arcity.city_resource_center.title}</h2>
+    <p class="mc-bar-note">Statewide consistent, local customization: ${arcity.city_resource_center.statewide_consistent_local_customization ? 'Yes' : 'No'} · Live: ${arcity.city_resource_center.live ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${arcity.city_resource_center.items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${arcity.city_calendar.title}</h2>
+    <p class="mc-bar-note">County/statewide sync: ${arcity.city_calendar.syncs_with_county_and_statewide ? 'Yes' : 'No'} · Live: ${arcity.city_calendar.live ? 'Yes' : 'No'} · ${arcity.city_calendar.status}</p>
+    <ul class="mc-deliverables">${arcity.city_calendar.event_types.map(e => `<li>${e}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${arcity.neighborhood_integration.title}</h2>
+    <p class="mc-bar-note">Cities as neighborhood hubs: ${arcity.neighborhood_integration.cities_as_neighborhood_hubs ? 'Yes' : 'No'} · ${arcity.neighborhood_integration.status}</p>
+    <ul class="mc-deliverables">${arcity.neighborhood_integration.visualizations.map(v => `<li>${v}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${arcity.city_listening_reports.title}</h2>
+    <p class="mc-bar-note">Submitted: ${arcity.city_listening_reports.reports_submitted} · MC aggregates statewide: ${arcity.city_listening_reports.mc_aggregates_statewide ? 'Yes' : 'No'} · ${arcity.city_listening_reports.status}</p>
+    <ul class="mc-deliverables">${arcity.city_listening_reports.items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${arcity.city_readiness_levels.title}</h2>
+    <p class="mc-bar-note">Past initial interest: ${arcity.city_readiness_levels.cities_past_initial_interest} · MC displays all: ${arcity.city_readiness_levels.mc_displays_all_cities ? 'Yes' : 'No'}</p>
+    <p class="mc-bar-note">${arcity.city_readiness_levels.note ?? ''}</p>
+    <table class="mc-table"><thead><tr><th>Level</th><th>ID</th><th>Stage</th><th>Cities</th></tr></thead>
+      <tbody>${readinessRows}</tbody></table>
+    <h2 class="mc-section-title">${arcity.city_health_index.title}</h2>
+    <p class="mc-bar-note">Computed: ${arcity.city_health_index.computed ? 'Yes' : 'No'} · ${arcity.city_health_index.status}</p>
+    <ul class="mc-deliverables">${arcity.city_health_index.factors.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${arcity.city_collaboration.title}</h2>
+    <p class="mc-bar-note">Pairs active: ${arcity.city_collaboration.pairs_active} · Horizontal spread: ${arcity.city_collaboration.horizontal_spread ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${arcity.city_collaboration.types.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">250 Largest Cities</h2>
+    <div class="mc-card mc-inv-table-wrap" style="max-height:280px;overflow-y:auto">
+      <table class="mc-table"><thead><tr><th>Rank</th><th>City</th><th>Population</th><th>Leaders</th><th>Orgs</th><th>Status</th></tr></thead>
+        <tbody>${citySample}</tbody></table>
+    </div>
+    <p class="mc-bar-note">Showing 12 of ${s.cities_scaffolded} — full index in arkansas-cities.json</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${arcity.integration.chain}</p>
+    <p class="mc-bar-note"><strong>Practical center of activity:</strong> ${arcity.integration.cities_practical_center_of_activity ? 'Yes' : 'No'} · <strong>County↔neighborhood bridge:</strong> ${arcity.integration.bridge_county_to_neighborhood ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${arcity.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${arcity.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${arcity.recommended_next_build.number} — ${arcity.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${arcity.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_ARKANSAS_CITY_OPERATING_SYSTEM.md">MASTER_ARKANSAS_CITY_OPERATING_SYSTEM.md</a> ·
+      <a href="/data/arkansas-city-operating-system.json">JSON</a> ·
+      <a href="/data/arkansas-cities.json">Cities Index</a> ·
+      <a href="/mission-control/arkansas-county-operating-system.html">ACOS (#77)</a> ·
+      <a href="/mission-control/neighborhood-organizing.html">Neighborhood (#57)</a> ·
+      <a href="/mission-control/arkansas-command-strategy.html">Command Strategy (#70)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

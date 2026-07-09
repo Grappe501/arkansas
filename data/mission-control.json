@@ -1,6 +1,6 @@
 {
-  "version": "1.81.0",
-  "build": 77,
+  "version": "1.82.0",
+  "build": 78,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 77,
+    "overall_completion": 78,
     "current_build": {
-      "number": 77,
-      "title": "Citizens United Facts Master Arkansas County Operating System (ACOS) v1.0"
-    },
-    "active_phase": "County Execution \u2192 Implementation Translation",
-    "last_completed": "Organizational Constitution",
-    "next_build": {
       "number": 78,
+      "title": "Citizens United Facts Master Arkansas City Operating System (ArCOS) v1.0"
+    },
+    "active_phase": "City Execution \u2192 Implementation Translation",
+    "last_completed": "Arkansas County Operating System",
+    "next_build": {
+      "number": 79,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
@@ -57,6 +57,7 @@
     "volunteer_funding_constitution_readiness": 45,
     "organizational_constitution_readiness": 46,
     "arkansas_county_operating_system_readiness": 47,
+    "arkansas_city_operating_system_readiness": 48,
     "mc2_readiness": 42,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
@@ -105,8 +106,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 77,
-      "note": "Build #77 \u2014 Master Arkansas County Operating System."
+      "value": 78,
+      "note": "Build #78 \u2014 Master Arkansas City Operating System."
     },
     {
       "id": "constitution",
@@ -668,7 +669,14 @@
       "label": "County Operating System",
       "value": 47,
       "max": 100,
-      "note": "0/75 past Awareness \u00b7 health index planned."
+      "note": "ACOS county layer \u2014 see ArCOS (#78) for city bridge."
+    },
+    {
+      "id": "arkansas_city_operating_system",
+      "label": "City Operating System",
+      "value": 48,
+      "max": 100,
+      "note": "0/250 past initial interest \u00b7 health index planned."
     }
   ],
   "public_readiness": {
@@ -1423,6 +1431,12 @@
       "id": "arkansas_county_operating_system",
       "label": "County Operating System",
       "href": "/mission-control/arkansas-county-operating-system.html",
+      "status": "complete"
+    },
+    {
+      "id": "arkansas_city_operating_system",
+      "label": "City Operating System",
+      "href": "/mission-control/arkansas-city-operating-system.html",
       "status": "complete"
     }
   ],
@@ -2449,6 +2463,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 78,
+      "title": "Citizens United Facts Master Arkansas City Operating System (ArCOS) v1.0",
+      "version": "1.82.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Master ArCOS \u2014 city execution framework for 250 largest Arkansas cities",
+      "summary": "City digital twin, 6 readiness levels, health index, neighborhood integration, 48% readiness. 250/250 scaffolded \u00b7 0 digital twins.",
+      "files_created": [
+        "data/arkansas-city-operating-system.json",
+        "docs/MASTER_ARKANSAS_CITY_OPERATING_SYSTEM.md",
+        "builds/078-arkansas-city-operating-system.md",
+        "mission-control/arkansas-city-operating-system.html",
+        "scripts/gen-arkansas-city-operating-system.py",
+        "scripts/update-mc-build78.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/arkansas-city-operating-system.html"
+      ],
+      "decisions_made": [
+        "ArCOS as bridge between county leadership and neighborhoods",
+        "6-stage city readiness model",
+        "City digital twin \u2014 8-section operational headquarters",
+        "7-role city leadership team",
+        "Neighborhood integration on city dashboards",
+        "Integrates ACOS (#77), Neighborhood Organizing (#57)",
+        "48% readiness \u2014 blueprint only"
+      ],
+      "open_questions": [
+        "Reconcile ArCOS 6-stage vs Command Strategy city model?",
+        "City digital twin route: /arkansas/[city] or MC-native?",
+        "County linkage on city records \u2014 populate from atlas?",
+        "Health index weighting formula?"
+      ],
+      "risks": [
+        "0/250 city digital twins operational \u2014 MC generation not implemented",
+        "0 cities past initial interest \u2014 no founding Education Leaders",
+        "0 city dashboards live \u2014 operational headquarters not built",
+        "City Health Index not computed \u2014 factors specified only"
+      ],
+      "next_recommended": 79,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-city-operating-system.html",
+      "review_status": "complete"
+    },
     {
       "number": 77,
       "title": "Citizens United Facts Master Arkansas County Operating System (ACOS) v1.0",
@@ -6422,21 +6489,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Master ACOS v1.0 \u2014 75-county execution framework",
-    "building_now": "77 builds specified \u2014 county digital twins next",
+    "what_built": "Master ArCOS v1.0 \u2014 250-city execution framework",
+    "building_now": "78 builds specified \u2014 city digital twins next",
     "blocked": [
-      "County digital twins",
-      "County dashboards",
+      "City digital twins",
+      "City dashboards",
       "Health index",
-      "Listening reports"
+      "Neighborhood integration UI"
     ],
     "ready_public": [
       "6 readiness levels",
-      "13 profile sections",
-      "8 leadership roles",
+      "8 digital twin sections",
+      "7 leadership roles",
       "Integration chain"
     ],
-    "next": "Build #78 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #79 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -7241,5 +7308,14 @@
     "counties_total": 75,
     "digital_twins_operational": 0,
     "master_acos": true
+  },
+  "arkansas_city_operating_system": "/data/arkansas-city-operating-system.json",
+  "arkansas_city_operating_system_dashboard": "/mission-control/arkansas-city-operating-system.html",
+  "arkansas_city_operating_system_inventory": {
+    "readiness_score": 48,
+    "cities_scaffolded": 250,
+    "cities_total": 250,
+    "digital_twins_operational": 0,
+    "master_arcity": true
   }
 }

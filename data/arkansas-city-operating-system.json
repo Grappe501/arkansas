@@ -1,0 +1,419 @@
+{
+  "version": "1.0",
+  "build": 78,
+  "updated": "2026-07-09",
+  "title": "Master Arkansas City Operating System (ArCOS) v1.0",
+  "subtitle": "Two Hundred Fifty Cities. One Shared Mission.",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/arkansas-city-operating-system.html",
+  "constitution": "/docs/MASTER_ARKANSAS_CITY_OPERATING_SYSTEM.md",
+  "purpose": "Repeatable framework for civic education teams in the 250 largest Arkansas cities \u2014 operational bridge between county leadership and neighborhood relationships.",
+  "governing_principle": "Counties provide structure. Neighborhoods provide trust. Cities provide connection. Civic understanding grows through local relationships.",
+  "city_philosophy": {
+    "title": "Institutional Philosophy",
+    "every_city_active_learning_community": true,
+    "questions": [
+      "Who are our Education Leaders?",
+      "What organizations are helping educate the community?",
+      "Where are conversations taking place?",
+      "What educational events are scheduled?",
+      "What questions are local residents asking?",
+      "What progress have we made this year?"
+    ]
+  },
+  "city_digital_twin": {
+    "title": "City Digital Twin",
+    "description": "Digital workspace \u2014 operational headquarters for each participating city",
+    "cities_total": 250,
+    "digital_twins_operational": 0,
+    "sections": [
+      {
+        "id": "ArCOS-DT-01",
+        "section": "City overview",
+        "status": "specified"
+      },
+      {
+        "id": "ArCOS-DT-02",
+        "section": "Leadership team",
+        "status": "specified"
+      },
+      {
+        "id": "ArCOS-DT-03",
+        "section": "Community calendar",
+        "status": "specified"
+      },
+      {
+        "id": "ArCOS-DT-04",
+        "section": "Educational resources",
+        "status": "specified"
+      },
+      {
+        "id": "ArCOS-DT-05",
+        "section": "Coalition partners",
+        "status": "partial"
+      },
+      {
+        "id": "ArCOS-DT-06",
+        "section": "Progress dashboard",
+        "status": "planned"
+      },
+      {
+        "id": "ArCOS-DT-07",
+        "section": "Local news and updates",
+        "status": "specified"
+      },
+      {
+        "id": "ArCOS-DT-08",
+        "section": "Community learning history",
+        "status": "planned"
+      }
+    ],
+    "sections_total": 8,
+    "status": "specified"
+  },
+  "city_leadership_team": {
+    "title": "City Leadership Team",
+    "roles_total": 7,
+    "one_person_multiple_roles_initially": true,
+    "roles": [
+      {
+        "id": "ArCOS-LR-01",
+        "role": "City Education Leader",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ArCOS-LR-02",
+        "role": "Neighborhood Leaders",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ArCOS-LR-03",
+        "role": "Academy Mentor",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ArCOS-LR-04",
+        "role": "Community Conversation Coordinator",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ArCOS-LR-05",
+        "role": "Coalition Liaison",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ArCOS-LR-06",
+        "role": "Volunteer Coordinator",
+        "filled": 0,
+        "status": "specified"
+      },
+      {
+        "id": "ArCOS-LR-07",
+        "role": "Media & Communications Volunteer",
+        "filled": 0,
+        "status": "specified"
+      }
+    ]
+  },
+  "city_goals": {
+    "title": "City Goals",
+    "annual_measurable_objectives": true,
+    "examples": [
+      "Recruit additional Education Leaders",
+      "Increase Academy participation",
+      "Host monthly community conversations",
+      "Develop new coalition partnerships",
+      "Expand neighborhood representation",
+      "Share educational resources more broadly"
+    ],
+    "mc_tracks_progress": true,
+    "status": "specified"
+  },
+  "city_dashboard": {
+    "title": "City Dashboard",
+    "domains": [
+      {
+        "id": "ArCOS-CD-L",
+        "domain": "Leadership",
+        "indicators": [
+          "Education Leaders",
+          "Mentors",
+          "Academy graduates"
+        ],
+        "status": "planned"
+      },
+      {
+        "id": "ArCOS-CD-C",
+        "domain": "Community",
+        "indicators": [
+          "Conversations",
+          "Events",
+          "Volunteer activity",
+          "Organizations"
+        ],
+        "status": "planned"
+      },
+      {
+        "id": "ArCOS-CD-LN",
+        "domain": "Learning",
+        "indicators": [
+          "Course completion",
+          "Resource usage",
+          "Presentation activity"
+        ],
+        "status": "planned"
+      },
+      {
+        "id": "ArCOS-CD-G",
+        "domain": "Growth",
+        "indicators": [
+          "Participant growth",
+          "Neighborhood expansion",
+          "Coalition participation"
+        ],
+        "status": "planned"
+      }
+    ],
+    "live": false,
+    "status": "specified"
+  },
+  "city_resource_center": {
+    "title": "City Resource Center",
+    "items": [
+      "Presentation slide decks",
+      "Fact sheets",
+      "Community discussion guides",
+      "Printable handouts",
+      "Educational videos",
+      "Frequently asked questions",
+      "Arkansas-specific resource packets"
+    ],
+    "items_total": 7,
+    "statewide_consistent_local_customization": true,
+    "live": false,
+    "status": "specified"
+  },
+  "city_calendar": {
+    "title": "City Calendar",
+    "event_types": [
+      "Community conversations",
+      "Academy sessions",
+      "Coalition meetings",
+      "Volunteer events",
+      "Public presentations",
+      "Educational workshops"
+    ],
+    "syncs_with_county_and_statewide": false,
+    "live": false,
+    "status": "specified"
+  },
+  "neighborhood_integration": {
+    "title": "Neighborhood Integration",
+    "cities_as_neighborhood_hubs": true,
+    "visualizations": [
+      "Neighborhoods represented",
+      "Neighborhood Leaders",
+      "Learning circles",
+      "Community conversations",
+      "Volunteer opportunities",
+      "Educational coverage"
+    ],
+    "status": "specified"
+  },
+  "city_listening_reports": {
+    "title": "City Listening Reports",
+    "items": [
+      "Frequently asked questions",
+      "Community educational needs",
+      "Emerging issues",
+      "Resource requests",
+      "Success stories"
+    ],
+    "reports_submitted": 0,
+    "mc_aggregates_statewide": true,
+    "status": "specified"
+  },
+  "city_readiness_levels": {
+    "title": "City Readiness Levels",
+    "levels_total": 6,
+    "levels": [
+      {
+        "level": 1,
+        "id": "initial_interest",
+        "title": "Initial interest",
+        "cities_at_level": 250
+      },
+      {
+        "level": 2,
+        "id": "founding_leader",
+        "title": "Founding Education Leader",
+        "cities_at_level": 0
+      },
+      {
+        "level": 3,
+        "id": "leadership_team",
+        "title": "Leadership Team",
+        "cities_at_level": 0
+      },
+      {
+        "level": 4,
+        "id": "regular_conversations",
+        "title": "Regular Community Conversations",
+        "cities_at_level": 0
+      },
+      {
+        "level": 5,
+        "id": "coalition_partnerships",
+        "title": "Strong Coalition Partnerships",
+        "cities_at_level": 0
+      },
+      {
+        "level": 6,
+        "id": "sustainable_network",
+        "title": "Sustainable City Civic Education Network",
+        "cities_at_level": 0
+      }
+    ],
+    "cities_past_initial_interest": 0,
+    "mc_displays_all_cities": true,
+    "status": "specified",
+    "note": "6-stage model; extends Command Strategy (#70) city readiness model"
+  },
+  "city_health_index": {
+    "title": "City Health Index",
+    "factors": [
+      "Leadership strength",
+      "Volunteer engagement",
+      "Academy participation",
+      "Community activity",
+      "Coalition participation",
+      "Neighborhood coverage",
+      "Educational resource usage",
+      "Participant retention"
+    ],
+    "factors_total": 8,
+    "computed": false,
+    "prioritizes_support_and_recognizes_progress": true,
+    "status": "planned"
+  },
+  "city_collaboration": {
+    "title": "City-to-City Collaboration",
+    "cities_learn_from_one_another": true,
+    "types": [
+      "Joint workshops",
+      "Shared presentations",
+      "Leadership exchanges",
+      "Mentorship",
+      "Resource sharing"
+    ],
+    "pairs_active": 0,
+    "horizontal_spread": true,
+    "status": "specified"
+  },
+  "integration": {
+    "chain": "Mission Control \u2192 ACOS (#77) \u2192 Civic Atlas \u2192 Education Academy \u2192 Coalition Network \u2192 Relationship OS \u2192 Citizen Action Center \u2192 Knowledge Graph",
+    "cities_practical_center_of_activity": true,
+    "bridge_county_to_neighborhood": true,
+    "systems": [
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      },
+      {
+        "system": "Arkansas County OS (#77)",
+        "route": "/mission-control/arkansas-county-operating-system.html",
+        "status": "live"
+      },
+      {
+        "system": "Arkansas Civic Atlas (#58)",
+        "route": "/mission-control/civic-atlas.html",
+        "status": "live"
+      },
+      {
+        "system": "Community Education Academy (#68)",
+        "route": "/mission-control/citizen-leadership-academy.html",
+        "status": "live"
+      },
+      {
+        "system": "Coalition Network (#61)",
+        "route": "/mission-control/coalition-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Relationship Operating System (#59)",
+        "route": "/mission-control/relationship-os.html",
+        "status": "live"
+      },
+      {
+        "system": "Citizen Action Center (#62)",
+        "route": "/mission-control/citizen-action-center.html",
+        "status": "live"
+      },
+      {
+        "system": "Knowledge Graph",
+        "route": "/mission-control/knowledge-graph.html",
+        "status": "live"
+      },
+      {
+        "system": "Neighborhood Organizing (#57)",
+        "route": "/mission-control/neighborhood-organizing.html",
+        "status": "live"
+      },
+      {
+        "system": "Arkansas Command Strategy (#70)",
+        "route": "/mission-control/arkansas-command-strategy.html",
+        "status": "live"
+      },
+      {
+        "system": "Statewide Growth (#56)",
+        "route": "/mission-control/statewide-growth.html",
+        "status": "live"
+      }
+    ]
+  },
+  "long_term_vision": "Ten to fifteen years after launch: 250 largest cities each have active Education Leaders; community conversations year-round; libraries, civic organizations, colleges, and volunteers collaborate locally; neighborhood leaders supported by city teams. Resilient network of local civic education communities connected to unified statewide institution.",
+  "summary": {
+    "cities_total": 250,
+    "cities_scaffolded": 250,
+    "cities_with_digital_twin": 0,
+    "city_dashboards_live": 0,
+    "cities_past_initial_interest": 0,
+    "readiness_levels": 6,
+    "digital_twin_sections": 8,
+    "leadership_roles": 7,
+    "city_health_index_computed": false,
+    "city_listening_reports_submitted": 0,
+    "city_collaboration_pairs": 0,
+    "arkansas_city_operating_system_readiness_pct": 48,
+    "arkansas_county_operating_system_readiness_pct": 47,
+    "arkansas_command_strategy_readiness_pct": 39,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "0/250 city digital twins operational \u2014 MC generation not implemented",
+    "0 cities past initial interest \u2014 no founding Education Leaders",
+    "0 city dashboards live \u2014 operational headquarters not built",
+    "City Health Index not computed \u2014 factors specified only",
+    "City listening reports \u2014 0 submitted; aggregation not live",
+    "City calendars \u2014 not per-city; county/statewide sync off",
+    "City resource centers \u2014 not per-city",
+    "Neighborhood integration visualizations \u2014 not on city dashboards",
+    "6-stage ArCOS vs Command Strategy city model \u2014 reconcile?",
+    "Build #78 vs Statewide Growth (#56) 250-city index \u2014 unify routes?",
+    "City-to-city collaboration \u2014 0 pairs",
+    "County field null on city records \u2014 geographic linkage incomplete",
+    "Canonical /arkansas/[city] routes not built"
+  ],
+  "recommended_next_build": {
+    "number": 79,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "City digital twin pages, readiness visualization, health index, neighborhood integration UI, calendar sync, COMP-* specs, GitHub backlog."
+  }
+}
