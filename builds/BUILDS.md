@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#23** | **Wireframes** | **1.27.0** | **✅ Complete** | [023](023-wireframe-blueprint.md) · [/mission-control/wireframes.html](../mission-control/wireframes.html) |
 | **#22** | **Database Schema** | **1.26.0** | **✅ Complete** | [022](022-database-schema.md) · [/mission-control/database.html](../mission-control/database.html) |
 | **#21** | **Repository Blueprint** | **1.25.0** | **✅ Complete** | [021](021-repository-folder-structure.md) · [/mission-control/repository.html](../mission-control/repository.html) |
 | **#20** | **Platform Blueprint** | **1.24.0** | **✅ Complete** | [020](020-master-platform-blueprint.md) · [/mission-control/platform.html](../mission-control/platform.html) |
@@ -28,6 +29,7 @@
 |-------|-------|-------|
 | **Repository Blueprint** | `/mission-control/repository.html` | **GitHub & folder structure · v1 target** |
 | **Database Schema** | `/mission-control/database.html` | **15 entities · ERD · v1 static storage** |
+| **Wireframe Blueprint** | `/mission-control/wireframes.html` | **25 screens · section architecture** |
 | Phase Registry | `/mission-control/phases.html` | Project phases |
 | Site Architecture | `/mission-control/architecture.html` | Information architecture (IA) |
 | **Platform Blueprint** | `/mission-control/platform.html` | **Technical architecture · v1 system** |

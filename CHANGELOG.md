@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.27.0] - 2026-07-09 — Build #23 Wireframes
+
+### Major Screen Wireframe Blueprint
+- **Screen Architecture v1.0** — 25 screens, ~175 sections
+- Four outcomes: understand, evidence, participate, mission control
+- Honest implementation status mapped to route registry
+- Mobile requirements, global component links
+- MC dashboard: `/mission-control/wireframes.html`
+
 ## [1.26.0] - 2026-07-09 — Build #22 Database Schema
 
 ### Database Schema & Entity Relationship Blueprint

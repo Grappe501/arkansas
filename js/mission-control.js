@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Wireframe Blueprint <a href="/mission-control/wireframes.html" class="mc-inline-link">25 Screens →</a></h2>
+    <p class="mc-bar-note">Build #23 — Screen architecture, sections per route, outcome mapping, mobile requirements.</p>
     <h2 class="mc-section-title">Database Schema <a href="/mission-control/database.html" class="mc-inline-link">Entity Blueprint →</a></h2>
     <p class="mc-bar-note">Build #22 — 15 entities, 10 join tables, v1 static storage, Supabase/Postgres migration path.</p>
     <h2 class="mc-section-title">Repository Blueprint <a href="/mission-control/repository.html" class="mc-inline-link">Folder Structure →</a></h2>
@@ -2206,6 +2208,85 @@ async function initDatabaseSchemaBlueprint() {
   initDevConsole(mc);
 }
 
+async function initWireframeBlueprint() {
+  const root = document.getElementById('mc-wireframes-root');
+  if (!root) return;
+
+  const [wfRes, mcRes] = await Promise.all([
+    fetch('/data/wireframe-blueprint.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const wf = await wfRes.json();
+  const mc = await mcRes.json();
+  const s = wf.summary;
+  const outcomeLabels = wf.outcomes;
+
+  const screenRows = wf.screens.map(sc => `
+    <tr class="${sc.implementation_status === 'live' ? 'mc-table__row--approved' : ''}">
+      <td>${sc.number}</td>
+      <td><strong>${sc.title}</strong></td>
+      <td><code>${sc.route}</code></td>
+      <td>${outcomeLabels[sc.outcome] || sc.outcome}</td>
+      <td>${sc.section_count}</td>
+      <td>${sc.wireframe_status}</td>
+      <td>${sc.implementation_status}</td>
+    </tr>`).join('');
+
+  const detailCards = wf.screens.map(sc => `
+    <div class="mc-card">
+      <h3>${sc.number}. ${sc.title}</h3>
+      <p class="mc-bar-note"><code>${sc.route}</code> · ${sc.primary_goal}</p>
+      <p class="mc-bar-note">Current: <code>${sc.current_route || '—'}</code> · World: ${sc.learning_world || '—'}</p>
+      <ol class="mc-deliverables">${sc.sections.map(sec => `<li>${sec}</li>`).join('')}</ol>
+      ${sc.notes ? `<p class="mc-bar-note"><em>${sc.notes}</em></p>` : ''}
+    </div>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Wireframe Blueprint</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #23 · ${wf.title}</p>
+      <h1>Major Screen Wireframes</h1>
+      <p class="mc-header__question">${wf.screen_principle}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Screens</div><div class="mc-stat__value">${s.screens}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Sections</div><div class="mc-stat__value">${s.sections_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Wireframe readiness</div><div class="mc-stat__value">${s.wireframe_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Impl. live</div><div class="mc-stat__value">${s.implementation_live}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Impl. partial</div><div class="mc-stat__value">${s.implementation_partial}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Planned/stub</div><div class="mc-stat__value">${s.implementation_planned}</div></div>
+    </div>
+    <h2 class="mc-section-title">Four Outcomes</h2>
+    <ul class="mc-deliverables">${Object.entries(outcomeLabels).map(([k, v]) => `<li><strong>${k}</strong> — ${v} (${s.by_outcome[k] || 0} screens)</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Screen Inventory</h2>
+    <div class="mc-card mc-inv-table-wrap" style="max-height:360px;overflow-y:auto">
+      <table class="mc-table mc-inv-table">
+        <thead><tr><th>#</th><th>Screen</th><th>Route</th><th>Outcome</th><th>Sections</th><th>Wireframe</th><th>Impl.</th></tr></thead>
+        <tbody>${screenRows}</tbody>
+      </table>
+    </div>
+    <h2 class="mc-section-title">Global Components</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Component</th><th>Used on</th></tr></thead>
+      <tbody>${wf.global_components.map(c => `<tr><td><code>${c.id}</code></td><td>${c.title}</td><td>${c.screens}</td></tr>`).join('')}</tbody></table>
+    <h2 class="mc-section-title">Mobile Requirements</h2>
+    <ul class="mc-deliverables">${wf.mobile_requirements.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Screen Section Details (${s.screens})</h2>
+    <div class="mc-grid-2">${detailCards}</div>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${wf.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${wf.recommended_next_build.number} — ${wf.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${wf.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/WIREFRAME_BLUEPRINT.md">WIREFRAME_BLUEPRINT.md</a> ·
+      <a href="/data/wireframe-blueprint.json">JSON</a> ·
+      <a href="/mission-control/routes.html">Route Registry</a> ·
+      <a href="/mission-control/components.html">Components</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -2227,4 +2308,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initPlatformArchitectureBlueprint();
   initRepositoryBlueprint();
   initDatabaseSchemaBlueprint();
+  initWireframeBlueprint();
 });

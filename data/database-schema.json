@@ -703,8 +703,8 @@
     "Form submissions not synced to person/signup tables"
   ],
   "recommended_next_build": {
-    "number": 23,
-    "title": "Wireframes for Every Major Screen",
-    "note": "UX artifacts before component specs and framework migration."
+    "number": 24,
+    "title": "Component Specifications with Props/States",
+    "note": "Map wireframe sections to component props before framework build."
   }
 }

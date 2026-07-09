@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.26.0 · **Database:** [/mission-control/database.html](/mission-control/database.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #22:** ✅ Database Schema · **Build #21:** ✅ Repository Blueprint · **Build #20:** ✅ Platform Blueprint  
+**Current version:** 1.27.0 · **Wireframes:** [/mission-control/wireframes.html](/mission-control/wireframes.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #23:** ✅ Wireframes · **Build #22:** ✅ Database Schema · **Build #21:** ✅ Repository Blueprint  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -266,8 +266,25 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **20** | **Platform Blueprint** | **✅ v1.24.0** |
 | **21** | **Repository Structure** | **✅ v1.25.0** |
 | **22** | **Database Schema** | **✅ v1.26.0** |
+| **23** | **Wireframes** | **✅ v1.27.0** |
 
-**Next:** Build #23 — Wireframes for every major screen.
+**Next:** Build #24 — Component specifications with props/states.
+
+---
+
+## Phase 23 — Wireframes (Build #23) ★ NEW
+
+*25 major screens with section-level architecture before visual design.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| W1 | Wireframe Blueprint v1.0 | ✅ | `data/wireframe-blueprint.json` |
+| W2 | 25 screens defined | ✅ | Sections per screen |
+| W3 | Four outcome mapping | ✅ | understand · evidence · participate · MC |
+| W4 | Route + implementation status | ✅ | Honest vs route registry |
+| W5 | Global component mapping | ✅ | Action Hub, Compass, citations |
+| W6 | Mobile requirements | ✅ | 7 requirements |
+| W7 | MC wireframes dashboard | ✅ | `/mission-control/wireframes.html` |
 
 ---
 
@@ -435,7 +452,7 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#20**~~ | ~~Master Platform Blueprint & Technical Architecture~~ ✅ Done |
 | ~~**#21**~~ | ~~Repository & folder structure~~ ✅ Done |
 | ~~**#22**~~ | ~~Database schema and ERD~~ ✅ Done |
-| **#23** | **Wireframes for every major screen** |
+| ~~**#23**~~ | ~~Wireframes for every major screen~~ ✅ Done |
 | **#24** | **Component specifications with props/states** |
 | **#25** | **GitHub issues, milestones, and sprint roadmap** |
 
