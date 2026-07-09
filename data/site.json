@@ -2,7 +2,7 @@
   "site": {
     "title": "Citizens Facts",
     "tagline": "Citizens United civic education — Understand → Teach → Lead",
-    "version": "2.05.7",
+    "version": "2.05.8",
     "route_registry": "/mission-control/routes.html",
     "component_registry": "/mission-control/components.html",
     "facts_framework": "/mission-control/facts.html",
@@ -162,6 +162,8 @@
     "design_system_package": "/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md",
     "mission_control_architecture_manifest": "/data/mission-control-architecture-manifest.json",
     "mission_control_architecture_package": "/docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md",
+    "localbrain_network_manifest": "/data/localbrain-network-manifest.json",
+    "localbrain_network_package": "/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md",
     "coalition_outreach": "/mission-control/coalition.html",
     "acei_coalition": "/mission-control/coalition.html",
     "acucos": "/mission-control/coalition.html",

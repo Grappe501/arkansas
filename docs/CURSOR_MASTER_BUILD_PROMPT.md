@@ -23,6 +23,7 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 0e. **Identity & Auth (IMP-05):** [/docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md](/docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md) · [/data/identity-auth-manifest.json](/data/identity-auth-manifest.json)
 0f. **Design System (IMP-06):** [/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md](/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md) · [/data/design-system-manifest.json](/data/design-system-manifest.json)
 0g. **Mission Control Architecture (IMP-07):** [/docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md](/docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md) · [/data/mission-control-architecture-manifest.json](/data/mission-control-architecture-manifest.json)
+0h. **LocalBrain Network (IMP-08):** [/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md](/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md) · [/data/localbrain-network-manifest.json](/data/localbrain-network-manifest.json)
 1. **Manifesto (#99):** Will this help an ordinary Arkansan understand how self-government works?
 2. **Charter (#100):** Knowledge → Citizens → Communities → Arkansas → self-government.
 3. **Education before advocacy** — present evidence; Arkansans draw conclusions.
@@ -114,7 +115,7 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 
 ## First step to implement
 
-**IMP-01** through **IMP-07** are **documented**:
+**IMP-01** through **IMP-08** are **documented**:
 - [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
 - [Technical Architecture](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
 - [Route Map](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [route-manifest.json](/data/route-manifest.json)
@@ -122,7 +123,8 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 - [Identity & Auth](/docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md) · [identity-auth-manifest.json](/data/identity-auth-manifest.json)
 - [Design System](/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md) · [design-system-manifest.json](/data/design-system-manifest.json)
 - [Mission Control Architecture](/docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md) · [mission-control-architecture-manifest.json](/data/mission-control-architecture-manifest.json)
+- [LocalBrain Network](/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md) · [localbrain-network-manifest.json](/data/localbrain-network-manifest.json)
 
-**IMP-08** is next: Master LocalBrain Architecture & Institutional AI Network.
+**IMP-09** is next: Master Knowledge Graph, Semantic Search & Institutional Memory.
 
-Engineering execution (repository migration, stack, Netlify, Git, CI) begins at **engineering IMP-08** after LocalBrain architecture is documented.
+Engineering execution (migration, stack, Netlify, Git, CI) begins at **engineering IMP-09** after knowledge graph is documented.

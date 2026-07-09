@@ -26,7 +26,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 7  # IMP-01 through IMP-07
+steps_documented = 8  # IMP-01 through IMP-08
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -301,12 +301,45 @@ IMPLEMENTATION_STEPS = [
     },
     {
         'number': 8, 'id': 'IMP-08', 'band': 'A',
-        'title': 'Repository migration, stack lock, Netlify, Git workflow, and environment',
-        'summary': 'Strangler-fig migration, repo audit, pinned stack, netlify.toml, branch model, env matrix',
+        'package_label': 'Implementation Package 8 of 50',
+        'title': 'Master LocalBrain Architecture & Institutional AI Network',
+        'summary': 'Distributed intelligence — 20 LocalBrains, common architecture, brain contracts, executive and personal AI',
+        'deliverables': [
+            'docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md',
+            'data/localbrain-network-manifest.json',
+            'LocalBrain Architecture', 'Institutional AI Network', 'Department Intelligence Model',
+            'Knowledge Synchronization Rules', 'Calendar Integration', 'AI Agent Structure',
+            'Brain Communication Contracts', 'Executive AI Architecture',
+            'Personal AI Architecture', 'Mission Control Reporting Standards',
+        ],
+        'acceptance_criteria': [
+            'LocalBrain definition: memory, knowledge, calendar, projects, tasks, agents, reports, dashboards',
+            'Twenty LocalBrains documented with common module architecture',
+            'Brain contracts, communication flow, memory rules, and knowledge sync defined',
+            'AI safety rules, MC integration, executive AI, and personal AI documented',
+            'Brain lifecycle and modular future expansion specified',
+            'Mission Control observes entire network; no monolithic AI',
+        ],
+        'source_blueprints': [
+            '/data/localbrain-network-manifest.json',
+            '/data/localbrain-architecture.json',
+            '/docs/MASTER_LOCALBRAIN_ARCHITECTURE.md',
+            '/docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md',
+        ],
+        'constitution': '/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md',
+        'manifest': '/data/localbrain-network-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+    },
+    {
+        'number': 9, 'id': 'IMP-09', 'band': 'A',
+        'title': 'Engineering foundation: migration, stack, Netlify, Git, CI, and environment',
+        'summary': 'Strangler-fig migration, repo audit, pinned stack, netlify.toml, branch model, CI pipeline, env matrix',
         'deliverables': [
             'docs/MIGRATION_PLAN.md', 'docs/REPO_AUDIT.md', 'app/README.md',
             'docs/STACK.md', 'docs/SERVICE_BOUNDARIES.md', 'docs/DEPLOYMENT_TOPOLOGY.md',
             'netlify.toml', 'docs/DEPLOYMENT.md', 'docs/GIT_WORKFLOW.md',
+            '.github/workflows/ci.yml', 'package.json scripts section', 'docs/SCRIPTS.md',
             '.env.example', 'docs/ENVIRONMENT.md',
         ],
         'acceptance_criteria': [
@@ -315,27 +348,15 @@ IMPLEMENTATION_STEPS = [
             'Target folders scaffolded; existing static Netlify deploy unchanged',
             'Pinned versions documented with rationale',
             'Branch purposes match repository-blueprint branch_structure',
+            'CI runs on pull_request; generator scripts invocable via npm run gen:all',
             'All required env vars documented with no secrets committed',
         ],
         'source_blueprints': [
             '/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md',
             '/data/repository-blueprint.json',
             '/data/technical-architecture.json',
-            '/netlify.toml',
+            '/netlify.toml', '/package.json', '/scripts/',
         ],
-        'status': 'specified',
-    },
-    {
-        'number': 9, 'id': 'IMP-09', 'band': 'A',
-        'title': 'CI pipeline and package scripts',
-        'summary': 'CI gates plus dev, build, db:migrate, gen:* npm scripts',
-        'deliverables': ['.github/workflows/ci.yml', 'package.json scripts section', 'docs/SCRIPTS.md'],
-        'acceptance_criteria': [
-            'CI runs on pull_request to main and develop',
-            'Generator scripts invocable via npm run gen:all pattern',
-            'Node version pinned in .nvmrc or engines field',
-        ],
-        'source_blueprints': ['/package.json', '/scripts/', '/data/technical-architecture.json'],
         'status': 'specified',
     },
     {
@@ -344,7 +365,7 @@ IMPLEMENTATION_STEPS = [
         'summary': 'Gate before Band B — repo ready for first code slice',
         'deliverables': ['docs/SPRINT_ZERO_CHECKLIST.md', 'CONTRIBUTING.md'],
         'acceptance_criteria': [
-            'IMP-01 through IMP-07 documented; IMP-08–09 engineering criteria verified',
+            'IMP-01 through IMP-08 documented; IMP-09 engineering criteria verified',
             'CONTRIBUTING.md links to implementation packages and CURSOR_MASTER_BUILD_PROMPT.md',
             'One successful Netlify preview deploy from develop',
             'Executive sign-off field in checklist (manual)',
@@ -1729,6 +1750,172 @@ MISSION_CONTROL_ARCHITECTURE_MANIFEST = {
     'implemented': False,
 }
 
+LOCALBRAINS = [
+    {'id': 'LB-01', 'name': 'Mission Control Brain', 'domain': 'executive', 'route': '/mission-control/'},
+    {'id': 'LB-02', 'name': 'Research Brain', 'domain': 'research', 'route': '/mission-control/arkansas-research-institute.html'},
+    {'id': 'LB-03', 'name': 'Evidence Brain', 'domain': 'evidence', 'route': '/mission-control/evidence-ledger.html'},
+    {'id': 'LB-04', 'name': 'Claims Brain', 'domain': 'claims', 'route': '/mission-control/facts.html'},
+    {'id': 'LB-05', 'name': 'Knowledge Platform Brain', 'domain': 'knowledge', 'route': '/mission-control/knowledge-graph.html'},
+    {'id': 'LB-06', 'name': 'Community Education Academy Brain', 'domain': 'academy', 'route': '/mission-control/education-academy.html'},
+    {'id': 'LB-07', 'name': 'Volunteer Brain', 'domain': 'volunteers', 'route': '/mission-control/volunteer-funding-constitution.html'},
+    {'id': 'LB-08', 'name': 'County Operations Brain', 'domain': 'county', 'route': '/mission-control/arkansas-county-operating-system.html'},
+    {'id': 'LB-09', 'name': 'City Operations Brain', 'domain': 'city', 'route': '/mission-control/arkansas-city-operating-system.html'},
+    {'id': 'LB-10', 'name': 'Neighborhood Operations Brain', 'domain': 'neighborhood', 'route': '/mission-control/arkansas-neighborhood-operating-system.html'},
+    {'id': 'LB-11', 'name': 'Coalition Brain', 'domain': 'coalition', 'route': '/mission-control/coalition-network.html'},
+    {'id': 'LB-12', 'name': 'Communications Brain', 'domain': 'communications', 'route': '/mission-control/arkansas-communications.html'},
+    {'id': 'LB-13', 'name': 'Media Brain', 'domain': 'media', 'route': '/mission-control/media-studio.html'},
+    {'id': 'LB-14', 'name': 'Technology Brain', 'domain': 'technology', 'route': '/mission-control/technical-architecture.html'},
+    {'id': 'LB-15', 'name': 'Governance Brain', 'domain': 'governance', 'route': '/mission-control/governance.html'},
+    {'id': 'LB-16', 'name': 'PMO Brain', 'domain': 'pmo', 'route': '/mission-control/pmo-execution-office.html'},
+    {'id': 'LB-17', 'name': 'Calendar Brain', 'domain': 'calendar', 'route': '/mission-control/execution-schedule.html'},
+    {'id': 'LB-18', 'name': 'Relationship Brain', 'domain': 'relationships', 'route': '/mission-control/relationship-os.html'},
+    {'id': 'LB-19', 'name': 'Campaign Finance Brain', 'domain': 'campaign_finance', 'route': '/mission-control/campaign-finance-observatory.html'},
+    {'id': 'LB-20', 'name': 'Public Engagement Brain', 'domain': 'public_engagement', 'route': '/mission-control/arkansas-community-listening.html'},
+]
+
+LOCALBRAIN_CORE_MODULES = [
+    {
+        'id': 'knowledge_vault',
+        'name': 'Knowledge Vault',
+        'stores': ['policies', 'research', 'documents', 'templates', 'historical_decisions', 'reference_material'],
+    },
+    {
+        'id': 'operational_memory',
+        'name': 'Operational Memory',
+        'stores': ['open_work', 'past_work', 'lessons_learned', 'meeting_summaries', 'decision_history', 'volunteer_observations'],
+    },
+    {
+        'id': 'calendar_engine',
+        'name': 'Calendar Engine',
+        'stores': ['meetings', 'deadlines', 'review_schedules', 'projects', 'volunteer_activities', 'recurring_responsibilities'],
+    },
+    {
+        'id': 'project_workspace',
+        'name': 'Project Workspace',
+        'stores': ['active_projects', 'tasks', 'dependencies', 'milestones', 'risks', 'assignments'],
+    },
+    {
+        'id': 'ai_team',
+        'name': 'AI Team',
+        'description': 'Specialized AI agents per domain',
+    },
+]
+
+LOCALBRAIN_DEFINITION_FIELDS = [
+    'memory', 'knowledge', 'calendar', 'projects', 'tasks', 'ai_agents',
+    'reports', 'dashboards', 'institutional_rules', 'department_history',
+]
+
+BRAIN_CONTRACT_PUBLISHES = [
+    'available_knowledge', 'supported_actions', 'reports', 'metrics', 'events', 'requests',
+]
+
+COMMUNICATION_FLOW = [
+    'research_brain', 'evidence_brain', 'academy_brain', 'county_brain',
+    'communications_brain', 'mission_control',
+]
+
+RESEARCH_BRAIN_AGENTS = [
+    'research_assistant', 'citation_assistant', 'legal_research_assistant',
+    'source_verification_assistant', 'writing_assistant', 'review_assistant',
+]
+
+MEMORY_RULES = [
+    {'brain': 'research_brain', 'remembers': 'citations and sources'},
+    {'brain': 'volunteer_brain', 'remembers': 'volunteer activity'},
+    {'brain': 'calendar_brain', 'remembers': 'schedules and deadlines'},
+    {'brain': 'mission_control_brain', 'remembers': 'summaries across all brains'},
+]
+
+CALENDAR_BRAIN_AGGREGATES = [
+    'research_deadlines', 'volunteer_meetings', 'community_conversations',
+    'leadership_meetings', 'academy_schedule', 'technology_releases',
+    'annual_reviews', 'executive_priorities',
+]
+
+RELATIONSHIP_BRAIN_MAINTAINS = [
+    'volunteer_relationships', 'organization_relationships', 'county_relationships',
+    'mentorship', 'education_leader_connections', 'community_conversations',
+]
+
+AI_SAFETY_RULES = [
+    'reference_institutional_knowledge', 'identify_uncertainty', 'respect_permissions',
+    'protect_confidential_information', 'escalate_significant_decisions',
+    'avoid_speculation_presented_as_fact',
+]
+
+MC_LOCALBRAIN_REPORTS = [
+    'health', 'workload', 'projects', 'knowledge_growth',
+    'calendar_status', 'volunteer_activity', 'recommendations',
+]
+
+EXECUTIVE_AI_QUESTIONS = [
+    'Which departments are overloaded?',
+    'Which counties need support?',
+    'What research should be prioritized?',
+    'Which volunteers need mentoring?',
+    'Where are institutional risks increasing?',
+]
+
+PERSONAL_AI_CAPABILITIES = [
+    'retrieve_research', 'recommend_courses', 'schedule_meetings', 'locate_volunteers',
+    'summarize_county_activity', 'prepare_presentations',
+]
+
+BRAIN_LIFECYCLE = [
+    'observe', 'remember', 'organize', 'recommend', 'assist', 'learn', 'improve',
+]
+
+FUTURE_LOCALBRAINS = [
+    'legislative_tracking', 'public_records', 'election_administration',
+    'historical_archives', 'media_monitoring', 'grant_development',
+    'youth_leadership', 'university_partnerships',
+]
+
+LOCALBRAIN_NETWORK_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-08',
+    'updated': today,
+    'title': 'Master LocalBrain Architecture & Institutional AI Network',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md',
+    'source_registries': {
+        'localbrain_architecture': '/data/localbrain-architecture.json',
+        'master_doc': '/docs/MASTER_LOCALBRAIN_ARCHITECTURE.md',
+        'mission_control_architecture': '/data/mission-control-architecture-manifest.json',
+        'canonical_data': '/data/canonical-data-manifest.json',
+    },
+    'philosophy': 'Distributed intelligence — Mission Control is executive brain; LocalBrains are departmental brains',
+    'governing_principle': (
+        'A single AI eventually reaches its limits. An institution built on '
+        'specialized intelligence does not.'
+    ),
+    'localbrain_definition': LOCALBRAIN_DEFINITION_FIELDS,
+    'localbrains': LOCALBRAINS,
+    'localbrain_count': len(LOCALBRAINS),
+    'modular_expansion': True,
+    'core_modules': LOCALBRAIN_CORE_MODULES,
+    'brain_contract_publishes': BRAIN_CONTRACT_PUBLISHES,
+    'communication_flow': COMMUNICATION_FLOW,
+    'research_brain_agents_example': RESEARCH_BRAIN_AGENTS,
+    'memory_rules': MEMORY_RULES,
+    'calendar_brain_aggregates': CALENDAR_BRAIN_AGGREGATES,
+    'relationship_brain_maintains': RELATIONSHIP_BRAIN_MAINTAINS,
+    'knowledge_sync': {
+        'platform': 'Knowledge Platform Brain',
+        'rule': 'Single source of truth — no conflicting departmental copies',
+    },
+    'ai_safety_rules': AI_SAFETY_RULES,
+    'mission_control_reports': MC_LOCALBRAIN_REPORTS,
+    'executive_ai_questions': EXECUTIVE_AI_QUESTIONS,
+    'personal_ai_route': '/ai',
+    'personal_ai_capabilities': PERSONAL_AI_CAPABILITIES,
+    'brain_lifecycle': BRAIN_LIFECYCLE,
+    'future_localbrains': FUTURE_LOCALBRAINS,
+    'status': 'documented',
+    'implemented': False,
+}
+
 ROUTE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -1788,7 +1975,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D08', 'indicator': 'Identity & Auth (IMP-05)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D09', 'indicator': 'Design System (IMP-06)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D10', 'indicator': 'Mission Control Architecture (IMP-07)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D11', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D11', 'indicator': 'LocalBrain Network (IMP-08)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D12', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -1986,6 +2174,26 @@ out = {
             'number': 8,
             'id': 'IMP-08',
             'title': 'Master LocalBrain Architecture & Institutional AI Network',
+            'status': 'documented',
+        },
+    },
+    'localbrain_network': {
+        'title': 'Master LocalBrain Architecture & Institutional AI Network',
+        'package': 'Implementation Package 8 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md',
+        'manifest': '/data/localbrain-network-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': LOCALBRAIN_NETWORK_MANIFEST['philosophy'],
+        'localbrain_count': LOCALBRAIN_NETWORK_MANIFEST['localbrain_count'],
+        'core_module_count': len(LOCALBRAIN_CORE_MODULES),
+        'brain_lifecycle_stages': len(BRAIN_LIFECYCLE),
+        'ai_safety_rule_count': len(AI_SAFETY_RULES),
+        'modular_expansion': True,
+        'next_package': {
+            'number': 9,
+            'id': 'IMP-09',
+            'title': 'Master Knowledge Graph, Semantic Search & Institutional Memory',
         },
     },
     'supersedes': {
@@ -2090,6 +2298,10 @@ with open(root / 'data/design-system-manifest.json', 'w', newline='\n') as f:
 
 with open(root / 'data/mission-control-architecture-manifest.json', 'w', newline='\n') as f:
     json.dump(MISSION_CONTROL_ARCHITECTURE_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/localbrain-network-manifest.json', 'w', newline='\n') as f:
+    json.dump(LOCALBRAIN_NETWORK_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

@@ -11,7 +11,7 @@ with open(root / 'data/cursor-implementation-package.json', encoding='utf-8') as
 s = cip['summary']
 prior_ex = mc.get('executive', {})
 
-mc['version'] = '2.05.7'
+mc['version'] = '2.05.8'
 mc['updated'] = '2026-07-09'
 
 mc['executive'] = {
@@ -19,8 +19,8 @@ mc['executive'] = {
     'implementation_package_readiness': s['implementation_package_readiness_pct'],
     'cursor_implementation_package_readiness': s['implementation_package_readiness_pct'],
     'implementation_steps_documented': s.get('steps_documented', 0),
-    'mc2_readiness': max(48, prior_ex.get('mc2_readiness', 42)),
-    'institutional_digital_twin_readiness': max(55, prior_ex.get('institutional_digital_twin_readiness', 51)),
+    'localbrain_architecture_readiness': max(65, prior_ex.get('localbrain_architecture_readiness', 60)),
+    'institutional_ai_readiness': max(62, prior_ex.get('institutional_ai_readiness', 57)),
 }
 
 mc['cursor_implementation_package_inventory'] = {
@@ -34,14 +34,14 @@ for bar in mc['progress_bars']:
         bar['value'] = s['implementation_package_readiness_pct']
 
 mc['briefing'] = {
-    'what_built': 'IMP-01–07 documented: Constitution through Mission Control Architecture + manifests',
-    'building_now': 'IMP-08 Master LocalBrain Architecture & Institutional AI Network next',
-    'blocked': ['Sprint Zero not complete', '0/50 code-implemented'],
+    'what_built': 'IMP-01–08 documented: Constitution through LocalBrain Network + manifests',
+    'building_now': 'IMP-09 Master Knowledge Graph, Semantic Search & Institutional Memory next',
+    'blocked': ['Sprint Zero not complete', '0/50 code-implemented', '0 LocalBrains online'],
     'ready_public': [
-        'Technical Constitution', 'Route Map', 'Database Schema', 'Identity & Auth',
-        'Design System', 'Mission Control Architecture', 'mission-control-architecture-manifest.json',
+        'LocalBrain Network', 'localbrain-network-manifest.json',
+        'Mission Control Architecture', 'Design System', 'Identity & Auth',
     ],
-    'next': 'IMP-08 — Master LocalBrain Architecture & Institutional AI Network',
+    'next': 'IMP-09 — Master Knowledge Graph, Semantic Search & Institutional Memory',
 }
 
 with open(root / 'data/mission-control.json', 'w', newline='\n') as f:

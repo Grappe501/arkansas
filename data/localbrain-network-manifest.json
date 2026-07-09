@@ -1,0 +1,325 @@
+{
+  "version": "1.0",
+  "build": 101,
+  "package": "IMP-08",
+  "updated": "2026-07-09",
+  "title": "Master LocalBrain Architecture & Institutional AI Network",
+  "constitution": "/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md",
+  "source_registries": {
+    "localbrain_architecture": "/data/localbrain-architecture.json",
+    "master_doc": "/docs/MASTER_LOCALBRAIN_ARCHITECTURE.md",
+    "mission_control_architecture": "/data/mission-control-architecture-manifest.json",
+    "canonical_data": "/data/canonical-data-manifest.json"
+  },
+  "philosophy": "Distributed intelligence \u2014 Mission Control is executive brain; LocalBrains are departmental brains",
+  "governing_principle": "A single AI eventually reaches its limits. An institution built on specialized intelligence does not.",
+  "localbrain_definition": [
+    "memory",
+    "knowledge",
+    "calendar",
+    "projects",
+    "tasks",
+    "ai_agents",
+    "reports",
+    "dashboards",
+    "institutional_rules",
+    "department_history"
+  ],
+  "localbrains": [
+    {
+      "id": "LB-01",
+      "name": "Mission Control Brain",
+      "domain": "executive",
+      "route": "/mission-control/"
+    },
+    {
+      "id": "LB-02",
+      "name": "Research Brain",
+      "domain": "research",
+      "route": "/mission-control/arkansas-research-institute.html"
+    },
+    {
+      "id": "LB-03",
+      "name": "Evidence Brain",
+      "domain": "evidence",
+      "route": "/mission-control/evidence-ledger.html"
+    },
+    {
+      "id": "LB-04",
+      "name": "Claims Brain",
+      "domain": "claims",
+      "route": "/mission-control/facts.html"
+    },
+    {
+      "id": "LB-05",
+      "name": "Knowledge Platform Brain",
+      "domain": "knowledge",
+      "route": "/mission-control/knowledge-graph.html"
+    },
+    {
+      "id": "LB-06",
+      "name": "Community Education Academy Brain",
+      "domain": "academy",
+      "route": "/mission-control/education-academy.html"
+    },
+    {
+      "id": "LB-07",
+      "name": "Volunteer Brain",
+      "domain": "volunteers",
+      "route": "/mission-control/volunteer-funding-constitution.html"
+    },
+    {
+      "id": "LB-08",
+      "name": "County Operations Brain",
+      "domain": "county",
+      "route": "/mission-control/arkansas-county-operating-system.html"
+    },
+    {
+      "id": "LB-09",
+      "name": "City Operations Brain",
+      "domain": "city",
+      "route": "/mission-control/arkansas-city-operating-system.html"
+    },
+    {
+      "id": "LB-10",
+      "name": "Neighborhood Operations Brain",
+      "domain": "neighborhood",
+      "route": "/mission-control/arkansas-neighborhood-operating-system.html"
+    },
+    {
+      "id": "LB-11",
+      "name": "Coalition Brain",
+      "domain": "coalition",
+      "route": "/mission-control/coalition-network.html"
+    },
+    {
+      "id": "LB-12",
+      "name": "Communications Brain",
+      "domain": "communications",
+      "route": "/mission-control/arkansas-communications.html"
+    },
+    {
+      "id": "LB-13",
+      "name": "Media Brain",
+      "domain": "media",
+      "route": "/mission-control/media-studio.html"
+    },
+    {
+      "id": "LB-14",
+      "name": "Technology Brain",
+      "domain": "technology",
+      "route": "/mission-control/technical-architecture.html"
+    },
+    {
+      "id": "LB-15",
+      "name": "Governance Brain",
+      "domain": "governance",
+      "route": "/mission-control/governance.html"
+    },
+    {
+      "id": "LB-16",
+      "name": "PMO Brain",
+      "domain": "pmo",
+      "route": "/mission-control/pmo-execution-office.html"
+    },
+    {
+      "id": "LB-17",
+      "name": "Calendar Brain",
+      "domain": "calendar",
+      "route": "/mission-control/execution-schedule.html"
+    },
+    {
+      "id": "LB-18",
+      "name": "Relationship Brain",
+      "domain": "relationships",
+      "route": "/mission-control/relationship-os.html"
+    },
+    {
+      "id": "LB-19",
+      "name": "Campaign Finance Brain",
+      "domain": "campaign_finance",
+      "route": "/mission-control/campaign-finance-observatory.html"
+    },
+    {
+      "id": "LB-20",
+      "name": "Public Engagement Brain",
+      "domain": "public_engagement",
+      "route": "/mission-control/arkansas-community-listening.html"
+    }
+  ],
+  "localbrain_count": 20,
+  "modular_expansion": true,
+  "core_modules": [
+    {
+      "id": "knowledge_vault",
+      "name": "Knowledge Vault",
+      "stores": [
+        "policies",
+        "research",
+        "documents",
+        "templates",
+        "historical_decisions",
+        "reference_material"
+      ]
+    },
+    {
+      "id": "operational_memory",
+      "name": "Operational Memory",
+      "stores": [
+        "open_work",
+        "past_work",
+        "lessons_learned",
+        "meeting_summaries",
+        "decision_history",
+        "volunteer_observations"
+      ]
+    },
+    {
+      "id": "calendar_engine",
+      "name": "Calendar Engine",
+      "stores": [
+        "meetings",
+        "deadlines",
+        "review_schedules",
+        "projects",
+        "volunteer_activities",
+        "recurring_responsibilities"
+      ]
+    },
+    {
+      "id": "project_workspace",
+      "name": "Project Workspace",
+      "stores": [
+        "active_projects",
+        "tasks",
+        "dependencies",
+        "milestones",
+        "risks",
+        "assignments"
+      ]
+    },
+    {
+      "id": "ai_team",
+      "name": "AI Team",
+      "description": "Specialized AI agents per domain"
+    }
+  ],
+  "brain_contract_publishes": [
+    "available_knowledge",
+    "supported_actions",
+    "reports",
+    "metrics",
+    "events",
+    "requests"
+  ],
+  "communication_flow": [
+    "research_brain",
+    "evidence_brain",
+    "academy_brain",
+    "county_brain",
+    "communications_brain",
+    "mission_control"
+  ],
+  "research_brain_agents_example": [
+    "research_assistant",
+    "citation_assistant",
+    "legal_research_assistant",
+    "source_verification_assistant",
+    "writing_assistant",
+    "review_assistant"
+  ],
+  "memory_rules": [
+    {
+      "brain": "research_brain",
+      "remembers": "citations and sources"
+    },
+    {
+      "brain": "volunteer_brain",
+      "remembers": "volunteer activity"
+    },
+    {
+      "brain": "calendar_brain",
+      "remembers": "schedules and deadlines"
+    },
+    {
+      "brain": "mission_control_brain",
+      "remembers": "summaries across all brains"
+    }
+  ],
+  "calendar_brain_aggregates": [
+    "research_deadlines",
+    "volunteer_meetings",
+    "community_conversations",
+    "leadership_meetings",
+    "academy_schedule",
+    "technology_releases",
+    "annual_reviews",
+    "executive_priorities"
+  ],
+  "relationship_brain_maintains": [
+    "volunteer_relationships",
+    "organization_relationships",
+    "county_relationships",
+    "mentorship",
+    "education_leader_connections",
+    "community_conversations"
+  ],
+  "knowledge_sync": {
+    "platform": "Knowledge Platform Brain",
+    "rule": "Single source of truth \u2014 no conflicting departmental copies"
+  },
+  "ai_safety_rules": [
+    "reference_institutional_knowledge",
+    "identify_uncertainty",
+    "respect_permissions",
+    "protect_confidential_information",
+    "escalate_significant_decisions",
+    "avoid_speculation_presented_as_fact"
+  ],
+  "mission_control_reports": [
+    "health",
+    "workload",
+    "projects",
+    "knowledge_growth",
+    "calendar_status",
+    "volunteer_activity",
+    "recommendations"
+  ],
+  "executive_ai_questions": [
+    "Which departments are overloaded?",
+    "Which counties need support?",
+    "What research should be prioritized?",
+    "Which volunteers need mentoring?",
+    "Where are institutional risks increasing?"
+  ],
+  "personal_ai_route": "/ai",
+  "personal_ai_capabilities": [
+    "retrieve_research",
+    "recommend_courses",
+    "schedule_meetings",
+    "locate_volunteers",
+    "summarize_county_activity",
+    "prepare_presentations"
+  ],
+  "brain_lifecycle": [
+    "observe",
+    "remember",
+    "organize",
+    "recommend",
+    "assist",
+    "learn",
+    "improve"
+  ],
+  "future_localbrains": [
+    "legislative_tracking",
+    "public_records",
+    "election_administration",
+    "historical_archives",
+    "media_monitoring",
+    "grant_development",
+    "youth_leadership",
+    "university_partnerships"
+  ],
+  "status": "documented",
+  "implemented": false
+}

@@ -10658,6 +10658,10 @@ async function initCursorImplementationPackage() {
       <div class="mc-stat"><div class="mc-stat__label">MVP in scope</div><div class="mc-stat__value">${s.mvp_in_scope_count}</div></div>
       <div class="mc-stat"><div class="mc-stat__label">Days to Jan 2027</div><div class="mc-stat__value">${s.days_remaining}</div></div>
     </div>
+    <h2 class="mc-section-title">LocalBrain Network (IMP-08)</h2>
+    <p class="mc-bar-note"><strong>${cip.localbrain_network.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.localbrain_network.localbrain_count} LocalBrains · ${cip.localbrain_network.core_module_count} core modules · ${cip.localbrain_network.brain_lifecycle_stages}-stage lifecycle</p>
+    <p class="mc-bar-note"><a href="${cip.localbrain_network.route}">IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md</a> · <a href="${cip.localbrain_network.manifest}">localbrain-network-manifest.json</a> · <a href="/mission-control/localbrain-architecture.html">LocalBrain dashboard</a></p>
+    <p class="mc-bar-note">${cip.localbrain_network.philosophy}</p>
     <h2 class="mc-section-title">Mission Control Architecture (IMP-07)</h2>
     <p class="mc-bar-note"><strong>${cip.mission_control_architecture.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.mission_control_architecture.dashboard_count} dashboards · ${cip.mission_control_architecture.health_category_count} health categories · ${cip.mission_control_architecture.alert_type_count} alert types</p>
     <p class="mc-bar-note"><a href="${cip.mission_control_architecture.route}">IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md</a> · <a href="${cip.mission_control_architecture.manifest}">mission-control-architecture-manifest.json</a></p>

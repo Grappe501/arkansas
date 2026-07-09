@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.8] - 2026-07-09 — IMP-08 LocalBrain Network documented
+
+### Implementation Package 8 of 50
+- **Master LocalBrain Architecture & Institutional AI Network** — distributed intelligence, not monolithic AI
+- 20 LocalBrains, 5 core modules, brain contracts, executive and personal AI
+- Machine-readable **localbrain-network-manifest.json**
+- Engineering IMP-09 merged: migration + stack + Netlify + Git + CI
+- IMP-09 next: Master Knowledge Graph, Semantic Search & Institutional Memory
+- Honest: 8/50 documented · 0/50 implemented · 72% package readiness
+
 ## [2.05.7] - 2026-07-09 — IMP-07 Mission Control Architecture documented
 
 ### Implementation Package 7 of 50

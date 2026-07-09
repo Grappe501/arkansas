@@ -292,7 +292,27 @@
     "next_package": {
       "number": 8,
       "id": "IMP-08",
-      "title": "Master LocalBrain Architecture & Institutional AI Network"
+      "title": "Master LocalBrain Architecture & Institutional AI Network",
+      "status": "documented"
+    }
+  },
+  "localbrain_network": {
+    "title": "Master LocalBrain Architecture & Institutional AI Network",
+    "package": "Implementation Package 8 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md",
+    "manifest": "/data/localbrain-network-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Distributed intelligence \u2014 Mission Control is executive brain; LocalBrains are departmental brains",
+    "localbrain_count": 20,
+    "core_module_count": 5,
+    "brain_lifecycle_stages": 7,
+    "ai_safety_rule_count": 6,
+    "modular_expansion": true,
+    "next_package": {
+      "number": 9,
+      "id": "IMP-09",
+      "title": "Master Knowledge Graph, Semantic Search & Institutional Memory"
     }
   },
   "supersedes": {
@@ -629,8 +649,48 @@
       "number": 8,
       "id": "IMP-08",
       "band": "A",
-      "title": "Repository migration, stack lock, Netlify, Git workflow, and environment",
-      "summary": "Strangler-fig migration, repo audit, pinned stack, netlify.toml, branch model, env matrix",
+      "package_label": "Implementation Package 8 of 50",
+      "title": "Master LocalBrain Architecture & Institutional AI Network",
+      "summary": "Distributed intelligence \u2014 20 LocalBrains, common architecture, brain contracts, executive and personal AI",
+      "deliverables": [
+        "docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md",
+        "data/localbrain-network-manifest.json",
+        "LocalBrain Architecture",
+        "Institutional AI Network",
+        "Department Intelligence Model",
+        "Knowledge Synchronization Rules",
+        "Calendar Integration",
+        "AI Agent Structure",
+        "Brain Communication Contracts",
+        "Executive AI Architecture",
+        "Personal AI Architecture",
+        "Mission Control Reporting Standards"
+      ],
+      "acceptance_criteria": [
+        "LocalBrain definition: memory, knowledge, calendar, projects, tasks, agents, reports, dashboards",
+        "Twenty LocalBrains documented with common module architecture",
+        "Brain contracts, communication flow, memory rules, and knowledge sync defined",
+        "AI safety rules, MC integration, executive AI, and personal AI documented",
+        "Brain lifecycle and modular future expansion specified",
+        "Mission Control observes entire network; no monolithic AI"
+      ],
+      "source_blueprints": [
+        "/data/localbrain-network-manifest.json",
+        "/data/localbrain-architecture.json",
+        "/docs/MASTER_LOCALBRAIN_ARCHITECTURE.md",
+        "/docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md"
+      ],
+      "constitution": "/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md",
+      "manifest": "/data/localbrain-network-manifest.json",
+      "status": "documented",
+      "documented_date": "2026-07-09"
+    },
+    {
+      "number": 9,
+      "id": "IMP-09",
+      "band": "A",
+      "title": "Engineering foundation: migration, stack, Netlify, Git, CI, and environment",
+      "summary": "Strangler-fig migration, repo audit, pinned stack, netlify.toml, branch model, CI pipeline, env matrix",
       "deliverables": [
         "docs/MIGRATION_PLAN.md",
         "docs/REPO_AUDIT.md",
@@ -641,6 +701,9 @@
         "netlify.toml",
         "docs/DEPLOYMENT.md",
         "docs/GIT_WORKFLOW.md",
+        ".github/workflows/ci.yml",
+        "package.json scripts section",
+        "docs/SCRIPTS.md",
         ".env.example",
         "docs/ENVIRONMENT.md"
       ],
@@ -650,36 +713,16 @@
         "Target folders scaffolded; existing static Netlify deploy unchanged",
         "Pinned versions documented with rationale",
         "Branch purposes match repository-blueprint branch_structure",
+        "CI runs on pull_request; generator scripts invocable via npm run gen:all",
         "All required env vars documented with no secrets committed"
       ],
       "source_blueprints": [
         "/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md",
         "/data/repository-blueprint.json",
         "/data/technical-architecture.json",
-        "/netlify.toml"
-      ],
-      "status": "specified"
-    },
-    {
-      "number": 9,
-      "id": "IMP-09",
-      "band": "A",
-      "title": "CI pipeline and package scripts",
-      "summary": "CI gates plus dev, build, db:migrate, gen:* npm scripts",
-      "deliverables": [
-        ".github/workflows/ci.yml",
-        "package.json scripts section",
-        "docs/SCRIPTS.md"
-      ],
-      "acceptance_criteria": [
-        "CI runs on pull_request to main and develop",
-        "Generator scripts invocable via npm run gen:all pattern",
-        "Node version pinned in .nvmrc or engines field"
-      ],
-      "source_blueprints": [
+        "/netlify.toml",
         "/package.json",
-        "/scripts/",
-        "/data/technical-architecture.json"
+        "/scripts/"
       ],
       "status": "specified"
     },
@@ -694,7 +737,7 @@
         "CONTRIBUTING.md"
       ],
       "acceptance_criteria": [
-        "IMP-01 through IMP-07 documented; IMP-08\u201309 engineering criteria verified",
+        "IMP-01 through IMP-08 documented; IMP-09 engineering criteria verified",
         "CONTRIBUTING.md links to implementation packages and CURSOR_MASTER_BUILD_PROMPT.md",
         "One successful Netlify preview deploy from develop",
         "Executive sign-off field in checklist (manual)"
@@ -1585,7 +1628,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 7,
+        "current": 8,
         "status": "partial"
       },
       {
@@ -1638,6 +1681,12 @@
       },
       {
         "id": "CIP-D11",
+        "indicator": "LocalBrain Network (IMP-08)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D12",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -1684,7 +1733,7 @@
     "days_remaining": 176,
     "implementation_package_readiness_pct": 72,
     "steps_total": 50,
-    "steps_documented": 7,
+    "steps_documented": 8,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,
