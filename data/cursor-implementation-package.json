@@ -239,7 +239,34 @@
       "number": 6,
       "id": "IMP-06",
       "title": "Master Design System, User Experience & Visual Language",
-      "note": "Doctrinal package 6; engineering IMP-06 is repository migration and stack lock"
+      "status": "documented"
+    }
+  },
+  "design_system": {
+    "title": "Master Design System, User Experience & Visual Language",
+    "package": "Implementation Package 6 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md",
+    "manifest": "/data/design-system-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Design reduces cognitive effort; every screen answers where/what/next",
+    "component_count": 14,
+    "card_type_count": 8,
+    "live_component_count": 14,
+    "accessibility_wcag": "2.1 AA",
+    "mobile_priorities": [
+      "Learning",
+      "Events",
+      "County information",
+      "Community conversations",
+      "Volunteer tasks",
+      "AI Assistant",
+      "Search"
+    ],
+    "next_package": {
+      "number": 7,
+      "id": "IMP-07",
+      "title": "Master Mission Control Architecture & Executive Command Center"
     }
   },
   "supersedes": {
@@ -489,8 +516,51 @@
       "number": 6,
       "id": "IMP-06",
       "band": "A",
-      "title": "Repository migration, stack lock, and environment",
-      "summary": "Strangler-fig migration, repo audit, folder scaffold, pinned stack, service boundaries, env matrix",
+      "package_label": "Implementation Package 6 of 50",
+      "title": "Master Design System, User Experience & Visual Language",
+      "summary": "Visual identity, UX philosophy, component system, dashboards, accessibility, mobile, MC and AI interaction standards",
+      "deliverables": [
+        "docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md",
+        "data/design-system-manifest.json",
+        "Visual Design Language",
+        "UX Philosophy",
+        "Dashboard Standards",
+        "Component System",
+        "Accessibility Standards",
+        "Mobile Standards",
+        "Navigation Standards",
+        "Mission Control Design Rules",
+        "AI Interaction Standards",
+        "Responsive Layout Rules"
+      ],
+      "acceptance_criteria": [
+        "Design philosophy: reduce cognitive effort; every screen answers where/what/next",
+        "Brand personality and visual identity documented",
+        "Color, typography, layout, spacing, and card systems defined",
+        "Dashboard, MC, map, chart, form, accessibility, mobile, AI UX standards documented",
+        "Component library specified with documentation requirements",
+        "Every future screen follows one coherent design language"
+      ],
+      "source_blueprints": [
+        "/data/design-system-manifest.json",
+        "/data/design-system.json",
+        "/css/design-tokens.css",
+        "/css/components.css",
+        "/css/mission-control.css",
+        "/design-system/",
+        "/docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md"
+      ],
+      "constitution": "/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md",
+      "manifest": "/data/design-system-manifest.json",
+      "status": "documented",
+      "documented_date": "2026-07-09"
+    },
+    {
+      "number": 7,
+      "id": "IMP-07",
+      "band": "A",
+      "title": "Repository migration, stack lock, Netlify deployment, and environment",
+      "summary": "Strangler-fig migration, repo audit, folder scaffold, pinned stack, netlify.toml, env matrix",
       "deliverables": [
         "docs/MIGRATION_PLAN.md",
         "docs/REPO_AUDIT.md",
@@ -498,6 +568,8 @@
         "docs/STACK.md",
         "docs/SERVICE_BOUNDARIES.md",
         "docs/DEPLOYMENT_TOPOLOGY.md",
+        "netlify.toml",
+        "docs/DEPLOYMENT.md",
         ".env.example",
         "docs/ENVIRONMENT.md"
       ],
@@ -506,34 +578,14 @@
         "Migration strategy chosen with rollback plan",
         "Target folders scaffolded; existing static Netlify deploy unchanged",
         "Pinned versions documented with rationale",
-        "Public site, MC, API, and admin deployment units defined",
+        "Preview deploys documented for develop branch",
         "All required env vars documented with no secrets committed"
       ],
       "source_blueprints": [
         "/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md",
         "/data/repository-blueprint.json",
-        "/data/technical-architecture.json"
-      ],
-      "status": "specified"
-    },
-    {
-      "number": 7,
-      "id": "IMP-07",
-      "band": "A",
-      "title": "Netlify hybrid deployment config",
-      "summary": "Prepare netlify.toml for static + future Next.js/API routes",
-      "deliverables": [
-        "netlify.toml",
-        "docs/DEPLOYMENT.md"
-      ],
-      "acceptance_criteria": [
-        "Current static publish path unchanged",
-        "Preview deploys documented for develop branch",
-        "Redirect rules preserved from existing netlify.toml"
-      ],
-      "source_blueprints": [
-        "/netlify.toml",
-        "/data/technical-architecture.json"
+        "/data/technical-architecture.json",
+        "/netlify.toml"
       ],
       "status": "specified"
     },
@@ -590,7 +642,7 @@
         "CONTRIBUTING.md"
       ],
       "acceptance_criteria": [
-        "IMP-01 through IMP-05 documented; IMP-06\u201309 engineering criteria verified",
+        "IMP-01 through IMP-06 documented; IMP-07\u201309 engineering criteria verified",
         "CONTRIBUTING.md links to implementation packages and CURSOR_MASTER_BUILD_PROMPT.md",
         "One successful Netlify preview deploy from develop",
         "Executive sign-off field in checklist (manual)"
@@ -1481,7 +1533,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 5,
+        "current": 6,
         "status": "partial"
       },
       {
@@ -1522,6 +1574,12 @@
       },
       {
         "id": "CIP-D09",
+        "indicator": "Design System (IMP-06)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D10",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -1566,9 +1624,9 @@
   "summary": {
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "implementation_package_readiness_pct": 68,
+    "implementation_package_readiness_pct": 71,
     "steps_total": 50,
-    "steps_documented": 5,
+    "steps_documented": 6,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

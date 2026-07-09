@@ -1,0 +1,286 @@
+{
+  "version": "1.0",
+  "build": 101,
+  "package": "IMP-06",
+  "updated": "2026-07-09",
+  "title": "Master Design System, User Experience & Visual Language",
+  "constitution": "/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md",
+  "source_registries": {
+    "design_language": "/data/design-system.json",
+    "css_tokens": "/css/design-tokens.css",
+    "css_components": "/css/components.css",
+    "mc_theme": "/css/mission-control.css",
+    "showcase": "/design-system/"
+  },
+  "philosophy": "Design reduces cognitive effort; every screen answers where/what/next",
+  "governing_principle": "People decide whether to trust an institution within moments. Thoughtful design communicates competence and welcome before a word is read.",
+  "brand_personality": [
+    "trustworthy",
+    "calm",
+    "intelligent",
+    "welcoming",
+    "organized",
+    "optimistic",
+    "respectful",
+    "evidence_driven",
+    "arkansas_rooted"
+  ],
+  "screen_questions": [
+    "Where am I?",
+    "What can I do?",
+    "What should I do next?"
+  ],
+  "visual_identity": [
+    "clean_layouts",
+    "strong_typography",
+    "comfortable_spacing",
+    "simple_navigation",
+    "high_readability",
+    "consistent_interactions",
+    "minimal_clutter"
+  ],
+  "color_roles": [
+    {
+      "role": "primary",
+      "purpose": "Institution identity",
+      "token": "--ds-primary"
+    },
+    {
+      "role": "secondary",
+      "purpose": "Navigation and supporting elements",
+      "token": "--ds-primary-light"
+    },
+    {
+      "role": "success",
+      "purpose": "Completion, learning progress, healthy systems",
+      "token": "--ds-success"
+    },
+    {
+      "role": "warning",
+      "purpose": "Needs attention, risk indicators",
+      "token": "--ds-warning"
+    },
+    {
+      "role": "information",
+      "purpose": "Educational notices, Mission Control insights",
+      "token": "--ds-info"
+    },
+    {
+      "role": "neutral",
+      "purpose": "Reading, backgrounds, cards, typography",
+      "token": "--ds-text-muted"
+    }
+  ],
+  "typography_hierarchy": [
+    {
+      "level": "institution_title",
+      "token": "--ds-text-institutional"
+    },
+    {
+      "level": "page_title",
+      "token": "--ds-text-h1"
+    },
+    {
+      "level": "section_heading",
+      "token": "--ds-text-h2"
+    },
+    {
+      "level": "subheading",
+      "token": "--ds-text-h3"
+    },
+    {
+      "level": "body",
+      "token": "--ds-text-body"
+    },
+    {
+      "level": "caption",
+      "token": "--ds-text-caption"
+    },
+    {
+      "level": "metadata",
+      "token": "--ds-text-data"
+    }
+  ],
+  "fonts": {
+    "serif": "Source Serif 4",
+    "sans": "Source Sans 3",
+    "mono": "Consolas"
+  },
+  "layout": {
+    "system": "responsive_grid",
+    "reading_measure": "65ch",
+    "layers": [
+      "orientation",
+      "summary",
+      "main_narrative",
+      "visual_explanation",
+      "supporting_evidence",
+      "related_topics",
+      "civic_action_opportunities"
+    ]
+  },
+  "spacing_principle": "Whitespace is intentional; every screen should breathe",
+  "card_types": [
+    "research",
+    "volunteer",
+    "county",
+    "city",
+    "organization",
+    "course",
+    "project",
+    "mission_control"
+  ],
+  "card_type_count": 8,
+  "navigation": {
+    "primary_stable": true,
+    "secondary_contextual": true,
+    "breadcrumbs": true,
+    "search_always_available": true
+  },
+  "dashboard_philosophy": {
+    "principle": "Dashboards answer questions, not display everything",
+    "sections": [
+      "current_status",
+      "key_indicators",
+      "recommended_actions",
+      "recent_activity",
+      "upcoming_work",
+      "important_alerts"
+    ]
+  },
+  "mission_control_design": {
+    "character": "executive_operations_center",
+    "theme": "NASA-inspired dark cockpit",
+    "features": [
+      "large_metrics",
+      "status_indicators",
+      "interactive_maps",
+      "trend_charts",
+      "forecasts",
+      "task_summaries",
+      "institution_health",
+      "minimal_distraction"
+    ]
+  },
+  "maps": {
+    "central_navigation": true,
+    "use_cases": [
+      "arkansas_overview",
+      "county_health",
+      "city_participation",
+      "neighborhood_coverage",
+      "education_leader_locations",
+      "community_conversations"
+    ],
+    "drill_down_required": true
+  },
+  "chart_types": [
+    "progress_bars",
+    "trend_lines",
+    "heat_maps",
+    "completion_rings",
+    "growth_charts",
+    "timeline_views",
+    "network_diagrams"
+  ],
+  "form_standards": [
+    "one_logical_question_at_a_time",
+    "auto_save_when_practical",
+    "helpful_validation",
+    "keyboard_navigation",
+    "reduce_unnecessary_typing"
+  ],
+  "accessibility_standards": [
+    "keyboard_navigation",
+    "high_color_contrast",
+    "screen_reader_compatibility",
+    "alternative_text",
+    "scalable_typography",
+    "reduced_motion_support",
+    "clear_focus_states"
+  ],
+  "accessibility_wcag": "2.1 AA",
+  "mobile_priorities": [
+    "Learning",
+    "Events",
+    "County information",
+    "Community conversations",
+    "Volunteer tasks",
+    "AI Assistant",
+    "Search"
+  ],
+  "mobile_complete_experience": true,
+  "ai_ux_standards": [
+    "state_confidence",
+    "reference_institutional_knowledge",
+    "suggest_next_steps",
+    "offer_related_resources",
+    "encourage_continued_learning",
+    "conversational_interface"
+  ],
+  "personal_dashboard_elements": [
+    "welcome",
+    "learning_progress",
+    "upcoming_events",
+    "county_updates",
+    "volunteer_opportunities",
+    "recent_activity",
+    "recommended_next_step",
+    "personal_ai"
+  ],
+  "executive_dashboard_elements": [
+    "mission_control",
+    "institution_health",
+    "critical_alerts",
+    "county_progress",
+    "city_progress",
+    "strategic_goals",
+    "pmo_status",
+    "executive_ai_recommendations"
+  ],
+  "animation": {
+    "principle": "Subtle only; never distract from content",
+    "uses": [
+      "guide_attention",
+      "confirm_actions",
+      "explain_transitions",
+      "celebrate_achievements"
+    ],
+    "reduced_motion_respected": true
+  },
+  "design_components": [
+    "buttons",
+    "cards",
+    "badges",
+    "alerts",
+    "tables",
+    "charts",
+    "maps",
+    "timelines",
+    "progress_indicators",
+    "search",
+    "filters",
+    "calendars",
+    "modal_dialogs",
+    "knowledge_panels"
+  ],
+  "component_count": 14,
+  "component_doc_requirements": [
+    "purpose",
+    "usage_guidelines",
+    "accessibility_notes",
+    "examples",
+    "states",
+    "design_tokens"
+  ],
+  "mc_ux_metrics": [
+    "page_completion",
+    "search_success",
+    "learning_completion",
+    "volunteer_onboarding",
+    "navigation_flow"
+  ],
+  "live_component_count": 14,
+  "status": "documented",
+  "implemented": false
+}

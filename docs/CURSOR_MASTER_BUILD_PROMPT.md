@@ -21,6 +21,7 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 0c. **Route Map (IMP-03):** [/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [/data/route-manifest.json](/data/route-manifest.json)
 0d. **Database Schema (IMP-04):** [/docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md](/docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md) · [/data/canonical-data-manifest.json](/data/canonical-data-manifest.json) · [/prisma/schema.prisma](/prisma/schema.prisma)
 0e. **Identity & Auth (IMP-05):** [/docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md](/docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md) · [/data/identity-auth-manifest.json](/data/identity-auth-manifest.json)
+0f. **Design System (IMP-06):** [/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md](/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md) · [/data/design-system-manifest.json](/data/design-system-manifest.json) · [/design-system/](/design-system/)
 1. **Manifesto (#99):** Will this help an ordinary Arkansan understand how self-government works?
 2. **Charter (#100):** Knowledge → Citizens → Communities → Arkansas → self-government.
 3. **Education before advocacy** — present evidence; Arkansans draw conclusions.
@@ -112,13 +113,14 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 
 ## First step to implement
 
-**IMP-01** through **IMP-05** are **documented**:
+**IMP-01** through **IMP-06** are **documented**:
 - [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
 - [Technical Architecture](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
 - [Route Map](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [route-manifest.json](/data/route-manifest.json)
-- [Database Schema](/docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md) · [canonical-data-manifest.json](/data/canonical-data-manifest.json) · [schema.prisma](/prisma/schema.prisma)
+- [Database Schema](/docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md) · [canonical-data-manifest.json](/data/canonical-data-manifest.json)
 - [Identity & Auth](/docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md) · [identity-auth-manifest.json](/data/identity-auth-manifest.json)
+- [Design System](/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md) · [design-system-manifest.json](/data/design-system-manifest.json)
 
-**IMP-06** is next: Master Design System, User Experience & Visual Language.
+**IMP-07** is next: Master Mission Control Architecture & Executive Command Center.
 
-Engineering execution (repository migration, stack lock, env, CI) begins at **engineering IMP-06** after design system is documented.
+Engineering execution (repository migration, stack, Netlify, CI) begins at **engineering IMP-07** after MC architecture is documented.

@@ -10658,6 +10658,11 @@ async function initCursorImplementationPackage() {
       <div class="mc-stat"><div class="mc-stat__label">MVP in scope</div><div class="mc-stat__value">${s.mvp_in_scope_count}</div></div>
       <div class="mc-stat"><div class="mc-stat__label">Days to Jan 2027</div><div class="mc-stat__value">${s.days_remaining}</div></div>
     </div>
+    <h2 class="mc-section-title">Design System (IMP-06)</h2>
+    <p class="mc-bar-note"><strong>${cip.design_system.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.design_system.component_count} shared components · ${cip.design_system.card_type_count} card types · ${cip.design_system.live_component_count} live ds-* components · ${cip.design_system.accessibility_wcag}</p>
+    <p class="mc-bar-note"><a href="${cip.design_system.route}">IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md</a> · <a href="${cip.design_system.manifest}">design-system-manifest.json</a> · <a href="/design-system/">Showcase</a></p>
+    <h3 class="mc-subsection-title">Mobile Priorities</h3>
+    <ul class="mc-deliverables">${cip.design_system.mobile_priorities.map(p => `<li>${p}</li>`).join('')}</ul>
     <h2 class="mc-section-title">Identity & Auth (IMP-05)</h2>
     <p class="mc-bar-note"><strong>${cip.identity_auth.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.identity_auth.role_count} roles · ${cip.identity_auth.permission_category_count} permission categories · multi-role ${cip.identity_auth.multi_role_supported ? 'supported' : 'disabled'}</p>
     <p class="mc-bar-note"><a href="${cip.identity_auth.route}">IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md</a> · <a href="${cip.identity_auth.manifest}">identity-auth-manifest.json</a></p>

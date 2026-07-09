@@ -26,7 +26,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 5  # IMP-01 through IMP-05
+steps_documented = 6  # IMP-01 through IMP-06
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -232,39 +232,62 @@ IMPLEMENTATION_STEPS = [
     },
     {
         'number': 6, 'id': 'IMP-06', 'band': 'A',
-        'title': 'Repository migration, stack lock, and environment',
-        'summary': 'Strangler-fig migration, repo audit, folder scaffold, pinned stack, service boundaries, env matrix',
+        'package_label': 'Implementation Package 6 of 50',
+        'title': 'Master Design System, User Experience & Visual Language',
+        'summary': 'Visual identity, UX philosophy, component system, dashboards, accessibility, mobile, MC and AI interaction standards',
+        'deliverables': [
+            'docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md',
+            'data/design-system-manifest.json',
+            'Visual Design Language', 'UX Philosophy', 'Dashboard Standards',
+            'Component System', 'Accessibility Standards', 'Mobile Standards',
+            'Navigation Standards', 'Mission Control Design Rules',
+            'AI Interaction Standards', 'Responsive Layout Rules',
+        ],
+        'acceptance_criteria': [
+            'Design philosophy: reduce cognitive effort; every screen answers where/what/next',
+            'Brand personality and visual identity documented',
+            'Color, typography, layout, spacing, and card systems defined',
+            'Dashboard, MC, map, chart, form, accessibility, mobile, AI UX standards documented',
+            'Component library specified with documentation requirements',
+            'Every future screen follows one coherent design language',
+        ],
+        'source_blueprints': [
+            '/data/design-system-manifest.json',
+            '/data/design-system.json',
+            '/css/design-tokens.css',
+            '/css/components.css',
+            '/css/mission-control.css',
+            '/design-system/',
+            '/docs/IMPLEMENTATION_PACKAGE_05_IDENTITY_AUTH.md',
+        ],
+        'constitution': '/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md',
+        'manifest': '/data/design-system-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+    },
+    {
+        'number': 7, 'id': 'IMP-07', 'band': 'A',
+        'title': 'Repository migration, stack lock, Netlify deployment, and environment',
+        'summary': 'Strangler-fig migration, repo audit, folder scaffold, pinned stack, netlify.toml, env matrix',
         'deliverables': [
             'docs/MIGRATION_PLAN.md', 'docs/REPO_AUDIT.md', 'app/README.md',
             'docs/STACK.md', 'docs/SERVICE_BOUNDARIES.md', 'docs/DEPLOYMENT_TOPOLOGY.md',
-            '.env.example', 'docs/ENVIRONMENT.md',
+            'netlify.toml', 'docs/DEPLOYMENT.md', '.env.example', 'docs/ENVIRONMENT.md',
         ],
         'acceptance_criteria': [
             'Current tree diffed against IMP-02 repository structure',
             'Migration strategy chosen with rollback plan',
             'Target folders scaffolded; existing static Netlify deploy unchanged',
             'Pinned versions documented with rationale',
-            'Public site, MC, API, and admin deployment units defined',
+            'Preview deploys documented for develop branch',
             'All required env vars documented with no secrets committed',
         ],
         'source_blueprints': [
             '/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md',
             '/data/repository-blueprint.json',
             '/data/technical-architecture.json',
+            '/netlify.toml',
         ],
-        'status': 'specified',
-    },
-    {
-        'number': 7, 'id': 'IMP-07', 'band': 'A',
-        'title': 'Netlify hybrid deployment config',
-        'summary': 'Prepare netlify.toml for static + future Next.js/API routes',
-        'deliverables': ['netlify.toml', 'docs/DEPLOYMENT.md'],
-        'acceptance_criteria': [
-            'Current static publish path unchanged',
-            'Preview deploys documented for develop branch',
-            'Redirect rules preserved from existing netlify.toml',
-        ],
-        'source_blueprints': ['/netlify.toml', '/data/technical-architecture.json'],
         'status': 'specified',
     },
     {
@@ -299,7 +322,7 @@ IMPLEMENTATION_STEPS = [
         'summary': 'Gate before Band B — repo ready for first code slice',
         'deliverables': ['docs/SPRINT_ZERO_CHECKLIST.md', 'CONTRIBUTING.md'],
         'acceptance_criteria': [
-            'IMP-01 through IMP-05 documented; IMP-06–09 engineering criteria verified',
+            'IMP-01 through IMP-06 documented; IMP-07–09 engineering criteria verified',
             'CONTRIBUTING.md links to implementation packages and CURSOR_MASTER_BUILD_PROMPT.md',
             'One successful Netlify preview deploy from develop',
             'Executive sign-off field in checklist (manual)',
@@ -1299,6 +1322,185 @@ IDENTITY_AUTH_MANIFEST = {
     'implemented': False,
 }
 
+BRAND_PERSONALITY = [
+    'trustworthy', 'calm', 'intelligent', 'welcoming', 'organized',
+    'optimistic', 'respectful', 'evidence_driven', 'arkansas_rooted',
+]
+
+DESIGN_SCREEN_QUESTIONS = ['Where am I?', 'What can I do?', 'What should I do next?']
+
+COLOR_ROLES = [
+    {'role': 'primary', 'purpose': 'Institution identity', 'token': '--ds-primary'},
+    {'role': 'secondary', 'purpose': 'Navigation and supporting elements', 'token': '--ds-primary-light'},
+    {'role': 'success', 'purpose': 'Completion, learning progress, healthy systems', 'token': '--ds-success'},
+    {'role': 'warning', 'purpose': 'Needs attention, risk indicators', 'token': '--ds-warning'},
+    {'role': 'information', 'purpose': 'Educational notices, Mission Control insights', 'token': '--ds-info'},
+    {'role': 'neutral', 'purpose': 'Reading, backgrounds, cards, typography', 'token': '--ds-text-muted'},
+]
+
+TYPOGRAPHY_HIERARCHY = [
+    {'level': 'institution_title', 'token': '--ds-text-institutional'},
+    {'level': 'page_title', 'token': '--ds-text-h1'},
+    {'level': 'section_heading', 'token': '--ds-text-h2'},
+    {'level': 'subheading', 'token': '--ds-text-h3'},
+    {'level': 'body', 'token': '--ds-text-body'},
+    {'level': 'caption', 'token': '--ds-text-caption'},
+    {'level': 'metadata', 'token': '--ds-text-data'},
+]
+
+CARD_TYPES = [
+    'research', 'volunteer', 'county', 'city', 'organization',
+    'course', 'project', 'mission_control',
+]
+
+DASHBOARD_SECTIONS = [
+    'current_status', 'key_indicators', 'recommended_actions',
+    'recent_activity', 'upcoming_work', 'important_alerts',
+]
+
+MAP_USE_CASES = [
+    'arkansas_overview', 'county_health', 'city_participation',
+    'neighborhood_coverage', 'education_leader_locations', 'community_conversations',
+]
+
+CHART_TYPES = [
+    'progress_bars', 'trend_lines', 'heat_maps', 'completion_rings',
+    'growth_charts', 'timeline_views', 'network_diagrams',
+]
+
+FORM_STANDARDS = [
+    'one_logical_question_at_a_time', 'auto_save_when_practical',
+    'helpful_validation', 'keyboard_navigation', 'reduce_unnecessary_typing',
+]
+
+ACCESSIBILITY_STANDARDS = [
+    'keyboard_navigation', 'high_color_contrast', 'screen_reader_compatibility',
+    'alternative_text', 'scalable_typography', 'reduced_motion_support', 'clear_focus_states',
+]
+
+MOBILE_PRIORITIES = [
+    'Learning', 'Events', 'County information', 'Community conversations',
+    'Volunteer tasks', 'AI Assistant', 'Search',
+]
+
+AI_UX_STANDARDS = [
+    'state_confidence', 'reference_institutional_knowledge', 'suggest_next_steps',
+    'offer_related_resources', 'encourage_continued_learning', 'conversational_interface',
+]
+
+PERSONAL_DASHBOARD_ELEMENTS = [
+    'welcome', 'learning_progress', 'upcoming_events', 'county_updates',
+    'volunteer_opportunities', 'recent_activity', 'recommended_next_step', 'personal_ai',
+]
+
+EXECUTIVE_DASHBOARD_ELEMENTS = [
+    'mission_control', 'institution_health', 'critical_alerts', 'county_progress',
+    'city_progress', 'strategic_goals', 'pmo_status', 'executive_ai_recommendations',
+]
+
+ANIMATION_USES = [
+    'guide_attention', 'confirm_actions', 'explain_transitions', 'celebrate_achievements',
+]
+
+DESIGN_COMPONENTS = [
+    'buttons', 'cards', 'badges', 'alerts', 'tables', 'charts', 'maps',
+    'timelines', 'progress_indicators', 'search', 'filters', 'calendars',
+    'modal_dialogs', 'knowledge_panels',
+]
+
+COMPONENT_DOC_REQUIREMENTS = [
+    'purpose', 'usage_guidelines', 'accessibility_notes',
+    'examples', 'states', 'design_tokens',
+]
+
+MC_UX_METRICS = [
+    'page_completion', 'search_success', 'learning_completion',
+    'volunteer_onboarding', 'navigation_flow',
+]
+
+LAYOUT_LAYERS = [
+    'orientation', 'summary', 'main_narrative', 'visual_explanation',
+    'supporting_evidence', 'related_topics', 'civic_action_opportunities',
+]
+
+DESIGN_SYSTEM_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-06',
+    'updated': today,
+    'title': 'Master Design System, User Experience & Visual Language',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md',
+    'source_registries': {
+        'design_language': '/data/design-system.json',
+        'css_tokens': '/css/design-tokens.css',
+        'css_components': '/css/components.css',
+        'mc_theme': '/css/mission-control.css',
+        'showcase': '/design-system/',
+    },
+    'philosophy': 'Design reduces cognitive effort; every screen answers where/what/next',
+    'governing_principle': (
+        'People decide whether to trust an institution within moments. '
+        'Thoughtful design communicates competence and welcome before a word is read.'
+    ),
+    'brand_personality': BRAND_PERSONALITY,
+    'screen_questions': DESIGN_SCREEN_QUESTIONS,
+    'visual_identity': [
+        'clean_layouts', 'strong_typography', 'comfortable_spacing',
+        'simple_navigation', 'high_readability', 'consistent_interactions', 'minimal_clutter',
+    ],
+    'color_roles': COLOR_ROLES,
+    'typography_hierarchy': TYPOGRAPHY_HIERARCHY,
+    'fonts': {'serif': 'Source Serif 4', 'sans': 'Source Sans 3', 'mono': 'Consolas'},
+    'layout': {
+        'system': 'responsive_grid',
+        'reading_measure': '65ch',
+        'layers': LAYOUT_LAYERS,
+    },
+    'spacing_principle': 'Whitespace is intentional; every screen should breathe',
+    'card_types': CARD_TYPES,
+    'card_type_count': len(CARD_TYPES),
+    'navigation': {
+        'primary_stable': True,
+        'secondary_contextual': True,
+        'breadcrumbs': True,
+        'search_always_available': True,
+    },
+    'dashboard_philosophy': {
+        'principle': 'Dashboards answer questions, not display everything',
+        'sections': DASHBOARD_SECTIONS,
+    },
+    'mission_control_design': {
+        'character': 'executive_operations_center',
+        'theme': 'NASA-inspired dark cockpit',
+        'features': [
+            'large_metrics', 'status_indicators', 'interactive_maps', 'trend_charts',
+            'forecasts', 'task_summaries', 'institution_health', 'minimal_distraction',
+        ],
+    },
+    'maps': {'central_navigation': True, 'use_cases': MAP_USE_CASES, 'drill_down_required': True},
+    'chart_types': CHART_TYPES,
+    'form_standards': FORM_STANDARDS,
+    'accessibility_standards': ACCESSIBILITY_STANDARDS,
+    'accessibility_wcag': '2.1 AA',
+    'mobile_priorities': MOBILE_PRIORITIES,
+    'mobile_complete_experience': True,
+    'ai_ux_standards': AI_UX_STANDARDS,
+    'personal_dashboard_elements': PERSONAL_DASHBOARD_ELEMENTS,
+    'executive_dashboard_elements': EXECUTIVE_DASHBOARD_ELEMENTS,
+    'animation': {
+        'principle': 'Subtle only; never distract from content',
+        'uses': ANIMATION_USES,
+        'reduced_motion_respected': True,
+    },
+    'design_components': DESIGN_COMPONENTS,
+    'component_count': len(DESIGN_COMPONENTS),
+    'component_doc_requirements': COMPONENT_DOC_REQUIREMENTS,
+    'mc_ux_metrics': MC_UX_METRICS,
+    'live_component_count': 14,
+    'status': 'documented',
+    'implemented': False,
+}
+
 ROUTE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -1356,7 +1558,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D06', 'indicator': 'Route Map (IMP-03)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D07', 'indicator': 'Database Schema (IMP-04)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D08', 'indicator': 'Identity & Auth (IMP-05)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D09', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D09', 'indicator': 'Design System (IMP-06)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D10', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -1514,7 +1717,26 @@ out = {
             'number': 6,
             'id': 'IMP-06',
             'title': 'Master Design System, User Experience & Visual Language',
-            'note': 'Doctrinal package 6; engineering IMP-06 is repository migration and stack lock',
+            'status': 'documented',
+        },
+    },
+    'design_system': {
+        'title': 'Master Design System, User Experience & Visual Language',
+        'package': 'Implementation Package 6 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md',
+        'manifest': '/data/design-system-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': DESIGN_SYSTEM_MANIFEST['philosophy'],
+        'component_count': DESIGN_SYSTEM_MANIFEST['component_count'],
+        'card_type_count': DESIGN_SYSTEM_MANIFEST['card_type_count'],
+        'live_component_count': DESIGN_SYSTEM_MANIFEST['live_component_count'],
+        'accessibility_wcag': DESIGN_SYSTEM_MANIFEST['accessibility_wcag'],
+        'mobile_priorities': MOBILE_PRIORITIES,
+        'next_package': {
+            'number': 7,
+            'id': 'IMP-07',
+            'title': 'Master Mission Control Architecture & Executive Command Center',
         },
     },
     'supersedes': {
@@ -1611,6 +1833,10 @@ with open(root / 'data/canonical-data-manifest.json', 'w', newline='\n') as f:
 
 with open(root / 'data/identity-auth-manifest.json', 'w', newline='\n') as f:
     json.dump(IDENTITY_AUTH_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/design-system-manifest.json', 'w', newline='\n') as f:
+    json.dump(DESIGN_SYSTEM_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(
