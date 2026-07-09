@@ -13,6 +13,18 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.21] - 2026-07-09 — IMP-21 Public Website & Citizen Engagement
+
+### Implementation Package 21 of 50
+- **Master Public Website, Digital Experience & Citizen Engagement Platform**
+- 7 homepage sections · 8 Arkansas map layers · county & city public portals
+- Global search, storytelling framework, public AI guide, engagement pathways
+- Accessibility standards, public metrics dashboard, Mission Control integration
+- Machine-readable **public-website-manifest.json**
+- Institutional OS evolution: 21/50 packages (**42%**)
+- IMP-22 next (doctrinal): Mobile Experience, PWA & Field Operations
+- Honest: 21/50 documented · 0/50 implemented · 100% package readiness
+
 ## [2.05.20] - 2026-07-09 — IMP-20 Automation Engine & Workflow Orchestration
 
 ### Implementation Package 20 of 50 — 40% Blueprint Milestone

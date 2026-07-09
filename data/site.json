@@ -2,7 +2,7 @@
   "site": {
     "title": "Citizens Facts",
     "tagline": "Citizens United civic education — Understand → Teach → Lead",
-    "version": "2.05.20",
+    "version": "2.05.21",
     "engagement_goal_pct": 15,
     "arkansans_connected_goal": 200000,
     "county_milestone_date": "2026-10-01",
@@ -194,6 +194,8 @@
     "institutional_analytics_package": "/docs/IMPLEMENTATION_PACKAGE_19_INSTITUTIONAL_ANALYTICS.md",
     "automation_engine_manifest": "/data/automation-engine-manifest.json",
     "automation_engine_package": "/docs/IMPLEMENTATION_PACKAGE_20_AUTOMATION_ENGINE.md",
+    "public_website_manifest": "/data/public-website-manifest.json",
+    "public_website_package": "/docs/IMPLEMENTATION_PACKAGE_21_PUBLIC_WEBSITE.md",
     "github": "https://github.com/Grappe501/arkansas",
     "mission": "Turn a curious reader into a local educator.",
     "system": "Citizens United Civic Education Ladder"

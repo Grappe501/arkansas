@@ -26,7 +26,7 @@ tl = cip.get('master_timeline', {})
 
 
 
-mc['version'] = '2.05.20'
+mc['version'] = '2.05.21'
 
 mc['updated'] = '2026-07-09'
 
@@ -96,21 +96,21 @@ for bar in mc['progress_bars']:
 
 mc['briefing'] = {
 
-    'what_built': 'IMP-01–20 documented — automation engine & workflow orchestration (40% milestone)',
+    'what_built': 'IMP-01–21 documented — public website & citizen engagement (42%)',
 
-    'building_now': 'IMP-21 Public Website & Citizen Engagement next; Sprint Zero pending',
+    'building_now': 'IMP-22 Mobile Experience & Field Operations next; Sprint Zero pending',
 
     'blocked': ['Sprint Zero not complete', '0/50 code-implemented', f"{s.get('days_to_software', 0)} days to software target"],
 
     'ready_public': [
 
-        'Automation Engine', 'automation-engine-manifest.json', 'Workflow orchestration',
+        'Public Website', 'public-website-manifest.json', 'Homepage & Arkansas map architecture',
 
-        'Institutional Analytics', 'Relationship Intelligence', '40% blueprint complete',
+        'Automation Engine', 'Institutional Analytics', '40% blueprint milestone',
 
     ],
 
-    'next': 'IMP-21 — Master Public Website, Digital Experience & Citizen Engagement Platform',
+    'next': 'IMP-22 — Master Mobile Experience, Progressive Web App & Field Operations Platform',
 
 }
 

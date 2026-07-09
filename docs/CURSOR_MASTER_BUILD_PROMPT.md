@@ -36,6 +36,7 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 0r. **Relationship Intelligence (IMP-18):** [/docs/IMPLEMENTATION_PACKAGE_18_RELATIONSHIP_INTELLIGENCE.md](/docs/IMPLEMENTATION_PACKAGE_18_RELATIONSHIP_INTELLIGENCE.md) · [/data/relationship-intelligence-manifest.json](/data/relationship-intelligence-manifest.json)
 0s. **Institutional Analytics (IMP-19):** [/docs/IMPLEMENTATION_PACKAGE_19_INSTITUTIONAL_ANALYTICS.md](/docs/IMPLEMENTATION_PACKAGE_19_INSTITUTIONAL_ANALYTICS.md) · [/data/institutional-analytics-manifest.json](/data/institutional-analytics-manifest.json)
 0t. **Automation Engine (IMP-20):** [/docs/IMPLEMENTATION_PACKAGE_20_AUTOMATION_ENGINE.md](/docs/IMPLEMENTATION_PACKAGE_20_AUTOMATION_ENGINE.md) · [/data/automation-engine-manifest.json](/data/automation-engine-manifest.json)
+0u. **Public Website (IMP-21):** [/docs/IMPLEMENTATION_PACKAGE_21_PUBLIC_WEBSITE.md](/docs/IMPLEMENTATION_PACKAGE_21_PUBLIC_WEBSITE.md) · [/data/public-website-manifest.json](/data/public-website-manifest.json)
 
 ## Master timeline (updated IMP-11)
 
@@ -141,7 +142,7 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 
 ## First step to implement
 
-**IMP-01** through **IMP-20** are **documented**:
+**IMP-01** through **IMP-21** are **documented**:
 - [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
 - [Technical Architecture](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
 - [Route Map](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [route-manifest.json](/data/route-manifest.json)
@@ -162,7 +163,8 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 - [Relationship Intelligence](/docs/IMPLEMENTATION_PACKAGE_18_RELATIONSHIP_INTELLIGENCE.md) · [relationship-intelligence-manifest.json](/data/relationship-intelligence-manifest.json)
 - [Institutional Analytics](/docs/IMPLEMENTATION_PACKAGE_19_INSTITUTIONAL_ANALYTICS.md) · [institutional-analytics-manifest.json](/data/institutional-analytics-manifest.json)
 - [Automation Engine](/docs/IMPLEMENTATION_PACKAGE_20_AUTOMATION_ENGINE.md) · [automation-engine-manifest.json](/data/automation-engine-manifest.json)
+- [Public Website](/docs/IMPLEMENTATION_PACKAGE_21_PUBLIC_WEBSITE.md) · [public-website-manifest.json](/data/public-website-manifest.json)
 
-**IMP-21** is next (doctrinal): Master Public Website, Digital Experience & Citizen Engagement Platform.
+**IMP-22** is next (doctrinal): Master Mobile Experience, Progressive Web App & Field Operations Platform.
 
 Engineering **Sprint Zero (IMP-10 step registry)** is the Band A gate before Band B code slices.

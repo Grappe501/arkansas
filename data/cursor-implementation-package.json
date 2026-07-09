@@ -603,9 +603,37 @@
     "mc_dashboard": "/mission-control/pmo-execution-office.html",
     "engineering_note": "Doctrinal IMP-20 Automation Engine; engineering IMP-20 is accessibility baseline audit",
     "next_package": {
-      "number": 21,
-      "id": "IMP-21",
-      "title": "Master Public Website, Digital Experience & Citizen Engagement Platform",
+      "number": 22,
+      "id": "IMP-22",
+      "title": "Master Mobile Experience, Progressive Web App & Field Operations Platform",
+      "status": "specified"
+    }
+  },
+  "public_website": {
+    "title": "Master Public Website, Digital Experience & Citizen Engagement Platform",
+    "package": "Implementation Package 21 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_21_PUBLIC_WEBSITE.md",
+    "manifest": "/data/public-website-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Every page answers: Why should I care? What can I learn? What can I do next?",
+    "homepage_section_count": 7,
+    "arkansas_map_layer_count": 8,
+    "accessibility_standard_count": 7,
+    "begin_learning_entry_count": 6,
+    "public_engagement_action_count": 8,
+    "packages_completed": 21,
+    "packages_complete_pct": 42,
+    "county_milestone_date": "2026-10-01",
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000,
+    "mc_dashboard": "/mission-control/visitor-journey.html",
+    "public_site_url": "/",
+    "engineering_note": "Doctrinal IMP-21 Public Website; engineering IMP-21 is Prisma schema core entities",
+    "next_package": {
+      "number": 22,
+      "id": "IMP-22",
+      "title": "Master Mobile Experience, Progressive Web App & Field Operations Platform",
       "status": "specified"
     }
   },
@@ -2008,7 +2036,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 20,
+        "current": 21,
         "status": "partial"
       },
       {
@@ -2139,6 +2167,12 @@
       },
       {
         "id": "CIP-D24",
+        "indicator": "Public Website (IMP-21)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D25",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -2193,7 +2227,7 @@
     "days_remaining": 176,
     "implementation_package_readiness_pct": 100,
     "steps_total": 50,
-    "steps_documented": 20,
+    "steps_documented": 21,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

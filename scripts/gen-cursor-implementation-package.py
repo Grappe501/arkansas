@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 20  # IMP-01 through IMP-20 (doctrinal)
+steps_documented = 21  # IMP-01 through IMP-21 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3332,7 +3332,7 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'research_institute', 'community_education_academy', 'volunteer_network',
     'coalition_network', 'local_operating_systems', 'communication_platform',
     'institutional_time_intelligence', 'institutional_relationship_intelligence',
-    'institutional_analytics', 'institutional_automation',
+    'institutional_analytics', 'institutional_automation', 'public_digital_experience',
 ]
 
 RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
@@ -3835,6 +3835,152 @@ AUTOMATION_ENGINE_MANIFEST = {
     'implemented': False,
 }
 
+CORE_PAGE_QUESTIONS = [
+    'why_should_i_care', 'what_can_i_learn', 'what_can_i_do_next',
+]
+
+HOMEPAGE_SECTIONS = [
+    'hero', 'why_this_matters', 'begin_learning', 'explore_arkansas',
+    'featured_research', 'community_impact', 'get_involved',
+]
+
+HERO_ELEMENTS = [
+    'institution_explanation', 'primary_call_to_action', 'search', 'explore_arkansas',
+]
+
+BEGIN_LEARNING_ENTRY_POINTS = [
+    'new_visitors', 'students', 'educators', 'volunteers', 'researchers', 'community_leaders',
+]
+
+GLOBAL_SEARCH_EXAMPLES = [
+    'what_is_citizens_united', 'what_does_campaign_finance_mean',
+    'who_represents_my_county', 'what_events_are_near_me', 'what_courses_should_i_take',
+]
+
+ARKANSAS_MAP_LAYERS = [
+    'counties', 'cities', 'community_conversations', 'education_leaders',
+    'organizations', 'academy_opportunities', 'events', 'research_resources',
+]
+
+COUNTY_PAGE_SECTIONS = [
+    'overview', 'research', 'education_leaders', 'organizations', 'events',
+    'community_conversations', 'volunteer_opportunities', 'academy',
+    'county_progress', 'local_ai_assistant',
+]
+
+CITY_PAGE_SECTIONS = [
+    'overview', 'leadership', 'neighborhoods', 'events', 'organizations',
+    'educational_resources', 'volunteer_opportunities', 'community_health',
+]
+
+STORYTELLING_FORMATS = [
+    'stories', 'timelines', 'interactive_graphics', 'videos',
+    'case_studies', 'historical_context',
+]
+
+ACCESSIBILITY_STANDARDS = [
+    'keyboard_navigation', 'screen_readers', 'high_contrast', 'responsive_layouts',
+    'alternative_text', 'readable_typography', 'captioned_media',
+]
+
+PUBLIC_AI_GUIDE_EXAMPLES = [
+    'what_does_this_court_case_mean', 'how_do_ballot_initiatives_work',
+    'show_me_beginner_lessons', 'what_organizations_are_near_me',
+    'what_events_are_coming_up',
+]
+
+PUBLIC_ENGAGEMENT_ACTIONS = [
+    'bookmark_resources', 'register_for_events', 'join_academy', 'volunteer',
+    'subscribe_to_updates', 'request_presentations', 'suggest_research_topics',
+    'report_corrections',
+]
+
+PUBLIC_DASHBOARD_METRICS = [
+    'counties_represented', 'education_leaders', 'community_conversations',
+    'research_completed', 'academy_participation', 'organizations_involved',
+    'statewide_goal_progress',
+]
+
+PERFORMANCE_STANDARDS = [
+    'fast_page_load', 'rapid_search', 'intuitive_navigation',
+    'desktop', 'tablet', 'mobile', 'public_libraries', 'low_bandwidth',
+]
+
+MC_PUBLIC_INTEGRATION_METRICS = [
+    'website_traffic', 'search_activity', 'popular_topics', 'learning_pathways',
+    'volunteer_conversions', 'county_interest', 'event_registrations',
+    'engagement_trends', 'public_feedback',
+]
+
+PUBLIC_WEBSITE_SYSTEM_CHAIN = [
+    'mission_control', 'knowledge_platform', 'research_institute',
+    'community_education_academy', 'county_operating_system', 'city_operating_system',
+    'volunteer_network', 'coalition_network', 'ai_localbrains', 'communications',
+]
+
+PUBLIC_WEBSITE_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-21',
+    'updated': today,
+    'title': 'Master Public Website, Digital Experience & Citizen Engagement Platform',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_21_PUBLIC_WEBSITE.md',
+    'source_registries': {
+        'visitor_journey': '/data/visitor-journey.json',
+        'route_manifest': '/data/route-manifest.json',
+        'local_operating_systems': '/data/local-operating-systems-manifest.json',
+        'education_academy': '/data/education-academy-manifest.json',
+        'knowledge_graph': '/data/knowledge-graph-manifest.json',
+        'automation_engine': '/data/automation-engine-manifest.json',
+    },
+    'philosophy': 'Every page answers: Why should I care? What can I learn? What can I do next?',
+    'governing_principle': (
+        'A trusted institution should welcome people naturally — every page helps an '
+        'Arkansan move toward understanding, participation, and community'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'core_page_questions': CORE_PAGE_QUESTIONS,
+    'homepage_sections': HOMEPAGE_SECTIONS,
+    'homepage_section_count': len(HOMEPAGE_SECTIONS),
+    'hero_elements': HERO_ELEMENTS,
+    'begin_learning_entry_points': BEGIN_LEARNING_ENTRY_POINTS,
+    'global_search_examples': GLOBAL_SEARCH_EXAMPLES,
+    'arkansas_map_layers': ARKANSAS_MAP_LAYERS,
+    'arkansas_map_layer_count': len(ARKANSAS_MAP_LAYERS),
+    'county_page_sections': COUNTY_PAGE_SECTIONS,
+    'city_page_sections': CITY_PAGE_SECTIONS,
+    'storytelling_formats': STORYTELLING_FORMATS,
+    'accessibility_standards': ACCESSIBILITY_STANDARDS,
+    'accessibility_standard_count': len(ACCESSIBILITY_STANDARDS),
+    'public_ai_guide_examples': PUBLIC_AI_GUIDE_EXAMPLES,
+    'public_engagement_actions': PUBLIC_ENGAGEMENT_ACTIONS,
+    'public_dashboard_metrics': PUBLIC_DASHBOARD_METRICS,
+    'performance_standards': PERFORMANCE_STANDARDS,
+    'mc_public_integration_metrics': MC_PUBLIC_INTEGRATION_METRICS,
+    'organizational_goals': {
+        'counties_total': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'public_website_system_chain': PUBLIC_WEBSITE_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/visitor-journey.html',
+    'public_site_url': '/',
+    'packages_completed': 21,
+    'packages_total': 50,
+    'packages_complete_pct': 42,
+    'engineering_note': 'Doctrinal IMP-21 Public Website; engineering IMP-21 is Prisma schema core entities',
+    'status': 'documented',
+    'implemented': False,
+}
+
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -3971,7 +4117,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D21', 'indicator': 'Relationship Intelligence (IMP-18)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D22', 'indicator': 'Institutional Analytics (IMP-19)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D23', 'indicator': 'Automation Engine (IMP-20)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D24', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D24', 'indicator': 'Public Website (IMP-21)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D25', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -4479,9 +4626,37 @@ out = {
         'mc_dashboard': AUTOMATION_ENGINE_MANIFEST['mc_dashboard'],
         'engineering_note': AUTOMATION_ENGINE_MANIFEST['engineering_note'],
         'next_package': {
-            'number': 21,
-            'id': 'IMP-21',
-            'title': 'Master Public Website, Digital Experience & Citizen Engagement Platform',
+            'number': 22,
+            'id': 'IMP-22',
+            'title': 'Master Mobile Experience, Progressive Web App & Field Operations Platform',
+            'status': 'specified',
+        },
+    },
+    'public_website': {
+        'title': 'Master Public Website, Digital Experience & Citizen Engagement Platform',
+        'package': 'Implementation Package 21 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_21_PUBLIC_WEBSITE.md',
+        'manifest': '/data/public-website-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': PUBLIC_WEBSITE_MANIFEST['philosophy'],
+        'homepage_section_count': PUBLIC_WEBSITE_MANIFEST['homepage_section_count'],
+        'arkansas_map_layer_count': PUBLIC_WEBSITE_MANIFEST['arkansas_map_layer_count'],
+        'accessibility_standard_count': PUBLIC_WEBSITE_MANIFEST['accessibility_standard_count'],
+        'begin_learning_entry_count': len(BEGIN_LEARNING_ENTRY_POINTS),
+        'public_engagement_action_count': len(PUBLIC_ENGAGEMENT_ACTIONS),
+        'packages_completed': PUBLIC_WEBSITE_MANIFEST['packages_completed'],
+        'packages_complete_pct': PUBLIC_WEBSITE_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': PUBLIC_WEBSITE_MANIFEST['mc_dashboard'],
+        'public_site_url': PUBLIC_WEBSITE_MANIFEST['public_site_url'],
+        'engineering_note': PUBLIC_WEBSITE_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 22,
+            'id': 'IMP-22',
+            'title': 'Master Mobile Experience, Progressive Web App & Field Operations Platform',
             'status': 'specified',
         },
     },
@@ -4654,6 +4829,10 @@ with open(root / 'data/institutional-analytics-manifest.json', 'w', newline='\n'
 
 with open(root / 'data/automation-engine-manifest.json', 'w', newline='\n') as f:
     json.dump(AUTOMATION_ENGINE_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/public-website-manifest.json', 'w', newline='\n') as f:
+    json.dump(PUBLIC_WEBSITE_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(
