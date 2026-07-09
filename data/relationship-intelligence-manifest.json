@@ -1,0 +1,275 @@
+{
+  "version": "1.0",
+  "build": 101,
+  "package": "IMP-18",
+  "updated": "2026-07-09",
+  "title": "Master Relationship Intelligence, Contact Network & Community Graph",
+  "constitution": "/docs/IMPLEMENTATION_PACKAGE_18_RELATIONSHIP_INTELLIGENCE.md",
+  "source_registries": {
+    "contact_intelligence": "/data/contact-intelligence.json",
+    "relationship_registry": "/data/relationship-registry.json",
+    "relationship_os": "/data/relationship-os.json",
+    "knowledge_graph": "/data/knowledge-graph-manifest.json",
+    "volunteer_network": "/data/volunteer-network-manifest.json",
+    "coalition_network": "/data/coalition-network-manifest.json",
+    "education_academy": "/data/education-academy-manifest.json",
+    "time_intelligence": "/data/time-intelligence-manifest.json"
+  },
+  "philosophy": "Relationships sustain the institution \u2014 strengthen human connection over time",
+  "governing_principle": "Technology should never replace relationships; it should help people remember, strengthen, and expand them",
+  "master_timeline": {
+    "phase_one": {
+      "id": "software_completion",
+      "title": "Software Completion",
+      "target_date": "2026-07-11",
+      "days_remaining": 2,
+      "scope": [
+        "Public website",
+        "Mission Control",
+        "LocalBrains",
+        "Community Education Academy",
+        "Knowledge Platform",
+        "Research system",
+        "Volunteer system",
+        "Coalition system",
+        "County, City, and Neighborhood systems",
+        "AI infrastructure",
+        "Administrative tools"
+      ]
+    },
+    "phase_two": {
+      "id": "county_milestone",
+      "title": "75 Counties by October 1",
+      "target_date": "2026-10-01",
+      "days_remaining": 84,
+      "scope": [
+        "Completed county profile for all 75 counties",
+        "Education Leader or active recruitment contact per county",
+        "County dashboard operational in Mission Control",
+        "Initial local resource information",
+        "Development plan for continued growth per county"
+      ]
+    },
+    "phase_three": {
+      "id": "organizational_readiness",
+      "title": "Organizational Readiness",
+      "target_date": "2027-01-01",
+      "days_remaining": 176,
+      "focus": [
+        "Recruiting Education Leaders",
+        "Expanding county coverage",
+        "Growing city leadership",
+        "Coalition development",
+        "Volunteer training",
+        "Community conversations",
+        "Research expansion",
+        "Public testing",
+        "User feedback",
+        "System refinement",
+        "Launch certification",
+        "City and neighborhood systems mature",
+        "Statewide volunteer development expanded"
+      ]
+    },
+    "sequence": "Software Complete (Jul 11, 2026) \u2192 75 Counties (Oct 1, 2026) \u2192 Organizational Readiness (Jan 2027)",
+    "build_out_months_approx": 6,
+    "county_milestone": {
+      "target_date": "2026-10-01",
+      "counties_total": 75,
+      "days_remaining": 84,
+      "label": "75-by-October-1 Milestone"
+    }
+  },
+  "software_completion_date": "2026-07-11",
+  "county_milestone_date": "2026-10-01",
+  "organizational_readiness_date": "2027-01-01",
+  "days_to_software": 2,
+  "days_to_county_milestone": 84,
+  "days_to_organizational": 176,
+  "relationship_philosophy_remembers": [
+    "how_we_met",
+    "shared_interests",
+    "volunteer_history",
+    "community_involvement",
+    "organizations",
+    "skills",
+    "conversations",
+    "educational_progress"
+  ],
+  "relationship_architecture_types": [
+    "person_person",
+    "person_organization",
+    "person_county",
+    "person_city",
+    "person_neighborhood",
+    "person_education_leader",
+    "volunteer_mentor",
+    "researcher_project",
+    "organization_organization",
+    "community_event"
+  ],
+  "relationship_architecture_type_count": 10,
+  "contact_profile_fields": [
+    "basic_information",
+    "counties",
+    "cities",
+    "neighborhoods",
+    "organizations",
+    "volunteer_interests",
+    "skills",
+    "education_progress",
+    "conversation_history",
+    "meeting_history",
+    "community_participation",
+    "communication_preferences",
+    "relationship_strength",
+    "last_meaningful_interaction"
+  ],
+  "contact_profile_field_count": 14,
+  "relationship_timeline_events": [
+    "joined_platform",
+    "completed_course",
+    "attended_presentation",
+    "hosted_community_conversation",
+    "joined_organization",
+    "became_education_leader",
+    "mentored_volunteer",
+    "published_research"
+  ],
+  "community_graph_visualizations": [
+    "volunteer_connections",
+    "county_leadership",
+    "city_leadership",
+    "coalition_relationships",
+    "mentorship_networks",
+    "organization_partnerships",
+    "community_conversation_networks",
+    "knowledge_sharing_networks"
+  ],
+  "community_graph_visualization_count": 8,
+  "education_leader_network_fields": [
+    "certified_leaders",
+    "leaders_in_training",
+    "mentors",
+    "presentation_activity",
+    "community_reach",
+    "county_assignments",
+    "city_assignments",
+    "leadership_succession"
+  ],
+  "organization_relationship_fields": [
+    "partnership_history",
+    "joint_projects",
+    "shared_events",
+    "educational_collaboration",
+    "volunteer_sharing",
+    "research_collaboration",
+    "long_term_partnership_growth"
+  ],
+  "mentorship_network_fields": [
+    "mentor",
+    "learner",
+    "goals",
+    "meetings",
+    "progress",
+    "resources_shared",
+    "leadership_development"
+  ],
+  "community_conversation_history_fields": [
+    "topic",
+    "participants",
+    "questions_asked",
+    "resources_shared",
+    "follow_up_actions",
+    "future_meetings",
+    "related_research"
+  ],
+  "relationship_intelligence_engine": [
+    "volunteers_to_reconnect",
+    "organizations_ready_for_partnership",
+    "communities_lacking_engagement",
+    "emerging_leaders",
+    "mentorship_opportunities",
+    "presentation_requests",
+    "counties_needing_support"
+  ],
+  "ai_relationship_assistant": [
+    "meeting_summaries",
+    "follow_up_suggestions",
+    "conversation_memory",
+    "shared_interest_identification",
+    "introduction_recommendations",
+    "presentation_briefings",
+    "community_resource_suggestions"
+  ],
+  "relationship_health_metrics": [
+    "relationship_growth",
+    "volunteer_retention",
+    "mentorship_activity",
+    "organization_engagement",
+    "community_conversations",
+    "leadership_density",
+    "county_connectivity",
+    "city_connectivity"
+  ],
+  "relationship_health_metric_count": 8,
+  "relationship_privacy_controls": [
+    "profile_visibility",
+    "communication_preferences",
+    "organization_visibility",
+    "volunteer_availability",
+    "mentorship_participation",
+    "personal_information"
+  ],
+  "october_relationship_goal": {
+    "target_date": "2026-10-01",
+    "county_network_requirements": [
+      "education_leader_or_training",
+      "coalition_organizations",
+      "active_volunteers",
+      "community_conversations",
+      "local_contacts",
+      "mentorship_pathways"
+    ],
+    "label": "Identifiable relationship network in every county"
+  },
+  "organizational_goals": {
+    "counties_total": 75,
+    "target_cities": 250,
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000
+  },
+  "relationship_system_chain": [
+    "mission_control",
+    "knowledge_graph",
+    "volunteer_network",
+    "community_education_academy",
+    "coalition_network",
+    "county_operating_system",
+    "city_operating_system",
+    "neighborhood_operating_system",
+    "calendar_brain",
+    "ai_localbrains"
+  ],
+  "institutional_systems": [
+    "technical_foundation",
+    "mission_control",
+    "localbrains",
+    "knowledge_platform",
+    "research_institute",
+    "community_education_academy",
+    "volunteer_network",
+    "coalition_network",
+    "local_operating_systems",
+    "communication_platform",
+    "institutional_time_intelligence",
+    "institutional_relationship_intelligence"
+  ],
+  "mc_dashboard": "/mission-control/contact-intelligence.html",
+  "packages_completed": 18,
+  "packages_total": 50,
+  "packages_complete_pct": 36,
+  "engineering_note": "Doctrinal IMP-18 Relationship Intelligence; engineering IMP-18 is COMP-06\u201310 interactive specs",
+  "status": "documented",
+  "implemented": false
+}

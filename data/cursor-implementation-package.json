@@ -523,10 +523,36 @@
     "county_milestone_date": "2026-10-01",
     "engineering_note": "Doctrinal IMP-17 Time Intelligence; engineering IMP-17 is COMP-01\u201305 primitive specs",
     "next_package": {
-      "number": 18,
-      "id": "IMP-18",
-      "title": "Master Relationship Intelligence, Contact Network & Community Graph",
-      "note": "Doctrinal package 18; engineering IMP-18 is COMP-06\u201310 interactive specs"
+      "number": 19,
+      "id": "IMP-19",
+      "title": "Master Analytics, Institutional Intelligence & Predictive Insights Engine",
+      "note": "Doctrinal package 19; engineering IMP-19 is page templates"
+    }
+  },
+  "relationship_intelligence": {
+    "title": "Master Relationship Intelligence, Contact Network & Community Graph",
+    "package": "Implementation Package 18 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_18_RELATIONSHIP_INTELLIGENCE.md",
+    "manifest": "/data/relationship-intelligence-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Relationships sustain the institution \u2014 strengthen human connection over time",
+    "relationship_architecture_type_count": 10,
+    "contact_profile_field_count": 14,
+    "community_graph_visualization_count": 8,
+    "relationship_health_metric_count": 8,
+    "packages_completed": 18,
+    "packages_complete_pct": 36,
+    "county_milestone_date": "2026-10-01",
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000,
+    "mc_dashboard": "/mission-control/contact-intelligence.html",
+    "engineering_note": "Doctrinal IMP-18 Relationship Intelligence; engineering IMP-18 is COMP-06\u201310 interactive specs",
+    "next_package": {
+      "number": 19,
+      "id": "IMP-19",
+      "title": "Master Analytics, Institutional Intelligence & Predictive Insights Engine",
+      "status": "specified"
     }
   },
   "master_timeline": {
@@ -1928,7 +1954,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 17,
+        "current": 18,
         "status": "partial"
       },
       {
@@ -2041,6 +2067,12 @@
       },
       {
         "id": "CIP-D21",
+        "indicator": "Relationship Intelligence (IMP-18)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D22",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -2093,9 +2125,9 @@
     "arkansans_connected_goal": 200000,
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "implementation_package_readiness_pct": 94,
+    "implementation_package_readiness_pct": 96,
     "steps_total": 50,
-    "steps_documented": 17,
+    "steps_documented": 18,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 17  # IMP-01 through IMP-17 (doctrinal)
+steps_documented = 18  # IMP-01 through IMP-18 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3331,8 +3331,162 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'technical_foundation', 'mission_control', 'localbrains', 'knowledge_platform',
     'research_institute', 'community_education_academy', 'volunteer_network',
     'coalition_network', 'local_operating_systems', 'communication_platform',
-    'institutional_time_intelligence',
+    'institutional_time_intelligence', 'institutional_relationship_intelligence',
 ]
+
+RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
+    'how_we_met', 'shared_interests', 'volunteer_history', 'community_involvement',
+    'organizations', 'skills', 'conversations', 'educational_progress',
+]
+
+RELATIONSHIP_ARCHITECTURE_TYPES = [
+    'person_person', 'person_organization', 'person_county', 'person_city',
+    'person_neighborhood', 'person_education_leader', 'volunteer_mentor',
+    'researcher_project', 'organization_organization', 'community_event',
+]
+
+CONTACT_PROFILE_FIELDS = [
+    'basic_information', 'counties', 'cities', 'neighborhoods', 'organizations',
+    'volunteer_interests', 'skills', 'education_progress', 'conversation_history',
+    'meeting_history', 'community_participation', 'communication_preferences',
+    'relationship_strength', 'last_meaningful_interaction',
+]
+
+RELATIONSHIP_TIMELINE_EVENTS = [
+    'joined_platform', 'completed_course', 'attended_presentation',
+    'hosted_community_conversation', 'joined_organization', 'became_education_leader',
+    'mentored_volunteer', 'published_research',
+]
+
+COMMUNITY_GRAPH_VISUALIZATIONS = [
+    'volunteer_connections', 'county_leadership', 'city_leadership',
+    'coalition_relationships', 'mentorship_networks', 'organization_partnerships',
+    'community_conversation_networks', 'knowledge_sharing_networks',
+]
+
+EDUCATION_LEADER_NETWORK_FIELDS = [
+    'certified_leaders', 'leaders_in_training', 'mentors', 'presentation_activity',
+    'community_reach', 'county_assignments', 'city_assignments', 'leadership_succession',
+]
+
+ORGANIZATION_RELATIONSHIP_FIELDS = [
+    'partnership_history', 'joint_projects', 'shared_events',
+    'educational_collaboration', 'volunteer_sharing', 'research_collaboration',
+    'long_term_partnership_growth',
+]
+
+MENTORSHIP_NETWORK_FIELDS = [
+    'mentor', 'learner', 'goals', 'meetings', 'progress',
+    'resources_shared', 'leadership_development',
+]
+
+COMMUNITY_CONVERSATION_HISTORY_FIELDS = [
+    'topic', 'participants', 'questions_asked', 'resources_shared',
+    'follow_up_actions', 'future_meetings', 'related_research',
+]
+
+RELATIONSHIP_INTELLIGENCE_ENGINE = [
+    'volunteers_to_reconnect', 'organizations_ready_for_partnership',
+    'communities_lacking_engagement', 'emerging_leaders', 'mentorship_opportunities',
+    'presentation_requests', 'counties_needing_support',
+]
+
+AI_RELATIONSHIP_ASSISTANT = [
+    'meeting_summaries', 'follow_up_suggestions', 'conversation_memory',
+    'shared_interest_identification', 'introduction_recommendations',
+    'presentation_briefings', 'community_resource_suggestions',
+]
+
+RELATIONSHIP_HEALTH_METRICS = [
+    'relationship_growth', 'volunteer_retention', 'mentorship_activity',
+    'organization_engagement', 'community_conversations', 'leadership_density',
+    'county_connectivity', 'city_connectivity',
+]
+
+RELATIONSHIP_PRIVACY_CONTROLS = [
+    'profile_visibility', 'communication_preferences', 'organization_visibility',
+    'volunteer_availability', 'mentorship_participation', 'personal_information',
+]
+
+OCTOBER_RELATIONSHIP_NETWORK = [
+    'education_leader_or_training', 'coalition_organizations', 'active_volunteers',
+    'community_conversations', 'local_contacts', 'mentorship_pathways',
+]
+
+RELATIONSHIP_SYSTEM_CHAIN = [
+    'mission_control', 'knowledge_graph', 'volunteer_network',
+    'community_education_academy', 'coalition_network', 'county_operating_system',
+    'city_operating_system', 'neighborhood_operating_system', 'calendar_brain',
+    'ai_localbrains',
+]
+
+RELATIONSHIP_INTELLIGENCE_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-18',
+    'updated': today,
+    'title': 'Master Relationship Intelligence, Contact Network & Community Graph',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_18_RELATIONSHIP_INTELLIGENCE.md',
+    'source_registries': {
+        'contact_intelligence': '/data/contact-intelligence.json',
+        'relationship_registry': '/data/relationship-registry.json',
+        'relationship_os': '/data/relationship-os.json',
+        'knowledge_graph': '/data/knowledge-graph-manifest.json',
+        'volunteer_network': '/data/volunteer-network-manifest.json',
+        'coalition_network': '/data/coalition-network-manifest.json',
+        'education_academy': '/data/education-academy-manifest.json',
+        'time_intelligence': '/data/time-intelligence-manifest.json',
+    },
+    'philosophy': 'Relationships sustain the institution — strengthen human connection over time',
+    'governing_principle': (
+        'Technology should never replace relationships; it should help people '
+        'remember, strengthen, and expand them'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'relationship_philosophy_remembers': RELATIONSHIP_PHILOSOPHY_REMEMBERS,
+    'relationship_architecture_types': RELATIONSHIP_ARCHITECTURE_TYPES,
+    'relationship_architecture_type_count': len(RELATIONSHIP_ARCHITECTURE_TYPES),
+    'contact_profile_fields': CONTACT_PROFILE_FIELDS,
+    'contact_profile_field_count': len(CONTACT_PROFILE_FIELDS),
+    'relationship_timeline_events': RELATIONSHIP_TIMELINE_EVENTS,
+    'community_graph_visualizations': COMMUNITY_GRAPH_VISUALIZATIONS,
+    'community_graph_visualization_count': len(COMMUNITY_GRAPH_VISUALIZATIONS),
+    'education_leader_network_fields': EDUCATION_LEADER_NETWORK_FIELDS,
+    'organization_relationship_fields': ORGANIZATION_RELATIONSHIP_FIELDS,
+    'mentorship_network_fields': MENTORSHIP_NETWORK_FIELDS,
+    'community_conversation_history_fields': COMMUNITY_CONVERSATION_HISTORY_FIELDS,
+    'relationship_intelligence_engine': RELATIONSHIP_INTELLIGENCE_ENGINE,
+    'ai_relationship_assistant': AI_RELATIONSHIP_ASSISTANT,
+    'relationship_health_metrics': RELATIONSHIP_HEALTH_METRICS,
+    'relationship_health_metric_count': len(RELATIONSHIP_HEALTH_METRICS),
+    'relationship_privacy_controls': RELATIONSHIP_PRIVACY_CONTROLS,
+    'october_relationship_goal': {
+        'target_date': county_milestone_date,
+        'county_network_requirements': OCTOBER_RELATIONSHIP_NETWORK,
+        'label': 'Identifiable relationship network in every county',
+    },
+    'organizational_goals': {
+        'counties_total': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'relationship_system_chain': RELATIONSHIP_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/contact-intelligence.html',
+    'packages_completed': 18,
+    'packages_total': 50,
+    'packages_complete_pct': 36,
+    'engineering_note': 'Doctrinal IMP-18 Relationship Intelligence; engineering IMP-18 is COMP-06–10 interactive specs',
+    'status': 'documented',
+    'implemented': False,
+}
 
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
@@ -3467,11 +3621,12 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D18', 'indicator': 'Local Operating Systems (IMP-15)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D19', 'indicator': 'Communication Platform (IMP-16)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D20', 'indicator': 'Time Intelligence (IMP-17)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D21', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D21', 'indicator': 'Relationship Intelligence (IMP-18)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D22', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
-    94,
+    96,
     14
     + len(IMPLEMENTATION_STEPS) // 2
     + len(BANDS) * 2
@@ -3895,10 +4050,36 @@ out = {
         'county_milestone_date': county_milestone_date,
         'engineering_note': TIME_INTELLIGENCE_MANIFEST['engineering_note'],
         'next_package': {
-            'number': 18,
-            'id': 'IMP-18',
-            'title': 'Master Relationship Intelligence, Contact Network & Community Graph',
-            'note': 'Doctrinal package 18; engineering IMP-18 is COMP-06–10 interactive specs',
+            'number': 19,
+            'id': 'IMP-19',
+            'title': 'Master Analytics, Institutional Intelligence & Predictive Insights Engine',
+            'note': 'Doctrinal package 19; engineering IMP-19 is page templates',
+        },
+    },
+    'relationship_intelligence': {
+        'title': 'Master Relationship Intelligence, Contact Network & Community Graph',
+        'package': 'Implementation Package 18 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_18_RELATIONSHIP_INTELLIGENCE.md',
+        'manifest': '/data/relationship-intelligence-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': RELATIONSHIP_INTELLIGENCE_MANIFEST['philosophy'],
+        'relationship_architecture_type_count': RELATIONSHIP_INTELLIGENCE_MANIFEST['relationship_architecture_type_count'],
+        'contact_profile_field_count': RELATIONSHIP_INTELLIGENCE_MANIFEST['contact_profile_field_count'],
+        'community_graph_visualization_count': RELATIONSHIP_INTELLIGENCE_MANIFEST['community_graph_visualization_count'],
+        'relationship_health_metric_count': RELATIONSHIP_INTELLIGENCE_MANIFEST['relationship_health_metric_count'],
+        'packages_completed': RELATIONSHIP_INTELLIGENCE_MANIFEST['packages_completed'],
+        'packages_complete_pct': RELATIONSHIP_INTELLIGENCE_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': RELATIONSHIP_INTELLIGENCE_MANIFEST['mc_dashboard'],
+        'engineering_note': RELATIONSHIP_INTELLIGENCE_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 19,
+            'id': 'IMP-19',
+            'title': 'Master Analytics, Institutional Intelligence & Predictive Insights Engine',
+            'status': 'specified',
         },
     },
     'master_timeline': MASTER_TIMELINE,
@@ -4058,6 +4239,10 @@ with open(root / 'data/communication-platform-manifest.json', 'w', newline='\n')
 
 with open(root / 'data/time-intelligence-manifest.json', 'w', newline='\n') as f:
     json.dump(TIME_INTELLIGENCE_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/relationship-intelligence-manifest.json', 'w', newline='\n') as f:
+    json.dump(RELATIONSHIP_INTELLIGENCE_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

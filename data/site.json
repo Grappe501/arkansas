@@ -2,7 +2,7 @@
   "site": {
     "title": "Citizens Facts",
     "tagline": "Citizens United civic education — Understand → Teach → Lead",
-    "version": "2.05.17",
+    "version": "2.05.18",
     "engagement_goal_pct": 15,
     "arkansans_connected_goal": 200000,
     "county_milestone_date": "2026-10-01",
@@ -188,6 +188,8 @@
     "url": "https://arkansas-facts.netlify.app",
     "production_url": "https://arkansas-facts.netlify.app",
     "legacy_url": "https://arkansas-citizens-facts.netlify.app",
+    "relationship_intelligence_manifest": "/data/relationship-intelligence-manifest.json",
+    "relationship_intelligence_package": "/docs/IMPLEMENTATION_PACKAGE_18_RELATIONSHIP_INTELLIGENCE.md",
     "github": "https://github.com/Grappe501/arkansas",
     "mission": "Turn a curious reader into a local educator.",
     "system": "Citizens United Civic Education Ladder"

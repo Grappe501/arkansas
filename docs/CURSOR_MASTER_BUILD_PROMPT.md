@@ -33,6 +33,7 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 0o. **Local Operating Systems (IMP-15):** [/docs/IMPLEMENTATION_PACKAGE_15_LOCAL_OPERATING_SYSTEMS.md](/docs/IMPLEMENTATION_PACKAGE_15_LOCAL_OPERATING_SYSTEMS.md) · [/data/local-operating-systems-manifest.json](/data/local-operating-systems-manifest.json)
 0p. **Communication Platform (IMP-16):** [/docs/IMPLEMENTATION_PACKAGE_16_COMMUNICATION_PLATFORM.md](/docs/IMPLEMENTATION_PACKAGE_16_COMMUNICATION_PLATFORM.md) · [/data/communication-platform-manifest.json](/data/communication-platform-manifest.json)
 0q. **Time Intelligence (IMP-17):** [/docs/IMPLEMENTATION_PACKAGE_17_TIME_INTELLIGENCE.md](/docs/IMPLEMENTATION_PACKAGE_17_TIME_INTELLIGENCE.md) · [/data/time-intelligence-manifest.json](/data/time-intelligence-manifest.json)
+0r. **Relationship Intelligence (IMP-18):** [/docs/IMPLEMENTATION_PACKAGE_18_RELATIONSHIP_INTELLIGENCE.md](/docs/IMPLEMENTATION_PACKAGE_18_RELATIONSHIP_INTELLIGENCE.md) · [/data/relationship-intelligence-manifest.json](/data/relationship-intelligence-manifest.json)
 
 ## Master timeline (updated IMP-11)
 
@@ -138,7 +139,7 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 
 ## First step to implement
 
-**IMP-01** through **IMP-17** are **documented**:
+**IMP-01** through **IMP-18** are **documented**:
 - [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
 - [Technical Architecture](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
 - [Route Map](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [route-manifest.json](/data/route-manifest.json)
@@ -156,7 +157,8 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 - [Local Operating Systems](/docs/IMPLEMENTATION_PACKAGE_15_LOCAL_OPERATING_SYSTEMS.md) · [local-operating-systems-manifest.json](/data/local-operating-systems-manifest.json)
 - [Communication Platform](/docs/IMPLEMENTATION_PACKAGE_16_COMMUNICATION_PLATFORM.md) · [communication-platform-manifest.json](/data/communication-platform-manifest.json)
 - [Time Intelligence](/docs/IMPLEMENTATION_PACKAGE_17_TIME_INTELLIGENCE.md) · [time-intelligence-manifest.json](/data/time-intelligence-manifest.json)
+- [Relationship Intelligence](/docs/IMPLEMENTATION_PACKAGE_18_RELATIONSHIP_INTELLIGENCE.md) · [relationship-intelligence-manifest.json](/data/relationship-intelligence-manifest.json)
 
-**IMP-18** is next (doctrinal): Master Relationship Intelligence, Contact Network & Community Graph.
+**IMP-19** is next (doctrinal): Master Analytics, Institutional Intelligence & Predictive Insights Engine.
 
 Engineering **Sprint Zero (IMP-10 step registry)** is the Band A gate before Band B code slices.
