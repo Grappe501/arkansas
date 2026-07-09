@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.32.0 · **Education Academy:** [/mission-control/education-academy.html](/mission-control/education-academy.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #28:** ✅ Education Academy · **Build #27:** ✅ Content Factory · **Build #26:** ✅ AI Engine  
+**Current version:** 1.33.0 · **Research Observatory:** [/mission-control/research-observatory.html](/mission-control/research-observatory.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #29:** ✅ Research Observatory · **Build #28:** ✅ Education Academy · **Build #27:** ✅ Content Factory  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -272,8 +272,25 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **26** | **AI Knowledge Engine** | **✅ v1.30.0** |
 | **27** | **Content Production Factory** | **✅ v1.31.0** |
 | **28** | **Education Academy** | **✅ v1.32.0** |
+| **29** | **Research Observatory** | **✅ v1.33.0** |
 
-**Next:** Build #29 — Component specifications with props/states.
+**Next:** Build #30 — Component specifications with props/states.
+
+---
+
+## Phase 29 — Research Observatory (Build #29) ★ NEW
+
+*Living Research & Legislative Intelligence — early warning system.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| R1 | Observatory Blueprint v1.0 | ✅ | `data/research-observatory.json` |
+| R2 | 6 research divisions | ✅ | SCOTUS through Campaign Spending |
+| R3 | 9-stage research workflow | ✅ | Identified → Published |
+| R4 | 3 priority levels | ✅ | Educational accuracy through long-term |
+| R5 | Legislative tracking page structure | ✅ | 7 sections |
+| R6 | Research gap tracker | ✅ | Evidence registry + platform gaps |
+| R7 | MC observatory dashboard | ✅ | `/mission-control/research-observatory.html` |
 
 ---
 
@@ -543,7 +560,8 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#26**~~ | ~~AI Knowledge & Research Engine~~ ✅ Done |
 | ~~**#27**~~ | ~~Content Production Factory~~ ✅ Done |
 | ~~**#28**~~ | ~~Community Education Academy~~ ✅ Done |
-| **#29** | **Component specifications with props/states** |
+| ~~**#29**~~ | ~~Research Observatory~~ ✅ Done |
+| **#30** | **Component specifications with props/states** |
 
 ---
 

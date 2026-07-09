@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#29** | **Research Observatory** | **1.33.0** | **✅ Complete** | [029](029-research-observatory.md) · [/mission-control/research-observatory.html](../mission-control/research-observatory.html) |
 | **#28** | **Education Academy** | **1.32.0** | **✅ Complete** | [028](028-education-academy.md) · [/mission-control/education-academy.html](../mission-control/education-academy.html) |
 | **#27** | **Content Production Factory** | **1.31.0** | **✅ Complete** | [027](027-content-production-factory.md) · [/mission-control/content-factory.html](../mission-control/content-factory.html) |
 | **#26** | **AI Knowledge Engine** | **1.30.0** | **✅ Complete** | [026](026-ai-knowledge-engine.md) · [/mission-control/ai-knowledge.html](../mission-control/ai-knowledge.html) |
@@ -40,6 +41,7 @@
 | **AI Knowledge Engine** | `/mission-control/ai-knowledge.html` | **Civic Librarian · 5 learning modes · guardrails** |
 | **Content Production Factory** | `/mission-control/content-factory.html` | **7 types · 11-stage workflow · editorial OS** |
 | **Education Academy** | `/mission-control/education-academy.html` | **4 stages · 8 modules · leader development** |
+| **Research Observatory** | `/mission-control/research-observatory.html` | **6 divisions · legislative intelligence · gaps** |
 | Phase Registry | `/mission-control/phases.html` | Project phases |
 | Site Architecture | `/mission-control/architecture.html` | Information architecture (IA) |
 | **Platform Blueprint** | `/mission-control/platform.html` | **Technical architecture · v1 system** |

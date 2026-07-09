@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Research Observatory <a href="/mission-control/research-observatory.html" class="mc-inline-link">Early Warning System →</a></h2>
+    <p class="mc-bar-note">Build #29 — 6 research divisions, 9-stage workflow, legislative tracking, gap tracker. 18% observatory readiness.</p>
     <h2 class="mc-section-title">Education Academy <a href="/mission-control/education-academy.html" class="mc-inline-link">Leader Development →</a></h2>
     <p class="mc-bar-note">Build #28 — 4 learning stages, 8 curriculum modules, certification, presentation toolkit. 24% academy readiness.</p>
     <h2 class="mc-section-title">Content Production Factory <a href="/mission-control/content-factory.html" class="mc-inline-link">Editorial OS →</a></h2>
@@ -2822,6 +2824,107 @@ async function initEducationAcademy() {
   initDevConsole(mc);
 }
 
+async function initResearchObservatory() {
+  const root = document.getElementById('mc-research-observatory-root');
+  if (!root) return;
+
+  const [obsRes, mcRes] = await Promise.all([
+    fetch('/data/research-observatory.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const obs = await obsRes.json();
+  const mc = await mcRes.json();
+  const s = obs.summary;
+
+  const divRows = obs.divisions.map(d => `
+    <tr class="${d.status === 'partial' ? 'mc-table__row--approved' : ''}">
+      <td><code>${d.id}</code></td><td><strong>Division ${d.letter}: ${d.title}</strong></td>
+      <td>${d.status}</td><td class="mc-bar-note">${d.notes || '—'}</td></tr>`).join('');
+
+  const divCards = obs.divisions.map(d => `
+    <div class="mc-card"><h3>Division ${d.letter} — ${d.title}</h3>
+      <p class="mc-bar-note"><strong>Tracks:</strong></p>
+      <ul class="mc-deliverables">${d.tracks.map(t => `<li>${t}</li>`).join('')}</ul>
+      <p class="mc-bar-note"><strong>Outputs:</strong></p>
+      <ul class="mc-deliverables">${d.outputs.map(o => `<li>${o}</li>`).join('')}</ul>
+      ${d.route ? `<p class="mc-bar-note"><a href="${d.route}">${d.route}</a></p>` : ''}
+      ${d.notes ? `<p class="mc-bar-note"><em>${d.notes}</em></p>` : ''}</div>`).join('');
+
+  const workflowRows = obs.workflow_stages.map(w => `
+    <tr><td>${w.stage}</td><td>${w.title}</td><td>${w.status}</td></tr>`).join('');
+
+  const panelRows = obs.dashboard_panels.map(p => `
+    <tr><td><code>${p.id}</code></td><td>${p.title}</td><td>${p.current}</td><td>${p.status}</td></tr>`).join('');
+
+  const gapRows = obs.research_gaps.map(g => `
+    <tr><td>${g.topic}</td><td>${g.source}</td><td>${g.status}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Research Observatory</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #29 · ${obs.title}</p>
+      <h1>Living Research & Legislative Intelligence</h1>
+      <p class="mc-header__question">${obs.governing_principle}</p>
+      <p class="mc-bar-note"><strong>Early warning system</strong> — <a href="${obs.legacy_route}">Research Framework →</a></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Observatory readiness</div><div class="mc-stat__value">${s.observatory_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Divisions</div><div class="mc-stat__value">${s.divisions}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Evidence records</div><div class="mc-stat__value">${s.evidence_records}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Needing updates</div><div class="mc-stat__value">${s.evidence_needing_updates}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Research gaps</div><div class="mc-stat__value">${s.research_gaps_tracked}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Alerts automated</div><div class="mc-stat__value">${s.future_alerts_automated}/${s.future_alerts_defined}</div></div>
+    </div>
+    <h2 class="mc-section-title">Mission</h2>
+    <p class="mc-bar-note">${obs.mission}</p>
+    <h2 class="mc-section-title">Research Divisions</h2>
+    <div class="mc-card mc-inv-table-wrap">
+      <table class="mc-table"><thead><tr><th>ID</th><th>Division</th><th>Status</th><th>Notes</th></tr></thead>
+        <tbody>${divRows}</tbody></table>
+    </div>
+    <h2 class="mc-section-title">Research Workflow (${s.workflow_stages} stages)</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>Stage</th><th>Status</th></tr></thead>
+      <tbody>${workflowRows}</tbody></table>
+    <h2 class="mc-section-title">Priority Levels</h2>
+    <div class="mc-grid-2">${obs.priority_levels.map(p => `
+      <div class="mc-card"><h3>Priority ${p.level}: ${p.title}</h3>
+        <ul class="mc-deliverables">${p.examples.map(e => `<li>${e}</li>`).join('')}</ul></div>`).join('')}</div>
+    <h2 class="mc-section-title">Legislative Tracking Page Structure</h2>
+    <ol class="mc-deliverables">${obs.legislative_page_sections.map(sec => `<li>${sec}</li>`).join('')}</ol>
+    <h2 class="mc-section-title">Observatory Dashboard</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Panel</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${panelRows}</tbody></table>
+    <h2 class="mc-section-title">Research Gap Tracker</h2>
+    <div class="mc-card mc-inv-table-wrap" style="max-height:280px;overflow-y:auto">
+      <table class="mc-table"><thead><tr><th>Topic</th><th>Source</th><th>Status</th></tr></thead>
+        <tbody>${gapRows}</tbody></table>
+    </div>
+    <h2 class="mc-section-title">Community Research Contributions</h2>
+    <ul class="mc-deliverables">${obs.community_contributions.map(c => `<li>${c}</li>`).join('')}</ul>
+    <p class="mc-bar-note">All contributions undergo editorial review before incorporation.</p>
+    <h2 class="mc-section-title">Future Intelligence Alerts</h2>
+    <table class="mc-table"><thead><tr><th>Alert</th><th>Automation</th><th>Status</th></tr></thead>
+      <tbody>${obs.future_alerts.map(a => `<tr><td>${a.alert}</td><td>${a.automated ? 'Automated' : 'Human review'}</td><td>${a.status}</td></tr>`).join('')}</tbody></table>
+    <h2 class="mc-section-title">Division Details</h2>
+    <div class="mc-grid-2">${divCards}</div>
+    <h2 class="mc-section-title">Mission Control Integration</h2>
+    <table class="mc-table"><thead><tr><th>Use</th><th>Source</th><th>Status</th></tr></thead>
+      <tbody>${obs.mc_integration.map(i => `<tr><td>${i.use}</td><td>${i.source || '—'}</td><td>${i.status}</td></tr>`).join('')}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${obs.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${obs.recommended_next_build.number} — ${obs.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${obs.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/RESEARCH_OBSERVATORY.md">RESEARCH_OBSERVATORY.md</a> ·
+      <a href="/data/research-observatory.json">JSON</a> ·
+      <a href="/mission-control/research.html">Research Framework</a> ·
+      <a href="/data/evidence-registry.json">Evidence Registry</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -2849,4 +2952,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initAiKnowledgeEngine();
   initContentProductionFactory();
   initEducationAcademy();
+  initResearchObservatory();
 });

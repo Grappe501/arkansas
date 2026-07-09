@@ -1,0 +1,443 @@
+{
+  "version": "1.0",
+  "build": 29,
+  "updated": "2026-07-09",
+  "title": "Research Observatory v1.0",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/research-observatory.html",
+  "legacy_route": "/mission-control/research.html",
+  "constitution": "/docs/RESEARCH_OBSERVATORY.md",
+  "purpose": "Early warning system \u2014 monitor, verify, explain, educate. Never become a static website.",
+  "mission": "Most current, transparent, evidence-based resource on Citizens United for Arkansas citizens.",
+  "governing_principle": "Thoughtfully monitor developments and verify evidence \u2014 not react to every headline.",
+  "divisions": [
+    {
+      "id": "OBS-DIV-A",
+      "letter": "A",
+      "title": "Supreme Court Monitor",
+      "tracks": [
+        "New Supreme Court decisions",
+        "Petitions accepted for review",
+        "Campaign finance litigation",
+        "Constitutional developments"
+      ],
+      "outputs": [
+        "Educational summaries",
+        "Timeline updates",
+        "Related lesson updates",
+        "Source additions"
+      ],
+      "status": "partial",
+      "route": "/mission-control/research.html",
+      "notes": "1 CU opinion in evidence registry; monitor not automated"
+    },
+    {
+      "id": "OBS-DIV-B",
+      "letter": "B",
+      "title": "Federal Legislative Monitor",
+      "tracks": [
+        "Congress",
+        "Campaign finance legislation",
+        "Disclosure proposals",
+        "Constitutional amendment proposals",
+        "FEC oversight"
+      ],
+      "outputs": [
+        "Educational explainers",
+        "Legislative comparison pages",
+        "Status dashboards",
+        "Historical tracking"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "OBS-DIV-C",
+      "letter": "C",
+      "title": "Arkansas Legislative Monitor",
+      "tracks": [
+        "Bills introduced",
+        "Committee activity",
+        "Floor votes",
+        "Campaign finance legislation",
+        "Ethics legislation",
+        "Election administration"
+      ],
+      "outputs": [
+        "Arkansas legislative summaries",
+        "Bill explainers",
+        "Educational timelines",
+        "Resource updates"
+      ],
+      "status": "planned",
+      "notes": "No live bill tracking feed"
+    },
+    {
+      "id": "OBS-DIV-D",
+      "letter": "D",
+      "title": "Ballot Initiative Observatory",
+      "tracks": [
+        "Arkansas",
+        "Montana",
+        "Hawaii",
+        "Other states with notable developments"
+      ],
+      "outputs": [
+        "Plain-language summary",
+        "Current status",
+        "Historical context",
+        "Educational analysis",
+        "Official material links"
+      ],
+      "status": "partial",
+      "route": "/halls/montana-hawaii.html",
+      "notes": "MT/HI content live; AR initiative monitor not built"
+    },
+    {
+      "id": "OBS-DIV-E",
+      "letter": "E",
+      "title": "Academic Research Monitor",
+      "tracks": [
+        "Peer-reviewed scholarship",
+        "Law review articles",
+        "University publications",
+        "Government research",
+        "Empirical studies"
+      ],
+      "outputs": [
+        "Research summaries",
+        "Citation updates",
+        "Evidence reviews"
+      ],
+      "status": "planned",
+      "notes": "0 academic sources cataloged"
+    },
+    {
+      "id": "OBS-DIV-F",
+      "letter": "F",
+      "title": "Campaign Spending Observatory",
+      "tracks": [
+        "Independent expenditures",
+        "Outside spending",
+        "Super PAC activity",
+        "Disclosure trends",
+        "Election spending statistics"
+      ],
+      "outputs": [
+        "Data stories with context",
+        "Chart updates",
+        "Source transparency notes"
+      ],
+      "status": "planned",
+      "notes": "FEC/OpenSecrets datasets not integrated"
+    }
+  ],
+  "division_count": 6,
+  "workflow_stages": [
+    {
+      "stage": 1,
+      "title": "Identified",
+      "status": "defined"
+    },
+    {
+      "stage": 2,
+      "title": "Collected",
+      "status": "partial"
+    },
+    {
+      "stage": 3,
+      "title": "Verified",
+      "status": "partial"
+    },
+    {
+      "stage": 4,
+      "title": "Reviewed",
+      "status": "partial"
+    },
+    {
+      "stage": 5,
+      "title": "Categorized",
+      "status": "defined"
+    },
+    {
+      "stage": 6,
+      "title": "Educational summary drafted",
+      "status": "planned"
+    },
+    {
+      "stage": 7,
+      "title": "Source documentation completed",
+      "status": "partial"
+    },
+    {
+      "stage": 8,
+      "title": "Mission Control updated",
+      "status": "partial"
+    },
+    {
+      "stage": 9,
+      "title": "Published when ready",
+      "status": "partial"
+    }
+  ],
+  "priority_levels": [
+    {
+      "id": "OBS-P1",
+      "level": 1,
+      "title": "Educational accuracy",
+      "examples": [
+        "New Supreme Court rulings",
+        "Significant federal legislation",
+        "Arkansas statutory changes"
+      ],
+      "status": "defined"
+    },
+    {
+      "id": "OBS-P2",
+      "level": 2,
+      "title": "Major public developments",
+      "examples": [
+        "Significant ballot initiatives",
+        "Large empirical studies",
+        "Major regulatory actions"
+      ],
+      "status": "defined"
+    },
+    {
+      "id": "OBS-P3",
+      "level": 3,
+      "title": "Long-term educational improvements",
+      "examples": [
+        "New books",
+        "Historical discoveries",
+        "Additional datasets"
+      ],
+      "status": "defined"
+    }
+  ],
+  "legislative_page_sections": [
+    "Overview",
+    "Current status",
+    "Key provisions",
+    "Historical context",
+    "Related constitutional issues",
+    "Related educational resources",
+    "Official source documents"
+  ],
+  "research_gaps": [
+    {
+      "topic": "Buckley v. Valeo primary opinion",
+      "source": "evidence-registry",
+      "status": "tracked"
+    },
+    {
+      "topic": "McConnell v. FEC materials",
+      "source": "evidence-registry",
+      "status": "tracked"
+    },
+    {
+      "topic": "FEC spending datasets (2010-present)",
+      "source": "evidence-registry",
+      "status": "tracked"
+    },
+    {
+      "topic": "Peer-reviewed campaign finance scholarship",
+      "source": "evidence-registry",
+      "status": "tracked"
+    },
+    {
+      "topic": "Oral argument transcripts (Citizens United)",
+      "source": "evidence-registry",
+      "status": "tracked"
+    },
+    {
+      "topic": "State reform legislative text beyond MT/HI",
+      "source": "evidence-registry",
+      "status": "tracked"
+    },
+    {
+      "topic": "Charts requiring refreshed data",
+      "source": "content-factory",
+      "status": "planned"
+    },
+    {
+      "topic": "Counties lacking Arkansas-specific resources",
+      "source": "county-coalition-index",
+      "status": "planned"
+    },
+    {
+      "topic": "FAQs without sufficient coverage",
+      "source": "ai-knowledge-engine",
+      "status": "planned"
+    },
+    {
+      "topic": "Articles needing citation review",
+      "source": "content-inventory",
+      "status": "planned"
+    }
+  ],
+  "dashboard_panels": [
+    {
+      "id": "OBS-DB-01",
+      "title": "Supreme Court developments",
+      "current": 1,
+      "status": "partial"
+    },
+    {
+      "id": "OBS-DB-02",
+      "title": "Federal legislation monitored",
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "id": "OBS-DB-03",
+      "title": "Arkansas legislation monitored",
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "id": "OBS-DB-04",
+      "title": "Ballot initiatives under review",
+      "current": 2,
+      "status": "partial"
+    },
+    {
+      "id": "OBS-DB-05",
+      "title": "New research publications",
+      "current": 14,
+      "status": "partial"
+    },
+    {
+      "id": "OBS-DB-06",
+      "title": "Data updates pending",
+      "current": 4,
+      "status": "partial"
+    },
+    {
+      "id": "OBS-DB-07",
+      "title": "Articles awaiting revision",
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "id": "OBS-DB-08",
+      "title": "Scheduled review dates",
+      "current": 0,
+      "status": "planned"
+    }
+  ],
+  "community_contributions": [
+    "Additional sources",
+    "Historical documents",
+    "Academic research",
+    "Arkansas legislative developments",
+    "Public records"
+  ],
+  "future_alerts": [
+    {
+      "alert": "New campaign finance case accepted by Supreme Court",
+      "status": "defined",
+      "automated": false
+    },
+    {
+      "alert": "Arkansas bill related to campaign finance advanced",
+      "status": "defined",
+      "automated": false
+    },
+    {
+      "alert": "Major academic study published",
+      "status": "defined",
+      "automated": false
+    },
+    {
+      "alert": "Political spending data updated",
+      "status": "defined",
+      "automated": false
+    }
+  ],
+  "mc_integration": [
+    {
+      "use": "Content requiring revision",
+      "status": "planned"
+    },
+    {
+      "use": "Research priorities",
+      "status": "partial",
+      "source": "research_gaps"
+    },
+    {
+      "use": "New educational opportunities",
+      "status": "planned"
+    },
+    {
+      "use": "Emerging Arkansas topics",
+      "status": "planned"
+    },
+    {
+      "use": "Primary source documentation gaps",
+      "status": "partial",
+      "source": "evidence-registry"
+    }
+  ],
+  "related_registries": [
+    {
+      "title": "Evidence Registry",
+      "route": "/data/evidence-registry.json",
+      "build": 10,
+      "records": 14
+    },
+    {
+      "title": "Research Framework",
+      "route": "/data/research-framework.json",
+      "build": 10
+    },
+    {
+      "title": "Facts Framework",
+      "route": "/data/facts-registry.json",
+      "build": 18
+    },
+    {
+      "title": "Content Production Factory",
+      "route": "/data/content-production-factory.json",
+      "build": 27
+    },
+    {
+      "title": "AI Knowledge Engine",
+      "route": "/data/ai-knowledge-engine.json",
+      "build": 26
+    }
+  ],
+  "research_readiness_categories": 13,
+  "summary": {
+    "divisions": 6,
+    "workflow_stages": 9,
+    "priority_levels": 3,
+    "research_gaps_tracked": 10,
+    "dashboard_panels": 8,
+    "future_alerts_defined": 4,
+    "future_alerts_automated": 0,
+    "evidence_records": 14,
+    "evidence_needing_updates": 4,
+    "citation_coverage_pct": 12,
+    "divisions_partial": 2,
+    "divisions_planned": 4,
+    "automated_monitoring_live": false,
+    "legislative_tracking_live": false,
+    "observatory_readiness_pct": 18
+  },
+  "catalog_gaps": [
+    "No automated monitoring feeds for SCOTUS, Congress, or Arkansas legislature",
+    "Legislative tracking pages not built",
+    "Campaign spending data not integrated",
+    "Academic research monitor has 0 cataloged academic sources",
+    "Future alerts defined but not automated \u2014 human review required",
+    "Scheduled review dates not tracked in MC",
+    "Community contribution review queue not operational",
+    "Only 14 evidence records vs 500 v1 target"
+  ],
+  "recommended_next_build": {
+    "number": 30,
+    "title": "Component Specifications with Props/States",
+    "note": "Map legislative tracking page structure to components; wire observatory dashboard to evidence registry."
+  }
+}

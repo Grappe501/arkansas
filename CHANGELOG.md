@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.33.0] - 2026-07-09 — Build #29 Research Observatory
+
+### Citizens United Facts Research Observatory
+- **Living Research & Legislative Intelligence System v1.0** — 6 divisions, 9-stage workflow
+- SCOTUS, federal, Arkansas, ballot, academic, spending monitors
+- 3 priority levels, legislative tracking page structure, gap tracker
+- Future alerts trigger human review — not auto-publication
+- 18% honest readiness — no automated monitoring feeds
+- MC dashboard: `/mission-control/research-observatory.html`
+
 ## [1.32.0] - 2026-07-09 — Build #28 Education Academy
 
 ### Community Education Academy
