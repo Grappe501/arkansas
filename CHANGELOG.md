@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.51.0] - 2026-07-09 — Build #47 Master Visitor Journey & Behavioral Architecture
+
+### From Curious Visitor to Community Educator
+- **Master Visitor Journey & Behavioral Architecture v1.0** — 8 transformation stages (Curiosity → Legacy)
+- Journey map, 8 decision points, behavioral principles, 7 motivation milestones
+- Extends Build #8 Citizen Journey — 7-stage ladder mapped to 8-stage model
+- 1/8 stages tracked (localStorage only), 0 Education Leaders, 0 journey analytics
+- MC dashboard: `/mission-control/visitor-journey.html`
+
 ## [1.50.0] - 2026-07-09 — Build #46 Master Content Production Matrix
 
 ### Complete Content Inventory & Build Sequencing System

@@ -1,6 +1,6 @@
 {
-  "version": "1.50.0",
-  "build": 46,
+  "version": "1.51.0",
+  "build": 47,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 46,
+    "overall_completion": 47,
     "current_build": {
-      "number": 46,
-      "title": "Citizens United Facts Master Content Production Matrix"
-    },
-    "active_phase": "Content Production Matrix \u2014 Master Library & Build Sequencing",
-    "last_completed": "Master Systems Integration Blueprint",
-    "next_build": {
       "number": 47,
+      "title": "Citizens United Facts Master Visitor Journey & Behavioral Architecture"
+    },
+    "active_phase": "Behavioral Architecture \u2014 Visitor Transformation Model",
+    "last_completed": "Master Content Production Matrix",
+    "next_build": {
+      "number": 48,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
@@ -61,6 +61,7 @@
     "current_institutional_version": "V1",
     "systems_integration_readiness": 28,
     "production_matrix_readiness": 39,
+    "visitor_journey_readiness": 40,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -68,8 +69,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 46,
-      "note": "Production Matrix live \u2014 510 assets queued, 0.8% complete."
+      "value": 47,
+      "note": "Visitor Journey live \u2014 8 stages, 1 tracked, 0 leaders."
     },
     {
       "id": "constitution",
@@ -415,6 +416,13 @@
       "value": 39,
       "max": 100,
       "note": "15/2045 published."
+    },
+    {
+      "id": "visitor_journey",
+      "label": "Visitor Journey & Behavioral Architecture",
+      "value": 40,
+      "max": 100,
+      "note": "1/8 stages tracked \u2014 localStorage only."
     }
   ],
   "public_readiness": {
@@ -983,6 +991,12 @@
       "id": "production_matrix",
       "label": "Content Production Matrix",
       "href": "/mission-control/content-production-matrix.html",
+      "status": "complete"
+    },
+    {
+      "id": "visitor_journey",
+      "label": "Visitor Journey & Behavioral Architecture",
+      "href": "/mission-control/visitor-journey.html",
       "status": "complete"
     }
   ],
@@ -2009,6 +2023,57 @@
     }
   ],
   "builds": [
+    {
+      "number": 47,
+      "title": "Citizens United Facts Master Visitor Journey & Behavioral Architecture",
+      "version": "1.51.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "8-stage transformation model \u2014 curious visitor to community educator",
+      "summary": "8 stages, 1 tracked, 7 milestones; 40% readiness.",
+      "files_created": [
+        "data/visitor-journey.json",
+        "docs/MASTER_VISITOR_JOURNEY.md",
+        "builds/047-master-visitor-journey-behavioral-architecture.md",
+        "mission-control/visitor-journey.html",
+        "scripts/gen-visitor-journey.py",
+        "scripts/update-mc-build47.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/visitor-journey.html"
+      ],
+      "decisions_made": [
+        "8 transformation stages \u2014 Curiosity through Legacy",
+        "Extends Build #8 7-stage ladder \u2014 mapping documented",
+        "8-role journey map \u2014 Visitors through Mentors",
+        "8 decision points \u2014 gentle invitations, no pressure",
+        "7 motivation milestones \u2014 learning/service recognition",
+        "1/8 stages tracked \u2014 localStorage session memory only",
+        "40% honest readiness \u2014 analytics and signups at zero"
+      ],
+      "open_questions": [
+        "Server-side journey sync timing?",
+        "Netlify analytics for return rate?",
+        "Milestone celebration UI?"
+      ],
+      "risks": [
+        "0 signups breaks connection\u2192leadership funnel",
+        "Two journey models may confuse editors",
+        "No lesson completion tracking"
+      ],
+      "next_recommended": 48,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/visitor-journey.html",
+      "review_status": "complete"
+    },
     {
       "number": 46,
       "title": "Citizens United Facts Master Content Production Matrix",
@@ -4240,19 +4305,19 @@
     }
   ],
   "briefing": {
-    "what_built": "Production Matrix v1.0 \u2014 14 domains, production queue, executive dashboard, capacity planning",
-    "building_now": "Registry linking \u2014 351 inventory items mapped to matrix domains",
+    "what_built": "Visitor Journey v1.0 \u2014 8 stages, journey map, decision points, motivation milestones",
+    "building_now": "Build #8 mapping \u2014 localStorage tracking on curiosity stage only",
     "blocked": [
-      "Production automation",
-      "Capacity velocity model",
-      "CMS stage enforcement"
+      "Journey analytics",
+      "Milestone tracking",
+      "Education Leader signups"
     ],
     "ready_public": [
-      "Production Matrix MC dashboard",
-      "14-domain taxonomy",
-      "Production queue sample"
+      "Visitor Journey MC dashboard",
+      "8-stage transformation model",
+      "Behavioral principles"
     ],
-    "next": "Build #47 \u2014 Component specifications with props/states"
+    "next": "Build #48 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -4765,5 +4830,15 @@
     "assets_published": 15,
     "overall_completion_pct": 0.8,
     "production_automation_live": false
+  },
+  "visitor_journey": "/data/visitor-journey.json",
+  "visitor_journey_dashboard": "/mission-control/visitor-journey.html",
+  "visitor_journey_inventory": {
+    "readiness_score": 40,
+    "stages_total": 8,
+    "stages_with_live_tracking": 1,
+    "education_leader_signups": 0,
+    "milestones_defined": 7,
+    "journey_analytics_live": false
   }
 }

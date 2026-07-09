@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Visitor Journey <a href="/mission-control/visitor-journey.html" class="mc-inline-link">8 Stages →</a></h2>
+    <p class="mc-bar-note">Build #47 — Master visitor journey & behavioral architecture, curiosity to legacy. 1/8 stages tracked. 0 Education Leaders. 40% journey readiness.</p>
     <h2 class="mc-section-title">Content Production Matrix <a href="/mission-control/content-production-matrix.html" class="mc-inline-link">14 Domains →</a></h2>
     <p class="mc-bar-note">Build #46 — Master content production matrix, ~2045 asset target, production queue, executive dashboard. 15 edu published. 22% matrix readiness.</p>
     <h2 class="mc-section-title">Systems Integration <a href="/mission-control/systems-integration.html" class="mc-inline-link">12 Systems →</a></h2>
@@ -4513,6 +4515,109 @@ async function initContentProductionMatrix() {
   initDevConsole(mc);
 }
 
+async function initVisitorJourney() {
+  const root = document.getElementById('mc-visitor-journey-root');
+  if (!root) return;
+
+  const [vjRes, mcRes] = await Promise.all([
+    fetch('/data/visitor-journey.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const vj = await vjRes.json();
+  const mc = await mcRes.json();
+  const s = vj.summary;
+
+  const stageRows = vj.transformation_stages.map(st => `
+    <tr><td>${st.number}</td><td>${st.title}</td><td>${st.success_metric}</td>
+      <td>${st.tracking_live ? 'Yes' : 'No'}</td><td>${st.status}</td></tr>`).join('');
+
+  const stageCards = vj.transformation_stages.map(st => `
+    <div class="mc-card"><h3>Stage ${st.number}: ${st.title}</h3>
+      <p class="mc-bar-note">${st.description}</p>
+      <p class="mc-bar-note"><strong>Goal:</strong> ${st.platform_goal}</p>
+      <p class="mc-bar-note"><strong>Metric:</strong> ${st.success_metric} · ${st.tracking_live ? 'tracked' : 'not tracked'}</p>
+      ${st.note ? `<p class="mc-bar-note">${st.note}</p>` : ''}
+    </div>`).join('');
+
+  const mapFlow = vj.journey_map.map((r, i) =>
+    `${r.title}${i < vj.journey_map.length - 1 ? ' →' : ''}`).join(' ');
+
+  const stageFlow = vj.transformation_stages.map((st, i) =>
+    `${st.title}${i < vj.transformation_stages.length - 1 ? ' →' : ''}`).join(' ');
+
+  const decisionRows = vj.decision_points.map(d => `
+    <tr><td>${d.order}</td><td>${d.invitation}</td><td><a href="${d.route}">${d.route}</a></td>
+      <td>${d.stage}</td></tr>`).join('');
+
+  const analyticsRows = vj.journey_analytics.metrics.map(a => `
+    <tr><td><code>${a.id}</code></td><td>${a.title}</td><td>${a.current}</td>
+      <td>${a.target}</td><td>${a.status}</td></tr>`).join('');
+
+  const metricRows = vj.mc_integration.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('');
+
+  const mappingRows = vj.build_8_mapping.mapping.map(m => `
+    <tr><td>${m.build_8 || '—'}</td><td>${m.build_47 || m.build_47_only || '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Visitor Journey</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #47 · ${vj.title}</p>
+      <h1>Master Visitor Journey & Behavioral Architecture</h1>
+      <p class="mc-header__question">${vj.governing_principle}</p>
+      <p class="mc-bar-note">${vj.purpose}</p>
+      <p class="mc-bar-note">Extends <a href="/mission-control/journey.html">Build #8 Citizen Journey</a> · <a href="/data/ux-journey.json">ux-journey.json</a></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Journey readiness</div><div class="mc-stat__value">${s.visitor_journey_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Stages</div><div class="mc-stat__value">${s.stages_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Tracked</div><div class="mc-stat__value">${s.stages_with_live_tracking}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Leaders</div><div class="mc-stat__value">${s.education_leader_signups}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Milestones</div><div class="mc-stat__value">${s.milestones_achieved}/${s.milestones_defined}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Analytics</div><div class="mc-stat__value">${s.journey_analytics_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Eight Transformation Stages</h2>
+    <p class="mc-bar-note">${stageFlow}</p>
+    <table class="mc-table"><thead><tr><th>#</th><th>Stage</th><th>Success Metric</th><th>Tracked</th><th>Status</th></tr></thead>
+      <tbody>${stageRows}</tbody></table>
+    <div class="mc-grid-2">${stageCards}</div>
+    <h2 class="mc-section-title">Journey Map</h2>
+    <p class="mc-bar-note">${mapFlow}</p>
+    <h2 class="mc-section-title">Decision Points</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>Invitation</th><th>Route</th><th>Stage</th></tr></thead>
+      <tbody>${decisionRows}</tbody></table>
+    <h2 class="mc-section-title">Behavioral Design</h2>
+    <p class="mc-bar-note"><strong>Encourage:</strong> ${vj.behavioral_design.encourage.join(', ')}</p>
+    <p class="mc-bar-note"><strong>Avoid:</strong> ${vj.behavioral_design.avoid.join(', ')} — ${vj.behavioral_design.principle}</p>
+    <h2 class="mc-section-title">Motivation Milestones</h2>
+    <ul class="mc-deliverables">${vj.motivation_system.milestones.map(m => `<li><code>${m.id}</code> ${m.title} (${m.stage}) — ${m.status}</li>`).join('')}</ul>
+    <p class="mc-bar-note">${vj.motivation_system.recognition_style}</p>
+    <h2 class="mc-section-title">Journey Analytics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Target</th><th>Status</th></tr></thead>
+      <tbody>${analyticsRows}</tbody></table>
+    <h2 class="mc-section-title">Build #8 → Build #47 Mapping</h2>
+    <table class="mc-table"><thead><tr><th>Build #8 Ladder</th><th>Build #47 Stage</th></tr></thead>
+      <tbody>${mappingRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Community Model</h2>
+    <ul class="mc-deliverables">${Object.entries(vj.long_term_community_model).map(([k, v]) => `<li><strong>${k.replace(/_/g, ' ')}:</strong> ${v}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Journey Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${vj.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${vj.recommended_next_build.number} — ${vj.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${vj.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_VISITOR_JOURNEY.md">MASTER_VISITOR_JOURNEY.md</a> ·
+      <a href="/data/visitor-journey.json">JSON</a> ·
+      <a href="/mission-control/journey.html">Build #8 Journey</a> ·
+      <a href="/mission-control/systems-integration.html">Systems Integration</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -4558,4 +4663,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initInstitutionalRoadmap();
   initSystemsIntegration();
   initContentProductionMatrix();
+  initVisitorJourney();
 });

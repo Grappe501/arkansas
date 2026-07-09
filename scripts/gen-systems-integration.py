@@ -274,9 +274,9 @@ out = {
         'Component specifications still deferred — UI integration unmapped',
     ],
     'recommended_next_build': {
-        'number': 47,
+        'number': 48,
         'title': 'Component Specifications with Props/States',
-        'note': 'Map production queue tables, domain progress bars, stage badges, and capacity widgets to COMP-* from Build #17.',
+        'note': 'Map stage progress bars, milestone badges, decision-point CTAs, and journey funnel viz to COMP-* from Build #17.',
     },
 }
 
