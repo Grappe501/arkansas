@@ -325,7 +325,8 @@
     "mobile_field_operations",
     "institutional_digital_library",
     "institutional_integration_platform",
-    "institutional_security_trust"
+    "institutional_security_trust",
+    "institutional_qa_launch_readiness"
   ],
   "mc_dashboard": "/mission-control/research-library.html",
   "packages_completed": 23,

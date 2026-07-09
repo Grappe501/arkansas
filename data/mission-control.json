@@ -1,5 +1,5 @@
 {
-  "version": "2.05.25",
+  "version": "2.05.26",
   "build": 101,
   "updated": "2026-07-09",
   "identity": {
@@ -121,7 +121,7 @@
     "connected_citizen_goal_pct": 15,
     "implementation_steps_total": 50,
     "implementation_steps_implemented": 0,
-    "implementation_steps_documented": 25,
+    "implementation_steps_documented": 26,
     "overall_completion": 101,
     "current_build": {
       "number": 101,
@@ -7814,22 +7814,21 @@
     }
   ],
   "briefing": {
-    "what_built": "IMP-01\u201324 documented \u2014 integration platform & open API (48%)",
-    "building_now": "IMP-25 Security, Privacy & Institutional Trust next; Sprint Zero pending",
+    "what_built": "IMP-01\u201326 documented \u2014 QA, certification & launch readiness (52%)",
+    "building_now": "IMP-27 Deployment, DevOps & Production Ops next; Sprint Zero pending",
     "blocked": [
       "Sprint Zero not complete",
       "0/50 code-implemented",
       "2 days to software target"
     ],
     "ready_public": [
-      "Integration Platform",
-      "integration-platform-manifest.json",
-      "AI gateway & external services",
-      "Digital Library",
-      "Mobile PWA",
-      "Independent platform + ecosystem interoperability"
+      "QA & Launch Readiness",
+      "qa-launch-readiness-manifest.json",
+      "75-county partnership certification",
+      "Security & Trust",
+      "Launch checklist & county readiness criteria"
     ],
-    "next": "IMP-25 \u2014 Master Security, Privacy, Compliance & Institutional Trust Framework"
+    "next": "IMP-27 \u2014 Master Deployment, Infrastructure, DevOps & Production Operations"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -8848,7 +8847,7 @@
     "readiness_score": 100,
     "steps_total": 50,
     "steps_implemented": 0,
-    "steps_documented": 25,
+    "steps_documented": 26,
     "bands_total": 5,
     "sprint_zero_started": false,
     "cursor_master_prompt_ready": true

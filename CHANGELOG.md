@@ -13,6 +13,20 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.26] - 2026-07-09 — IMP-26 QA & Launch Readiness
+
+### Implementation Package 26 of 50
+- **Master Testing, Quality Assurance, Certification & Launch Readiness Framework**
+- Testing pyramid: technical, UX, operational, institutional layers
+- 12 launch certification modules · 10 county readiness criteria
+- **75 counties with organizational partnerships** by Oct 1 — highest operational priority
+- Education Leader & volunteer certification · AI validation · performance & security validation
+- Operational simulations · statewide launch checklist (11 items)
+- Machine-readable **qa-launch-readiness-manifest.json**
+- Institutional OS evolution: **26/50 packages (52%)**
+- IMP-27 next (doctrinal): Deployment, Infrastructure, DevOps & Production Operations
+- Honest: 26/50 documented · 0/50 implemented · 100% package readiness
+
 ## [2.05.25] - 2026-07-09 — IMP-25 Security & Trust — 50% Milestone
 
 ### Implementation Package 25 of 50 — Halfway Point

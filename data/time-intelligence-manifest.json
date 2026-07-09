@@ -286,7 +286,8 @@
     "mobile_field_operations",
     "institutional_digital_library",
     "institutional_integration_platform",
-    "institutional_security_trust"
+    "institutional_security_trust",
+    "institutional_qa_launch_readiness"
   ],
   "packages_completed": 17,
   "packages_total": 50,

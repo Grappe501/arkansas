@@ -41,6 +41,7 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 0w. **Digital Library (IMP-23):** [/docs/IMPLEMENTATION_PACKAGE_23_DIGITAL_LIBRARY.md](/docs/IMPLEMENTATION_PACKAGE_23_DIGITAL_LIBRARY.md) · [/data/digital-library-manifest.json](/data/digital-library-manifest.json)
 0x. **Integration Platform (IMP-24):** [/docs/IMPLEMENTATION_PACKAGE_24_INTEGRATION_PLATFORM.md](/docs/IMPLEMENTATION_PACKAGE_24_INTEGRATION_PLATFORM.md) · [/data/integration-platform-manifest.json](/data/integration-platform-manifest.json)
 0y. **Security & Trust (IMP-25):** [/docs/IMPLEMENTATION_PACKAGE_25_SECURITY_TRUST.md](/docs/IMPLEMENTATION_PACKAGE_25_SECURITY_TRUST.md) · [/data/security-trust-manifest.json](/data/security-trust-manifest.json)
+0z. **QA & Launch Readiness (IMP-26):** [/docs/IMPLEMENTATION_PACKAGE_26_QA_LAUNCH_READINESS.md](/docs/IMPLEMENTATION_PACKAGE_26_QA_LAUNCH_READINESS.md) · [/data/qa-launch-readiness-manifest.json](/data/qa-launch-readiness-manifest.json)
 
 ## Master timeline (updated IMP-11)
 
@@ -146,7 +147,7 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 
 ## First step to implement
 
-**IMP-01** through **IMP-25** are **documented** (50% blueprint milestone):
+**IMP-01** through **IMP-26** are **documented**:
 - [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
 - [Technical Architecture](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
 - [Route Map](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [route-manifest.json](/data/route-manifest.json)
@@ -172,7 +173,8 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 - [Digital Library](/docs/IMPLEMENTATION_PACKAGE_23_DIGITAL_LIBRARY.md) · [digital-library-manifest.json](/data/digital-library-manifest.json)
 - [Integration Platform](/docs/IMPLEMENTATION_PACKAGE_24_INTEGRATION_PLATFORM.md) · [integration-platform-manifest.json](/data/integration-platform-manifest.json)
 - [Security & Trust](/docs/IMPLEMENTATION_PACKAGE_25_SECURITY_TRUST.md) · [security-trust-manifest.json](/data/security-trust-manifest.json)
+- [QA & Launch Readiness](/docs/IMPLEMENTATION_PACKAGE_26_QA_LAUNCH_READINESS.md) · [qa-launch-readiness-manifest.json](/data/qa-launch-readiness-manifest.json)
 
-**IMP-26** is next (doctrinal): Master Testing, Quality Assurance, Certification & Launch Readiness Framework.
+**IMP-27** is next (doctrinal): Master Deployment, Infrastructure, DevOps & Production Operations.
 
 Engineering **Sprint Zero (IMP-10 step registry)** is the Band A gate before Band B code slices.

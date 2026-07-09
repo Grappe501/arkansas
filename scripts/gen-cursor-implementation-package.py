@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 25  # IMP-01 through IMP-25 (doctrinal)
+steps_documented = 26  # IMP-01 through IMP-26 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3335,6 +3335,7 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'institutional_analytics', 'institutional_automation', 'public_digital_experience',
     'mobile_field_operations', 'institutional_digital_library',
     'institutional_integration_platform', 'institutional_security_trust',
+    'institutional_qa_launch_readiness',
 ]
 
 RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
@@ -4618,6 +4619,203 @@ SECURITY_TRUST_MANIFEST = {
     'implemented': False,
 }
 
+QUALITY_PHILOSOPHY_VALUES = [
+    'designed_correctly', 'built_correctly', 'tested_thoroughly',
+    'reviewed_independently', 'measured_objectively', 'improved_continuously',
+]
+
+TECHNICAL_TESTING_LAYERS = [
+    'unit_testing', 'integration_testing', 'api_testing', 'database_validation',
+    'security_testing', 'performance_testing', 'mobile_testing', 'offline_testing',
+]
+
+UX_TESTING_LAYERS = [
+    'navigation', 'accessibility', 'search', 'learning_pathways',
+    'volunteer_onboarding', 'community_workflows', 'organization_workspaces',
+    'mobile_usability',
+]
+
+OPERATIONAL_TESTING_LAYERS = [
+    'mission_control', 'county_workflows', 'city_workflows', 'neighborhood_workflows',
+    'volunteer_operations', 'academy_operations', 'research_publication',
+    'coalition_operations',
+]
+
+INSTITUTIONAL_TESTING_LAYERS = [
+    'leadership_readiness', 'education_leader_readiness', 'county_readiness',
+    'organization_readiness', 'community_engagement', 'communication_systems',
+    'executive_reporting', 'statewide_coordination',
+]
+
+LAUNCH_CERTIFICATION_MODULES = [
+    'mission_control', 'research_institute', 'knowledge_platform',
+    'community_education_academy', 'volunteer_network', 'coalition_network',
+    'county_operating_system', 'city_operating_system', 'neighborhood_operating_system',
+    'communication_platform', 'analytics_engine', 'ai_localbrains',
+]
+
+COUNTY_READINESS_CRITERIA = [
+    'county_dashboard_operational', 'county_profile_complete',
+    'education_leader_identified_or_training', 'volunteer_pipeline_active',
+    'community_calendar_established', 'community_conversations_scheduled',
+    'county_academy_operational', 'mission_control_reporting_active',
+    'research_resources_available', 'active_organizational_partner_participating',
+]
+
+ORGANIZATIONAL_PARTNER_TYPES = [
+    'libraries', 'historical_societies', 'community_colleges', 'universities',
+    'civic_organizations', 'neighborhood_associations', 'educational_nonprofits',
+    'youth_organizations', 'community_service_organizations',
+    'faith_based_civic_education', 'local_nonprofit_organizations',
+]
+
+PARTNERSHIP_MONITORING_METRICS = [
+    'partnership_status', 'partnership_activity', 'shared_events',
+    'shared_educational_resources', 'joint_community_conversations',
+    'partner_onboarding_progress',
+]
+
+EDUCATION_LEADER_CERTIFICATION_CRITERIA = [
+    'academy_completion', 'presentation_capability', 'research_literacy',
+    'facilitation_skills', 'community_engagement', 'ethics_training',
+    'platform_proficiency',
+]
+
+VOLUNTEER_CERTIFICATION_TRACKS = [
+    'research', 'community_conversations', 'event_support', 'technology',
+    'communications', 'volunteer_mentoring', 'leadership_preparation',
+]
+
+AI_VALIDATION_CRITERIA = [
+    'accuracy', 'permission_enforcement', 'evidence_citation', 'consistency',
+    'hallucination_resistance', 'user_experience', 'institutional_alignment',
+]
+
+PERFORMANCE_CERTIFICATION_CHECKS = [
+    'fast_page_loads', 'search_responsiveness', 'mobile_responsiveness',
+    'dashboard_performance', 'large_scale_data_handling', 'system_stability',
+]
+
+SECURITY_VALIDATION_CHECKS = [
+    'authentication', 'authorization', 'encryption', 'audit_logging',
+    'backup_validation', 'recovery_testing', 'permission_testing',
+]
+
+OPERATIONAL_SIMULATIONS = [
+    'statewide_volunteer_onboarding', 'research_publication',
+    'community_conversations', 'county_growth', 'organization_onboarding',
+    'executive_reporting', 'emergency_communications',
+]
+
+MC_READINESS_DASHBOARD_METRICS = [
+    'software_readiness', 'county_readiness', 'organization_partnership_readiness',
+    'education_leader_readiness', 'volunteer_readiness', 'academy_readiness',
+    'research_readiness', 'technology_readiness', 'launch_readiness',
+]
+
+STATEWIDE_LAUNCH_CHECKLIST = [
+    'software_certified', '75_counties_operational',
+    '75_counties_with_organizational_partnerships', 'education_leaders_active',
+    'volunteer_system_operational', 'academy_operational',
+    'mission_control_operational', 'security_certified', 'accessibility_certified',
+    'knowledge_platform_populated', 'executive_approval_completed',
+]
+
+QA_LAUNCH_SYSTEM_CHAIN = [
+    'mission_control', 'knowledge_platform', 'research_institute',
+    'community_education_academy', 'volunteer_network', 'coalition_network',
+    'county_operating_system', 'city_operating_system', 'neighborhood_operating_system',
+    'communications', 'ai_localbrains', 'integration_platform', 'security_framework',
+]
+
+QA_LAUNCH_READINESS_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-26',
+    'updated': today,
+    'title': 'Master Testing, Quality Assurance, Certification & Launch Readiness Framework',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_26_QA_LAUNCH_READINESS.md',
+    'source_registries': {
+        'launch_certification': '/data/institutional-launch-certification.json',
+        'security_trust': '/data/security-trust-manifest.json',
+        'integration_platform': '/data/integration-platform-manifest.json',
+        'coalition_network': '/data/coalition-network-manifest.json',
+        'local_operating_systems': '/data/local-operating-systems-manifest.json',
+    },
+    'philosophy': 'Building an institution that consistently delivers quality — not merely building software',
+    'governing_principle': (
+        'A successful launch is measured by functioning communities — technology, volunteers, '
+        'Education Leaders, organizational partners, research, and local infrastructure together'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'quality_philosophy_values': QUALITY_PHILOSOPHY_VALUES,
+    'testing_pyramid': {
+        'technical': TECHNICAL_TESTING_LAYERS,
+        'user_experience': UX_TESTING_LAYERS,
+        'operational': OPERATIONAL_TESTING_LAYERS,
+        'institutional': INSTITUTIONAL_TESTING_LAYERS,
+    },
+    'technical_testing_count': len(TECHNICAL_TESTING_LAYERS),
+    'ux_testing_count': len(UX_TESTING_LAYERS),
+    'operational_testing_count': len(OPERATIONAL_TESTING_LAYERS),
+    'institutional_testing_count': len(INSTITUTIONAL_TESTING_LAYERS),
+    'launch_certification_modules': LAUNCH_CERTIFICATION_MODULES,
+    'launch_certification_module_count': len(LAUNCH_CERTIFICATION_MODULES),
+    'county_readiness_criteria': COUNTY_READINESS_CRITERIA,
+    'county_readiness_criteria_count': len(COUNTY_READINESS_CRITERIA),
+    'organizational_partnership_certification': {
+        'target_date': county_milestone_date,
+        'counties_total': 75,
+        'requirement': 'At least one active organizational partner per county',
+        'partner_types': ORGANIZATIONAL_PARTNER_TYPES,
+        'monitoring_metrics': PARTNERSHIP_MONITORING_METRICS,
+        'label': '75 counties with organizational partnerships by October 1',
+        'priority': 'highest_operational',
+    },
+    'education_leader_certification_criteria': EDUCATION_LEADER_CERTIFICATION_CRITERIA,
+    'education_leader_certification_count': len(EDUCATION_LEADER_CERTIFICATION_CRITERIA),
+    'volunteer_certification_tracks': VOLUNTEER_CERTIFICATION_TRACKS,
+    'volunteer_certification_track_count': len(VOLUNTEER_CERTIFICATION_TRACKS),
+    'accessibility_certification_tracks': [
+        'accessibility_issues', 'review_completion', 'compliance_progress',
+        'outstanding_improvements',
+    ],
+    'ai_validation_criteria': AI_VALIDATION_CRITERIA,
+    'ai_validation_criteria_count': len(AI_VALIDATION_CRITERIA),
+    'performance_certification_checks': PERFORMANCE_CERTIFICATION_CHECKS,
+    'performance_certification_check_count': len(PERFORMANCE_CERTIFICATION_CHECKS),
+    'security_validation_checks': SECURITY_VALIDATION_CHECKS,
+    'security_validation_check_count': len(SECURITY_VALIDATION_CHECKS),
+    'operational_simulations': OPERATIONAL_SIMULATIONS,
+    'operational_simulation_count': len(OPERATIONAL_SIMULATIONS),
+    'mc_readiness_dashboard_metrics': MC_READINESS_DASHBOARD_METRICS,
+    'mc_readiness_dashboard_metric_count': len(MC_READINESS_DASHBOARD_METRICS),
+    'statewide_launch_checklist': STATEWIDE_LAUNCH_CHECKLIST,
+    'statewide_launch_checklist_count': len(STATEWIDE_LAUNCH_CHECKLIST),
+    'organizational_goals': {
+        'counties_total': 75,
+        'counties_with_partnerships_goal': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'qa_launch_system_chain': QA_LAUNCH_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/institutional-launch-certification.html',
+    'packages_completed': 26,
+    'packages_total': 50,
+    'packages_complete_pct': 52,
+    'engineering_note': 'Doctrinal IMP-26 QA & Launch Readiness; engineering IMP-26 is Auth provider and admin login shell',
+    'status': 'documented',
+    'implemented': False,
+}
+
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -4759,7 +4957,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D26', 'indicator': 'Digital Library (IMP-23)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D27', 'indicator': 'Integration Platform (IMP-24)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D28', 'indicator': 'Security & Trust (IMP-25)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D29', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D29', 'indicator': 'QA & Launch Readiness (IMP-26)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D30', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -5407,6 +5606,33 @@ out = {
             'number': 26,
             'id': 'IMP-26',
             'title': 'Master Testing, Quality Assurance, Certification & Launch Readiness Framework',
+            'status': 'documented',
+        },
+    },
+    'qa_launch_readiness': {
+        'title': 'Master Testing, Quality Assurance, Certification & Launch Readiness Framework',
+        'package': 'Implementation Package 26 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_26_QA_LAUNCH_READINESS.md',
+        'manifest': '/data/qa-launch-readiness-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': QA_LAUNCH_READINESS_MANIFEST['philosophy'],
+        'launch_certification_module_count': QA_LAUNCH_READINESS_MANIFEST['launch_certification_module_count'],
+        'county_readiness_criteria_count': QA_LAUNCH_READINESS_MANIFEST['county_readiness_criteria_count'],
+        'statewide_launch_checklist_count': QA_LAUNCH_READINESS_MANIFEST['statewide_launch_checklist_count'],
+        'counties_with_partnerships_goal': QA_LAUNCH_READINESS_MANIFEST['organizational_goals']['counties_with_partnerships_goal'],
+        'operational_simulation_count': QA_LAUNCH_READINESS_MANIFEST['operational_simulation_count'],
+        'packages_completed': QA_LAUNCH_READINESS_MANIFEST['packages_completed'],
+        'packages_complete_pct': QA_LAUNCH_READINESS_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': QA_LAUNCH_READINESS_MANIFEST['mc_dashboard'],
+        'engineering_note': QA_LAUNCH_READINESS_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 27,
+            'id': 'IMP-27',
+            'title': 'Master Deployment, Infrastructure, DevOps & Production Operations',
             'status': 'specified',
         },
     },
@@ -5599,6 +5825,10 @@ with open(root / 'data/integration-platform-manifest.json', 'w', newline='\n') a
 
 with open(root / 'data/security-trust-manifest.json', 'w', newline='\n') as f:
     json.dump(SECURITY_TRUST_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/qa-launch-readiness-manifest.json', 'w', newline='\n') as f:
+    json.dump(QA_LAUNCH_READINESS_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

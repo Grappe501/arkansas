@@ -256,7 +256,8 @@
     "mobile_field_operations",
     "institutional_digital_library",
     "institutional_integration_platform",
-    "institutional_security_trust"
+    "institutional_security_trust",
+    "institutional_qa_launch_readiness"
   ],
   "mc_dashboard": "/mission-control/outreach.html",
   "packages_completed": 22,

@@ -743,6 +743,33 @@
       "number": 26,
       "id": "IMP-26",
       "title": "Master Testing, Quality Assurance, Certification & Launch Readiness Framework",
+      "status": "documented"
+    }
+  },
+  "qa_launch_readiness": {
+    "title": "Master Testing, Quality Assurance, Certification & Launch Readiness Framework",
+    "package": "Implementation Package 26 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_26_QA_LAUNCH_READINESS.md",
+    "manifest": "/data/qa-launch-readiness-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Building an institution that consistently delivers quality \u2014 not merely building software",
+    "launch_certification_module_count": 12,
+    "county_readiness_criteria_count": 10,
+    "statewide_launch_checklist_count": 11,
+    "counties_with_partnerships_goal": 75,
+    "operational_simulation_count": 7,
+    "packages_completed": 26,
+    "packages_complete_pct": 52,
+    "county_milestone_date": "2026-10-01",
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000,
+    "mc_dashboard": "/mission-control/institutional-launch-certification.html",
+    "engineering_note": "Doctrinal IMP-26 QA & Launch Readiness; engineering IMP-26 is Auth provider and admin login shell",
+    "next_package": {
+      "number": 27,
+      "id": "IMP-27",
+      "title": "Master Deployment, Infrastructure, DevOps & Production Operations",
       "status": "specified"
     }
   },
@@ -2145,7 +2172,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 25,
+        "current": 26,
         "status": "partial"
       },
       {
@@ -2306,6 +2333,12 @@
       },
       {
         "id": "CIP-D29",
+        "indicator": "QA & Launch Readiness (IMP-26)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D30",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -2360,7 +2393,7 @@
     "days_remaining": 176,
     "implementation_package_readiness_pct": 100,
     "steps_total": 50,
-    "steps_documented": 25,
+    "steps_documented": 26,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,
