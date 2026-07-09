@@ -292,7 +292,8 @@
     "public_digital_experience",
     "mobile_field_operations",
     "institutional_digital_library",
-    "institutional_integration_platform"
+    "institutional_integration_platform",
+    "institutional_security_trust"
   ],
   "mc_dashboard": "/mission-control/systems-integration.html",
   "packages_completed": 24,

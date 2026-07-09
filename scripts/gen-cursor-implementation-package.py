@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 24  # IMP-01 through IMP-24 (doctrinal)
+steps_documented = 25  # IMP-01 through IMP-25 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3334,7 +3334,7 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'institutional_time_intelligence', 'institutional_relationship_intelligence',
     'institutional_analytics', 'institutional_automation', 'public_digital_experience',
     'mobile_field_operations', 'institutional_digital_library',
-    'institutional_integration_platform',
+    'institutional_integration_platform', 'institutional_security_trust',
 ]
 
 RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
@@ -4461,6 +4461,163 @@ INTEGRATION_PLATFORM_MANIFEST = {
     'implemented': False,
 }
 
+TRUST_PHILOSOPHY_VALUES = [
+    'transparent', 'secure', 'accountable', 'privacy_conscious',
+    'evidence_driven', 'auditable', 'respectful_of_users',
+]
+
+SECURITY_PRINCIPLES = [
+    'least_privilege_access', 'role_based_authorization', 'mfa_elevated_roles',
+    'encrypted_communications', 'encrypted_sensitive_data', 'continuous_monitoring',
+    'comprehensive_audit_logging', 'defense_in_depth',
+]
+
+IDENTITY_PROTECTION_FEATURES = [
+    'strong_passwords', 'password_reset', 'mfa_privileged_roles', 'session_expiration',
+    'device_management_future', 'login_history', 'suspicious_login_detection_future',
+]
+
+PRIVACY_CONTROLS = [
+    'communication_preferences', 'profile_visibility', 'volunteer_visibility',
+    'organization_participation_visibility', 'notification_settings', 'public_profile_info',
+]
+
+DATA_CLASSIFICATION_LEVELS = [
+    'public', 'internal', 'volunteer', 'education_leader', 'organization',
+    'executive', 'administrative', 'restricted',
+]
+
+DATA_GOVERNANCE_FIELDS = [
+    'owner', 'purpose', 'retention_policy', 'review_schedule',
+    'access_policy', 'archive_policy', 'deletion_policy',
+]
+
+AUDIT_LOG_EVENTS = [
+    'logins', 'permission_changes', 'research_publication', 'content_edits',
+    'role_assignments', 'organization_changes', 'workflow_approvals',
+    'system_administration',
+]
+
+BACKUP_STRATEGY_COMPONENTS = [
+    'automated_backups', 'point_in_time_recovery', 'version_history',
+    'off_site_storage', 'disaster_recovery_testing',
+]
+
+DISASTER_RECOVERY_SCENARIOS = [
+    'database_restoration', 'media_restoration', 'configuration_recovery',
+    'knowledge_restoration', 'infrastructure_recovery', 'operational_continuity',
+]
+
+COMPLIANCE_FRAMEWORK_AREAS = [
+    'security_policies', 'privacy_practices', 'accessibility_standards',
+    'data_governance', 'volunteer_procedures', 'content_review_standards',
+    'institutional_ethics',
+]
+
+ACCESSIBILITY_COMPLIANCE_CHECKS = [
+    'keyboard_navigation', 'screen_readers', 'contrast', 'captions',
+    'alternative_text', 'responsive_design',
+]
+
+AI_GOVERNANCE_RULES = [
+    'respect_permissions', 'protect_confidential_info', 'cite_institutional_knowledge',
+    'identify_uncertainty', 'responsible_conversation_history',
+    'no_speculation_as_verified_fact',
+]
+
+MC_SECURITY_DASHBOARD_METRICS = [
+    'authentication_activity', 'permission_changes', 'audit_events', 'backup_status',
+    'integration_security', 'system_health', 'security_alerts', 'executive_trust_indicators',
+]
+
+INCIDENT_RESPONSE_PROCEDURES = [
+    'security_incidents', 'privacy_incidents', 'data_corruption',
+    'unauthorized_access', 'system_outages', 'user_communication', 'post_incident_review',
+]
+
+INSTITUTIONAL_ETHICS_STANDARDS = [
+    'accuracy', 'transparency', 'respectful_communication', 'evidence_based_education',
+    'responsible_ai_use', 'volunteer_information_protection', 'public_accountability',
+]
+
+OCTOBER_TRUST_READINESS = [
+    'security_standards', 'privacy_standards', 'volunteer_protections',
+    'identity_controls', 'document_governance', 'communication_policies',
+]
+
+SECURITY_TRUST_SYSTEM_CHAIN = [
+    'mission_control', 'knowledge_platform', 'research_institute',
+    'community_education_academy', 'volunteer_network', 'coalition_network',
+    'county_operating_system', 'city_operating_system', 'neighborhood_operating_system',
+    'communications', 'document_management', 'ai_localbrains', 'integration_platform',
+]
+
+SECURITY_TRUST_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-25',
+    'updated': today,
+    'title': 'Master Security, Privacy, Compliance & Institutional Trust Framework',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_25_SECURITY_TRUST.md',
+    'source_registries': {
+        'trust_framework': '/data/trust-framework.json',
+        'identity_auth': '/data/identity-auth-manifest.json',
+        'public_trust': '/data/public-trust-institutional-credibility.json',
+        'integration_platform': '/data/integration-platform-manifest.json',
+        'digital_library': '/data/digital-library-manifest.json',
+    },
+    'philosophy': 'Trust is the institution\'s most valuable asset — security is an institutional responsibility',
+    'governing_principle': (
+        'Trust is not claimed; it is earned through consistent actions that protect '
+        'credibility and the Arkansans who participate'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'trust_philosophy_values': TRUST_PHILOSOPHY_VALUES,
+    'security_principles': SECURITY_PRINCIPLES,
+    'security_principle_count': len(SECURITY_PRINCIPLES),
+    'identity_protection_features': IDENTITY_PROTECTION_FEATURES,
+    'privacy_controls': PRIVACY_CONTROLS,
+    'data_classification_levels': DATA_CLASSIFICATION_LEVELS,
+    'data_classification_count': len(DATA_CLASSIFICATION_LEVELS),
+    'data_governance_fields': DATA_GOVERNANCE_FIELDS,
+    'audit_log_events': AUDIT_LOG_EVENTS,
+    'backup_strategy_components': BACKUP_STRATEGY_COMPONENTS,
+    'disaster_recovery_scenarios': DISASTER_RECOVERY_SCENARIOS,
+    'compliance_framework_areas': COMPLIANCE_FRAMEWORK_AREAS,
+    'accessibility_compliance_checks': ACCESSIBILITY_COMPLIANCE_CHECKS,
+    'ai_governance_rules': AI_GOVERNANCE_RULES,
+    'mc_security_dashboard_metrics': MC_SECURITY_DASHBOARD_METRICS,
+    'incident_response_procedures': INCIDENT_RESPONSE_PROCEDURES,
+    'institutional_ethics_standards': INSTITUTIONAL_ETHICS_STANDARDS,
+    'october_trust_readiness': {
+        'target_date': county_milestone_date,
+        'requirements': OCTOBER_TRUST_READINESS,
+        'label': 'Consistent trust framework in every county',
+    },
+    'organizational_goals': {
+        'counties_total': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'security_trust_system_chain': SECURITY_TRUST_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/trust.html',
+    'halfway_milestone': True,
+    'packages_completed': 25,
+    'packages_total': 50,
+    'packages_complete_pct': 50,
+    'engineering_note': 'Doctrinal IMP-25 Security & Trust; engineering IMP-25 is Netlify Forms ingestion adapter',
+    'status': 'documented',
+    'implemented': False,
+}
+
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -4601,7 +4758,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D25', 'indicator': 'Mobile PWA & Field Ops (IMP-22)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D26', 'indicator': 'Digital Library (IMP-23)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D27', 'indicator': 'Integration Platform (IMP-24)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D28', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D28', 'indicator': 'Security & Trust (IMP-25)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D29', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -5221,6 +5379,34 @@ out = {
             'number': 25,
             'id': 'IMP-25',
             'title': 'Master Security, Privacy, Compliance & Institutional Trust Framework',
+            'status': 'documented',
+        },
+    },
+    'security_trust': {
+        'title': 'Master Security, Privacy, Compliance & Institutional Trust Framework',
+        'package': 'Implementation Package 25 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_25_SECURITY_TRUST.md',
+        'manifest': '/data/security-trust-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': SECURITY_TRUST_MANIFEST['philosophy'],
+        'security_principle_count': SECURITY_TRUST_MANIFEST['security_principle_count'],
+        'data_classification_count': SECURITY_TRUST_MANIFEST['data_classification_count'],
+        'compliance_area_count': len(COMPLIANCE_FRAMEWORK_AREAS),
+        'audit_event_count': len(AUDIT_LOG_EVENTS),
+        'ethics_standard_count': len(INSTITUTIONAL_ETHICS_STANDARDS),
+        'halfway_milestone': SECURITY_TRUST_MANIFEST['halfway_milestone'],
+        'packages_completed': SECURITY_TRUST_MANIFEST['packages_completed'],
+        'packages_complete_pct': SECURITY_TRUST_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': SECURITY_TRUST_MANIFEST['mc_dashboard'],
+        'engineering_note': SECURITY_TRUST_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 26,
+            'id': 'IMP-26',
+            'title': 'Master Testing, Quality Assurance, Certification & Launch Readiness Framework',
             'status': 'specified',
         },
     },
@@ -5409,6 +5595,10 @@ with open(root / 'data/digital-library-manifest.json', 'w', newline='\n') as f:
 
 with open(root / 'data/integration-platform-manifest.json', 'w', newline='\n') as f:
     json.dump(INTEGRATION_PLATFORM_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/security-trust-manifest.json', 'w', newline='\n') as f:
+    json.dump(SECURITY_TRUST_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

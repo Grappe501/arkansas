@@ -253,7 +253,10 @@
     "institutional_analytics",
     "institutional_automation",
     "public_digital_experience",
-    "mobile_field_operations"
+    "mobile_field_operations",
+    "institutional_digital_library",
+    "institutional_integration_platform",
+    "institutional_security_trust"
   ],
   "mc_dashboard": "/mission-control/outreach.html",
   "packages_completed": 22,

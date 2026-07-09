@@ -332,7 +332,13 @@
     "communication_platform",
     "institutional_time_intelligence",
     "institutional_relationship_intelligence",
-    "institutional_analytics"
+    "institutional_analytics",
+    "institutional_automation",
+    "public_digital_experience",
+    "mobile_field_operations",
+    "institutional_digital_library",
+    "institutional_integration_platform",
+    "institutional_security_trust"
   ],
   "mc_dashboard": "/mission-control/impact-measurement.html",
   "packages_completed": 19,

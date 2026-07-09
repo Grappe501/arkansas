@@ -715,6 +715,34 @@
       "number": 25,
       "id": "IMP-25",
       "title": "Master Security, Privacy, Compliance & Institutional Trust Framework",
+      "status": "documented"
+    }
+  },
+  "security_trust": {
+    "title": "Master Security, Privacy, Compliance & Institutional Trust Framework",
+    "package": "Implementation Package 25 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_25_SECURITY_TRUST.md",
+    "manifest": "/data/security-trust-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Trust is the institution's most valuable asset \u2014 security is an institutional responsibility",
+    "security_principle_count": 8,
+    "data_classification_count": 8,
+    "compliance_area_count": 7,
+    "audit_event_count": 8,
+    "ethics_standard_count": 7,
+    "halfway_milestone": true,
+    "packages_completed": 25,
+    "packages_complete_pct": 50,
+    "county_milestone_date": "2026-10-01",
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000,
+    "mc_dashboard": "/mission-control/trust.html",
+    "engineering_note": "Doctrinal IMP-25 Security & Trust; engineering IMP-25 is Netlify Forms ingestion adapter",
+    "next_package": {
+      "number": 26,
+      "id": "IMP-26",
+      "title": "Master Testing, Quality Assurance, Certification & Launch Readiness Framework",
       "status": "specified"
     }
   },
@@ -2117,7 +2145,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 24,
+        "current": 25,
         "status": "partial"
       },
       {
@@ -2272,6 +2300,12 @@
       },
       {
         "id": "CIP-D28",
+        "indicator": "Security & Trust (IMP-25)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D29",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -2326,7 +2360,7 @@
     "days_remaining": 176,
     "implementation_package_readiness_pct": 100,
     "steps_total": 50,
-    "steps_documented": 24,
+    "steps_documented": 25,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,
