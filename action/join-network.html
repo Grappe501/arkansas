@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the Contact Network | Citizens Facts</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/education.css">
+  <link rel="stylesheet" href="/css/action-hub.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="site-main">
+    <nav class="breadcrumb"><a href="/">Front Door</a> → Join the Network</nav>
+    <header class="action-page-intro">
+      <span class="status-badge status-badge--live">Participate</span>
+      <h1>Join the Contact Network</h1>
+      <p class="hall-purpose">Stay connected for updates on Citizens United education, reform efforts, ballot initiatives, and organizing opportunities in your area.</p>
+    </header>
+    <form class="lead-form" name="join-network" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/educate/thanks.html">
+      <input type="hidden" name="form-name" value="join-network">
+      <p hidden><label>Bot: <input name="bot-field"></label></p>
+      <div class="form-grid">
+        <div class="form-group"><label for="name">Name *</label><input type="text" id="name" name="name" required></div>
+        <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" required></div>
+        <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" name="phone"></div>
+        <div class="form-group"><label for="city">City</label><input type="text" id="city" name="city"></div>
+        <div class="form-group"><label for="state">State *</label><input type="text" id="state" name="state" required></div>
+        <div class="form-group"><label for="zip">ZIP</label><input type="text" id="zip" name="zip"></div>
+        <div class="form-group form-group--full">
+          <label>I'm interested in:</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="interest" value="updates"> Ongoing updates</label>
+            <label><input type="checkbox" name="interest" value="events"> Local events</label>
+            <label><input type="checkbox" name="interest" value="ballot"> Ballot initiatives</label>
+            <label><input type="checkbox" name="interest" value="legislation"> Model legislation</label>
+            <label><input type="checkbox" name="interest" value="organizing"> Organizing opportunities</label>
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="form-submit">Join the Network</button>
+      <p class="form-note"><strong>Privacy:</strong> Your contact info is used only for Citizens Facts education and organizing updates. We do not sell your data.</p>
+    </form>
+  </main>
+  <div id="site-footer"></div>
+  <script src="/js/layout.js"></script>
+  <script src="/js/action-hub.js"></script>
+</body>
+</html>

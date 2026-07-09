@@ -80,4 +80,8 @@ Every page answers some version of:
 
 ## Ultimate Goal
 
-Turn understanding into leadership — culminating in a signup pathway for people who want to help educate their own community about *Citizens United*, money in politics, and the ongoing effort to restore public power in American democracy.
+Turn understanding into leadership — and collective civic action.
+
+**Platform progression:** Learn → Participate → Organize → Build Solutions
+
+See `docs/CIVIC_ACTION.md` for the Action Hub, participant profiles, draft legislation, and ballot initiative workspaces.

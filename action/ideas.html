@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community Ideas | Citizens Facts</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/education.css">
+  <link rel="stylesheet" href="/css/action-hub.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="site-main">
+    <nav class="breadcrumb"><a href="/">Front Door</a> → Community Ideas</nav>
+    <header class="action-page-intro">
+      <span class="status-badge status-badge--coming">Participate</span>
+      <h1>Community Ideas</h1>
+      <p class="hall-purpose">Submit research questions, proposals, educational resources, and feedback.</p>
+    </header>
+    <form class="lead-form" name="community-ideas" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/educate/thanks.html">
+      <input type="hidden" name="form-name" value="community-ideas">
+      <p hidden><label>Bot: <input name="bot-field"></label></p>
+      <div class="form-grid">
+        <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name"></div>
+        <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" required></div>
+        <div class="form-group form-group--full">
+          <label for="type">Submission type *</label>
+          <select id="type" name="type" required>
+            <option value="">Select</option>
+            <option value="question">Research question</option>
+            <option value="proposal">Proposal / idea</option>
+            <option value="resource">Educational resource</option>
+            <option value="feedback">Feedback</option>
+            <option value="legislation">Legislative draft idea</option>
+            <option value="ballot">Ballot initiative concept</option>
+          </select>
+        </div>
+        <div class="form-group form-group--full">
+          <label for="message">Your idea *</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+      </div>
+      <button type="submit" class="form-submit">Submit</button>
+    </form>
+  </main>
+  <div id="site-footer"></div>
+  <script src="/js/layout.js"></script>
+  <script src="/js/action-hub.js"></script>
+</body>
+</html>

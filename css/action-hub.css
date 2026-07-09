@@ -1,0 +1,180 @@
+/* Action Hub — v1.4.0 Civic Action Layer */
+
+.action-hub {
+  position: fixed;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  z-index: 200;
+  font-family: var(--font-sans);
+}
+
+.action-hub__toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-highlight);
+  color: #fff;
+  border: none;
+  padding: 0.85rem 1.25rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.action-hub__toggle:hover {
+  background: #a34a1e;
+  transform: translateY(-2px);
+}
+
+.action-hub--open .action-hub__toggle {
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.action-hub__toggle-icon {
+  font-size: 1.1rem;
+}
+
+.action-hub__panel {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  width: 280px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius) var(--radius) 0 var(--radius);
+  box-shadow: 0 -4px 24px rgba(26, 31, 46, 0.15);
+  padding: 1rem;
+  margin-bottom: -1px;
+}
+
+.action-hub__panel[hidden] {
+  display: none;
+}
+
+.action-hub__title {
+  margin: 0 0 0.25rem;
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.action-hub__subtitle {
+  margin: 0 0 0.75rem;
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.action-hub__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.action-hub__link {
+  display: block;
+  padding: 0.55rem 0.75rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  transition: background 0.15s;
+}
+
+.action-hub__link:hover {
+  background: var(--color-surface-alt);
+  color: var(--color-accent);
+}
+
+.action-hub__link--primary {
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.action-hub__link--primary:hover {
+  background: var(--color-accent-light);
+  color: #fff;
+}
+
+/* Hide legacy sticky CTA when action hub present */
+.sticky-cta {
+  display: none;
+}
+
+/* Action pages */
+.action-page-intro {
+  margin-bottom: 2rem;
+}
+
+.status-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.status-badge--live {
+  background: #e8f5e9;
+  color: var(--color-montana);
+}
+
+.status-badge--coming {
+  background: var(--color-surface-alt);
+  color: var(--color-text-muted);
+}
+
+.share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.share-btn {
+  padding: 0.75rem 1.25rem;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.share-btn:hover {
+  background: var(--color-accent-light);
+  color: #fff;
+}
+
+.share-btn--secondary {
+  background: var(--color-surface-alt);
+  color: var(--color-accent);
+  border: 1px solid var(--color-border);
+}
+
+.referral-box {
+  background: var(--color-surface-alt);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  font-family: monospace;
+  font-size: 0.95rem;
+  word-break: break-all;
+}
+
+@media (max-width: 640px) {
+  .action-hub__panel {
+    width: calc(100vw - 2.5rem);
+    right: 0;
+  }
+}

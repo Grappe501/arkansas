@@ -1,0 +1,40 @@
+{
+  "version": "1.4.0",
+  "description": "Unified participant profile — one record per person across all civic actions",
+  "fields": {
+    "participant_id": { "type": "string", "generated": true },
+    "contact": {
+      "name": "string",
+      "email": "string",
+      "phone": "string",
+      "city": "string",
+      "state": "string",
+      "county": "string",
+      "zip": "string"
+    },
+    "learning_progress": {
+      "halls_visited": ["string"],
+      "depth_levels_used": ["L1", "L2", "L3", "L4"],
+      "topics_completed": ["string"]
+    },
+    "interests": {
+      "topics": ["string"],
+      "leadership_roles": ["string"],
+      "volunteer_roles": ["string"]
+    },
+    "organizing": {
+      "referrals_made": "number",
+      "referral_code": "string",
+      "events_attended": ["string"],
+      "toolkit_downloads": ["string"]
+    },
+    "solutions": {
+      "legislative_ideas_submitted": ["object"],
+      "ballot_contributions": ["object"],
+      "community_ideas": ["object"]
+    },
+    "leadership_pathway_stage": {
+      "enum": ["learner", "volunteer", "researcher", "organizer", "presenter", "education_lead"]
+    }
+  }
+}

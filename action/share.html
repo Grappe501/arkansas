@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Share & Invite | Citizens Facts</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/education.css">
+  <link rel="stylesheet" href="/css/action-hub.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="site-main">
+    <nav class="breadcrumb"><a href="/">Front Door</a> → Share</nav>
+    <header class="action-page-intro">
+      <span class="status-badge status-badge--live">Organize</span>
+      <h1>Share With Friends &amp; Family</h1>
+      <p class="hall-purpose">Relational organizing starts with people you know. Help others understand <em>Citizens United</em> — one conversation at a time.</p>
+    </header>
+
+    <section class="content-block">
+      <h2>Share this page</h2>
+      <div class="share-buttons">
+        <button type="button" class="share-btn" id="share-native">Share via device</button>
+        <button type="button" class="share-btn share-btn--secondary" id="copy-link">Copy link</button>
+        <a class="share-btn share-btn--secondary" id="share-email" href="#">Email a friend</a>
+        <a class="share-btn share-btn--secondary" id="share-sms" href="#">Text a friend</a>
+      </div>
+      <p id="copy-status" class="form-note" hidden>Link copied!</p>
+    </section>
+
+    <section class="content-block" id="invite">
+      <h2>Invite Friends — Referral Tracking</h2>
+      <p>Your personal referral link tracks how many people you've invited (stored locally until backend connects).</p>
+      <p><strong>Your referral code:</strong></p>
+      <div class="referral-box" id="referral-code">Loading…</div>
+      <p><strong>Your share link:</strong></p>
+      <div class="referral-box" id="referral-link">Loading…</div>
+      <p class="form-note">Referrals invited: <strong id="referral-count">0</strong></p>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="/js/layout.js"></script>
+  <script src="/js/action-hub.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const code = CivicAction.getReferralCode();
+      const shareUrl = CivicAction.getShareUrl();
+      const msg = 'I\'m learning about Citizens United and how it changed American politics. Thought you might find this interesting: ';
+
+      document.getElementById('referral-code').textContent = code;
+      document.getElementById('referral-link').textContent = shareUrl;
+      document.getElementById('referral-count').textContent = localStorage.getItem('cf_referrals_sent') || '0';
+
+      document.getElementById('share-email').href = 'mailto:?subject=' + encodeURIComponent('Learn about Citizens United') + '&body=' + encodeURIComponent(msg + shareUrl);
+      document.getElementById('share-sms').href = 'sms:?body=' + encodeURIComponent(msg + shareUrl);
+
+      document.getElementById('copy-link').addEventListener('click', () => {
+        navigator.clipboard.writeText(shareUrl).then(() => {
+          const s = document.getElementById('copy-status');
+          s.hidden = false;
+          const n = parseInt(localStorage.getItem('cf_referrals_sent') || '0', 10) + 1;
+          localStorage.setItem('cf_referrals_sent', n);
+          document.getElementById('referral-count').textContent = n;
+        });
+      });
+
+      document.getElementById('share-native').addEventListener('click', async () => {
+        if (navigator.share) {
+          await navigator.share({ title: 'Citizens Facts', text: msg, url: shareUrl });
+        } else {
+          document.getElementById('copy-link').click();
+        }
+      });
+
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('ref')) {
+        const refs = JSON.parse(localStorage.getItem('cf_referrals_received') || '[]');
+        refs.push(params.get('ref'));
+        localStorage.setItem('cf_referrals_received', JSON.stringify(refs));
+      }
+    });
+  </script>
+</body>
+</html>

@@ -3,6 +3,17 @@
 All notable changes to Citizens Facts are documented here.
 Each entry from Ernie corresponds to a new version and GitHub commit.
 
+## [1.4.0] - 2026-07-09 — Civic Action Layer
+
+### Added — Phase 7: Civic Organizing Platform
+- **Floating Action Hub** on every page (Take Action menu)
+- Action routes: join network, share, invite, draft laws, ballot lab, legislators, ideas
+- Participant profile schema (`data/participant-profile-schema.json`)
+- `docs/CIVIC_ACTION.md` architecture
+- Referral tracking stub (localStorage)
+- BUILD_PLAN restructured: 12 phases, steps 54–65 = Civic Action Layer
+- Platform model: Learn → Participate → Organize → Build Solutions
+
 ## [1.3.0] - 2026-07-09 — Build #1 Complete
 
 ### Build #1: Project Mission Statement

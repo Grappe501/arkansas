@@ -1,0 +1,15 @@
+{
+  "version": "1.4.0",
+  "progression": ["Learn", "Participate", "Organize", "Build Solutions"],
+  "actions": [
+    { "id": "leader", "label": "Become a Leader", "icon": "★", "href": "/educate/", "stage": "participate", "status": "live" },
+    { "id": "network", "label": "Join the Network", "icon": "◎", "href": "/action/join-network.html", "stage": "participate", "status": "live" },
+    { "id": "share", "label": "Share This Page", "icon": "↗", "href": "/action/share.html", "stage": "organize", "status": "live" },
+    { "id": "invite", "label": "Invite Friends", "icon": "👥", "href": "/action/share.html#invite", "stage": "organize", "status": "live" },
+    { "id": "draft-law", "label": "Draft a Law", "icon": "§", "href": "/action/draft-laws.html", "stage": "build", "status": "stub" },
+    { "id": "ballot-lab", "label": "Build a Ballot Initiative", "icon": "✓", "href": "/action/ballot-lab.html", "stage": "build", "status": "stub" },
+    { "id": "legislators", "label": "Contact Legislators", "icon": "✉", "href": "/action/contact-legislators.html", "stage": "organize", "status": "stub" },
+    { "id": "ideas", "label": "Ask a Question", "icon": "?", "href": "/action/ideas.html", "stage": "participate", "status": "stub" },
+    { "id": "feedback", "label": "Give Feedback", "icon": "💬", "href": "/action/ideas.html#feedback", "stage": "participate", "status": "stub" }
+  ]
+}
