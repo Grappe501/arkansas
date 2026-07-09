@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.69.0] - 2026-07-09 — Build #65 Civic Intelligence Command Center
+
+### The Executive Mission Control
+- **Civic Intelligence Command Center v1.0** — operational brain unifying all 65 institutional components
+- Executive dashboard, 15 KPI cards, 10 department boards, institutional readiness index
+- Arkansas operations map, growth dashboard, alerts, opportunity engine, weekly briefing
+- Extends MC 2.0 (#25) — executive nervous system for institutional leadership
+- Honest: 8% launch readiness · 0 leaders · operations map not live · ~43% command center readiness
+- MC dashboard: `/mission-control/civic-intelligence-command-center.html`
+
 ## [1.68.0] - 2026-07-09 — Build #64 Arkansas Action Network & Leadership Pipeline
 
 ### Building a Statewide Civic Education Movement

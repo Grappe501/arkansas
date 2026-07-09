@@ -1,6 +1,6 @@
 {
-  "version": "1.68.0",
-  "build": 64,
+  "version": "1.69.0",
+  "build": 65,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 64,
+    "overall_completion": 65,
     "current_build": {
-      "number": 64,
-      "title": "Citizens United Facts Arkansas Action Network & Leadership Pipeline v1.0"
-    },
-    "active_phase": "Arkansas Action Network \u2192 Implementation Translation",
-    "last_completed": "Campaign Finance Data Observatory",
-    "next_build": {
       "number": 65,
+      "title": "Citizens United Facts Arkansas Civic Intelligence Command Center v1.0"
+    },
+    "active_phase": "Civic Intelligence Command Center \u2192 Implementation Translation",
+    "last_completed": "Arkansas Action Network & Leadership Pipeline",
+    "next_build": {
+      "number": 66,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
@@ -44,7 +44,8 @@
     "citizen_action_center_readiness": 42,
     "campaign_finance_observatory_readiness": 36,
     "arkansas_action_network_readiness": 38,
-    "mc2_readiness": 33,
+    "civic_intelligence_command_center_readiness": 43,
+    "mc2_readiness": 39,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
     "education_academy_readiness": 26,
@@ -59,13 +60,13 @@
     "library_readiness": 22,
     "learning_lab_readiness": 22,
     "media_studio_readiness": 18,
-    "civic_intelligence_readiness": 28,
+    "civic_intelligence_readiness": 35,
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 25,
-    "institutional_maturity_pct": 51,
+    "institutional_maturity_pct": 32,
     "current_institutional_version": "V1",
-    "systems_integration_readiness": 38,
+    "systems_integration_readiness": 40,
     "production_matrix_readiness": 39,
     "visitor_journey_readiness": 40,
     "technical_architecture_readiness": 38,
@@ -92,8 +93,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 64,
-      "note": "Build #64 \u2014 Arkansas Action Network."
+      "value": 65,
+      "note": "Build #65 \u2014 Civic Intelligence Command Center."
     },
     {
       "id": "constitution",
@@ -289,9 +290,9 @@
     {
       "id": "mc2",
       "label": "Mission Control 2.0",
-      "value": 33,
+      "value": 39,
       "max": 100,
-      "note": "6 workspaces partial, 0 alerts automated \u2014 architecture defined."
+      "note": "Command Center extends MC 2.0 \u2014 unified executive view."
     },
     {
       "id": "ai_engine",
@@ -422,9 +423,9 @@
     {
       "id": "institutional_maturity",
       "label": "Institutional Maturity (V1\u2013V10)",
-      "value": 51,
+      "value": 32,
       "max": 100,
-      "note": "Primary growth engine \u2014 0 leaders \u00b7 0/200K connected."
+      "note": "Executive nervous system \u2014 readiness index 32."
     },
     {
       "id": "systems_integration",
@@ -565,6 +566,13 @@
       "value": 38,
       "max": 100,
       "note": "8 pyramid levels \u00b7 0/75 county teams."
+    },
+    {
+      "id": "civic_intelligence_command_center",
+      "label": "Civic Intelligence Command Center",
+      "value": 43,
+      "max": 100,
+      "note": "10 departments \u00b7 index 32."
     }
   ],
   "public_readiness": {
@@ -1241,6 +1249,12 @@
       "id": "arkansas_action_network",
       "label": "Arkansas Action Network",
       "href": "/mission-control/arkansas-action-network.html",
+      "status": "complete"
+    },
+    {
+      "id": "civic_intelligence_command_center",
+      "label": "Civic Intelligence Command Center",
+      "href": "/mission-control/civic-intelligence-command-center.html",
       "status": "complete"
     }
   ],
@@ -2267,6 +2281,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 65,
+      "title": "Citizens United Facts Arkansas Civic Intelligence Command Center v1.0",
+      "version": "1.69.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Civic Intelligence Command Center \u2014 executive nervous system unifying all institutional components",
+      "summary": "Executive dashboard, KPI cards, operations map, 10 department boards, pulse, alerts; 43% readiness. Index 32 \u00b7 8% launch readiness.",
+      "files_created": [
+        "data/civic-intelligence-command-center.json",
+        "docs/MASTER_CIVIC_INTELLIGENCE_COMMAND_CENTER.md",
+        "builds/065-civic-intelligence-command-center.md",
+        "mission-control/civic-intelligence-command-center.html",
+        "scripts/gen-civic-intelligence-command-center.py",
+        "scripts/update-mc-build65.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/civic-intelligence-command-center.html"
+      ],
+      "decisions_made": [
+        "Operational brain \u2014 answer institutional health in <5 seconds (aspirational)",
+        "Extends MC 2.0 (#25) \u2014 does not replace executive.html",
+        "10 department operations boards with shared field schema",
+        "Institutional Readiness Index across 11 categories",
+        "Executive Alerts + Opportunity Engine \u2014 proactive leadership tools",
+        "Weekly briefing + annual State of Civic Education report specified",
+        "43% readiness \u2014 constitution, partial KPI aggregation"
+      ],
+      "open_questions": [
+        "Command Center as MC home vs separate executive route?",
+        "Operations map: Civic Atlas embed vs dedicated fullscreen?",
+        "Weekly briefing: automated script vs manual template?",
+        "AI Executive Advisor: separate role vs Institutional AI extension?"
+      ],
+      "risks": [
+        "Executive dashboard partial \u2014 KPIs from registries, not unified live feed",
+        "Arkansas Operations Map not live \u2014 Civic Atlas map planned, 0 counties active",
+        "Department boards specified \u2014 no per-department blocker/risk tracking wired",
+        "Institutional Pulse signals mostly planned \u2014 no automated heartbeat"
+      ],
+      "next_recommended": 66,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/civic-intelligence-command-center.html",
+      "review_status": "complete"
+    },
     {
       "number": 64,
       "title": "Citizens United Facts Arkansas Action Network & Leadership Pipeline v1.0",
@@ -5445,21 +5512,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Arkansas Action Network v1.0 \u2014 8-level pyramid, primary growth engine",
-    "building_now": "64 builds specified \u2014 implementation translation next",
+    "what_built": "Civic Intelligence Command Center v1.0 \u2014 executive nervous system",
+    "building_now": "65 builds specified \u2014 implementation translation next",
     "blocked": [
-      "Progress map",
-      "Invitation engine",
-      "Leader registry",
-      "Funnel analytics"
+      "Operations map",
+      "Alert engine",
+      "Weekly briefing",
+      "Unified data pipeline"
     ],
     "ready_public": [
-      "8 pyramid levels",
-      "Growth objectives",
-      "Academy pathways spec",
-      "Succession model"
+      "Executive dashboard spec",
+      "15 KPI cards",
+      "11-category readiness index",
+      "10 department boards"
     ],
-    "next": "Build #65 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #66 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -6155,5 +6222,14 @@
     "county_teams": 0,
     "connected_arkansans": 0,
     "primary_growth_engine": true
+  },
+  "civic_intelligence_command_center": "/data/civic-intelligence-command-center.json",
+  "civic_intelligence_command_center_dashboard": "/mission-control/civic-intelligence-command-center.html",
+  "civic_intelligence_command_center_inventory": {
+    "readiness_score": 43,
+    "institutional_readiness_index": 32,
+    "departments_total": 10,
+    "operations_map_live": false,
+    "operational_brain": true
   }
 }

@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Civic Intelligence Command Center <a href="/mission-control/civic-intelligence-command-center.html" class="mc-inline-link">Executive MC #65 →</a></h2>
+    <p class="mc-bar-note">Build #65 — Civic Intelligence Command Center. Executive nervous system, 10 department boards, readiness index. Unifies 65 builds. 8% launch · 0 leaders. ~43% readiness.</p>
     <h2 class="mc-section-title">Arkansas Action Network <a href="/mission-control/arkansas-action-network.html" class="mc-inline-link">200K Arkansans #64 →</a></h2>
     <p class="mc-bar-note">Build #64 — Arkansas Action Network & Leadership Pipeline. 8-level pyramid, invitation engine, progress map. Primary growth engine. 0 county teams · 0/200K connected. ~38% readiness.</p>
     <h2 class="mc-section-title">Campaign Finance Observatory <a href="/mission-control/campaign-finance-observatory.html" class="mc-inline-link">Follow the Money #63 →</a></h2>
@@ -5181,6 +5183,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCitizenActionCenter();
   initCampaignFinanceObservatory();
   initArkansasActionNetwork();
+  initCivicIntelligenceCommandCenter();
 });
 
 async function initUxArchitecture() {
@@ -6671,7 +6674,133 @@ async function initArkansasActionNetwork() {
       <a href="/data/arkansas-action-network.json">JSON</a> ·
       <a href="/mission-control/statewide-growth.html">Statewide Growth</a> ·
       <a href="/mission-control/civic-atlas.html">Civic Atlas</a> ·
-      <a href="/mission-control/citizen-action-center.html">Citizen Action Center</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initCivicIntelligenceCommandCenter() {
+  const root = document.getElementById('mc-civic-intelligence-command-center-root');
+  if (!root) return;
+
+  const [ciccRes, mcRes] = await Promise.all([
+    fetch('/data/civic-intelligence-command-center.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const cicc = await ciccRes.json();
+  const mc = await mcRes.json();
+  const s = cicc.summary;
+  const idx = cicc.institutional_readiness_index;
+
+  const execRows = cicc.executive_dashboard.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.metric}</td><td>${m.current}${m.unit ? ` ${m.unit}` : ''}</td>
+      <td>${m.target ?? '—'}</td><td>${m.status}</td></tr>`).join('');
+
+  const kpiRows = cicc.executive_kpi_cards.cards.map(k => `
+    <tr><td><code>${k.id}</code></td><td>${k.label}</td><td>${k.current}${k.unit ? ` ${k.unit}` : ''}</td>
+      <td>${k.route ? `<a href="${k.route}">→</a>` : '—'}</td><td>${k.status}</td></tr>`).join('');
+
+  const deptRows = cicc.department_operations_boards.departments.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.department}</td><td>${d.status}</td>
+      <td><a href="${d.route}">→</a></td></tr>`).join('');
+
+  const pulseRows = cicc.institutional_pulse.signals.map(p => `
+    <tr><td><code>${p.id}</code></td><td>${p.signal}</td><td>${p.status}</td>
+      <td>${p.note ?? '—'}</td></tr>`).join('');
+
+  const growthRows = cicc.arkansas_growth_dashboard.metrics.map(g => `
+    <tr><td><code>${g.id}</code></td><td>${g.goal}</td><td>${g.current}</td>
+      <td>${g.target ?? '—'}</td><td>${g.progress_pct ?? g.status ?? '—'}</td></tr>`).join('');
+
+  const readinessRows = idx.categories.map(c => `
+    <tr><td>${c.category}</td><td>${c.score}%</td><td>${c.status}</td></tr>`).join('');
+
+  const systemRows = cicc.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Civic Intelligence Command Center</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #65 · ${cicc.title}</p>
+      <h1>The Executive Mission Control</h1>
+      <p class="mc-header__question">${cicc.governing_principle}</p>
+      <p class="mc-bar-note">${cicc.purpose}</p>
+      <p class="mc-bar-note"><strong>Operational brain:</strong> ${cicc.operational_brain ? 'Yes' : 'No'} · <strong>5-second health check:</strong> ${cicc.five_second_health_check ? 'Specified' : 'No'} · <a href="${cicc.legacy_executive_route}">MC 2.0 Executive →</a></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Command Center readiness</div><div class="mc-stat__value">${s.civic_intelligence_command_center_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Readiness Index</div><div class="mc-stat__value">${s.institutional_readiness_index}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Health Score</div><div class="mc-stat__value">${s.institutional_health_score}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Launch readiness</div><div class="mc-stat__value">${s.launch_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Departments</div><div class="mc-stat__value">${s.departments_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Connected</div><div class="mc-stat__value">${s.connected_arkansans}/${s.connected_target}</div></div>
+    </div>
+    <h2 class="mc-section-title">Executive Philosophy</h2>
+    <p class="mc-bar-note">Audience: ${cicc.executive_philosophy.audience}</p>
+    <ul class="mc-deliverables">${cicc.executive_philosophy.questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cicc.executive_dashboard.title}</h2>
+    <p class="mc-bar-note">No drilling required: ${cicc.executive_dashboard.no_drilling_required ? 'Yes' : 'No'} · ${cicc.executive_dashboard.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Target</th><th>Status</th></tr></thead>
+      <tbody>${execRows}</tbody></table>
+    <h2 class="mc-section-title">${cicc.executive_kpi_cards.title}</h2>
+    <p class="mc-bar-note">Always visible · links to detail · ${cicc.executive_kpi_cards.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>KPI</th><th>Current</th><th>Detail</th><th>Status</th></tr></thead>
+      <tbody>${kpiRows}</tbody></table>
+    <h2 class="mc-section-title">${cicc.arkansas_operations_map.title}</h2>
+    <p class="mc-bar-note">Fullscreen · health color coding · ${cicc.arkansas_operations_map.status} · live: ${cicc.arkansas_operations_map.live ? 'Yes' : 'No'} · <a href="${cicc.arkansas_operations_map.route}">Civic Atlas</a></p>
+    <ul class="mc-deliverables">${cicc.arkansas_operations_map.layers.map(l => `<li>${l}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cicc.department_operations_boards.title}</h2>
+    <p class="mc-bar-note">Board fields: ${cicc.department_operations_boards.board_fields.join(' · ')}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Department</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${deptRows}</tbody></table>
+    <h2 class="mc-section-title">${cicc.institutional_pulse.title}</h2>
+    <p class="mc-bar-note">Measurable heartbeat: ${cicc.institutional_pulse.measurable_heartbeat ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Signal</th><th>Status</th><th>Note</th></tr></thead>
+      <tbody>${pulseRows}</tbody></table>
+    <h2 class="mc-section-title">${cicc.arkansas_growth_dashboard.title}</h2>
+    <p class="mc-bar-note">Flagship dashboard · <a href="${cicc.arkansas_growth_dashboard.route}">Action Network →</a></p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Goal</th><th>Current</th><th>Target</th><th>Progress</th></tr></thead>
+      <tbody>${growthRows}</tbody></table>
+    <h2 class="mc-section-title">${cicc.executive_alerts.title}</h2>
+    <p class="mc-bar-note">Proactive · priority by urgency · ${cicc.executive_alerts.active_alerts} active · ${cicc.executive_alerts.status}</p>
+    <ul class="mc-deliverables">${cicc.executive_alerts.alert_types.map(a => `<li>${a.example}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cicc.opportunity_engine.title}</h2>
+    <p class="mc-bar-note">${cicc.opportunity_engine.active_opportunities} active · ${cicc.opportunity_engine.status}</p>
+    <ul class="mc-deliverables">${cicc.opportunity_engine.opportunity_types.map(o => `<li>${o.example}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cicc.weekly_executive_briefing.title}</h2>
+    <p class="mc-bar-note">Auto-generated: ${cicc.weekly_executive_briefing.auto_generated ? 'Yes' : 'No'} · live: ${cicc.weekly_executive_briefing.live ? 'Yes' : 'No'} · ${cicc.weekly_executive_briefing.status}</p>
+    <ul class="mc-deliverables">${cicc.weekly_executive_briefing.sections.map(sec => `<li>${sec}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cicc.annual_state_of_civic_education.title}</h2>
+    <p class="mc-bar-note">Signature publication · ${cicc.annual_state_of_civic_education.status}</p>
+    <ul class="mc-deliverables">${cicc.annual_state_of_civic_education.sections.map(sec => `<li>${sec}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cicc.ai_executive_advisor.title}</h2>
+    <p class="mc-bar-note">Future · ${cicc.ai_executive_advisor.data_source} · <a href="${cicc.ai_executive_advisor.route}">Institutional AI</a></p>
+    <ul class="mc-deliverables">${cicc.ai_executive_advisor.example_questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cicc.executive_decision_log.title}</h2>
+    <p class="mc-bar-note">${cicc.executive_decision_log.entries_from_builds} build entries · ${cicc.executive_decision_log.status}</p>
+    <ul class="mc-deliverables">${cicc.executive_decision_log.preserves.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${idx.title}</h2>
+    <p class="mc-bar-note">Overall: <strong>${idx.overall_score}%</strong> · ${idx.measures}</p>
+    <table class="mc-table"><thead><tr><th>Category</th><th>Score</th><th>Status</th></tr></thead>
+      <tbody>${readinessRows}</tbody></table>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${cicc.integration.unifies} · Extends: ${cicc.integration.extends}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${cicc.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${cicc.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${cicc.recommended_next_build.number} — ${cicc.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${cicc.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_CIVIC_INTELLIGENCE_COMMAND_CENTER.md">MASTER_CIVIC_INTELLIGENCE_COMMAND_CENTER.md</a> ·
+      <a href="/data/civic-intelligence-command-center.json">JSON</a> ·
+      <a href="/mission-control/executive.html">MC 2.0 Executive</a> ·
+      <a href="/mission-control/arkansas-action-network.html">Action Network</a> ·
+      <a href="/mission-control/civic-atlas.html">Civic Atlas</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 
