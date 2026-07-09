@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Operating Manual <a href="/mission-control/institutional-operating-manual.html" class="mc-inline-link">Institutional Continuity #90 →</a></h2>
+    <p class="mc-bar-note">Build #90 — Institutional Operating Manual. If every founder walked away tomorrow, the institution continues. 13 playbooks, 10 SOPs, role manuals, institutional memory. 0/13 manuals · 0 SOPs · dashboard not live. ~60% readiness.</p>
     <h2 class="mc-section-title">PMO Execution Office <a href="/mission-control/pmo-execution-office.html" class="mc-inline-link">Central Execution #89 →</a></h2>
     <p class="mc-bar-note">Build #89 — Master PMO & Execution Office. Central execution office for Jan 2027 mission complete. 12 portfolios, project registry, milestones, risk/decision registers. Dashboard not live. ~60% readiness.</p>
     <h2 class="mc-section-title">Execution Schedule <a href="/mission-control/execution-schedule.html" class="mc-inline-link">Mission Complete Jan 2027 #88 →</a></h2>
@@ -5256,6 +5258,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLaunchCampaignFirst100Days();
   initExecutionSchedule();
   initPmoExecutionOffice();
+  initInstitutionalOperatingManual();
 });
 
 async function initUxArchitecture() {
@@ -9407,6 +9410,123 @@ async function initPmoExecutionOffice() {
       <a href="/data/pmo-execution-office.json">JSON</a> ·
       <a href="/mission-control/pmo.html">PMO (#54)</a> ·
       <a href="/mission-control/execution-schedule.html">Execution Schedule (#88)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initInstitutionalOperatingManual() {
+  const root = document.getElementById('mc-institutional-operating-manual-root');
+  if (!root) return;
+
+  const [iomRes, mcRes] = await Promise.all([
+    fetch('/data/institutional-operating-manual.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const iom = await iomRes.json();
+  const mc = await mcRes.json();
+  const s = iom.summary;
+
+  const playbookRows = iom.institutional_playbook.systems.map(sys => `
+    <tr><td><code>${sys.id}</code></td><td>${sys.system}</td>
+      <td>${sys.manual_status}</td><td>${sys.operating_manual_complete ? 'Yes' : 'No'}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  const sopRows = iom.standard_operating_procedures.sops.map(sop => `
+    <tr><td><code>${sop.id}</code></td><td>${sop.activity}</td>
+      <td>${sop.written ? 'Yes' : 'No'}</td><td>${sop.status}</td></tr>`).join('');
+
+  const roleRows = iom.role_manuals.roles.map(r => `
+    <tr><td><code>${r.id}</code></td><td>${r.role}</td>
+      <td>${r.complete ? 'Yes' : 'No'}</td><td>${r.status}</td></tr>`).join('');
+
+  const emergencyRows = iom.emergency_continuity.scenarios.map(e => `
+    <tr><td><code>${e.id}</code></td><td>${e.scenario}</td><td>${e.plan_status}</td></tr>`).join('');
+
+  const dashRows = iom.mission_control_operations_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td>
+      <td>${typeof d.current === 'number' ? d.current.toLocaleString() : d.current}${d.unit ? d.unit : ''}${d.target ? ` / ${d.target}` : ''}</td>
+      <td>${d.status}</td></tr>`).join('');
+
+  const systemRows = iom.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Institutional Operating Manual</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #90 · ${iom.title}</p>
+      <h1>${iom.subtitle}</h1>
+      <p class="mc-header__question">${iom.governing_principle}</p>
+      <p class="mc-bar-note">${iom.purpose}</p>
+      <p class="mc-bar-note"><strong>Tagline:</strong> ${iom.tagline} · ${s.days_remaining} days to ${iom.completion_target_date}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Manual readiness</div><div class="mc-stat__value">${s.institutional_operating_manual_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">System manuals</div><div class="mc-stat__value">${s.system_manuals_complete}/${s.system_manuals_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">SOPs written</div><div class="mc-stat__value">${s.sops_written}/${s.sops_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Role manuals</div><div class="mc-stat__value">${s.role_manuals_complete}/${s.role_manuals_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Memory entries</div><div class="mc-stat__value">${s.institutional_memory_entries}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Ops dashboard</div><div class="mc-stat__value">${s.operations_dashboard_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">${iom.founding_philosophy.title}</h2>
+    <p class="mc-bar-note">People temporary, institutions endure: ${iom.founding_philosophy.people_temporary_institutions_endure ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${iom.founding_philosophy.principles.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${iom.institutional_playbook.title}</h2>
+    <p class="mc-bar-note">${iom.institutional_playbook.note} · Status: ${iom.institutional_playbook.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>System</th><th>Manual</th><th>Complete</th><th>Route</th></tr></thead>
+      <tbody>${playbookRows}</tbody></table>
+    <h2 class="mc-section-title">${iom.standard_operating_procedures.title}</h2>
+    <p class="mc-bar-note">Written: ${iom.standard_operating_procedures.sops_written}/${iom.standard_operating_procedures.sops_total} · No tribal knowledge: ${iom.standard_operating_procedures.no_tribal_knowledge ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Activity</th><th>Written</th><th>Status</th></tr></thead>
+      <tbody>${sopRows}</tbody></table>
+    <h2 class="mc-section-title">${iom.institutional_memory.title}</h2>
+    <p class="mc-bar-note">Entries preserved: ${iom.institutional_memory.entries_preserved} · MC preserves: ${iom.institutional_memory.mc_permanently_preserves ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${iom.institutional_memory.categories.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${iom.role_manuals.title}</h2>
+    <p class="mc-bar-note">Complete: ${iom.role_manuals.manuals_complete}/${iom.role_manuals.roles_total}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Role</th><th>Complete</th><th>Status</th></tr></thead>
+      <tbody>${roleRows}</tbody></table>
+    <h2 class="mc-section-title">${iom.volunteer_knowledge_base.title}</h2>
+    <p class="mc-bar-note">Institution teaches volunteers: ${iom.volunteer_knowledge_base.institution_teaches_its_own_volunteers ? 'Yes' : 'No'} · Status: ${iom.volunteer_knowledge_base.status}</p>
+    <ul class="mc-deliverables">${iom.volunteer_knowledge_base.resources.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${iom.decision_framework.title}</h2>
+    <p class="mc-bar-note">Decision compass: ${iom.decision_framework.decision_compass ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${iom.decision_framework.questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${iom.change_management.title}</h2>
+    <ul class="mc-deliverables">${iom.change_management.steps.map(st => `<li>${st}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${iom.emergency_continuity.title}</h2>
+    <p class="mc-bar-note">Essential operations continue: ${iom.emergency_continuity.essential_operations_continue ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Scenario</th><th>Plan</th></tr></thead>
+      <tbody>${emergencyRows}</tbody></table>
+    <h2 class="mc-section-title">${iom.documentation_standards.title}</h2>
+    <p class="mc-bar-note">Documentation as infrastructure: ${iom.documentation_standards.documentation_as_infrastructure ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${iom.documentation_standards.fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${iom.annual_operating_review.title}</h2>
+    <p class="mc-bar-note">Conducted: ${iom.annual_operating_review.conducted ? 'Yes' : 'No'} · Manual remains current: ${iom.annual_operating_review.manual_remains_current ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${iom.annual_operating_review.review_items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${iom.mission_control_operations_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${iom.mission_control_operations_dashboard.live ? 'Yes' : 'No'} · Documentation health measurable: ${iom.mission_control_operations_dashboard.documentation_health_measurable ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">Founder's Legacy</h2>
+    <p class="mc-bar-note">${iom.founders_legacy}</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${iom.integration.chain}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${iom.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${iom.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${iom.recommended_next_build.number} — ${iom.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${iom.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_INSTITUTIONAL_OPERATING_MANUAL.md">MASTER_INSTITUTIONAL_OPERATING_MANUAL.md</a> ·
+      <a href="/data/institutional-operating-manual.json">JSON</a> ·
+      <a href="/mission-control/pmo-execution-office.html">PMO (#89)</a> ·
+      <a href="/mission-control/organizational-constitution.html">Constitution (#76)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

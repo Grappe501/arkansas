@@ -1,0 +1,512 @@
+{
+  "version": "1.0",
+  "build": 90,
+  "updated": "2026-07-09",
+  "completion_target_date": "2027-01-01",
+  "title": "Master Institutional Operating Manual v1.0",
+  "subtitle": "If Every Founder Walked Away Tomorrow \u2014 The Institution Must Continue",
+  "tagline": "The Institution Must Continue",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/institutional-operating-manual.html",
+  "constitution": "/docs/MASTER_INSTITUTIONAL_OPERATING_MANUAL.md",
+  "purpose": "Complete guide allowing future volunteers and leaders to understand, operate, improve, and preserve Citizens United Facts without relying on institutional memory held by a few individuals. If every founding volunteer stepped away tomorrow, a new generation should continue the mission using this manual and Mission Control.",
+  "governing_principle": "Institutions fail when knowledge disappears. Institutions endure when knowledge is preserved. The Operating Manual exists so Citizens United Facts will never depend upon one person, one memory, or one generation \u2014 every generation leaves the next a better map than the one they inherited.",
+  "founders_legacy": "The greatest gift the founders can leave is not a website \u2014 it is clarity. Future volunteers should never have to guess. They should inherit an institution where every important process has been thoughtfully documented, every major decision preserved, and every lesson learned passed forward. That is how institutions outlive individuals.",
+  "founding_philosophy": {
+    "title": "Founding Philosophy",
+    "principles": [
+      "People are temporary",
+      "Institutions should endure",
+      "Knowledge should never disappear because one volunteer leaves",
+      "Every important process should be documented",
+      "Every important decision should be traceable",
+      "Every important responsibility should be transferable"
+    ],
+    "people_temporary_institutions_endure": true
+  },
+  "institutional_playbook": {
+    "title": "Institutional Playbook",
+    "systems": [
+      {
+        "id": "OM-S01",
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "manual_status": "partial",
+        "operating_manual_complete": false
+      },
+      {
+        "id": "OM-S02",
+        "system": "Research Institute",
+        "route": "/mission-control/arkansas-research-institute.html",
+        "manual_status": "partial",
+        "operating_manual_complete": false
+      },
+      {
+        "id": "OM-S03",
+        "system": "Community Education Academy",
+        "route": "/mission-control/education-academy.html",
+        "manual_status": "planned",
+        "operating_manual_complete": false
+      },
+      {
+        "id": "OM-S04",
+        "system": "Coalition Network",
+        "route": "/mission-control/coalition-network.html",
+        "manual_status": "partial",
+        "operating_manual_complete": false
+      },
+      {
+        "id": "OM-S05",
+        "system": "Volunteer Operations",
+        "route": "/mission-control/volunteer-funding-constitution.html",
+        "manual_status": "partial",
+        "operating_manual_complete": false
+      },
+      {
+        "id": "OM-S06",
+        "system": "County Operating System",
+        "route": "/mission-control/arkansas-county-operating-system.html",
+        "manual_status": "partial",
+        "operating_manual_complete": false
+      },
+      {
+        "id": "OM-S07",
+        "system": "City Operating System",
+        "route": "/mission-control/arkansas-city-operating-system.html",
+        "manual_status": "partial",
+        "operating_manual_complete": false
+      },
+      {
+        "id": "OM-S08",
+        "system": "Neighborhood Operating System",
+        "route": "/mission-control/arkansas-neighborhood-operating-system.html",
+        "manual_status": "partial",
+        "operating_manual_complete": false
+      },
+      {
+        "id": "OM-S09",
+        "system": "Communications",
+        "route": "/mission-control/arkansas-communications.html",
+        "manual_status": "partial",
+        "operating_manual_complete": false
+      },
+      {
+        "id": "OM-S10",
+        "system": "Technology",
+        "route": "/mission-control/technical-architecture.html",
+        "manual_status": "partial",
+        "operating_manual_complete": false
+      },
+      {
+        "id": "OM-S11",
+        "system": "AI Systems",
+        "route": "/mission-control/institutional-ai.html",
+        "manual_status": "planned",
+        "operating_manual_complete": false
+      },
+      {
+        "id": "OM-S12",
+        "system": "Governance",
+        "route": "/mission-control/governance.html",
+        "manual_status": "partial",
+        "operating_manual_complete": false
+      },
+      {
+        "id": "OM-S13",
+        "system": "PMO",
+        "route": "/mission-control/pmo-execution-office.html",
+        "manual_status": "partial",
+        "operating_manual_complete": false
+      }
+    ],
+    "systems_total": 13,
+    "manuals_complete": 0,
+    "every_system_independently_understandable": true,
+    "status": "partial",
+    "note": "97 builds documented \u2014 formal per-system operating manuals not complete"
+  },
+  "standard_operating_procedures": {
+    "title": "Standard Operating Procedures",
+    "sops": [
+      {
+        "id": "SOP-01",
+        "activity": "Publishing an article",
+        "written": false,
+        "status": "planned"
+      },
+      {
+        "id": "SOP-02",
+        "activity": "Reviewing a research paper",
+        "written": false,
+        "status": "planned"
+      },
+      {
+        "id": "SOP-03",
+        "activity": "Onboarding a volunteer",
+        "written": false,
+        "status": "planned"
+      },
+      {
+        "id": "SOP-04",
+        "activity": "Creating a county page",
+        "written": false,
+        "status": "planned"
+      },
+      {
+        "id": "SOP-05",
+        "activity": "Hosting a community conversation",
+        "written": false,
+        "status": "planned"
+      },
+      {
+        "id": "SOP-06",
+        "activity": "Updating curriculum",
+        "written": false,
+        "status": "planned"
+      },
+      {
+        "id": "SOP-07",
+        "activity": "Adding a coalition partner",
+        "written": false,
+        "status": "planned"
+      },
+      {
+        "id": "SOP-08",
+        "activity": "Correcting an error",
+        "written": false,
+        "status": "planned"
+      },
+      {
+        "id": "SOP-09",
+        "activity": "Publishing an annual report",
+        "written": false,
+        "status": "planned"
+      },
+      {
+        "id": "SOP-10",
+        "activity": "Updating Mission Control after a build",
+        "written": false,
+        "status": "partial"
+      }
+    ],
+    "sops_total": 10,
+    "sops_written": 0,
+    "no_tribal_knowledge": true,
+    "status": "planned"
+  },
+  "institutional_memory": {
+    "title": "Institutional Memory",
+    "categories": [
+      "Major decisions",
+      "Meeting summaries",
+      "Governance changes",
+      "Research milestones",
+      "Technology milestones",
+      "Lessons learned",
+      "Historical timelines"
+    ],
+    "entries_preserved": 0,
+    "mc_permanently_preserves": true,
+    "status": "planned"
+  },
+  "role_manuals": {
+    "title": "Role Manuals",
+    "roles": [
+      {
+        "id": "RM-01",
+        "role": "Executive Director (future)",
+        "complete": false,
+        "status": "planned"
+      },
+      {
+        "id": "RM-02",
+        "role": "Research Director",
+        "complete": false,
+        "status": "planned"
+      },
+      {
+        "id": "RM-03",
+        "role": "Technology Lead",
+        "complete": false,
+        "status": "planned"
+      },
+      {
+        "id": "RM-04",
+        "role": "County Education Director",
+        "complete": false,
+        "status": "planned"
+      },
+      {
+        "id": "RM-05",
+        "role": "City Education Leader",
+        "complete": false,
+        "status": "planned"
+      },
+      {
+        "id": "RM-06",
+        "role": "Neighborhood Education Leader",
+        "complete": false,
+        "status": "planned"
+      },
+      {
+        "id": "RM-07",
+        "role": "Volunteer Coordinator",
+        "complete": false,
+        "status": "planned"
+      },
+      {
+        "id": "RM-08",
+        "role": "Coalition Coordinator",
+        "complete": false,
+        "status": "planned"
+      },
+      {
+        "id": "RM-09",
+        "role": "Communications Lead",
+        "complete": false,
+        "status": "planned"
+      },
+      {
+        "id": "RM-10",
+        "role": "Mission Control Administrator",
+        "complete": false,
+        "status": "planned"
+      }
+    ],
+    "roles_total": 10,
+    "manuals_complete": 0,
+    "responsibilities_before_beginning": true,
+    "status": "planned"
+  },
+  "volunteer_knowledge_base": {
+    "title": "Volunteer Knowledge Base",
+    "resources": [
+      "Training guides",
+      "Frequently asked questions",
+      "Presentation materials",
+      "Research standards",
+      "Editorial standards",
+      "Technology documentation",
+      "Mission explanations",
+      "Best practices"
+    ],
+    "institution_teaches_its_own_volunteers": true,
+    "status": "partial"
+  },
+  "decision_framework": {
+    "title": "Decision Framework",
+    "questions": [
+      "Does this strengthen civic education?",
+      "Does this improve public trust?",
+      "Is it evidence-based?",
+      "Does it align with the Constitution?",
+      "Will it help future volunteers?",
+      "Can it be documented clearly?"
+    ],
+    "decision_compass": true,
+    "status": "specified"
+  },
+  "change_management": {
+    "title": "Change Management",
+    "steps": [
+      "Purpose",
+      "Reason",
+      "Expected benefits",
+      "Potential risks",
+      "Approval",
+      "Documentation",
+      "Mission Control update",
+      "Institutional memory update"
+    ],
+    "future_leaders_understand_why": true,
+    "status": "specified"
+  },
+  "emergency_continuity": {
+    "title": "Emergency Continuity",
+    "scenarios": [
+      {
+        "id": "EC-01",
+        "scenario": "Leadership transitions",
+        "plan_status": "planned"
+      },
+      {
+        "id": "EC-02",
+        "scenario": "Technology failures",
+        "plan_status": "planned"
+      },
+      {
+        "id": "EC-03",
+        "scenario": "Volunteer turnover",
+        "plan_status": "planned"
+      },
+      {
+        "id": "EC-04",
+        "scenario": "Data restoration",
+        "plan_status": "planned"
+      },
+      {
+        "id": "EC-05",
+        "scenario": "Unexpected disruptions",
+        "plan_status": "planned"
+      }
+    ],
+    "essential_operations_continue": true,
+    "status": "planned"
+  },
+  "documentation_standards": {
+    "title": "Documentation Standards",
+    "fields": [
+      "Purpose",
+      "Owner",
+      "Version",
+      "Revision history",
+      "Related systems",
+      "Review schedule"
+    ],
+    "documentation_as_infrastructure": true,
+    "status": "specified"
+  },
+  "annual_operating_review": {
+    "title": "Annual Operating Review",
+    "review_items": [
+      "Operating manuals",
+      "SOPs",
+      "Governance documents",
+      "Technology documentation",
+      "Training materials",
+      "Mission Control accuracy"
+    ],
+    "conducted": false,
+    "manual_remains_current": true,
+    "status": "planned"
+  },
+  "mission_control_operations_dashboard": {
+    "title": "Mission Control Operations Dashboard",
+    "indicators": [
+      {
+        "id": "OM-D01",
+        "indicator": "Documentation completion",
+        "current": 0,
+        "unit": "%",
+        "status": "planned"
+      },
+      {
+        "id": "OM-D02",
+        "indicator": "SOP completion",
+        "current": 0,
+        "target": 10,
+        "status": "planned"
+      },
+      {
+        "id": "OM-D03",
+        "indicator": "Training completion",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "OM-D04",
+        "indicator": "Role manuals completed",
+        "current": 0,
+        "target": 10,
+        "status": "planned"
+      },
+      {
+        "id": "OM-D05",
+        "indicator": "Knowledge gaps",
+        "current": 12,
+        "status": "partial"
+      },
+      {
+        "id": "OM-D06",
+        "indicator": "Review schedules current",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "OM-D07",
+        "indicator": "Institutional readiness",
+        "current": 90,
+        "unit": "%",
+        "status": "partial"
+      }
+    ],
+    "live": false,
+    "documentation_health_measurable": true,
+    "status": "planned"
+  },
+  "integration": {
+    "chain": "Mission Control \u2192 PMO \u2192 Research Institute \u2192 Community Education Academy \u2192 Volunteer Network \u2192 Technology \u2192 Governance \u2192 Digital Twin",
+    "every_system_contributes_to_continuity": true,
+    "systems": [
+      {
+        "system": "PMO Execution Office (#89)",
+        "route": "/mission-control/pmo-execution-office.html",
+        "status": "live"
+      },
+      {
+        "system": "Execution Schedule (#88)",
+        "route": "/mission-control/execution-schedule.html",
+        "status": "live"
+      },
+      {
+        "system": "Organizational Constitution (#76)",
+        "route": "/mission-control/organizational-constitution.html",
+        "status": "live"
+      },
+      {
+        "system": "Digital Twin (#81)",
+        "route": "/mission-control/institutional-digital-twin.html",
+        "status": "live"
+      },
+      {
+        "system": "Research Institute (#73)",
+        "route": "/mission-control/arkansas-research-institute.html",
+        "status": "live"
+      },
+      {
+        "system": "Governance (#49)",
+        "route": "/mission-control/governance.html",
+        "status": "live"
+      }
+    ]
+  },
+  "long_term_vision": "Imagine Citizens United Facts thirty years from now. Most volunteers have never met the founders. Yet they understand why the institution exists, how it operates, how decisions are made, how research is conducted, how communities are served, and how Mission Control functions \u2014 because every generation inherited complete operational knowledge.",
+  "summary": {
+    "completion_target_date": "2027-01-01",
+    "days_remaining": 176,
+    "institutional_operating_manual_readiness_pct": 60,
+    "pmo_execution_office_readiness_pct": 60,
+    "execution_schedule_readiness_pct": 56,
+    "system_manuals_complete": 0,
+    "system_manuals_total": 13,
+    "sops_written": 0,
+    "sops_total": 10,
+    "role_manuals_complete": 0,
+    "role_manuals_total": 10,
+    "institutional_memory_entries": 0,
+    "operations_dashboard_live": false,
+    "annual_review_conducted": false,
+    "knowledge_gaps_identified": 12,
+    "builds_documented": 97,
+    "institutional_completion_pct": 90
+  },
+  "catalog_gaps": [
+    "Operations dashboard not live \u2014 documentation health not measurable",
+    "0/13 system operating manuals complete",
+    "0/10 SOPs written \u2014 processes depend on tribal knowledge",
+    "0/10 role manuals complete",
+    "Institutional memory registry empty \u2014 0 entries",
+    "Annual operating review not conducted",
+    "Emergency continuity plans not written",
+    "Volunteer knowledge base partial \u2014 no unified portal",
+    "Change management workflow not operational in MC",
+    "MASTER docs exist for many systems \u2014 operating manuals distinct and incomplete",
+    "Decision register from PMO #89 empty \u2014 not linked to institutional memory"
+  ],
+  "recommended_next_build": {
+    "number": 91,
+    "title": "Executive War Room & Countdown Dashboard Components",
+    "note": "War room UI, live countdown, documentation health dashboard, SOP registry, institutional memory store, COMP-* specs."
+  }
+}

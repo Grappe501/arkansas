@@ -65,7 +65,7 @@
       {
         "id": "ES-C02",
         "indicator": "Overall Institutional Completion",
-        "current": 89,
+        "current": 90,
         "unit": "%",
         "status": "partial"
       },
@@ -414,8 +414,8 @@
   "summary": {
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "overall_institutional_completion_pct": 89,
-    "builds_complete": 89,
+    "overall_institutional_completion_pct": 90,
+    "builds_complete": 90,
     "countdown_dashboard_live": false,
     "executive_war_room_live": false,
     "critical_path_blocked": 0,
@@ -442,7 +442,7 @@
     "Overall completion uses build count not true % of V1 deliverables"
   ],
   "recommended_next_build": {
-    "number": 90,
+    "number": 91,
     "title": "Executive War Room & Countdown Dashboard Components",
     "note": "War room UI, live countdown, critical path tracker, department stage automation, Arkansas progress dashboard, weekly review workflow, COMP-* specs."
   }

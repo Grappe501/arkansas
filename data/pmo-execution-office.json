@@ -145,11 +145,11 @@
     ],
     "fields_total": 10,
     "projects_in_registry": 0,
-    "builds_logged_in_mc": 96,
+    "builds_logged_in_mc": 97,
     "live": false,
     "nothing_lost_traceable": true,
     "status": "planned",
-    "note": "96 builds in MC registry \u2014 unified PMO project DB not operational"
+    "note": "97 builds in MC registry \u2014 unified PMO project DB not operational"
   },
   "milestone_management": {
     "title": "Milestone Management",
@@ -397,7 +397,7 @@
       {
         "id": "PMO-W01",
         "widget": "Projects completed",
-        "current": 96,
+        "current": 97,
         "status": "partial"
       },
       {
@@ -445,7 +445,7 @@
       {
         "id": "PMO-W09",
         "widget": "Institutional completion %",
-        "current": 89,
+        "current": 90,
         "unit": "%",
         "status": "partial"
       }
@@ -528,7 +528,7 @@
     "pmo_execution_office_readiness_pct": 60,
     "pmo_v54_readiness_pct": 46,
     "execution_schedule_readiness_pct": 56,
-    "projects_completed": 96,
+    "projects_completed": 97,
     "projects_active": 0,
     "projects_delayed": 0,
     "projects_in_pmo_registry": 0,
@@ -540,7 +540,7 @@
     "volunteer_assignments": 0,
     "pmo_dashboard_live": false,
     "weekly_briefing_automated": false,
-    "institutional_completion_pct": 89
+    "institutional_completion_pct": 90
   },
   "catalog_gaps": [
     "PMO dashboard not live \u2014 no operational cockpit",
@@ -556,7 +556,7 @@
     "Extends PMO #54 \u2014 two PMO dashboards until unified"
   ],
   "recommended_next_build": {
-    "number": 90,
+    "number": 91,
     "title": "Executive War Room & Countdown Dashboard Components",
     "note": "War room UI, live countdown, critical path tracker, PMO project registry, automated weekly briefing, COMP-* specs."
   }

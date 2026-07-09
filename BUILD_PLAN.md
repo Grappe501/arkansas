@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.93.0 · **PMO Execution Office:** [/mission-control/pmo-execution-office.html](/mission-control/pmo-execution-office.html) · **89 builds complete**  
-**Mission Complete Jan 2027** — PMO central execution · 12 portfolios · project registry · **Next:** Build #90 War Room Components  
+**Current version:** 1.94.0 · **Operating Manual:** [/mission-control/institutional-operating-manual.html](/mission-control/institutional-operating-manual.html) · **90 builds complete**  
+**Institutional continuity** — playbooks · SOPs · role manuals · institutional memory · **Next:** Build #91 War Room Components  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **90** | **Master Institutional Operating Manual** | **✅ v1.94.0** |
 | **89** | **Master PMO & Execution Office** | **✅ v1.93.0** |
 | **88** | **Master Execution Schedule** | **✅ v1.92.0** |
 | **87** | **Launch Campaign & First 100 Days Blueprint** | **✅ v1.91.0** |

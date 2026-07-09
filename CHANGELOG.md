@@ -13,6 +13,19 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.94.0] - 2026-07-09 — Build #90 Master Institutional Operating Manual
+
+### If Every Founder Walked Away Tomorrow
+- **Master Institutional Operating Manual v1.0** — institution continues without founders
+- 6 founding philosophy principles; 13 system playbooks; 10 SOPs; 10 role manuals
+- Institutional memory, volunteer knowledge base, decision framework (6 questions)
+- Change management, emergency continuity (5 scenarios), documentation standards, annual review
+- MC operations dashboard (7 indicators) — documentation health measurable when live
+- Integrates PMO (#89), Execution Schedule (#88), Constitution (#76), Digital Twin (#81)
+- Founder legacy — clarity is the greatest gift, not the website
+- Honest: 0/13 operating manuals · 0/10 SOPs · 0/10 role manuals · 0 memory entries · dashboard not live · ~60% readiness
+- MC dashboard: `/mission-control/institutional-operating-manual.html`
+
 ## [1.93.0] - 2026-07-09 — Build #89 Master PMO & Execution Office
 
 ### Building the Institution With Discipline
