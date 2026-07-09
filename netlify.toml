@@ -572,6 +572,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/public-trust-institutional-credibility"
+  to = "/mission-control/public-trust-institutional-credibility.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301

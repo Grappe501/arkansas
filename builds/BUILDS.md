@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#82** | **Public Trust & Institutional Credibility Framework** | **1.86.0** | **✅ Complete** | [082](082-public-trust-institutional-credibility.md) · [/mission-control/public-trust-institutional-credibility.html](../mission-control/public-trust-institutional-credibility.html) |
 | **#81** | **Institutional Digital Twin & Executive Simulation** | **1.85.0** | **✅ Complete** | [081](081-institutional-digital-twin.md) · [/mission-control/institutional-digital-twin.html](../mission-control/institutional-digital-twin.html) |
 | **#80** | **Arkansas Civic Institution Roadmap** | **1.84.0** | **✅ Complete** | [080](080-arkansas-civic-institution-roadmap.md) · [/mission-control/arkansas-civic-institution-roadmap.html](../mission-control/arkansas-civic-institution-roadmap.html) |
 | **#79** | **Arkansas Neighborhood Operating System (ANOS)** | **1.83.0** | **✅ Complete** | [079](079-arkansas-neighborhood-operating-system.md) · [/mission-control/arkansas-neighborhood-operating-system.html](../mission-control/arkansas-neighborhood-operating-system.html) |

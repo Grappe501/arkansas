@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Public Trust <a href="/mission-control/public-trust-institutional-credibility.html" class="mc-inline-link">Trust Architecture #82 →</a></h2>
+    <p class="mc-bar-note">Build #82 — Public Trust & Institutional Credibility. Trust is the product. 7-layer pyramid, trust dashboard, annual audit, founder standard. 0 corrections · audit not conducted. ~50% readiness.</p>
     <h2 class="mc-section-title">Digital Twin <a href="/mission-control/institutional-digital-twin.html" class="mc-inline-link">Executive Simulation #81 →</a></h2>
     <p class="mc-bar-note">Build #81 — Institutional Digital Twin & Executive Simulation. See entire institution before it happens. What-if scenarios, forecasting, statewide heat map, decision support. MC becomes planning system. 0 simulations · twin not live. ~51% readiness.</p>
     <h2 class="mc-section-title">Civic Institution Roadmap <a href="/mission-control/arkansas-civic-institution-roadmap.html" class="mc-inline-link">Legacy Vision #80 →</a></h2>
@@ -5232,6 +5234,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initArkansasNeighborhoodOperatingSystem();
   initArkansasCivicInstitutionRoadmap();
   initInstitutionalDigitalTwin();
+  initPublicTrustInstitutionalCredibility();
 });
 
 async function initUxArchitecture() {
@@ -8574,9 +8577,100 @@ async function initInstitutionalDigitalTwin() {
     <p class="mc-bar-note">
       <a href="/docs/MASTER_INSTITUTIONAL_DIGITAL_TWIN.md">MASTER_INSTITUTIONAL_DIGITAL_TWIN.md</a> ·
       <a href="/data/institutional-digital-twin.json">JSON</a> ·
-      <a href="/mission-control/civic-intelligence-command-center.html">CICC (#65)</a> ·
-      <a href="/mission-control/arkansas-civic-institution-roadmap.html">Legacy Roadmap (#80)</a> ·
       <a href="/mission-control/civic-atlas.html">Civic Atlas (#58)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initPublicTrustInstitutionalCredibility() {
+  const root = document.getElementById('mc-public-trust-institutional-credibility-root');
+  if (!root) return;
+
+  const [ptRes, mcRes] = await Promise.all([
+    fetch('/data/public-trust-institutional-credibility.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const pt = await ptRes.json();
+  const mc = await mcRes.json();
+  const s = pt.summary;
+
+  const pyramidCards = pt.trust_pyramid.layers.map(l => `
+    <div class="mc-card"><h3>Layer ${l.layer}: ${l.title}</h3>
+      <p class="mc-bar-note">Status: ${l.status}</p>
+      <ul class="mc-deliverables">${l.principles.map(p => `<li>${p}</li>`).join('')}</ul></div>`).join('');
+
+  const dashRows = pt.public_trust_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td>
+      <td>${typeof d.current === 'number' ? `${d.current}${d.unit ?? ''}` : d.current}</td><td>${d.status}</td></tr>`).join('');
+
+  const systemRows = pt.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td><td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Public Trust Framework</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #82 · ${pt.title}</p>
+      <h1>${pt.subtitle}</h1>
+      <p class="mc-header__question">${pt.governing_principle}</p>
+      <p class="mc-bar-note">${pt.purpose}</p>
+      <p class="mc-bar-note"><strong>Trust is greatest asset:</strong> ${pt.trust_is_greatest_asset ? 'Yes' : 'No'} · <strong>Extends:</strong> ${pt.integration.extends}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Trust readiness</div><div class="mc-stat__value">${s.public_trust_institutional_credibility_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Pyramid layers</div><div class="mc-stat__value">${s.trust_pyramid_layers}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Dashboard live</div><div class="mc-stat__value">${s.trust_dashboard_live ? 'Yes' : 'No'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Corrections</div><div class="mc-stat__value">${s.corrections_completed}/${s.correction_requests}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Citations</div><div class="mc-stat__value">${s.citation_completeness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Annual audit</div><div class="mc-stat__value">${s.annual_trust_audit_conducted ? 'Done' : 'Pending'}</div></div>
+    </div>
+    <h2 class="mc-section-title">${pt.foundational_principle.title}</h2>
+    <p class="mc-bar-note">Answer before asked: ${pt.foundational_principle.answer_before_asked ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${pt.foundational_principle.questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${pt.trust_pyramid.title}</h2>
+    <div class="mc-grid-2">${pyramidCards}</div>
+    <h2 class="mc-section-title">${pt.public_trust_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${pt.public_trust_dashboard.live ? 'Yes' : 'No'} · ${pt.public_trust_dashboard.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">${pt.page_trust_indicators.title}</h2>
+    <p class="mc-bar-note">Quietly displayed: ${pt.page_trust_indicators.quietly_displayed ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${pt.page_trust_indicators.indicators.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${pt.trust_review_process.title}</h2>
+    <ol class="mc-deliverables">${pt.trust_review_process.steps.map(step => `<li>${step}</li>`).join('')}</ol>
+    <h2 class="mc-section-title">${pt.annual_trust_audit.title}</h2>
+    <p class="mc-bar-note">Conducted: ${pt.annual_trust_audit.conducted ? 'Yes' : 'No'} · Public report: ${pt.annual_trust_audit.public_trust_report ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${pt.annual_trust_audit.domains.map(d => `<li>${d}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${pt.independent_review.title}</h2>
+    <p class="mc-bar-note">Reviews: ${pt.independent_review.reviews_completed}</p>
+    <ul class="mc-deliverables">${pt.independent_review.areas.map(a => `<li>${a}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${pt.public_questions.title}</h2>
+    <p class="mc-bar-note">Logged: ${pt.public_questions.questions_logged} · Transparent log: ${pt.public_questions.transparent_log ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${pt.public_questions.log_types.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${pt.crisis_response.title}</h2>
+    <p class="mc-bar-note">Documented: ${pt.crisis_response.responses_documented}</p>
+    <ol class="mc-deliverables">${pt.crisis_response.steps.map(step => `<li>${step}</li>`).join('')}</ol>
+    <h2 class="mc-section-title">${pt.founders_standard.title}</h2>
+    <p class="mc-bar-note">${pt.founders_standard.text}</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${pt.integration.chain}</p>
+    <p class="mc-bar-note"><strong>Connective tissue:</strong> ${pt.integration.trust_as_connective_tissue ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${pt.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${pt.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${pt.recommended_next_build.number} — ${pt.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${pt.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_PUBLIC_TRUST_INSTITUTIONAL_CREDIBILITY.md">MASTER_PUBLIC_TRUST_INSTITUTIONAL_CREDIBILITY.md</a> ·
+      <a href="/data/public-trust-institutional-credibility.json">JSON</a> ·
+      <a href="/mission-control/trust.html">Trust Framework (#36)</a> ·
+      <a href="/mission-control/evidence-ledger.html">Evidence Ledger (#41)</a> ·
+      <a href="/mission-control/governance.html">Governance (#49)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

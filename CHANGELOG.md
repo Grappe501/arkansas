@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.86.0] - 2026-07-09 — Build #82 Public Trust & Institutional Credibility Framework
+
+### Trust Is the Product
+- **Master Public Trust & Institutional Credibility Framework v1.0** — Arkansas Trust Architecture
+- 7-layer trust pyramid (extends Trust Framework #36); foundational questions answered before asked
+- Public Trust Dashboard (8 indicators), page trust indicators, trust review process
+- Annual Trust Audit, independent review, public questions log, crisis response, founder's standard
+- Integrates Research Institute (#73), Evidence Ledger (#41), Governance (#49), Digital Twin (#81)
+- Honest: dashboard not live · 0% citations · 0 corrections · audit not conducted · 0 independent reviews · ~50% readiness
+- MC dashboard: `/mission-control/public-trust-institutional-credibility.html`
+
 ## [1.85.0] - 2026-07-09 — Build #81 Institutional Digital Twin & Executive Simulation
 
 ### Seeing the Entire Institution Before It Happens

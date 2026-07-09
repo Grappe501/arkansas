@@ -1,0 +1,366 @@
+{
+  "version": "1.0",
+  "build": 82,
+  "updated": "2026-07-09",
+  "title": "Master Public Trust & Institutional Credibility Framework v1.0",
+  "subtitle": "Trust Is the Product",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/public-trust-institutional-credibility.html",
+  "constitution": "/docs/MASTER_PUBLIC_TRUST_INSTITUTIONAL_CREDIBILITY.md",
+  "purpose": "Systems, standards, and operational practices ensuring Citizens United Facts becomes one of the most trusted civic education institutions in Arkansas.",
+  "governing_principle": "Trust is not a communication strategy. Trust is the cumulative result of thousands of disciplined decisions \u2014 every source, correction, volunteer, question, review, year.",
+  "trust_is_greatest_asset": true,
+  "foundational_principle": {
+    "title": "Foundational Principle",
+    "questions": [
+      "Where did this information come from?",
+      "Who wrote this?",
+      "How was it reviewed?",
+      "Can I verify it?",
+      "When was it last updated?",
+      "What if it is wrong?"
+    ],
+    "answer_before_asked": true
+  },
+  "trust_pyramid": {
+    "title": "The Trust Pyramid",
+    "layers_total": 7,
+    "layers": [
+      {
+        "layer": 1,
+        "id": "transparency",
+        "title": "Transparency",
+        "principles": [
+          "Show sources",
+          "Explain methodology",
+          "Document revisions",
+          "Publish standards"
+        ],
+        "status": "partial"
+      },
+      {
+        "layer": 2,
+        "id": "verifiability",
+        "title": "Verifiability",
+        "principles": [
+          "Primary sources",
+          "Court opinions",
+          "Government records",
+          "Academic research",
+          "Historical documents"
+        ],
+        "status": "partial"
+      },
+      {
+        "layer": 3,
+        "id": "consistency",
+        "title": "Consistency",
+        "principles": [
+          "Consistent terminology",
+          "Editorial standards",
+          "Citations",
+          "Educational quality"
+        ],
+        "status": "specified"
+      },
+      {
+        "layer": 4,
+        "id": "intellectual_honesty",
+        "title": "Intellectual Honesty",
+        "principles": [
+          "Documented facts",
+          "Historical interpretation",
+          "Legal reasoning",
+          "Policy proposals",
+          "Scholarly disagreement",
+          "Acknowledged uncertainty"
+        ],
+        "status": "specified"
+      },
+      {
+        "layer": 5,
+        "id": "accountability",
+        "title": "Accountability",
+        "principles": [
+          "Report an error",
+          "Suggest sources",
+          "Request clarification",
+          "Ask questions",
+          "Welcome correction"
+        ],
+        "status": "planned"
+      },
+      {
+        "layer": 6,
+        "id": "stewardship",
+        "title": "Stewardship",
+        "principles": [
+          "Research",
+          "Volunteers",
+          "Technology",
+          "Financial resources",
+          "Community relationships",
+          "Institutional memory"
+        ],
+        "status": "specified"
+      },
+      {
+        "layer": 7,
+        "id": "time",
+        "title": "Time",
+        "principles": [
+          "Long-term institutional investment",
+          "Years of consistent behavior",
+          "Not a marketing objective"
+        ],
+        "status": "specified"
+      }
+    ],
+    "public_trust_rest_upon_layers": true
+  },
+  "public_trust_dashboard": {
+    "title": "Public Trust Dashboard",
+    "indicators": [
+      {
+        "id": "PT-I01",
+        "indicator": "Citation completeness",
+        "current": 0,
+        "unit": "%",
+        "status": "planned"
+      },
+      {
+        "id": "PT-I02",
+        "indicator": "Pages under review",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "PT-I03",
+        "indicator": "Correction requests",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "PT-I04",
+        "indicator": "Corrections completed",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "PT-I05",
+        "indicator": "Source verification status",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "PT-I06",
+        "indicator": "Accessibility compliance",
+        "current": 0,
+        "unit": "%",
+        "status": "planned"
+      },
+      {
+        "id": "PT-I07",
+        "indicator": "Editorial review completion",
+        "current": 0,
+        "unit": "%",
+        "status": "planned"
+      },
+      {
+        "id": "PT-I08",
+        "indicator": "Research review cycle",
+        "current": 0,
+        "status": "planned"
+      }
+    ],
+    "live": false,
+    "trust_becomes_measurable": true,
+    "status": "planned"
+  },
+  "page_trust_indicators": {
+    "title": "Trust Indicators on Every Page",
+    "indicators": [
+      "Last reviewed date",
+      "Primary sources",
+      "Supporting evidence",
+      "Related court decisions",
+      "Research methodology",
+      "Version history",
+      "Correction policy"
+    ],
+    "quietly_displayed": true,
+    "status": "specified"
+  },
+  "trust_review_process": {
+    "title": "Trust Review Process",
+    "steps": [
+      "Research",
+      "Evidence Verification",
+      "Editorial Review",
+      "Accessibility Review",
+      "Publication",
+      "Periodic Review",
+      "Revision (when necessary)"
+    ],
+    "quality_institutional_habit": true,
+    "status": "specified"
+  },
+  "annual_trust_audit": {
+    "title": "Annual Trust Audit",
+    "domains": [
+      "Research quality",
+      "Correction responsiveness",
+      "Citation quality",
+      "Editorial consistency",
+      "Accessibility",
+      "Volunteer standards",
+      "Governance",
+      "Public transparency"
+    ],
+    "conducted": false,
+    "public_trust_report": true,
+    "continual_improvement": true,
+    "status": "specified"
+  },
+  "independent_review": {
+    "title": "Independent Review",
+    "areas": [
+      "Research practices",
+      "Educational materials",
+      "Accessibility",
+      "Historical accuracy",
+      "Editorial standards"
+    ],
+    "reviews_completed": 0,
+    "external_review_strengthens_credibility": true,
+    "status": "specified"
+  },
+  "public_questions": {
+    "title": "Public Questions",
+    "log_types": [
+      "Frequently asked questions",
+      "Common misconceptions",
+      "Clarifications",
+      "Updated explanations",
+      "New resources in response"
+    ],
+    "questions_logged": 0,
+    "transparent_log": true,
+    "listening_strengthens_trust": true,
+    "status": "specified"
+  },
+  "crisis_response": {
+    "title": "Crisis Response",
+    "steps": [
+      "Investigate promptly",
+      "Correct carefully",
+      "Explain transparently",
+      "Document revisions",
+      "Learn institutionally"
+    ],
+    "responses_documented": 0,
+    "trust_grows_through_responsible_response": true,
+    "status": "specified"
+  },
+  "founders_standard": {
+    "title": "Founder's Standard",
+    "text": "Trusted by people who reach different conclusions. Highest test: differing viewpoints still acknowledge accurate history, transparent evidence, fair competing ideas, honest documentation.",
+    "trusted_by_different_conclusions": true,
+    "highest_test_educational_integrity": true
+  },
+  "integration": {
+    "chain": "Research Institute \u2192 Evidence Ledger \u2192 Claims Registry \u2192 Mission Control \u2192 Education Academy \u2192 Communications \u2192 Governance \u2192 Digital Twin",
+    "trust_as_connective_tissue": true,
+    "systems": [
+      {
+        "system": "Research Institute (#73)",
+        "route": "/mission-control/arkansas-research-institute.html",
+        "status": "live"
+      },
+      {
+        "system": "Evidence Ledger (#41)",
+        "route": "/mission-control/evidence-ledger.html",
+        "status": "live"
+      },
+      {
+        "system": "Claims Registry (#41)",
+        "route": "/mission-control/evidence-ledger.html",
+        "status": "live"
+      },
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      },
+      {
+        "system": "Community Education Academy (#68)",
+        "route": "/mission-control/citizen-leadership-academy.html",
+        "status": "live"
+      },
+      {
+        "system": "Arkansas Communications (#72)",
+        "route": "/mission-control/arkansas-communications.html",
+        "status": "live"
+      },
+      {
+        "system": "Governance (#49)",
+        "route": "/mission-control/governance.html",
+        "status": "live"
+      },
+      {
+        "system": "Digital Twin (#81)",
+        "route": "/mission-control/institutional-digital-twin.html",
+        "status": "live"
+      },
+      {
+        "system": "Trust Framework (#36)",
+        "route": "/mission-control/trust.html",
+        "status": "live",
+        "note": "Extended by Build #82"
+      },
+      {
+        "system": "Organizational Constitution (#76)",
+        "route": "/mission-control/organizational-constitution.html",
+        "status": "live"
+      }
+    ],
+    "extends": "Trust Framework (#36)"
+  },
+  "long_term_vision": "Twenty years: reputation that cannot be purchased. Arkansans instinctively know: \"If Citizens United Facts says it, I can see the evidence.\" Built one article, citation, correction, volunteer, conversation, year at a time.",
+  "summary": {
+    "trust_pyramid_layers": 7,
+    "trust_dashboard_live": false,
+    "citation_completeness_pct": 0,
+    "pages_under_review": 0,
+    "correction_requests": 0,
+    "corrections_completed": 0,
+    "annual_trust_audit_conducted": false,
+    "independent_reviews": 0,
+    "public_questions_logged": 0,
+    "public_trust_institutional_credibility_readiness_pct": 50,
+    "trust_framework_readiness_pct": 30,
+    "evidence_ledger_readiness_pct": 22,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "Public Trust Dashboard not live \u2014 trust not measurable in MC",
+    "0% citation completeness tracking \u2014 no audit pipeline",
+    "0 correction requests/completions \u2014 correction workflow not built",
+    "Annual Trust Audit not conducted \u2014 no public trust report",
+    "0 independent reviews \u2014 external review process not operational",
+    "Page trust indicators not on educational pages",
+    "Trust review process specified \u2014 not enforced in publication workflow",
+    "Build #82 vs Trust Framework (#36) \u2014 7-layer vs 5-layer pyramid reconcile?",
+    "Crisis response workflow not documented in MC",
+    "Public questions transparent log not live",
+    "Accessibility compliance not measured",
+    "Editorial review completion not tracked",
+    "Founder standard not on front door"
+  ],
+  "recommended_next_build": {
+    "number": 83,
+    "title": "Trust Dashboard & Citation Audit Components",
+    "note": "Trust dashboard UI, citation audit pipeline, correction workflow, annual trust report, page trust indicators, COMP-* specs, GitHub backlog."
+  }
+}

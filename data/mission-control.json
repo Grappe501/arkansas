@@ -1,6 +1,6 @@
 {
-  "version": "1.85.0",
-  "build": 81,
+  "version": "1.86.0",
+  "build": 82,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,16 +9,16 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 81,
+    "overall_completion": 82,
     "current_build": {
-      "number": 81,
-      "title": "Citizens United Facts Master Institutional Digital Twin & Executive Simulation System v1.0"
-    },
-    "active_phase": "Digital Twin \u2192 Simulation Engine",
-    "last_completed": "Arkansas Civic Institution Roadmap",
-    "next_build": {
       "number": 82,
-      "title": "Digital twin simulation engine & heat map components"
+      "title": "Citizens United Facts Master Public Trust & Institutional Credibility Framework v1.0"
+    },
+    "active_phase": "Public Trust \u2192 Trust Dashboard",
+    "last_completed": "Institutional Digital Twin",
+    "next_build": {
+      "number": 83,
+      "title": "Trust dashboard & citation audit components"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
@@ -61,6 +61,7 @@
     "arkansas_neighborhood_operating_system_readiness": 47,
     "arkansas_civic_institution_roadmap_readiness": 48,
     "institutional_digital_twin_readiness": 51,
+    "public_trust_institutional_credibility_readiness": 50,
     "mc2_readiness": 42,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
@@ -72,7 +73,7 @@
     "encyclopedia_readiness": 19,
     "narrative_readiness": 24,
     "curriculum_readiness": 26,
-    "trust_readiness": 30,
+    "trust_readiness": 50,
     "library_readiness": 22,
     "learning_lab_readiness": 22,
     "media_studio_readiness": 18,
@@ -101,7 +102,7 @@
     "planning_phase_complete": true,
     "planning_constitution_complete": true,
     "eighty_builds_complete": true,
-    "implementation_phase": "digital_twin_next",
+    "implementation_phase": "trust_dashboard_next",
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation",
     "public_launch_recommended": false
@@ -110,8 +111,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 81,
-      "note": "Build #81 \u2014 Institutional Digital Twin & Executive Simulation."
+      "value": 82,
+      "note": "Build #82 \u2014 Public Trust & Institutional Credibility."
     },
     {
       "id": "constitution",
@@ -384,9 +385,9 @@
     {
       "id": "trust",
       "label": "Trust Framework",
-      "value": 28,
+      "value": 50,
       "max": 100,
-      "note": "5 sustainability principles \u00b7 0 active funding sources."
+      "note": "Trust architecture \u2014 0 corrections \u00b7 audit pending."
     },
     {
       "id": "research_library",
@@ -702,6 +703,13 @@
       "value": 51,
       "max": 100,
       "note": "0 county twins \u00b7 predictive planned."
+    },
+    {
+      "id": "public_trust_institutional_credibility",
+      "label": "Public Trust",
+      "value": 50,
+      "max": 100,
+      "note": "0% citations \u00b7 dashboard planned."
     }
   ],
   "public_readiness": {
@@ -1480,6 +1488,12 @@
       "id": "institutional_digital_twin",
       "label": "Digital Twin",
       "href": "/mission-control/institutional-digital-twin.html",
+      "status": "complete"
+    },
+    {
+      "id": "public_trust_institutional_credibility",
+      "label": "Public Trust",
+      "href": "/mission-control/public-trust-institutional-credibility.html",
       "status": "complete"
     }
   ],
@@ -2506,6 +2520,58 @@
     }
   ],
   "builds": [
+    {
+      "number": 82,
+      "title": "Citizens United Facts Master Public Trust & Institutional Credibility Framework v1.0",
+      "version": "1.86.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Arkansas Trust Architecture \u2014 trust is the greatest asset",
+      "summary": "7-layer trust pyramid, dashboard, review process, annual audit, founder standard, 50% readiness. 0 corrections \u00b7 audit not conducted.",
+      "files_created": [
+        "data/public-trust-institutional-credibility.json",
+        "docs/MASTER_PUBLIC_TRUST_INSTITUTIONAL_CREDIBILITY.md",
+        "builds/082-public-trust-institutional-credibility.md",
+        "mission-control/public-trust-institutional-credibility.html",
+        "scripts/gen-public-trust-institutional-credibility.py",
+        "scripts/update-mc-build82.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/public-trust-institutional-credibility.html"
+      ],
+      "decisions_made": [
+        "Trust is greatest asset \u2014 measure like research and growth",
+        "7-layer trust pyramid (extends #36 5-layer)",
+        "Public Trust Dashboard \u2014 8 indicators",
+        "Annual Trust Audit \u2014 public report",
+        "Founder standard \u2014 trusted by different conclusions",
+        "50% readiness \u2014 blueprint only"
+      ],
+      "open_questions": [
+        "Build #82 vs Trust Framework (#36) \u2014 unify dashboards?",
+        "Citation audit \u2014 automated or manual?",
+        "Correction workflow \u2014 Netlify Forms or MC-native?",
+        "Independent review \u2014 who qualifies as outside reviewer?"
+      ],
+      "risks": [
+        "Public Trust Dashboard not live \u2014 trust not measurable in MC",
+        "0% citation completeness tracking \u2014 no audit pipeline",
+        "0 correction requests/completions \u2014 correction workflow not built",
+        "Annual Trust Audit not conducted \u2014 no public trust report"
+      ],
+      "next_recommended": 83,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/public-trust-institutional-credibility.html",
+      "review_status": "complete"
+    },
     {
       "number": 81,
       "title": "Citizens United Facts Master Institutional Digital Twin & Executive Simulation System v1.0",
@@ -6797,22 +6863,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Institutional Digital Twin v1.0 \u2014 see institution before it happens",
-    "building_now": "81 builds \u2014 simulation engine next",
+    "what_built": "Public Trust Framework v1.0 \u2014 trust is the product",
+    "building_now": "82 builds \u2014 trust dashboard next",
     "blocked": [
-      "Simulation engine",
-      "Heat map",
-      "Decision support",
-      "Historical replay",
-      "Predictive intelligence"
+      "Trust dashboard",
+      "Citation audit",
+      "Correction workflow",
+      "Annual trust report"
     ],
     "ready_public": [
-      "12-system model",
-      "5 scenarios",
-      "Forecasting domains",
-      "Three questions framework"
+      "7-layer pyramid",
+      "Review process",
+      "Founder standard",
+      "Crisis response"
     ],
-    "next": "Build #82 \u2014 Digital twin simulation engine & heat map components"
+    "next": "Build #83 \u2014 Trust dashboard & citation audit components"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -7652,5 +7717,13 @@
     "simulations_run": 0,
     "heat_map_live": false,
     "executive_simulation": true
+  },
+  "public_trust_institutional_credibility": "/data/public-trust-institutional-credibility.json",
+  "public_trust_institutional_credibility_dashboard": "/mission-control/public-trust-institutional-credibility.html",
+  "public_trust_institutional_credibility_inventory": {
+    "readiness_score": 50,
+    "trust_pyramid_layers": 7,
+    "trust_dashboard_live": false,
+    "trust_is_product": true
   }
 }
