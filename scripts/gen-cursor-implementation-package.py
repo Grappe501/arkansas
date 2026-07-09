@@ -86,7 +86,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 11  # IMP-01 through IMP-11 (doctrinal)
+steps_documented = 12  # IMP-01 through IMP-12 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -2380,6 +2380,176 @@ RESEARCH_INSTITUTE_MANIFEST = {
     'implemented': False,
 }
 
+ACADEMY_SCHOOLS = {
+    'constitutional_foundations': [
+        'us_constitution', 'separation_of_powers', 'federalism',
+        'individual_rights', 'judicial_review',
+    ],
+    'campaign_finance': [
+        'citizens_united', 'campaign_finance_history', 'disclosure',
+        'independent_expenditures', 'political_action_committees', 'public_financing',
+    ],
+    'arkansas_government': [
+        'state_government', 'local_government', 'county_government',
+        'city_government', 'school_boards', 'ballot_initiatives',
+    ],
+    'civic_participation': [
+        'public_meetings', 'legislative_process', 'public_records',
+        'community_organizing', 'civic_dialogue', 'volunteer_leadership',
+    ],
+    'community_leadership': [
+        'hosting_conversations', 'public_speaking', 'presentation_skills',
+        'facilitation', 'listening_skills', 'building_trust',
+    ],
+}
+
+LEARNING_LEVELS = [
+    {'level': 100, 'title': 'Introduction', 'description': 'No prior knowledge required'},
+    {'level': 200, 'title': 'Intermediate', 'description': 'Builds foundational understanding'},
+    {'level': 300, 'title': 'Advanced', 'description': 'Deep analysis; leadership preparation'},
+    {'level': 400, 'title': 'Education Leader', 'description': 'Teaching, facilitation, mentoring'},
+]
+
+CURRICULUM_FACTORY_STAGES = [
+    {'stage': 'research', 'title': 'Research'},
+    {'stage': 'evidence_verification', 'title': 'Evidence Verification'},
+    {'stage': 'learning_objectives', 'title': 'Learning Objectives'},
+    {'stage': 'lesson_design', 'title': 'Lesson Design'},
+    {'stage': 'ai_review', 'title': 'AI Review'},
+    {'stage': 'educational_review', 'title': 'Educational Review'},
+    {'stage': 'accessibility_review', 'title': 'Accessibility Review'},
+    {'stage': 'publication', 'title': 'Publication'},
+    {'stage': 'continuous_improvement', 'title': 'Continuous Improvement'},
+]
+
+LEARNING_FORMATS = [
+    'articles', 'short_lessons', 'interactive_modules', 'videos', 'podcasts',
+    'presentations', 'discussion_guides', 'case_studies', 'knowledge_checks',
+    'reference_libraries',
+]
+
+PERSONALIZED_LEARNING_FEATURES = [
+    'recommended_courses', 'suggested_next_lessons', 'learning_history',
+    'certificates_earned', 'bookmarks', 'ai_study_assistant', 'county_specific_resources',
+]
+
+CERTIFICATION_TYPES = [
+    'constitutional_foundations', 'campaign_finance_fundamentals', 'arkansas_government',
+    'community_education', 'research_literacy', 'education_leader_certification',
+]
+
+EDUCATION_LEADER_REQUIREMENTS = [
+    'core_curriculum', 'presentation_training', 'discussion_facilitation',
+    'research_standards', 'evidence_standards', 'community_engagement',
+    'ethics_and_public_trust',
+]
+
+AI_TUTOR_CAPABILITIES = [
+    'explain_concepts', 'recommend_lessons', 'summarize_research',
+    'create_practice_questions', 'suggest_related_materials',
+    'track_learning_progress', 'encourage_continued_learning',
+]
+
+COUNTY_ACADEMY_METRICS = [
+    'learners_enrolled', 'courses_completed', 'education_leaders_certified',
+    'community_presentations', 'learning_events', 'volunteer_growth',
+]
+
+CITY_ACADEMY_METRICS = [
+    'active_learners', 'community_classes', 'education_leaders',
+    'presentation_activity', 'neighborhood_participation', 'certification_growth',
+]
+
+MC_ACADEMY_METRICS = [
+    'enrollments', 'completion_rates', 'certificates_awarded',
+    'education_leaders_trained', 'lesson_quality', 'learner_satisfaction',
+    'knowledge_retention', 'course_usage',
+]
+
+CONTINUING_EDUCATION_TRIGGERS = [
+    'updated_lessons', 'new_court_decisions', 'arkansas_legislative_developments',
+    'research_updates', 'advanced_certifications',
+]
+
+ACADEMY_OCTOBER_REQUIREMENTS = [
+    'academy_access',
+    'education_leader_or_leader_in_training',
+    'county_specific_educational_resources',
+    'volunteer_certification_pathway',
+]
+
+ACADEMY_SYSTEM_CHAIN = [
+    'research_institute', 'evidence_ledger', 'knowledge_platform', 'mission_control',
+    'volunteer_network', 'county_operating_system', 'city_operating_system',
+    'neighborhood_operating_system', 'ai_localbrains',
+]
+
+MAJOR_SYSTEMS_COMPLETED = [
+    'technical_constitution', 'technical_architecture', 'route_architecture',
+    'canonical_data_model', 'identity_permissions', 'design_system',
+    'mission_control', 'localbrain_network', 'knowledge_graph',
+    'publishing_system', 'research_institute', 'community_education_academy',
+]
+
+EDUCATION_ACADEMY_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-12',
+    'updated': today,
+    'title': 'Master Community Education Academy, Curriculum Factory & Certification System',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_12_COMMUNITY_EDUCATION_ACADEMY.md',
+    'source_registries': {
+        'education_academy': '/data/education-academy.json',
+        'citizen_leadership_academy': '/data/citizen-leadership-academy.json',
+        'research_institute': '/data/research-institute-manifest.json',
+        'content_management': '/data/content-management-manifest.json',
+        'knowledge_graph': '/data/knowledge-graph-manifest.json',
+    },
+    'philosophy': 'Teach how to think critically, not what to think politically',
+    'governing_principle': (
+        'Research creates knowledge; education creates understanding; '
+        'understanding creates confident leaders; leaders strengthen communities'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'academy_schools': ACADEMY_SCHOOLS,
+    'school_count': len(ACADEMY_SCHOOLS),
+    'topic_count': sum(len(v) for v in ACADEMY_SCHOOLS.values()),
+    'learning_levels': LEARNING_LEVELS,
+    'learning_level_count': len(LEARNING_LEVELS),
+    'curriculum_factory': CURRICULUM_FACTORY_STAGES,
+    'curriculum_stage_count': len(CURRICULUM_FACTORY_STAGES),
+    'learning_formats': LEARNING_FORMATS,
+    'personalized_learning_features': PERSONALIZED_LEARNING_FEATURES,
+    'certification_types': CERTIFICATION_TYPES,
+    'certification_count': len(CERTIFICATION_TYPES),
+    'education_leader_requirements': EDUCATION_LEADER_REQUIREMENTS,
+    'ai_tutor_capabilities': AI_TUTOR_CAPABILITIES,
+    'ai_tutor_rule': 'AI supports education without replacing human curiosity',
+    'county_academy_metrics': COUNTY_ACADEMY_METRICS,
+    'city_academy_metrics': CITY_ACADEMY_METRICS,
+    'mc_academy_metrics': MC_ACADEMY_METRICS,
+    'continuing_education_triggers': CONTINUING_EDUCATION_TRIGGERS,
+    'october_county_objective': {
+        'target_date': county_milestone_date,
+        'requirements': ACADEMY_OCTOBER_REQUIREMENTS,
+        'aligns_with': '75-by-October-1 Milestone',
+    },
+    'academy_system_chain': ACADEMY_SYSTEM_CHAIN,
+    'major_systems_completed': MAJOR_SYSTEMS_COMPLETED,
+    'packages_completed': 12,
+    'packages_total': 50,
+    'packages_complete_pct': 24,
+    'engineering_note': 'Doctrinal IMP-12 Academy; engineering IMP-12 is App Router layout hierarchy',
+    'status': 'documented',
+    'implemented': False,
+}
+
 ROUTE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -2443,11 +2613,12 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D12', 'indicator': 'Knowledge Graph (IMP-09)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D13', 'indicator': 'Content Management (IMP-10)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D14', 'indicator': 'Research Institute (IMP-11)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D15', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D15', 'indicator': 'Education Academy (IMP-12)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D16', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
-    82,
+    84,
     14
     + len(IMPLEMENTATION_STEPS) // 2
     + len(BANDS) * 2
@@ -2735,7 +2906,31 @@ out = {
             'number': 12,
             'id': 'IMP-12',
             'title': 'Master Community Education Academy, Curriculum Factory & Certification System',
-            'note': 'Doctrinal package 12; engineering IMP-12 is App Router layout hierarchy',
+            'status': 'documented',
+        },
+    },
+    'education_academy': {
+        'title': 'Master Community Education Academy, Curriculum Factory & Certification System',
+        'package': 'Implementation Package 12 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_12_COMMUNITY_EDUCATION_ACADEMY.md',
+        'manifest': '/data/education-academy-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': EDUCATION_ACADEMY_MANIFEST['philosophy'],
+        'school_count': EDUCATION_ACADEMY_MANIFEST['school_count'],
+        'topic_count': EDUCATION_ACADEMY_MANIFEST['topic_count'],
+        'learning_level_count': EDUCATION_ACADEMY_MANIFEST['learning_level_count'],
+        'curriculum_stage_count': EDUCATION_ACADEMY_MANIFEST['curriculum_stage_count'],
+        'certification_count': EDUCATION_ACADEMY_MANIFEST['certification_count'],
+        'packages_completed': EDUCATION_ACADEMY_MANIFEST['packages_completed'],
+        'packages_complete_pct': EDUCATION_ACADEMY_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engineering_note': EDUCATION_ACADEMY_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 13,
+            'id': 'IMP-13',
+            'title': 'Master Volunteer Network, Education Leader Pipeline & Community Organizing Platform',
+            'note': 'Doctrinal package 13; engineering IMP-13 is design tokens port',
         },
     },
     'master_timeline': MASTER_TIMELINE,
@@ -2869,6 +3064,10 @@ with open(root / 'data/content-management-manifest.json', 'w', newline='\n') as 
 
 with open(root / 'data/research-institute-manifest.json', 'w', newline='\n') as f:
     json.dump(RESEARCH_INSTITUTE_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/education-academy-manifest.json', 'w', newline='\n') as f:
+    json.dump(EDUCATION_ACADEMY_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

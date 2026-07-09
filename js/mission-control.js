@@ -10663,6 +10663,10 @@ async function initCursorImplementationPackage() {
     <h2 class="mc-section-title">Master Timeline</h2>
     <p class="mc-bar-note"><strong>Software complete:</strong> ${cip.software_completion_date || '2026-07-11'} · <strong>75 counties:</strong> ${cip.county_milestone_date || '2026-10-01'} · <strong>Organizational readiness:</strong> ${cip.organizational_readiness_date || '2027-01-01'}</p>
     <p class="mc-bar-note">${cip.master_timeline?.sequence || 'Software Complete → 75 Counties → Organizational Readiness'}</p>
+    <h2 class="mc-section-title">Education Academy (IMP-12)</h2>
+    <p class="mc-bar-note"><strong>${cip.education_academy.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.education_academy.school_count} schools · ${cip.education_academy.topic_count} topics · ${cip.education_academy.learning_level_count} learning levels · ${cip.education_academy.certification_count} certifications · ${cip.education_academy.packages_complete_pct}% complete (${cip.education_academy.packages_completed}/50)</p>
+    <p class="mc-bar-note"><a href="${cip.education_academy.route}">IMPLEMENTATION_PACKAGE_12_COMMUNITY_EDUCATION_ACADEMY.md</a> · <a href="${cip.education_academy.manifest}">education-academy-manifest.json</a> · <a href="/mission-control/education-academy.html">Academy dashboard</a></p>
+    <p class="mc-bar-note">${cip.education_academy.philosophy}</p>
     <h2 class="mc-section-title">Research Institute (IMP-11)</h2>
     <p class="mc-bar-note"><strong>${cip.research_institute.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.research_institute.research_program_count} research programs · ${cip.research_institute.lifecycle_stage_count} lifecycle stages · ${cip.research_institute.packages_complete_pct}% complete (${cip.research_institute.packages_completed}/50)</p>
     <p class="mc-bar-note"><strong>75-by-October-1:</strong> ${cip.research_institute.counties_total} counties · target ${cip.research_institute.county_milestone_date} · ${cip.research_institute.days_to_county_milestone} days remaining</p>

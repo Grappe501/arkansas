@@ -1,0 +1,314 @@
+{
+  "version": "1.0",
+  "build": 101,
+  "package": "IMP-12",
+  "updated": "2026-07-09",
+  "title": "Master Community Education Academy, Curriculum Factory & Certification System",
+  "constitution": "/docs/IMPLEMENTATION_PACKAGE_12_COMMUNITY_EDUCATION_ACADEMY.md",
+  "source_registries": {
+    "education_academy": "/data/education-academy.json",
+    "citizen_leadership_academy": "/data/citizen-leadership-academy.json",
+    "research_institute": "/data/research-institute-manifest.json",
+    "content_management": "/data/content-management-manifest.json",
+    "knowledge_graph": "/data/knowledge-graph-manifest.json"
+  },
+  "philosophy": "Teach how to think critically, not what to think politically",
+  "governing_principle": "Research creates knowledge; education creates understanding; understanding creates confident leaders; leaders strengthen communities",
+  "master_timeline": {
+    "phase_one": {
+      "id": "software_completion",
+      "title": "Software Completion",
+      "target_date": "2026-07-11",
+      "days_remaining": 2,
+      "scope": [
+        "Public website",
+        "Mission Control",
+        "LocalBrains",
+        "Community Education Academy",
+        "Knowledge Platform",
+        "Research system",
+        "Volunteer system",
+        "Coalition system",
+        "County, City, and Neighborhood systems",
+        "AI infrastructure",
+        "Administrative tools"
+      ]
+    },
+    "phase_two": {
+      "id": "county_milestone",
+      "title": "75 Counties by October 1",
+      "target_date": "2026-10-01",
+      "days_remaining": 84,
+      "scope": [
+        "Completed county profile for all 75 counties",
+        "Education Leader or active recruitment contact per county",
+        "County dashboard operational in Mission Control",
+        "Initial local resource information",
+        "Development plan for continued growth per county"
+      ]
+    },
+    "phase_three": {
+      "id": "organizational_readiness",
+      "title": "Organizational Readiness",
+      "target_date": "2027-01-01",
+      "days_remaining": 176,
+      "focus": [
+        "Recruiting Education Leaders",
+        "Expanding county coverage",
+        "Growing city leadership",
+        "Coalition development",
+        "Volunteer training",
+        "Community conversations",
+        "Research expansion",
+        "Public testing",
+        "User feedback",
+        "System refinement",
+        "Launch certification",
+        "City and neighborhood systems mature",
+        "Statewide volunteer development expanded"
+      ]
+    },
+    "sequence": "Software Complete (Jul 11, 2026) \u2192 75 Counties (Oct 1, 2026) \u2192 Organizational Readiness (Jan 2027)",
+    "build_out_months_approx": 6,
+    "county_milestone": {
+      "target_date": "2026-10-01",
+      "counties_total": 75,
+      "days_remaining": 84,
+      "label": "75-by-October-1 Milestone"
+    }
+  },
+  "software_completion_date": "2026-07-11",
+  "county_milestone_date": "2026-10-01",
+  "organizational_readiness_date": "2027-01-01",
+  "days_to_software": 2,
+  "days_to_county_milestone": 84,
+  "days_to_organizational": 176,
+  "academy_schools": {
+    "constitutional_foundations": [
+      "us_constitution",
+      "separation_of_powers",
+      "federalism",
+      "individual_rights",
+      "judicial_review"
+    ],
+    "campaign_finance": [
+      "citizens_united",
+      "campaign_finance_history",
+      "disclosure",
+      "independent_expenditures",
+      "political_action_committees",
+      "public_financing"
+    ],
+    "arkansas_government": [
+      "state_government",
+      "local_government",
+      "county_government",
+      "city_government",
+      "school_boards",
+      "ballot_initiatives"
+    ],
+    "civic_participation": [
+      "public_meetings",
+      "legislative_process",
+      "public_records",
+      "community_organizing",
+      "civic_dialogue",
+      "volunteer_leadership"
+    ],
+    "community_leadership": [
+      "hosting_conversations",
+      "public_speaking",
+      "presentation_skills",
+      "facilitation",
+      "listening_skills",
+      "building_trust"
+    ]
+  },
+  "school_count": 5,
+  "topic_count": 29,
+  "learning_levels": [
+    {
+      "level": 100,
+      "title": "Introduction",
+      "description": "No prior knowledge required"
+    },
+    {
+      "level": 200,
+      "title": "Intermediate",
+      "description": "Builds foundational understanding"
+    },
+    {
+      "level": 300,
+      "title": "Advanced",
+      "description": "Deep analysis; leadership preparation"
+    },
+    {
+      "level": 400,
+      "title": "Education Leader",
+      "description": "Teaching, facilitation, mentoring"
+    }
+  ],
+  "learning_level_count": 4,
+  "curriculum_factory": [
+    {
+      "stage": "research",
+      "title": "Research"
+    },
+    {
+      "stage": "evidence_verification",
+      "title": "Evidence Verification"
+    },
+    {
+      "stage": "learning_objectives",
+      "title": "Learning Objectives"
+    },
+    {
+      "stage": "lesson_design",
+      "title": "Lesson Design"
+    },
+    {
+      "stage": "ai_review",
+      "title": "AI Review"
+    },
+    {
+      "stage": "educational_review",
+      "title": "Educational Review"
+    },
+    {
+      "stage": "accessibility_review",
+      "title": "Accessibility Review"
+    },
+    {
+      "stage": "publication",
+      "title": "Publication"
+    },
+    {
+      "stage": "continuous_improvement",
+      "title": "Continuous Improvement"
+    }
+  ],
+  "curriculum_stage_count": 9,
+  "learning_formats": [
+    "articles",
+    "short_lessons",
+    "interactive_modules",
+    "videos",
+    "podcasts",
+    "presentations",
+    "discussion_guides",
+    "case_studies",
+    "knowledge_checks",
+    "reference_libraries"
+  ],
+  "personalized_learning_features": [
+    "recommended_courses",
+    "suggested_next_lessons",
+    "learning_history",
+    "certificates_earned",
+    "bookmarks",
+    "ai_study_assistant",
+    "county_specific_resources"
+  ],
+  "certification_types": [
+    "constitutional_foundations",
+    "campaign_finance_fundamentals",
+    "arkansas_government",
+    "community_education",
+    "research_literacy",
+    "education_leader_certification"
+  ],
+  "certification_count": 6,
+  "education_leader_requirements": [
+    "core_curriculum",
+    "presentation_training",
+    "discussion_facilitation",
+    "research_standards",
+    "evidence_standards",
+    "community_engagement",
+    "ethics_and_public_trust"
+  ],
+  "ai_tutor_capabilities": [
+    "explain_concepts",
+    "recommend_lessons",
+    "summarize_research",
+    "create_practice_questions",
+    "suggest_related_materials",
+    "track_learning_progress",
+    "encourage_continued_learning"
+  ],
+  "ai_tutor_rule": "AI supports education without replacing human curiosity",
+  "county_academy_metrics": [
+    "learners_enrolled",
+    "courses_completed",
+    "education_leaders_certified",
+    "community_presentations",
+    "learning_events",
+    "volunteer_growth"
+  ],
+  "city_academy_metrics": [
+    "active_learners",
+    "community_classes",
+    "education_leaders",
+    "presentation_activity",
+    "neighborhood_participation",
+    "certification_growth"
+  ],
+  "mc_academy_metrics": [
+    "enrollments",
+    "completion_rates",
+    "certificates_awarded",
+    "education_leaders_trained",
+    "lesson_quality",
+    "learner_satisfaction",
+    "knowledge_retention",
+    "course_usage"
+  ],
+  "continuing_education_triggers": [
+    "updated_lessons",
+    "new_court_decisions",
+    "arkansas_legislative_developments",
+    "research_updates",
+    "advanced_certifications"
+  ],
+  "october_county_objective": {
+    "target_date": "2026-10-01",
+    "requirements": [
+      "academy_access",
+      "education_leader_or_leader_in_training",
+      "county_specific_educational_resources",
+      "volunteer_certification_pathway"
+    ],
+    "aligns_with": "75-by-October-1 Milestone"
+  },
+  "academy_system_chain": [
+    "research_institute",
+    "evidence_ledger",
+    "knowledge_platform",
+    "mission_control",
+    "volunteer_network",
+    "county_operating_system",
+    "city_operating_system",
+    "neighborhood_operating_system",
+    "ai_localbrains"
+  ],
+  "major_systems_completed": [
+    "technical_constitution",
+    "technical_architecture",
+    "route_architecture",
+    "canonical_data_model",
+    "identity_permissions",
+    "design_system",
+    "mission_control",
+    "localbrain_network",
+    "knowledge_graph",
+    "publishing_system",
+    "research_institute",
+    "community_education_academy"
+  ],
+  "packages_completed": 12,
+  "packages_total": 50,
+  "packages_complete_pct": 24,
+  "engineering_note": "Doctrinal IMP-12 Academy; engineering IMP-12 is App Router layout hierarchy",
+  "status": "documented",
+  "implemented": false
+}

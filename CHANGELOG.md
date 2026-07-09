@@ -13,6 +13,18 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.12] - 2026-07-09 — IMP-12 Community Education Academy
+
+### Implementation Package 12 of 50
+- **Master Community Education Academy, Curriculum Factory & Certification System**
+- 5 schools · 30 topics · 4 learning levels · 9 curriculum factory stages · 6 certification types
+- Education Leader program, AI learning assistant, personalized learning, county/city dashboards
+- Oct 1 2026 county objective: academy access, Education Leaders, certification pathways
+- Machine-readable **education-academy-manifest.json**
+- Institutional foundation complete: 12/50 packages (**24%**)
+- IMP-13 next (doctrinal): Volunteer Network, Education Leader Pipeline & Community Organizing
+- Honest: 12/50 documented · 0/50 implemented · 84% package readiness
+
 ## [2.05.11] - 2026-07-09 — IMP-11 Research Institute & Evidence Ledger
 
 ### Implementation Package 11 of 50

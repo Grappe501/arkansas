@@ -387,7 +387,31 @@
       "number": 12,
       "id": "IMP-12",
       "title": "Master Community Education Academy, Curriculum Factory & Certification System",
-      "note": "Doctrinal package 12; engineering IMP-12 is App Router layout hierarchy"
+      "status": "documented"
+    }
+  },
+  "education_academy": {
+    "title": "Master Community Education Academy, Curriculum Factory & Certification System",
+    "package": "Implementation Package 12 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_12_COMMUNITY_EDUCATION_ACADEMY.md",
+    "manifest": "/data/education-academy-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Teach how to think critically, not what to think politically",
+    "school_count": 5,
+    "topic_count": 29,
+    "learning_level_count": 4,
+    "curriculum_stage_count": 9,
+    "certification_count": 6,
+    "packages_completed": 12,
+    "packages_complete_pct": 24,
+    "county_milestone_date": "2026-10-01",
+    "engineering_note": "Doctrinal IMP-12 Academy; engineering IMP-12 is App Router layout hierarchy",
+    "next_package": {
+      "number": 13,
+      "id": "IMP-13",
+      "title": "Master Volunteer Network, Education Leader Pipeline & Community Organizing Platform",
+      "note": "Doctrinal package 13; engineering IMP-13 is design tokens port"
     }
   },
   "master_timeline": {
@@ -1789,7 +1813,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 11,
+        "current": 12,
         "status": "partial"
       },
       {
@@ -1866,6 +1890,12 @@
       },
       {
         "id": "CIP-D15",
+        "indicator": "Education Academy (IMP-12)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D16",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -1916,9 +1946,9 @@
     "days_to_organizational": 176,
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "implementation_package_readiness_pct": 82,
+    "implementation_package_readiness_pct": 84,
     "steps_total": 50,
-    "steps_documented": 11,
+    "steps_documented": 12,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

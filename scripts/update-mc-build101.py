@@ -26,7 +26,7 @@ tl = cip.get('master_timeline', {})
 
 
 
-mc['version'] = '2.05.11'
+mc['version'] = '2.05.12'
 
 mc['updated'] = '2026-07-09'
 
@@ -92,21 +92,21 @@ for bar in mc['progress_bars']:
 
 mc['briefing'] = {
 
-    'what_built': 'IMP-01–11 documented — Research Institute + 75-by-Oct-1 county milestone',
+    'what_built': 'IMP-01–12 documented — institutional foundation complete (24%)',
 
-    'building_now': 'IMP-12 Community Education Academy next; engineering Sprint Zero (IMP-10 gate) pending',
+    'building_now': 'IMP-13 Volunteer Network & Education Leader Pipeline next; Sprint Zero pending',
 
     'blocked': ['Sprint Zero not complete', '0/50 code-implemented', f"{s.get('days_to_software', 0)} days to software target"],
 
     'ready_public': [
 
-        'Research Institute', 'research-institute-manifest.json', '75-by-October-1 Milestone',
+        'Education Academy', 'education-academy-manifest.json', 'Curriculum Factory',
 
-        'Content Management', 'Knowledge Graph', 'Master Timeline',
+        'Research Institute', 'Content Management', '75-by-October-1 Milestone',
 
     ],
 
-    'next': 'IMP-12 — Master Community Education Academy, Curriculum Factory & Certification System',
+    'next': 'IMP-13 — Master Volunteer Network, Education Leader Pipeline & Community Organizing Platform',
 
 }
 
