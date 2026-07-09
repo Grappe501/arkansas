@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.28.0] - 2026-07-09 — Build #24 Contact Intelligence
+
+### Contact Intelligence & Community Relationship Architecture
+- **Arkansas Community Intelligence System v1.0** — 14 modules, 12 interest topics, 14 skills
+- Civic Education Profile schema, county intelligence, referral tracking architecture
+- Privacy-first principles; maps to database schema entities (Build #22)
+- 31% honest readiness — architecture defined, backend not integrated
+- MC dashboard: `/mission-control/contact-intelligence.html`
+
 ## [1.27.0] - 2026-07-09 — Build #23 Wireframes
 
 ### Major Screen Wireframe Blueprint

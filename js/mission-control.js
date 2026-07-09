@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Contact Intelligence <a href="/mission-control/contact-intelligence.html" class="mc-inline-link">Relationship Network →</a></h2>
+    <p class="mc-bar-note">Build #24 — Civic Education Profiles, interest/skills taxonomies, county intelligence, privacy-first relationship architecture.</p>
     <h2 class="mc-section-title">Wireframe Blueprint <a href="/mission-control/wireframes.html" class="mc-inline-link">25 Screens →</a></h2>
     <p class="mc-bar-note">Build #23 — Screen architecture, sections per route, outcome mapping, mobile requirements.</p>
     <h2 class="mc-section-title">Database Schema <a href="/mission-control/database.html" class="mc-inline-link">Entity Blueprint →</a></h2>
@@ -2287,6 +2289,104 @@ async function initWireframeBlueprint() {
   initDevConsole(mc);
 }
 
+async function initContactIntelligenceBlueprint() {
+  const root = document.getElementById('mc-contact-intelligence-root');
+  if (!root) return;
+
+  const [ciRes, mcRes] = await Promise.all([
+    fetch('/data/contact-intelligence.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ci = await ciRes.json();
+  const mc = await mcRes.json();
+  const s = ci.summary;
+  const tax = ci.taxonomies;
+
+  const moduleRows = ci.modules.map(m => `
+    <tr class="${m.implementation_status === 'partial' ? 'mc-table__row--approved' : ''}">
+      <td><code>${m.id}</code></td>
+      <td><strong>${m.title}</strong></td>
+      <td>${m.field_count}</td>
+      <td>${m.database_entity || '—'}</td>
+      <td>${m.implementation_status}</td>
+    </tr>`).join('');
+
+  const moduleCards = ci.modules.map(m => `
+    <div class="mc-card">
+      <h3>${m.id} — ${m.title}</h3>
+      <p class="mc-bar-note">${m.purpose}</p>
+      <p class="mc-bar-note">Entity: <code>${m.database_entity || 'policy'}</code> · Status: ${m.implementation_status}</p>
+      <ul class="mc-deliverables">${m.fields.map(f => {
+        const label = typeof f === 'string' ? f : (f.name || f);
+        return `<li>${label}</li>`;
+      }).join('')}</ul>
+      ${m.notes ? `<p class="mc-bar-note"><em>${m.notes}</em></p>` : ''}
+    </div>`).join('');
+
+  const metricRows = ci.mc_metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td><code>${m.entity}</code></td><td>${m.status}</td></tr>`).join('');
+
+  const integrationRows = ci.integrations.map(i => `
+    <tr><td>${i.system}</td><td>${i.route ? `<code>${i.route}</code>` : '—'}</td><td>${i.type}</td><td>${i.status}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Contact Intelligence</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #24 · ${ci.title}</p>
+      <h1>Arkansas Community Intelligence</h1>
+      <p class="mc-header__question">${ci.governing_principle}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Modules</div><div class="mc-stat__value">${s.modules}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Fields</div><div class="mc-stat__value">${s.fields_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Readiness</div><div class="mc-stat__value">${s.contact_intelligence_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Interest topics</div><div class="mc-stat__value">${s.interest_topics}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Skills</div><div class="mc-stat__value">${s.skills_defined}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">MC metrics</div><div class="mc-stat__value">${s.mc_metrics_defined}</div></div>
+    </div>
+    <h2 class="mc-section-title">Relationship Philosophy</h2>
+    <p class="mc-bar-note">${ci.relationship_philosophy}</p>
+    <h2 class="mc-section-title">Taxonomies</h2>
+    <div class="mc-grid-2">
+      <div class="mc-card"><h3>Interest Topics (${tax.interests.length})</h3><ul class="mc-deliverables">${tax.interests.map(t => `<li>${t}</li>`).join('')}</ul></div>
+      <div class="mc-card"><h3>Skills Inventory (${tax.skills.length})</h3><ul class="mc-deliverables">${tax.skills.map(t => `<li>${t}</li>`).join('')}</ul></div>
+      <div class="mc-card"><h3>Community Connections (${tax.community_connections.length})</h3><ul class="mc-deliverables">${tax.community_connections.map(t => `<li>${t}</li>`).join('')}</ul></div>
+      <div class="mc-card"><h3>Communication Preferences (${tax.communication_preferences.length})</h3><ul class="mc-deliverables">${tax.communication_preferences.map(t => `<li>${t}</li>`).join('')}</ul></div>
+    </div>
+    <h2 class="mc-section-title">Module Inventory</h2>
+    <div class="mc-card mc-inv-table-wrap" style="max-height:360px;overflow-y:auto">
+      <table class="mc-table mc-inv-table">
+        <thead><tr><th>ID</th><th>Module</th><th>Fields</th><th>Entity</th><th>Status</th></tr></thead>
+        <tbody>${moduleRows}</tbody>
+      </table>
+    </div>
+    <h2 class="mc-section-title">Mission Control Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Entity</th><th>Status</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Privacy & Trust</h2>
+    <ul class="mc-deliverables">${tax.privacy_principles.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Future Integrations (${s.integrations_mapped})</h2>
+    <table class="mc-table"><thead><tr><th>System</th><th>Route</th><th>Type</th><th>Status</th></tr></thead>
+      <tbody>${integrationRows}</tbody></table>
+    <h2 class="mc-section-title">Module Details (${s.modules})</h2>
+    <div class="mc-grid-2">${moduleCards}</div>
+    <h2 class="mc-section-title">Related Registries</h2>
+    <ul class="mc-deliverables">${ci.related_registries.map(r => `<li><a href="${r.route}">${r.title}</a> (Build #${r.build})</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ci.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ci.recommended_next_build.number} — ${ci.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ci.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/CONTACT_INTELLIGENCE.md">CONTACT_INTELLIGENCE.md</a> ·
+      <a href="/data/contact-intelligence.json">JSON</a> ·
+      <a href="/mission-control/database.html">Database Schema</a> ·
+      <a href="/mission-control/data-model.html">Data Model</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -2309,4 +2409,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initRepositoryBlueprint();
   initDatabaseSchemaBlueprint();
   initWireframeBlueprint();
+  initContactIntelligenceBlueprint();
 });

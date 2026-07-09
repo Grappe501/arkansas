@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.27.0 · **Wireframes:** [/mission-control/wireframes.html](/mission-control/wireframes.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #23:** ✅ Wireframes · **Build #22:** ✅ Database Schema · **Build #21:** ✅ Repository Blueprint  
+**Current version:** 1.28.0 · **Contact Intelligence:** [/mission-control/contact-intelligence.html](/mission-control/contact-intelligence.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #24:** ✅ Contact Intelligence · **Build #23:** ✅ Wireframes · **Build #22:** ✅ Database Schema  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -267,8 +267,25 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **21** | **Repository Structure** | **✅ v1.25.0** |
 | **22** | **Database Schema** | **✅ v1.26.0** |
 | **23** | **Wireframes** | **✅ v1.27.0** |
+| **24** | **Contact Intelligence** | **✅ v1.28.0** |
 
-**Next:** Build #24 — Component specifications with props/states.
+**Next:** Build #25 — GitHub issues, milestones, and sprint roadmap.
+
+---
+
+## Phase 24 — Contact Intelligence (Build #24) ★ NEW
+
+*Arkansas Community Intelligence System — educational relationship network architecture.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| C1 | Contact Intelligence Blueprint v1.0 | ✅ | `data/contact-intelligence.json` |
+| C2 | 14 intelligence modules | ✅ | Profile, interests, skills, county, etc. |
+| C3 | Interest & skills taxonomies | ✅ | 12 interests, 14 skills |
+| C4 | Privacy & trust principles | ✅ | 5 principles documented |
+| C5 | MC relationship metrics | ✅ | 11 metrics defined |
+| C6 | Integration map | ✅ | 10 platform systems |
+| C7 | MC contact intelligence dashboard | ✅ | `/mission-control/contact-intelligence.html` |
 
 ---
 
@@ -453,7 +470,7 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#21**~~ | ~~Repository & folder structure~~ ✅ Done |
 | ~~**#22**~~ | ~~Database schema and ERD~~ ✅ Done |
 | ~~**#23**~~ | ~~Wireframes for every major screen~~ ✅ Done |
-| **#24** | **Component specifications with props/states** |
+| ~~**#24**~~ | ~~Contact Intelligence & Community Relationship Architecture~~ ✅ Done |
 | **#25** | **GitHub issues, milestones, and sprint roadmap** |
 
 ---

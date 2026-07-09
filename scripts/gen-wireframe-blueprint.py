@@ -232,7 +232,7 @@ out = {
     'recommended_next_build': {
         'number': 24,
         'title': 'Component Specifications with Props/States',
-        'note': 'Map wireframe sections to component props before framework build.'
+        'note': 'Map wireframe sections to component props. Deferred — contact intelligence prioritized in Build #24.'
     },
 }
 

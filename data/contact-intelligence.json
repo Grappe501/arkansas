@@ -1,0 +1,956 @@
+{
+  "version": "1.0",
+  "build": 24,
+  "updated": "2026-07-09",
+  "title": "Contact Intelligence & Community Relationship Architecture v1.0",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/contact-intelligence.html",
+  "constitution": "/docs/CONTACT_INTELLIGENCE.md",
+  "purpose": "Build the most useful educational relationship network in Arkansas \u2014 not the largest contact database.",
+  "relationship_philosophy": "Every person is more than a contact \u2014 interests, knowledge, relationships, organizations, skills, geography, and educational goals.",
+  "governing_principle": "Remember relationships, not just records. Help people find one another, learn together, and strengthen civic understanding across Arkansas.",
+  "taxonomies": {
+    "interests": [
+      "Campaign finance history",
+      "Constitutional law",
+      "Supreme Court decisions",
+      "Political spending",
+      "Ballot initiatives",
+      "Arkansas legislation",
+      "Community education",
+      "Research",
+      "Data visualization",
+      "Coalition building",
+      "Public speaking",
+      "Community organizing"
+    ],
+    "skills": [
+      "Public speaking",
+      "Writing",
+      "Editing",
+      "Research",
+      "Legal analysis",
+      "Graphic design",
+      "Video production",
+      "Photography",
+      "Social media",
+      "Event planning",
+      "Data analysis",
+      "Web development",
+      "Fundraising",
+      "Volunteer coordination"
+    ],
+    "community_connections": [
+      "Civic organizations",
+      "Neighborhood associations",
+      "Faith communities",
+      "Schools",
+      "Colleges",
+      "Libraries",
+      "Veteran organizations",
+      "Professional associations",
+      "Community nonprofits"
+    ],
+    "communication_preferences": [
+      "Monthly newsletter",
+      "Research updates",
+      "Event announcements",
+      "Volunteer opportunities",
+      "Coalition news",
+      "New educational resources",
+      "Arkansas legislative education updates"
+    ],
+    "research_roles": [
+      "Fact verification",
+      "Source collection",
+      "Citation review",
+      "Historical research",
+      "Arkansas legislative monitoring",
+      "Ballot initiative research",
+      "Academic literature review"
+    ],
+    "referral_tracks": [
+      "Invitations sent",
+      "Invitations accepted",
+      "Educational resources shared",
+      "Community conversations initiated",
+      "Organization referrals"
+    ],
+    "privacy_principles": [
+      "Collect only information that supports the educational mission",
+      "Clearly distinguish public profile information from private administrative data",
+      "Allow participants to update or remove their information",
+      "Never sell participant data",
+      "Explain how information is used in plain language"
+    ]
+  },
+  "modules": [
+    {
+      "id": "CI-001",
+      "title": "Individual Profile",
+      "purpose": "Civic Education Profile for every participant",
+      "field_count": 15,
+      "fields": [
+        {
+          "name": "name",
+          "tier": "core",
+          "required": true
+        },
+        {
+          "name": "preferred_contact",
+          "tier": "core",
+          "required": true
+        },
+        {
+          "name": "city",
+          "tier": "core",
+          "required": true
+        },
+        {
+          "name": "county",
+          "tier": "core",
+          "required": true
+        },
+        {
+          "name": "zip_code",
+          "tier": "core",
+          "required": true
+        },
+        {
+          "name": "preferred_communication_method",
+          "tier": "core",
+          "required": true
+        },
+        {
+          "name": "areas_of_interest",
+          "tier": "core",
+          "required": true,
+          "type": "multi_select",
+          "options_ref": "interests"
+        },
+        {
+          "name": "educational_goals",
+          "tier": "core",
+          "required": false
+        },
+        {
+          "name": "volunteer_interests",
+          "tier": "core",
+          "required": false
+        },
+        {
+          "name": "organization_affiliations",
+          "tier": "optional",
+          "required": false
+        },
+        {
+          "name": "speaking_experience",
+          "tier": "optional",
+          "required": false
+        },
+        {
+          "name": "research_interests",
+          "tier": "optional",
+          "required": false
+        },
+        {
+          "name": "presentation_experience",
+          "tier": "optional",
+          "required": false
+        },
+        {
+          "name": "professional_background",
+          "tier": "optional",
+          "required": false
+        },
+        {
+          "name": "topics_to_learn",
+          "tier": "optional",
+          "required": false
+        }
+      ],
+      "implementation_status": "partial",
+      "database_entity": "person",
+      "mc_metrics": [
+        "MCI-01",
+        "MCI-02",
+        "MCI-03"
+      ],
+      "notes": "Join/educate forms capture subset; full profile schema defined in database-schema.json"
+    },
+    {
+      "id": "CI-002",
+      "title": "Interest Mapping",
+      "purpose": "Aggregate participant interests for statewide strengths and gaps",
+      "field_count": 3,
+      "fields": [
+        {
+          "name": "interest_topic",
+          "type": "taxonomy",
+          "options": [
+            "Campaign finance history",
+            "Constitutional law",
+            "Supreme Court decisions",
+            "Political spending",
+            "Ballot initiatives",
+            "Arkansas legislation",
+            "Community education",
+            "Research",
+            "Data visualization",
+            "Coalition building",
+            "Public speaking",
+            "Community organizing"
+          ]
+        },
+        {
+          "name": "participant_id",
+          "type": "foreign_key",
+          "entity": "person"
+        },
+        {
+          "name": "strength_level",
+          "type": "optional",
+          "values": [
+            "learning",
+            "teaching",
+            "researching"
+          ]
+        }
+      ],
+      "implementation_status": "schema_ready",
+      "database_entity": "person_interests",
+      "mc_metrics": [
+        "MCI-11"
+      ],
+      "notes": "12 topics defined; MC aggregation not built"
+    },
+    {
+      "id": "CI-003",
+      "title": "Skills Inventory",
+      "purpose": "Connect educational needs with volunteer expertise",
+      "field_count": 3,
+      "fields": [
+        {
+          "name": "skill",
+          "type": "taxonomy",
+          "options": [
+            "Public speaking",
+            "Writing",
+            "Editing",
+            "Research",
+            "Legal analysis",
+            "Graphic design",
+            "Video production",
+            "Photography",
+            "Social media",
+            "Event planning",
+            "Data analysis",
+            "Web development",
+            "Fundraising",
+            "Volunteer coordination"
+          ]
+        },
+        {
+          "name": "participant_id",
+          "type": "foreign_key",
+          "entity": "person"
+        },
+        {
+          "name": "willing_to_contribute",
+          "type": "boolean",
+          "default": true
+        }
+      ],
+      "implementation_status": "schema_ready",
+      "database_entity": "person_skills",
+      "mc_metrics": [
+        "MCI-11"
+      ],
+      "notes": "14 skills defined; matching engine not built"
+    },
+    {
+      "id": "CI-004",
+      "title": "Community Connections",
+      "purpose": "Educational outreach planning via existing relationships",
+      "field_count": 4,
+      "fields": [
+        {
+          "name": "connection_type",
+          "type": "taxonomy",
+          "options": [
+            "Civic organizations",
+            "Neighborhood associations",
+            "Faith communities",
+            "Schools",
+            "Colleges",
+            "Libraries",
+            "Veteran organizations",
+            "Professional associations",
+            "Community nonprofits"
+          ]
+        },
+        {
+          "name": "organization_name",
+          "type": "text"
+        },
+        {
+          "name": "participant_id",
+          "type": "foreign_key",
+          "entity": "person"
+        },
+        {
+          "name": "notes",
+          "type": "text",
+          "required": false
+        }
+      ],
+      "implementation_status": "planned",
+      "database_entity": "person_organizations",
+      "mc_metrics": [],
+      "notes": "No political affiliation required; supports outreach planning"
+    },
+    {
+      "id": "CI-005",
+      "title": "Organization Intelligence",
+      "purpose": "Coalition partner profiles for educational reach",
+      "field_count": 9,
+      "fields": [
+        {
+          "name": "organization_mission",
+          "tier": "core"
+        },
+        {
+          "name": "educational_interests",
+          "tier": "core",
+          "type": "multi_select"
+        },
+        {
+          "name": "geographic_reach",
+          "tier": "core"
+        },
+        {
+          "name": "audience_served",
+          "tier": "core"
+        },
+        {
+          "name": "meeting_space_available",
+          "tier": "optional",
+          "type": "boolean"
+        },
+        {
+          "name": "resources_requested",
+          "tier": "optional"
+        },
+        {
+          "name": "event_hosting_capability",
+          "tier": "optional",
+          "type": "boolean"
+        },
+        {
+          "name": "speaker_requests",
+          "tier": "optional"
+        },
+        {
+          "name": "volunteer_opportunities",
+          "tier": "optional"
+        }
+      ],
+      "implementation_status": "partial",
+      "database_entity": "organization",
+      "mc_metrics": [
+        "MCI-04",
+        "MCI-08"
+      ],
+      "notes": "Coalition sign-on form captures subset"
+    },
+    {
+      "id": "CI-006",
+      "title": "County Intelligence",
+      "purpose": "Living education profile per Arkansas county",
+      "field_count": 8,
+      "fields": [
+        {
+          "name": "registered_participants",
+          "type": "metric"
+        },
+        {
+          "name": "education_leaders",
+          "type": "metric"
+        },
+        {
+          "name": "coalition_organizations",
+          "type": "metric"
+        },
+        {
+          "name": "community_conversations",
+          "type": "metric"
+        },
+        {
+          "name": "events_hosted",
+          "type": "metric"
+        },
+        {
+          "name": "resource_downloads",
+          "type": "metric"
+        },
+        {
+          "name": "public_official_outreach",
+          "type": "metric"
+        },
+        {
+          "name": "engagement_gap_flag",
+          "type": "computed"
+        }
+      ],
+      "implementation_status": "partial",
+      "database_entity": "county",
+      "mc_metrics": [
+        "MCI-05"
+      ],
+      "notes": "75 county scaffold + county-coalition-index.json; live metrics partial"
+    },
+    {
+      "id": "CI-007",
+      "title": "Community Conversation Tracking",
+      "purpose": "Continuous improvement of educational materials",
+      "field_count": 8,
+      "fields": [
+        {
+          "name": "topic",
+          "type": "text"
+        },
+        {
+          "name": "audience_type",
+          "type": "enum",
+          "values": [
+            "home",
+            "civic_club",
+            "faith",
+            "campus",
+            "classroom",
+            "library",
+            "other"
+          ]
+        },
+        {
+          "name": "county",
+          "type": "foreign_key",
+          "entity": "county"
+        },
+        {
+          "name": "attendance",
+          "type": "number"
+        },
+        {
+          "name": "resources_used",
+          "type": "multi_ref",
+          "entity": "educational_resource"
+        },
+        {
+          "name": "questions_asked",
+          "type": "text"
+        },
+        {
+          "name": "follow_up_interest",
+          "type": "boolean"
+        },
+        {
+          "name": "future_event_opportunities",
+          "type": "text"
+        }
+      ],
+      "implementation_status": "planned",
+      "database_entity": "event",
+      "mc_metrics": [
+        "MCI-06"
+      ],
+      "notes": "Event entity in schema; conversation capture form not built"
+    },
+    {
+      "id": "CI-008",
+      "title": "Referral Intelligence",
+      "purpose": "Educational relational organizing metrics",
+      "field_count": 5,
+      "fields": [
+        {
+          "name": "metric",
+          "type": "taxonomy",
+          "options": [
+            "Invitations sent",
+            "Invitations accepted",
+            "Educational resources shared",
+            "Community conversations initiated",
+            "Organization referrals"
+          ]
+        },
+        {
+          "name": "referrer_id",
+          "type": "foreign_key",
+          "entity": "person"
+        },
+        {
+          "name": "referred_id",
+          "type": "foreign_key",
+          "entity": "person"
+        },
+        {
+          "name": "resource_id",
+          "type": "foreign_key",
+          "entity": "educational_resource",
+          "required": false
+        },
+        {
+          "name": "status",
+          "type": "enum",
+          "values": [
+            "sent",
+            "accepted",
+            "completed"
+          ]
+        }
+      ],
+      "implementation_status": "planned",
+      "database_entity": "referral",
+      "mc_metrics": [
+        "MCI-08"
+      ],
+      "notes": "Share/invite pages exist; tracking not integrated"
+    },
+    {
+      "id": "CI-009",
+      "title": "Public Official Engagement",
+      "purpose": "Institutional record of educational outreach",
+      "field_count": 5,
+      "fields": [
+        {
+          "name": "office",
+          "type": "foreign_key",
+          "entity": "public_official"
+        },
+        {
+          "name": "resource_shared",
+          "type": "foreign_key",
+          "entity": "educational_resource"
+        },
+        {
+          "name": "date",
+          "type": "date"
+        },
+        {
+          "name": "follow_up_requested",
+          "type": "boolean"
+        },
+        {
+          "name": "response_received",
+          "type": "text",
+          "required": false
+        }
+      ],
+      "implementation_status": "planned",
+      "database_entity": "educational_packet_share",
+      "mc_metrics": [
+        "MCI-10"
+      ],
+      "notes": "Share-with-officials screen planned (WF-018); no backend"
+    },
+    {
+      "id": "CI-010",
+      "title": "Research Contributor Network",
+      "purpose": "Coordinate volunteer research contributions",
+      "field_count": 4,
+      "fields": [
+        {
+          "name": "research_role",
+          "type": "taxonomy",
+          "options": [
+            "Fact verification",
+            "Source collection",
+            "Citation review",
+            "Historical research",
+            "Arkansas legislative monitoring",
+            "Ballot initiative research",
+            "Academic literature review"
+          ]
+        },
+        {
+          "name": "participant_id",
+          "type": "foreign_key",
+          "entity": "person"
+        },
+        {
+          "name": "availability",
+          "type": "text"
+        },
+        {
+          "name": "expertise_notes",
+          "type": "text",
+          "required": false
+        }
+      ],
+      "implementation_status": "planned",
+      "database_entity": "person",
+      "mc_metrics": [
+        "MCI-09"
+      ],
+      "notes": "Research volunteer signup redirects to ideas form"
+    },
+    {
+      "id": "CI-011",
+      "title": "Communication Preferences",
+      "purpose": "Respect how participants wish to hear from the project",
+      "field_count": 3,
+      "fields": [
+        {
+          "name": "preference",
+          "type": "taxonomy",
+          "options": [
+            "Monthly newsletter",
+            "Research updates",
+            "Event announcements",
+            "Volunteer opportunities",
+            "Coalition news",
+            "New educational resources",
+            "Arkansas legislative education updates"
+          ]
+        },
+        {
+          "name": "participant_id",
+          "type": "foreign_key",
+          "entity": "person"
+        },
+        {
+          "name": "opted_in",
+          "type": "boolean",
+          "default": true
+        }
+      ],
+      "implementation_status": "planned",
+      "database_entity": "person",
+      "mc_metrics": [],
+      "notes": "Preference capture not on current forms"
+    },
+    {
+      "id": "CI-012",
+      "title": "Privacy & Trust",
+      "purpose": "Privacy-first principles governing all relationship data",
+      "field_count": 5,
+      "fields": [
+        {
+          "name": "principle",
+          "type": "policy",
+          "items": [
+            "Collect only information that supports the educational mission",
+            "Clearly distinguish public profile information from private administrative data",
+            "Allow participants to update or remove their information",
+            "Never sell participant data",
+            "Explain how information is used in plain language"
+          ]
+        },
+        {
+          "name": "public_profile_fields",
+          "type": "field_list"
+        },
+        {
+          "name": "private_admin_fields",
+          "type": "field_list"
+        },
+        {
+          "name": "data_retention_policy",
+          "type": "policy"
+        },
+        {
+          "name": "participant_update_path",
+          "type": "route",
+          "value": "planned"
+        }
+      ],
+      "implementation_status": "defined",
+      "database_entity": null,
+      "mc_metrics": [],
+      "notes": "Principles documented; participant self-service update path not built"
+    },
+    {
+      "id": "CI-013",
+      "title": "Mission Control Metrics",
+      "purpose": "Relationship health dashboard measures",
+      "field_count": 4,
+      "fields": [
+        {
+          "name": "metric_id",
+          "type": "reference",
+          "options_ref": "mc_metrics"
+        },
+        {
+          "name": "aggregation",
+          "type": "computed"
+        },
+        {
+          "name": "county_breakdown",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "name": "trend_period",
+          "type": "enum",
+          "values": [
+            "7d",
+            "30d",
+            "90d",
+            "all"
+          ]
+        }
+      ],
+      "implementation_status": "partial",
+      "database_entity": null,
+      "mc_metrics": [
+        "MCI-01",
+        "MCI-02",
+        "MCI-03",
+        "MCI-04",
+        "MCI-05",
+        "MCI-06",
+        "MCI-07",
+        "MCI-08",
+        "MCI-09",
+        "MCI-10",
+        "MCI-11"
+      ],
+      "notes": "11 metrics defined; most counts manual or Netlify Forms only"
+    },
+    {
+      "id": "CI-014",
+      "title": "Future Integrations",
+      "purpose": "Clean integration with platform systems",
+      "field_count": 3,
+      "fields": [
+        {
+          "name": "system",
+          "type": "integration"
+        },
+        {
+          "name": "integration_type",
+          "type": "enum",
+          "values": [
+            "read",
+            "write",
+            "bidirectional"
+          ]
+        },
+        {
+          "name": "status",
+          "type": "enum",
+          "values": [
+            "live",
+            "partial",
+            "planned"
+          ]
+        }
+      ],
+      "implementation_status": "mapped",
+      "database_entity": null,
+      "mc_metrics": [],
+      "notes": "10 systems mapped; most partial or planned"
+    }
+  ],
+  "module_count": 14,
+  "mc_metrics": [
+    {
+      "id": "MCI-01",
+      "title": "Active participants",
+      "entity": "person",
+      "status": "planned"
+    },
+    {
+      "id": "MCI-02",
+      "title": "New participants",
+      "entity": "person",
+      "status": "planned"
+    },
+    {
+      "id": "MCI-03",
+      "title": "Active education leaders",
+      "entity": "person",
+      "status": "partial"
+    },
+    {
+      "id": "MCI-04",
+      "title": "Coalition organizations",
+      "entity": "organization",
+      "status": "partial"
+    },
+    {
+      "id": "MCI-05",
+      "title": "Counties represented",
+      "entity": "county",
+      "status": "partial"
+    },
+    {
+      "id": "MCI-06",
+      "title": "Community conversations",
+      "entity": "event",
+      "status": "planned"
+    },
+    {
+      "id": "MCI-07",
+      "title": "Resource shares",
+      "entity": "educational_packet_share",
+      "status": "planned"
+    },
+    {
+      "id": "MCI-08",
+      "title": "Organization referrals",
+      "entity": "referral",
+      "status": "planned"
+    },
+    {
+      "id": "MCI-09",
+      "title": "Research contributors",
+      "entity": "person",
+      "status": "planned"
+    },
+    {
+      "id": "MCI-10",
+      "title": "Public official educational outreach",
+      "entity": "educational_packet_share",
+      "status": "planned"
+    },
+    {
+      "id": "MCI-11",
+      "title": "Volunteer skills available across Arkansas",
+      "entity": "person",
+      "status": "planned"
+    }
+  ],
+  "integrations": [
+    {
+      "system": "Contact Network",
+      "route": "/action/join-network.html",
+      "build": 12,
+      "status": "partial",
+      "type": "bidirectional"
+    },
+    {
+      "system": "Coalition Directory",
+      "route": "/coalition/",
+      "build": 14,
+      "status": "partial",
+      "type": "read"
+    },
+    {
+      "system": "Mission Control",
+      "route": "/mission-control/",
+      "build": 1,
+      "status": "live",
+      "type": "read"
+    },
+    {
+      "system": "Community Event Calendar",
+      "route": "/coalition/events.html",
+      "build": 13,
+      "status": "partial",
+      "type": "write"
+    },
+    {
+      "system": "Resource Library",
+      "route": "/library/",
+      "build": 6,
+      "status": "partial",
+      "type": "read"
+    },
+    {
+      "system": "Model Law Workspace",
+      "route": "/action/draft-laws.html",
+      "build": 8,
+      "status": "stub",
+      "type": "write"
+    },
+    {
+      "system": "Ballot Initiative Lab",
+      "route": "/action/ballot-lab.html",
+      "build": 8,
+      "status": "stub",
+      "type": "write"
+    },
+    {
+      "system": "Arkansas County Pages",
+      "route": "/coalition/county.html",
+      "build": 14,
+      "status": "partial",
+      "type": "bidirectional"
+    },
+    {
+      "system": "Social Media Outreach",
+      "route": "/coalition/resources.html",
+      "build": 13,
+      "status": "partial",
+      "type": "read"
+    },
+    {
+      "system": "Future Educational AI",
+      "route": null,
+      "build": null,
+      "status": "planned",
+      "type": "bidirectional"
+    }
+  ],
+  "related_registries": [
+    {
+      "title": "Database Schema",
+      "build": 22,
+      "route": "/data/database-schema.json"
+    },
+    {
+      "title": "Canonical Data Model",
+      "build": 15,
+      "route": "/data/canonical-data-model.json"
+    },
+    {
+      "title": "Relationship Registry",
+      "build": 15,
+      "route": "/data/relationship-registry.json"
+    },
+    {
+      "title": "County Coalition Index",
+      "build": 14,
+      "route": "/data/county-coalition-index.json"
+    }
+  ],
+  "summary": {
+    "modules": 14,
+    "fields_total": 79,
+    "interest_topics": 12,
+    "skills_defined": 14,
+    "community_connection_types": 9,
+    "communication_preferences": 7,
+    "research_roles": 7,
+    "mc_metrics_defined": 11,
+    "integrations_mapped": 10,
+    "by_status": {
+      "partial": 4,
+      "schema_ready": 2,
+      "planned": 6,
+      "defined": 1,
+      "mapped": 1
+    },
+    "implementation_live": 0,
+    "implementation_partial": 8,
+    "implementation_planned": 6,
+    "contact_intelligence_readiness_pct": 31
+  },
+  "catalog_gaps": [
+    "No backend database \u2014 v1 static JSON + Netlify Forms only",
+    "Interest/skills taxonomies defined but not on signup forms",
+    "Community conversation capture form not built",
+    "Referral tracking not integrated with share/invite flows",
+    "Public official engagement record not operational",
+    "Participant self-service profile update not built",
+    "MC relationship health dashboard aggregates mostly manual",
+    "Communication preference opt-in not on forms"
+  ],
+  "recommended_next_build": {
+    "number": 25,
+    "title": "GitHub Issues, Milestones, and Sprint Roadmap",
+    "note": "Translate relationship architecture into implementable sprint issues. Component specs deferred."
+  }
+}

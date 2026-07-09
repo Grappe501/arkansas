@@ -1,6 +1,6 @@
 {
-  "version": "1.27.0",
-  "build": 23,
+  "version": "1.28.0",
+  "build": 24,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,26 +9,26 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 23,
+    "overall_completion": 24,
     "current_build": {
-      "number": 23,
-      "title": "Major Screen Wireframe Blueprint"
-    },
-    "active_phase": "Implementation Artifacts \u2014 Wireframes",
-    "last_completed": "Database Schema & Entity Relationship Blueprint",
-    "next_build": {
       "number": 24,
-      "title": "Component specifications with props/states"
+      "title": "Contact Intelligence & Community Relationship Architecture"
+    },
+    "active_phase": "Implementation Artifacts \u2014 Contact Intelligence",
+    "last_completed": "Major Screen Wireframe Blueprint",
+    "next_build": {
+      "number": 25,
+      "title": "GitHub issues, milestones, and sprint roadmap"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
     "content_readiness": 18,
     "research_readiness": 20,
     "data_viz_readiness": 2,
-    "signup_funnel_readiness": 16,
-    "civic_action_readiness": 24,
-    "coalition_readiness": 12,
-    "data_model_readiness": 35,
+    "signup_funnel_readiness": 18,
+    "civic_action_readiness": 26,
+    "coalition_readiness": 14,
+    "data_model_readiness": 38,
     "route_inventory_readiness": 18,
     "component_registry_readiness": 22,
     "facts_framework_readiness": 12,
@@ -37,6 +37,7 @@
     "repository_structure_readiness": 28,
     "database_schema_readiness": 35,
     "wireframe_readiness": 38,
+    "contact_intelligence_readiness": 31,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -44,8 +45,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 23,
-      "note": "Wireframe blueprint live \u2014 25 screens, 184 sections. Component specs next."
+      "value": 24,
+      "note": "Contact intelligence live \u2014 14 modules, 12 interest topics. Sprint roadmap next."
     },
     {
       "id": "constitution",
@@ -230,6 +231,13 @@
       "value": 38,
       "max": 100,
       "note": "8 live, 10 partial screens \u2014 section wireframes defined."
+    },
+    {
+      "id": "contact_intelligence",
+      "label": "Contact Intelligence",
+      "value": 31,
+      "max": 100,
+      "note": "8 modules schema/partial, 6 planned \u2014 no backend yet."
     }
   ],
   "public_readiness": {
@@ -660,6 +668,12 @@
       "id": "wireframes",
       "label": "Wireframe Blueprint",
       "href": "/mission-control/wireframes.html",
+      "status": "complete"
+    },
+    {
+      "id": "contact_intelligence",
+      "label": "Contact Intelligence",
+      "href": "/mission-control/contact-intelligence.html",
       "status": "complete"
     }
   ],
@@ -1687,6 +1701,53 @@
   ],
   "builds": [
     {
+      "number": 24,
+      "title": "Contact Intelligence & Community Relationship Architecture",
+      "version": "1.28.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Arkansas Community Intelligence System v1.0 \u2014 educational relationship network architecture",
+      "summary": "14 modules, 79 fields, 12 interests, 14 skills; 31% readiness.",
+      "files_created": [
+        "data/contact-intelligence.json",
+        "docs/CONTACT_INTELLIGENCE.md",
+        "builds/024-contact-intelligence.md",
+        "mission-control/contact-intelligence.html",
+        "scripts/gen-contact-intelligence.py",
+        "scripts/update-mc-build24.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/contact-intelligence.html"
+      ],
+      "decisions_made": [
+        "14 intelligence modules: profile, interests, skills, connections, org, county, events, referrals, officials, research, comms, privacy, metrics, integrations",
+        "Privacy-first: collect only for educational mission; never sell data",
+        "Maps to database schema entities from Build #22",
+        "31% honest readiness \u2014 architecture defined, forms/backend not integrated",
+        "Component specs deferred to post-#25 sprint work"
+      ],
+      "open_questions": [
+        "Supabase vs Neon for v2?",
+        "When to add interest/skills to signup forms?"
+      ],
+      "risks": [
+        "31% readiness \u2014 tracking mostly manual",
+        "No participant self-service profile update"
+      ],
+      "next_recommended": 25,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/contact-intelligence.html",
+      "review_status": "complete"
+    },
+    {
       "number": 23,
       "title": "Major Screen Wireframe Blueprint",
       "version": "1.27.0",
@@ -2688,19 +2749,20 @@
     }
   ],
   "briefing": {
-    "what_built": "Wireframe Blueprint v1.0 \u2014 25 screens with section-level architecture",
-    "building_now": "Implementation artifacts \u2014 component specs next (Build #24)",
+    "what_built": "Contact Intelligence v1.0 \u2014 14 modules defining Arkansas educational relationship network",
+    "building_now": "Implementation artifacts \u2014 GitHub sprint roadmap next (Build #25)",
     "blocked": [
-      "No visual mockups",
-      "Admin screens not built",
-      "Confirmation template not standardized"
+      "No backend database",
+      "Referral tracking not integrated",
+      "MC metrics mostly manual"
     ],
     "ready_public": [
-      "Wireframe MC dashboard",
-      "Screen-to-route mapping",
-      "Mobile requirements"
+      "Contact Intelligence MC dashboard",
+      "Interest/skills taxonomies",
+      "Privacy principles",
+      "Integration map"
     ],
-    "next": "Build #24 \u2014 Component specifications with props/states"
+    "next": "Build #25 \u2014 GitHub issues, milestones, and sprint roadmap"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -2898,6 +2960,24 @@
       "evidence": 4,
       "participate": 13,
       "mission_control": 4
+    }
+  },
+  "contact_intelligence": "/data/contact-intelligence.json",
+  "contact_intelligence_dashboard": "/mission-control/contact-intelligence.html",
+  "contact_intelligence_inventory": {
+    "readiness_score": 31,
+    "modules": 14,
+    "fields_total": 79,
+    "interest_topics": 12,
+    "skills_defined": 14,
+    "mc_metrics_defined": 11,
+    "integrations_mapped": 10,
+    "by_status": {
+      "partial": 4,
+      "schema_ready": 2,
+      "planned": 6,
+      "defined": 1,
+      "mapped": 1
     }
   }
 }
