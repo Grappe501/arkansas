@@ -26,7 +26,7 @@ tl = cip.get('master_timeline', {})
 
 
 
-mc['version'] = '2.05.32'
+mc['version'] = '2.05.33'
 
 mc['updated'] = '2026-07-09'
 
@@ -96,21 +96,21 @@ for bar in mc['progress_bars']:
 
 mc['briefing'] = {
 
-    'what_built': 'IMP-01–32 documented — implementation roadmap & Cursor execution (64%)',
+    'what_built': 'IMP-01–33 documented — engineering standards & development handbook (66%)',
 
-    'building_now': 'IMP-33 Engineering Standards & Development Handbook next; Sprint Zero pending',
+    'building_now': 'IMP-34 Executive Cockpit & MC Command Environment next; Sprint Zero pending',
 
     'blocked': ['Sprint Zero not complete', '0/50 code-implemented', f"{s.get('days_to_software', 0)} days to software target"],
 
     'ready_public': [
 
-        'Implementation Roadmap', 'implementation-roadmap-manifest.json', '8 development waves',
+        'Engineering Standards', 'engineering-standards-manifest.json', 'Repository governance & coding conventions',
 
-        'AI Orchestration', 'Cursor build packages & dependency map',
+        'Implementation Roadmap', 'Engineering constitution for all contributors',
 
     ],
 
-    'next': 'IMP-33 — Master Engineering Standards, Coding Conventions, Repository Governance & Development Handbook',
+    'next': 'IMP-34 — Master Operations Center, Executive Cockpit & Mission Control Command Environment',
 
 }
 

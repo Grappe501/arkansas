@@ -1,0 +1,313 @@
+{
+  "version": "1.0",
+  "build": 101,
+  "package": "IMP-33",
+  "updated": "2026-07-09",
+  "title": "Master Engineering Standards, Coding Conventions, Repository Governance & Development Handbook",
+  "constitution": "/docs/IMPLEMENTATION_PACKAGE_33_ENGINEERING_STANDARDS.md",
+  "source_registries": {
+    "repository_blueprint": "/data/repository-blueprint.json",
+    "implementation_roadmap": "/data/implementation-roadmap-manifest.json",
+    "technical_architecture": "/data/technical-architecture.json",
+    "qa_launch_readiness": "/data/qa-launch-readiness-manifest.json",
+    "devops_production": "/data/devops-production-manifest.json"
+  },
+  "philosophy": "Code is institutional knowledge \u2014 written for the next volunteer, not merely the current developer",
+  "governing_principle": "Engineering standards ensure quality, clarity, and reliability endure beyond any single engineer, leader, or software generation",
+  "master_timeline": {
+    "phase_one": {
+      "id": "software_completion",
+      "title": "Software Completion",
+      "target_date": "2026-07-11",
+      "days_remaining": 2,
+      "scope": [
+        "Public website",
+        "Mission Control",
+        "LocalBrains",
+        "Community Education Academy",
+        "Knowledge Platform",
+        "Research system",
+        "Volunteer system",
+        "Coalition system",
+        "County, City, and Neighborhood systems",
+        "AI infrastructure",
+        "Administrative tools"
+      ]
+    },
+    "phase_two": {
+      "id": "county_milestone",
+      "title": "75 Counties by October 1",
+      "target_date": "2026-10-01",
+      "days_remaining": 84,
+      "scope": [
+        "Completed county profile for all 75 counties",
+        "Education Leader or active recruitment contact per county",
+        "County dashboard operational in Mission Control",
+        "Initial local resource information",
+        "Development plan for continued growth per county"
+      ]
+    },
+    "phase_three": {
+      "id": "organizational_readiness",
+      "title": "Organizational Readiness",
+      "target_date": "2027-01-01",
+      "days_remaining": 176,
+      "focus": [
+        "Recruiting Education Leaders",
+        "Expanding county coverage",
+        "Growing city leadership",
+        "Coalition development",
+        "Volunteer training",
+        "Community conversations",
+        "Research expansion",
+        "Public testing",
+        "User feedback",
+        "System refinement",
+        "Launch certification",
+        "City and neighborhood systems mature",
+        "Statewide volunteer development expanded"
+      ]
+    },
+    "sequence": "Software Complete (Jul 11, 2026) \u2192 75 Counties (Oct 1, 2026) \u2192 Organizational Readiness (Jan 2027)",
+    "build_out_months_approx": 6,
+    "county_milestone": {
+      "target_date": "2026-10-01",
+      "counties_total": 75,
+      "days_remaining": 84,
+      "label": "75-by-October-1 Milestone"
+    }
+  },
+  "software_completion_date": "2026-07-11",
+  "county_milestone_date": "2026-10-01",
+  "organizational_readiness_date": "2027-01-01",
+  "days_to_software": 2,
+  "days_to_county_milestone": 84,
+  "days_to_organizational": 176,
+  "engineering_philosophy_improvements": [
+    "readability",
+    "reliability",
+    "maintainability",
+    "security",
+    "documentation",
+    "consistency"
+  ],
+  "repository_domains": [
+    "platform_core",
+    "mission_control",
+    "knowledge_platform",
+    "research_institute",
+    "community_education_academy",
+    "volunteer_network",
+    "coalition_network",
+    "county_operations",
+    "city_operations",
+    "neighborhood_operations",
+    "communications",
+    "ai",
+    "infrastructure",
+    "shared_libraries",
+    "testing",
+    "documentation"
+  ],
+  "repository_domain_count": 16,
+  "coding_standards": [
+    "clear_naming",
+    "small_focused_modules",
+    "single_responsibility",
+    "predictable_architecture",
+    "minimal_duplication",
+    "explicit_error_handling",
+    "strong_typing_where_supported",
+    "readable_over_clever"
+  ],
+  "coding_standard_count": 8,
+  "naming_convention_categories": [
+    "files",
+    "folders",
+    "classes",
+    "functions",
+    "variables",
+    "database_tables",
+    "api_routes",
+    "events",
+    "background_jobs",
+    "configuration"
+  ],
+  "naming_convention_category_count": 10,
+  "architectural_guardrails": [
+    "no_circular_dependencies",
+    "no_hidden_business_logic",
+    "no_hard_coded_configuration",
+    "no_duplicated_workflows",
+    "no_direct_db_outside_approved_layers",
+    "no_unreviewed_security_changes"
+  ],
+  "architectural_guardrail_count": 6,
+  "branch_strategy_types": [
+    "main",
+    "release",
+    "feature",
+    "hotfix",
+    "experimental"
+  ],
+  "branch_strategy_type_count": 5,
+  "pull_request_standards": [
+    "purpose",
+    "related_implementation_package",
+    "files_changed",
+    "testing_completed",
+    "screenshots_where_appropriate",
+    "documentation_updates",
+    "known_limitations"
+  ],
+  "pull_request_standard_count": 7,
+  "feature_documentation_types": [
+    "architecture_documentation",
+    "developer_documentation",
+    "user_documentation",
+    "operational_documentation",
+    "mission_control_documentation"
+  ],
+  "feature_documentation_type_count": 5,
+  "code_review_criteria": [
+    "correctness",
+    "security",
+    "performance",
+    "accessibility",
+    "maintainability",
+    "testing",
+    "documentation",
+    "mission_alignment"
+  ],
+  "code_review_criterion_count": 8,
+  "technical_debt_visibility": [
+    "known_limitations",
+    "deferred_improvements",
+    "architecture_concerns",
+    "performance_opportunities",
+    "documentation_gaps"
+  ],
+  "technical_debt_visibility_count": 5,
+  "testing_standards": [
+    "unit_tests",
+    "integration_tests",
+    "end_to_end_tests",
+    "accessibility_validation",
+    "performance_verification",
+    "security_validation",
+    "regression_testing"
+  ],
+  "testing_standard_count": 7,
+  "configuration_management_principles": [
+    "centralized",
+    "versioned",
+    "documented",
+    "environment_aware",
+    "secure"
+  ],
+  "configuration_management_principle_count": 5,
+  "dependency_review_criteria": [
+    "security",
+    "maintenance_activity",
+    "licensing",
+    "performance",
+    "community_support",
+    "long_term_sustainability"
+  ],
+  "dependency_review_criterion_count": 6,
+  "engineering_knowledge_base_contents": [
+    "architecture_decisions",
+    "frequently_asked_questions",
+    "coding_examples",
+    "patterns",
+    "anti_patterns",
+    "troubleshooting_guides",
+    "migration_guidance"
+  ],
+  "engineering_knowledge_base_content_count": 7,
+  "mc_engineering_dashboard_metrics": [
+    "code_quality",
+    "documentation_coverage",
+    "test_coverage",
+    "technical_debt",
+    "review_status",
+    "dependency_health",
+    "release_readiness",
+    "architecture_compliance"
+  ],
+  "mc_engineering_dashboard_metric_count": 8,
+  "july_11_engineering_readiness": {
+    "target_date": "2026-07-11",
+    "requirements": [
+      "consistent_architecture",
+      "documented_standards",
+      "automated_testing",
+      "repository_organization",
+      "operational_documentation",
+      "release_discipline"
+    ],
+    "label": "Repeatable engineering organization by July 11"
+  },
+  "october_1_engineering_support": {
+    "target_date": "2026-10-01",
+    "focus": [
+      "rapid_issue_resolution",
+      "knowledge_transfer",
+      "volunteer_developer_onboarding",
+      "feature_requests",
+      "operational_improvements",
+      "documentation_updates"
+    ],
+    "label": "Engineering aligned with field operations through October 1"
+  },
+  "organizational_goals": {
+    "counties_total": 75,
+    "counties_with_partnerships_goal": 75,
+    "target_cities": 250,
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000
+  },
+  "engineering_standards_system_chain": [
+    "mission_control",
+    "pmo",
+    "knowledge_platform",
+    "research_institute",
+    "community_education_academy",
+    "volunteer_network",
+    "coalition_network",
+    "county_operations",
+    "ai_localbrains",
+    "production_operations",
+    "quality_assurance"
+  ],
+  "institutional_systems": [
+    "technical_foundation",
+    "mission_control",
+    "localbrains",
+    "knowledge_platform",
+    "research_institute",
+    "community_education_academy",
+    "volunteer_network",
+    "coalition_network",
+    "local_operating_systems",
+    "communication_platform",
+    "institutional_time_intelligence",
+    "institutional_relationship_intelligence",
+    "institutional_analytics",
+    "institutional_automation",
+    "public_digital_experience",
+    "mobile_field_operations",
+    "institutional_digital_library",
+    "institutional_integration_platform",
+    "institutional_security_trust",
+    "institutional_implementation_roadmap",
+    "institutional_engineering_standards"
+  ],
+  "mc_dashboard": "/mission-control/repository.html",
+  "packages_completed": 33,
+  "packages_total": 50,
+  "packages_complete_pct": 66,
+  "engineering_note": "Doctrinal IMP-33 Engineering Standards; engineering IMP-33 is Build registry sync",
+  "status": "documented",
+  "implemented": false
+}

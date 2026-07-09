@@ -933,6 +933,33 @@
       "number": 33,
       "id": "IMP-33",
       "title": "Master Engineering Standards, Coding Conventions, Repository Governance & Development Handbook",
+      "status": "documented"
+    }
+  },
+  "engineering_standards": {
+    "title": "Master Engineering Standards, Coding Conventions, Repository Governance & Development Handbook",
+    "package": "Implementation Package 33 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_33_ENGINEERING_STANDARDS.md",
+    "manifest": "/data/engineering-standards-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Code is institutional knowledge \u2014 written for the next volunteer, not merely the current developer",
+    "repository_domain_count": 16,
+    "coding_standard_count": 8,
+    "code_review_criterion_count": 8,
+    "testing_standard_count": 7,
+    "mc_engineering_dashboard_metric_count": 8,
+    "packages_completed": 33,
+    "packages_complete_pct": 66,
+    "county_milestone_date": "2026-10-01",
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000,
+    "mc_dashboard": "/mission-control/repository.html",
+    "engineering_note": "Doctrinal IMP-33 Engineering Standards; engineering IMP-33 is Build registry sync",
+    "next_package": {
+      "number": 34,
+      "id": "IMP-34",
+      "title": "Master Operations Center, Executive Cockpit & Mission Control Command Environment",
       "status": "specified"
     }
   },
@@ -2335,7 +2362,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 32,
+        "current": 33,
         "status": "partial"
       },
       {
@@ -2538,6 +2565,12 @@
       },
       {
         "id": "CIP-D36",
+        "indicator": "Engineering Standards (IMP-33)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D37",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -2592,7 +2625,7 @@
     "days_remaining": 176,
     "implementation_package_readiness_pct": 100,
     "steps_total": 50,
-    "steps_documented": 32,
+    "steps_documented": 33,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

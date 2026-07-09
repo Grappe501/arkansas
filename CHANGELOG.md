@@ -13,6 +13,18 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.33] - 2026-07-09 — IMP-33 Engineering Standards & Development Handbook
+
+### Implementation Package 33 of 50
+- **Master Engineering Standards, Coding Conventions, Repository Governance & Development Handbook**
+- 16 repository domains · coding standards · naming conventions · architectural guardrails
+- Branch strategy · pull request standards · code review framework · testing standards
+- Configuration & dependency management · engineering knowledge base · technical debt visibility
+- Machine-readable **engineering-standards-manifest.json**
+- Institutional OS evolution: **33/50 packages (66%)**
+- IMP-34 next (doctrinal): Operations Center, Executive Cockpit & MC Command Environment
+- Honest: 33/50 documented · 0/50 implemented · 100% package readiness
+
 ## [2.05.32] - 2026-07-09 — IMP-32 Implementation Roadmap & Cursor Execution
 
 ### Implementation Package 32 of 50

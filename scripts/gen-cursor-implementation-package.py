@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 32  # IMP-01 through IMP-32 (doctrinal)
+steps_documented = 33  # IMP-01 through IMP-33 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3335,7 +3335,7 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'institutional_analytics', 'institutional_automation', 'public_digital_experience',
     'mobile_field_operations', 'institutional_digital_library',
     'institutional_integration_platform', 'institutional_security_trust',
-    'institutional_ai_orchestration', 'institutional_implementation_roadmap',
+    'institutional_implementation_roadmap', 'institutional_engineering_standards',
 ]
 
 RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
@@ -5902,6 +5902,183 @@ IMPLEMENTATION_ROADMAP_MANIFEST = {
     'implemented': False,
 }
 
+ENGINEERING_PHILOSOPHY_IMPROVEMENTS = [
+    'readability', 'reliability', 'maintainability', 'security', 'documentation',
+    'consistency',
+]
+
+REPOSITORY_DOMAINS = [
+    'platform_core', 'mission_control', 'knowledge_platform', 'research_institute',
+    'community_education_academy', 'volunteer_network', 'coalition_network',
+    'county_operations', 'city_operations', 'neighborhood_operations',
+    'communications', 'ai', 'infrastructure', 'shared_libraries', 'testing',
+    'documentation',
+]
+
+CODING_STANDARDS = [
+    'clear_naming', 'small_focused_modules', 'single_responsibility',
+    'predictable_architecture', 'minimal_duplication', 'explicit_error_handling',
+    'strong_typing_where_supported', 'readable_over_clever',
+]
+
+NAMING_CONVENTION_CATEGORIES = [
+    'files', 'folders', 'classes', 'functions', 'variables', 'database_tables',
+    'api_routes', 'events', 'background_jobs', 'configuration',
+]
+
+ARCHITECTURAL_GUARDRAILS = [
+    'no_circular_dependencies', 'no_hidden_business_logic', 'no_hard_coded_configuration',
+    'no_duplicated_workflows', 'no_direct_db_outside_approved_layers',
+    'no_unreviewed_security_changes',
+]
+
+BRANCH_STRATEGY_TYPES = [
+    'main', 'release', 'feature', 'hotfix', 'experimental',
+]
+
+PULL_REQUEST_STANDARDS = [
+    'purpose', 'related_implementation_package', 'files_changed', 'testing_completed',
+    'screenshots_where_appropriate', 'documentation_updates', 'known_limitations',
+]
+
+FEATURE_DOCUMENTATION_TYPES = [
+    'architecture_documentation', 'developer_documentation', 'user_documentation',
+    'operational_documentation', 'mission_control_documentation',
+]
+
+CODE_REVIEW_CRITERIA = [
+    'correctness', 'security', 'performance', 'accessibility', 'maintainability',
+    'testing', 'documentation', 'mission_alignment',
+]
+
+TECHNICAL_DEBT_VISIBILITY = [
+    'known_limitations', 'deferred_improvements', 'architecture_concerns',
+    'performance_opportunities', 'documentation_gaps',
+]
+
+TESTING_STANDARDS = [
+    'unit_tests', 'integration_tests', 'end_to_end_tests', 'accessibility_validation',
+    'performance_verification', 'security_validation', 'regression_testing',
+]
+
+CONFIGURATION_MANAGEMENT_PRINCIPLES = [
+    'centralized', 'versioned', 'documented', 'environment_aware', 'secure',
+]
+
+DEPENDENCY_REVIEW_CRITERIA = [
+    'security', 'maintenance_activity', 'licensing', 'performance',
+    'community_support', 'long_term_sustainability',
+]
+
+ENGINEERING_KNOWLEDGE_BASE_CONTENTS = [
+    'architecture_decisions', 'frequently_asked_questions', 'coding_examples',
+    'patterns', 'anti_patterns', 'troubleshooting_guides', 'migration_guidance',
+]
+
+MC_ENGINEERING_DASHBOARD_METRICS = [
+    'code_quality', 'documentation_coverage', 'test_coverage', 'technical_debt',
+    'review_status', 'dependency_health', 'release_readiness', 'architecture_compliance',
+]
+
+JULY_11_ENGINEERING_READINESS = [
+    'consistent_architecture', 'documented_standards', 'automated_testing',
+    'repository_organization', 'operational_documentation', 'release_discipline',
+]
+
+OCTOBER_1_ENGINEERING_SUPPORT = [
+    'rapid_issue_resolution', 'knowledge_transfer', 'volunteer_developer_onboarding',
+    'feature_requests', 'operational_improvements', 'documentation_updates',
+]
+
+ENGINEERING_STANDARDS_SYSTEM_CHAIN = [
+    'mission_control', 'pmo', 'knowledge_platform', 'research_institute',
+    'community_education_academy', 'volunteer_network', 'coalition_network',
+    'county_operations', 'ai_localbrains', 'production_operations', 'quality_assurance',
+]
+
+ENGINEERING_STANDARDS_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-33',
+    'updated': today,
+    'title': 'Master Engineering Standards, Coding Conventions, Repository Governance & Development Handbook',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_33_ENGINEERING_STANDARDS.md',
+    'source_registries': {
+        'repository_blueprint': '/data/repository-blueprint.json',
+        'implementation_roadmap': '/data/implementation-roadmap-manifest.json',
+        'technical_architecture': '/data/technical-architecture.json',
+        'qa_launch_readiness': '/data/qa-launch-readiness-manifest.json',
+        'devops_production': '/data/devops-production-manifest.json',
+    },
+    'philosophy': 'Code is institutional knowledge — written for the next volunteer, not merely the current developer',
+    'governing_principle': (
+        'Engineering standards ensure quality, clarity, and reliability endure beyond '
+        'any single engineer, leader, or software generation'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'engineering_philosophy_improvements': ENGINEERING_PHILOSOPHY_IMPROVEMENTS,
+    'repository_domains': REPOSITORY_DOMAINS,
+    'repository_domain_count': len(REPOSITORY_DOMAINS),
+    'coding_standards': CODING_STANDARDS,
+    'coding_standard_count': len(CODING_STANDARDS),
+    'naming_convention_categories': NAMING_CONVENTION_CATEGORIES,
+    'naming_convention_category_count': len(NAMING_CONVENTION_CATEGORIES),
+    'architectural_guardrails': ARCHITECTURAL_GUARDRAILS,
+    'architectural_guardrail_count': len(ARCHITECTURAL_GUARDRAILS),
+    'branch_strategy_types': BRANCH_STRATEGY_TYPES,
+    'branch_strategy_type_count': len(BRANCH_STRATEGY_TYPES),
+    'pull_request_standards': PULL_REQUEST_STANDARDS,
+    'pull_request_standard_count': len(PULL_REQUEST_STANDARDS),
+    'feature_documentation_types': FEATURE_DOCUMENTATION_TYPES,
+    'feature_documentation_type_count': len(FEATURE_DOCUMENTATION_TYPES),
+    'code_review_criteria': CODE_REVIEW_CRITERIA,
+    'code_review_criterion_count': len(CODE_REVIEW_CRITERIA),
+    'technical_debt_visibility': TECHNICAL_DEBT_VISIBILITY,
+    'technical_debt_visibility_count': len(TECHNICAL_DEBT_VISIBILITY),
+    'testing_standards': TESTING_STANDARDS,
+    'testing_standard_count': len(TESTING_STANDARDS),
+    'configuration_management_principles': CONFIGURATION_MANAGEMENT_PRINCIPLES,
+    'configuration_management_principle_count': len(CONFIGURATION_MANAGEMENT_PRINCIPLES),
+    'dependency_review_criteria': DEPENDENCY_REVIEW_CRITERIA,
+    'dependency_review_criterion_count': len(DEPENDENCY_REVIEW_CRITERIA),
+    'engineering_knowledge_base_contents': ENGINEERING_KNOWLEDGE_BASE_CONTENTS,
+    'engineering_knowledge_base_content_count': len(ENGINEERING_KNOWLEDGE_BASE_CONTENTS),
+    'mc_engineering_dashboard_metrics': MC_ENGINEERING_DASHBOARD_METRICS,
+    'mc_engineering_dashboard_metric_count': len(MC_ENGINEERING_DASHBOARD_METRICS),
+    'july_11_engineering_readiness': {
+        'target_date': software_completion_date,
+        'requirements': JULY_11_ENGINEERING_READINESS,
+        'label': 'Repeatable engineering organization by July 11',
+    },
+    'october_1_engineering_support': {
+        'target_date': county_milestone_date,
+        'focus': OCTOBER_1_ENGINEERING_SUPPORT,
+        'label': 'Engineering aligned with field operations through October 1',
+    },
+    'organizational_goals': {
+        'counties_total': 75,
+        'counties_with_partnerships_goal': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'engineering_standards_system_chain': ENGINEERING_STANDARDS_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/repository.html',
+    'packages_completed': 33,
+    'packages_total': 50,
+    'packages_complete_pct': 66,
+    'engineering_note': 'Doctrinal IMP-33 Engineering Standards; engineering IMP-33 is Build registry sync',
+    'status': 'documented',
+    'implemented': False,
+}
+
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -6050,7 +6227,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D33', 'indicator': 'Launch Strategy (IMP-30)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D34', 'indicator': 'AI Orchestration (IMP-31)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D35', 'indicator': 'Implementation Roadmap (IMP-32)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D36', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D36', 'indicator': 'Engineering Standards (IMP-33)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D37', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -6888,6 +7066,33 @@ out = {
             'number': 33,
             'id': 'IMP-33',
             'title': 'Master Engineering Standards, Coding Conventions, Repository Governance & Development Handbook',
+            'status': 'documented',
+        },
+    },
+    'engineering_standards': {
+        'title': 'Master Engineering Standards, Coding Conventions, Repository Governance & Development Handbook',
+        'package': 'Implementation Package 33 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_33_ENGINEERING_STANDARDS.md',
+        'manifest': '/data/engineering-standards-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': ENGINEERING_STANDARDS_MANIFEST['philosophy'],
+        'repository_domain_count': ENGINEERING_STANDARDS_MANIFEST['repository_domain_count'],
+        'coding_standard_count': ENGINEERING_STANDARDS_MANIFEST['coding_standard_count'],
+        'code_review_criterion_count': ENGINEERING_STANDARDS_MANIFEST['code_review_criterion_count'],
+        'testing_standard_count': ENGINEERING_STANDARDS_MANIFEST['testing_standard_count'],
+        'mc_engineering_dashboard_metric_count': ENGINEERING_STANDARDS_MANIFEST['mc_engineering_dashboard_metric_count'],
+        'packages_completed': ENGINEERING_STANDARDS_MANIFEST['packages_completed'],
+        'packages_complete_pct': ENGINEERING_STANDARDS_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': ENGINEERING_STANDARDS_MANIFEST['mc_dashboard'],
+        'engineering_note': ENGINEERING_STANDARDS_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 34,
+            'id': 'IMP-34',
+            'title': 'Master Operations Center, Executive Cockpit & Mission Control Command Environment',
             'status': 'specified',
         },
     },
@@ -7108,6 +7313,10 @@ with open(root / 'data/ai-orchestration-manifest.json', 'w', newline='\n') as f:
 
 with open(root / 'data/implementation-roadmap-manifest.json', 'w', newline='\n') as f:
     json.dump(IMPLEMENTATION_ROADMAP_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/engineering-standards-manifest.json', 'w', newline='\n') as f:
+    json.dump(ENGINEERING_STANDARDS_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(
