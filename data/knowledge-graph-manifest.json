@@ -1,0 +1,185 @@
+{
+  "version": "1.0",
+  "build": 101,
+  "package": "IMP-09",
+  "updated": "2026-07-09",
+  "title": "Master Knowledge Graph, Semantic Search & Institutional Memory",
+  "constitution": "/docs/IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md",
+  "source_registries": {
+    "knowledge_graph": "/data/knowledge-graph.json",
+    "kg_registry": "/data/kg-registry.json",
+    "knowledge_atlas": "/data/knowledge-atlas.json",
+    "canonical_data": "/data/canonical-data-manifest.json",
+    "localbrain_network": "/data/localbrain-network-manifest.json"
+  },
+  "philosophy": "Everything is connected; the Knowledge Graph explains relationships",
+  "governing_principle": "Knowledge has value only when it is connected",
+  "master_timeline": {
+    "phase_one": {
+      "id": "software_completion",
+      "title": "Software Completion",
+      "target_date": "2026-07-11",
+      "days_remaining": 2,
+      "scope": [
+        "Public website",
+        "Mission Control",
+        "LocalBrains",
+        "Community Education Academy",
+        "Knowledge Platform",
+        "Research system",
+        "Volunteer system",
+        "Coalition system",
+        "County, City, and Neighborhood systems",
+        "AI infrastructure",
+        "Administrative tools"
+      ]
+    },
+    "phase_two": {
+      "id": "organizational_readiness",
+      "title": "Organizational Readiness",
+      "target_date": "2027-01-01",
+      "days_remaining": 176,
+      "focus": [
+        "Recruiting Education Leaders",
+        "Expanding county coverage",
+        "Growing city leadership",
+        "Coalition development",
+        "Volunteer training",
+        "Community conversations",
+        "Research expansion",
+        "Public testing",
+        "User feedback",
+        "System refinement",
+        "Launch certification"
+      ]
+    },
+    "sequence": "Software Complete (Jul 11, 2026) \u2192 Build-Out \u2192 Organizational Readiness (Jan 2027)",
+    "build_out_months_approx": 6
+  },
+  "software_completion_date": "2026-07-11",
+  "organizational_readiness_date": "2027-01-01",
+  "days_to_software": 2,
+  "days_to_organizational": 176,
+  "knowledge_node_types": [
+    "people",
+    "organizations",
+    "locations",
+    "research",
+    "legal_authorities",
+    "educational_content",
+    "projects",
+    "events",
+    "institutional_assets",
+    "policies",
+    "media",
+    "ai_agents",
+    "localbrains"
+  ],
+  "node_type_count": 13,
+  "relationship_ontology": [
+    {
+      "from": "person",
+      "relationship": "volunteers_in",
+      "to": "county"
+    },
+    {
+      "from": "education_leader",
+      "relationship": "serves",
+      "to": "city"
+    },
+    {
+      "from": "research_article",
+      "relationship": "references",
+      "to": "court_case"
+    },
+    {
+      "from": "lesson",
+      "relationship": "explains",
+      "to": "claim"
+    },
+    {
+      "from": "claim",
+      "relationship": "supported_by",
+      "to": "evidence"
+    },
+    {
+      "from": "volunteer",
+      "relationship": "member_of",
+      "to": "organization"
+    },
+    {
+      "from": "organization",
+      "relationship": "operates_in",
+      "to": "county"
+    },
+    {
+      "from": "community_conversation",
+      "relationship": "occurred_in",
+      "to": "neighborhood"
+    }
+  ],
+  "graph_connected_entities": [
+    "people",
+    "organizations",
+    "counties",
+    "cities",
+    "neighborhoods",
+    "court_cases",
+    "research_papers",
+    "evidence",
+    "claims",
+    "lessons",
+    "courses",
+    "projects",
+    "events",
+    "volunteers",
+    "education_leaders",
+    "community_conversations"
+  ],
+  "semantic_search": {
+    "query": "Money in politics",
+    "discovers": [
+      "campaign_finance",
+      "political_spending",
+      "independent_expenditures",
+      "disclosure",
+      "citizens_united",
+      "court_decisions",
+      "educational_lessons",
+      "related_organizations"
+    ],
+    "principle": "Concepts, not keywords alone"
+  },
+  "institutional_memory_events": [
+    "leadership_decisions",
+    "research_revisions",
+    "volunteer_milestones",
+    "community_conversations",
+    "project_completions",
+    "policy_updates"
+  ],
+  "knowledge_health_metrics": [
+    "orphaned_records",
+    "broken_relationships",
+    "duplicate_entities",
+    "missing_citations",
+    "unreviewed_content",
+    "knowledge_freshness",
+    "institutional_memory_quality"
+  ],
+  "mc_knowledge_visualizations": [
+    "knowledge_growth",
+    "relationship_density",
+    "research_completeness",
+    "county_knowledge",
+    "volunteer_connections",
+    "coalition_development",
+    "knowledge_gaps"
+  ],
+  "ai_integration": {
+    "rule": "Every LocalBrain retrieves from the graph; AI answers via relationships and evidence",
+    "localbrain_manifest": "/data/localbrain-network-manifest.json"
+  },
+  "status": "documented",
+  "implemented": false
+}

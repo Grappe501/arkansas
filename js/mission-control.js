@@ -10656,8 +10656,16 @@ async function initCursorImplementationPackage() {
       <div class="mc-stat"><div class="mc-stat__label">Implemented</div><div class="mc-stat__value">${s.steps_implemented}</div></div>
       <div class="mc-stat"><div class="mc-stat__label">Sprint Zero</div><div class="mc-stat__value">${s.sprint_zero_started ? 'Started' : 'Pending'}</div></div>
       <div class="mc-stat"><div class="mc-stat__label">MVP in scope</div><div class="mc-stat__value">${s.mvp_in_scope_count}</div></div>
-      <div class="mc-stat"><div class="mc-stat__label">Days to Jan 2027</div><div class="mc-stat__value">${s.days_remaining}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Days to software</div><div class="mc-stat__value">${s.days_to_software ?? '—'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Days to Jan 2027</div><div class="mc-stat__value">${s.days_to_organizational ?? s.days_remaining}</div></div>
     </div>
+    <h2 class="mc-section-title">Master Timeline</h2>
+    <p class="mc-bar-note"><strong>Software complete:</strong> ${cip.software_completion_date || cip.master_timeline?.phase_one?.target_date || '2026-07-11'} · <strong>Organizational readiness:</strong> ${cip.organizational_readiness_date || cip.master_timeline?.phase_two?.target_date || '2027-01-01'}</p>
+    <p class="mc-bar-note">${cip.master_timeline?.sequence || 'Software Complete → Build-Out → Organizational Readiness'}</p>
+    <h2 class="mc-section-title">Knowledge Graph (IMP-09)</h2>
+    <p class="mc-bar-note"><strong>${cip.knowledge_graph.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.knowledge_graph.node_type_count} node types · ${cip.knowledge_graph.relationship_count} relationship patterns · ${cip.knowledge_graph.knowledge_health_metric_count} health metrics</p>
+    <p class="mc-bar-note"><a href="${cip.knowledge_graph.route}">IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md</a> · <a href="${cip.knowledge_graph.manifest}">knowledge-graph-manifest.json</a> · <a href="/mission-control/knowledge-graph.html">Knowledge Graph dashboard</a></p>
+    <p class="mc-bar-note">${cip.knowledge_graph.philosophy}</p>
     <h2 class="mc-section-title">LocalBrain Network (IMP-08)</h2>
     <p class="mc-bar-note"><strong>${cip.localbrain_network.status === 'documented' ? 'Documented' : 'Pending'}</strong> · ${cip.localbrain_network.localbrain_count} LocalBrains · ${cip.localbrain_network.core_module_count} core modules · ${cip.localbrain_network.brain_lifecycle_stages}-stage lifecycle</p>
     <p class="mc-bar-note"><a href="${cip.localbrain_network.route}">IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md</a> · <a href="${cip.localbrain_network.manifest}">localbrain-network-manifest.json</a> · <a href="/mission-control/localbrain-architecture.html">LocalBrain dashboard</a></p>

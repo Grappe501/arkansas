@@ -8,10 +8,44 @@ from pathlib import Path
 
 root = Path(__file__).resolve().parents[1]
 today = '2026-07-09'
-completion_target_date = '2027-01-01'
-completion_target = date(2027, 1, 1)
+software_completion_date = '2026-07-11'
+organizational_readiness_date = '2027-01-01'
+software_completion = date(2026, 7, 11)
+organizational_readiness = date(2027, 1, 1)
 today_date = date(2026, 7, 9)
-days_remaining = max((completion_target - today_date).days, 0)
+days_to_software = max((software_completion - today_date).days, 0)
+days_to_organizational = max((organizational_readiness - today_date).days, 0)
+# Backward-compatible aliases used across registries
+completion_target_date = organizational_readiness_date
+days_remaining = days_to_organizational
+
+MASTER_TIMELINE = {
+    'phase_one': {
+        'id': 'software_completion',
+        'title': 'Software Completion',
+        'target_date': software_completion_date,
+        'days_remaining': days_to_software,
+        'scope': [
+            'Public website', 'Mission Control', 'LocalBrains', 'Community Education Academy',
+            'Knowledge Platform', 'Research system', 'Volunteer system', 'Coalition system',
+            'County, City, and Neighborhood systems', 'AI infrastructure', 'Administrative tools',
+        ],
+    },
+    'phase_two': {
+        'id': 'organizational_readiness',
+        'title': 'Organizational Readiness',
+        'target_date': organizational_readiness_date,
+        'days_remaining': days_to_organizational,
+        'focus': [
+            'Recruiting Education Leaders', 'Expanding county coverage', 'Growing city leadership',
+            'Coalition development', 'Volunteer training', 'Community conversations',
+            'Research expansion', 'Public testing', 'User feedback', 'System refinement',
+            'Launch certification',
+        ],
+    },
+    'sequence': 'Software Complete (Jul 11, 2026) → Build-Out → Organizational Readiness (Jan 2027)',
+    'build_out_months_approx': 6,
+}
 
 
 def load_json(path):
@@ -26,7 +60,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 8  # IMP-01 through IMP-08
+steps_documented = 9  # IMP-01 through IMP-09
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -333,44 +367,61 @@ IMPLEMENTATION_STEPS = [
     },
     {
         'number': 9, 'id': 'IMP-09', 'band': 'A',
-        'title': 'Engineering foundation: migration, stack, Netlify, Git, CI, and environment',
-        'summary': 'Strangler-fig migration, repo audit, pinned stack, netlify.toml, branch model, CI pipeline, env matrix',
+        'package_label': 'Implementation Package 9 of 50',
+        'title': 'Master Knowledge Graph, Semantic Search & Institutional Memory',
+        'summary': 'Relationship ontology, semantic search, institutional memory, AI retrieval, knowledge health — dual timeline Jul 2026 / Jan 2027',
+        'deliverables': [
+            'docs/IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md',
+            'data/knowledge-graph-manifest.json',
+            'Knowledge Graph Architecture', 'Semantic Search Model', 'Institutional Memory Framework',
+            'Relationship Ontology', 'AI Retrieval Standards', 'Knowledge Health Metrics',
+            'Mission Control Knowledge Dashboards', 'Updated Master Timeline',
+        ],
+        'acceptance_criteria': [
+            'Dual timeline documented: software complete Jul 11 2026; organizational readiness Jan 2027',
+            'Core node types and relationship ontology defined',
+            'Semantic search model specified (concepts not keywords alone)',
+            'Institutional memory and knowledge health metrics documented',
+            'LocalBrain and Mission Control integration with shared graph foundation',
+            'Every LocalBrain has a shared knowledge foundation',
+        ],
+        'source_blueprints': [
+            '/data/knowledge-graph-manifest.json',
+            '/data/knowledge-graph.json',
+            '/data/kg-registry.json',
+            '/data/knowledge-atlas.json',
+            '/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md',
+        ],
+        'constitution': '/docs/IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md',
+        'manifest': '/data/knowledge-graph-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+    },
+    {
+        'number': 10, 'id': 'IMP-10', 'band': 'A',
+        'title': 'Sprint Zero: engineering foundation and exit gate',
+        'summary': 'Migration, stack, Netlify, Git, CI, env matrix, CONTRIBUTING, Sprint Zero checklist — gate before Band B',
         'deliverables': [
             'docs/MIGRATION_PLAN.md', 'docs/REPO_AUDIT.md', 'app/README.md',
             'docs/STACK.md', 'docs/SERVICE_BOUNDARIES.md', 'docs/DEPLOYMENT_TOPOLOGY.md',
             'netlify.toml', 'docs/DEPLOYMENT.md', 'docs/GIT_WORKFLOW.md',
             '.github/workflows/ci.yml', 'package.json scripts section', 'docs/SCRIPTS.md',
             '.env.example', 'docs/ENVIRONMENT.md',
+            'docs/SPRINT_ZERO_CHECKLIST.md', 'CONTRIBUTING.md',
         ],
         'acceptance_criteria': [
-            'Current tree diffed against IMP-02 repository structure',
-            'Migration strategy chosen with rollback plan',
-            'Target folders scaffolded; existing static Netlify deploy unchanged',
-            'Pinned versions documented with rationale',
-            'Branch purposes match repository-blueprint branch_structure',
-            'CI runs on pull_request; generator scripts invocable via npm run gen:all',
-            'All required env vars documented with no secrets committed',
-        ],
-        'source_blueprints': [
-            '/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md',
-            '/data/repository-blueprint.json',
-            '/data/technical-architecture.json',
-            '/netlify.toml', '/package.json', '/scripts/',
-        ],
-        'status': 'specified',
-    },
-    {
-        'number': 10, 'id': 'IMP-10', 'band': 'A',
-        'title': 'Sprint Zero exit checklist',
-        'summary': 'Gate before Band B — repo ready for first code slice',
-        'deliverables': ['docs/SPRINT_ZERO_CHECKLIST.md', 'CONTRIBUTING.md'],
-        'acceptance_criteria': [
-            'IMP-01 through IMP-08 documented; IMP-09 engineering criteria verified',
+            'IMP-01 through IMP-09 documented; dual timeline aligned across registries',
+            'Migration strategy, stack lock, Netlify, Git, CI, env documented and verified',
             'CONTRIBUTING.md links to implementation packages and CURSOR_MASTER_BUILD_PROMPT.md',
             'One successful Netlify preview deploy from develop',
             'Executive sign-off field in checklist (manual)',
         ],
-        'source_blueprints': ['/data/cursor-implementation-package.json', '/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md'],
+        'source_blueprints': [
+            '/data/cursor-implementation-package.json',
+            '/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md',
+            '/data/repository-blueprint.json',
+            '/netlify.toml', '/package.json', '/scripts/',
+        ],
         'status': 'specified',
     },
     # Band B — 11–20
@@ -1725,7 +1776,8 @@ MISSION_CONTROL_ARCHITECTURE_MANIFEST = {
     'institutional_health_categories': INSTITUTIONAL_HEALTH_CATEGORIES,
     'health_category_count': len(INSTITUTIONAL_HEALTH_CATEGORIES),
     'january_2027_targets': {
-        'completion_date': completion_target_date,
+        'completion_date': organizational_readiness_date,
+        'software_completion_date': software_completion_date,
         'counties': 75,
         'cities': 250,
         'connected_voter_pct': 15,
@@ -1916,6 +1968,92 @@ LOCALBRAIN_NETWORK_MANIFEST = {
     'implemented': False,
 }
 
+KNOWLEDGE_NODE_TYPES = [
+    'people', 'organizations', 'locations', 'research', 'legal_authorities',
+    'educational_content', 'projects', 'events', 'institutional_assets',
+    'policies', 'media', 'ai_agents', 'localbrains',
+]
+
+RELATIONSHIP_ONTOLOGY = [
+    {'from': 'person', 'relationship': 'volunteers_in', 'to': 'county'},
+    {'from': 'education_leader', 'relationship': 'serves', 'to': 'city'},
+    {'from': 'research_article', 'relationship': 'references', 'to': 'court_case'},
+    {'from': 'lesson', 'relationship': 'explains', 'to': 'claim'},
+    {'from': 'claim', 'relationship': 'supported_by', 'to': 'evidence'},
+    {'from': 'volunteer', 'relationship': 'member_of', 'to': 'organization'},
+    {'from': 'organization', 'relationship': 'operates_in', 'to': 'county'},
+    {'from': 'community_conversation', 'relationship': 'occurred_in', 'to': 'neighborhood'},
+]
+
+GRAPH_CONNECTED_ENTITIES = [
+    'people', 'organizations', 'counties', 'cities', 'neighborhoods',
+    'court_cases', 'research_papers', 'evidence', 'claims', 'lessons', 'courses',
+    'projects', 'events', 'volunteers', 'education_leaders', 'community_conversations',
+]
+
+SEMANTIC_SEARCH_EXAMPLE = {
+    'query': 'Money in politics',
+    'discovers': [
+        'campaign_finance', 'political_spending', 'independent_expenditures',
+        'disclosure', 'citizens_united', 'court_decisions', 'educational_lessons',
+        'related_organizations',
+    ],
+    'principle': 'Concepts, not keywords alone',
+}
+
+INSTITUTIONAL_MEMORY_EVENTS = [
+    'leadership_decisions', 'research_revisions', 'volunteer_milestones',
+    'community_conversations', 'project_completions', 'policy_updates',
+]
+
+KNOWLEDGE_HEALTH_METRICS = [
+    'orphaned_records', 'broken_relationships', 'duplicate_entities',
+    'missing_citations', 'unreviewed_content', 'knowledge_freshness',
+    'institutional_memory_quality',
+]
+
+MC_KNOWLEDGE_VISUALIZATIONS = [
+    'knowledge_growth', 'relationship_density', 'research_completeness',
+    'county_knowledge', 'volunteer_connections', 'coalition_development', 'knowledge_gaps',
+]
+
+KNOWLEDGE_GRAPH_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-09',
+    'updated': today,
+    'title': 'Master Knowledge Graph, Semantic Search & Institutional Memory',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md',
+    'source_registries': {
+        'knowledge_graph': '/data/knowledge-graph.json',
+        'kg_registry': '/data/kg-registry.json',
+        'knowledge_atlas': '/data/knowledge-atlas.json',
+        'canonical_data': '/data/canonical-data-manifest.json',
+        'localbrain_network': '/data/localbrain-network-manifest.json',
+    },
+    'philosophy': 'Everything is connected; the Knowledge Graph explains relationships',
+    'governing_principle': 'Knowledge has value only when it is connected',
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_organizational': days_to_organizational,
+    'knowledge_node_types': KNOWLEDGE_NODE_TYPES,
+    'node_type_count': len(KNOWLEDGE_NODE_TYPES),
+    'relationship_ontology': RELATIONSHIP_ONTOLOGY,
+    'graph_connected_entities': GRAPH_CONNECTED_ENTITIES,
+    'semantic_search': SEMANTIC_SEARCH_EXAMPLE,
+    'institutional_memory_events': INSTITUTIONAL_MEMORY_EVENTS,
+    'knowledge_health_metrics': KNOWLEDGE_HEALTH_METRICS,
+    'mc_knowledge_visualizations': MC_KNOWLEDGE_VISUALIZATIONS,
+    'ai_integration': {
+        'rule': 'Every LocalBrain retrieves from the graph; AI answers via relationships and evidence',
+        'localbrain_manifest': '/data/localbrain-network-manifest.json',
+    },
+    'status': 'documented',
+    'implemented': False,
+}
+
 ROUTE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -1976,11 +2114,12 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D09', 'indicator': 'Design System (IMP-06)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D10', 'indicator': 'Mission Control Architecture (IMP-07)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D11', 'indicator': 'LocalBrain Network (IMP-08)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D12', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D12', 'indicator': 'Knowledge Graph (IMP-09)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D13', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
-    72,
+    78,
     14
     + len(IMPLEMENTATION_STEPS) // 2
     + len(BANDS) * 2
@@ -1995,7 +2134,11 @@ out = {
     'version': '1.0',
     'build': 101,
     'updated': today,
-    'completion_target_date': completion_target_date,
+    'completion_target_date': organizational_readiness_date,
+    'software_completion_date': software_completion_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_organizational': days_to_organizational,
     'title': 'Cursor Implementation Package v1.0',
     'subtitle': '50 Executable Implementation Steps',
     'tagline': 'From Blueprint to Code — Master Build Bible v2.0',
@@ -2194,8 +2337,32 @@ out = {
             'number': 9,
             'id': 'IMP-09',
             'title': 'Master Knowledge Graph, Semantic Search & Institutional Memory',
+            'status': 'documented',
         },
     },
+    'knowledge_graph': {
+        'title': 'Master Knowledge Graph, Semantic Search & Institutional Memory',
+        'package': 'Implementation Package 9 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md',
+        'manifest': '/data/knowledge-graph-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': KNOWLEDGE_GRAPH_MANIFEST['philosophy'],
+        'node_type_count': KNOWLEDGE_GRAPH_MANIFEST['node_type_count'],
+        'relationship_count': len(RELATIONSHIP_ONTOLOGY),
+        'knowledge_health_metric_count': len(KNOWLEDGE_HEALTH_METRICS),
+        'software_completion_date': software_completion_date,
+        'organizational_readiness_date': organizational_readiness_date,
+        'days_to_software': days_to_software,
+        'days_to_organizational': days_to_organizational,
+        'next_package': {
+            'number': 10,
+            'id': 'IMP-10',
+            'title': 'Master Content Management System, Research Publishing & Editorial Workflow',
+            'note': 'Doctrinal package 10; engineering IMP-10 is Sprint Zero gate',
+        },
+    },
+    'master_timeline': MASTER_TIMELINE,
     'supersedes': {
         'build': 50,
         'title': 'Master Build Bible v1.0',
@@ -2207,6 +2374,10 @@ out = {
     'implementation_steps_total': len(IMPLEMENTATION_STEPS),
     'mvp_scope': MVP_SCOPE,
     'january_2027_targets': {
+        'organizational_readiness_date': organizational_readiness_date,
+        'software_completion_date': software_completion_date,
+        'days_to_software': days_to_software,
+        'days_to_organizational': days_to_organizational,
         'counties': 75,
         'cities': 250,
         'connected_voter_pct_per_county_city': 15,
@@ -2214,7 +2385,7 @@ out = {
         'education_leaders_statewide': True,
         'coalition_partners_onboarded': True,
         'mission_control_operational': True,
-        'days_remaining': days_remaining,
+        'days_remaining': days_to_organizational,
     },
     'package_dashboard': {
         'title': 'Implementation Package Dashboard',
@@ -2238,8 +2409,12 @@ out = {
         ],
     },
     'summary': {
-        'completion_target_date': completion_target_date,
-        'days_remaining': days_remaining,
+        'software_completion_date': software_completion_date,
+        'organizational_readiness_date': organizational_readiness_date,
+        'days_to_software': days_to_software,
+        'days_to_organizational': days_to_organizational,
+        'completion_target_date': organizational_readiness_date,
+        'days_remaining': days_to_organizational,
         'implementation_package_readiness_pct': implementation_package_readiness,
         'steps_total': len(IMPLEMENTATION_STEPS),
         'steps_documented': steps_documented,
@@ -2302,6 +2477,10 @@ with open(root / 'data/mission-control-architecture-manifest.json', 'w', newline
 
 with open(root / 'data/localbrain-network-manifest.json', 'w', newline='\n') as f:
     json.dump(LOCALBRAIN_NETWORK_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/knowledge-graph-manifest.json', 'w', newline='\n') as f:
+    json.dump(KNOWLEDGE_GRAPH_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

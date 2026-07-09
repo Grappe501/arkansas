@@ -3,6 +3,10 @@
   "build": 101,
   "updated": "2026-07-09",
   "completion_target_date": "2027-01-01",
+  "software_completion_date": "2026-07-11",
+  "organizational_readiness_date": "2027-01-01",
+  "days_to_software": 2,
+  "days_to_organizational": 176,
   "title": "Cursor Implementation Package v1.0",
   "subtitle": "50 Executable Implementation Steps",
   "tagline": "From Blueprint to Code \u2014 Master Build Bible v2.0",
@@ -312,8 +316,73 @@
     "next_package": {
       "number": 9,
       "id": "IMP-09",
-      "title": "Master Knowledge Graph, Semantic Search & Institutional Memory"
+      "title": "Master Knowledge Graph, Semantic Search & Institutional Memory",
+      "status": "documented"
     }
+  },
+  "knowledge_graph": {
+    "title": "Master Knowledge Graph, Semantic Search & Institutional Memory",
+    "package": "Implementation Package 9 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md",
+    "manifest": "/data/knowledge-graph-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Everything is connected; the Knowledge Graph explains relationships",
+    "node_type_count": 13,
+    "relationship_count": 8,
+    "knowledge_health_metric_count": 7,
+    "software_completion_date": "2026-07-11",
+    "organizational_readiness_date": "2027-01-01",
+    "days_to_software": 2,
+    "days_to_organizational": 176,
+    "next_package": {
+      "number": 10,
+      "id": "IMP-10",
+      "title": "Master Content Management System, Research Publishing & Editorial Workflow",
+      "note": "Doctrinal package 10; engineering IMP-10 is Sprint Zero gate"
+    }
+  },
+  "master_timeline": {
+    "phase_one": {
+      "id": "software_completion",
+      "title": "Software Completion",
+      "target_date": "2026-07-11",
+      "days_remaining": 2,
+      "scope": [
+        "Public website",
+        "Mission Control",
+        "LocalBrains",
+        "Community Education Academy",
+        "Knowledge Platform",
+        "Research system",
+        "Volunteer system",
+        "Coalition system",
+        "County, City, and Neighborhood systems",
+        "AI infrastructure",
+        "Administrative tools"
+      ]
+    },
+    "phase_two": {
+      "id": "organizational_readiness",
+      "title": "Organizational Readiness",
+      "target_date": "2027-01-01",
+      "days_remaining": 176,
+      "focus": [
+        "Recruiting Education Leaders",
+        "Expanding county coverage",
+        "Growing city leadership",
+        "Coalition development",
+        "Volunteer training",
+        "Community conversations",
+        "Research expansion",
+        "Public testing",
+        "User feedback",
+        "System refinement",
+        "Launch certification"
+      ]
+    },
+    "sequence": "Software Complete (Jul 11, 2026) \u2192 Build-Out \u2192 Organizational Readiness (Jan 2027)",
+    "build_out_months_approx": 6
   },
   "supersedes": {
     "build": 50,
@@ -689,8 +758,47 @@
       "number": 9,
       "id": "IMP-09",
       "band": "A",
-      "title": "Engineering foundation: migration, stack, Netlify, Git, CI, and environment",
-      "summary": "Strangler-fig migration, repo audit, pinned stack, netlify.toml, branch model, CI pipeline, env matrix",
+      "package_label": "Implementation Package 9 of 50",
+      "title": "Master Knowledge Graph, Semantic Search & Institutional Memory",
+      "summary": "Relationship ontology, semantic search, institutional memory, AI retrieval, knowledge health \u2014 dual timeline Jul 2026 / Jan 2027",
+      "deliverables": [
+        "docs/IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md",
+        "data/knowledge-graph-manifest.json",
+        "Knowledge Graph Architecture",
+        "Semantic Search Model",
+        "Institutional Memory Framework",
+        "Relationship Ontology",
+        "AI Retrieval Standards",
+        "Knowledge Health Metrics",
+        "Mission Control Knowledge Dashboards",
+        "Updated Master Timeline"
+      ],
+      "acceptance_criteria": [
+        "Dual timeline documented: software complete Jul 11 2026; organizational readiness Jan 2027",
+        "Core node types and relationship ontology defined",
+        "Semantic search model specified (concepts not keywords alone)",
+        "Institutional memory and knowledge health metrics documented",
+        "LocalBrain and Mission Control integration with shared graph foundation",
+        "Every LocalBrain has a shared knowledge foundation"
+      ],
+      "source_blueprints": [
+        "/data/knowledge-graph-manifest.json",
+        "/data/knowledge-graph.json",
+        "/data/kg-registry.json",
+        "/data/knowledge-atlas.json",
+        "/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md"
+      ],
+      "constitution": "/docs/IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md",
+      "manifest": "/data/knowledge-graph-manifest.json",
+      "status": "documented",
+      "documented_date": "2026-07-09"
+    },
+    {
+      "number": 10,
+      "id": "IMP-10",
+      "band": "A",
+      "title": "Sprint Zero: engineering foundation and exit gate",
+      "summary": "Migration, stack, Netlify, Git, CI, env matrix, CONTRIBUTING, Sprint Zero checklist \u2014 gate before Band B",
       "deliverables": [
         "docs/MIGRATION_PLAN.md",
         "docs/REPO_AUDIT.md",
@@ -705,46 +813,24 @@
         "package.json scripts section",
         "docs/SCRIPTS.md",
         ".env.example",
-        "docs/ENVIRONMENT.md"
-      ],
-      "acceptance_criteria": [
-        "Current tree diffed against IMP-02 repository structure",
-        "Migration strategy chosen with rollback plan",
-        "Target folders scaffolded; existing static Netlify deploy unchanged",
-        "Pinned versions documented with rationale",
-        "Branch purposes match repository-blueprint branch_structure",
-        "CI runs on pull_request; generator scripts invocable via npm run gen:all",
-        "All required env vars documented with no secrets committed"
-      ],
-      "source_blueprints": [
-        "/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md",
-        "/data/repository-blueprint.json",
-        "/data/technical-architecture.json",
-        "/netlify.toml",
-        "/package.json",
-        "/scripts/"
-      ],
-      "status": "specified"
-    },
-    {
-      "number": 10,
-      "id": "IMP-10",
-      "band": "A",
-      "title": "Sprint Zero exit checklist",
-      "summary": "Gate before Band B \u2014 repo ready for first code slice",
-      "deliverables": [
+        "docs/ENVIRONMENT.md",
         "docs/SPRINT_ZERO_CHECKLIST.md",
         "CONTRIBUTING.md"
       ],
       "acceptance_criteria": [
-        "IMP-01 through IMP-08 documented; IMP-09 engineering criteria verified",
+        "IMP-01 through IMP-09 documented; dual timeline aligned across registries",
+        "Migration strategy, stack lock, Netlify, Git, CI, env documented and verified",
         "CONTRIBUTING.md links to implementation packages and CURSOR_MASTER_BUILD_PROMPT.md",
         "One successful Netlify preview deploy from develop",
         "Executive sign-off field in checklist (manual)"
       ],
       "source_blueprints": [
         "/data/cursor-implementation-package.json",
-        "/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md"
+        "/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md",
+        "/data/repository-blueprint.json",
+        "/netlify.toml",
+        "/package.json",
+        "/scripts/"
       ],
       "status": "specified"
     },
@@ -1607,6 +1693,10 @@
     ]
   },
   "january_2027_targets": {
+    "organizational_readiness_date": "2027-01-01",
+    "software_completion_date": "2026-07-11",
+    "days_to_software": 2,
+    "days_to_organizational": 176,
     "counties": 75,
     "cities": 250,
     "connected_voter_pct_per_county_city": 15,
@@ -1628,7 +1718,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 8,
+        "current": 9,
         "status": "partial"
       },
       {
@@ -1687,6 +1777,12 @@
       },
       {
         "id": "CIP-D12",
+        "indicator": "Knowledge Graph (IMP-09)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D13",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -1729,11 +1825,15 @@
     ]
   },
   "summary": {
+    "software_completion_date": "2026-07-11",
+    "organizational_readiness_date": "2027-01-01",
+    "days_to_software": 2,
+    "days_to_organizational": 176,
     "completion_target_date": "2027-01-01",
     "days_remaining": 176,
-    "implementation_package_readiness_pct": 72,
+    "implementation_package_readiness_pct": 78,
     "steps_total": 50,
-    "steps_documented": 8,
+    "steps_documented": 9,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

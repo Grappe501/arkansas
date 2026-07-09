@@ -24,6 +24,16 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 0f. **Design System (IMP-06):** [/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md](/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md) · [/data/design-system-manifest.json](/data/design-system-manifest.json)
 0g. **Mission Control Architecture (IMP-07):** [/docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md](/docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md) · [/data/mission-control-architecture-manifest.json](/data/mission-control-architecture-manifest.json)
 0h. **LocalBrain Network (IMP-08):** [/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md](/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md) · [/data/localbrain-network-manifest.json](/data/localbrain-network-manifest.json)
+0i. **Knowledge Graph (IMP-09):** [/docs/IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md](/docs/IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md) · [/data/knowledge-graph-manifest.json](/data/knowledge-graph-manifest.json)
+
+## Master timeline (updated IMP-09)
+
+| Phase | Target | Focus |
+|-------|--------|-------|
+| **Software complete** | **July 11, 2026** | Feature-complete platform (site, MC, LocalBrains, academy, research, volunteer, coalition, geo systems, AI, admin) |
+| **Organizational readiness** | **January 2027** | Education leaders, county/city coverage, coalition, training, conversations, research, testing, launch certification |
+
+Between the two dates: populate content, train volunteers, expand leadership, validate operations (~6 months build-out).
 1. **Manifesto (#99):** Will this help an ordinary Arkansan understand how self-government works?
 2. **Charter (#100):** Knowledge → Citizens → Communities → Arkansas → self-government.
 3. **Education before advocacy** — present evidence; Arkansans draw conclusions.
@@ -54,7 +64,9 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 
 ---
 
-## January 2027 MVP goals
+## January 2027 organizational goals (Phase Two)
+
+After **software completion (July 11, 2026)**, organizational build-out targets:
 
 - Mission Control operational with real progress tracking
 - 75 county dashboards (template from 1 pilot)
@@ -64,7 +76,7 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 - Evidence ledger read path + citation on public pages
 - Content publish workflow (draft → review → publish)
 - 15% connected-voter tracking per county/city (formula documented)
-- Executive countdown to 2027-01-01
+- Executive countdown to organizational readiness (Jan 2027); software target Jul 11, 2026
 
 **Out of scope for MVP:** full ACOS 2.0 personal workspace, autonomous AI institution, 200K relational graph at scale.
 
@@ -115,7 +127,7 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 
 ## First step to implement
 
-**IMP-01** through **IMP-08** are **documented**:
+**IMP-01** through **IMP-09** are **documented**:
 - [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
 - [Technical Architecture](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
 - [Route Map](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [route-manifest.json](/data/route-manifest.json)
@@ -124,7 +136,8 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 - [Design System](/docs/IMPLEMENTATION_PACKAGE_06_DESIGN_SYSTEM.md) · [design-system-manifest.json](/data/design-system-manifest.json)
 - [Mission Control Architecture](/docs/IMPLEMENTATION_PACKAGE_07_MISSION_CONTROL.md) · [mission-control-architecture-manifest.json](/data/mission-control-architecture-manifest.json)
 - [LocalBrain Network](/docs/IMPLEMENTATION_PACKAGE_08_LOCALBRAIN_ARCHITECTURE.md) · [localbrain-network-manifest.json](/data/localbrain-network-manifest.json)
+- [Knowledge Graph](/docs/IMPLEMENTATION_PACKAGE_09_KNOWLEDGE_GRAPH.md) · [knowledge-graph-manifest.json](/data/knowledge-graph-manifest.json)
 
-**IMP-09** is next: Master Knowledge Graph, Semantic Search & Institutional Memory.
+**IMP-10** is next: Master Content Management System, Research Publishing & Editorial Workflow.
 
-Engineering execution (migration, stack, Netlify, Git, CI) begins at **engineering IMP-09** after knowledge graph is documented.
+Engineering **Sprint Zero (IMP-10)** follows after Band A doctrine is complete.

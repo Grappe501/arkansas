@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.9] - 2026-07-09 — IMP-09 Knowledge Graph + dual timeline
+
+### Implementation Package 9 of 50
+- **Master Knowledge Graph, Semantic Search & Institutional Memory**
+- **Updated master timeline:** Software complete **July 11, 2026** · Organizational readiness **January 2027**
+- 13 node types, 8 relationship patterns, semantic search model, 7 knowledge health metrics
+- Machine-readable **knowledge-graph-manifest.json**
+- Engineering Sprint Zero consolidated as IMP-10 (Band A gate)
+- IMP-10 next (doctrinal): Content Management System, Research Publishing & Editorial Workflow
+- Honest: 9/50 documented · 0/50 implemented · 78% package readiness
+
 ## [2.05.8] - 2026-07-09 — IMP-08 LocalBrain Network documented
 
 ### Implementation Package 8 of 50

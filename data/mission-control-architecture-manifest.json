@@ -84,6 +84,7 @@
   "health_category_count": 15,
   "january_2027_targets": {
     "completion_date": "2027-01-01",
+    "software_completion_date": "2026-07-11",
     "counties": 75,
     "cities": 250,
     "connected_voter_pct": 15,
