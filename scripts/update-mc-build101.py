@@ -14,7 +14,7 @@ s = cip['summary']
 prior_maturity = mc.get('executive', {}).get('institutional_maturity_pct', 32)
 prior_ex = mc.get('executive', {})
 
-mc['version'] = '2.05.2'
+mc['version'] = '2.05.3'
 mc['build'] = 101
 mc['updated'] = '2026-07-09'
 mc['cursor_implementation_package'] = '/data/cursor-implementation-package.json'
@@ -86,13 +86,13 @@ else:
 build_entry = {
     'number': 101,
     'title': title,
-    'version': '2.05.2',
+    'version': '2.05.3',
     'status': 'complete',
     'started': '2026-07-09',
     'completed': '2026-07-09',
     'purpose': '50 executable implementation steps — blueprint to code',
     'summary': (
-        f"50 steps in 5 bands. IMP-01 Technical Constitution documented. "
+        f"50 steps in 5 bands. IMP-01 Constitution + IMP-02 Architecture documented. "
         f"{s['implementation_package_readiness_pct']}% readiness · "
         f"{s.get('steps_documented', 0)}/{s['steps_total']} documented · "
         f"{s['steps_implemented']} implemented."
@@ -102,6 +102,9 @@ build_entry = {
         'docs/MASTER_CURSOR_IMPLEMENTATION_PACKAGE.md',
         'docs/CURSOR_MASTER_BUILD_PROMPT.md',
         'docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md',
+        'docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md',
+        'docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md',
+        'data/route-manifest.json',
         'builds/101-cursor-implementation-package.md',
         'mission-control/cursor-implementation-package.html',
         'scripts/gen-cursor-implementation-package.py',
@@ -114,6 +117,7 @@ build_entry = {
     'decisions_made': [
         '50 steps — thorough without drifting into abstract planning',
         'IMP-01 Master Technical Constitution governs all future packages',
+        'IMP-02 Master Technical Architecture defines repository layers and module standards',
         'Five bands of 10: foundation, presentation, data, operations, knowledge/launch',
         'Supersedes Build Bible v1 as executable engineering layer (Build Bible v2)',
         f"{s.get('steps_documented', 0)} documented · {s['steps_implemented']} implemented — honest status",
@@ -136,11 +140,11 @@ mc['builds'] = [b for b in mc['builds'] if b.get('number') != 101]
 mc['builds'].insert(0, build_entry)
 
 mc['briefing'] = {
-    'what_built': 'IMP-01 Technical Constitution + 50-step implementation package',
-    'building_now': 'IMP-02 Technical Architecture & Repository Blueprint next',
-    'blocked': ['Sprint Zero not complete', '0/50 steps code-implemented', 'No Neon/Prisma in production'],
-    'ready_public': ['Technical Constitution', '50 step specs', 'Cursor master prompt', 'MVP scope'],
-    'next': 'IMP-02 — Master Technical Architecture & Repository Blueprint',
+    'what_built': 'IMP-01 Technical Constitution + IMP-02 Technical Architecture documented',
+    'building_now': 'IMP-03 Master Route Map & Application Navigation next',
+    'blocked': ['Sprint Zero not complete', '0/50 steps code-implemented', 'Route map not documented'],
+    'ready_public': ['Technical Constitution', 'Technical Architecture blueprint', '50 step registry', 'Cursor master prompt'],
+    'next': 'IMP-03 — Master Route Map & Complete Application Navigation',
 }
 
 if not any(n.get('id') == 'cursor_implementation_package' for n in mc['build_map']):
@@ -151,7 +155,4 @@ if not any(n.get('id') == 'cursor_implementation_package' for n in mc['build_map
         'status': 'complete',
     })
 
-with open(root / 'data/mission-control.json', 'w', newline='\n') as f:
-    json.dump(mc, f, indent=2)
-    f.write('\n')
-print('done')
+with open(root / 'data/mission-control.json',

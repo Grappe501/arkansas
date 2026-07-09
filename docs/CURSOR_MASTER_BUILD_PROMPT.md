@@ -17,7 +17,8 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 ## Governing principles (always apply)
 
 0. **Technical Constitution (IMP-01):** [/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
-0b. **Technical Architecture (IMP-02):** [/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md) — repository layers, module standards, stack, MC/AI placement.
+0b. **Technical Architecture (IMP-02):** [/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
+0c. **Route Map (IMP-03):** [/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [/data/route-manifest.json](/data/route-manifest.json)
 1. **Manifesto (#99):** Will this help an ordinary Arkansan understand how self-government works?
 2. **Charter (#100):** Knowledge → Citizens → Communities → Arkansas → self-government.
 3. **Education before advocacy** — present evidence; Arkansans draw conclusions.
@@ -109,10 +110,11 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 
 ## First step to implement
 
-**IMP-01** and **IMP-02** are **documented**:
+**IMP-01**, **IMP-02**, and **IMP-03** are **documented**:
 - [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
-- [Technical Architecture & Repository Blueprint](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
+- [Technical Architecture](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
+- [Route Map](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [route-manifest.json](/data/route-manifest.json)
 
-**IMP-03** is next: Master Route Map & Complete Application Navigation.
+**IMP-04** is next: Master Database Schema & Canonical Data Model.
 
-Engineering execution (migration, stack lock, env, CI) begins at **IMP-04** after route map is documented.
+Engineering execution (migration, stack, env, CI) begins at **IMP-05** after data model is documented.

@@ -26,7 +26,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 2  # IMP-01 Technical Constitution, IMP-02 Technical Architecture
+steps_documented = 3  # IMP-01, IMP-02, IMP-03
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -135,13 +135,21 @@ IMPLEMENTATION_STEPS = [
         'number': 3, 'id': 'IMP-03', 'band': 'A',
         'package_label': 'Implementation Package 3 of 50',
         'title': 'Master Route Map & Complete Application Navigation',
-        'summary': 'Every page, URL, dashboard, admin screen, public experience, and user journey before coding',
-        'deliverables': ['data/route-manifest.json', 'docs/ROUTE_MAP.md', 'docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md'],
+        'summary': 'Every page, URL, dashboard, workspace, admin screen, and user journey — navigation before code',
+        'deliverables': [
+            'docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md',
+            'data/route-manifest.json',
+            'Complete Route Map', 'Public Navigation', 'Dashboard Architecture',
+            'Executive Navigation', 'Administrative Navigation', 'API Namespace Plan',
+            'User Journey Framework', 'Mobile Navigation Standards',
+        ],
         'acceptance_criteria': [
-            'Every live route from data/route-registry.json categorized and mapped',
-            'Public, MC, API, auth-gated, and volunteer routes documented',
-            'User journeys aligned to visitor-journey.json stages',
-            'launch_priorities must_launch vs stub_ok vs later preserved',
+            'Navigation philosophy: users arrive with questions, not departments',
+            'Primary public nav defined: Home through Search',
+            'Public, account, workspace, MC, admin, AI, and API routes documented',
+            'Route standards: breadcrumbs, search, related resources, AI, feedback, MC metrics',
+            'Mobile priority: Search, Learn, County, Events, Dashboard, AI Assistant',
+            'Cursor should never need to invent routes during development',
         ],
         'source_blueprints': [
             '/data/route-registry.json',
@@ -149,10 +157,36 @@ IMPLEMENTATION_STEPS = [
             '/data/visitor-journey.json',
             '/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md',
         ],
-        'status': 'specified',
+        'constitution': '/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md',
+        'manifest': '/data/route-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
     },
     {
         'number': 4, 'id': 'IMP-04', 'band': 'A',
+        'package_label': 'Implementation Package 4 of 50',
+        'title': 'Master Database Schema & Canonical Data Model',
+        'summary': 'Every major entity, table, relationship, identifier, and data contract — single source of truth',
+        'deliverables': [
+            'docs/IMPLEMENTATION_PACKAGE_04_DATABASE_SCHEMA.md',
+            'prisma/schema.prisma (draft from canonical model)',
+            'data/canonical-data-model.json sync',
+        ],
+        'acceptance_criteria': [
+            'All entities from data/database-schema.json mapped to canonical model',
+            'Relationships and identifiers documented',
+            'Aligns with IMP-02 database/ layer placement',
+            'Privacy and PII fields distinguished',
+        ],
+        'source_blueprints': [
+            '/data/database-schema.json',
+            '/data/canonical-data-model.json',
+            '/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md',
+        ],
+        'status': 'specified',
+    },
+    {
+        'number': 5, 'id': 'IMP-05', 'band': 'A',
         'title': 'Repository migration and folder scaffold',
         'summary': 'Strangler-fig migration plan, repo audit, target folder scaffold without breaking static deploy',
         'deliverables': ['docs/MIGRATION_PLAN.md', 'docs/REPO_AUDIT.md', 'app/README.md', 'database/README.md'],
@@ -166,29 +200,16 @@ IMPLEMENTATION_STEPS = [
         'status': 'specified',
     },
     {
-        'number': 5, 'id': 'IMP-05', 'band': 'A',
-        'title': 'Stack lock and service boundaries',
-        'summary': 'Lock stack versions; define service boundaries and deployment topology',
-        'deliverables': ['docs/STACK.md', 'docs/SERVICE_BOUNDARIES.md', 'docs/DEPLOYMENT_TOPOLOGY.md'],
+        'number': 6, 'id': 'IMP-06', 'band': 'A',
+        'title': 'Stack lock, service boundaries, and environment',
+        'summary': 'Lock stack versions; service boundaries; .env.example and secrets matrix',
+        'deliverables': ['docs/STACK.md', 'docs/SERVICE_BOUNDARIES.md', 'docs/DEPLOYMENT_TOPOLOGY.md', '.env.example', 'docs/ENVIRONMENT.md'],
         'acceptance_criteria': [
             'Pinned versions documented with rationale',
             'Public site, MC, API, and admin deployment units defined',
-            'Service boundaries map to four-layer architecture (IMP-01)',
+            'All required env vars documented with no secrets committed',
         ],
         'source_blueprints': ['/data/technical-architecture.json', '/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md'],
-        'status': 'specified',
-    },
-    {
-        'number': 6, 'id': 'IMP-06', 'band': 'A',
-        'title': 'Environment and secrets matrix',
-        'summary': '.env.example for Neon, auth, Netlify, and local dev',
-        'deliverables': ['.env.example', 'docs/ENVIRONMENT.md'],
-        'acceptance_criteria': [
-            'All required env vars documented with no secrets committed',
-            'Netlify env var mapping documented',
-            'Local setup steps reproducible in under 15 minutes',
-        ],
-        'source_blueprints': ['/data/technical-architecture.json'],
         'status': 'specified',
     },
     {
@@ -236,7 +257,7 @@ IMPLEMENTATION_STEPS = [
         'summary': 'Gate before Band B — repo ready for first code slice',
         'deliverables': ['docs/SPRINT_ZERO_CHECKLIST.md', 'CONTRIBUTING.md'],
         'acceptance_criteria': [
-            'IMP-01 and IMP-02 documented; IMP-04–09 engineering criteria verified',
+            'IMP-01 through IMP-03 documented; IMP-05–09 engineering criteria verified',
             'CONTRIBUTING.md links to implementation packages and CURSOR_MASTER_BUILD_PROMPT.md',
             'One successful Netlify preview deploy from develop',
             'Executive sign-off field in checklist (manual)',
@@ -775,6 +796,95 @@ IMPLEMENTATION_STEPS = [
     },
 ]
 
+PRIMARY_NAVIGATION = [
+    'Home', 'About', 'Learn', 'Research', 'Evidence', 'Academy', 'Counties', 'Cities',
+    'Action Center', 'Coalition', 'News & Updates', 'Get Involved', 'Donate (future)', 'Login', 'Search',
+]
+
+PUBLIC_ROUTES = [
+    {'id': 'RT-01', 'path': '/', 'name': 'Home', 'zone': 'public', 'purpose': 'Introduce institution; clear next steps'},
+    {'id': 'RT-02', 'path': '/about', 'name': 'About', 'zone': 'public', 'sections': ['Mission', 'Vision', 'History', 'Leadership', 'Founding Charter', 'Volunteer model']},
+    {'id': 'RT-03', 'path': '/learn', 'name': 'Learn', 'zone': 'public', 'sections': ['Learning paths', 'Beginner guides', 'Courses', 'Videos', 'Glossary', 'FAQ']},
+    {'id': 'RT-04', 'path': '/research', 'name': 'Research', 'zone': 'public', 'sections': ['Research Library', 'White Papers', 'Historical research', 'Campaign finance', 'Constitutional research', 'Arkansas research']},
+    {'id': 'RT-05', 'path': '/evidence', 'name': 'Evidence', 'zone': 'public', 'sections': ['Evidence Ledger', 'Claims Registry', 'Primary Sources', 'Court opinions', 'Citation explorer']},
+    {'id': 'RT-06', 'path': '/academy', 'name': 'Academy', 'zone': 'public', 'sections': ['Course catalog', 'Certificates', 'Leadership pathways', 'Education Leaders', 'Training']},
+    {'id': 'RT-07', 'path': '/counties', 'name': 'Counties', 'zone': 'public', 'sections': ['Interactive map', 'Directory', 'Dashboards', 'Education Leaders', 'Resources']},
+    {'id': 'RT-08', 'path': '/counties/{county-slug}', 'name': 'County', 'zone': 'public', 'dynamic': True},
+    {'id': 'RT-09', 'path': '/cities', 'name': 'Cities', 'zone': 'public'},
+    {'id': 'RT-10', 'path': '/cities/{city-slug}', 'name': 'City', 'zone': 'public', 'dynamic': True},
+    {'id': 'RT-11', 'path': '/neighborhoods/{slug}', 'name': 'Neighborhood', 'zone': 'public', 'dynamic': True},
+    {'id': 'RT-12', 'path': '/action', 'name': 'Arkansas Action Center', 'zone': 'public', 'sections': ['Legislative resources', 'Government process', 'Public meetings', 'How-to guides']},
+    {'id': 'RT-13', 'path': '/coalition', 'name': 'Coalition', 'zone': 'public'},
+    {'id': 'RT-14', 'path': '/news', 'name': 'News', 'zone': 'public'},
+    {'id': 'RT-15', 'path': '/events', 'name': 'Events', 'zone': 'public'},
+    {'id': 'RT-16', 'path': '/media', 'name': 'Media', 'zone': 'public'},
+    {'id': 'RT-17', 'path': '/faq', 'name': 'FAQ', 'zone': 'public'},
+    {'id': 'RT-18', 'path': '/contact', 'name': 'Contact', 'zone': 'public'},
+]
+
+ACCOUNT_ROUTES = [
+    {'path': '/login', 'name': 'Login'}, {'path': '/register', 'name': 'Register'},
+    {'path': '/forgot-password', 'name': 'Forgot Password'}, {'path': '/profile', 'name': 'Profile'},
+    {'path': '/settings', 'name': 'Settings'}, {'path': '/notifications', 'name': 'Notifications'},
+    {'path': '/messages', 'name': 'Messages'}, {'path': '/dashboard', 'name': 'Personal Dashboard'},
+]
+
+WORKSPACE_ROUTES = [
+    {'path': '/volunteer', 'name': 'Volunteer Workspace', 'role': 'volunteer'},
+    {'path': '/leader', 'name': 'Education Leader Workspace', 'role': 'education_leader'},
+    {'path': '/organization', 'name': 'Coalition Workspace', 'role': 'organization'},
+    {'path': '/executive', 'name': 'Executive Workspace', 'role': 'executive'},
+]
+
+SYSTEM_ROUTES = [
+    {'path': '/mission-control', 'name': 'Mission Control', 'zone': 'institution'},
+    {'path': '/admin', 'name': 'Admin', 'zone': 'admin', 'auth_required': True},
+    {'path': '/ai', 'name': 'AI Workspace', 'zone': 'ai'},
+    {'path': '/search', 'name': 'Search', 'zone': 'public'},
+]
+
+API_NAMESPACES = [
+    'authentication', 'research', 'mission-control', 'academy', 'volunteer',
+    'organizations', 'ai', 'knowledge', 'reports', 'search', 'calendar', 'messaging',
+]
+
+ROUTE_STANDARDS = [
+    'Purpose', 'Breadcrumbs', 'Search', 'Related resources', 'AI assistance',
+    'Feedback option', 'Mission Control metrics (internal)',
+]
+
+MOBILE_NAV_PRIORITY = ['Search', 'Learn', 'County', 'Events', 'Dashboard', 'AI Assistant']
+
+NAVIGATION_QUESTIONS = [
+    'I want to understand…', 'I want to learn…', 'I want to volunteer…',
+    'I want to teach…', 'I want to find my county…', 'I want to see the evidence…',
+    'I want to ask a question…',
+]
+
+ROUTE_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-03',
+    'updated': today,
+    'title': 'Master Route Map & Complete Application Navigation',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md',
+    'source_registry': '/data/route-registry.json',
+    'navigation_philosophy': 'Users arrive with questions, not departments',
+    'navigation_questions': NAVIGATION_QUESTIONS,
+    'primary_navigation': PRIMARY_NAVIGATION,
+    'public_routes': PUBLIC_ROUTES,
+    'account_routes': ACCOUNT_ROUTES,
+    'workspace_routes': WORKSPACE_ROUTES,
+    'system_routes': SYSTEM_ROUTES,
+    'api_base': '/api/',
+    'api_namespaces': API_NAMESPACES,
+    'route_standards': ROUTE_STANDARDS,
+    'mobile_nav_priority': MOBILE_NAV_PRIORITY,
+    'total_routes_defined': len(PUBLIC_ROUTES) + len(ACCOUNT_ROUTES) + len(WORKSPACE_ROUTES) + len(SYSTEM_ROUTES),
+    'status': 'documented',
+    'implemented': False,
+}
+
 MVP_SCOPE = {
     'title': 'January 2027 MVP Scope',
     'in_scope': [
@@ -805,7 +915,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D03', 'indicator': 'Steps implemented', 'current': steps_implemented, 'status': 'planned'},
     {'id': 'CIP-D04', 'indicator': 'Technical Constitution (IMP-01)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D05', 'indicator': 'Technical Architecture (IMP-02)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D06', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D06', 'indicator': 'Route Map (IMP-03)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D07', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -902,6 +1013,25 @@ out = {
             'number': 3,
             'id': 'IMP-03',
             'title': 'Master Route Map & Complete Application Navigation',
+            'status': 'documented',
+        },
+    },
+    'route_map': {
+        'title': 'Master Route Map & Complete Application Navigation',
+        'package': 'Implementation Package 3 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md',
+        'manifest': '/data/route-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'navigation_philosophy': 'Users arrive with questions, not departments',
+        'primary_navigation_count': len(PRIMARY_NAVIGATION),
+        'total_routes_defined': ROUTE_MANIFEST['total_routes_defined'],
+        'api_namespaces': API_NAMESPACES,
+        'mobile_nav_priority': MOBILE_NAV_PRIORITY,
+        'next_package': {
+            'number': 4,
+            'id': 'IMP-04',
+            'title': 'Master Database Schema & Canonical Data Model',
         },
     },
     'supersedes': {
@@ -986,6 +1116,10 @@ out = {
 
 with open(root / 'data/cursor-implementation-package.json', 'w', newline='\n') as f:
     json.dump(out, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/route-manifest.json', 'w', newline='\n') as f:
+    json.dump(ROUTE_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

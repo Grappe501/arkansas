@@ -1,0 +1,315 @@
+{
+  "version": "1.0",
+  "build": 101,
+  "package": "IMP-03",
+  "updated": "2026-07-09",
+  "title": "Master Route Map & Complete Application Navigation",
+  "constitution": "/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md",
+  "source_registry": "/data/route-registry.json",
+  "navigation_philosophy": "Users arrive with questions, not departments",
+  "navigation_questions": [
+    "I want to understand\u2026",
+    "I want to learn\u2026",
+    "I want to volunteer\u2026",
+    "I want to teach\u2026",
+    "I want to find my county\u2026",
+    "I want to see the evidence\u2026",
+    "I want to ask a question\u2026"
+  ],
+  "primary_navigation": [
+    "Home",
+    "About",
+    "Learn",
+    "Research",
+    "Evidence",
+    "Academy",
+    "Counties",
+    "Cities",
+    "Action Center",
+    "Coalition",
+    "News & Updates",
+    "Get Involved",
+    "Donate (future)",
+    "Login",
+    "Search"
+  ],
+  "public_routes": [
+    {
+      "id": "RT-01",
+      "path": "/",
+      "name": "Home",
+      "zone": "public",
+      "purpose": "Introduce institution; clear next steps"
+    },
+    {
+      "id": "RT-02",
+      "path": "/about",
+      "name": "About",
+      "zone": "public",
+      "sections": [
+        "Mission",
+        "Vision",
+        "History",
+        "Leadership",
+        "Founding Charter",
+        "Volunteer model"
+      ]
+    },
+    {
+      "id": "RT-03",
+      "path": "/learn",
+      "name": "Learn",
+      "zone": "public",
+      "sections": [
+        "Learning paths",
+        "Beginner guides",
+        "Courses",
+        "Videos",
+        "Glossary",
+        "FAQ"
+      ]
+    },
+    {
+      "id": "RT-04",
+      "path": "/research",
+      "name": "Research",
+      "zone": "public",
+      "sections": [
+        "Research Library",
+        "White Papers",
+        "Historical research",
+        "Campaign finance",
+        "Constitutional research",
+        "Arkansas research"
+      ]
+    },
+    {
+      "id": "RT-05",
+      "path": "/evidence",
+      "name": "Evidence",
+      "zone": "public",
+      "sections": [
+        "Evidence Ledger",
+        "Claims Registry",
+        "Primary Sources",
+        "Court opinions",
+        "Citation explorer"
+      ]
+    },
+    {
+      "id": "RT-06",
+      "path": "/academy",
+      "name": "Academy",
+      "zone": "public",
+      "sections": [
+        "Course catalog",
+        "Certificates",
+        "Leadership pathways",
+        "Education Leaders",
+        "Training"
+      ]
+    },
+    {
+      "id": "RT-07",
+      "path": "/counties",
+      "name": "Counties",
+      "zone": "public",
+      "sections": [
+        "Interactive map",
+        "Directory",
+        "Dashboards",
+        "Education Leaders",
+        "Resources"
+      ]
+    },
+    {
+      "id": "RT-08",
+      "path": "/counties/{county-slug}",
+      "name": "County",
+      "zone": "public",
+      "dynamic": true
+    },
+    {
+      "id": "RT-09",
+      "path": "/cities",
+      "name": "Cities",
+      "zone": "public"
+    },
+    {
+      "id": "RT-10",
+      "path": "/cities/{city-slug}",
+      "name": "City",
+      "zone": "public",
+      "dynamic": true
+    },
+    {
+      "id": "RT-11",
+      "path": "/neighborhoods/{slug}",
+      "name": "Neighborhood",
+      "zone": "public",
+      "dynamic": true
+    },
+    {
+      "id": "RT-12",
+      "path": "/action",
+      "name": "Arkansas Action Center",
+      "zone": "public",
+      "sections": [
+        "Legislative resources",
+        "Government process",
+        "Public meetings",
+        "How-to guides"
+      ]
+    },
+    {
+      "id": "RT-13",
+      "path": "/coalition",
+      "name": "Coalition",
+      "zone": "public"
+    },
+    {
+      "id": "RT-14",
+      "path": "/news",
+      "name": "News",
+      "zone": "public"
+    },
+    {
+      "id": "RT-15",
+      "path": "/events",
+      "name": "Events",
+      "zone": "public"
+    },
+    {
+      "id": "RT-16",
+      "path": "/media",
+      "name": "Media",
+      "zone": "public"
+    },
+    {
+      "id": "RT-17",
+      "path": "/faq",
+      "name": "FAQ",
+      "zone": "public"
+    },
+    {
+      "id": "RT-18",
+      "path": "/contact",
+      "name": "Contact",
+      "zone": "public"
+    }
+  ],
+  "account_routes": [
+    {
+      "path": "/login",
+      "name": "Login"
+    },
+    {
+      "path": "/register",
+      "name": "Register"
+    },
+    {
+      "path": "/forgot-password",
+      "name": "Forgot Password"
+    },
+    {
+      "path": "/profile",
+      "name": "Profile"
+    },
+    {
+      "path": "/settings",
+      "name": "Settings"
+    },
+    {
+      "path": "/notifications",
+      "name": "Notifications"
+    },
+    {
+      "path": "/messages",
+      "name": "Messages"
+    },
+    {
+      "path": "/dashboard",
+      "name": "Personal Dashboard"
+    }
+  ],
+  "workspace_routes": [
+    {
+      "path": "/volunteer",
+      "name": "Volunteer Workspace",
+      "role": "volunteer"
+    },
+    {
+      "path": "/leader",
+      "name": "Education Leader Workspace",
+      "role": "education_leader"
+    },
+    {
+      "path": "/organization",
+      "name": "Coalition Workspace",
+      "role": "organization"
+    },
+    {
+      "path": "/executive",
+      "name": "Executive Workspace",
+      "role": "executive"
+    }
+  ],
+  "system_routes": [
+    {
+      "path": "/mission-control",
+      "name": "Mission Control",
+      "zone": "institution"
+    },
+    {
+      "path": "/admin",
+      "name": "Admin",
+      "zone": "admin",
+      "auth_required": true
+    },
+    {
+      "path": "/ai",
+      "name": "AI Workspace",
+      "zone": "ai"
+    },
+    {
+      "path": "/search",
+      "name": "Search",
+      "zone": "public"
+    }
+  ],
+  "api_base": "/api/",
+  "api_namespaces": [
+    "authentication",
+    "research",
+    "mission-control",
+    "academy",
+    "volunteer",
+    "organizations",
+    "ai",
+    "knowledge",
+    "reports",
+    "search",
+    "calendar",
+    "messaging"
+  ],
+  "route_standards": [
+    "Purpose",
+    "Breadcrumbs",
+    "Search",
+    "Related resources",
+    "AI assistance",
+    "Feedback option",
+    "Mission Control metrics (internal)"
+  ],
+  "mobile_nav_priority": [
+    "Search",
+    "Learn",
+    "County",
+    "Events",
+    "Dashboard",
+    "AI Assistant"
+  ],
+  "total_routes_defined": 34,
+  "status": "documented",
+  "implemented": false
+}

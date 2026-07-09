@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.3] - 2026-07-09 — IMP-03 Route Map documented
+
+### Implementation Package 3 of 50
+- **Master Route Map & Complete Application Navigation** — every page and journey before code
+- Primary nav, public/account/workspace/MC/admin/AI routes, API namespaces
+- Machine-readable **route-manifest.json** (30+ routes defined)
+- Route standards, mobile nav priority, question-based navigation philosophy
+- IMP-04 next: Master Database Schema & Canonical Data Model
+- Honest: 3/50 documented · 0/50 implemented · 63% package readiness
+
 ## [2.05.2] - 2026-07-09 — IMP-02 Technical Architecture documented
 
 ### Implementation Package 2 of 50
