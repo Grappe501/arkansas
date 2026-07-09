@@ -40,7 +40,7 @@ Opens a local server at `http://localhost:8080`.
 
 ## Deployment
 
-- **GitHub:** [Grappe501/Arkansas-citizens-facts](https://github.com/Grappe501/Arkansas-citizens-facts)
+- **GitHub:** [Grappe501/arkansas](https://github.com/Grappe501/arkansas)
 - **Netlify:** Connected for automatic deploys on push to `main`
 
 ## Versioning
