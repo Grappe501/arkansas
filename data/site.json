@@ -186,6 +186,8 @@
     "mission_control_admin": "/admin/mission-control/",
     "build": { "number": 98, "title": "Master Institutional Self-Build & Continuous Improvement System", "status": "complete" },
     "url": "https://arkansas-facts.netlify.app",
+    "production_url": "https://arkansas-facts.netlify.app",
+    "legacy_url": "https://arkansas-citizens-facts.netlify.app",
     "github": "https://github.com/Grappe501/arkansas",
     "mission": "Turn a curious reader into a local educator.",
     "system": "Citizens United Civic Education Ladder"

@@ -2,6 +2,17 @@
  * Citizens Facts — Shared layout v1.21.0
  */
 
+const CANONICAL_ORIGIN = 'https://arkansas-facts.netlify.app';
+const STALE_HOST = 'arkansas-citizens-facts.netlify.app';
+
+(function redirectStaleNetlifyHost() {
+  if (typeof window !== 'undefined' && window.location.hostname === STALE_HOST) {
+    window.location.replace(
+      CANONICAL_ORIGIN + window.location.pathname + window.location.search + window.location.hash
+    );
+  }
+})();
+
 const SITE_CSS = '/css/action-hub.css';
 const SITE_JS = '/js/action-hub.js';
 const CIVIC_PROFILE_JS = '/js/civic-profile.js';
@@ -101,6 +112,13 @@ function initLayout() {
   const headerSlot = document.getElementById('site-header');
   const footerSlot = document.getElementById('site-footer');
   const path = window.location.pathname;
+
+  if (!document.querySelector('link[rel="canonical"]')) {
+    const canonical = document.createElement('link');
+    canonical.rel = 'canonical';
+    canonical.href = CANONICAL_ORIGIN + path;
+    document.head.appendChild(canonical);
+  }
 
   if (headerSlot) headerSlot.outerHTML = renderSiteHeader(path);
   if (footerSlot) footerSlot.outerHTML = renderSiteFooter();

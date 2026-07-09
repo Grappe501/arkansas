@@ -1,0 +1,2 @@
+# Stale Netlify subdomain → canonical production site (301, forced)
+https://arkansas-citizens-facts.netlify.app/*  https://arkansas-facts.netlify.app/:splat  301!

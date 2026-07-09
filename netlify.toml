@@ -2,6 +2,13 @@
   publish = "."
   command = "echo 'Static site — no build step'"
 
+# Stale Netlify subdomain → canonical production (see also _redirects)
+[[redirects]]
+  from = "https://arkansas-citizens-facts.netlify.app/*"
+  to = "https://arkansas-facts.netlify.app/:splat"
+  status = 301
+  force = true
+
 # Netlify Forms — detected from educate/index.html on deploy
 
 [[redirects]]
