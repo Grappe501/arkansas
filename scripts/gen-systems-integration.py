@@ -274,9 +274,9 @@ out = {
         'Component specifications still deferred — UI integration unmapped',
     ],
     'recommended_next_build': {
-        'number': 46,
+        'number': 47,
         'title': 'Component Specifications with Props/States',
-        'note': 'Map system health panels, information flow viz, journey progress widgets, and cross-system link components to COMP-* from Build #17.',
+        'note': 'Map production queue tables, domain progress bars, stage badges, and capacity widgets to COMP-* from Build #17.',
     },
 }
 

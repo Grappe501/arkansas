@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.49.0 · **Systems Integration:** [/mission-control/systems-integration.html](/mission-control/systems-integration.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #45:** ✅ Systems Integration · **Build #44:** ✅ Institutional Roadmap · **Build #43:** ✅ Research Methodology · **Build #42:** ✅ Civic Action Lab  
+**Current version:** 1.50.0 · **Production Matrix:** [/mission-control/content-production-matrix.html](/mission-control/content-production-matrix.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #46:** ✅ Content Production Matrix · **Build #45:** ✅ Systems Integration · **Build #44:** ✅ Institutional Roadmap  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **46** | **Master Content Production Matrix** | **✅ v1.50.0** |
 | **45** | **Master Systems Integration Blueprint** | **✅ v1.49.0** |
 | **44** | **Master Institutional Roadmap** | **✅ v1.48.0** |
 | **43** | **Master Research Methodology & Standards Manual** | **✅ v1.47.0** |
@@ -285,7 +286,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **37** | **Master Research Library** | **✅ v1.41.0** |
 | **36** | **Trust Framework** | **✅ v1.40.0** |
 
-**Next:** Build #46 — Component specifications with props/states.
+**Next:** Build #47 — Component specifications with props/states.
 
 ---
 

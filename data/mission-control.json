@@ -1,6 +1,6 @@
 {
-  "version": "1.49.0",
-  "build": 45,
+  "version": "1.50.0",
+  "build": 46,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,20 +9,20 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 45,
+    "overall_completion": 46,
     "current_build": {
-      "number": 45,
-      "title": "Citizens United Facts Master Systems Integration Blueprint"
-    },
-    "active_phase": "Institutional Operating Model \u2014 Systems Integration Blueprint",
-    "last_completed": "Master Institutional Roadmap",
-    "next_build": {
       "number": 46,
+      "title": "Citizens United Facts Master Content Production Matrix"
+    },
+    "active_phase": "Content Production Matrix \u2014 Master Library & Build Sequencing",
+    "last_completed": "Master Systems Integration Blueprint",
+    "next_build": {
+      "number": 47,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
-    "content_readiness": 26,
+    "content_readiness": 28,
     "research_readiness": 25,
     "data_viz_readiness": 6,
     "signup_funnel_readiness": 22,
@@ -40,7 +40,7 @@
     "contact_intelligence_readiness": 31,
     "mc2_readiness": 33,
     "ai_engine_readiness": 14,
-    "content_factory_readiness": 28,
+    "content_factory_readiness": 30,
     "education_academy_readiness": 26,
     "observatory_readiness": 20,
     "outreach_readiness": 22,
@@ -60,6 +60,7 @@
     "institutional_maturity_pct": 32,
     "current_institutional_version": "V1",
     "systems_integration_readiness": 28,
+    "production_matrix_readiness": 39,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -67,8 +68,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 45,
-      "note": "Systems Integration live \u2014 12 systems, 3 live data flows."
+      "value": 46,
+      "note": "Production Matrix live \u2014 510 assets queued, 0.8% complete."
     },
     {
       "id": "constitution",
@@ -407,6 +408,13 @@
       "value": 28,
       "max": 100,
       "note": "3/12 live flows \u2014 no event bus."
+    },
+    {
+      "id": "production_matrix",
+      "label": "Content Production Matrix",
+      "value": 39,
+      "max": 100,
+      "note": "15/2045 published."
     }
   ],
   "public_readiness": {
@@ -969,6 +977,12 @@
       "id": "systems_integration",
       "label": "Systems Integration Blueprint",
       "href": "/mission-control/systems-integration.html",
+      "status": "complete"
+    },
+    {
+      "id": "production_matrix",
+      "label": "Content Production Matrix",
+      "href": "/mission-control/content-production-matrix.html",
       "status": "complete"
     }
   ],
@@ -1995,6 +2009,106 @@
     }
   ],
   "builds": [
+    {
+      "number": 46,
+      "title": "Citizens United Facts Master Content Production Matrix",
+      "version": "1.50.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Master production matrix \u2014 every educational asset ID'd and sequenced",
+      "summary": "14 domains, 510 queued, 15 published; 0.8% institutional completion.",
+      "files_created": [
+        "data/content-production-matrix.json",
+        "docs/MASTER_CONTENT_PRODUCTION_MATRIX.md",
+        "builds/046-master-content-production-matrix.md",
+        "mission-control/content-production-matrix.html",
+        "scripts/gen-content-production-matrix.py",
+        "scripts/update-mc-build46.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/content-production-matrix.html"
+      ],
+      "decisions_made": [
+        "14 content domains (1000\u201314000) \u2014 master library production taxonomy",
+        "11-stage production pipeline \u2014 extends Build #6 inventory lifecycle",
+        "10 production ID prefixes \u2014 ARTICLE, CASE, TIMELINE, VIDEO, etc.",
+        "Executive production dashboard \u2014 11 completion metrics from live registries",
+        "510 assets registered of 2045 target \u2014 honest queue coverage",
+        "39% readiness \u2014 taxonomy live, automation none"
+      ],
+      "open_questions": [
+        "Unified domain IDs vs Build #6 inventory?",
+        "Velocity tracking for capacity model?",
+        "CMS workflow enforcement?"
+      ],
+      "risks": [
+        "~2000 assets target vs 15 published",
+        "Domain ID remap may confuse editors",
+        "No automated sequencing"
+      ],
+      "next_recommended": 47,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/content-production-matrix.html",
+      "review_status": "complete"
+    },
+    {
+      "number": 46,
+      "title": "Citizens United Facts Master Content Production Matrix",
+      "version": "1.50.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Master production matrix \u2014 every educational asset ID'd and sequenced",
+      "summary": "14 domains, 509 queued, 61 published; 3.0% institutional completion.",
+      "files_created": [
+        "data/content-production-matrix.json",
+        "docs/MASTER_CONTENT_PRODUCTION_MATRIX.md",
+        "builds/046-master-content-production-matrix.md",
+        "mission-control/content-production-matrix.html",
+        "scripts/gen-content-production-matrix.py",
+        "scripts/update-mc-build46.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/content-production-matrix.html"
+      ],
+      "decisions_made": [
+        "14 content domains (1000\u201314000) \u2014 master library production taxonomy",
+        "11-stage production pipeline \u2014 extends Build #6 inventory lifecycle",
+        "10 production ID prefixes \u2014 ARTICLE, CASE, TIMELINE, VIDEO, etc.",
+        "Executive production dashboard \u2014 11 completion metrics from live registries",
+        "509 assets registered of 2045 target \u2014 honest queue coverage",
+        "43% readiness \u2014 taxonomy live, automation none"
+      ],
+      "open_questions": [
+        "Unified domain IDs vs Build #6 inventory?",
+        "Velocity tracking for capacity model?",
+        "CMS workflow enforcement?"
+      ],
+      "risks": [
+        "~2000 assets target vs 15 published",
+        "Domain ID remap may confuse editors",
+        "No automated sequencing"
+      ],
+      "next_recommended": 47,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/content-production-matrix.html",
+      "review_status": "complete"
+    },
     {
       "number": 45,
       "title": "Citizens United Facts Master Systems Integration Blueprint",
@@ -4126,19 +4240,19 @@
     }
   ],
   "briefing": {
-    "what_built": "Systems Integration v1.0 \u2014 12 systems, information flow, Systems Health, executive questions",
-    "building_now": "Taxonomy and MC linking \u2014 3/12 live cross-system data flows",
+    "what_built": "Production Matrix v1.0 \u2014 14 domains, production queue, executive dashboard, capacity planning",
+    "building_now": "Registry linking \u2014 351 inventory items mapped to matrix domains",
     "blocked": [
-      "Cross-system event bus",
-      "Executive synthesis",
-      "User journey tracking"
+      "Production automation",
+      "Capacity velocity model",
+      "CMS stage enforcement"
     ],
     "ready_public": [
-      "Systems Integration MC dashboard",
-      "12-system operating model",
-      "Health indicators"
+      "Production Matrix MC dashboard",
+      "14-domain taxonomy",
+      "Production queue sample"
     ],
-    "next": "Build #46 \u2014 Component specifications with props/states"
+    "next": "Build #47 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -4640,5 +4754,16 @@
     "avg_system_integration_pct": 25,
     "avg_systems_health_score": 23,
     "executive_synthesis_live": false
+  },
+  "content_production_matrix": "/data/content-production-matrix.json",
+  "content_production_matrix_dashboard": "/mission-control/content-production-matrix.html",
+  "production_matrix_inventory": {
+    "readiness_score": 39,
+    "domains_total": 14,
+    "institutional_target_total": 2045,
+    "assets_registered": 510,
+    "assets_published": 15,
+    "overall_completion_pct": 0.8,
+    "production_automation_live": false
   }
 }

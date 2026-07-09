@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Content Production Matrix <a href="/mission-control/content-production-matrix.html" class="mc-inline-link">14 Domains →</a></h2>
+    <p class="mc-bar-note">Build #46 — Master content production matrix, ~2045 asset target, production queue, executive dashboard. 15 edu published. 22% matrix readiness.</p>
     <h2 class="mc-section-title">Systems Integration <a href="/mission-control/systems-integration.html" class="mc-inline-link">12 Systems →</a></h2>
     <p class="mc-bar-note">Build #45 — Master systems integration blueprint, 12 systems, information flow cycle. MC as conductor. 3/12 live data flows. 28% integration readiness.</p>
     <h2 class="mc-section-title">Institutional Roadmap <a href="/mission-control/institutional-roadmap.html" class="mc-inline-link">V1–V10 →</a></h2>
@@ -4405,6 +4407,112 @@ async function initSystemsIntegration() {
   initDevConsole(mc);
 }
 
+  initDevConsole(mc);
+}
+
+async function initContentProductionMatrix() {
+  const root = document.getElementById('mc-content-production-matrix-root');
+  if (!root) return;
+
+  const [cpmRes, mcRes] = await Promise.all([
+    fetch('/data/content-production-matrix.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const cpm = await cpmRes.json();
+  const mc = await mcRes.json();
+  const s = cpm.summary;
+  const dash = cpm.executive_production_dashboard;
+  const cap = cpm.capacity_planning;
+
+  const domainRows = cpm.domains.map(d => `
+    <tr><td>${d.id}</td><td>${d.title}</td><td>${d.estimated_assets}</td>
+      <td>${d.registered}</td><td>${d.published}</td><td>${d.in_pipeline}</td>
+      <td>${d.queue_coverage_pct}%</td><td>${d.status}</td></tr>`).join('');
+
+  const domainCards = cpm.domains.map(d => `
+    <div class="mc-card"><h3>Domain ${d.id}: ${d.title}</h3>
+      <p class="mc-bar-note">${d.purpose}</p>
+      <p class="mc-bar-note">${d.registered}/${d.estimated_assets} queued · ${d.published} published · ${d.status}</p>
+      <p class="mc-bar-note"><strong>Examples:</strong> ${d.examples.slice(0, 3).join(', ')}…</p>
+    </div>`).join('');
+
+  const prodRows = dash.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.current}</td>
+      <td>${m.target}</td><td>${m.status}</td></tr>`).join('');
+
+  const queueRows = cpm.production_queue.items.map(q => `
+    <tr><td><code>${q.production_id}</code></td><td>${q.title}</td>
+      <td>${q.matrix_domain}</td><td>${q.stage}</td><td>${q.completion_pct}%</td>
+      <td>${q.url ? `<a href="${q.url}">view</a>` : '—'}</td></tr>`).join('');
+
+  const stageFlow = cpm.production_stages.map((st, i) =>
+    `${st}${i < cpm.production_stages.length - 1 ? ' →' : ''}`).join(' ');
+
+  const metricRows = cpm.mc_integration.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Content Production Matrix</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #46 · ${cpm.title}</p>
+      <h1>Master Content Production Matrix</h1>
+      <p class="mc-header__question">${cpm.governing_principle}</p>
+      <p class="mc-bar-note">${cpm.purpose}</p>
+      <p class="mc-bar-note">Extends <a href="/mission-control/inventory.html">Content Inventory</a> · <a href="/mission-control/content-factory.html">Production Factory</a></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Matrix readiness</div><div class="mc-stat__value">${s.production_matrix_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Domains</div><div class="mc-stat__value">${s.domains_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Queued</div><div class="mc-stat__value">${s.assets_registered}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Published</div><div class="mc-stat__value">${s.assets_published}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">In pipeline</div><div class="mc-stat__value">${s.assets_in_pipeline}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Completion</div><div class="mc-stat__value">${s.overall_completion_pct}%</div></div>
+    </div>
+    <h2 class="mc-section-title">Executive Production Dashboard</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Target</th><th>Status</th></tr></thead>
+      <tbody>${prodRows}</tbody></table>
+    <h2 class="mc-section-title">Fourteen Content Domains</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Domain</th><th>Est.</th><th>Queued</th><th>Pub.</th><th>Pipeline</th><th>Coverage</th><th>Status</th></tr></thead>
+      <tbody>${domainRows}</tbody></table>
+    <div class="mc-grid-2">${domainCards}</div>
+    <h2 class="mc-section-title">Production Pipeline</h2>
+    <p class="mc-bar-note">${stageFlow}</p>
+    <h2 class="mc-section-title">Production ID Prefixes</h2>
+    <p class="mc-bar-note">${cpm.production_id_prefixes.join(' · ')}</p>
+    <h2 class="mc-section-title">Production Queue (sample ${cpm.production_queue.sample_size})</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Title</th><th>Domain</th><th>Stage</th><th>%</th><th>URL</th></tr></thead>
+      <tbody>${queueRows}</tbody></table>
+    <p class="mc-bar-note"><a href="${cpm.production_queue.full_registry}">Full registry → ${cpm.production_queue.total_registered} items</a></p>
+    <h2 class="mc-section-title">Capacity Planning</h2>
+    <ul class="mc-deliverables">
+      <li>Remaining: ${cap.remaining_assets} assets</li>
+      <li>Queue coverage: ${cap.queue_coverage_pct}%</li>
+      <li>Research backlog: ${cap.research_backlog}</li>
+      <li>Editorial workload: ${cap.editorial_workload}</li>
+      <li>Review workload: ${cap.review_workload}</li>
+      <li>Expected completion: ${cap.expected_completion}</li>
+    </ul>
+    <h2 class="mc-section-title">Future Automation</h2>
+    <ul class="mc-deliverables">${cpm.future_automation.capabilities.map(a => `<li>${a}</li>`).join('')}</ul>
+    <p class="mc-bar-note">${cpm.future_automation.editorial_gate}</p>
+    <h2 class="mc-section-title">Matrix Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${cpm.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${cpm.recommended_next_build.number} — ${cpm.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${cpm.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_CONTENT_PRODUCTION_MATRIX.md">MASTER_CONTENT_PRODUCTION_MATRIX.md</a> ·
+      <a href="/data/content-production-matrix.json">JSON</a> ·
+      <a href="/mission-control/inventory.html">Content Inventory</a> ·
+      <a href="/mission-control/systems-integration.html">Systems Integration</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -4449,4 +4557,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initResearchMethodology();
   initInstitutionalRoadmap();
   initSystemsIntegration();
+  initContentProductionMatrix();
 });

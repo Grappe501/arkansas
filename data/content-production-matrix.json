@@ -1,0 +1,1197 @@
+{
+  "version": "1.0",
+  "build": 46,
+  "updated": "2026-07-09",
+  "title": "Master Content Production Matrix v1.0",
+  "subtitle": "Complete Content Inventory & Build Sequencing System",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/content-production-matrix.html",
+  "constitution": "/docs/MASTER_CONTENT_PRODUCTION_MATRIX.md",
+  "purpose": "Design everything the institution must eventually contain \u2014 every asset ID'd and queued.",
+  "governing_principle": "Vision into execution \u2014 every asset has a place, workflow, and purpose.",
+  "long_term_vision": "One of the largest educational collections devoted to a single Supreme Court decision \u2014 connected, researched, transparent.",
+  "extends": [
+    {
+      "title": "Content Inventory",
+      "build": 6,
+      "route": "/data/content-inventory.json"
+    },
+    {
+      "title": "MRID Traceability",
+      "build": 7,
+      "route": "/data/mrid-registry.json"
+    },
+    {
+      "title": "Content Production Factory",
+      "build": 27,
+      "route": "/data/content-production-factory.json"
+    }
+  ],
+  "master_library_targets": {
+    "educational_articles": "300\u2013500",
+    "encyclopedia_entries": "200\u2013400",
+    "timeline_events": "150\u2013250",
+    "constitutional_explainers": "100\u2013200",
+    "campaign_finance_concepts": "100\u2013150",
+    "charts_visualizations": "200\u2013300",
+    "arkansas_county_pages": 75,
+    "county_education_dashboards": 75,
+    "educational_videos": "100+",
+    "presentation_toolkits": "50+",
+    "primary_source_summaries": "hundreds"
+  },
+  "domains_total": 14,
+  "domains": [
+    {
+      "id": 1000,
+      "code": "CU",
+      "title": "Citizens United",
+      "purpose": "Core educational pages about the case and its significance.",
+      "examples": [
+        "What is Citizens United?",
+        "Why the case matters",
+        "Majority opinion",
+        "Dissents",
+        "Long-term significance"
+      ],
+      "estimated_assets": 40,
+      "content_types": [
+        "articles",
+        "explainers",
+        "case narrative"
+      ],
+      "registry": "/data/content-inventory.json",
+      "related_build": 6,
+      "registered": 81,
+      "published": 10,
+      "in_pipeline": 5,
+      "planned": 66,
+      "queue_coverage_pct": 100,
+      "completion_pct": 25.0,
+      "production_stages": {
+        "published": 10,
+        "writing": 4,
+        "not_started": 66,
+        "outline": 1
+      },
+      "status": "live"
+    },
+    {
+      "id": 2000,
+      "code": "CFH",
+      "title": "Campaign Finance History",
+      "purpose": "Historical development of campaign finance law.",
+      "examples": [
+        "Tillman Act",
+        "Watergate",
+        "FECA",
+        "Buckley",
+        "McConnell",
+        "BCRA",
+        "Austin"
+      ],
+      "estimated_assets": 80,
+      "content_types": [
+        "articles",
+        "timeline",
+        "legislation"
+      ],
+      "registry": "/data/content-inventory.json",
+      "related_build": 6,
+      "registered": 29,
+      "published": 0,
+      "in_pipeline": 1,
+      "planned": 28,
+      "queue_coverage_pct": 36.2,
+      "completion_pct": 0.0,
+      "production_stages": {
+        "outline": 1,
+        "not_started": 28
+      },
+      "status": "partial"
+    },
+    {
+      "id": 3000,
+      "code": "CON",
+      "title": "Constitutional Education",
+      "purpose": "Constitutional doctrines behind the decision.",
+      "examples": [
+        "First Amendment",
+        "Political speech",
+        "Corporate speech",
+        "Judicial review",
+        "Originalism"
+      ],
+      "estimated_assets": 75,
+      "content_types": [
+        "explainers",
+        "comparisons",
+        "principles"
+      ],
+      "registry": "/data/content-inventory.json",
+      "related_build": 6,
+      "registered": 33,
+      "published": 0,
+      "in_pipeline": 1,
+      "planned": 32,
+      "queue_coverage_pct": 44.0,
+      "completion_pct": 0.0,
+      "production_stages": {
+        "outline": 1,
+        "not_started": 32
+      },
+      "status": "partial"
+    },
+    {
+      "id": 4000,
+      "code": "CFC",
+      "title": "Campaign Finance Concepts",
+      "purpose": "Definitions and mechanics of modern campaign finance.",
+      "examples": [
+        "PAC",
+        "Super PAC",
+        "Independent expenditures",
+        "Hard money",
+        "Disclosure",
+        "Coordination"
+      ],
+      "estimated_assets": 100,
+      "content_types": [
+        "concept pages",
+        "diagrams",
+        "glossary"
+      ],
+      "registry": "/data/content-inventory.json",
+      "related_build": 6,
+      "registered": 70,
+      "published": 0,
+      "in_pipeline": 2,
+      "planned": 68,
+      "queue_coverage_pct": 70.0,
+      "completion_pct": 0.0,
+      "production_stages": {
+        "outline": 2,
+        "not_started": 68
+      },
+      "status": "partial"
+    },
+    {
+      "id": 5000,
+      "code": "SCL",
+      "title": "Supreme Court Library",
+      "purpose": "Significant cases with summary, holding, and impact.",
+      "examples": [
+        "Summary",
+        "Timeline",
+        "Holding",
+        "Majority",
+        "Dissent",
+        "Historical impact"
+      ],
+      "estimated_assets": 75,
+      "content_types": [
+        "case entries",
+        "opinions",
+        "precedent maps"
+      ],
+      "registry": "/data/content-inventory.json",
+      "related_build": 6,
+      "registered": 0,
+      "published": 0,
+      "in_pipeline": 0,
+      "planned": 0,
+      "queue_coverage_pct": 0.0,
+      "completion_pct": 0.0,
+      "production_stages": {},
+      "status": "planned"
+    },
+    {
+      "id": 6000,
+      "code": "ENC",
+      "title": "Encyclopedia",
+      "purpose": "People, organizations, events, terms, concepts, historical moments.",
+      "examples": [
+        "People",
+        "Organizations",
+        "Events",
+        "Terms",
+        "Concepts"
+      ],
+      "estimated_assets": 300,
+      "content_types": [
+        "encyclopedia entries",
+        "definitions"
+      ],
+      "registry": "/data/encyclopedia-knowledge-library.json",
+      "related_build": 33,
+      "registered": 21,
+      "published": 0,
+      "in_pipeline": 1,
+      "planned": 20,
+      "queue_coverage_pct": 7.0,
+      "completion_pct": 0.0,
+      "production_stages": {
+        "outline": 1,
+        "not_started": 20
+      },
+      "status": "partial"
+    },
+    {
+      "id": 7000,
+      "code": "ARK",
+      "title": "Arkansas Education",
+      "purpose": "Arkansas-specific civic and constitutional education.",
+      "examples": [
+        "Arkansas Constitution",
+        "Legislative process",
+        "Ballot initiative",
+        "Campaign finance law",
+        "Public records"
+      ],
+      "estimated_assets": 100,
+      "content_types": [
+        "county pages",
+        "dashboards",
+        "state guides"
+      ],
+      "registry": "/data/arkansas-counties.json",
+      "related_build": 31,
+      "registered": 75,
+      "published": 0,
+      "in_pipeline": 0,
+      "planned": 75,
+      "queue_coverage_pct": 75.0,
+      "completion_pct": 0.0,
+      "production_stages": {},
+      "status": "partial"
+    },
+    {
+      "id": 8000,
+      "code": "SOL",
+      "title": "Solutions Center",
+      "purpose": "Federal, Arkansas, transparency, and reform education.",
+      "examples": [
+        "Federal reforms",
+        "Arkansas initiatives",
+        "Transparency",
+        "Ballot initiative education"
+      ],
+      "estimated_assets": 75,
+      "content_types": [
+        "comparisons",
+        "model laws",
+        "pathways"
+      ],
+      "registry": "/data/civic-action-lab.json",
+      "related_build": 42,
+      "registered": 34,
+      "published": 3,
+      "in_pipeline": 1,
+      "planned": 30,
+      "queue_coverage_pct": 45.3,
+      "completion_pct": 4.0,
+      "production_stages": {
+        "writing": 1,
+        "not_started": 30,
+        "published": 3
+      },
+      "status": "live"
+    },
+    {
+      "id": 9000,
+      "code": "COA",
+      "title": "Coalition Resources",
+      "purpose": "Organization toolkits and community education materials.",
+      "examples": [
+        "Presentation guides",
+        "Volunteer handbook",
+        "Facilitator manual",
+        "Recruitment resources"
+      ],
+      "estimated_assets": 100,
+      "content_types": [
+        "toolkits",
+        "guides",
+        "packets"
+      ],
+      "registry": "/data/civic-ecosystem.json",
+      "related_build": 14,
+      "registered": 42,
+      "published": 2,
+      "in_pipeline": 8,
+      "planned": 32,
+      "queue_coverage_pct": 42.0,
+      "completion_pct": 2.0,
+      "production_stages": {
+        "writing": 5,
+        "published": 2,
+        "not_started": 32,
+        "outline": 3
+      },
+      "status": "live"
+    },
+    {
+      "id": 10000,
+      "code": "ACA",
+      "title": "Community Education Academy",
+      "purpose": "Leader development curriculum and certification.",
+      "examples": [
+        "Modules",
+        "Exercises",
+        "Quizzes",
+        "Speaker notes",
+        "Lesson plans"
+      ],
+      "estimated_assets": 150,
+      "content_types": [
+        "modules",
+        "lesson plans",
+        "certification"
+      ],
+      "registry": "/data/education-academy.json",
+      "related_build": 28,
+      "registered": 8,
+      "published": 0,
+      "in_pipeline": 0,
+      "planned": 8,
+      "queue_coverage_pct": 5.3,
+      "completion_pct": 0.0,
+      "production_stages": {},
+      "status": "partial"
+    },
+    {
+      "id": 11000,
+      "code": "RES",
+      "title": "Research Library",
+      "purpose": "Primary sources, government reports, academic papers, court documents.",
+      "examples": [
+        "Primary sources",
+        "Government reports",
+        "Academic papers",
+        "Court documents",
+        "Research summaries"
+      ],
+      "estimated_assets": 500,
+      "content_types": [
+        "source records",
+        "summaries",
+        "reading lists"
+      ],
+      "registry": "/data/evidence-registry.json",
+      "related_build": 37,
+      "registered": 55,
+      "published": 0,
+      "in_pipeline": 15,
+      "planned": 40,
+      "queue_coverage_pct": 11.0,
+      "completion_pct": 0.0,
+      "production_stages": {
+        "writing": 1,
+        "not_started": 40
+      },
+      "status": "partial"
+    },
+    {
+      "id": 12000,
+      "code": "MED",
+      "title": "Multimedia",
+      "purpose": "Videos, animations, documentaries, audio, interactive graphics.",
+      "examples": [
+        "Videos",
+        "Animations",
+        "Documentaries",
+        "Podcasts",
+        "Presentations"
+      ],
+      "estimated_assets": 250,
+      "content_types": [
+        "video",
+        "audio",
+        "documentary"
+      ],
+      "registry": "/data/media-studio.json",
+      "related_build": 39,
+      "registered": 0,
+      "published": 0,
+      "in_pipeline": 0,
+      "planned": 0,
+      "queue_coverage_pct": 0.0,
+      "completion_pct": 0.0,
+      "production_stages": {},
+      "status": "planned"
+    },
+    {
+      "id": 13000,
+      "code": "VIZ",
+      "title": "Data Visualization",
+      "purpose": "Interactive charts, timelines, maps, money flow diagrams.",
+      "examples": [
+        "Interactive charts",
+        "Timelines",
+        "Maps",
+        "Money flow",
+        "Election data"
+      ],
+      "estimated_assets": 150,
+      "content_types": [
+        "charts",
+        "timelines",
+        "maps",
+        "graphs"
+      ],
+      "registry": "/data/content-inventory.json",
+      "related_build": 6,
+      "registered": 0,
+      "published": 0,
+      "in_pipeline": 0,
+      "planned": 0,
+      "queue_coverage_pct": 0.0,
+      "completion_pct": 0.0,
+      "production_stages": {},
+      "status": "planned"
+    },
+    {
+      "id": 14000,
+      "code": "MC",
+      "title": "Mission Control",
+      "purpose": "Progress reports, executive dashboards, county and coalition dashboards.",
+      "examples": [
+        "Executive dashboards",
+        "County dashboards",
+        "Research dashboards",
+        "Coalition dashboards"
+      ],
+      "estimated_assets": 50,
+      "content_types": [
+        "dashboards",
+        "reports",
+        "readiness screens"
+      ],
+      "registry": "/data/mission-control.json",
+      "related_build": 25,
+      "registered": 62,
+      "published": 47,
+      "in_pipeline": 15,
+      "planned": 0,
+      "queue_coverage_pct": 100,
+      "completion_pct": 94.0,
+      "production_stages": {},
+      "status": "live"
+    }
+  ],
+  "production_stages": [
+    "not_started",
+    "research",
+    "outline",
+    "writing",
+    "fact_review",
+    "citation_review",
+    "visual_design",
+    "editorial_review",
+    "accessibility_review",
+    "published",
+    "scheduled_review"
+  ],
+  "production_id_prefixes": [
+    "ARTICLE",
+    "CASE",
+    "TIMELINE",
+    "VIDEO",
+    "INFOGRAPHIC",
+    "LESSON",
+    "SOURCE",
+    "COUNTY",
+    "MODELLAW",
+    "CLAIM"
+  ],
+  "executive_production_dashboard": {
+    "title": "Master Production Dashboard",
+    "status": "partial",
+    "metrics": [
+      {
+        "id": "PROD-01",
+        "title": "Articles Completed",
+        "current": 3,
+        "target": "300\u2013500",
+        "status": "partial"
+      },
+      {
+        "id": "PROD-02",
+        "title": "Encyclopedia Entries",
+        "current": 0,
+        "target": "200\u2013400",
+        "status": "planned",
+        "note": "21 registered in queue \u2014 0 published"
+      },
+      {
+        "id": "PROD-03",
+        "title": "Cases Completed",
+        "current": 0,
+        "target": 75,
+        "status": "partial"
+      },
+      {
+        "id": "PROD-04",
+        "title": "Videos Produced",
+        "current": 0,
+        "target": "100+",
+        "status": "planned"
+      },
+      {
+        "id": "PROD-05",
+        "title": "County Pages",
+        "current": 0,
+        "target": 75,
+        "status": "planned",
+        "note": "75 county stubs registered"
+      },
+      {
+        "id": "PROD-06",
+        "title": "Research Sources",
+        "current": 14,
+        "target": "500+",
+        "status": "partial"
+      },
+      {
+        "id": "PROD-07",
+        "title": "Claims Verified",
+        "current": 2,
+        "target": 500,
+        "status": "partial"
+      },
+      {
+        "id": "PROD-08",
+        "title": "Infographics",
+        "current": 0,
+        "target": "200\u2013300",
+        "status": "planned",
+        "note": "0 registered in queue"
+      },
+      {
+        "id": "PROD-09",
+        "title": "Lesson Plans",
+        "current": 0,
+        "target": 150,
+        "status": "planned",
+        "note": "33 CIVIC items registered"
+      },
+      {
+        "id": "PROD-10",
+        "title": "Presentation Kits",
+        "current": 18,
+        "target": "50+",
+        "status": "partial"
+      },
+      {
+        "id": "PROD-11",
+        "title": "Overall Institutional Completion",
+        "current": "0.8%",
+        "target": "100%",
+        "status": "planned"
+      }
+    ],
+    "overall_completion_pct": 0.8
+  },
+  "capacity_planning": {
+    "remaining_assets": 1980,
+    "registered_in_queue": 448,
+    "queue_coverage_pct": 22.5,
+    "published_assets": 15,
+    "mc_dashboards_complete": 47,
+    "in_pipeline": 49,
+    "avg_production_speed": "Not measured \u2014 no velocity tracking",
+    "research_backlog": "40 source slots + 1 claims awaiting review",
+    "editorial_workload": "49 assets in writing/outline stages",
+    "review_workload": "4 evidence items awaiting review",
+    "expected_completion": "Not estimated \u2014 capacity model not built",
+    "status": "documented"
+  },
+  "future_automation": {
+    "title": "Future Automation",
+    "status": "planned",
+    "capabilities": [
+      "Automatic production reports",
+      "Research reminders",
+      "Editorial reminders",
+      "Broken citation alerts",
+      "Content freshness alerts",
+      "Knowledge gap reports",
+      "AI-assisted production planning"
+    ],
+    "editorial_gate": "Human editorial judgment remains central"
+  },
+  "production_queue": {
+    "title": "Production Queue (sample)",
+    "status": "partial",
+    "total_registered": 351,
+    "sample_size": 40,
+    "items": [
+      {
+        "production_id": "ACTION-001",
+        "id_prefix": "ARTICLE",
+        "title": "Education Leader Program",
+        "matrix_domain": 9000,
+        "stage": "published",
+        "status": "published",
+        "completion_pct": 50,
+        "url": "/educate/",
+        "inventory_link": "/mission-control/inventory.html#ACTION-001"
+      },
+      {
+        "production_id": "CIVIC-002",
+        "id_prefix": "LESSON",
+        "title": "Start Here",
+        "matrix_domain": 9000,
+        "stage": "published",
+        "status": "published",
+        "completion_pct": 70,
+        "url": "/educate/",
+        "inventory_link": "/mission-control/inventory.html#CIVIC-002"
+      },
+      {
+        "production_id": "LAND-001",
+        "id_prefix": "ARTICLE",
+        "title": "Homepage",
+        "matrix_domain": 1000,
+        "stage": "published",
+        "status": "published",
+        "completion_pct": 45,
+        "url": "/",
+        "inventory_link": "/mission-control/inventory.html#LAND-001"
+      },
+      {
+        "production_id": "LAND-002",
+        "id_prefix": "ARTICLE",
+        "title": "Why It Matters",
+        "matrix_domain": 1000,
+        "stage": "published",
+        "status": "published",
+        "completion_pct": 40,
+        "url": "/#why-it-matters",
+        "inventory_link": "/mission-control/inventory.html#LAND-002"
+      },
+      {
+        "production_id": "LAND-003",
+        "id_prefix": "ARTICLE",
+        "title": "Hero Story",
+        "matrix_domain": 1000,
+        "stage": "published",
+        "status": "published",
+        "completion_pct": 50,
+        "url": "/",
+        "inventory_link": "/mission-control/inventory.html#LAND-003"
+      },
+      {
+        "production_id": "LAND-008",
+        "id_prefix": "ARTICLE",
+        "title": "Leadership Invitation",
+        "matrix_domain": 1000,
+        "stage": "published",
+        "status": "published",
+        "completion_pct": 55,
+        "url": "/educate/",
+        "inventory_link": "/mission-control/inventory.html#LAND-008"
+      },
+      {
+        "production_id": "LAND-010",
+        "id_prefix": "ARTICLE",
+        "title": "Site Orientation / Explore Map",
+        "matrix_domain": 1000,
+        "stage": "published",
+        "status": "published",
+        "completion_pct": 60,
+        "url": "/explore/",
+        "inventory_link": "/mission-control/inventory.html#LAND-010"
+      },
+      {
+        "production_id": "LAND-012",
+        "id_prefix": "ARTICLE",
+        "title": "Mission Control Dashboard",
+        "matrix_domain": 1000,
+        "stage": "published",
+        "status": "published",
+        "completion_pct": 100,
+        "url": "/mission-control/",
+        "inventory_link": "/mission-control/inventory.html#LAND-012"
+      },
+      {
+        "production_id": "LAND-013",
+        "id_prefix": "ARTICLE",
+        "title": "Phase Registry",
+        "matrix_domain": 1000,
+        "stage": "published",
+        "status": "published",
+        "completion_pct": 100,
+        "url": "/mission-control/phases.html",
+        "inventory_link": "/mission-control/inventory.html#LAND-013"
+      },
+      {
+        "production_id": "LAND-014",
+        "id_prefix": "ARTICLE",
+        "title": "Site Architecture Blueprint",
+        "matrix_domain": 1000,
+        "stage": "published",
+        "status": "published",
+        "completion_pct": 100,
+        "url": "/mission-control/architecture.html",
+        "inventory_link": "/mission-control/inventory.html#LAND-014"
+      },
+      {
+        "production_id": "LAND-015",
+        "id_prefix": "ARTICLE",
+        "title": "Content Inventory",
+        "matrix_domain": 1000,
+        "stage": "published",
+        "status": "published",
+        "completion_pct": 100,
+        "url": "/mission-control/inventory.html",
+        "inventory_link": "/mission-control/inventory.html#LAND-015"
+      },
+      {
+        "production_id": "LAND-016",
+        "id_prefix": "ARTICLE",
+        "title": "Build Registry",
+        "matrix_domain": 1000,
+        "stage": "published",
+        "status": "published",
+        "completion_pct": 100,
+        "url": "/builds/",
+        "inventory_link": "/mission-control/inventory.html#LAND-016"
+      },
+      {
+        "production_id": "REFORM-014",
+        "id_prefix": "ARTICLE",
+        "title": "Montana",
+        "matrix_domain": 8000,
+        "stage": "published",
+        "status": "published",
+        "completion_pct": 70,
+        "url": "/halls/montana-hawaii.html#montana",
+        "inventory_link": "/mission-control/inventory.html#REFORM-014"
+      },
+      {
+        "production_id": "REFORM-018",
+        "id_prefix": "ARTICLE",
+        "title": "Hawaii",
+        "matrix_domain": 8000,
+        "stage": "published",
+        "status": "published",
+        "completion_pct": 70,
+        "url": "/halls/montana-hawaii.html#hawaii",
+        "inventory_link": "/mission-control/inventory.html#REFORM-018"
+      },
+      {
+        "production_id": "REFORM-034",
+        "id_prefix": "ARTICLE",
+        "title": "Montana & Hawaii: Two Paths (Ernie Entry 001)",
+        "matrix_domain": 8000,
+        "stage": "published",
+        "status": "published",
+        "completion_pct": 75,
+        "url": "/halls/montana-hawaii.html",
+        "inventory_link": "/mission-control/inventory.html#REFORM-034"
+      },
+      {
+        "production_id": "ACTION-002",
+        "id_prefix": "ARTICLE",
+        "title": "Contact Network",
+        "matrix_domain": 9000,
+        "stage": "writing",
+        "status": "partial",
+        "completion_pct": 35,
+        "url": "/action/join-network.html",
+        "inventory_link": "/mission-control/inventory.html#ACTION-002"
+      },
+      {
+        "production_id": "ACTION-003",
+        "id_prefix": "ARTICLE",
+        "title": "Share Toolkit",
+        "matrix_domain": 9000,
+        "stage": "writing",
+        "status": "partial",
+        "completion_pct": 30,
+        "url": "/action/share.html",
+        "inventory_link": "/mission-control/inventory.html#ACTION-003"
+      },
+      {
+        "production_id": "ACTION-004",
+        "id_prefix": "ARTICLE",
+        "title": "Relational Organizing Guide",
+        "matrix_domain": 9000,
+        "stage": "writing",
+        "status": "partial",
+        "completion_pct": 20,
+        "url": "/action/share.html#invite",
+        "inventory_link": "/mission-control/inventory.html#ACTION-004"
+      },
+      {
+        "production_id": "ACTION-009",
+        "id_prefix": "ARTICLE",
+        "title": "Community Ideas Portal",
+        "matrix_domain": 9000,
+        "stage": "writing",
+        "status": "partial",
+        "completion_pct": 35,
+        "url": "/action/ideas.html",
+        "inventory_link": "/mission-control/inventory.html#ACTION-009"
+      },
+      {
+        "production_id": "CIVIC-001",
+        "id_prefix": "LESSON",
+        "title": "Teach Your Community \u2014 Overview",
+        "matrix_domain": 9000,
+        "stage": "writing",
+        "status": "partial",
+        "completion_pct": 35,
+        "url": "/educate/",
+        "inventory_link": "/mission-control/inventory.html#CIVIC-001"
+      },
+      {
+        "production_id": "LAND-004",
+        "id_prefix": "ARTICLE",
+        "title": "Platform Overview",
+        "matrix_domain": 1000,
+        "stage": "writing",
+        "status": "partial",
+        "completion_pct": 25,
+        "url": "/explore/",
+        "inventory_link": "/mission-control/inventory.html#LAND-004"
+      },
+      {
+        "production_id": "LAND-005",
+        "id_prefix": "ARTICLE",
+        "title": "Interactive Timeline Preview",
+        "matrix_domain": 1000,
+        "stage": "writing",
+        "status": "partial",
+        "completion_pct": 10,
+        "url": "/",
+        "inventory_link": "/mission-control/inventory.html#LAND-005"
+      },
+      {
+        "production_id": "LAND-006",
+        "id_prefix": "ARTICLE",
+        "title": "Money in Politics Preview",
+        "matrix_domain": 1000,
+        "stage": "writing",
+        "status": "partial",
+        "completion_pct": 10,
+        "url": "/",
+        "inventory_link": "/mission-control/inventory.html#LAND-006"
+      },
+      {
+        "production_id": "LAND-007",
+        "id_prefix": "ARTICLE",
+        "title": "Current Reform Preview",
+        "matrix_domain": 1000,
+        "stage": "writing",
+        "status": "partial",
+        "completion_pct": 15,
+        "url": "/",
+        "inventory_link": "/mission-control/inventory.html#LAND-007"
+      },
+      {
+        "production_id": "REFORM-001",
+        "id_prefix": "ARTICLE",
+        "title": "Reform \u2014 Overview",
+        "matrix_domain": 8000,
+        "stage": "writing",
+        "status": "partial",
+        "completion_pct": 35,
+        "url": "/halls/reform.html",
+        "inventory_link": "/mission-control/inventory.html#REFORM-001"
+      },
+      {
+        "production_id": "SOURCE-001",
+        "id_prefix": "SOURCE",
+        "title": "Source Library \u2014 Overview",
+        "matrix_domain": 11000,
+        "stage": "writing",
+        "status": "partial",
+        "completion_pct": 35,
+        "url": "/library/",
+        "inventory_link": "/mission-control/inventory.html#SOURCE-001"
+      },
+      {
+        "production_id": "ACTION-006",
+        "id_prefix": "ARTICLE",
+        "title": "Ballot Initiative Lab",
+        "matrix_domain": 9000,
+        "stage": "outline",
+        "status": "outlined",
+        "completion_pct": 10,
+        "url": "/action/ballot-lab.html",
+        "inventory_link": "/mission-control/inventory.html#ACTION-006"
+      },
+      {
+        "production_id": "ACTION-007",
+        "id_prefix": "ARTICLE",
+        "title": "Model Law Workspace",
+        "matrix_domain": 9000,
+        "stage": "outline",
+        "status": "outlined",
+        "completion_pct": 10,
+        "url": "/action/draft-laws.html",
+        "inventory_link": "/mission-control/inventory.html#ACTION-007"
+      },
+      {
+        "production_id": "ACTION-008",
+        "id_prefix": "ARTICLE",
+        "title": "Legislative Outreach Toolkit",
+        "matrix_domain": 9000,
+        "stage": "outline",
+        "status": "outlined",
+        "completion_pct": 10,
+        "url": "/action/contact-legislators.html",
+        "inventory_link": "/mission-control/inventory.html#ACTION-008"
+      },
+      {
+        "production_id": "CASE-001",
+        "id_prefix": "CASE",
+        "title": "The Case \u2014 Overview",
+        "matrix_domain": 1000,
+        "stage": "outline",
+        "status": "outlined",
+        "completion_pct": 15,
+        "url": "/halls/the-case.html",
+        "inventory_link": "/mission-control/inventory.html#CASE-001"
+      },
+      {
+        "production_id": "CONST-001",
+        "id_prefix": "ARTICLE",
+        "title": "The Constitution \u2014 Overview",
+        "matrix_domain": 3000,
+        "stage": "outline",
+        "status": "outlined",
+        "completion_pct": 15,
+        "url": "/halls/what-court-decided.html",
+        "inventory_link": "/mission-control/inventory.html#CONST-001"
+      },
+      {
+        "production_id": "DEBATE-001",
+        "id_prefix": "ARTICLE",
+        "title": "The Debate \u2014 Overview",
+        "matrix_domain": 6000,
+        "stage": "outline",
+        "status": "outlined",
+        "completion_pct": 15,
+        "url": "/halls/debate.html",
+        "inventory_link": "/mission-control/inventory.html#DEBATE-001"
+      },
+      {
+        "production_id": "HIST-001",
+        "id_prefix": "ARTICLE",
+        "title": "The Story \u2014 Overview",
+        "matrix_domain": 2000,
+        "stage": "outline",
+        "status": "outlined",
+        "completion_pct": 15,
+        "url": "/halls/story-before.html",
+        "inventory_link": "/mission-control/inventory.html#HIST-001"
+      },
+      {
+        "production_id": "IMPACT-001",
+        "id_prefix": "ARTICLE",
+        "title": "The Impact \u2014 Overview",
+        "matrix_domain": 4000,
+        "stage": "outline",
+        "status": "outlined",
+        "completion_pct": 15,
+        "url": "/halls/after-2010.html",
+        "inventory_link": "/mission-control/inventory.html#IMPACT-001"
+      },
+      {
+        "production_id": "MONEY-001",
+        "id_prefix": "ARTICLE",
+        "title": "Follow the Money \u2014 Overview",
+        "matrix_domain": 4000,
+        "stage": "outline",
+        "status": "outlined",
+        "completion_pct": 15,
+        "url": "/halls/money-map.html",
+        "inventory_link": "/mission-control/inventory.html#MONEY-001"
+      },
+      {
+        "production_id": "ACTION-005",
+        "id_prefix": "ARTICLE",
+        "title": "Community Conversation Guide",
+        "matrix_domain": 9000,
+        "stage": "not_started",
+        "status": "planned",
+        "completion_pct": 0,
+        "url": null,
+        "inventory_link": "/mission-control/inventory.html#ACTION-005"
+      },
+      {
+        "production_id": "CASE-002",
+        "id_prefix": "CASE",
+        "title": "Who was Citizens United?",
+        "matrix_domain": 1000,
+        "stage": "not_started",
+        "status": "planned",
+        "completion_pct": 0,
+        "url": null,
+        "inventory_link": "/mission-control/inventory.html#CASE-002"
+      },
+      {
+        "production_id": "CASE-003",
+        "id_prefix": "CASE",
+        "title": "Who was Citizens United? (L2)",
+        "matrix_domain": 1000,
+        "stage": "not_started",
+        "status": "planned",
+        "completion_pct": 0,
+        "url": null,
+        "inventory_link": "/mission-control/inventory.html#CASE-003"
+      },
+      {
+        "production_id": "CASE-004",
+        "id_prefix": "CASE",
+        "title": "Who was Citizens United? (L3)",
+        "matrix_domain": 1000,
+        "stage": "not_started",
+        "status": "planned",
+        "completion_pct": 0,
+        "url": null,
+        "inventory_link": "/mission-control/inventory.html#CASE-004"
+      },
+      {
+        "production_id": "CASE-005",
+        "id_prefix": "CASE",
+        "title": "Who was Citizens United? (L4)",
+        "matrix_domain": 1000,
+        "stage": "not_started",
+        "status": "planned",
+        "completion_pct": 0,
+        "url": null,
+        "inventory_link": "/mission-control/inventory.html#CASE-005"
+      }
+    ],
+    "full_registry": "/mission-control/inventory.html"
+  },
+  "mc_integration": {
+    "title": "Mission Control Production Matrix Metrics",
+    "status": "partial",
+    "metrics": [
+      {
+        "id": "CPM-01",
+        "title": "Content domains defined",
+        "status": "live",
+        "current": "14/14"
+      },
+      {
+        "id": "CPM-02",
+        "title": "Educational assets registered",
+        "status": "partial",
+        "current": "448/1995"
+      },
+      {
+        "id": "CPM-03",
+        "title": "Educational assets published",
+        "status": "partial",
+        "current": "15/1995"
+      },
+      {
+        "id": "CPM-04",
+        "title": "Production stage workflow",
+        "status": "live",
+        "current": "11 stages"
+      },
+      {
+        "id": "CPM-05",
+        "title": "Production ID prefixes",
+        "status": "live",
+        "current": "10 prefixes"
+      },
+      {
+        "id": "CPM-06",
+        "title": "Executive production dashboard",
+        "status": "partial",
+        "current": "MC dashboard live \u2014 counts from registries"
+      },
+      {
+        "id": "CPM-07",
+        "title": "Per-asset status tracking",
+        "status": "partial",
+        "current": "351 items in content-inventory"
+      },
+      {
+        "id": "CPM-08",
+        "title": "Capacity planning model",
+        "status": "planned",
+        "current": "Estimates documented \u2014 no velocity"
+      },
+      {
+        "id": "CPM-09",
+        "title": "Production automation",
+        "status": "planned",
+        "current": "0 automations live"
+      },
+      {
+        "id": "CPM-10",
+        "title": "Build sequencing engine",
+        "status": "partial",
+        "current": "recommended_next_build in registries"
+      }
+    ]
+  },
+  "related_blueprints": [
+    {
+      "title": "Systems Integration",
+      "route": "/data/systems-integration.json",
+      "build": 45
+    },
+    {
+      "title": "Institutional Roadmap",
+      "route": "/data/institutional-roadmap.json",
+      "build": 44
+    },
+    {
+      "title": "Content Production Factory",
+      "route": "/data/content-production-factory.json",
+      "build": 27
+    },
+    {
+      "title": "Master Curriculum",
+      "route": "/data/master-curriculum.json",
+      "build": 35
+    }
+  ],
+  "summary": {
+    "domains_total": 14,
+    "institutional_target_total": 2045,
+    "educational_target_total": 1995,
+    "assets_registered": 510,
+    "educational_assets_registered": 448,
+    "assets_published": 15,
+    "educational_assets_published": 15,
+    "mc_dashboards_complete": 47,
+    "assets_in_pipeline": 49,
+    "assets_planned": 1931,
+    "queue_coverage_pct": 22.5,
+    "overall_completion_pct": 0.8,
+    "production_stages": 11,
+    "content_inventory_items": 351,
+    "production_automation_live": false,
+    "capacity_model_live": false,
+    "production_matrix_readiness_pct": 39
+  },
+  "catalog_gaps": [
+    "Only 448/1995 educational assets registered \u2014 77.5% of master library not queued",
+    "Only 15 educational assets published \u2014 0.8% institutional completion",
+    "0 videos produced \u2014 multimedia domain empty",
+    "0 county pages published \u2014 75 stubs only",
+    "0 encyclopedia entries published \u2014 glossary/timeline cross-domains planned only",
+    "Production stages defined \u2014 not enforced in CMS or workflow tooling",
+    "Capacity planning documented \u2014 no velocity or completion date model",
+    "No production automation \u2014 reminders, citation alerts, freshness checks planned",
+    "Build #6 inventory domain IDs differ from matrix domain IDs \u2014 mapping manual in gen script",
+    "Component specifications still deferred \u2014 production UI widgets unmapped"
+  ],
+  "recommended_next_build": {
+    "number": 47,
+    "title": "Component Specifications with Props/States",
+    "note": "Map production queue tables, domain progress bars, stage badges, and capacity widgets to COMP-* from Build #17."
+  }
+}
