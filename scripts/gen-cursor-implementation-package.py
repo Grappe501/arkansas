@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 28  # IMP-01 through IMP-28 (doctrinal)
+steps_documented = 29  # IMP-01 through IMP-29 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3335,7 +3335,7 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'institutional_analytics', 'institutional_automation', 'public_digital_experience',
     'mobile_field_operations', 'institutional_digital_library',
     'institutional_integration_platform', 'institutional_security_trust',
-    'institutional_devops_production', 'institutional_governance_pmo',
+    'institutional_governance_pmo', 'institutional_sustainability_continuity',
 ]
 
 RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
@@ -5159,6 +5159,170 @@ GOVERNANCE_PMO_MANIFEST = {
     'implemented': False,
 }
 
+SUSTAINABILITY_PHILOSOPHY_PRESERVES = [
+    'knowledge', 'processes', 'relationships', 'culture', 'standards',
+    'institutional_memory',
+]
+
+CONTINUITY_PILLARS = [
+    'knowledge', 'people', 'processes', 'technology', 'mission',
+]
+
+LEADERSHIP_CONTINUITY_FIELDS = [
+    'documented_responsibilities', 'operating_manuals', 'decision_history',
+    'successor_recommendations', 'current_priorities', 'open_initiatives',
+    'relationship_summaries',
+]
+
+SUCCESSION_PLANNING_TRACKING = [
+    'critical_leadership_roles', 'potential_future_leaders', 'leadership_readiness',
+    'mentorship_progress', 'vacant_positions', 'emerging_leadership_opportunities',
+]
+
+KNOWLEDGE_TRANSFER_DELIVERABLES = [
+    'lessons_learned', 'best_practices', 'challenges_encountered', 'recommendations',
+    'supporting_documents', 'reusable_templates',
+]
+
+INSTITUTIONAL_PLAYBOOKS = [
+    'research', 'academy', 'volunteer_management', 'community_conversations',
+    'coalition_partnerships', 'county_operations', 'technology', 'mission_control',
+    'communications',
+]
+
+DOCUMENTATION_STANDARD_FIELDS = [
+    'purpose', 'responsibilities', 'processes', 'frequently_asked_questions',
+    'troubleshooting', 'reference_materials', 'training_resources',
+]
+
+VOLUNTEER_DEVELOPMENT_PATHS = [
+    'learning', 'leadership', 'mentorship', 'specialization', 'cross_training',
+    'institutional_stewardship',
+]
+
+ORGANIZATIONAL_LEARNING_OUTPUTS = [
+    'best_practices', 'case_studies', 'templates', 'checklists',
+    'training_materials', 'improved_workflows',
+]
+
+INSTITUTIONAL_MEMORY_PRESERVES = [
+    'major_decisions', 'research', 'community_conversations', 'meeting_summaries',
+    'project_history', 'leadership_transitions', 'annual_reports',
+    'institutional_milestones',
+]
+
+LONG_TERM_GROWTH_STRATEGIES = [
+    'additional_education_leaders', 'new_organizational_partnerships',
+    'expanded_academy_curriculum', 'greater_county_engagement',
+    'more_community_conversations', 'improved_volunteer_development',
+    'technology_enhancements',
+]
+
+EXPANSION_BEYOND_ARKANSAS_PRINCIPLES = [
+    'reusable_operating_systems', 'configurable_geography', 'reusable_academy',
+    'reusable_mission_control', 'reusable_localbrains',
+]
+
+MISSION_PRESERVATION_QUESTIONS = [
+    'strengthen_civic_education', 'strengthen_public_trust',
+    'strengthen_communities', 'align_with_institutional_mission',
+]
+
+OCTOBER_SUSTAINABILITY_OBJECTIVE_SCOPE = [
+    'documented_operating_procedures', 'shared_educational_resources',
+    'county_knowledge_repository', 'volunteer_onboarding_materials',
+    'leadership_continuity_planning',
+]
+
+MC_SUSTAINABILITY_DASHBOARD_METRICS = [
+    'leadership_readiness', 'succession_planning', 'documentation_completeness',
+    'knowledge_growth', 'volunteer_development', 'cross_training',
+    'county_sustainability', 'organizational_maturity',
+]
+
+SUSTAINABILITY_CONTINUITY_SYSTEM_CHAIN = [
+    'mission_control', 'knowledge_platform', 'research_institute',
+    'community_education_academy', 'volunteer_network', 'coalition_network',
+    'county_operating_system', 'city_operating_system', 'neighborhood_operating_system',
+    'communications', 'governance', 'ai_localbrains',
+]
+
+SUSTAINABILITY_CONTINUITY_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-29',
+    'updated': today,
+    'title': 'Master Sustainability, Growth Strategy, Knowledge Transfer & Institutional Continuity',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_29_SUSTAINABILITY_CONTINUITY.md',
+    'source_registries': {
+        'governance_pmo': '/data/governance-pmo-manifest.json',
+        'digital_library': '/data/digital-library-manifest.json',
+        'knowledge_graph': '/data/knowledge-graph-manifest.json',
+        'volunteer_network': '/data/volunteer-network-manifest.json',
+        'local_operating_systems': '/data/local-operating-systems-manifest.json',
+    },
+    'philosophy': 'Institutional continuity is deliberate — success must never depend on one individual',
+    'governing_principle': (
+        'Every generation of volunteers leaves behind a stronger, wiser institution — '
+        'the mission remains while people, leaders, and technology change'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'sustainability_philosophy_preserves': SUSTAINABILITY_PHILOSOPHY_PRESERVES,
+    'continuity_pillars': CONTINUITY_PILLARS,
+    'continuity_pillar_count': len(CONTINUITY_PILLARS),
+    'leadership_continuity_fields': LEADERSHIP_CONTINUITY_FIELDS,
+    'leadership_continuity_field_count': len(LEADERSHIP_CONTINUITY_FIELDS),
+    'succession_planning_tracking': SUCCESSION_PLANNING_TRACKING,
+    'succession_planning_tracking_count': len(SUCCESSION_PLANNING_TRACKING),
+    'knowledge_transfer_deliverables': KNOWLEDGE_TRANSFER_DELIVERABLES,
+    'knowledge_transfer_deliverable_count': len(KNOWLEDGE_TRANSFER_DELIVERABLES),
+    'institutional_playbooks': INSTITUTIONAL_PLAYBOOKS,
+    'institutional_playbook_count': len(INSTITUTIONAL_PLAYBOOKS),
+    'documentation_standard_fields': DOCUMENTATION_STANDARD_FIELDS,
+    'documentation_standard_field_count': len(DOCUMENTATION_STANDARD_FIELDS),
+    'volunteer_development_paths': VOLUNTEER_DEVELOPMENT_PATHS,
+    'volunteer_development_path_count': len(VOLUNTEER_DEVELOPMENT_PATHS),
+    'organizational_learning_outputs': ORGANIZATIONAL_LEARNING_OUTPUTS,
+    'organizational_learning_output_count': len(ORGANIZATIONAL_LEARNING_OUTPUTS),
+    'institutional_memory_preserves': INSTITUTIONAL_MEMORY_PRESERVES,
+    'institutional_memory_preserve_count': len(INSTITUTIONAL_MEMORY_PRESERVES),
+    'long_term_growth_strategies': LONG_TERM_GROWTH_STRATEGIES,
+    'long_term_growth_strategy_count': len(LONG_TERM_GROWTH_STRATEGIES),
+    'expansion_beyond_arkansas_principles': EXPANSION_BEYOND_ARKANSAS_PRINCIPLES,
+    'expansion_principle_count': len(EXPANSION_BEYOND_ARKANSAS_PRINCIPLES),
+    'mission_preservation_questions': MISSION_PRESERVATION_QUESTIONS,
+    'mission_preservation_question_count': len(MISSION_PRESERVATION_QUESTIONS),
+    'october_sustainability_objective': {
+        'target_date': county_milestone_date,
+        'scope': OCTOBER_SUSTAINABILITY_OBJECTIVE_SCOPE,
+        'label': 'County-level resilience — procedures, resources, knowledge, onboarding, continuity',
+    },
+    'mc_sustainability_dashboard_metrics': MC_SUSTAINABILITY_DASHBOARD_METRICS,
+    'mc_sustainability_dashboard_metric_count': len(MC_SUSTAINABILITY_DASHBOARD_METRICS),
+    'organizational_goals': {
+        'counties_total': 75,
+        'counties_with_partnerships_goal': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'sustainability_continuity_system_chain': SUSTAINABILITY_CONTINUITY_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/sustainability-stewardship.html',
+    'packages_completed': 29,
+    'packages_total': 50,
+    'packages_complete_pct': 58,
+    'engineering_note': 'Doctrinal IMP-29 Sustainability & Continuity; engineering IMP-29 is Volunteer signup flow',
+    'status': 'documented',
+    'implemented': False,
+}
+
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -5303,7 +5467,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D29', 'indicator': 'QA & Launch Readiness (IMP-26)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D30', 'indicator': 'DevOps & Production Ops (IMP-27)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D31', 'indicator': 'Governance & PMO (IMP-28)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D32', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D32', 'indicator': 'Sustainability & Continuity (IMP-29)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D33', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -6032,6 +6197,33 @@ out = {
             'number': 29,
             'id': 'IMP-29',
             'title': 'Master Sustainability, Growth Strategy, Knowledge Transfer & Institutional Continuity',
+            'status': 'documented',
+        },
+    },
+    'sustainability_continuity': {
+        'title': 'Master Sustainability, Growth Strategy, Knowledge Transfer & Institutional Continuity',
+        'package': 'Implementation Package 29 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_29_SUSTAINABILITY_CONTINUITY.md',
+        'manifest': '/data/sustainability-continuity-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': SUSTAINABILITY_CONTINUITY_MANIFEST['philosophy'],
+        'continuity_pillar_count': SUSTAINABILITY_CONTINUITY_MANIFEST['continuity_pillar_count'],
+        'institutional_playbook_count': SUSTAINABILITY_CONTINUITY_MANIFEST['institutional_playbook_count'],
+        'succession_planning_tracking_count': SUSTAINABILITY_CONTINUITY_MANIFEST['succession_planning_tracking_count'],
+        'institutional_memory_preserve_count': SUSTAINABILITY_CONTINUITY_MANIFEST['institutional_memory_preserve_count'],
+        'mc_sustainability_dashboard_metric_count': SUSTAINABILITY_CONTINUITY_MANIFEST['mc_sustainability_dashboard_metric_count'],
+        'packages_completed': SUSTAINABILITY_CONTINUITY_MANIFEST['packages_completed'],
+        'packages_complete_pct': SUSTAINABILITY_CONTINUITY_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': SUSTAINABILITY_CONTINUITY_MANIFEST['mc_dashboard'],
+        'engineering_note': SUSTAINABILITY_CONTINUITY_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 30,
+            'id': 'IMP-30',
+            'title': 'Master Launch Strategy, Statewide Rollout, Adoption Campaign & January 2027 Operational Readiness',
             'status': 'specified',
         },
     },
@@ -6236,6 +6428,10 @@ with open(root / 'data/devops-production-manifest.json', 'w', newline='\n') as f
 
 with open(root / 'data/governance-pmo-manifest.json', 'w', newline='\n') as f:
     json.dump(GOVERNANCE_PMO_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/sustainability-continuity-manifest.json', 'w', newline='\n') as f:
+    json.dump(SUSTAINABILITY_CONTINUITY_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(
