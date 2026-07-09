@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Build Bible <a href="/mission-control/build-bible.html" class="mc-inline-link">★ Milestone #50 →</a></h2>
+    <p class="mc-bar-note">Build #50 — Master Build Bible. Planning phase complete — 50 builds, 28 systems, 12 pillars. Implementation begins. 49% bible readiness.</p>
     <h2 class="mc-section-title">Governance & Constitution <a href="/mission-control/governance.html" class="mc-inline-link">Institutional Rules →</a></h2>
     <p class="mc-bar-note">Build #49 — Master governance & institutional constitution. 6 values, 7 steward roles. 0 stewards assigned. 44% governance readiness.</p>
     <h2 class="mc-section-title">Technical Architecture <a href="/mission-control/technical-architecture.html" class="mc-inline-link">Production Engineering →</a></h2>
@@ -4845,6 +4847,115 @@ async function initGovernanceConstitution() {
   initDevConsole(mc);
 }
 
+async function initBuildBible() {
+  const root = document.getElementById('mc-build-bible-root');
+  if (!root) return;
+
+  const [bbRes, mcRes] = await Promise.all([
+    fetch('/data/build-bible.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const bb = await bbRes.json();
+  const mc = await mcRes.json();
+  const s = bb.summary;
+  const fnd = bb.phase_i_foundation;
+
+  const fndRows = fnd.systems.map(sys => `
+    <tr><td><code>${sys.id}</code></td><td>${sys.title}</td>
+      <td>${sys.build ? '#' + sys.build : '—'}</td>
+      <td>${sys.route ? `<a href="${sys.route}">link</a>` : '—'}</td>
+      <td>${sys.status}</td></tr>`).join('');
+
+  const pillarCards = bb.institutional_pillars.pillars.map(p => `
+    <div class="mc-card"><h3>Pillar ${p.number}: ${p.title}</h3>
+      <p class="mc-bar-note">${p.purpose}</p>
+      <p class="mc-bar-note">${p.systems.join(' · ')}</p>
+    </div>`).join('');
+
+  const engineRows = bb.operating_engines.engines.map(e => `
+    <tr><td>${e.title}</td><td>${e.components.join(', ')}</td><td>${e.readiness_pct}%</td></tr>`).join('');
+
+  const wsRows = bb.workstreams.streams.map(w => `
+    <tr><td><code>${w.id}</code></td><td>${w.title}</td><td>${w.focus}</td>
+      <td>${w.readiness_pct}%</td><td>${w.status}</td></tr>`).join('');
+
+  const phaseCards = bb.development_phases.phases.map(ph => `
+    <div class="mc-card"><h3>Phase ${ph.letter} — ${ph.title}</h3>
+      <p class="mc-bar-note">${ph.status} · ${ph.note || ''}</p>
+      <ul class="mc-deliverables">${ph.items.map(i => `<li>${i}</li>`).join('')}</ul>
+    </div>`).join('');
+
+  const indexRows = bb.master_index.recent_builds.map(b => `
+    <tr><td>#${b.build}</td><td>${b.title}</td><td><a href="${b.route}">${b.route}</a></td></tr>`).join('');
+
+  const metricRows = bb.mc_integration.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('');
+
+  const journey = bb.ultimate_visitor_journey.map((j, i) =>
+    `${j}${i < bb.ultimate_visitor_journey.length - 1 ? ' →' : ''}`).join(' ');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Build Bible</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #50 · ★ MILESTONE · ${bb.title}</p>
+      <h1>Master Build Bible</h1>
+      <p class="mc-header__question">${bb.governing_principle}</p>
+      <p class="mc-bar-note">${bb.purpose}</p>
+      <p class="mc-bar-note"><strong>${bb.milestone.shift}</strong> — ${bb.milestone.planning_phase} planning · ${bb.milestone.implementation_phase} implementation</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Planning builds</div><div class="mc-stat__value">${s.planning_builds_complete}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Foundation systems</div><div class="mc-stat__value">${s.foundation_systems}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Pillars</div><div class="mc-stat__value">${s.pillars_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Engine avg</div><div class="mc-stat__value">${s.avg_engine_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Launch readiness</div><div class="mc-stat__value">${s.public_launch_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Bible readiness</div><div class="mc-stat__value">${s.build_bible_readiness_pct}%</div></div>
+    </div>
+    <h2 class="mc-section-title">Phase I — Institutional Foundation (${fnd.systems_total} systems)</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>System</th><th>Build</th><th>Route</th><th>Status</th></tr></thead>
+      <tbody>${fndRows}</tbody></table>
+    <h2 class="mc-section-title">Twelve Institutional Pillars</h2>
+    <div class="mc-grid-2">${pillarCards}</div>
+    <h2 class="mc-section-title">Four Operating Engines</h2>
+    <table class="mc-table"><thead><tr><th>Engine</th><th>Components</th><th>Readiness</th></tr></thead>
+      <tbody>${engineRows}</tbody></table>
+    <h2 class="mc-section-title">Permanent Workstreams</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Stream</th><th>Focus</th><th>Readiness</th><th>Status</th></tr></thead>
+      <tbody>${wsRows}</tbody></table>
+    <h2 class="mc-section-title">Implementation Phases (A–E)</h2>
+    <div class="mc-grid-2">${phaseCards}</div>
+    <h2 class="mc-section-title">Mission Control Responsibilities</h2>
+    <ul class="mc-deliverables">${bb.mission_control_responsibilities.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Arkansas Focus</h2>
+    <p class="mc-bar-note">${bb.arkansas_focus.question}</p>
+    <h2 class="mc-section-title">Ultimate Visitor Journey</h2>
+    <p class="mc-bar-note">${journey}</p>
+    <h2 class="mc-section-title">What Comes Next — Implementation</h2>
+    <ul class="mc-deliverables">${bb.what_comes_next.priorities.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <ul class="mc-deliverables">${bb.long_term_vision.combines.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recent Blueprint Index</h2>
+    <table class="mc-table"><thead><tr><th>Build</th><th>Blueprint</th><th>Registry</th></tr></thead>
+      <tbody>${indexRows}</tbody></table>
+    <p class="mc-bar-note"><a href="${bb.master_index.build_registry}">Full Build Registry →</a></p>
+    <h2 class="mc-section-title">Build Bible Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${bb.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${bb.recommended_next_build.number} — ${bb.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${bb.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_BUILD_BIBLE.md">MASTER_BUILD_BIBLE.md</a> ·
+      <a href="/data/build-bible.json">JSON</a> ·
+      <a href="/BUILD_PLAN.md">Build Plan</a> ·
+      <a href="/mission-control/systems-integration.html">Systems Integration</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -4893,4 +5004,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initVisitorJourney();
   initTechnicalArchitecture();
   initGovernanceConstitution();
+  initBuildBible();
 });

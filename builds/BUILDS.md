@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#50** | **Master Build Bible** ★ | **1.54.0** | **✅ Complete** | [050](050-master-build-bible.md) · [/mission-control/build-bible.html](../mission-control/build-bible.html) |
 | **#49** | **Master Governance & Institutional Constitution** | **1.53.0** | **✅ Complete** | [049](049-master-governance-stewardship-institutional-constitution.md) · [/mission-control/governance.html](../mission-control/governance.html) |
 | **#48** | **Master Technical Architecture & Deployment Blueprint** | **1.52.0** | **✅ Complete** | [048](048-master-technical-architecture-deployment-blueprint.md) · [/mission-control/technical-architecture.html](../mission-control/technical-architecture.html) |
 | **#47** | **Master Visitor Journey & Behavioral Architecture** | **1.51.0** | **✅ Complete** | [047](047-master-visitor-journey-behavioral-architecture.md) · [/mission-control/visitor-journey.html](../mission-control/visitor-journey.html) |

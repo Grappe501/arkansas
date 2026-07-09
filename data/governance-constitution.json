@@ -337,7 +337,7 @@
     {
       "type": "Mission Control history",
       "status": "live",
-      "current": "50 builds logged"
+      "current": "52 builds logged"
     },
     {
       "type": "Annual reports",
@@ -491,7 +491,7 @@
     "annual_review_live": false,
     "correction_log_live": false,
     "succession_operational": false,
-    "builds_logged": 50,
+    "builds_logged": 52,
     "governance_readiness_pct": 44
   },
   "catalog_gaps": [
@@ -507,7 +507,7 @@
     "Component specifications still deferred \u2014 governance UI widgets unmapped"
   ],
   "recommended_next_build": {
-    "number": 50,
+    "number": 51,
     "title": "Component Specifications with Props/States",
     "note": "Map steward role cards, values panels, accountability doc links, and annual review widgets to COMP-* from Build #17."
   }

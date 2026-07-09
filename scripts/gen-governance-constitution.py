@@ -282,7 +282,7 @@ out = {
         'Component specifications still deferred — governance UI widgets unmapped',
     ],
     'recommended_next_build': {
-        'number': 50,
+        'number': 51,
         'title': 'Component Specifications with Props/States',
         'note': 'Map steward role cards, values panels, accountability doc links, and annual review widgets to COMP-* from Build #17.',
     },
