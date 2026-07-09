@@ -1,0 +1,280 @@
+{
+  "version": "1.0",
+  "build": 75,
+  "updated": "2026-07-09",
+  "title": "Master Volunteer & Funding Constitution v1.0",
+  "subtitle": "The Institutional Independence Charter",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/volunteer-funding-constitution.html",
+  "constitution": "/docs/MASTER_VOLUNTEER_FUNDING_CONSTITUTION.md",
+  "purpose": "Founding principles protecting institutional independence and public trust \u2014 how the institution is organized and supported.",
+  "governing_principle": "Belongs to people who build it and communities it serves. Foundation: volunteer service. Mission: civic education. Strength: public trust. Education independent, transparent, evidence-based, rooted in voluntary Arkansas support.",
+  "founding_principle": {
+    "all_volunteer_arkansas_institution": true,
+    "educate_first_and_always": true,
+    "strength_from_arkansans": true
+  },
+  "volunteer_first": {
+    "title": "Volunteer First",
+    "designed_for_trained_volunteers": true,
+    "functions": [
+      "Research assistance",
+      "Educational writing",
+      "Community conversations",
+      "Education Leaders",
+      "County leadership",
+      "Coalition coordination",
+      "Event support",
+      "Presentation teams",
+      "Community outreach",
+      "Mentorship"
+    ],
+    "celebrate_volunteer_service": true,
+    "active_volunteers": 0,
+    "status": "specified"
+  },
+  "financial_independence": {
+    "title": "Financial Independence",
+    "neutrality_protected": true,
+    "stewardship_supports_mission_not_defines": true,
+    "status": "specified"
+  },
+  "arkansas_citizen_support": {
+    "title": "Arkansas Citizen Support",
+    "preferred_model": "Individual voluntary contributions from Arkansas citizens",
+    "when_necessary_for": [
+      "Ballot initiative education",
+      "Petition administration",
+      "Required legal compliance",
+      "Accounting",
+      "Technology infrastructure",
+      "Educational materials",
+      "Administrative expenses"
+    ],
+    "supported_by_people_served": true,
+    "funding_sources": 0,
+    "status": "specified"
+  },
+  "organizational_contributions": {
+    "title": "Organizational Contributions",
+    "contribution_types": [
+      "Educational collaboration",
+      "Sharing facilities",
+      "Volunteers",
+      "Expertise",
+      "Joint educational programming",
+      "Resource sharing"
+    ],
+    "distinguish_collaboration_from_financial": true,
+    "status": "specified"
+  },
+  "transparency": {
+    "title": "Transparency",
+    "internal_records": [
+      "Revenue sources",
+      "Major expense categories",
+      "Financial policies",
+      "Governance decisions"
+    ],
+    "public_transparency": true,
+    "revenue_tracked": 0,
+    "status": "specified"
+  },
+  "no_special_access": {
+    "title": "No Special Access",
+    "contributions_never_purchase": [
+      "Editorial influence",
+      "Research outcomes",
+      "Educational conclusions",
+      "Governance authority",
+      "Preferred treatment"
+    ],
+    "integrity_independent_of_support": true,
+    "status": "live"
+  },
+  "stewardship_philosophy": {
+    "title": "Stewardship Philosophy",
+    "question": "How does this improve civic education for Arkansas?",
+    "examples": [
+      "Educational materials",
+      "Technology improvements",
+      "Accessibility enhancements",
+      "Community education resources",
+      "Volunteer support",
+      "Research infrastructure"
+    ],
+    "connect_investments_to_outcomes": true,
+    "status": "specified"
+  },
+  "volunteer_recognition": {
+    "title": "Volunteer Recognition",
+    "recognition_types": [
+      "Service milestones",
+      "Leadership development",
+      "Mentorship recognition",
+      "Educational achievements",
+      "Community impact"
+    ],
+    "honors_service_not_status": true,
+    "milestones_awarded": 0,
+    "status": "planned"
+  },
+  "sustainability": {
+    "title": "Sustainability",
+    "operate_during_limited_resources": true,
+    "requirements": [
+      "Strong documentation",
+      "Volunteer leadership",
+      "Efficient technology",
+      "Shared knowledge",
+      "Careful planning"
+    ],
+    "resilience_by_design": true,
+    "status": "specified"
+  },
+  "constitution_dashboard": {
+    "title": "Mission Control Constitution Dashboard",
+    "live": false,
+    "adherence_monitoring": false,
+    "indicators": [
+      {
+        "id": "VFC-D1",
+        "indicator": "Active volunteers",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "VFC-D2",
+        "indicator": "Volunteer hours (voluntarily reported)",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "VFC-D3",
+        "indicator": "Education Leaders",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "VFC-D4",
+        "indicator": "County leadership coverage",
+        "current": 0,
+        "target": 75,
+        "status": "planned"
+      },
+      {
+        "id": "VFC-D5",
+        "indicator": "Coalition participation",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "VFC-D6",
+        "indicator": "Community conversations",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "VFC-D7",
+        "indicator": "Funding sources (transparent)",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "VFC-D8",
+        "indicator": "Sustainability indicators",
+        "current": "not_tracked",
+        "status": "planned"
+      }
+    ],
+    "status": "planned"
+  },
+  "integration": {
+    "chain": "Education Academy \u2192 Coalition Network \u2192 Relationship OS \u2192 Citizen Action Center \u2192 Action Network \u2192 Governance \u2192 Sustainability \u2192 Mission Control",
+    "systems": [
+      {
+        "system": "Community Education Academy (#28)",
+        "route": "/mission-control/education-academy.html",
+        "status": "partial"
+      },
+      {
+        "system": "Coalition Network (#61)",
+        "route": "/mission-control/coalition-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Relationship OS (#59)",
+        "route": "/mission-control/relationship-os.html",
+        "status": "live"
+      },
+      {
+        "system": "Citizen Action Center (#62)",
+        "route": "/mission-control/citizen-action-center.html",
+        "status": "live"
+      },
+      {
+        "system": "Arkansas Action Network (#64)",
+        "route": "/mission-control/arkansas-action-network.html",
+        "status": "live"
+      },
+      {
+        "system": "Sustainability & Stewardship (#66)",
+        "route": "/mission-control/sustainability-stewardship.html",
+        "status": "live",
+        "note": "Operational blueprint"
+      },
+      {
+        "system": "Governance Constitution (#49)",
+        "route": "/mission-control/governance.html",
+        "status": "live"
+      },
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "status": "live"
+      }
+    ],
+    "every_system_reflects_principles": true,
+    "extends": "Sustainability & Stewardship (#66) \u2014 constitutional foundation for volunteer and funding principles"
+  },
+  "long_term_vision": "Recognized as built by Arkansans, for Arkansans. Greatest resource: thousands of volunteers helping neighbors understand constitutional system, campaign finance, civic participation. Financial support strengthens mission while preserving independence and public trust.",
+  "summary": {
+    "volunteer_functions": 10,
+    "active_volunteers": 0,
+    "volunteer_hours_reported": 0,
+    "education_leaders": 0,
+    "county_leadership_coverage": 0,
+    "counties_target": 75,
+    "coalition_participation": 0,
+    "community_conversations": 0,
+    "funding_sources": 0,
+    "revenue_tracked": 0,
+    "recognition_milestones_awarded": 0,
+    "adherence_monitoring_live": false,
+    "constitution_dashboard_live": false,
+    "volunteer_funding_constitution_readiness_pct": 45,
+    "sustainability_stewardship_readiness_pct": 38,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "0 active volunteers \u2014 volunteer registry not built",
+    "0 volunteer hours reported \u2014 no voluntary hours tracking UI",
+    "0 funding sources \u2014 revenue transparency not operational",
+    "Adherence monitoring specified \u2014 not live in Mission Control",
+    "Constitution dashboard planned \u2014 not live",
+    "0 recognition milestones \u2014 volunteer recognition system not built",
+    "Build #75 vs Sustainability (#66) \u2014 reconcile constitution vs operational blueprint?",
+    "Organizational vs financial contribution distinction \u2014 no UI pattern",
+    "No special access policy \u2014 not enforced in workflow",
+    "Arkansas citizen funding model specified \u2014 no donation intake",
+    "County leadership coverage 0/75 \u2014 volunteer constitution ahead of network",
+    "Financial records internal only \u2014 no public transparency page",
+    "MC does not yet monitor constitution adherence alongside health indicators"
+  ],
+  "recommended_next_build": {
+    "number": 76,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "Volunteer registry, funding transparency UI, adherence checklist, recognition milestones, donation intake spec, COMP-* specs, GitHub backlog."
+  }
+}

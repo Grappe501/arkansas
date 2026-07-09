@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Volunteer & Funding <a href="/mission-control/volunteer-funding-constitution.html" class="mc-inline-link">Independence Charter #75 →</a></h2>
+    <p class="mc-bar-note">Build #75 — Volunteer & Funding Constitution. All-volunteer institution, financial independence, no special access. Educate first always. 0 volunteers · 0 funding sources. ~43% readiness.</p>
     <h2 class="mc-section-title">Reform Center <a href="/mission-control/arkansas-civic-innovation-reform.html" class="mc-inline-link">Civic Solutions #74 →</a></h2>
     <p class="mc-bar-note">Build #74 — Civic Innovation & Reform Center. Eight reform libraries, proposal framework, solution builder. Center explains; citizens decide. 0 analyses · 0/8 libraries. ~44% readiness.</p>
     <h2 class="mc-section-title">Research Institute <a href="/mission-control/arkansas-research-institute.html" class="mc-inline-link">Policy Lab #73 →</a></h2>
@@ -5211,6 +5213,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initArkansasCommunications();
   initArkansasResearchInstitute();
   initArkansasCivicInnovationReform();
+  initVolunteerFundingConstitution();
 });
 
 async function initUxArchitecture() {
@@ -7788,6 +7791,97 @@ async function initArkansasCivicInnovationReform() {
       <a href="/mission-control/arkansas-research-institute.html">Research Institute</a> ·
       <a href="/mission-control/campaign-finance-observatory.html">Campaign Finance Observatory</a> ·
       <a href="/mission-control/citizen-action-center.html">Citizen Action Center</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initVolunteerFundingConstitution() {
+  const root = document.getElementById('mc-volunteer-funding-constitution-root');
+  if (!root) return;
+
+  const [vfcRes, mcRes] = await Promise.all([
+    fetch('/data/volunteer-funding-constitution.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const vfc = await vfcRes.json();
+  const mc = await mcRes.json();
+  const s = vfc.summary;
+
+  const dashRows = vfc.constitution_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td>
+      <td>${typeof d.current === 'number' ? d.current : d.current}${d.target ? `/${d.target}` : ''}</td><td>${d.status}</td></tr>`).join('');
+
+  const systemRows = vfc.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td><td>${sys.note ?? '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Volunteer & Funding Constitution</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #75 · ${vfc.title}</p>
+      <h1>The Institutional Independence Charter</h1>
+      <p class="mc-header__question">${vfc.governing_principle}</p>
+      <p class="mc-bar-note">${vfc.purpose}</p>
+      <p class="mc-bar-note"><strong>All-volunteer institution:</strong> ${vfc.founding_principle.all_volunteer_arkansas_institution ? 'Yes' : 'No'} · <strong>Educate first and always:</strong> ${vfc.founding_principle.educate_first_and_always ? 'Yes' : 'No'}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Constitution readiness</div><div class="mc-stat__value">${s.volunteer_funding_constitution_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Active volunteers</div><div class="mc-stat__value">${s.active_volunteers}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Volunteer hours</div><div class="mc-stat__value">${s.volunteer_hours_reported}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Funding sources</div><div class="mc-stat__value">${s.funding_sources}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">County coverage</div><div class="mc-stat__value">${s.county_leadership_coverage}/${s.counties_target}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Adherence monitoring</div><div class="mc-stat__value">${s.adherence_monitoring_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">${vfc.volunteer_first.title}</h2>
+    <p class="mc-bar-note">Designed for trained volunteers: ${vfc.volunteer_first.designed_for_trained_volunteers ? 'Yes' : 'No'} · Active: ${vfc.volunteer_first.active_volunteers} · ${vfc.volunteer_first.status}</p>
+    <ul class="mc-deliverables">${vfc.volunteer_first.functions.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${vfc.financial_independence.title}</h2>
+    <p class="mc-bar-note">Neutrality protected: ${vfc.financial_independence.neutrality_protected ? 'Yes' : 'No'} · Stewardship supports mission: ${vfc.financial_independence.stewardship_supports_mission_not_defines ? 'Yes' : 'No'}</p>
+    <h2 class="mc-section-title">${vfc.arkansas_citizen_support.title}</h2>
+    <p class="mc-bar-note"><strong>Preferred model:</strong> ${vfc.arkansas_citizen_support.preferred_model}</p>
+    <p class="mc-bar-note">Funding sources: ${vfc.arkansas_citizen_support.funding_sources} · ${vfc.arkansas_citizen_support.status}</p>
+    <ul class="mc-deliverables">${vfc.arkansas_citizen_support.when_necessary_for.map(u => `<li>${u}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${vfc.organizational_contributions.title}</h2>
+    <p class="mc-bar-note">Distinguish collaboration from financial: ${vfc.organizational_contributions.distinguish_collaboration_from_financial ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${vfc.organizational_contributions.contribution_types.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${vfc.transparency.title}</h2>
+    <p class="mc-bar-note">Public transparency: ${vfc.transparency.public_transparency ? 'Yes' : 'No'} · Revenue tracked: ${vfc.transparency.revenue_tracked}</p>
+    <ul class="mc-deliverables">${vfc.transparency.internal_records.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${vfc.no_special_access.title}</h2>
+    <p class="mc-bar-note">Integrity independent of support: ${vfc.no_special_access.integrity_independent_of_support ? 'Yes' : 'No'} · ${vfc.no_special_access.status}</p>
+    <ul class="mc-deliverables">${vfc.no_special_access.contributions_never_purchase.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${vfc.stewardship_philosophy.title}</h2>
+    <p class="mc-bar-note"><strong>Every dollar answers:</strong> "${vfc.stewardship_philosophy.question}"</p>
+    <ul class="mc-deliverables">${vfc.stewardship_philosophy.examples.map(e => `<li>${e}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${vfc.volunteer_recognition.title}</h2>
+    <p class="mc-bar-note">Honors service not status: ${vfc.volunteer_recognition.honors_service_not_status ? 'Yes' : 'No'} · Milestones: ${vfc.volunteer_recognition.milestones_awarded} · ${vfc.volunteer_recognition.status}</p>
+    <ul class="mc-deliverables">${vfc.volunteer_recognition.recognition_types.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${vfc.sustainability.title}</h2>
+    <p class="mc-bar-note">Operate during limited resources: ${vfc.sustainability.operate_during_limited_resources ? 'Yes' : 'No'} · Resilience by design: ${vfc.sustainability.resilience_by_design ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${vfc.sustainability.requirements.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${vfc.constitution_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${vfc.constitution_dashboard.live ? 'Yes' : 'No'} · Adherence monitoring: ${vfc.constitution_dashboard.adherence_monitoring ? 'Yes' : 'No'} · ${vfc.constitution_dashboard.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${vfc.integration.chain}</p>
+    <p class="mc-bar-note"><strong>Extends:</strong> ${vfc.integration.extends}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Note</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${vfc.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${vfc.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${vfc.recommended_next_build.number} — ${vfc.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${vfc.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_VOLUNTEER_FUNDING_CONSTITUTION.md">MASTER_VOLUNTEER_FUNDING_CONSTITUTION.md</a> ·
+      <a href="/data/volunteer-funding-constitution.json">JSON</a> ·
+      <a href="/mission-control/sustainability-stewardship.html">Sustainability (#66)</a> ·
+      <a href="/mission-control/governance.html">Governance</a> ·
+      <a href="/mission-control/coalition-network.html">Coalition Network</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

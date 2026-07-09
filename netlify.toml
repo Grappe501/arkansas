@@ -537,6 +537,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/volunteer-funding-constitution"
+  to = "/mission-control/volunteer-funding-constitution.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301

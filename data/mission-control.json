@@ -1,6 +1,6 @@
 {
-  "version": "1.78.0",
-  "build": 74,
+  "version": "1.79.0",
+  "build": 75,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,24 +9,24 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 74,
+    "overall_completion": 75,
     "current_build": {
-      "number": 74,
-      "title": "Citizens United Facts Master Arkansas Civic Innovation & Reform Center v1.0"
-    },
-    "active_phase": "Civic Innovation & Reform \u2192 Implementation Translation",
-    "last_completed": "Arkansas Research Institute",
-    "next_build": {
       "number": 75,
+      "title": "Citizens United Facts Master Volunteer & Funding Constitution v1.0"
+    },
+    "active_phase": "Volunteer & Funding Constitution \u2192 Implementation Translation",
+    "last_completed": "Civic Innovation & Reform Center",
+    "next_build": {
+      "number": 76,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
-    "content_readiness": 32,
+    "content_readiness": 28,
     "research_readiness": 43,
     "data_viz_readiness": 12,
     "signup_funnel_readiness": 26,
-    "civic_action_readiness": 30,
+    "civic_action_readiness": 28,
     "coalition_readiness": 44,
     "data_model_readiness": 54,
     "route_inventory_readiness": 18,
@@ -45,7 +45,7 @@
     "campaign_finance_observatory_readiness": 38,
     "arkansas_action_network_readiness": 38,
     "civic_intelligence_command_center_readiness": 43,
-    "sustainability_stewardship_readiness": 38,
+    "sustainability_stewardship_readiness": 41,
     "impact_measurement_readiness": 31,
     "citizen_leadership_academy_readiness": 34,
     "relational_organizing_growth_engine_readiness": 34,
@@ -54,6 +54,7 @@
     "arkansas_communications_readiness": 42,
     "arkansas_research_institute_readiness": 43,
     "arkansas_civic_innovation_reform_readiness": 44,
+    "volunteer_funding_constitution_readiness": 45,
     "mc2_readiness": 42,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
@@ -65,13 +66,13 @@
     "encyclopedia_readiness": 19,
     "narrative_readiness": 24,
     "curriculum_readiness": 26,
-    "trust_readiness": 30,
+    "trust_readiness": 35,
     "library_readiness": 22,
     "learning_lab_readiness": 22,
     "media_studio_readiness": 18,
     "civic_intelligence_readiness": 36,
-    "evidence_ledger_readiness": 26,
-    "civic_action_lab_readiness": 28,
+    "evidence_ledger_readiness": 22,
+    "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 29,
     "institutional_maturity_pct": 32,
     "current_institutional_version": "V1",
@@ -102,8 +103,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 74,
-      "note": "Build #74 \u2014 Civic Innovation & Reform Center."
+      "value": 75,
+      "note": "Build #75 \u2014 Volunteer & Funding Constitution."
     },
     {
       "id": "constitution",
@@ -224,7 +225,7 @@
       "label": "Coalition & Outreach",
       "value": 40,
       "max": 100,
-      "note": "Master coalition network \u2014 highest strategic priority."
+      "note": "Independence charter \u2014 0 volunteers \u00b7 0 funding sources."
     },
     {
       "id": "data_model",
@@ -645,6 +646,13 @@
       "value": 44,
       "max": 100,
       "note": "0 analyses \u00b7 solution builder planned."
+    },
+    {
+      "id": "volunteer_funding_constitution",
+      "label": "Volunteer & Funding",
+      "value": 45,
+      "max": 100,
+      "note": "0 volunteers \u00b7 adherence planned."
     }
   ],
   "public_readiness": {
@@ -1381,6 +1389,12 @@
       "id": "arkansas_civic_innovation_reform",
       "label": "Reform Center",
       "href": "/mission-control/arkansas-civic-innovation-reform.html",
+      "status": "complete"
+    },
+    {
+      "id": "volunteer_funding_constitution",
+      "label": "Volunteer & Funding",
+      "href": "/mission-control/volunteer-funding-constitution.html",
       "status": "complete"
     }
   ],
@@ -2407,6 +2421,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 75,
+      "title": "Citizens United Facts Master Volunteer & Funding Constitution v1.0",
+      "version": "1.79.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Volunteer & Funding Constitution \u2014 institutional independence charter",
+      "summary": "All-volunteer institution, financial independence, Arkansas citizen support, no special access; 45% readiness. 0 volunteers \u00b7 0 funding sources \u00b7 adherence not monitored.",
+      "files_created": [
+        "data/volunteer-funding-constitution.json",
+        "docs/MASTER_VOLUNTEER_FUNDING_CONSTITUTION.md",
+        "builds/075-volunteer-funding-constitution.md",
+        "mission-control/volunteer-funding-constitution.html",
+        "scripts/gen-volunteer-funding-constitution.py",
+        "scripts/update-mc-build75.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/volunteer-funding-constitution.html"
+      ],
+      "decisions_made": [
+        "All-volunteer Arkansas civic education institution \u2014 educate first and always",
+        "Volunteer first \u2014 every major function designed for trained volunteers",
+        "Financial independence \u2014 neutrality protected from conflicting interests",
+        "Preferred funding: individual voluntary Arkansas citizen contributions",
+        "No special access \u2014 contributions never purchase influence",
+        "Extends Sustainability (#66) with constitutional foundation",
+        "45% readiness \u2014 constitution only"
+      ],
+      "open_questions": [
+        "Reconcile #75 constitution vs #66 sustainability operational blueprint?",
+        "Volunteer hours: self-report vs leader attestation?",
+        "Donation intake: when to activate Arkansas citizen funding model?",
+        "Adherence monitoring: automated checklist vs manual review?"
+      ],
+      "risks": [
+        "0 active volunteers \u2014 volunteer registry not built",
+        "0 volunteer hours reported \u2014 no voluntary hours tracking UI",
+        "0 funding sources \u2014 revenue transparency not operational",
+        "Adherence monitoring specified \u2014 not live in Mission Control"
+      ],
+      "next_recommended": 76,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/volunteer-funding-constitution.html",
+      "review_status": "complete"
+    },
     {
       "number": 74,
       "title": "Citizens United Facts Master Arkansas Civic Innovation & Reform Center v1.0",
@@ -6221,21 +6288,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Civic Innovation & Reform Center v1.0 \u2014 civic solutions laboratory",
-    "building_now": "74 builds specified \u2014 implementation translation next",
+    "what_built": "Volunteer & Funding Constitution v1.0 \u2014 institutional independence charter",
+    "building_now": "75 builds specified \u2014 implementation translation next",
     "blocked": [
-      "Reform library pages",
-      "Proposal template",
-      "Solution builder",
-      "Citizen lab"
+      "Volunteer registry",
+      "Funding transparency",
+      "Adherence monitoring",
+      "Recognition"
     ],
     "ready_public": [
-      "Eight libraries",
-      "Six questions",
-      "Proposal framework",
-      "Mission scope"
+      "Volunteer first",
+      "Financial independence",
+      "No special access",
+      "Stewardship question"
     ],
-    "next": "Build #75 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #76 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -7015,5 +7082,13 @@
     "reform_analyses_completed": 0,
     "reform_libraries": 8,
     "signature_educational_resource": true
+  },
+  "volunteer_funding_constitution": "/data/volunteer-funding-constitution.json",
+  "volunteer_funding_constitution_dashboard": "/mission-control/volunteer-funding-constitution.html",
+  "volunteer_funding_constitution_inventory": {
+    "readiness_score": 45,
+    "active_volunteers": 0,
+    "funding_sources": 0,
+    "all_volunteer_institution": true
   }
 }

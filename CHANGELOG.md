@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.79.0] - 2026-07-09 — Build #75 Volunteer & Funding Constitution
+
+### The Institutional Independence Charter
+- **Volunteer & Funding Constitution v1.0** — all-volunteer Arkansas civic education institution
+- Volunteer first (10 functions); financial independence; Arkansas citizen support preferred
+- Transparency, no special access, stewardship philosophy, volunteer recognition
+- Extends Sustainability & Stewardship (#66) with constitutional foundation
+- Honest: 0 volunteers · 0 funding sources · adherence not monitored · ~43% readiness
+- MC dashboard: `/mission-control/volunteer-funding-constitution.html`
+
 ## [1.78.0] - 2026-07-09 — Build #74 Civic Innovation & Reform Center
 
 ### From Research to Responsible Reform
