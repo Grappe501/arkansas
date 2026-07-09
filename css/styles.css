@@ -1,23 +1,6 @@
-/* Citizens Facts — Design System v1.0 */
-
-:root {
-  --color-bg: #f8f6f1;
-  --color-surface: #ffffff;
-  --color-surface-alt: #f0ece4;
-  --color-text: #1a1f2e;
-  --color-text-muted: #5c6478;
-  --color-accent: #1e4d6b;
-  --color-accent-light: #2a6f96;
-  --color-highlight: #c45c26;
-  --color-border: #ddd6c8;
-  --color-montana: #2d5a3d;
-  --color-hawaii: #1a4a6e;
-  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --font-sans: "Source Sans 3", system-ui, -apple-system, sans-serif;
-  --max-width: 1100px;
-  --radius: 8px;
-  --shadow: 0 2px 12px rgba(26, 31, 46, 0.08);
-}
+/* Citizens Facts — Design System v1.0 (Build #9) */
+@import url("design-tokens.css");
+@import url("components.css");
 
 *,
 *::before,

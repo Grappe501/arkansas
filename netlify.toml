@@ -90,6 +90,11 @@
   to = "/explore/"
   status = 301
 
+[[redirects]]
+  from = "/design-system"
+  to = "/design-system/"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]

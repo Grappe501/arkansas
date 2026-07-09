@@ -1,0 +1,151 @@
+{
+  "version": "1.0",
+  "build": 9,
+  "updated": "2026-07-09",
+  "title": "Design Language v1.0",
+  "route": "/mission-control/design.html",
+  "showcase": "/design-system/",
+  "data_file": "/data/design-system.json",
+  "css_tokens": "/css/design-tokens.css",
+  "css_components": "/css/components.css",
+  "principle": "The platform should never feel like it is trying to win an argument. It should invite people to explore with clarity, evidence, and respect for critical thinking.",
+  "identity": {
+    "evokes": [
+      "A national museum",
+      "A presidential library",
+      "A Supreme Court archive",
+      "An investigative newsroom",
+      "A modern university",
+      "A civic innovation lab"
+    ],
+    "avoids": ["Partisan symbolism", "Campaign aesthetics", "Aggressive persuasion"]
+  },
+  "emotional_journey": [
+    { "stage": 1, "emotion": "Curiosity" },
+    { "stage": 2, "emotion": "Clarity" },
+    { "stage": 3, "emotion": "Discovery" },
+    { "stage": 4, "emotion": "Understanding" },
+    { "stage": 5, "emotion": "Confidence" },
+    { "stage": 6, "emotion": "Purpose" },
+    { "stage": 7, "emotion": "Leadership" }
+  ],
+  "color_philosophy": {
+    "core": ["Integrity", "Transparency", "Stability", "Knowledge", "Public service"],
+    "domains": [
+      { "id": "history", "token": "--ds-domain-history", "use": "Historical context" },
+      { "id": "legal", "token": "--ds-domain-legal", "use": "Legal analysis" },
+      { "id": "data", "token": "--ds-domain-data", "use": "Data visualizations" },
+      { "id": "civic", "token": "--ds-domain-civic", "use": "Civic action" },
+      { "id": "research", "token": "--ds-domain-research", "use": "Research resources" }
+    ],
+    "rule": "Color organizes information rather than persuades."
+  },
+  "typography": {
+    "levels": [
+      "Institutional titles",
+      "Section headings",
+      "Educational summaries",
+      "Long-form reading",
+      "Data labels",
+      "Citations",
+      "Callouts",
+      "Captions"
+    ],
+    "fonts": { "serif": "Source Serif 4", "sans": "Source Sans 3", "mono": "Consolas" },
+    "priority": "Reading comfort over stylistic novelty"
+  },
+  "layout_layers": [
+    "Orientation",
+    "Summary",
+    "Main narrative",
+    "Visual explanation",
+    "Supporting evidence",
+    "Related topics",
+    "Civic action opportunities"
+  ],
+  "components": [
+    { "id": "trust-bar", "class": "ds-trust-bar", "status": "live", "mrid": "DSGN-001" },
+    { "id": "timeline-card", "class": "ds-timeline-card", "status": "live", "mrid": "DSGN-002" },
+    { "id": "case-card", "class": "ds-case-card", "status": "live", "mrid": "DSGN-003" },
+    { "id": "concept-card", "class": "ds-concept-card", "status": "live", "mrid": "DSGN-004" },
+    { "id": "fact-callout", "class": "ds-fact-callout", "status": "live", "mrid": "DSGN-005" },
+    { "id": "myth-fact", "class": "ds-myth-fact", "status": "live", "mrid": "DSGN-006" },
+    { "id": "evidence-panel", "class": "ds-evidence-panel", "status": "live", "mrid": "DSGN-007" },
+    { "id": "pull-quote", "class": "ds-pull-quote", "status": "live", "mrid": "DSGN-008" },
+    { "id": "citation", "class": "ds-citation", "status": "live", "mrid": "DSGN-009" },
+    { "id": "comparison", "class": "ds-comparison", "status": "live", "mrid": "DSGN-010" },
+    { "id": "data-viz", "class": "ds-data-viz", "status": "live", "mrid": "DSGN-011" },
+    { "id": "leadership-invite", "class": "ds-leadership-invite", "status": "live", "mrid": "DSGN-012" },
+    { "id": "civic-chip", "class": "ds-civic-chip", "status": "live", "mrid": "DSGN-013" },
+    { "id": "emotion-track", "class": "ds-emotion-track", "status": "live", "mrid": "DSGN-014" }
+  ],
+  "interactives_planned": [
+    "Historical timeline explorer",
+    "Campaign finance evolution map",
+    "Political spending explorer",
+    "Supreme Court decision map",
+    "Constitutional concept explorer",
+    "Money flow diagrams",
+    "Reform comparison tool",
+    "State initiative tracker"
+  ],
+  "motion": {
+    "acceptable": ["Smooth page transitions", "Progressive content reveals", "Timeline navigation", "Interactive diagrams", "Dashboard updates"],
+    "rule": "Motion never interferes with readability or accessibility.",
+    "tokens": ["--ds-duration-fast", "--ds-duration", "--ds-duration-slow", "--ds-ease"]
+  },
+  "mission_control_design": {
+    "distinct": true,
+    "connected": true,
+    "characteristics": [
+      "Executive dashboard",
+      "Live progress indicators",
+      "Build timeline",
+      "Phase visualization",
+      "Civic action metrics",
+      "Research completion",
+      "Deployment status",
+      "Public readiness indicators"
+    ],
+    "rule": "Reinforce momentum without exaggerating progress.",
+    "theme": "NASA-inspired dark cockpit (mission-control.css)"
+  },
+  "data_viz_standards": {
+    "questions": [
+      "What is being measured?",
+      "Why does it matter?",
+      "Where did the data come from?"
+    ],
+    "rule": "Understanding over decoration. Always link to sources."
+  },
+  "civic_action_design": {
+    "tone": "Invitation to contribute, not pressure to act",
+    "examples": [
+      "Become an Education Leader",
+      "Share This Resource",
+      "Host a Community Conversation",
+      "Explore Reform Ideas",
+      "Join the Contact Network"
+    ],
+    "rule": "Appear naturally after educational milestones"
+  },
+  "accessibility": [
+    "High contrast",
+    "Adjustable text sizing",
+    "Screen readers",
+    "Keyboard navigation",
+    "Reduced motion preferences",
+    "Clear focus indicators",
+    "Descriptive alternative text"
+  ],
+  "trust_signals": [
+    "Publication date",
+    "Last updated date",
+    "Source count",
+    "Citation links",
+    "Related primary documents",
+    "Review status",
+    "Research completeness indicator"
+  ],
+  "governance": "All new visual components must conform to the design language. Extend the system — do not create isolated styles."
+}

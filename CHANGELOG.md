@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.13.0] - 2026-07-09 — Build #9 Complete
+
+### Build #9: Visual Design System & Experience Blueprint
+- **Design Language v1.0** — institutional identity (museum, library, archive aesthetic)
+- `css/design-tokens.css` + `css/components.css` — 14 reusable `ds-*` components
+- `data/design-system.json` + `docs/DESIGN_LANGUAGE.md`
+- Living showcase at `/design-system/` · Team dashboard at `/mission-control/design.html`
+- Emotional journey, domain accent colors, data viz standards, accessibility, trust signals
+
 ## [1.12.0] - 2026-07-09 — Build #8 Complete
 
 ### Build #8: User Experience Architecture & Journey System

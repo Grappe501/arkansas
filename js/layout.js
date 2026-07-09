@@ -1,5 +1,5 @@
 /**
- * Citizens Facts — Shared layout v1.12.0
+ * Citizens Facts — Shared layout v1.13.0
  */
 
 const SITE_CSS = '/css/action-hub.css';
@@ -66,8 +66,9 @@ function renderSiteFooter() {
   return `
   <footer class="site-footer">
     <p>
-      Citizens Facts · v<span data-site-version>1.12.0</span> ·
+      Citizens Facts · v<span data-site-version>1.13.0</span> ·
       <a href="/explore/">Site Map</a> ·
+      <a href="/design-system/">Design</a> ·
       <a href="/mission-control/journey.html">Journey</a> ·
       <a href="/mission-control/">Mission Control</a> ·
       <a href="/mission-control/phases.html">Phase Registry</a> ·

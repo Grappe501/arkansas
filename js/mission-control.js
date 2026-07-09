@@ -1,5 +1,5 @@
 /**
- * Citizens United Mission Control v1.12.0 — Build #8
+ * Citizens United Mission Control v1.13.0 — Build #9
  */
 
 const isAdmin = () =>
@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Design System <a href="/mission-control/design.html" class="mc-inline-link">Design Language →</a></h2>
+    <p class="mc-bar-note">Build #9 — institutional tokens, 14 components, <a href="/design-system/">showcase</a>.</p>
     <h2 class="mc-section-title">Citizen Journey <a href="/mission-control/journey.html" class="mc-inline-link">UX blueprint →</a></h2>
     <p class="mc-bar-note">Build #8 — 6 personas, 7-stage ladder, session memory, stage-aware Action Hub.</p>
     <h2 class="mc-section-title">MRID System <a href="/mission-control/mrid.html" class="mc-inline-link">Traceability →</a></h2>
@@ -814,6 +816,65 @@ async function initJourneyBlueprint() {
   initDevConsole(mc);
 }
 
+async function initDesignBlueprint() {
+  const root = document.getElementById('mc-design-root');
+  if (!root) return;
+
+  const [dsRes, mcRes] = await Promise.all([
+    fetch('/data/design-system.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ds = await dsRes.json();
+  const mc = await mcRes.json();
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Design System</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #9 · ${ds.title}</p>
+      <h1>Visual Design System</h1>
+      <p class="mc-header__question">${ds.principle}</p>
+    </header>
+    <section class="mc-card">
+      <h3>Design Identity</h3>
+      <p class="mc-bar-note">Evokes: ${ds.identity.evokes.join(' · ')}</p>
+      <p class="mc-bar-note"><strong>Avoids:</strong> ${ds.identity.avoids.join(', ')}</p>
+    </section>
+    <h2 class="mc-section-title">Emotional Journey</h2>
+    <div class="mc-dep-map">
+      ${ds.emotional_journey.map((e, i) => `
+        <span class="mc-dep-map__node"><span class="mc-dep-map__num">${e.stage}</span><span class="mc-dep-map__label">${e.emotion}</span></span>
+        ${i < ds.emotional_journey.length - 1 ? '<span class="mc-dep-map__arrow">→</span>' : ''}`).join('')}
+    </div>
+    <h2 class="mc-section-title">Color Domains</h2>
+    <div class="mc-card">
+      <ul class="mc-deliverables">${ds.color_philosophy.domains.map(d => `<li><code>${d.token}</code> — ${d.use}</li>`).join('')}</ul>
+      <p class="mc-bar-note">${ds.color_philosophy.rule}</p>
+    </div>
+    <h2 class="mc-section-title">Page Layout Layers</h2>
+    <ol class="mc-deliverables">${ds.layout_layers.map((l, i) => `<li>${i + 1}. ${l}</li>`).join('')}</ol>
+    <h2 class="mc-section-title">Component Library (${ds.components.length})</h2>
+    <table class="mc-table">
+      <thead><tr><th>MRID</th><th>Component</th><th>Class</th><th>Status</th></tr></thead>
+      <tbody>${ds.components.map(c => `
+        <tr><td><code>${c.mrid}</code></td><td>${c.id}</td><td><code>.${c.class}</code></td><td>${c.status}</td></tr>`).join('')}</tbody>
+    </table>
+    <p class="mc-bar-note"><a href="/design-system/">Live component showcase →</a></p>
+    <h2 class="mc-section-title">Data Viz Standards</h2>
+    <ul class="mc-deliverables">${ds.data_viz_standards.questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Accessibility</h2>
+    <ul class="mc-deliverables">${ds.accessibility.map(a => `<li>${a}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Trust Signals</h2>
+    <ul class="mc-deliverables">${ds.trust_signals.map(t => `<li>${t}</li>`).join('')}</ul>
+    <p class="mc-bar-note">
+      <a href="/docs/DESIGN_LANGUAGE.md">DESIGN_LANGUAGE.md</a> ·
+      <a href="/css/design-tokens.css">Tokens</a> ·
+      <a href="/css/components.css">Components</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -822,4 +883,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initContentInventory();
   initMridDashboard();
   initJourneyBlueprint();
+  initDesignBlueprint();
 });

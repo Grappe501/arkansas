@@ -1,6 +1,6 @@
 {
-  "version": "1.12.0",
-  "build": 8,
+  "version": "1.13.0",
+  "build": 9,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,22 +9,22 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 8,
+    "overall_completion": 9,
     "current_build": {
-      "number": 8,
-      "title": "User Experience Architecture & Journey System"
+      "number": 9,
+      "title": "Visual Design System & Experience Blueprint"
     },
     "active_phase": "Information Architecture",
-    "last_completed": "Master Requirement ID System",
+    "last_completed": "User Experience Architecture & Journey System",
     "next_build": {
-      "number": 9,
+      "number": 10,
       "title": "First Deep Content \u2014 Priority MRIDs"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
     "content_readiness": 8,
     "research_readiness": 3,
-    "data_viz_readiness": 0,
+    "data_viz_readiness": 2,
     "signup_funnel_readiness": 8,
     "civic_action_readiness": 8,
     "public_launch_readiness": 3,
@@ -34,8 +34,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 8,
-      "note": "Five registries + UX journey system live. Session memory, learning panel, stage-aware Action Hub. Content depth remains early."
+      "value": 9,
+      "note": "Six registries + UX journey + design system live. Tokens, 14 components, showcase page. Content depth next."
     },
     {
       "id": "constitution",
@@ -52,8 +52,8 @@
     {
       "id": "ia",
       "label": "Information Architecture",
-      "value": 45,
-      "note": "Citizen Journey Blueprint: personas, ladder, milestones, recommendations, accessibility standards."
+      "value": 50,
+      "note": "Full planning stack complete. Design system governs all future visual work."
     },
     {
       "id": "content",
@@ -76,8 +76,8 @@
     {
       "id": "design",
       "label": "Design System",
-      "value": 8,
-      "note": "Base styles, education CSS, mission control theme. Not a full design system."
+      "value": 35,
+      "note": "Design Language v1.0: tokens, component library, accessibility, trust signals, institutional palette."
     },
     {
       "id": "technical",
@@ -490,6 +490,12 @@
       "id": "journey",
       "label": "Citizen Journey",
       "href": "/mission-control/journey.html",
+      "status": "complete"
+    },
+    {
+      "id": "design",
+      "label": "Design System",
+      "href": "/mission-control/design.html",
       "status": "complete"
     }
   ],
@@ -1517,6 +1523,51 @@
   ],
   "builds": [
     {
+      "number": 9,
+      "title": "Visual Design System & Experience Blueprint",
+      "version": "1.13.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Institutional design language \u2014 museum/library/archive aesthetic, not campaign site",
+      "summary": "Design tokens, 14 ds-* components, showcase page, emotional journey, domain colors, data viz standards, accessibility.",
+      "files_created": [
+        "data/design-system.json",
+        "docs/DESIGN_LANGUAGE.md",
+        "builds/009-visual-design-system.md",
+        "css/design-tokens.css",
+        "css/components.css",
+        "design-system/index.html",
+        "mission-control/design.html"
+      ],
+      "files_modified": [
+        "css/styles.css",
+        "js/mission-control.js",
+        "docs/STYLE_GUIDE.md"
+      ],
+      "pages_created": [
+        "/design-system/",
+        "/mission-control/design.html"
+      ],
+      "decisions_made": [
+        "Domain accent colors organize information \u2014 never persuade",
+        "ds-* component prefix for governance",
+        "Mission Control dark theme distinct but connected"
+      ],
+      "open_questions": [
+        "Trust bar auto-inject on all hall pages in Build #10?",
+        "High-contrast theme toggle?"
+      ],
+      "risks": [
+        "Component adoption requires discipline in content builds"
+      ],
+      "next_recommended": 10,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/design-system/",
+      "review_status": "complete"
+    },
+    {
       "number": 8,
       "title": "User Experience Architecture & Journey System",
       "version": "1.12.0",
@@ -1795,20 +1846,18 @@
     }
   ],
   "briefing": {
-    "what_built": "Full planning stack + Citizen Journey UX (panel, recommendations, stage-aware hub)",
-    "building_now": "UX v1 live on all public pages \u2014 ready for deep content with journey cross-links",
+    "what_built": "Full planning stack + UX journey + Design Language v1.0 (tokens, components, showcase)",
+    "building_now": "Design system ready \u2014 apply ds-* components in first deep content (Build #10)",
     "blocked": [
-      "Participant backend",
-      "Spending charts",
-      "Server analytics"
+      "Interactive charts",
+      "Participant backend"
     ],
     "ready_public": [
-      "Learning panel",
-      "Continue learning",
-      "Stage-aware Action Hub",
-      "Journey dashboard"
+      "Design showcase",
+      "Component library",
+      "Institutional tokens on all pages"
     ],
-    "next": "Build #9 \u2014 First Deep Content with MRIDs and journey-aware cross-links"
+    "next": "Build #10 \u2014 First Deep Content with design components and MRIDs"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -1833,5 +1882,7 @@
   "mrid_registry": "/data/mrid-registry.json",
   "mrid_route": "/mission-control/mrid.html",
   "ux_journey": "/data/ux-journey.json",
-  "ux_journey_route": "/mission-control/journey.html"
+  "ux_journey_route": "/mission-control/journey.html",
+  "design_system": "/data/design-system.json",
+  "design_system_route": "/mission-control/design.html"
 }

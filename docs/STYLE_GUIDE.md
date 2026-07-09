@@ -1,5 +1,7 @@
 # Content Style Guide
 
+Visual design: [DESIGN_LANGUAGE.md](DESIGN_LANGUAGE.md) · Component showcase: [/design-system/](/design-system/)
+
 ## Voice
 
 - Plain English first. Define legal terms when they appear.

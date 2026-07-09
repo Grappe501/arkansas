@@ -4,11 +4,11 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.12.0 · **Journey:** [Citizen UX](/mission-control/journey.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #8:** ✅ UX Journey · **Build #7:** ✅ MRID · **Build #6:** ✅ Content Inventory  
+**Current version:** 1.13.0 · **Design:** [/design-system/](/design-system/) · **OS:** [Mission Control](/mission-control/)  
+**Build #9:** ✅ Design System · **Build #8:** ✅ UX Journey · **Build #7:** ✅ MRID  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
-> **Five registries + UX:** Phase · Architecture · Content · MRID · **Citizen Journey**
+> **Five registries + UX + Design:** Phase · Architecture · Content · MRID · Citizen Journey · **Design Language**
 
 ---
 
