@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.88.0] - 2026-07-09 — Build #84 Arkansas Strategic Plan 2035
+
+### The Roadmap to a Statewide Civic Education Institution
+- **Master Arkansas Strategic Plan 2035 v1.0** — accomplishment roadmap distinct from Master Build Plan
+- Strategic vision/mission; 7 goals (Institution, Knowledge, Leadership, Communities, Partnerships, Trust, Legacy)
+- 10-metric strategic scorecard; 5-year and 10-year milestones; risks, opportunities, annual review
+- Founder's commitment — informed citizens essential to self-government
+- Integrates Civic Ecosystem (#83), Legacy Roadmap (#80), Command Strategy (#70), BUILD_PLAN.md
+- Honest: scorecard not live · annual review not conducted · 0/75 counties · 0/200K · 0/6 5yr milestones · ~55% readiness
+- MC dashboard: `/mission-control/arkansas-strategic-plan-2035.html`
+
 ## [1.87.0] - 2026-07-09 — Build #83 Arkansas Civic Ecosystem
 
 ### One Institution. One State. One Connected Civic Network

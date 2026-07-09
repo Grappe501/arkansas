@@ -1,0 +1,518 @@
+{
+  "version": "1.0",
+  "build": 84,
+  "updated": "2026-07-09",
+  "horizon_year": 2035,
+  "title": "Master Arkansas Strategic Plan 2035 v1.0",
+  "subtitle": "The Roadmap to a Statewide Civic Education Institution",
+  "tagline": "Vision \u2022 Strategy \u2022 Execution",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/arkansas-strategic-plan-2035.html",
+  "constitution": "/docs/MASTER_ARKANSAS_STRATEGIC_PLAN_2035.md",
+  "purpose": "Long-range strategic plan for what the institution will accomplish over the next decade. Unlike the Master Build Plan (construction), this focuses on accomplishment through 2035.",
+  "governing_principle": "Strategic planning is not about predicting the future. It is about preparing the institution to serve Arkansas regardless of what the future brings. Every year: more knowledgeable, trusted, connected, resilient, useful, capable, worthy of confidence.",
+  "distinct_from_build_plan": {
+    "master_build_plan": "/BUILD_PLAN.md",
+    "build_plan_focus": "Constructing the institution (83 builds)",
+    "strategic_plan_focus": "What the institution accomplishes by 2035"
+  },
+  "strategic_vision": {
+    "title": "Strategic Vision",
+    "horizon": 2035,
+    "aspiration": "Arkansas's most trusted institution for civic understanding",
+    "topics": [
+      "Citizens United v. Federal Election Commission",
+      "Campaign finance",
+      "Constitutional government",
+      "Civic participation",
+      "Government transparency",
+      "Public policy processes"
+    ],
+    "accessible_to_every_arkansan": true
+  },
+  "strategic_mission": {
+    "title": "Strategic Mission",
+    "pillars": [
+      "Evidence",
+      "Research",
+      "Volunteer leadership",
+      "Community conversations",
+      "Constitutional literacy",
+      "Public trust"
+    ],
+    "enduring_statewide_network": true
+  },
+  "strategic_goals": {
+    "title": "Strategic Goals",
+    "goals_total": 7,
+    "goals": [
+      {
+        "goal": 1,
+        "id": "build_institution",
+        "title": "Build the Institution",
+        "description": "Complete technological, operational, and educational infrastructure",
+        "initiatives": [
+          "Mission Control",
+          "Knowledge Graph",
+          "Community Education Academy",
+          "Campaign Finance Observatory",
+          "Arkansas Civic Atlas",
+          "Volunteer systems"
+        ],
+        "status": "in_progress"
+      },
+      {
+        "goal": 2,
+        "id": "build_knowledge",
+        "title": "Build the Knowledge Base",
+        "description": "Most comprehensive Arkansas educational library on civic topics",
+        "initiatives": [
+          "Citizens United",
+          "Campaign finance",
+          "Constitutional history",
+          "Supreme Court precedent",
+          "Arkansas civic processes",
+          "Government transparency"
+        ],
+        "status": "in_progress"
+      },
+      {
+        "goal": 3,
+        "id": "build_leadership",
+        "title": "Build Leadership",
+        "description": "Leadership as the institution greatest multiplier",
+        "initiatives": [
+          "Education Leaders",
+          "City Coordinators",
+          "County Directors",
+          "Regional Mentors",
+          "Academy Fellows"
+        ],
+        "status": "planned"
+      },
+      {
+        "goal": 4,
+        "id": "build_communities",
+        "title": "Build Communities",
+        "description": "Active educational networks statewide",
+        "initiatives": [
+          "75 counties",
+          "250 cities",
+          "Neighborhoods statewide",
+          "Community conversations"
+        ],
+        "status": "planned"
+      },
+      {
+        "goal": 5,
+        "id": "build_partnerships",
+        "title": "Build Partnerships",
+        "description": "Coalition broadens statewide educational reach",
+        "initiatives": [
+          "Libraries",
+          "Colleges",
+          "Universities",
+          "Historical societies",
+          "Community organizations",
+          "Nonprofits",
+          "Civic organizations",
+          "Educational partners"
+        ],
+        "status": "planned"
+      },
+      {
+        "goal": 6,
+        "id": "build_trust",
+        "title": "Build Trust",
+        "description": "Trust remains the institution most valuable asset",
+        "initiatives": [
+          "Transparent research",
+          "Evidence verification",
+          "Editorial standards",
+          "Public accountability",
+          "Accessibility",
+          "Volunteer stewardship"
+        ],
+        "status": "specified"
+      },
+      {
+        "goal": 7,
+        "id": "build_legacy",
+        "title": "Build Legacy",
+        "description": "Institution continues serving Arkansas for generations",
+        "initiatives": [
+          "Leadership succession",
+          "Documentation",
+          "Institutional memory",
+          "Financial stewardship",
+          "Volunteer development",
+          "Technology modernization"
+        ],
+        "status": "specified"
+      }
+    ]
+  },
+  "strategic_metrics": {
+    "title": "Strategic Metrics",
+    "scorecard": [
+      {
+        "id": "SP-M01",
+        "metric": "75 County Goal",
+        "current": 0,
+        "target": 75,
+        "status": "planned"
+      },
+      {
+        "id": "SP-M02",
+        "metric": "250 City Goal",
+        "current": 0,
+        "target": 250,
+        "status": "planned"
+      },
+      {
+        "id": "SP-M03",
+        "metric": "200,000 Participant Goal",
+        "current": 0,
+        "target": 200000,
+        "status": "planned"
+      },
+      {
+        "id": "SP-M04",
+        "metric": "Academy Graduates",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "SP-M05",
+        "metric": "Education Leaders",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "SP-M06",
+        "metric": "Coalition Organizations",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "SP-M07",
+        "metric": "Research Library Growth",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "SP-M08",
+        "metric": "Educational Asset Growth",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "SP-M09",
+        "metric": "Institutional Health",
+        "current": 0,
+        "status": "planned"
+      },
+      {
+        "id": "SP-M10",
+        "metric": "Trust Score",
+        "current": 0,
+        "status": "planned"
+      }
+    ],
+    "live": false,
+    "institutional_scorecard": true,
+    "status": "planned"
+  },
+  "five_year_milestones": {
+    "title": "Five-Year Milestones",
+    "milestones": [
+      {
+        "id": "SP-5Y01",
+        "milestone": "Operational Mission Control",
+        "achieved": false,
+        "status": "partial"
+      },
+      {
+        "id": "SP-5Y02",
+        "milestone": "Comprehensive curriculum",
+        "achieved": false,
+        "status": "planned"
+      },
+      {
+        "id": "SP-5Y03",
+        "milestone": "County leadership in every region",
+        "achieved": false,
+        "status": "planned"
+      },
+      {
+        "id": "SP-5Y04",
+        "milestone": "Growing coalition",
+        "achieved": false,
+        "status": "planned"
+      },
+      {
+        "id": "SP-5Y05",
+        "milestone": "Research Institute established",
+        "achieved": false,
+        "status": "partial"
+      },
+      {
+        "id": "SP-5Y06",
+        "milestone": "Community conversations occurring statewide",
+        "achieved": false,
+        "status": "planned"
+      }
+    ],
+    "achieved_count": 0,
+    "mc_updates_annually": true,
+    "status": "specified"
+  },
+  "ten_year_milestones": {
+    "title": "Ten-Year Milestones",
+    "milestones": [
+      {
+        "id": "SP-10Y01",
+        "milestone": "Education Leaders in all counties",
+        "achieved": false,
+        "status": "planned"
+      },
+      {
+        "id": "SP-10Y02",
+        "milestone": "Leadership teams in major cities",
+        "achieved": false,
+        "status": "planned"
+      },
+      {
+        "id": "SP-10Y03",
+        "milestone": "Mature Academy",
+        "achieved": false,
+        "status": "planned"
+      },
+      {
+        "id": "SP-10Y04",
+        "milestone": "Comprehensive Research Library",
+        "achieved": false,
+        "status": "planned"
+      },
+      {
+        "id": "SP-10Y05",
+        "milestone": "Strong institutional reputation",
+        "achieved": false,
+        "status": "planned"
+      },
+      {
+        "id": "SP-10Y06",
+        "milestone": "Growing neighborhood network",
+        "achieved": false,
+        "status": "planned"
+      },
+      {
+        "id": "SP-10Y07",
+        "milestone": "Broad coalition participation",
+        "achieved": false,
+        "status": "planned"
+      }
+    ],
+    "achieved_count": 0,
+    "horizon": 2035,
+    "status": "specified"
+  },
+  "strategic_risks": {
+    "title": "Strategic Risks",
+    "risks": [
+      "Volunteer burnout",
+      "Leadership succession",
+      "Research backlog",
+      "Technology modernization",
+      "Knowledge preservation",
+      "Coalition engagement",
+      "Institutional sustainability"
+    ],
+    "mc_monitors_continually": true,
+    "early_awareness_proactive_planning": true,
+    "status": "specified"
+  },
+  "strategic_opportunities": {
+    "title": "Strategic Opportunities",
+    "opportunities": [
+      "New educational partnerships",
+      "Emerging research",
+      "Technology improvements",
+      "Community expansion",
+      "Academy innovation",
+      "Volunteer leadership growth"
+    ],
+    "mc_identifies": true,
+    "institutional_learning_never_stops": true,
+    "status": "specified"
+  },
+  "annual_strategic_review": {
+    "title": "Annual Strategic Review",
+    "review_items": [
+      "Mission alignment",
+      "Strategic goals",
+      "Progress indicators",
+      "Emerging opportunities",
+      "Institutional risks",
+      "Priority initiatives"
+    ],
+    "conducted": false,
+    "living_document": true,
+    "status": "specified"
+  },
+  "founders_commitment": {
+    "title": "Founder's Commitment",
+    "text": "Informed citizens are essential to self-government. Every strategic objective strengthens one idea: an Arkansas where more people understand how their constitutional system works, know how to evaluate evidence, engage respectfully, and feel equipped to participate thoughtfully in civic life.",
+    "informed_citizens_essential": true
+  },
+  "integration": {
+    "every_system_advances_goal": true,
+    "systems": [
+      {
+        "system": "Mission Control",
+        "route": "/mission-control/",
+        "build": 1,
+        "status": "live"
+      },
+      {
+        "system": "Research Institute (#73)",
+        "route": "/mission-control/arkansas-research-institute.html",
+        "build": 73,
+        "status": "live",
+        "goals": [
+          2,
+          6
+        ]
+      },
+      {
+        "system": "Community Education Academy (#68)",
+        "route": "/mission-control/citizen-leadership-academy.html",
+        "build": 68,
+        "status": "live",
+        "goals": [
+          1,
+          3
+        ]
+      },
+      {
+        "system": "Coalition Network (#61)",
+        "route": "/mission-control/coalition-network.html",
+        "build": 61,
+        "status": "live",
+        "goals": [
+          4,
+          5
+        ]
+      },
+      {
+        "system": "Arkansas Civic Atlas (#58)",
+        "route": "/mission-control/civic-atlas.html",
+        "build": 58,
+        "status": "live",
+        "goals": [
+          1,
+          4
+        ]
+      },
+      {
+        "system": "Relationship OS (#59)",
+        "route": "/mission-control/relationship-os.html",
+        "build": 59,
+        "status": "live",
+        "goals": [
+          3,
+          4
+        ]
+      },
+      {
+        "system": "Volunteer Network (#75)",
+        "route": "/mission-control/volunteer-funding-constitution.html",
+        "build": 75,
+        "status": "live",
+        "goals": [
+          1,
+          7
+        ]
+      },
+      {
+        "system": "Campaign Finance Observatory (#63)",
+        "route": "/mission-control/campaign-finance-observatory.html",
+        "build": 63,
+        "status": "live",
+        "goals": [
+          1,
+          2
+        ]
+      },
+      {
+        "system": "Public Trust (#82)",
+        "route": "/mission-control/public-trust-institutional-credibility.html",
+        "build": 82,
+        "status": "live",
+        "goals": [
+          6
+        ]
+      },
+      {
+        "system": "Civic Ecosystem (#83)",
+        "route": "/mission-control/arkansas-civic-ecosystem.html",
+        "build": 83,
+        "status": "live",
+        "goals": [
+          1,
+          4,
+          6
+        ]
+      }
+    ],
+    "aligns_with": [
+      "Civic Ecosystem (#83)",
+      "Legacy Roadmap (#80)",
+      "Command Strategy (#70)",
+      "BUILD_PLAN.md"
+    ]
+  },
+  "long_term_vision": "By 2035: recognized not simply for explaining a Supreme Court decision but for strengthening Arkansas civic capacity. Communities find reliable information. Education Leaders mentor generations. Libraries recommend the institution. Students learn from it. Researchers contribute. Citizens trust it. Legacy measured by civic understanding cultivated.",
+  "summary": {
+    "strategic_goals_total": 7,
+    "strategic_metrics_total": 10,
+    "five_year_milestones_achieved": 0,
+    "five_year_milestones_total": 6,
+    "ten_year_milestones_achieved": 0,
+    "ten_year_milestones_total": 7,
+    "strategic_scorecard_live": false,
+    "annual_strategic_review_conducted": false,
+    "counties_active": 0,
+    "cities_active": 0,
+    "participants_connected": 0,
+    "participants_target": 200000,
+    "education_leaders": 0,
+    "academy_graduates": 0,
+    "coalition_organizations": 0,
+    "trust_score": 0,
+    "arkansas_strategic_plan_2035_readiness_pct": 55,
+    "civic_ecosystem_readiness_pct": 54,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "Strategic scorecard not live \u2014 10 metrics not tracked in MC",
+    "Annual strategic review not conducted \u2014 living document not operational",
+    "0/75 counties active \u2014 county goal not progressing",
+    "0/250 cities active \u2014 city goal not progressing",
+    "0/200,000 participants \u2014 participant goal not progressing",
+    "0 academy graduates \u00b7 0 education leaders \u00b7 0 coalition organizations",
+    "0% trust score computed at strategic level",
+    "Five-year milestones: 0/6 achieved (2 partial in blueprint only)",
+    "Ten-year milestones: 0/7 achieved",
+    "Strategic risks monitored in spec only \u2014 no risk dashboard",
+    "Opportunity identification not automated",
+    "Build #84 vs BUILD_PLAN.md \u2014 accomplishment vs construction distinction",
+    "Milestone annual update workflow not in MC"
+  ],
+  "recommended_next_build": {
+    "number": 85,
+    "title": "Strategic Scorecard & Annual Review Components",
+    "note": "Strategic scorecard UI, milestone tracking, annual review workflow, risk/opportunity dashboard, COMP-* specs, GitHub backlog."
+  }
+}

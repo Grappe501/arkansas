@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Strategic Plan 2035 <a href="/mission-control/arkansas-strategic-plan-2035.html" class="mc-inline-link">Decade Roadmap #84 →</a></h2>
+    <p class="mc-bar-note">Build #84 — Master Arkansas Strategic Plan 2035. Accomplishment roadmap to statewide civic education institution. 7 goals, 10 metrics, 5yr/10yr milestones, annual review. 0/75 counties · 0/200K · scorecard not live. ~55% readiness.</p>
     <h2 class="mc-section-title">Civic Ecosystem <a href="/mission-control/arkansas-civic-ecosystem.html" class="mc-inline-link">Connected Network #83 →</a></h2>
     <p class="mc-bar-note">Build #83 — Master Arkansas Civic Ecosystem. One institution, one state, one connected network. 12 living systems, 4 loops, health score, executive dashboard. 0/12 instrumented · health score not live. ~54% readiness.</p>
     <h2 class="mc-section-title">Public Trust <a href="/mission-control/public-trust-institutional-credibility.html" class="mc-inline-link">Trust Architecture #82 →</a></h2>
@@ -5238,6 +5240,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initInstitutionalDigitalTwin();
   initPublicTrustInstitutionalCredibility();
   initArkansasCivicEcosystem();
+  initArkansasStrategicPlan2035();
 });
 
 async function initUxArchitecture() {
@@ -8771,6 +8774,111 @@ async function initArkansasCivicEcosystem() {
       <a href="/mission-control/civic-ecosystem.html">Civic Ecosystem (#12)</a> ·
       <a href="/mission-control/systems-integration.html">Systems Integration (#45)</a> ·
       <a href="/mission-control/public-trust-institutional-credibility.html">Public Trust (#82)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initArkansasStrategicPlan2035() {
+  const root = document.getElementById('mc-arkansas-strategic-plan-2035-root');
+  if (!root) return;
+
+  const [spRes, mcRes] = await Promise.all([
+    fetch('/data/arkansas-strategic-plan-2035.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const sp = await spRes.json();
+  const mc = await mcRes.json();
+  const s = sp.summary;
+
+  const goalCards = sp.strategic_goals.goals.map(g => `
+    <div class="mc-card"><h3>Goal ${g.goal}: ${g.title}</h3>
+      <p class="mc-bar-note">${g.description} · Status: ${g.status}</p>
+      <ul class="mc-deliverables">${g.initiatives.map(i => `<li>${i}</li>`).join('')}</ul></div>`).join('');
+
+  const metricRows = sp.strategic_metrics.scorecard.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.metric}</td>
+      <td>${typeof m.current === 'number' ? m.current.toLocaleString() : m.current}${m.target ? ` / ${m.target.toLocaleString()}` : ''}</td>
+      <td>${m.status}</td></tr>`).join('');
+
+  const fiveYearRows = sp.five_year_milestones.milestones.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.milestone}</td>
+      <td>${m.achieved ? 'Yes' : 'No'}</td><td>${m.status}</td></tr>`).join('');
+
+  const tenYearRows = sp.ten_year_milestones.milestones.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.milestone}</td>
+      <td>${m.achieved ? 'Yes' : 'No'}</td><td>${m.status}</td></tr>`).join('');
+
+  const systemRows = sp.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td>
+      <td>${sys.goals ? `Goals ${sys.goals.join(', ')}` : '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Arkansas Strategic Plan 2035</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #84 · ${sp.title}</p>
+      <h1>${sp.subtitle}</h1>
+      <p class="mc-header__question">${sp.governing_principle}</p>
+      <p class="mc-bar-note">${sp.purpose}</p>
+      <p class="mc-bar-note"><strong>Horizon:</strong> ${sp.horizon_year} · <strong>Tagline:</strong> ${sp.tagline}</p>
+      <p class="mc-bar-note"><strong>Build Plan:</strong> ${sp.distinct_from_build_plan.build_plan_focus} · <strong>This plan:</strong> ${sp.distinct_from_build_plan.strategic_plan_focus}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Strategic readiness</div><div class="mc-stat__value">${s.arkansas_strategic_plan_2035_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Strategic goals</div><div class="mc-stat__value">${s.strategic_goals_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Scorecard live</div><div class="mc-stat__value">${s.strategic_scorecard_live ? 'Yes' : 'No'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Counties</div><div class="mc-stat__value">${s.counties_active}/75</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Participants</div><div class="mc-stat__value">${s.participants_connected.toLocaleString()}/${s.participants_target.toLocaleString()}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">5yr milestones</div><div class="mc-stat__value">${s.five_year_milestones_achieved}/${s.five_year_milestones_total}</div></div>
+    </div>
+    <h2 class="mc-section-title">${sp.strategic_vision.title}</h2>
+    <p class="mc-bar-note">Horizon ${sp.strategic_vision.horizon}: ${sp.strategic_vision.aspiration}</p>
+    <ul class="mc-deliverables">${sp.strategic_vision.topics.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${sp.strategic_mission.title}</h2>
+    <ul class="mc-deliverables">${sp.strategic_mission.pillars.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${sp.strategic_goals.title}</h2>
+    <div class="mc-grid-2">${goalCards}</div>
+    <h2 class="mc-section-title">${sp.strategic_metrics.title}</h2>
+    <p class="mc-bar-note">Live: ${sp.strategic_metrics.live ? 'Yes' : 'No'} · ${sp.strategic_metrics.status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">${sp.five_year_milestones.title}</h2>
+    <p class="mc-bar-note">Achieved: ${sp.five_year_milestones.achieved_count} · MC updates annually: ${sp.five_year_milestones.mc_updates_annually ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Milestone</th><th>Achieved</th><th>Status</th></tr></thead>
+      <tbody>${fiveYearRows}</tbody></table>
+    <h2 class="mc-section-title">${sp.ten_year_milestones.title}</h2>
+    <p class="mc-bar-note">Horizon: ${sp.ten_year_milestones.horizon} · Achieved: ${sp.ten_year_milestones.achieved_count}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Milestone</th><th>Achieved</th><th>Status</th></tr></thead>
+      <tbody>${tenYearRows}</tbody></table>
+    <h2 class="mc-section-title">${sp.strategic_risks.title}</h2>
+    <p class="mc-bar-note">MC monitors continually: ${sp.strategic_risks.mc_monitors_continually ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${sp.strategic_risks.risks.map(r => `<li>${r}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${sp.strategic_opportunities.title}</h2>
+    <ul class="mc-deliverables">${sp.strategic_opportunities.opportunities.map(o => `<li>${o}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${sp.annual_strategic_review.title}</h2>
+    <p class="mc-bar-note">Conducted: ${sp.annual_strategic_review.conducted ? 'Yes' : 'No'} · Living document: ${sp.annual_strategic_review.living_document ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${sp.annual_strategic_review.review_items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${sp.founders_commitment.title}</h2>
+    <p class="mc-bar-note">${sp.founders_commitment.text}</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">Every major system advances at least one strategic goal.</p>
+    <p class="mc-bar-note"><strong>Aligns with:</strong> ${sp.integration.aligns_with.join(' · ')}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th><th>Goals</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${sp.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${sp.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${sp.recommended_next_build.number} — ${sp.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${sp.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_ARKANSAS_STRATEGIC_PLAN_2035.md">MASTER_ARKANSAS_STRATEGIC_PLAN_2035.md</a> ·
+      <a href="/data/arkansas-strategic-plan-2035.json">JSON</a> ·
+      <a href="/BUILD_PLAN.md">Master Build Plan</a> ·
+      <a href="/mission-control/arkansas-civic-ecosystem.html">Civic Ecosystem (#83)</a> ·
+      <a href="/mission-control/arkansas-civic-institution-roadmap.html">Legacy Roadmap (#80)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

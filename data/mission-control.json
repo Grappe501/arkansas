@@ -1,6 +1,6 @@
 {
-  "version": "1.87.0",
-  "build": 83,
+  "version": "1.88.0",
+  "build": 84,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,16 +9,16 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 83,
+    "overall_completion": 84,
     "current_build": {
-      "number": 83,
-      "title": "Citizens United Facts Master Arkansas Civic Ecosystem v1.0"
-    },
-    "active_phase": "Civic Ecosystem \u2192 Health Dashboard",
-    "last_completed": "Public Trust & Institutional Credibility",
-    "next_build": {
       "number": 84,
-      "title": "Ecosystem health dashboard & network effect components"
+      "title": "Citizens United Facts Master Arkansas Strategic Plan 2035 v1.0"
+    },
+    "active_phase": "Strategic Plan \u2192 Scorecard",
+    "last_completed": "Arkansas Civic Ecosystem",
+    "next_build": {
+      "number": 85,
+      "title": "Strategic scorecard & annual review components"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
@@ -63,6 +63,7 @@
     "institutional_digital_twin_readiness": 51,
     "public_trust_institutional_credibility_readiness": 50,
     "arkansas_civic_ecosystem_readiness": 54,
+    "arkansas_strategic_plan_2035_readiness": 55,
     "mc2_readiness": 42,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
@@ -103,7 +104,7 @@
     "planning_phase_complete": true,
     "planning_constitution_complete": true,
     "eighty_builds_complete": true,
-    "implementation_phase": "ecosystem_health_dashboard_next",
+    "implementation_phase": "strategic_scorecard_next",
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation",
     "public_launch_recommended": false
@@ -112,8 +113,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 83,
-      "note": "Build #83 \u2014 Arkansas Civic Ecosystem."
+      "value": 84,
+      "note": "Build #84 \u2014 Arkansas Strategic Plan 2035."
     },
     {
       "id": "constitution",
@@ -521,7 +522,7 @@
       "label": "Master Master Plan \u2605",
       "value": 56,
       "max": 100,
-      "note": "56 builds synthesized \u00b7 28% avg engines."
+      "note": "7 goals \u00b7 0/6 5yr milestones."
     },
     {
       "id": "statewide_growth",
@@ -718,6 +719,13 @@
       "value": 54,
       "max": 100,
       "note": "12 systems \u00b7 health score planned."
+    },
+    {
+      "id": "arkansas_strategic_plan_2035",
+      "label": "Strategic Plan 2035",
+      "value": 55,
+      "max": 100,
+      "note": "0/200000 counties/participants \u00b7 scorecard planned."
     }
   ],
   "public_readiness": {
@@ -1508,6 +1516,12 @@
       "id": "arkansas_civic_ecosystem",
       "label": "Civic Ecosystem",
       "href": "/mission-control/arkansas-civic-ecosystem.html",
+      "status": "complete"
+    },
+    {
+      "id": "arkansas_strategic_plan_2035",
+      "label": "Strategic Plan 2035",
+      "href": "/mission-control/arkansas-strategic-plan-2035.html",
       "status": "complete"
     }
   ],
@@ -2534,6 +2548,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 84,
+      "title": "Citizens United Facts Master Arkansas Strategic Plan 2035 v1.0",
+      "version": "1.88.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Roadmap to statewide civic education institution by 2035",
+      "summary": "7 strategic goals, 10 metrics, 5yr/10yr milestones, annual review, 55% readiness. 0/6 5yr \u00b7 scorecard not live.",
+      "files_created": [
+        "data/arkansas-strategic-plan-2035.json",
+        "docs/MASTER_ARKANSAS_STRATEGIC_PLAN_2035.md",
+        "builds/084-arkansas-strategic-plan-2035.md",
+        "mission-control/arkansas-strategic-plan-2035.html",
+        "scripts/gen-arkansas-strategic-plan-2035.py",
+        "scripts/update-mc-build84.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/arkansas-strategic-plan-2035.html"
+      ],
+      "decisions_made": [
+        "Strategic Plan distinct from Master Build Plan \u2014 accomplishment vs construction",
+        "7 strategic goals through 2035",
+        "10-metric strategic scorecard",
+        "5-year and 10-year milestones",
+        "Annual strategic review \u2014 living document",
+        "Founder's commitment \u2014 informed citizens essential",
+        "55% readiness \u2014 blueprint only"
+      ],
+      "open_questions": [
+        "Build #84 vs BUILD_PLAN.md \u2014 unify strategic and build tracking?",
+        "Milestone achievement \u2014 manual or automated from MC data?",
+        "Trust score \u2014 pull from Public Trust (#82)?",
+        "Annual review \u2014 calendar workflow in MC?"
+      ],
+      "risks": [
+        "Strategic scorecard not live \u2014 10 metrics not tracked in MC",
+        "Annual strategic review not conducted \u2014 living document not operational",
+        "0/75 counties active \u2014 county goal not progressing",
+        "0/250 cities active \u2014 city goal not progressing"
+      ],
+      "next_recommended": 85,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-strategic-plan-2035.html",
+      "review_status": "complete"
+    },
     {
       "number": 83,
       "title": "Citizens United Facts Master Arkansas Civic Ecosystem v1.0",
@@ -6930,21 +6997,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Arkansas Civic Ecosystem v1.0 \u2014 one connected civic network",
-    "building_now": "83 builds \u2014 ecosystem health dashboard next",
+    "what_built": "Arkansas Strategic Plan 2035 v1.0 \u2014 decade accomplishment roadmap",
+    "building_now": "84 builds \u2014 strategic scorecard next",
     "blocked": [
-      "Health score engine",
-      "Executive ecosystem dashboard",
-      "System instrumentation",
-      "Imbalance detection"
+      "Strategic scorecard",
+      "Annual review workflow",
+      "Milestone tracking",
+      "Risk dashboard"
     ],
     "ready_public": [
-      "12 living systems",
-      "4 ecosystem loops",
-      "Founder vision",
-      "Network effects model"
+      "7 strategic goals",
+      "10 metrics",
+      "5yr/10yr milestones",
+      "Founder's commitment"
     ],
-    "next": "Build #84 \u2014 Ecosystem health dashboard & network effect components"
+    "next": "Build #85 \u2014 Strategic scorecard & annual review components"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -7800,5 +7867,13 @@
     "living_systems": 12,
     "ecosystem_health_score_live": false,
     "one_institution_one_state": true
+  },
+  "arkansas_strategic_plan_2035": "/data/arkansas-strategic-plan-2035.json",
+  "arkansas_strategic_plan_2035_dashboard": "/mission-control/arkansas-strategic-plan-2035.html",
+  "arkansas_strategic_plan_2035_inventory": {
+    "readiness_score": 55,
+    "strategic_goals": 7,
+    "horizon_year": 2035,
+    "strategic_scorecard_live": false
   }
 }
