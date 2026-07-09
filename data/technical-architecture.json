@@ -1,0 +1,654 @@
+{
+  "version": "1.0",
+  "build": 48,
+  "updated": "2026-07-09",
+  "title": "Master Technical Architecture & Deployment Blueprint v1.0",
+  "subtitle": "Production Engineering Constitution",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/technical-architecture.html",
+  "constitution": "/docs/MASTER_TECHNICAL_ARCHITECTURE.md",
+  "purpose": "How the institution will be built \u2014 fast, secure, searchable, maintainable, scalable, transparent.",
+  "governing_principle": "Technology nearly invisible to public \u2014 engineered for permanence like the knowledge it preserves.",
+  "technical_philosophy": "Digital museum \u00b7 research library \u00b7 educational university \u00b7 archive \u00b7 civic OS \u2014 under one roof.",
+  "technical_principles": [
+    "Build for twenty years, not two",
+    "Maintainability over shortcuts",
+    "Documentation over assumptions",
+    "Transparency over cleverness",
+    "Institutional continuity over individual developers"
+  ],
+  "extends": [
+    {
+      "title": "Platform Blueprint",
+      "build": 20,
+      "route": "/data/platform-architecture.json"
+    },
+    {
+      "title": "Database Schema",
+      "build": 22,
+      "route": "/data/database-schema.json"
+    },
+    {
+      "title": "Repository Blueprint",
+      "build": 21,
+      "route": "/data/repository-blueprint.json"
+    }
+  ],
+  "technology_stack": [
+    {
+      "id": "FE",
+      "layer": "Frontend",
+      "target": "Next.js (App Router), React, TypeScript",
+      "rationale": "SSR, SEO, performance, long-term maintainability",
+      "status": "planned",
+      "current": "Static HTML/CSS/JS \u2014 81 routes, no framework",
+      "live": false
+    },
+    {
+      "id": "STYLE",
+      "layer": "Styling",
+      "target": "Tailwind CSS + component library + design tokens",
+      "rationale": "Themeable, consistent, accessible",
+      "status": "partial",
+      "current": "Build #9 design-system.json, 14 ds-* components, custom CSS",
+      "live": true,
+      "route": "/design-system/"
+    },
+    {
+      "id": "SRC",
+      "layer": "Source Control",
+      "target": "GitHub",
+      "rationale": "Version control, PRs, issues, institutional memory",
+      "status": "live",
+      "current": "https://github.com/Grappe501/arkansas \u2014 main, numbered builds",
+      "live": true
+    },
+    {
+      "id": "DEPLOY",
+      "layer": "Hosting & CI/CD",
+      "target": "GitHub \u2192 automatic deploy \u2192 Netlify",
+      "rationale": "Preview deploys, SSL, CDN, forms",
+      "status": "live",
+      "current": "https://arkansas-facts.netlify.app \u2014 static publish, preview on PR",
+      "live": true
+    },
+    {
+      "id": "DB",
+      "layer": "Database",
+      "target": "PostgreSQL (Neon)",
+      "rationale": "Scalable, branching, Git-style workflows, low maintenance",
+      "status": "planned",
+      "current": "Static JSON in /data \u2014 40+ registries, no live DB",
+      "live": false,
+      "route": "/mission-control/database.html"
+    },
+    {
+      "id": "ORM",
+      "layer": "ORM",
+      "target": "Prisma",
+      "rationale": "Contact, Coalition, MC, events, content, claims, evidence, users",
+      "status": "planned",
+      "current": "Schema blueprint only (Build #22) \u2014 not provisioned",
+      "live": false
+    },
+    {
+      "id": "AUTH",
+      "layer": "Authentication",
+      "target": "Email + Google OAuth",
+      "rationale": "Admin protected; education public",
+      "status": "planned",
+      "current": "No auth \u2014 /admin/ mission-control shell only",
+      "live": false
+    },
+    {
+      "id": "SEARCH",
+      "layer": "Search",
+      "target": "Global indexed search",
+      "rationale": "Articles, cases, timeline, sources, claims, encyclopedia, Arkansas",
+      "status": "planned",
+      "current": "No search UI or index",
+      "live": false
+    }
+  ],
+  "stack_summary": {
+    "layers_total": 8,
+    "live": 3,
+    "partial": 1,
+    "planned": 5
+  },
+  "search_architecture": {
+    "title": "Global Search",
+    "status": "planned",
+    "index_types": [
+      "Articles",
+      "Lessons",
+      "Timeline",
+      "Court cases",
+      "People",
+      "Organizations",
+      "Laws",
+      "Videos",
+      "Infographics",
+      "Sources",
+      "Claims",
+      "Encyclopedia",
+      "Arkansas pages"
+    ],
+    "index_types_total": 13
+  },
+  "cms_philosophy": {
+    "approach": "Mission Control as publishing system \u2014 not traditional CMS",
+    "article_lifecycle": [
+      "Workflow",
+      "Review",
+      "Approval",
+      "Publishing",
+      "Revision",
+      "Version history"
+    ],
+    "status": "partial",
+    "current": "JSON registries + gen scripts \u2014 no write API or approval gates"
+  },
+  "ai_layer": {
+    "title": "Grounded AI",
+    "principle": "AI never invents knowledge",
+    "sources": [
+      "Evidence Ledger",
+      "Knowledge Graph",
+      "Research Library",
+      "Claims Registry",
+      "Encyclopedia",
+      "Curriculum",
+      "Mission Control"
+    ],
+    "status": "partial",
+    "current": "Build #26 AI Knowledge Engine \u2014 architecture only, 14% readiness",
+    "route": "/mission-control/ai-knowledge.html"
+  },
+  "apis": [
+    {
+      "id": "API-01",
+      "name": "Content",
+      "status": "planned",
+      "current": "Static JSON files"
+    },
+    {
+      "id": "API-02",
+      "name": "Research",
+      "status": "planned",
+      "current": "evidence-registry.json"
+    },
+    {
+      "id": "API-03",
+      "name": "Mission Control",
+      "status": "partial",
+      "current": "mission-control.json \u2014 read-only static"
+    },
+    {
+      "id": "API-04",
+      "name": "Contact Network",
+      "status": "planned",
+      "current": "Forms not integrated"
+    },
+    {
+      "id": "API-05",
+      "name": "Coalition",
+      "status": "planned",
+      "current": "civic-ecosystem.json"
+    },
+    {
+      "id": "API-06",
+      "name": "Academy",
+      "status": "planned",
+      "current": "education-academy.json"
+    },
+    {
+      "id": "API-07",
+      "name": "Events",
+      "status": "planned",
+      "current": "No event calendar"
+    },
+    {
+      "id": "API-08",
+      "name": "Media",
+      "status": "planned",
+      "current": "media-studio.json"
+    },
+    {
+      "id": "API-09",
+      "name": "Knowledge Graph",
+      "status": "partial",
+      "current": "civic-intelligence.json \u2014 38 nodes"
+    },
+    {
+      "id": "API-10",
+      "name": "Claims Registry",
+      "status": "partial",
+      "current": "evidence-ledger.json \u2014 3 claims"
+    },
+    {
+      "id": "API-11",
+      "name": "Evidence",
+      "status": "partial",
+      "current": "14 EV-* items"
+    }
+  ],
+  "file_architecture": {
+    "title": "Target Repository Structure",
+    "status": "planned",
+    "directories": [
+      "/app",
+      "/components",
+      "/content",
+      "/research",
+      "/encyclopedia",
+      "/timeline",
+      "/curriculum",
+      "/academy",
+      "/coalition",
+      "/mission-control",
+      "/laboratory",
+      "/solutions",
+      "/media",
+      "/sources",
+      "/api",
+      "/admin",
+      "/lib",
+      "/prisma",
+      "/public",
+      "/docs"
+    ],
+    "current": "Flat static site \u2014 repository blueprint defines migration path",
+    "route": "/mission-control/repository.html"
+  },
+  "performance_standards": [
+    {
+      "id": "PERF-01",
+      "standard": "Homepage < 2 seconds",
+      "status": "partial",
+      "note": "Static \u2014 not measured"
+    },
+    {
+      "id": "PERF-02",
+      "standard": "Educational pages < 2 seconds",
+      "status": "partial",
+      "note": "Static \u2014 not measured"
+    },
+    {
+      "id": "PERF-03",
+      "standard": "Search instant",
+      "status": "planned",
+      "note": "No search"
+    },
+    {
+      "id": "PERF-04",
+      "standard": "Images optimized",
+      "status": "partial",
+      "note": "Minimal imagery"
+    },
+    {
+      "id": "PERF-05",
+      "standard": "Video lazy loaded",
+      "status": "planned",
+      "note": "0 videos"
+    },
+    {
+      "id": "PERF-06",
+      "standard": "Charts deferred",
+      "status": "planned",
+      "note": "No interactive charts live"
+    }
+  ],
+  "accessibility_standards": [
+    {
+      "id": "A11Y-01",
+      "standard": "WCAG AA minimum",
+      "status": "partial"
+    },
+    {
+      "id": "A11Y-02",
+      "standard": "Keyboard navigation",
+      "status": "partial"
+    },
+    {
+      "id": "A11Y-03",
+      "standard": "Screen reader support",
+      "status": "partial"
+    },
+    {
+      "id": "A11Y-04",
+      "standard": "Reduced motion",
+      "status": "partial"
+    },
+    {
+      "id": "A11Y-05",
+      "standard": "High contrast",
+      "status": "partial"
+    },
+    {
+      "id": "A11Y-06",
+      "standard": "Accessible forms",
+      "status": "partial",
+      "note": "Netlify Forms on educate/"
+    },
+    {
+      "id": "A11Y-07",
+      "standard": "Transcript support",
+      "status": "planned",
+      "note": "0 videos"
+    }
+  ],
+  "security": [
+    {
+      "id": "SEC-01",
+      "area": "Contact information",
+      "status": "planned",
+      "note": "No DB \u2014 forms not wired"
+    },
+    {
+      "id": "SEC-02",
+      "area": "Administrative tools",
+      "status": "planned",
+      "note": "No auth gate"
+    },
+    {
+      "id": "SEC-03",
+      "area": "Draft content",
+      "status": "partial",
+      "note": "JSON in repo \u2014 no draft isolation"
+    },
+    {
+      "id": "SEC-04",
+      "area": "Review workflows",
+      "status": "partial",
+      "note": "MC workflow documented"
+    },
+    {
+      "id": "SEC-05",
+      "area": "Authentication",
+      "status": "planned"
+    },
+    {
+      "id": "SEC-06",
+      "area": "API endpoints",
+      "status": "planned",
+      "note": "No APIs yet"
+    }
+  ],
+  "analytics_philosophy": {
+    "measure": [
+      "Learning",
+      "Understanding",
+      "Participation"
+    ],
+    "avoid": [
+      "Clicks",
+      "Advertising",
+      "Engagement hacks"
+    ],
+    "host": "/mission-control/visitor-journey.html"
+  },
+  "deployment_workflow": [
+    "Developer",
+    "GitHub",
+    "Pull Request",
+    "Preview Deploy",
+    "Testing",
+    "Approval",
+    "Production",
+    "Mission Control updated"
+  ],
+  "environments": [
+    {
+      "id": "dev",
+      "title": "Development",
+      "status": "partial",
+      "current": "Local static + JSON"
+    },
+    {
+      "id": "test",
+      "title": "Testing",
+      "status": "planned",
+      "current": "No automated test env"
+    },
+    {
+      "id": "preview",
+      "title": "Preview",
+      "status": "live",
+      "current": "Netlify deploy previews on PR"
+    },
+    {
+      "id": "prod",
+      "title": "Production",
+      "status": "live",
+      "current": "arkansas-facts.netlify.app"
+    }
+  ],
+  "backup_strategy": [
+    {
+      "item": "Automatic database backups",
+      "status": "planned"
+    },
+    {
+      "item": "Repository backups",
+      "status": "live",
+      "note": "GitHub"
+    },
+    {
+      "item": "Media backups",
+      "status": "planned",
+      "note": "No media pipeline"
+    },
+    {
+      "item": "Research archive backups",
+      "status": "partial",
+      "note": "JSON in repo"
+    },
+    {
+      "item": "Version history",
+      "status": "live",
+      "note": "Git + numbered builds"
+    }
+  ],
+  "monitoring": [
+    {
+      "id": "MON-01",
+      "area": "Deployment",
+      "status": "partial",
+      "current": "Netlify deploy status in MC"
+    },
+    {
+      "id": "MON-02",
+      "area": "Performance",
+      "status": "planned"
+    },
+    {
+      "id": "MON-03",
+      "area": "Errors",
+      "status": "planned"
+    },
+    {
+      "id": "MON-04",
+      "area": "Broken links",
+      "status": "planned"
+    },
+    {
+      "id": "MON-05",
+      "area": "Accessibility",
+      "status": "planned"
+    },
+    {
+      "id": "MON-06",
+      "area": "Search",
+      "status": "planned"
+    },
+    {
+      "id": "MON-07",
+      "area": "Database health",
+      "status": "planned",
+      "note": "No DB"
+    },
+    {
+      "id": "MON-08",
+      "area": "API health",
+      "status": "planned"
+    },
+    {
+      "id": "MON-09",
+      "area": "Content freshness",
+      "status": "partial",
+      "current": "MC registries manual"
+    }
+  ],
+  "scalability": {
+    "targets": [
+      "Hundreds of thousands of pages",
+      "Millions of relationships",
+      "Thousands of educational assets",
+      "Large research libraries",
+      "Interactive laboratories",
+      "Future civic education topics"
+    ],
+    "status": "planned",
+    "note": "Architecture designed \u2014 static v1 not yet at scale"
+  },
+  "technical_documentation": {
+    "required_per_subsystem": [
+      "Architecture",
+      "Dependencies",
+      "Data model",
+      "Workflow",
+      "API documentation",
+      "Deployment",
+      "Recovery",
+      "Maintenance schedule"
+    ],
+    "status": "partial",
+    "current": "63 MC dashboards + docs/ constitutions"
+  },
+  "mc_integration": {
+    "title": "Mission Control Technical Architecture Metrics",
+    "status": "partial",
+    "metrics": [
+      {
+        "id": "TA-01",
+        "title": "Stack layers defined",
+        "status": "live",
+        "current": "8 layers"
+      },
+      {
+        "id": "TA-02",
+        "title": "Stack components live",
+        "status": "partial",
+        "current": "3/8"
+      },
+      {
+        "id": "TA-03",
+        "title": "Target Next.js migration",
+        "status": "planned",
+        "current": "Static v1 \u2014 repository blueprint defines src/ target"
+      },
+      {
+        "id": "TA-04",
+        "title": "Neon PostgreSQL provisioned",
+        "status": "planned",
+        "current": "Not provisioned"
+      },
+      {
+        "id": "TA-05",
+        "title": "Prisma ORM",
+        "status": "planned",
+        "current": "Schema blueprint only"
+      },
+      {
+        "id": "TA-06",
+        "title": "Global search",
+        "status": "planned",
+        "current": "0/13 index types"
+      },
+      {
+        "id": "TA-07",
+        "title": "Documented APIs",
+        "status": "partial",
+        "current": "4/11 partial static"
+      },
+      {
+        "id": "TA-08",
+        "title": "Deployment pipeline",
+        "status": "live",
+        "current": "GitHub \u2192 Netlify"
+      },
+      {
+        "id": "TA-09",
+        "title": "Preview environments",
+        "status": "live",
+        "current": "Netlify PR previews"
+      },
+      {
+        "id": "TA-10",
+        "title": "Production monitoring",
+        "status": "planned",
+        "current": "1/9 monitors partial"
+      }
+    ]
+  },
+  "related_blueprints": [
+    {
+      "title": "Platform Architecture",
+      "route": "/data/platform-architecture.json",
+      "build": 20
+    },
+    {
+      "title": "Systems Integration",
+      "route": "/data/systems-integration.json",
+      "build": 45
+    },
+    {
+      "title": "Content Production Matrix",
+      "route": "/data/content-production-matrix.json",
+      "build": 46
+    },
+    {
+      "title": "AI Knowledge Engine",
+      "route": "/data/ai-knowledge-engine.json",
+      "build": 26
+    }
+  ],
+  "summary": {
+    "stack_layers_total": 8,
+    "stack_live": 3,
+    "stack_partial": 1,
+    "stack_planned": 5,
+    "apis_total": 11,
+    "apis_partial_or_live": 4,
+    "search_index_types": 13,
+    "search_live": false,
+    "nextjs_migration": false,
+    "neon_postgres_live": false,
+    "prisma_live": false,
+    "auth_live": false,
+    "preview_deploys_live": true,
+    "production_deploy_live": true,
+    "github_connected": true,
+    "monitoring_partial": 2,
+    "technical_architecture_readiness_pct": 38
+  },
+  "catalog_gaps": [
+    "Static HTML v1 \u2014 Next.js/React/TypeScript target not started",
+    "No Neon PostgreSQL \u2014 all data in JSON files",
+    "No Prisma ORM \u2014 schema blueprint only",
+    "No authentication \u2014 admin routes unprotected",
+    "No global search \u2014 13 index types planned, 0 live",
+    "No REST/GraphQL APIs \u2014 static JSON read by fetch()",
+    "Mission Control publishing partial \u2014 no write workflow or approval gates",
+    "Performance standards not measured \u2014 no Lighthouse CI",
+    "Monitoring 1/9 partial \u2014 no error tracking, link checker, or DB health",
+    "Component specifications still deferred \u2014 stack migration UI unmapped"
+  ],
+  "recommended_next_build": {
+    "number": 49,
+    "title": "Component Specifications with Props/States",
+    "note": "Map stack status panels, deployment pipeline viz, environment badges, and monitoring widgets to COMP-* from Build #17."
+  }
+}

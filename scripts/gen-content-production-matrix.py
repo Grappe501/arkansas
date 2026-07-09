@@ -437,9 +437,9 @@ out = {
         'Component specifications still deferred — production UI widgets unmapped',
     ],
     'recommended_next_build': {
-        'number': 48,
+        'number': 49,
         'title': 'Component Specifications with Props/States',
-        'note': 'Map stage progress bars, milestone badges, decision-point CTAs, and journey funnel viz to COMP-* from Build #17.',
+        'note': 'Map stack status panels, deployment pipeline viz, environment badges, and monitoring widgets to COMP-* from Build #17.',
     },
 }
 

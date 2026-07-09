@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.51.0 · **Visitor Journey:** [/mission-control/visitor-journey.html](/mission-control/visitor-journey.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #47:** ✅ Visitor Journey · **Build #46:** ✅ Content Production Matrix · **Build #45:** ✅ Systems Integration  
+**Current version:** 1.52.0 · **Technical Architecture:** [/mission-control/technical-architecture.html](/mission-control/technical-architecture.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #48:** ✅ Technical Architecture · **Build #47:** ✅ Visitor Journey · **Build #46:** ✅ Content Production Matrix  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **48** | **Master Technical Architecture & Deployment Blueprint** | **✅ v1.52.0** |
 | **47** | **Master Visitor Journey & Behavioral Architecture** | **✅ v1.51.0** |
 | **46** | **Master Content Production Matrix** | **✅ v1.50.0** |
 | **45** | **Master Systems Integration Blueprint** | **✅ v1.49.0** |
@@ -287,7 +288,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **37** | **Master Research Library** | **✅ v1.41.0** |
 | **36** | **Trust Framework** | **✅ v1.40.0** |
 
-**Next:** Build #48 — Component specifications with props/states.
+**Next:** Build #49 — Component specifications with props/states.
 
 ---
 

@@ -430,10 +430,10 @@
         "id": "SH-10",
         "title": "Technical Health",
         "status": "partial",
-        "score": 20
+        "score": 24
       }
     ],
-    "avg_health_score": 23
+    "avg_health_score": 24
   },
   "mc_integration": {
     "title": "Mission Control Systems Integration Metrics",
@@ -485,7 +485,7 @@
         "id": "SI-M08",
         "title": "Institutional memory archives",
         "status": "partial",
-        "current": 47
+        "current": 48
       }
     ],
     "conductor_role": "Mission Control orchestrates all twelve systems"
@@ -519,7 +519,7 @@
     "avg_system_integration_pct": 25,
     "information_flow_stages": 10,
     "systems_health_indicators": 10,
-    "avg_systems_health_score": 23,
+    "avg_systems_health_score": 24,
     "executive_synthesis_live": false,
     "cross_system_event_bus": false,
     "systems_integration_readiness_pct": 28
@@ -537,8 +537,8 @@
     "Component specifications still deferred \u2014 UI integration unmapped"
   ],
   "recommended_next_build": {
-    "number": 48,
+    "number": 49,
     "title": "Component Specifications with Props/States",
-    "note": "Map stage progress bars, milestone badges, decision-point CTAs, and journey funnel viz to COMP-* from Build #17."
+    "note": "Map stack status panels, deployment pipeline viz, environment badges, and monitoring widgets to COMP-* from Build #17."
   }
 }

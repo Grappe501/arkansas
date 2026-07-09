@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.52.0] - 2026-07-09 — Build #48 Master Technical Architecture & Deployment Blueprint
+
+### Production Engineering Constitution
+- **Master Technical Architecture & Deployment Blueprint v1.0** — target stack, deployment, APIs, monitoring
+- Target: Next.js, Tailwind, Neon PostgreSQL, Prisma — current: static HTML on Netlify
+- GitHub → Netlify pipeline live with PR previews; Mission Control as CMS philosophy
+- 3/8 stack layers live, 0 global search, no auth, no Neon
+- MC dashboard: `/mission-control/technical-architecture.html`
+
 ## [1.51.0] - 2026-07-09 — Build #47 Master Visitor Journey & Behavioral Architecture
 
 ### From Curious Visitor to Community Educator

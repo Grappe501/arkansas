@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Technical Architecture <a href="/mission-control/technical-architecture.html" class="mc-inline-link">Production Engineering →</a></h2>
+    <p class="mc-bar-note">Build #48 — Master technical architecture & deployment blueprint. Next.js/Neon target. GitHub→Netlify live. 3/8 stack layers. 38% readiness.</p>
     <h2 class="mc-section-title">Visitor Journey <a href="/mission-control/visitor-journey.html" class="mc-inline-link">8 Stages →</a></h2>
     <p class="mc-bar-note">Build #47 — Master visitor journey & behavioral architecture, curiosity to legacy. 1/8 stages tracked. 0 Education Leaders. 40% journey readiness.</p>
     <h2 class="mc-section-title">Content Production Matrix <a href="/mission-control/content-production-matrix.html" class="mc-inline-link">14 Domains →</a></h2>
@@ -4618,6 +4620,119 @@ async function initVisitorJourney() {
   initDevConsole(mc);
 }
 
+async function initTechnicalArchitecture() {
+  const root = document.getElementById('mc-technical-architecture-root');
+  if (!root) return;
+
+  const [taRes, mcRes] = await Promise.all([
+    fetch('/data/technical-architecture.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ta = await taRes.json();
+  const mc = await mcRes.json();
+  const s = ta.summary;
+
+  const stackRows = ta.technology_stack.map(l => `
+    <tr><td>${l.layer}</td><td>${l.target}</td><td>${l.status}</td>
+      <td>${l.current}</td></tr>`).join('');
+
+  const apiRows = ta.apis.map(a => `
+    <tr><td><code>${a.id}</code></td><td>${a.name}</td><td>${a.status}</td><td>${a.current}</td></tr>`).join('');
+
+  const envRows = ta.environments.map(e => `
+    <tr><td>${e.title}</td><td>${e.status}</td><td>${e.current}</td></tr>`).join('');
+
+  const monRows = ta.monitoring.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.area}</td><td>${m.status}</td><td>${m.current || m.note || ''}</td></tr>`).join('');
+
+  const perfRows = ta.performance_standards.map(p => `
+    <tr><td>${p.standard}</td><td>${p.status}</td><td>${p.note || ''}</td></tr>`).join('');
+
+  const metricRows = ta.mc_integration.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('');
+
+  const deployFlow = ta.deployment_workflow.map((d, i) =>
+    `${d}${i < ta.deployment_workflow.length - 1 ? ' →' : ''}`).join(' ');
+
+  const aiFlow = ta.ai_layer.sources.map((src, i) =>
+    `${src}${i < ta.ai_layer.sources.length - 1 ? ' →' : ''}`).join(' ');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Technical Architecture</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #48 · ${ta.title}</p>
+      <h1>Master Technical Architecture & Deployment Blueprint</h1>
+      <p class="mc-header__question">${ta.governing_principle}</p>
+      <p class="mc-bar-note">${ta.purpose}</p>
+      <p class="mc-bar-note">Extends <a href="/mission-control/platform.html">Build #20 Platform Blueprint</a> · <a href="/mission-control/repository.html">Repository</a> · <a href="/mission-control/database.html">Database Schema</a></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Architecture readiness</div><div class="mc-stat__value">${s.technical_architecture_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Stack live</div><div class="mc-stat__value">${s.stack_live}/${s.stack_layers_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">APIs partial</div><div class="mc-stat__value">${s.apis_partial_or_live}/${s.apis_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Preview deploys</div><div class="mc-stat__value">${s.preview_deploys_live ? 'Yes' : 'No'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Next.js</div><div class="mc-stat__value">${s.nextjs_migration ? 'Yes' : 'Planned'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Neon DB</div><div class="mc-stat__value">${s.neon_postgres_live ? 'Yes' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Technology Stack</h2>
+    <table class="mc-table"><thead><tr><th>Layer</th><th>Target</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${stackRows}</tbody></table>
+    <h2 class="mc-section-title">Deployment Workflow</h2>
+    <p class="mc-bar-note">${deployFlow}</p>
+    <h2 class="mc-section-title">Environments</h2>
+    <table class="mc-table"><thead><tr><th>Environment</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${envRows}</tbody></table>
+    <h2 class="mc-section-title">CMS Philosophy</h2>
+    <p class="mc-bar-note">${ta.cms_philosophy.approach}</p>
+    <p class="mc-bar-note">${ta.cms_philosophy.article_lifecycle.join(' → ')}</p>
+    <p class="mc-bar-note">${ta.cms_philosophy.current}</p>
+    <h2 class="mc-section-title">Search Architecture</h2>
+    <p class="mc-bar-note">${ta.search_architecture.index_types.join(' · ')}</p>
+    <h2 class="mc-section-title">AI Layer (Grounded)</h2>
+    <p class="mc-bar-note">${ta.ai_layer.principle}</p>
+    <p class="mc-bar-note">${aiFlow}</p>
+    <p class="mc-bar-note">${ta.ai_layer.current}</p>
+    <h2 class="mc-section-title">Internal APIs</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>API</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${apiRows}</tbody></table>
+    <h2 class="mc-section-title">Target File Structure</h2>
+    <p class="mc-bar-note"><code>${ta.file_architecture.directories.join(' · ')}</code></p>
+    <p class="mc-bar-note">${ta.file_architecture.current}</p>
+    <h2 class="mc-section-title">Performance Standards</h2>
+    <table class="mc-table"><thead><tr><th>Standard</th><th>Status</th><th>Note</th></tr></thead>
+      <tbody>${perfRows}</tbody></table>
+    <h2 class="mc-section-title">Accessibility Standards</h2>
+    <ul class="mc-deliverables">${ta.accessibility_standards.map(a => `<li>${a.standard} — ${a.status}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Security</h2>
+    <ul class="mc-deliverables">${ta.security.map(sec => `<li>${sec.area} — ${sec.status}${sec.note ? ' (' + sec.note + ')' : ''}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Analytics Philosophy</h2>
+    <p class="mc-bar-note"><strong>Measure:</strong> ${ta.analytics_philosophy.measure.join(' → ')}</p>
+    <p class="mc-bar-note"><strong>Avoid:</strong> ${ta.analytics_philosophy.avoid.join(', ')}</p>
+    <h2 class="mc-section-title">Monitoring</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Area</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${monRows}</tbody></table>
+    <h2 class="mc-section-title">Backup Strategy</h2>
+    <ul class="mc-deliverables">${ta.backup_strategy.map(b => `<li>${b.item} — ${b.status}${b.note ? ' (' + b.note + ')' : ''}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Technical Principles</h2>
+    <ul class="mc-deliverables">${ta.technical_principles.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Architecture Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ta.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ta.recommended_next_build.number} — ${ta.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ta.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_TECHNICAL_ARCHITECTURE.md">MASTER_TECHNICAL_ARCHITECTURE.md</a> ·
+      <a href="/data/technical-architecture.json">JSON</a> ·
+      <a href="/mission-control/platform.html">Platform Blueprint</a> ·
+      <a href="/mission-control/visitor-journey.html">Visitor Journey</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -4664,4 +4779,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initSystemsIntegration();
   initContentProductionMatrix();
   initVisitorJourney();
+  initTechnicalArchitecture();
 });

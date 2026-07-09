@@ -1,6 +1,6 @@
 {
-  "version": "1.51.0",
-  "build": 47,
+  "version": "1.52.0",
+  "build": 48,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 47,
+    "overall_completion": 48,
     "current_build": {
-      "number": 47,
-      "title": "Citizens United Facts Master Visitor Journey & Behavioral Architecture"
-    },
-    "active_phase": "Behavioral Architecture \u2014 Visitor Transformation Model",
-    "last_completed": "Master Content Production Matrix",
-    "next_build": {
       "number": 48,
+      "title": "Citizens United Facts Master Technical Architecture & Deployment Blueprint"
+    },
+    "active_phase": "Production Engineering \u2014 Technical Architecture & Deployment",
+    "last_completed": "Master Visitor Journey & Behavioral Architecture",
+    "next_build": {
+      "number": 49,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
@@ -33,7 +33,7 @@
     "component_registry_readiness": 22,
     "facts_framework_readiness": 14,
     "knowledge_atlas_readiness": 20,
-    "platform_architecture_readiness": 20,
+    "platform_architecture_readiness": 24,
     "repository_structure_readiness": 28,
     "database_schema_readiness": 36,
     "wireframe_readiness": 38,
@@ -62,6 +62,7 @@
     "systems_integration_readiness": 28,
     "production_matrix_readiness": 39,
     "visitor_journey_readiness": 40,
+    "technical_architecture_readiness": 38,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -69,8 +70,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 47,
-      "note": "Visitor Journey live \u2014 8 stages, 1 tracked, 0 leaders."
+      "value": 48,
+      "note": "Technical Architecture live \u2014 3/8 stack layers, GitHub\u2192Netlify."
     },
     {
       "id": "constitution",
@@ -423,6 +424,13 @@
       "value": 40,
       "max": 100,
       "note": "1/8 stages tracked \u2014 localStorage only."
+    },
+    {
+      "id": "technical_architecture",
+      "label": "Technical Architecture & Deployment",
+      "value": 38,
+      "max": 100,
+      "note": "3/8 live \u2014 static v1, Next.js/Neon planned."
     }
   ],
   "public_readiness": {
@@ -997,6 +1005,12 @@
       "id": "visitor_journey",
       "label": "Visitor Journey & Behavioral Architecture",
       "href": "/mission-control/visitor-journey.html",
+      "status": "complete"
+    },
+    {
+      "id": "technical_architecture",
+      "label": "Technical Architecture & Deployment",
+      "href": "/mission-control/technical-architecture.html",
       "status": "complete"
     }
   ],
@@ -2023,6 +2037,56 @@
     }
   ],
   "builds": [
+    {
+      "number": 48,
+      "title": "Citizens United Facts Master Technical Architecture & Deployment Blueprint",
+      "version": "1.52.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Production engineering constitution \u2014 how the institution will be built",
+      "summary": "3/8 stack live, 4/11 APIs partial; 38% readiness.",
+      "files_created": [
+        "data/technical-architecture.json",
+        "docs/MASTER_TECHNICAL_ARCHITECTURE.md",
+        "builds/048-master-technical-architecture-deployment-blueprint.md",
+        "mission-control/technical-architecture.html",
+        "scripts/gen-technical-architecture.py",
+        "scripts/update-mc-build48.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/technical-architecture.html"
+      ],
+      "decisions_made": [
+        "Target stack: Next.js, Tailwind, Neon PostgreSQL, Prisma",
+        "GitHub \u2192 Netlify deployment pipeline \u2014 live with PR previews",
+        "Mission Control as CMS \u2014 not traditional CMS",
+        "11 internal APIs documented \u2014 static JSON v1",
+        "AI layer grounded in institutional registries",
+        "38% honest readiness \u2014 static v1, migration planned"
+      ],
+      "open_questions": [
+        "Neon provisioning timing?",
+        "Next.js migration vs incremental?",
+        "Auth provider choice?"
+      ],
+      "risks": [
+        "Two architecture docs (Build #20 + #48)",
+        "Static v1 diverges from target stack",
+        "No monitoring"
+      ],
+      "next_recommended": 49,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/technical-architecture.html",
+      "review_status": "complete"
+    },
     {
       "number": 47,
       "title": "Citizens United Facts Master Visitor Journey & Behavioral Architecture",
@@ -4305,19 +4369,20 @@
     }
   ],
   "briefing": {
-    "what_built": "Visitor Journey v1.0 \u2014 8 stages, journey map, decision points, motivation milestones",
-    "building_now": "Build #8 mapping \u2014 localStorage tracking on curiosity stage only",
+    "what_built": "Technical Architecture v1.0 \u2014 stack, deployment, APIs, monitoring, scalability",
+    "building_now": "Static v1 on Netlify \u2014 target Next.js/Neon documented",
     "blocked": [
-      "Journey analytics",
-      "Milestone tracking",
-      "Education Leader signups"
+      "Neon provisioning",
+      "Next.js migration",
+      "Global search",
+      "Auth"
     ],
     "ready_public": [
-      "Visitor Journey MC dashboard",
-      "8-stage transformation model",
-      "Behavioral principles"
+      "Technical Architecture MC dashboard",
+      "Deployment workflow",
+      "Stack constitution"
     ],
-    "next": "Build #48 \u2014 Component specifications with props/states"
+    "next": "Build #49 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -4840,5 +4905,15 @@
     "education_leader_signups": 0,
     "milestones_defined": 7,
     "journey_analytics_live": false
+  },
+  "technical_architecture": "/data/technical-architecture.json",
+  "technical_architecture_dashboard": "/mission-control/technical-architecture.html",
+  "technical_architecture_inventory": {
+    "readiness_score": 38,
+    "stack_live": 3,
+    "stack_layers_total": 8,
+    "preview_deploys_live": true,
+    "nextjs_migration": false,
+    "neon_postgres_live": false
   }
 }
