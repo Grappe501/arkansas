@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Educational Campaign OS <a href="/mission-control/campaign-os.html" class="mc-inline-link">4 Horizons →</a></h2>
+    <p class="mc-bar-note">Build #32 — Multi-year strategic growth blueprint, annual cycle, quarterly reviews, innovation pipeline. Horizon One active.</p>
     <h2 class="mc-section-title">County Operating System <a href="/mission-control/county-os.html" class="mc-inline-link">75 Counties →</a></h2>
     <p class="mc-bar-note">Build #31 — County profiles, education score, leadership roles, regional groupings. 28% county OS readiness.</p>
     <h2 class="mc-section-title">Outreach Engine <a href="/mission-control/outreach.html" class="mc-inline-link">Arkansas Campaigns →</a></h2>
@@ -3097,6 +3099,116 @@ async function initCountyOperatingSystem() {
   initDevConsole(mc);
 }
 
+async function initEducationalCampaignOperatingSystem() {
+  const root = document.getElementById('mc-campaign-os-root');
+  if (!root) return;
+
+  const [ecosRes, mcRes] = await Promise.all([
+    fetch('/data/educational-campaign-operating-system.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ecos = await ecosRes.json();
+  const mc = await mcRes.json();
+  const s = ecos.summary;
+  const ch = ecos.current_horizon;
+  const snap = ecos.platform_snapshot;
+
+  const horizonCards = ecos.horizons.map(h => {
+    const objRows = (h.objectives || []).map(o =>
+      `<li>${o.title} <em>(${o.status}, ${o.pct}%)</em></li>`
+    ).join('');
+    const indRows = (h.success_indicators || []).map(i =>
+      `<li>${i.met ? '✓' : '○'} ${i.title}</li>`
+    ).join('');
+    const mcInd = (h.mc_indicators || []).length
+      ? `<p class="mc-bar-note">MC indicators: ${h.mc_indicators.join(' · ')}</p>` : '';
+    return `<div class="mc-card">
+      <h3>Horizon ${h.number}: ${h.title}</h3>
+      <p class="mc-bar-note">${h.mission}</p>
+      <p class="mc-bar-note">Status: <strong>${h.status}</strong></p>
+      ${objRows ? `<ul class="mc-deliverables">${objRows}</ul>` : ''}
+      ${indRows ? `<p class="mc-bar-note">Success indicators:</p><ul class="mc-deliverables">${indRows}</ul>` : ''}
+      ${mcInd}
+    </div>`;
+  }).join('');
+
+  const seasonRows = ecos.annual_operating_cycle.map(season => `
+    <div class="mc-card"><h3>${season.season}</h3>
+      <p class="mc-bar-note">Focus: ${season.focus}</p>
+      <ul class="mc-deliverables">${season.activities.map(a => `<li>${a}</li>`).join('')}</ul>
+    </div>`).join('');
+
+  const riskRows = ecos.risk_management.risks.map(r => `
+    <tr><td><code>${r.id}</code></td><td>${r.title}</td><td>${r.status}</td><td>${r.severity}</td></tr>`).join('');
+
+  const measureRows = ecos.success_measurements.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('');
+
+  const memoryRows = ecos.institutional_memory.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td>
+      <td>${m.route ? `<a href="${m.route}">${m.route}</a>` : '—'}</td></tr>`).join('');
+
+  const innovationRows = ecos.innovation_pipeline.categories.map(c => `
+    <tr><td><code>${c.id}</code></td><td>${c.title}</td><td>${c.status}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Educational Campaign OS</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #32 · ${ecos.title}</p>
+      <h1>Multi-Year Strategic Growth Blueprint</h1>
+      <p class="mc-header__question">${ecos.governing_principle}</p>
+      <p class="mc-bar-note">${ecos.subtitle} — master roadmap for long-term planning.</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Campaign OS readiness</div><div class="mc-stat__value">${s.campaign_os_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Current horizon</div><div class="mc-stat__value">H${ch.number}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">H1 objectives</div><div class="mc-stat__value">${ch.objectives_complete_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Indicators met</div><div class="mc-stat__value">${ch.success_indicators_met}/${ch.success_indicators_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Builds complete</div><div class="mc-stat__value">${snap.builds_complete}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Education leaders</div><div class="mc-stat__value">${snap.education_leader_signups}</div></div>
+    </div>
+    <h2 class="mc-section-title">Four Strategic Horizons</h2>
+    <div class="mc-grid-2">${horizonCards}</div>
+    <h2 class="mc-section-title">Annual Operating Cycle (${s.annual_seasons} seasons)</h2>
+    <div class="mc-grid-2">${seasonRows}</div>
+    <h2 class="mc-section-title">Quarterly Review Topics (${s.quarterly_topics})</h2>
+    <ul class="mc-deliverables">${ecos.quarterly_review_topics.map(t => `<li>${t}</li>`).join('')}</ul>
+    <p class="mc-bar-note">Quarterly reports: ${s.quarterly_reports_live ? 'live' : 'planned — not automated yet'}</p>
+    <h2 class="mc-section-title">Annual Educational Summit</h2>
+    <p class="mc-bar-note">Status: ${ecos.annual_summit.status}</p>
+    <ul class="mc-deliverables">${ecos.annual_summit.agenda.map(a => `<li>${a}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Innovation Pipeline (${s.innovation_categories} categories)</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Category</th><th>Status</th></tr></thead>
+      <tbody>${innovationRows}</tbody></table>
+    <p class="mc-bar-note">Queue live: ${ecos.innovation_pipeline.queue_live ? 'yes' : 'no — categories defined only'}</p>
+    <h2 class="mc-section-title">Strategic Risk Management (${ecos.risk_management.active_risks} active)</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Risk</th><th>Status</th><th>Severity</th></tr></thead>
+      <tbody>${riskRows}</tbody></table>
+    <h2 class="mc-section-title">Success Measurements</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Measure</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${measureRows}</tbody></table>
+    <p class="mc-bar-note">Educational outcomes over website traffic.</p>
+    <h2 class="mc-section-title">Institutional Memory</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Item</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${memoryRows}</tbody></table>
+    <h2 class="mc-section-title">Future Readiness</h2>
+    <p class="mc-bar-note">${ecos.future_readiness.note}</p>
+    <p class="mc-bar-note">Current focus: ${ecos.future_readiness.current_focus}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ecos.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ecos.recommended_next_build.number} — ${ecos.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ecos.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/EDUCATIONAL_CAMPAIGN_OPERATING_SYSTEM.md">EDUCATIONAL_CAMPAIGN_OPERATING_SYSTEM.md</a> ·
+      <a href="/data/educational-campaign-operating-system.json">JSON</a> ·
+      <a href="/mission-control/executive.html">Executive Command Center</a> ·
+      <a href="/mission-control/phases.html">Phase Registry</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -3127,4 +3239,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initResearchObservatory();
   initOutreachEngine();
   initCountyOperatingSystem();
+  initEducationalCampaignOperatingSystem();
 });

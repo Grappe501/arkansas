@@ -1,6 +1,6 @@
 {
-  "version": "1.35.0",
-  "build": 31,
+  "version": "1.36.0",
+  "build": 32,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 31,
+    "overall_completion": 32,
     "current_build": {
-      "number": 31,
-      "title": "Citizens United Facts Arkansas County Operating System"
-    },
-    "active_phase": "County Education Network \u2014 Arkansas County OS",
-    "last_completed": "Public Engagement & Outreach Engine",
-    "next_build": {
       "number": 32,
+      "title": "Citizens United Facts Educational Campaign Operating System"
+    },
+    "active_phase": "Multi-Year Strategic Growth \u2014 Horizon One: Build the Institution",
+    "last_completed": "Arkansas County Operating System",
+    "next_build": {
+      "number": 33,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
@@ -45,6 +45,7 @@
     "observatory_readiness": 18,
     "outreach_readiness": 22,
     "county_os_readiness": 28,
+    "campaign_os_readiness": 34,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -52,8 +53,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 31,
-      "note": "County OS live \u2014 75 county scaffolds, education score architecture. One county at a time."
+      "value": 32,
+      "note": "Campaign OS live \u2014 Horizon 1 active, 3/5 H1 indicators met."
     },
     {
       "id": "constitution",
@@ -294,6 +295,13 @@
       "value": 28,
       "max": 100,
       "note": "0 counties with partners \u2014 75 scaffolds at 0% completeness."
+    },
+    {
+      "id": "campaign_os",
+      "label": "Educational Campaign OS",
+      "value": 34,
+      "max": 100,
+      "note": "Horizon One at 43% \u2014 master roadmap defined, engagement metrics at zero."
     }
   ],
   "public_readiness": {
@@ -772,6 +780,12 @@
       "id": "county_os",
       "label": "County Operating System",
       "href": "/mission-control/county-os.html",
+      "status": "complete"
+    },
+    {
+      "id": "campaign_os",
+      "label": "Educational Campaign OS",
+      "href": "/mission-control/campaign-os.html",
       "status": "complete"
     }
   ],
@@ -1798,6 +1812,56 @@
     }
   ],
   "builds": [
+    {
+      "number": 32,
+      "title": "Citizens United Facts Educational Campaign Operating System",
+      "version": "1.36.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Multi-Year Strategic Growth Blueprint v1.0 \u2014 institution over project",
+      "summary": "4 horizons, 4-season cycle, 8 quarterly topics; Horizon 1 at 43%; 34% readiness.",
+      "files_created": [
+        "data/educational-campaign-operating-system.json",
+        "docs/EDUCATIONAL_CAMPAIGN_OPERATING_SYSTEM.md",
+        "builds/032-educational-campaign-operating-system.md",
+        "mission-control/campaign-os.html",
+        "scripts/gen-educational-campaign-operating-system.py",
+        "scripts/update-mc-build32.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/campaign-os.html"
+      ],
+      "decisions_made": [
+        "4 strategic horizons \u2014 no horizon complete until objectives achieved",
+        "Horizon One active: Build the Institution",
+        "Annual operating cycle: Winter/Spring/Summer/Fall",
+        "8 quarterly review topics \u2014 reports planned, not automated",
+        "7 innovation pipeline categories \u2014 queue not built",
+        "7 strategic risks with 2 active (county participation, coalition inactivity)",
+        "34% honest readiness \u2014 roadmap live, engagement at zero"
+      ],
+      "open_questions": [
+        "Horizon transition criteria?",
+        "When to schedule first annual summit?"
+      ],
+      "risks": [
+        "0 coalition orgs",
+        "0 Education Leaders",
+        "Quarterly reports not automated"
+      ],
+      "next_recommended": 33,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/campaign-os.html",
+      "review_status": "complete"
+    },
     {
       "number": 31,
       "title": "Citizens United Facts Arkansas County Operating System",
@@ -3184,20 +3248,20 @@
     }
   ],
   "briefing": {
-    "what_built": "County OS v1.0 \u2014 75 county scaffolds, education score, regional architecture",
-    "building_now": "County network \u2014 component specs to map profile sections next",
+    "what_built": "Campaign OS v1.0 \u2014 4 horizons, annual cycle, quarterly framework, innovation & risk architecture",
+    "building_now": "Horizon One \u2014 Build the Institution (3/5 success indicators met)",
     "blocked": [
-      "0 counties with partners",
-      "Canonical /arkansas routes not built",
-      "Education score not computed"
+      "0 coalition organizations",
+      "0 Education Leaders enrolled",
+      "Quarterly reports not automated"
     ],
     "ready_public": [
-      "County OS MC dashboard",
-      "75 county index",
-      "Profile section schema",
-      "Regional groupings"
+      "Campaign OS MC dashboard",
+      "4-horizon roadmap",
+      "Annual cycle",
+      "Institutional memory links"
     ],
-    "next": "Build #32 \u2014 Component specifications with props/states"
+    "next": "Build #33 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -3502,5 +3566,18 @@
     "regions": 7,
     "canonical_route_live": false,
     "education_score_live": false
+  },
+  "educational_campaign_operating_system": "/data/educational-campaign-operating-system.json",
+  "campaign_os_dashboard": "/mission-control/campaign-os.html",
+  "campaign_os_inventory": {
+    "readiness_score": 34,
+    "current_horizon": 1,
+    "horizons_total": 4,
+    "horizon_one_objectives_pct": 43,
+    "success_indicators_met": 3,
+    "success_indicators_total": 5,
+    "quarterly_reports_live": false,
+    "innovation_queue_live": false,
+    "annual_summit_live": false
   }
 }

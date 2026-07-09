@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.35.0 · **County OS:** [/mission-control/county-os.html](/mission-control/county-os.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #31:** ✅ County OS · **Build #30:** ✅ Outreach Engine · **Build #29:** ✅ Research Observatory  
+**Current version:** 1.36.0 · **Campaign OS:** [/mission-control/campaign-os.html](/mission-control/campaign-os.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #32:** ✅ Campaign OS · **Build #31:** ✅ County OS · **Build #30:** ✅ Outreach Engine  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,9 +274,26 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **32** | **Educational Campaign OS** | **✅ v1.36.0** |
 | **31** | **County Operating System** | **✅ v1.35.0** |
 
-**Next:** Build #32 — Component specifications with props/states.
+**Next:** Build #33 — Component specifications with props/states.
+
+---
+
+## Phase 32 — Educational Campaign OS (Build #32) ★ NEW
+
+*Multi-year strategic growth — institution over project.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| L1 | Strategic Growth Blueprint v1.0 | ✅ | `data/educational-campaign-operating-system.json` |
+| L2 | 4 strategic horizons | ✅ | Horizon One active |
+| L3 | Annual operating cycle (4 seasons) | ✅ | Winter through Fall |
+| L4 | Quarterly review topics (8) | ✅ | Reports planned |
+| L5 | Innovation pipeline + risk management | ✅ | Categories defined |
+| L6 | Success measurements + institutional memory | ✅ | 8 measures, 7 memory items |
+| L7 | MC campaign OS dashboard | ✅ | `/mission-control/campaign-os.html` |
 
 ---
 
@@ -597,7 +614,8 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#29**~~ | ~~Research Observatory~~ ✅ Done |
 | ~~**#30**~~ | ~~Public Engagement & Outreach Engine~~ ✅ Done |
 | ~~**#31**~~ | ~~Arkansas County Operating System~~ ✅ Done |
-| **#32** | **Component specifications with props/states** |
+| ~~**#32**~~ | ~~Educational Campaign Operating System~~ ✅ Done |
+| **#33** | **Component specifications with props/states** |
 
 ---
 

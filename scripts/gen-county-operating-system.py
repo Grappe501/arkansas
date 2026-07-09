@@ -201,7 +201,7 @@ out = {
         'County storytelling section not implemented',
     ],
     'recommended_next_build': {
-        'number': 32,
+        'number': 33,
         'title': 'Component Specifications with Props/States',
         'note': 'Map county profile sections to COMP-* components; wire education score to county-coalition-index.',
     },

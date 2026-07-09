@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.36.0] - 2026-07-09 — Build #32 Educational Campaign Operating System
+
+### Multi-Year Strategic Growth Blueprint
+- **Educational Campaign OS v1.0** — 4 strategic horizons, annual operating cycle
+- Quarterly review topics, innovation pipeline, risk management, success measurements
+- Horizon One active (Build the Institution) — 3/5 success indicators met
+- Institutional memory linked to build history and strategic plans
+- 34% honest readiness — roadmap live, 0 coalition orgs, 0 Education Leaders
+- MC dashboard: `/mission-control/campaign-os.html`
+
 ## [1.35.0] - 2026-07-09 — Build #31 County Operating System
 
 ### Arkansas County Operating System

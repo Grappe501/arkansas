@@ -43,6 +43,6 @@ Strong statewide civic education is built from strong local communities.
 
 ---
 
-## Recommended Next: Build #32 — Component Specifications with Props/States
+## Recommended Next: Build #33 — Component Specifications with Props/States
 
 Map county profile sections to components; wire education score to county-coalition-index.
