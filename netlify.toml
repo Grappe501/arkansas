@@ -462,6 +462,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/institutional-ai"
+  to = "/mission-control/institutional-ai.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301

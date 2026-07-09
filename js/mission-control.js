@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Institutional AI <a href="/mission-control/institutional-ai.html" class="mc-inline-link">Civic Intelligence #60 →</a></h2>
+    <p class="mc-bar-note">Build #60 — Institutional AI Brain. 7 roles, Rule #1 source grounding, confidence levels. Not a chatbot — evidence is authority. 0 answered · no RAG. ~42% AI readiness.</p>
     <h2 class="mc-section-title">Relationship OS <a href="/mission-control/relationship-os.html" class="mc-inline-link">Institutional CRM #59 →</a></h2>
     <p class="mc-bar-note">Build #59 — Relationship Operating System. 5 networks, CRM dashboard, health score model. 0 active relationships · 0 edges. ~54% ROS readiness.</p>
     <h2 class="mc-section-title">Civic Atlas <a href="/mission-control/civic-atlas.html" class="mc-inline-link">Geographic Intelligence #58 →</a></h2>
@@ -5166,6 +5168,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNeighborhoodOrganizing();
   initCivicAtlas();
   initRelationshipOs();
+  initInstitutionalAi();
 });
 
 async function initUxArchitecture() {
@@ -6157,6 +6160,106 @@ async function initRelationshipOs() {
       <a href="/data/relationship-registry.json">Edge Registry</a> ·
       <a href="/mission-control/contact-intelligence.html">Contact Intelligence</a> ·
       <a href="/mission-control/civic-atlas.html">Civic Atlas</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initInstitutionalAi() {
+  const root = document.getElementById('mc-institutional-ai-root');
+  if (!root) return;
+
+  const [iaRes, mcRes] = await Promise.all([
+    fetch('/data/institutional-ai.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const ia = await iaRes.json();
+  const mc = await mcRes.json();
+  const s = ia.summary;
+
+  const roleRows = ia.seven_roles.map(r => `
+    <tr><td>${r.number}</td><td><code>${r.id}</code></td><td>${r.title}</td>
+      <td>${r.audience}</td><td>${r.visibility}</td><td>${r.status}</td></tr>`).join('');
+
+  const sourceRows = ia.institutional_rule_one.sources.map(src => `
+    <tr><td><code>${src.id}</code></td><td>${src.source}</td>
+      <td>${src.count ?? '—'}</td><td>${src.status}</td>
+      <td>${src.route ? `<a href="${src.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  const confRows = ia.confidence_levels.levels.map(c => `
+    <tr><td><code>${c.id}</code></td><td>${c.level}</td><td>${c.definition}</td></tr>`).join('');
+
+  const metricRows = ia.mc_ai_dashboard.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.metric}</td><td>${m.current}</td><td>${m.status}</td></tr>`).join('');
+
+  const systemRows = ia.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td>${sys.route ? `<a href="${sys.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Institutional AI</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #60 · ${ia.title}</p>
+      <h1>Arkansas Civic Intelligence System</h1>
+      <p class="mc-header__question">${ia.governing_principle}</p>
+      <p class="mc-bar-note">${ia.purpose}</p>
+      <p class="mc-bar-note"><strong>Not a chatbot.</strong> Evidence is the authority. AI is the guide.</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">AI readiness</div><div class="mc-stat__value">${s.institutional_ai_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Roles defined</div><div class="mc-stat__value">${s.seven_roles_defined}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Roles operational</div><div class="mc-stat__value">${s.roles_operational}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Questions answered</div><div class="mc-stat__value">${s.questions_answered}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Chat UI</div><div class="mc-stat__value" style="font-size:1rem">${s.chat_ui_live ? 'live' : 'off'}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">RAG pipeline</div><div class="mc-stat__value" style="font-size:1rem">${s.rag_pipeline_live ? 'live' : 'off'}</div></div>
+    </div>
+    <h2 class="mc-section-title">AI Philosophy</h2>
+    <p class="mc-bar-note"><strong>Core question:</strong> "${ia.ai_philosophy.core_question}"</p>
+    <p class="mc-bar-note"><strong>Not designed for:</strong> ${ia.ai_philosophy.not_designed_for.join(' · ')}</p>
+    <h2 class="mc-section-title">Institutional Rule #1</h2>
+    <p class="mc-bar-note">${ia.institutional_rule_one.rule}</p>
+    <p class="mc-bar-note">${ia.institutional_rule_one.unknown_response}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Source</th><th>Count</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${sourceRows}</tbody></table>
+    <h2 class="mc-section-title">Seven AI Roles</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Role</th><th>Audience</th><th>Visibility</th><th>Status</th></tr></thead>
+      <tbody>${roleRows}</tbody></table>
+    <h2 class="mc-section-title">Confidence Levels</h2>
+    <p class="mc-bar-note">${ia.confidence_levels.never_disguise_uncertainty ? 'Never disguise uncertainty.' : ''}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Level</th><th>Definition</th></tr></thead>
+      <tbody>${confRows}</tbody></table>
+    <h2 class="mc-section-title">Source Panel</h2>
+    <p class="mc-bar-note">${ia.source_panel.principle}</p>
+    <ul class="mc-deliverables">${ia.source_panel.items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">AI Memory</h2>
+    <p class="mc-bar-note">${ia.ai_memory.prohibited}. User control: ${ia.ai_memory.user_control ? 'yes' : 'no'}</p>
+    <ul class="mc-deliverables">${ia.ai_memory.allowed.map(m => `<li>${m}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Safety Principles</h2>
+    <ul class="mc-deliverables">${ia.safety_principles.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Technical Status</h2>
+    <p class="mc-bar-note">API: ${ia.technical_status.api_provider} · Citation required: ${ia.technical_status.citation_required ? 'yes' : 'no'}</p>
+    <h2 class="mc-section-title">MC AI Dashboard</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Future Capabilities</h2>
+    <ul class="mc-deliverables">${ia.future_capabilities.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Integration</h2>
+    <p class="mc-bar-note">${ia.integration.flow}</p>
+    <p class="mc-bar-note">${ia.integration.principle}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Extends Build #26</h2>
+    <p class="mc-bar-note">${ia.persona.name} · <a href="${ia.extends_build_26.route}">AI Knowledge Engine</a> · ${ia.extends_build_26.learning_modes} learning modes</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${ia.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${ia.recommended_next_build.number} — ${ia.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${ia.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_INSTITUTIONAL_AI.md">MASTER_INSTITUTIONAL_AI.md</a> ·
+      <a href="/data/institutional-ai.json">JSON</a> ·
+      <a href="/mission-control/ai-knowledge.html">AI Engine (#26)</a> ·
+      <a href="/mission-control/evidence-ledger.html">Evidence Ledger</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

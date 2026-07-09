@@ -1,6 +1,6 @@
 {
-  "version": "1.63.0",
-  "build": 59,
+  "version": "1.64.0",
+  "build": 60,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 59,
+    "overall_completion": 60,
     "current_build": {
-      "number": 59,
-      "title": "Citizens United Facts Arkansas Civic Action CRM & Relationship Operating System v1.0"
-    },
-    "active_phase": "Relationship OS \u2192 Implementation Translation",
-    "last_completed": "Arkansas Civic Atlas",
-    "next_build": {
       "number": 60,
+      "title": "Citizens United Facts Institutional AI Brain & Knowledge Assistant v1.0"
+    },
+    "active_phase": "Institutional AI Brain \u2192 Implementation Translation",
+    "last_completed": "Relationship Operating System",
+    "next_build": {
+      "number": 61,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
@@ -39,8 +39,9 @@
     "wireframe_readiness": 38,
     "contact_intelligence_readiness": 34,
     "relationship_os_readiness": 54,
+    "institutional_ai_readiness": 42,
     "mc2_readiness": 33,
-    "ai_engine_readiness": 14,
+    "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
     "education_academy_readiness": 26,
     "observatory_readiness": 20,
@@ -58,9 +59,9 @@
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 25,
-    "institutional_maturity_pct": 46,
+    "institutional_maturity_pct": 47,
     "current_institutional_version": "V1",
-    "systems_integration_readiness": 30,
+    "systems_integration_readiness": 32,
     "production_matrix_readiness": 39,
     "visitor_journey_readiness": 40,
     "technical_architecture_readiness": 38,
@@ -87,8 +88,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 59,
-      "note": "Build #59 \u2014 Relationship Operating System (ROS)."
+      "value": 60,
+      "note": "Build #60 \u2014 Institutional AI Brain."
     },
     {
       "id": "constitution",
@@ -291,9 +292,9 @@
     {
       "id": "ai_engine",
       "label": "AI Knowledge Engine",
-      "value": 14,
+      "value": 34,
       "max": 100,
-      "note": "Architecture + guardrails defined; RAG pipeline and chat UI not built."
+      "note": "Extended by Build #60 Institutional AI Brain."
     },
     {
       "id": "content_factory",
@@ -417,9 +418,9 @@
     {
       "id": "institutional_maturity",
       "label": "Institutional Maturity (V1\u2013V10)",
-      "value": 46,
+      "value": 47,
       "max": 100,
-      "note": "Institutional relationship brain live \u2014 0 active relationships."
+      "note": "AI teaches, never replaces thinking \u2014 no runtime yet."
     },
     {
       "id": "systems_integration",
@@ -525,6 +526,13 @@
       "value": 54,
       "max": 100,
       "note": "5 networks \u00b7 0 edges \u00b7 0 active."
+    },
+    {
+      "id": "institutional_ai",
+      "label": "Institutional AI",
+      "value": 42,
+      "max": 100,
+      "note": "7 roles \u00b7 0 operational \u00b7 RAG not live."
     }
   ],
   "public_readiness": {
@@ -1171,6 +1179,12 @@
       "id": "relationship_os",
       "label": "Relationship OS",
       "href": "/mission-control/relationship-os.html",
+      "status": "complete"
+    },
+    {
+      "id": "institutional_ai",
+      "label": "Institutional AI",
+      "href": "/mission-control/institutional-ai.html",
       "status": "complete"
     }
   ],
@@ -2197,6 +2211,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 60,
+      "title": "Citizens United Facts Institutional AI Brain & Knowledge Assistant v1.0",
+      "version": "1.64.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Institutional AI Brain \u2014 Arkansas Civic Intelligence System",
+      "summary": "7 AI roles; Rule #1 source grounding; confidence levels; 42% institutional AI readiness. 0 questions answered \u00b7 no chat UI.",
+      "files_created": [
+        "data/institutional-ai.json",
+        "docs/MASTER_INSTITUTIONAL_AI.md",
+        "builds/060-institutional-ai.md",
+        "mission-control/institutional-ai.html",
+        "scripts/gen-institutional-ai.py",
+        "scripts/update-mc-build60.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/institutional-ai.html"
+      ],
+      "decisions_made": [
+        "Not a chatbot \u2014 institutional intelligence layer",
+        "Institutional Rule #1: never invent knowledge \u2014 trace to 8 source types",
+        "Evidence is authority; AI is librarian/guide",
+        "7 roles: Learning, Research, Constitutional, Arkansas Civic, Leader, Coalition, MC (internal)",
+        "4 confidence levels \u2014 never disguise uncertainty",
+        "Extends AI Knowledge Engine (#26) \u2014 Arkansas Civic Librarian persona",
+        "42% readiness \u2014 architecture only, no RAG/chat"
+      ],
+      "open_questions": [
+        "Consolidate #26 ai-knowledge.html with #60 institutional-ai.html?",
+        "RAG provider: OpenAI vs Anthropic vs local?",
+        "Public vs authenticated role boundaries?",
+        "MC Assistant access control model?"
+      ],
+      "risks": [
+        "No chat UI or public AI assistant route \u2014 architecture only",
+        "No RAG pipeline or embedding store \u2014 cannot ground responses in KB",
+        "Sparse knowledge base: ~3 claims, 38 KG nodes, 15 published articles",
+        "7 roles defined \u2014 0 operational"
+      ],
+      "next_recommended": 61,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/institutional-ai.html",
+      "review_status": "complete"
+    },
     {
       "number": 59,
       "title": "Citizens United Facts Arkansas Civic Action CRM & Relationship Operating System v1.0",
@@ -5110,21 +5177,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Relationship OS v1.0 \u2014 5 networks, CRM dashboard, institutional relationship brain",
-    "building_now": "Community + relationship intelligence stack (#56\u2013#59) \u2014 translation next",
+    "what_built": "Institutional AI Brain v1.0 \u2014 7 roles, Rule #1 grounding, confidence model",
+    "building_now": "Full intelligence stack (#56\u2013#60) specified \u2014 implementation translation next",
     "blocked": [
-      "Neon participant schema",
-      "Timeline events",
-      "Health scoring",
-      "Mentorship graph"
+      "RAG pipeline",
+      "Chat UI",
+      "API provider",
+      "Citation runtime"
     ],
     "ready_public": [
-      "5 network model",
-      "CRM widgets",
-      "Privacy framework",
-      "Opportunity tracker"
+      "7 role model",
+      "Safety principles",
+      "Source panel spec",
+      "MC AI metrics"
     ],
-    "next": "Build #60 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #61 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -5773,5 +5840,16 @@
     "relationship_edges": 0,
     "crm_widgets_live": 6,
     "core_intelligence_system": true
+  },
+  "institutional_ai": "/data/institutional-ai.json",
+  "institutional_ai_dashboard": "/mission-control/institutional-ai.html",
+  "institutional_ai_inventory": {
+    "readiness_score": 42,
+    "seven_roles": 7,
+    "roles_operational": 0,
+    "questions_answered": 0,
+    "chat_ui_live": false,
+    "rag_pipeline_live": false,
+    "evidence_is_authority": true
   }
 }

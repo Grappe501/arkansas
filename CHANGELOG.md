@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.64.0] - 2026-07-09 — Build #60 Institutional AI Brain
+
+### Arkansas Civic Intelligence System
+- **Institutional AI v1.0** — intelligence layer, not a chatbot; evidence is authority
+- Seven AI roles: Learning, Research, Constitutional, Arkansas Civic, Leader, Coalition, MC (internal)
+- Institutional Rule #1: never invent knowledge — 8 source types
+- Confidence levels, source panel, safety principles, MC AI quality dashboard
+- Honest: 0 questions answered · no chat UI · no RAG · API undecided
+- Extends AI Knowledge Engine (#26); MC dashboard: `/mission-control/institutional-ai.html`
+
 ## [1.63.0] - 2026-07-09 — Build #59 Relationship Operating System (ROS)
 
 ### Arkansas Civic Action CRM — Institutional Relationship Brain
