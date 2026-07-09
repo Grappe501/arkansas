@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.64.0 · **Institutional AI:** [/mission-control/institutional-ai.html](/mission-control/institutional-ai.html) · **ROS:** [/mission-control/relationship-os.html](/mission-control/relationship-os.html)  
-**AI teaches, evidence is authority** — 7 roles · Rule #1 grounding · **Next:** Build #61 Engineering Artifacts  
+**Current version:** 1.65.0 · **Coalition Network:** [/mission-control/coalition-network.html](/mission-control/coalition-network.html) · **Institutional AI:** [/mission-control/institutional-ai.html](/mission-control/institutional-ai.html)  
+**Building Arkansas Together** — 6 categories · 4 levels · **Next:** Build #62 Engineering Artifacts  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **61** | **Coalition & Civic Alliance Network** | **✅ v1.65.0** |
 | **60** | **Institutional AI Brain** | **✅ v1.64.0** |
 | **59** | **Relationship Operating System (ROS)** | **✅ v1.63.0** |
 | **58** | **Arkansas Civic Atlas** | **✅ v1.62.0** |
@@ -300,7 +301,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **37** | **Master Research Library** | **✅ v1.41.0** |
 | **36** | **Trust Framework** | **✅ v1.40.0** |
 
-**Next:** Build #61 — Implementation translation layer & engineering artifacts.
+**Next:** Build #62 — Implementation translation layer & engineering artifacts.
 
 ---
 

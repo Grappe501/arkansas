@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Coalition Network <a href="/mission-control/coalition-network.html" class="mc-inline-link">Building Arkansas #61 →</a></h2>
+    <p class="mc-bar-note">Build #61 — Master Coalition & Civic Alliance Network. 6 categories, 4 levels, resource center. 0 orgs · 0/75 counties. Highest strategic priority. ~44% coalition readiness.</p>
     <h2 class="mc-section-title">Institutional AI <a href="/mission-control/institutional-ai.html" class="mc-inline-link">Civic Intelligence #60 →</a></h2>
     <p class="mc-bar-note">Build #60 — Institutional AI Brain. 7 roles, Rule #1 source grounding, confidence levels. Not a chatbot — evidence is authority. 0 answered · no RAG. ~42% AI readiness.</p>
     <h2 class="mc-section-title">Relationship OS <a href="/mission-control/relationship-os.html" class="mc-inline-link">Institutional CRM #59 →</a></h2>
@@ -5169,6 +5171,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCivicAtlas();
   initRelationshipOs();
   initInstitutionalAi();
+  initCoalitionNetwork();
 });
 
 async function initUxArchitecture() {
@@ -6260,6 +6263,105 @@ async function initInstitutionalAi() {
       <a href="/data/institutional-ai.json">JSON</a> ·
       <a href="/mission-control/ai-knowledge.html">AI Engine (#26)</a> ·
       <a href="/mission-control/evidence-ledger.html">Evidence Ledger</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initCoalitionNetwork() {
+  const root = document.getElementById('mc-coalition-network-root');
+  if (!root) return;
+
+  const [cnRes, mcRes] = await Promise.all([
+    fetch('/data/coalition-network.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const cn = await cnRes.json();
+  const mc = await mcRes.json();
+  const s = cn.summary;
+
+  const catRows = cn.partnership_categories.map(c => `
+    <tr><td>${c.number}</td><td><code>${c.id}</code></td><td>${c.title}</td>
+      <td>${c.current}</td><td>${c.status}</td></tr>`).join('');
+
+  const levelRows = cn.partnership_levels.map(l => `
+    <tr><td><code>${l.id}</code></td><td>${l.level}</td><td>${l.commitment}</td>
+      <td>${l.current}</td><td>${l.status}</td></tr>`).join('');
+
+  const metricRows = cn.growth_metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.metric}</td><td>${m.current}</td>
+      <td>${m.target ?? '—'}</td><td>${m.status}</td></tr>`).join('');
+
+  const reqRows = cn.partnership_requests.request_types.map(r => `
+    <tr><td><code>${r.id}</code></td><td>${r.request}</td><td>${r.workflow_status}</td></tr>`).join('');
+
+  const systemRows = cn.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td>${sys.route ? `<a href="${sys.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Coalition Network</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #61 · ${cn.title}</p>
+      <h1>Building Arkansas Together</h1>
+      <p class="mc-header__question">${cn.governing_principle}</p>
+      <p class="mc-bar-note">${cn.purpose}</p>
+      <p class="mc-bar-note"><strong>Mission:</strong> ${cn.coalition_mission}</p>
+      <p class="mc-bar-note"><strong>Strategic priority:</strong> ${cn.strategic_priority.rank} — monitor coalition health</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Coalition readiness</div><div class="mc-stat__value">${s.coalition_network_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Organizations</div><div class="mc-stat__value">${s.organizations_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Counties</div><div class="mc-stat__value">${s.counties_represented}/${s.counties_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Cities</div><div class="mc-stat__value">${s.cities_represented}/250</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Joint events</div><div class="mc-stat__value">${s.joint_events}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Pending requests</div><div class="mc-stat__value">${s.pending_requests}</div></div>
+    </div>
+    <h2 class="mc-section-title">Coalition Principles</h2>
+    <ul class="mc-deliverables">${cn.coalition_principles.map(p => `<li>${p}</li>`).join('')}</ul>
+    <p class="mc-bar-note">${cn.common_ground}</p>
+    <h2 class="mc-section-title">Six Partnership Categories</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Category</th><th>Partners</th><th>Status</th></tr></thead>
+      <tbody>${catRows}</tbody></table>
+    <h2 class="mc-section-title">Partnership Levels</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Level</th><th>Commitment</th><th>Count</th><th>Status</th></tr></thead>
+      <tbody>${levelRows}</tbody></table>
+    <h2 class="mc-section-title">Coalition Profile Fields</h2>
+    <ul class="mc-deliverables">${cn.coalition_profile.fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Resource Center</h2>
+    <p class="mc-bar-note">${cn.resource_center.items_available}/${cn.resource_center.items_total} items available</p>
+    <ul class="mc-deliverables">${cn.resource_center.items.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">County Coalition Dashboard</h2>
+    <p class="mc-bar-note">${s.counties_represented}/${s.counties_total} counties with partners · <a href="${cn.county_coalition_dashboard.public_route}">Public counties</a></p>
+    <ul class="mc-deliverables">${cn.county_coalition_dashboard.fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Collaboration Hub</h2>
+    <p class="mc-bar-note">${cn.collaboration_hub.principle}</p>
+    <ul class="mc-deliverables">${cn.collaboration_hub.features.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Coalition Recognition</h2>
+    <ul class="mc-deliverables">${cn.coalition_recognition.types.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Growth Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Target</th><th>Status</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Partnership Requests</h2>
+    <p class="mc-bar-note">${s.pending_requests} pending</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Request Type</th><th>Workflow</th></tr></thead>
+      <tbody>${reqRows}</tbody></table>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${cn.integration.unifies}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <ul class="mc-deliverables">${cn.long_term_vision.map(v => `<li>${v}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${cn.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${cn.recommended_next_build.number} — ${cn.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${cn.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_COALITION_NETWORK.md">MASTER_COALITION_NETWORK.md</a> ·
+      <a href="/data/coalition-network.json">JSON</a> ·
+      <a href="/coalition/">Coalition Hub</a> ·
+      <a href="/data/coalition-directory.json">Directory</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

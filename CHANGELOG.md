@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.65.0] - 2026-07-09 — Build #61 Coalition & Civic Alliance Network
+
+### Building Arkansas Together
+- **Master Coalition Network v1.0** — common platform multiplying educational capacity
+- 6 partnership categories, 4 levels, resource center, county dashboard, collaboration hub
+- Coalition health = highest Mission Control strategic priority
+- Unifies ACUCOS (#14) into master operating framework
+- Honest: 0 organizations · 0/75 counties · collaboration hub planned
+- MC dashboard: `/mission-control/coalition-network.html`
+
 ## [1.64.0] - 2026-07-09 — Build #60 Institutional AI Brain
 
 ### Arkansas Civic Intelligence System

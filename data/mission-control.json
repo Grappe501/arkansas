@@ -1,6 +1,6 @@
 {
-  "version": "1.64.0",
-  "build": 60,
+  "version": "1.65.0",
+  "build": 61,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 60,
+    "overall_completion": 61,
     "current_build": {
-      "number": 60,
-      "title": "Citizens United Facts Institutional AI Brain & Knowledge Assistant v1.0"
-    },
-    "active_phase": "Institutional AI Brain \u2192 Implementation Translation",
-    "last_completed": "Relationship Operating System",
-    "next_build": {
       "number": 61,
+      "title": "Citizens United Facts Master Arkansas Coalition & Civic Alliance Network v1.0"
+    },
+    "active_phase": "Coalition Network \u2192 Implementation Translation",
+    "last_completed": "Institutional AI Brain",
+    "next_build": {
+      "number": 62,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
@@ -27,7 +27,7 @@
     "data_viz_readiness": 8,
     "signup_funnel_readiness": 22,
     "civic_action_readiness": 28,
-    "coalition_readiness": 18,
+    "coalition_readiness": 40,
     "data_model_readiness": 54,
     "route_inventory_readiness": 18,
     "component_registry_readiness": 22,
@@ -40,6 +40,7 @@
     "contact_intelligence_readiness": 34,
     "relationship_os_readiness": 54,
     "institutional_ai_readiness": 42,
+    "coalition_network_readiness": 44,
     "mc2_readiness": 33,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
@@ -59,9 +60,9 @@
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 25,
-    "institutional_maturity_pct": 47,
+    "institutional_maturity_pct": 48,
     "current_institutional_version": "V1",
-    "systems_integration_readiness": 32,
+    "systems_integration_readiness": 34,
     "production_matrix_readiness": 39,
     "visitor_journey_readiness": 40,
     "technical_architecture_readiness": 38,
@@ -88,8 +89,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 60,
-      "note": "Build #60 \u2014 Institutional AI Brain."
+      "value": 61,
+      "note": "Build #61 \u2014 Coalition & Civic Alliance Network."
     },
     {
       "id": "constitution",
@@ -208,9 +209,9 @@
     {
       "id": "coalition",
       "label": "Coalition & Outreach",
-      "value": 12,
+      "value": 40,
       "max": 100,
-      "note": "ACUCOS objects now linked in canonical Person/Organization/County model."
+      "note": "Master coalition network \u2014 highest strategic priority."
     },
     {
       "id": "data_model",
@@ -418,9 +419,9 @@
     {
       "id": "institutional_maturity",
       "label": "Institutional Maturity (V1\u2013V10)",
-      "value": 47,
+      "value": 48,
       "max": 100,
-      "note": "AI teaches, never replaces thinking \u2014 no runtime yet."
+      "note": "Coalition framework live \u2014 0 orgs, 0/75 counties."
     },
     {
       "id": "systems_integration",
@@ -533,6 +534,13 @@
       "value": 42,
       "max": 100,
       "note": "7 roles \u00b7 0 operational \u00b7 RAG not live."
+    },
+    {
+      "id": "coalition_network",
+      "label": "Coalition Network",
+      "value": 44,
+      "max": 100,
+      "note": "0 orgs \u00b7 0/75 counties."
     }
   ],
   "public_readiness": {
@@ -1185,6 +1193,12 @@
       "id": "institutional_ai",
       "label": "Institutional AI",
       "href": "/mission-control/institutional-ai.html",
+      "status": "complete"
+    },
+    {
+      "id": "coalition_network",
+      "label": "Coalition Network",
+      "href": "/mission-control/coalition-network.html",
       "status": "complete"
     }
   ],
@@ -2211,6 +2225,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 61,
+      "title": "Citizens United Facts Master Arkansas Coalition & Civic Alliance Network v1.0",
+      "version": "1.65.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Master coalition operating framework \u2014 Building Arkansas Together",
+      "summary": "6 categories, 4 partnership levels, resource center, collaboration hub; 44% coalition network readiness. 0 orgs \u00b7 0/75 counties.",
+      "files_created": [
+        "data/coalition-network.json",
+        "docs/MASTER_COALITION_NETWORK.md",
+        "builds/061-coalition-network.md",
+        "mission-control/coalition-network.html",
+        "scripts/gen-coalition-network.py",
+        "scripts/update-mc-build61.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/coalition-network.html"
+      ],
+      "decisions_made": [
+        "Coalition multiplies capacity \u2014 does not replace organizations",
+        "Common ground: evidence-based education regardless of policy disagreement",
+        "6 partnership categories + 4 partnership levels",
+        "County coalition dashboard per county \u2014 75 scaffolds",
+        "Coalition health = highest MC strategic priority",
+        "Unifies ACUCOS (#14) into master operating framework",
+        "44% readiness \u2014 framework documented, 0 partners"
+      ],
+      "open_questions": [
+        "Map Build #61 levels to ACUCOS six participation levels?",
+        "Faith communities: separate category or under community orgs?",
+        "Partner portal vs coalition hub at /coalition/?",
+        "Partnership request workflow: Netlify Forms vs Neon?"
+      ],
+      "risks": [
+        "0 coalition organizations \u2014 75 counties need partners",
+        "Build #61 six categories vs ACUCOS seven categories \u2014 unification pending",
+        "Build #61 four levels vs ACUCOS six levels \u2014 mapping needed",
+        "Collaboration hub not built \u2014 no event sharing or speaker requests"
+      ],
+      "next_recommended": 62,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/coalition-network.html",
+      "review_status": "complete"
+    },
     {
       "number": 60,
       "title": "Citizens United Facts Institutional AI Brain & Knowledge Assistant v1.0",
@@ -5177,21 +5244,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Institutional AI Brain v1.0 \u2014 7 roles, Rule #1 grounding, confidence model",
-    "building_now": "Full intelligence stack (#56\u2013#60) specified \u2014 implementation translation next",
+    "what_built": "Coalition Network v1.0 \u2014 6 categories, 4 levels, resource center, collaboration hub",
+    "building_now": "61 builds specified \u2014 implementation translation next",
     "blocked": [
-      "RAG pipeline",
-      "Chat UI",
-      "API provider",
-      "Citation runtime"
+      "Partner signup",
+      "Request workflow",
+      "Collaboration hub",
+      "Recognition archive"
     ],
     "ready_public": [
-      "7 role model",
-      "Safety principles",
-      "Source panel spec",
-      "MC AI metrics"
+      "Coalition principles",
+      "Growth metrics",
+      "County dashboard spec",
+      "Resource center index"
     ],
-    "next": "Build #61 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #62 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -5851,5 +5918,14 @@
     "chat_ui_live": false,
     "rag_pipeline_live": false,
     "evidence_is_authority": true
+  },
+  "coalition_network": "/data/coalition-network.json",
+  "coalition_network_dashboard": "/mission-control/coalition-network.html",
+  "coalition_network_inventory": {
+    "readiness_score": 44,
+    "organizations": 0,
+    "counties_represented": 0,
+    "counties_total": 75,
+    "strategic_priority": "highest"
   }
 }

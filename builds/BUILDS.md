@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#61** | **Coalition & Civic Alliance Network** | **1.65.0** | **✅ Complete** | [061](061-coalition-network.md) · [/mission-control/coalition-network.html](../mission-control/coalition-network.html) |
 | **#60** | **Institutional AI Brain** | **1.64.0** | **✅ Complete** | [060](060-institutional-ai.md) · [/mission-control/institutional-ai.html](../mission-control/institutional-ai.html) |
 | **#59** | **Relationship Operating System (ROS)** | **1.63.0** | **✅ Complete** | [059](059-relationship-os.md) · [/mission-control/relationship-os.html](../mission-control/relationship-os.html) |
 | **#58** | **Arkansas Civic Atlas** | **1.62.0** | **✅ Complete** | [058](058-civic-atlas.md) · [/mission-control/civic-atlas.html](../mission-control/civic-atlas.html) |
