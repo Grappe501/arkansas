@@ -1,6 +1,6 @@
 {
-  "version": "1.89.0",
-  "build": 85,
+  "version": "1.90.0",
+  "build": 86,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,16 +9,16 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 85,
+    "overall_completion": 86,
     "current_build": {
-      "number": 85,
-      "title": "Citizens United Facts Master Launch Plan v1.0"
-    },
-    "active_phase": "Launch Plan \u2192 Readiness Dashboard",
-    "last_completed": "Arkansas Strategic Plan 2035",
-    "next_build": {
       "number": 86,
-      "title": "Launch readiness dashboard & certification components"
+      "title": "Citizens United Facts Master Arkansas Civic Reach & Participation Strategy v1.0"
+    },
+    "active_phase": "Civic Reach \u2192 Reach Dashboard",
+    "last_completed": "Master Launch Plan",
+    "next_build": {
+      "number": 87,
+      "title": "Civic reach dashboard & county/city score components"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
@@ -65,12 +65,13 @@
     "arkansas_civic_ecosystem_readiness": 54,
     "arkansas_strategic_plan_2035_readiness": 55,
     "master_launch_plan_readiness": 54,
+    "arkansas_civic_reach_participation_readiness": 56,
     "mc2_readiness": 42,
     "ai_engine_readiness": 34,
     "content_factory_readiness": 30,
     "education_academy_readiness": 26,
     "observatory_readiness": 43,
-    "outreach_readiness": 34,
+    "outreach_readiness": 44,
     "county_os_readiness": 28,
     "campaign_os_readiness": 34,
     "encyclopedia_readiness": 19,
@@ -105,18 +106,18 @@
     "planning_phase_complete": true,
     "planning_constitution_complete": true,
     "eighty_builds_complete": true,
-    "implementation_phase": "launch_readiness_dashboard_next",
+    "implementation_phase": "civic_reach_dashboard_next",
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation",
     "public_launch_recommended": false,
-    "launch_target_date": "2027-01-01"
+    "connected_citizen_goal_pct": 15
   },
   "progress_bars": [
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 85,
-      "note": "Build #85 \u2014 Master Launch Plan (Jan 2027)."
+      "value": 86,
+      "note": "Build #86 \u2014 Civic Reach & Participation (15% goal)."
     },
     {
       "id": "constitution",
@@ -347,9 +348,9 @@
     {
       "id": "outreach",
       "label": "Outreach Engine",
-      "value": 22,
+      "value": 44,
       "max": 100,
-      "note": "3 pillars partial \u2014 no analytics or campaign management yet."
+      "note": "15% goal \u00b7 0/75 counties \u00b7 0 connected."
     },
     {
       "id": "county_os",
@@ -735,6 +736,13 @@
       "value": 54,
       "max": 100,
       "note": "0/7 certs \u00b7 dashboard planned."
+    },
+    {
+      "id": "arkansas_civic_reach_participation",
+      "label": "Civic Reach",
+      "value": 56,
+      "max": 100,
+      "note": "15% goal \u00b7 dashboard planned."
     }
   ],
   "public_readiness": {
@@ -1537,6 +1545,12 @@
       "id": "master_launch_plan",
       "label": "Launch Plan 2027",
       "href": "/mission-control/master-launch-plan.html",
+      "status": "complete"
+    },
+    {
+      "id": "arkansas_civic_reach_participation",
+      "label": "Civic Reach",
+      "href": "/mission-control/arkansas-civic-reach-participation.html",
       "status": "complete"
     }
   ],
@@ -2563,6 +2577,59 @@
     }
   ],
   "builds": [
+    {
+      "number": 86,
+      "title": "Citizens United Facts Master Arkansas Civic Reach & Participation Strategy v1.0",
+      "version": "1.90.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "15% Connected Citizen Goal \u2014 reaching every community",
+      "summary": "15% goal, 6 engagement levels, reach dashboard, county/city objectives, 56% readiness. 0 connected \u00b7 0/75 counties at goal.",
+      "files_created": [
+        "data/arkansas-civic-reach-participation.json",
+        "docs/MASTER_ARKANSAS_CIVIC_REACH_PARTICIPATION.md",
+        "builds/086-arkansas-civic-reach-participation.md",
+        "mission-control/arkansas-civic-reach-participation.html",
+        "scripts/gen-arkansas-civic-reach-participation.py",
+        "scripts/update-mc-build86.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/arkansas-civic-reach-participation.html"
+      ],
+      "decisions_made": [
+        "15% Connected Citizen Goal per county and major city",
+        "Participation = connection, not agreement",
+        "Civic Reach Score formula specified",
+        "6 engagement levels \u00b7 quality over raw registration",
+        "Ethical standards \u2014 trust over growth",
+        "Rankings by educational reach, not political influence",
+        "56% readiness \u2014 blueprint only"
+      ],
+      "open_questions": [
+        "Build #86 vs 200K goal (#64) \u2014 reconcile metrics?",
+        "Registered voter data source \u2014 SOS integration?",
+        "15% per county vs statewide average?",
+        "Heat maps \u2014 Civic Atlas or new MC view?"
+      ],
+      "risks": [
+        "Reach dashboard not live \u2014 Civic Reach Score not computed",
+        "0 statewide connected participants \u2014 no tracking pipeline",
+        "Registered voters not tracked \u2014 denominator missing for reach %",
+        "0/75 counties at 15% goal \u00b7 0/250 cities at 15%"
+      ],
+      "next_recommended": 87,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/arkansas-civic-reach-participation.html",
+      "review_status": "complete"
+    },
     {
       "number": 85,
       "title": "Citizens United Facts Master Launch Plan v1.0",
@@ -7065,21 +7132,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Master Launch Plan v1.0 \u2014 January 2027 readiness blueprint",
-    "building_now": "85 builds \u2014 launch readiness dashboard next",
+    "what_built": "Civic Reach Strategy v1.0 \u2014 15% Arkansas Engagement Framework",
+    "building_now": "86 builds \u2014 civic reach dashboard next",
     "blocked": [
-      "Launch readiness dashboard",
-      "Arkansas Launch Map",
-      "Checklist tracker",
-      "Governance certification"
+      "Reach dashboard",
+      "Civic Reach Score engine",
+      "Voter denominator",
+      "Heat maps"
     ],
     "ready_public": [
-      "36-item checklist",
-      "11 categories",
-      "Launch message",
-      "First-year priorities"
+      "15% goal",
+      "6 engagement levels",
+      "Ethical standards",
+      "Founder's standard"
     ],
-    "next": "Build #86 \u2014 Launch readiness dashboard & certification components"
+    "next": "Build #87 \u2014 Civic reach dashboard & county/city score components"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -7952,5 +8019,13 @@
     "checklist_complete": 3,
     "checklist_total": 36,
     "launch_readiness_dashboard_live": false
+  },
+  "arkansas_civic_reach_participation": "/data/arkansas-civic-reach-participation.json",
+  "arkansas_civic_reach_participation_dashboard": "/mission-control/arkansas-civic-reach-participation.html",
+  "arkansas_civic_reach_participation_inventory": {
+    "readiness_score": 56,
+    "connected_citizen_goal_pct": 15,
+    "reach_dashboard_live": false,
+    "fifteen_percent_framework": true
   }
 }

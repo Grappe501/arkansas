@@ -13,6 +13,17 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.90.0] - 2026-07-09 — Build #86 Arkansas Civic Reach & Participation Strategy
+
+### Reaching Every Community — The 15% Arkansas Engagement Framework
+- **Master Arkansas Civic Reach & Participation Strategy v1.0** — 15% Connected Citizen Goal per county and city
+- Civic Reach Score: Connected Participants ÷ Registered Voters; 6 engagement levels
+- County/city objectives, reach dashboard, growth strategies, quality metrics, ethical standards
+- Participation = connection not agreement; rankings by educational reach not political influence
+- Integrates Civic Atlas (#58), ROS (#59), ACOS (#77), ANOS (#79), Action Network (#64), Growth Engine (#69)
+- Honest: 0 connected · 0/75 counties at 15% · voters not tracked · dashboard not live · ~56% readiness
+- MC dashboard: `/mission-control/arkansas-civic-reach-participation.html`
+
 ## [1.89.0] - 2026-07-09 — Build #85 Master Launch Plan (January 2027)
 
 ### From Vision to Reality

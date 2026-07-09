@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.89.0 · **Launch Plan 2027:** [/mission-control/master-launch-plan.html](/mission-control/master-launch-plan.html) · **85 builds complete**  
-**January 2027 readiness** — 36 checklist items · 11 categories · launch map · governance certs · **Next:** Build #86 Launch Readiness Dashboard  
+**Current version:** 1.90.0 · **Civic Reach:** [/mission-control/arkansas-civic-reach-participation.html](/mission-control/arkansas-civic-reach-participation.html) · **86 builds complete**  
+**15% Engagement Framework** — county/city reach scores · 6 levels · reach dashboard · **Next:** Build #87 Civic Reach Dashboard  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 

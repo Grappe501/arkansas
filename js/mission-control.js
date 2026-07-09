@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Civic Reach <a href="/mission-control/arkansas-civic-reach-participation.html" class="mc-inline-link">15% Engagement #86 →</a></h2>
+    <p class="mc-bar-note">Build #86 — Civic Reach & Participation Strategy. 15% Connected Citizen Goal per county and city. 6 engagement levels, reach dashboard, quality metrics. 0 connected · 0/75 at goal · dashboard not live. ~56% readiness.</p>
     <h2 class="mc-section-title">Launch Plan 2027 <a href="/mission-control/master-launch-plan.html" class="mc-inline-link">Jan 2027 Readiness #85 →</a></h2>
     <p class="mc-bar-note">Build #85 — Master Launch Plan. January 2027 operational readiness blueprint. 36 checklist items, 11 categories, launch map, governance certs. 3/36 complete · dashboard not live. ~54% readiness.</p>
     <h2 class="mc-section-title">Strategic Plan 2035 <a href="/mission-control/arkansas-strategic-plan-2035.html" class="mc-inline-link">Decade Roadmap #84 →</a></h2>
@@ -5244,6 +5246,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initArkansasCivicEcosystem();
   initArkansasStrategicPlan2035();
   initMasterLaunchPlan();
+  initArkansasCivicReachParticipation();
 });
 
 async function initUxArchitecture() {
@@ -8983,6 +8986,99 @@ async function initMasterLaunchPlan() {
       <a href="/data/master-launch-plan.json">JSON</a> ·
       <a href="/mission-control/launch-strategy.html">Launch Strategy (#53)</a> ·
       <a href="/mission-control/arkansas-strategic-plan-2035.html">Strategic Plan (#84)</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initArkansasCivicReachParticipation() {
+  const root = document.getElementById('mc-arkansas-civic-reach-participation-root');
+  if (!root) return;
+
+  const [crRes, mcRes] = await Promise.all([
+    fetch('/data/arkansas-civic-reach-participation.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const cr = await crRes.json();
+  const mc = await mcRes.json();
+  const s = cr.summary;
+
+  const levelCards = cr.engagement_levels.levels.map(l => `
+    <div class="mc-card"><h3>Level ${l.level}: ${l.title}</h3>
+      <p class="mc-bar-note">${l.description}</p></div>`).join('');
+
+  const dashRows = cr.mission_control_reach_dashboard.indicators.map(d => `
+    <tr><td><code>${d.id}</code></td><td>${d.indicator}</td>
+      <td>${typeof d.current === 'number' ? d.current.toLocaleString() : d.current}${d.target ? ` / ${d.target.toLocaleString()}` : ''}${d.unit ? ` ${d.unit}` : ''}</td>
+      <td>${d.status}</td></tr>`).join('');
+
+  const systemRows = cr.integration.systems.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td><a href="${sys.route}">→</a></td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Civic Reach Strategy</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #86 · ${cr.title}</p>
+      <h1>${cr.subtitle}</h1>
+      <p class="mc-header__question">${cr.governing_principle}</p>
+      <p class="mc-bar-note">${cr.purpose}</p>
+      <p class="mc-bar-note"><strong>Framework:</strong> ${cr.tagline} · <strong>Goal:</strong> ${s.connected_citizen_goal_pct}% per county & major city</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Reach readiness</div><div class="mc-stat__value">${s.arkansas_civic_reach_participation_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Connected</div><div class="mc-stat__value">${s.statewide_connected_participants.toLocaleString()}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Statewide reach</div><div class="mc-stat__value">${s.statewide_civic_reach_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Counties at 15%</div><div class="mc-stat__value">${s.counties_at_goal}/${s.counties_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Cities at 15%</div><div class="mc-stat__value">${s.cities_at_goal}/${s.cities_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Dashboard live</div><div class="mc-stat__value">${s.reach_dashboard_live ? 'Yes' : 'No'}</div></div>
+    </div>
+    <h2 class="mc-section-title">${cr.institutional_philosophy.title}</h2>
+    <p class="mc-bar-note">Educate & connect, not persuade: ${cr.institutional_philosophy.educate_and_remain_connected ? 'Yes' : 'No'} · Participation ≠ agreement: ${cr.institutional_philosophy.participation_not_agreement ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${cr.institutional_philosophy.connection_types.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cr.arkansas_reach_goal.title}</h2>
+    <p class="mc-bar-note"><strong>Formula:</strong> ${cr.arkansas_reach_goal.formula}</p>
+    <p class="mc-bar-note">Registered voters tracked: ${s.registered_voters_tracked ? 'Yes' : 'No'} · Voters in system: ${s.statewide_registered_voters.toLocaleString()}</p>
+    <h2 class="mc-section-title">${cr.county_objectives.title}</h2>
+    <p class="mc-bar-note">At goal: ${cr.county_objectives.counties_at_goal}/${cr.county_objectives.counties_total} · Own pace: ${cr.county_objectives.each_county_own_pace ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${cr.county_objectives.objectives.map(o => `<li>${o}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cr.city_objectives.title}</h2>
+    <p class="mc-bar-note">At goal: ${cr.city_objectives.cities_at_goal}/${cr.city_objectives.cities_total} · Rankings by educational reach: ${cr.city_objectives.rankings_by_educational_reach ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${cr.city_objectives.objectives.map(o => `<li>${o}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cr.engagement_levels.title}</h2>
+    <div class="mc-grid-2">${levelCards}</div>
+    <h2 class="mc-section-title">${cr.mission_control_reach_dashboard.title}</h2>
+    <p class="mc-bar-note">Live: ${cr.mission_control_reach_dashboard.live ? 'Yes' : 'No'} · Heat maps: ${cr.mission_control_reach_dashboard.executive_heat_maps ? 'Yes' : 'No'}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">${cr.community_growth_strategies.title}</h2>
+    <p class="mc-bar-note">Invitation not pressure: ${cr.community_growth_strategies.invitation_not_pressure ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${cr.community_growth_strategies.strategies.map(st => `<li>${st}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cr.quality_of_participation.title}</h2>
+    <p class="mc-bar-note">Meaningful over raw registration: ${cr.quality_of_participation.meaningful_over_raw_registration ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${cr.quality_of_participation.metrics.map(m => `<li>${m}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cr.ethical_standards.title}</h2>
+    <p class="mc-bar-note">Trust over growth: ${cr.ethical_standards.trust_more_important_than_growth ? 'Yes' : 'No'}</p>
+    <ul class="mc-deliverables">${cr.ethical_standards.standards.map(e => `<li>${e}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${cr.founders_standard.title}</h2>
+    <p class="mc-bar-note">${cr.founders_standard.text}</p>
+    <h2 class="mc-section-title">System Integration</h2>
+    <p class="mc-bar-note">${cr.integration.chain}</p>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <p class="mc-bar-note">${cr.long_term_vision}</p>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${cr.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${cr.recommended_next_build.number} — ${cr.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${cr.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_ARKANSAS_CIVIC_REACH_PARTICIPATION.md">MASTER_ARKANSAS_CIVIC_REACH_PARTICIPATION.md</a> ·
+      <a href="/data/arkansas-civic-reach-participation.json">JSON</a> ·
+      <a href="/mission-control/civic-atlas.html">Civic Atlas (#58)</a> ·
+      <a href="/mission-control/relational-organizing-growth-engine.html">Growth Engine (#69)</a> ·
+      <a href="/mission-control/arkansas-action-network.html">Action Network (#64)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

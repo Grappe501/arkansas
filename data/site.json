@@ -2,7 +2,7 @@
   "site": {
     "title": "Citizens Facts",
     "tagline": "Citizens United civic education — Understand → Teach → Lead",
-    "version": "1.89.0",
+    "version": "1.90.0",
     "route_registry": "/mission-control/routes.html",
     "component_registry": "/mission-control/components.html",
     "facts_framework": "/mission-control/facts.html",
@@ -74,6 +74,7 @@
     "arkansas_civic_ecosystem_master": "/mission-control/arkansas-civic-ecosystem.html",
     "arkansas_strategic_plan_2035": "/mission-control/arkansas-strategic-plan-2035.html",
     "master_launch_plan": "/mission-control/master-launch-plan.html",
+    "arkansas_civic_reach_participation": "/mission-control/arkansas-civic-reach-participation.html",
     "brand_identity": "/data/brand-identity.json",
     "constitution": "v1.0",
     "mission_control": "/mission-control/",
