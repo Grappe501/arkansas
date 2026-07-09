@@ -303,7 +303,7 @@ out = {
         'Public launch readiness 8% — early foundation only',
     ],
     'recommended_next_build': {
-        'number': 45,
+        'number': 46,
         'title': 'Component Specifications with Props/States',
         'note': 'Map version milestone panels, maturity dashboards, annual review workflows, and preservation archives to COMP-* from Build #17.',
     },

@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.49.0] - 2026-07-09 — Build #45 Master Systems Integration Blueprint
+
+### Institutional Operating Model v1.0
+- **Master Systems Integration Blueprint** — 12 primary systems, produces/consumes model
+- Information flow cycle: Research → Evidence → Education → Media → Learning → Community → Coalition → MC → Research
+- Systems Health dashboard — 10 indicators; Knowledge Graph as nervous system, Mission Control as conductor
+- 3/12 live cross-system data flows — 28% honest systems integration readiness
+- MC dashboard: `/mission-control/systems-integration.html`
+
 ## [1.48.0] - 2026-07-09 — Build #44 Master Institutional Roadmap
 
 ### V1–V10 Strategic Evolution Plan

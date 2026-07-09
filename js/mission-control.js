@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Systems Integration <a href="/mission-control/systems-integration.html" class="mc-inline-link">12 Systems →</a></h2>
+    <p class="mc-bar-note">Build #45 — Master systems integration blueprint, 12 systems, information flow cycle. MC as conductor. 3/12 live data flows. 28% integration readiness.</p>
     <h2 class="mc-section-title">Institutional Roadmap <a href="/mission-control/institutional-roadmap.html" class="mc-inline-link">V1–V10 →</a></h2>
     <p class="mc-bar-note">Build #44 — Master institutional roadmap, strategic evolution V1–V10. Current: V1 Foundation. 44 builds ≠ V10. 32% institutional maturity.</p>
     <h2 class="mc-section-title">Research Methodology <a href="/mission-control/research-methodology.html" class="mc-inline-link">10 Principles →</a></h2>
@@ -4317,6 +4319,92 @@ async function initInstitutionalRoadmap() {
   initDevConsole(mc);
 }
 
+async function initSystemsIntegration() {
+  const root = document.getElementById('mc-systems-integration-root');
+  if (!root) return;
+
+  const [siRes, mcRes] = await Promise.all([
+    fetch('/data/systems-integration.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const si = await siRes.json();
+  const mc = await mcRes.json();
+  const s = si.summary;
+  const health = si.systems_health_dashboard;
+
+  const sysRows = si.systems.map(sys => `
+    <tr><td>${sys.number}</td><td>${sys.title}</td><td>${sys.integration_pct}%</td>
+      <td><a href="${sys.route}">${sys.route}</a></td>
+      <td>${sys.data_flow_live ? 'Yes' : 'No'}</td><td>${sys.status}</td></tr>`).join('');
+
+  const sysCards = si.systems.map(sys => `
+    <div class="mc-card"><h3>System ${sys.number}: ${sys.title}</h3>
+      <p class="mc-bar-note">${sys.purpose}</p>
+      <p class="mc-bar-note">${sys.integration_pct}% · Flow: ${sys.data_flow_live ? 'live' : 'manual'} · ${sys.status}</p>
+      <p class="mc-bar-note"><strong>Produces:</strong> ${sys.produces.slice(0, 3).join(', ')}…</p>
+      ${sys.note ? `<p class="mc-bar-note">${sys.note}</p>` : ''}
+    </div>`).join('');
+
+  const healthRows = health.indicators.map(h => `
+    <tr><td>${h.title}</td><td>${h.score}%</td><td>${h.status}</td></tr>`).join('');
+
+  const flow = si.information_flow.map((f, i) =>
+    `${f}${i < si.information_flow.length - 1 ? ' →' : ''}`).join(' ');
+
+  const journey = si.unified_user_journey.map((j, i) =>
+    `${j}${i < si.unified_user_journey.length - 1 ? ' →' : ''}`).join(' ');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Systems Integration</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #45 · ${si.title}</p>
+      <h1>Master Systems Integration Blueprint</h1>
+      <p class="mc-header__question">${si.governing_principle}</p>
+      <p class="mc-bar-note">${si.purpose}</p>
+      <p class="mc-bar-note">Conductor: <a href="/mission-control/">Mission Control</a> · Nervous system: <a href="/mission-control/civic-intelligence.html">Knowledge Graph</a></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Integration readiness</div><div class="mc-stat__value">${s.systems_integration_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Systems</div><div class="mc-stat__value">${s.systems_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Live flows</div><div class="mc-stat__value">${s.systems_with_live_data_flow}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Avg integration</div><div class="mc-stat__value">${s.avg_system_integration_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Health avg</div><div class="mc-stat__value">${s.avg_systems_health_score}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Synthesis</div><div class="mc-stat__value">${s.executive_synthesis_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Twelve Primary Systems</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>System</th><th>Integration</th><th>Route</th><th>Live flow</th><th>Status</th></tr></thead>
+      <tbody>${sysRows}</tbody></table>
+    <div class="mc-grid-2">${sysCards}</div>
+    <h2 class="mc-section-title">Information Flow Cycle</h2>
+    <p class="mc-bar-note">${flow}</p>
+    <h2 class="mc-section-title">Systems Health Dashboard</h2>
+    <table class="mc-table"><thead><tr><th>Indicator</th><th>Score</th><th>Status</th></tr></thead>
+      <tbody>${healthRows}</tbody></table>
+    <h2 class="mc-section-title">Executive Intelligence Questions</h2>
+    <ul class="mc-deliverables">${si.executive_intelligence.questions.map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Unified User Journey</h2>
+    <p class="mc-bar-note">${journey}</p>
+    <h2 class="mc-section-title">Institutional Memory</h2>
+    <ul class="mc-deliverables">${si.institutional_memory.map(m => `<li>${m}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Integration Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${si.mc_integration.metrics.map(m => `
+        <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('')}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${si.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${si.recommended_next_build.number} — ${si.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${si.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_SYSTEMS_INTEGRATION.md">MASTER_SYSTEMS_INTEGRATION.md</a> ·
+      <a href="/data/systems-integration.json">JSON</a> ·
+      <a href="/mission-control/executive.html">Executive</a> ·
+      <a href="/data/institutional-roadmap.json">Roadmap</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -4360,4 +4448,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initCivicActionLab();
   initResearchMethodology();
   initInstitutionalRoadmap();
+  initSystemsIntegration();
 });

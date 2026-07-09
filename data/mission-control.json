@@ -1,6 +1,6 @@
 {
-  "version": "1.48.0",
-  "build": 44,
+  "version": "1.49.0",
+  "build": 45,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 44,
+    "overall_completion": 45,
     "current_build": {
-      "number": 44,
-      "title": "Citizens United Facts Master Institutional Roadmap"
-    },
-    "active_phase": "Strategic Evolution \u2014 Master Institutional Roadmap V1\u2013V10",
-    "last_completed": "Master Research Methodology & Standards Manual",
-    "next_build": {
       "number": 45,
+      "title": "Citizens United Facts Master Systems Integration Blueprint"
+    },
+    "active_phase": "Institutional Operating Model \u2014 Systems Integration Blueprint",
+    "last_completed": "Master Institutional Roadmap",
+    "next_build": {
+      "number": 46,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
@@ -59,6 +59,7 @@
     "research_methodology_readiness": 25,
     "institutional_maturity_pct": 32,
     "current_institutional_version": "V1",
+    "systems_integration_readiness": 28,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -66,8 +67,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 44,
-      "note": "Institutional Roadmap live \u2014 V1 at 68%, 32% maturity."
+      "value": 45,
+      "note": "Systems Integration live \u2014 12 systems, 3 live data flows."
     },
     {
       "id": "constitution",
@@ -398,7 +399,14 @@
       "label": "Institutional Maturity (V1\u2013V10)",
       "value": 32,
       "max": 100,
-      "note": "Current: V1 \u2014 software build #44 \u2260 V10."
+      "note": "Institutional maturity V1 \u2014 32% overall."
+    },
+    {
+      "id": "systems_integration",
+      "label": "Systems Integration Blueprint",
+      "value": 28,
+      "max": 100,
+      "note": "3/12 live flows \u2014 no event bus."
     }
   ],
   "public_readiness": {
@@ -955,6 +963,12 @@
       "id": "institutional_roadmap",
       "label": "Master Institutional Roadmap",
       "href": "/mission-control/institutional-roadmap.html",
+      "status": "complete"
+    },
+    {
+      "id": "systems_integration",
+      "label": "Systems Integration Blueprint",
+      "href": "/mission-control/systems-integration.html",
       "status": "complete"
     }
   ],
@@ -1981,6 +1995,56 @@
     }
   ],
   "builds": [
+    {
+      "number": 45,
+      "title": "Citizens United Facts Master Systems Integration Blueprint",
+      "version": "1.49.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Institutional Operating Model v1.0 \u2014 twelve systems working as one institution",
+      "summary": "12 systems, 3 live flows, avg 25% integration; 28% overall.",
+      "files_created": [
+        "data/systems-integration.json",
+        "docs/MASTER_SYSTEMS_INTEGRATION.md",
+        "builds/045-master-systems-integration-blueprint.md",
+        "mission-control/systems-integration.html",
+        "scripts/gen-systems-integration.py",
+        "scripts/update-mc-build45.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/systems-integration.html"
+      ],
+      "decisions_made": [
+        "12 primary systems \u2014 public education through contact network",
+        "Produces/consumes model per system \u2014 KG as nervous system, MC as conductor",
+        "10-stage information flow cycle \u2014 research back to research",
+        "Systems Health dashboard \u2014 10 health indicators from MC executive",
+        "3 systems with live data flow \u2014 Source Library, Evidence Ledger, Mission Control",
+        "28% honest readiness \u2014 no event bus"
+      ],
+      "open_questions": [
+        "Event bus vs static JSON linking?",
+        "User journey progress tracking?",
+        "KG consume-all-systems timing?"
+      ],
+      "risks": [
+        "Architecture without operational integration",
+        "Executive questions manual only",
+        "0 signups breaks journey"
+      ],
+      "next_recommended": 46,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/systems-integration.html",
+      "review_status": "complete"
+    },
     {
       "number": 44,
       "title": "Citizens United Facts Master Institutional Roadmap",
@@ -4062,19 +4126,19 @@
     }
   ],
   "briefing": {
-    "what_built": "Institutional Roadmap v1.0 \u2014 V1\u2013V10 versions, maturity metrics, preservation strategy",
-    "building_now": "V1 Foundation completing \u2014 platform live, enrollment and content partial",
+    "what_built": "Systems Integration v1.0 \u2014 12 systems, information flow, Systems Health, executive questions",
+    "building_now": "Taxonomy and MC linking \u2014 3/12 live cross-system data flows",
     "blocked": [
-      "Annual review workflow",
-      "Governance framework",
-      "V2 county activation"
+      "Cross-system event bus",
+      "Executive synthesis",
+      "User journey tracking"
     ],
     "ready_public": [
-      "Institutional Roadmap MC dashboard",
-      "10-version taxonomy",
-      "Honest maturity scoring"
+      "Systems Integration MC dashboard",
+      "12-system operating model",
+      "Health indicators"
     ],
-    "next": "Build #45 \u2014 Component specifications with props/states"
+    "next": "Build #46 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -4566,5 +4630,15 @@
     "v1_maturity_pct": 68,
     "software_builds": 44,
     "annual_review_live": false
+  },
+  "systems_integration": "/data/systems-integration.json",
+  "systems_integration_dashboard": "/mission-control/systems-integration.html",
+  "systems_integration_inventory": {
+    "readiness_score": 28,
+    "systems_total": 12,
+    "systems_with_live_data_flow": 3,
+    "avg_system_integration_pct": 25,
+    "avg_systems_health_score": 23,
+    "executive_synthesis_live": false
   }
 }
