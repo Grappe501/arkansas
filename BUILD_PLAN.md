@@ -2,7 +2,8 @@
 
 100 steps across 11 phases. Status key: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.2.0  
+**Current version:** 1.3.0 · **Build #1:** ✅ Complete
+
 **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)  
 **Repository:** [github.com/Grappe501/arkansas](https://github.com/Grappe501/arkansas)
 
@@ -12,7 +13,7 @@
 
 | # | Step | Status |
 |---|------|--------|
-| 1 | Define site mission: deep public understanding of *Citizens United* | ✅ `docs/CONSTITUTION.md` |
+| 1 | Define site mission: deep public understanding of *Citizens United* | ✅ Build #1 `builds/001-mission-statement.md` |
 | 2 | Define conversion goal: recruit local education leaders | ✅ |
 | 3 | Define core reader journey: Understand → Trust → Care → Teach → Lead | ✅ |
 | 4 | Define site promise: plain language with deep research underneath | ✅ |

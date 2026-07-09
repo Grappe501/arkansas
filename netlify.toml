@@ -5,6 +5,11 @@
 # Netlify Forms — detected from educate/index.html on deploy
 
 [[redirects]]
+  from = "/builds"
+  to = "/builds/"
+  status = 301
+
+[[redirects]]
   from = "/library"
   to = "/library/"
   status = 301

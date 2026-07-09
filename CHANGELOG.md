@@ -3,6 +3,14 @@
 All notable changes to Citizens Facts are documented here.
 Each entry from Ernie corresponds to a new version and GitHub commit.
 
+## [1.3.0] - 2026-07-09 — Build #1 Complete
+
+### Build #1: Project Mission Statement
+- Canonical mission locked in `builds/001-mission-statement.md` + HTML page
+- Build registry at `builds/BUILDS.md` and `/builds/`
+- Constitution updated to reference Build #1
+- Front Door hero aligned with mission (5-minute promise, no overwhelm)
+
 ## [1.2.0] - 2026-07-09
 
 ### Added — Master Build Plan (100 steps)
