@@ -13,6 +13,13 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.19.0] - 2026-07-09 — Build #15 Canonical Data Model
+
+### Master Data Model & Relationship Architecture
+- **Canonical Data Constitution v1.0** — 10 objects, 20 relationship types, everything connected
+- Relationship health dashboard, geographic/timeline/search intelligence scaffold
+- **Pivot:** Builds #16–#20 move to concrete product design (pages, components, DB, wireframes, deploy)
+
 ## [1.18.0] - 2026-07-09 — Build #14 ACUCOS
 
 ### Arkansas Citizens United Coalition Operating System

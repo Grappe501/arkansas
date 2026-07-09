@@ -1,0 +1,36 @@
+{
+  "version": "1.0",
+  "build": 15,
+  "updated": "2026-07-09",
+  "title": "Relationship Registry",
+  "model": "/data/canonical-data-model.json",
+  "summary": {
+    "relationship_types_defined": 20,
+    "edges_recorded": 0,
+    "objects_linked": 0,
+    "status": "Schema ready — edges populate when backend and forms integrate."
+  },
+  "relationship_types": [
+    { "id": "member_of", "title": "Member Of", "from": ["person"], "to": ["organization"] },
+    { "id": "volunteer_for", "title": "Volunteer For", "from": ["person"], "to": ["organization", "event"] },
+    { "id": "partner_with", "title": "Partner With", "from": ["organization"], "to": ["organization"] },
+    { "id": "hosted", "title": "Hosted", "from": ["person", "organization"], "to": ["event"] },
+    { "id": "attended", "title": "Attended", "from": ["person"], "to": ["event"] },
+    { "id": "downloaded", "title": "Downloaded", "from": ["person", "organization"], "to": ["educational_resource"] },
+    { "id": "shared", "title": "Shared", "from": ["person", "organization"], "to": ["educational_resource", "person", "public_official"] },
+    { "id": "reviewed", "title": "Reviewed", "from": ["person"], "to": ["research_object", "model_law"] },
+    { "id": "created", "title": "Created", "from": ["person", "organization"], "to": ["model_law", "ballot_initiative_concept", "event"] },
+    { "id": "updated", "title": "Updated", "from": ["person"], "to": ["model_law", "ballot_initiative_concept", "educational_resource"] },
+    { "id": "supports", "title": "Supports", "from": ["organization", "person"], "to": ["model_law", "ballot_initiative_concept"] },
+    { "id": "researches", "title": "Researches", "from": ["person", "organization"], "to": ["research_object", "topic"] },
+    { "id": "references", "title": "References", "from": ["educational_resource", "research_object"], "to": ["research_object", "topic", "model_law"] },
+    { "id": "teaches", "title": "Teaches", "from": ["person"], "to": ["topic", "educational_resource"] },
+    { "id": "mentors", "title": "Mentors", "from": ["person"], "to": ["person"] },
+    { "id": "invited", "title": "Invited", "from": ["person"], "to": ["person", "organization"] },
+    { "id": "referred", "title": "Referred", "from": ["person", "organization"], "to": ["person", "organization"] },
+    { "id": "discussed", "title": "Discussed", "from": ["event"], "to": ["topic", "research_object"] },
+    { "id": "presented", "title": "Presented", "from": ["person", "organization"], "to": ["public_official", "event"] },
+    { "id": "located_in", "title": "Located In", "from": ["person", "organization", "event"], "to": ["county", "city"] }
+  ],
+  "edges": []
+}

@@ -1,6 +1,6 @@
 {
-  "version": "1.1",
-  "build": 13,
+  "version": "1.2",
+  "build": 15,
   "updated": "2026-07-09",
   "title": "Master Information Architecture v1.0",
   "route": "/mission-control/architecture.html",
@@ -42,6 +42,14 @@
       "routes": ["/educate/", "/action/"],
       "mission_control": "/mission-control/civic-ecosystem.html",
       "build": 12
+    },
+    {
+      "id": "canonical_data",
+      "title": "Canonical Data Model",
+      "description": "Master data model — 10 objects, 20 relationship types, everything connected.",
+      "routes": ["/mission-control/data-model.html"],
+      "mission_control": "/mission-control/data-model.html",
+      "build": 15
     },
     {
       "id": "coalition_outreach",

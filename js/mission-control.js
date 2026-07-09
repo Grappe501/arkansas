@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Canonical Data Model <a href="/mission-control/data-model.html" class="mc-inline-link">Relationship Architecture →</a></h2>
+    <p class="mc-bar-note">Build #15 — 10 canonical objects, 20 relationship types, geographic &amp; timeline intelligence. Everything connected.</p>
     <h2 class="mc-section-title">ACUCOS <a href="/mission-control/coalition.html" class="mc-inline-link">Coalition Operating System →</a></h2>
     <p class="mc-bar-note">Build #14 — ACUCOS v1.0, 75 county pages, 6 participation levels, growth engine, recognition system.</p>
     <h2 class="mc-section-title">Arkansas Civic Ecosystem <a href="/mission-control/civic-ecosystem.html" class="mc-inline-link">County Dashboard →</a></h2>
@@ -1420,6 +1422,110 @@ async function initCoalitionBlueprint() {
   initDevConsole(mc);
 }
 
+async function initDataModelBlueprint() {
+  const root = document.getElementById('mc-data-model-root');
+  if (!root) return;
+
+  const [modelRes, relRes, mcRes] = await Promise.all([
+    fetch('/data/canonical-data-model.json'),
+    fetch('/data/relationship-registry.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const model = await modelRes.json();
+  const rel = await relRes.json();
+  const mc = await mcRes.json();
+  const rh = mc.relationship_health || {};
+  const metrics = model.mission_control_integration?.relationship_health_metrics || [];
+
+  const metricValue = (id) => rh[id] ?? 0;
+
+  const objectRows = model.canonical_objects.map(o => `
+    <tr>
+      <td><strong>${o.title}</strong></td>
+      <td><code>${o.id_prefix || o.id}</code></td>
+      <td>${(o.schema || o.registry || o.directory || o.calendar || o.workspace || '—').replace(/^.*\//, '')}</td>
+      <td>${(o.relationships_out || []).join(', ')}</td>
+    </tr>`).join('');
+
+  const chainRows = (model.relationship_engine?.example_chain || []).map(s => `
+    <tr><td>${s.step}</td><td>${s.object}</td><td>${s.action}</td><td>${s.target}</td></tr>`).join('');
+
+  const relTypeRows = rel.relationship_types.map(r => `
+    <tr><td>${r.title}</td><td>${(r.from || []).join(', ')}</td><td>→</td><td>${(r.to || []).join(', ')}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Canonical Data Model</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #15 · ${model.title}</p>
+      <h1>Master Data Model &amp; Relationships</h1>
+      <p class="mc-header__question">${model.governing_principle}</p>
+    </header>
+    <section class="mc-card">
+      <h3>Platform Philosophy</h3>
+      <p class="mc-bar-note"><strong>${model.philosophy}</strong></p>
+      <p class="mc-bar-note">${model.purpose}</p>
+    </section>
+    <h2 class="mc-section-title">Relationship Health</h2>
+    <div class="mc-executive mc-executive--hero">
+      ${metrics.slice(0, 6).map(m => `
+        <div class="mc-stat"><div class="mc-stat__label">${m.title}</div><div class="mc-stat__value">${metricValue(m.id)}</div></div>`).join('')}
+    </div>
+    <table class="mc-table">
+      <thead><tr><th>Metric</th><th>Value</th></tr></thead>
+      <tbody>${metrics.map(m => `<tr><td>${m.title}</td><td>${metricValue(m.id)}</td></tr>`).join('')}
+      </tbody>
+    </table>
+    <p class="mc-bar-note">Readiness: ${rh.readiness_score ?? 8}% · Edges: ${rel.summary.edges_recorded} · Relationship growth is a major success indicator.</p>
+    <h2 class="mc-section-title">Canonical Objects (${model.canonical_objects.length})</h2>
+    <table class="mc-table">
+      <thead><tr><th>Object</th><th>Prefix</th><th>Registry</th><th>Relationships →</th></tr></thead>
+      <tbody>${objectRows}</tbody>
+    </table>
+    <h2 class="mc-section-title">Relationship Engine — Example Chain</h2>
+    <table class="mc-table">
+      <thead><tr><th>Step</th><th>Object</th><th>Action</th><th>Target</th></tr></thead>
+      <tbody>${chainRows}</tbody>
+    </table>
+    <h2 class="mc-section-title">Relationship Types (${rel.relationship_types.length})</h2>
+    <div class="mc-card mc-inv-table-wrap" style="max-height:280px;overflow-y:auto">
+      <table class="mc-table mc-inv-table">
+        <thead><tr><th>Type</th><th>From</th><th></th><th>To</th></tr></thead>
+        <tbody>${relTypeRows}</tbody>
+      </table>
+    </div>
+    <h2 class="mc-section-title">Geographic Intelligence</h2>
+    <div class="mc-dep-map">
+      ${(model.geographic_intelligence?.hierarchy || []).map((h, i, arr) => `
+        <span class="mc-dep-map__node"><span class="mc-dep-map__label">${h}</span></span>
+        ${i < arr.length - 1 ? '<span class="mc-dep-map__arrow">↓</span>' : ''}`).join('')}
+    </div>
+    <p class="mc-bar-note">${model.geographic_intelligence?.counties_total || 75} Arkansas counties · ${model.geographic_intelligence?.mission_control || ''}</p>
+    <h2 class="mc-section-title">Search Intelligence (planned)</h2>
+    <ul class="mc-deliverables">${(model.search_intelligence?.example_queries || []).map(q => `<li>${q}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Future AI Readiness</h2>
+    <p class="mc-bar-note">${model.future_ai_readiness?.principle || ''}</p>
+    <ul class="mc-deliverables">${(model.future_ai_readiness?.capabilities || []).map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Platform Integrations</h2>
+    <table class="mc-table">
+      <thead><tr><th>System</th><th>Build</th><th>Role</th></tr></thead>
+      <tbody>${(model.platform_integrations || []).map(i => `
+        <tr><td><a href="${i.route}">${i.system}</a></td><td>#${i.build}</td><td>${i.role}</td></tr>`).join('')}
+      </tbody>
+    </table>
+    <h2 class="mc-section-title">Implementation Pivot — Builds #16–#20</h2>
+    <p class="mc-bar-note">${model.implementation_pivot?.note || ''}</p>
+    <ul class="mc-deliverables">${(model.implementation_pivot?.next_builds || []).map(b => `
+      <li><strong>Build #${b.number}</strong> — ${b.title}</li>`).join('')}</ul>
+    <p class="mc-bar-note">
+      <a href="/docs/CANONICAL_DATA_CONSTITUTION.md">CANONICAL_DATA_CONSTITUTION.md</a> ·
+      <a href="/data/canonical-data-model.json">Model JSON</a> ·
+      <a href="/data/relationship-registry.json">Relationships</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -1433,4 +1539,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initKnowledgeGraphBlueprint();
   initCivicEcosystemBlueprint();
   initCoalitionBlueprint();
+  initDataModelBlueprint();
 });

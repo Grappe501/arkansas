@@ -2,6 +2,7 @@
 
 | Build | Title | Version | Status | Document |
 |-------|-------|---------|--------|----------|
+| **#15** | **Canonical Data Model** | **1.19.0** | **✅ Complete** | [015](015-canonical-data-model.md) · [/mission-control/data-model.html](../mission-control/data-model.html) |
 | **#14** | **ACUCOS** | **1.18.0** | **✅ Complete** | [014](014-acucos.md) · [/mission-control/coalition.html](../mission-control/coalition.html) |
 | **#13** | **Coalition & Outreach** | **1.17.0** | **✅ Complete** | [013](013-coalition-outreach.md) · [/coalition/](../coalition/) |
 | **#12** | **Arkansas Civic Ecosystem** | **1.16.1** | **✅ Complete** | [012](012-civic-action-ecosystem.md) · [/mission-control/civic-ecosystem.html](../mission-control/civic-ecosystem.html) |
@@ -14,7 +15,7 @@
 | **#5** | **Site Architecture** | **1.9.0** | **✅ Complete** | [005](005-master-site-architecture.md) |
 | **#4** | **Phase Registry** | **1.8.0** | **✅ Complete** | [004](004-master-phase-registry.md) |
 
-## Platform Stack (Builds #4–#14)
+## Platform Stack (Builds #4–#15)
 
 | Layer | Route | Focus |
 |-------|-------|-------|
@@ -27,11 +28,12 @@
 | Research Constitution | `/mission-control/research.html` | Evidence & sources |
 | **Knowledge Graph** | `/mission-control/knowledge-graph.html` | Connected knowledge |
 | **Civic Ecosystem** | `/mission-control/civic-ecosystem.html` | Arkansas leadership & counties |
-| **ACUCOS** | `/mission-control/coalition.html` | **Coalition Operating System** |
+| **ACUCOS** | `/mission-control/coalition.html` | Coalition Operating System |
+| **Canonical Data Model** | `/mission-control/data-model.html` | **Everything connected** |
 
-## ACUCOS Rule (Build #14)
+## Data Model Rule (Build #15)
 
-Coalition growth is a primary success measure. Vision: one educational partner per Arkansas county. Not a supporter list — a living ecosystem.
+Everything is connected. 10 canonical objects, 20 relationship types. Value grows through relationships, not page count. **Next:** concrete product (Builds #16–#20).
 
 ## Arkansas Rule (Build #12)
 

@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.18.0 · **ACUCOS:** [/mission-control/coalition.html](/mission-control/coalition.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #14:** ✅ ACUCOS · **Build #13:** ✅ Coalition Layer · **Build #12:** ✅ Arkansas Civic  
+**Current version:** 1.19.0 · **Data Model:** [/mission-control/data-model.html](/mission-control/data-model.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #15:** ✅ Canonical Data Model · **Build #14:** ✅ ACUCOS · **Build #12:** ✅ Arkansas Civic  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
 > **Arkansas pilot (v1):** All civic action frameworks scoped to Arkansas first — modular for future states.
@@ -256,9 +256,48 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **7** | **Civic Action Layer** | **🟡 Scaffolded** |
 | 8–12 | Forms, tech, launch | 🟡 |
 | **13** | **Coalition & Outreach** | **✅ v1.17.0** |
-| **14** | **ACUCOS** | **🟡 v1.18.0** |
+| **14** | **ACUCOS** | **✅ v1.18.0** |
+| **15** | **Canonical Data Model** | **✅ v1.19.0** |
 
-**Next:** Build #15 — First Deep Content with KG-IDs, Evidence IDs, and Arkansas-focused articles.
+**Next:** Build #16 — Complete page inventory (every screen and route). **Pivot:** Builds #16–#20 focus on concrete product design, not constitutions.
+
+---
+
+## Phase 15 — Canonical Data Model (Build #15) ★ NEW
+
+*Master data model & relationship architecture — everything connected.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| D1 | Canonical Data Constitution | ✅ | `docs/CANONICAL_DATA_CONSTITUTION.md` |
+| D2 | 10 canonical objects | ✅ | `data/canonical-data-model.json` |
+| D3 | 20 relationship types | ✅ | `data/relationship-registry.json` |
+| D4 | Relationship engine + example chain | ✅ | MC dashboard |
+| D5 | Geographic intelligence (75 counties) | ✅ | Hierarchy in model |
+| D6 | Timeline & search intelligence scaffold | 🟡 | Planned queries documented |
+| D7 | Future AI readiness | 🟡 | Schema ready |
+| D8 | Relationship health dashboard | ✅ | `/mission-control/data-model.html` |
+| D9 | Platform integration map | ✅ | KG, Research, Civic, ACUCOS |
+
+**Governing principle:** The platform grows in value through stronger relationships, not more pages.
+
+---
+
+## Implementation Pivot — Builds #16–#20
+
+Stop creating high-level constitutions. Next builds are **concrete product design**:
+
+| Build | Title |
+|-------|-------|
+| **#16** | Complete page inventory (every screen and route) |
+| **#17** | Component inventory (cards, timelines, Action Hub, dashboards, forms) |
+| **#18** | Database schema and entity relationships |
+| **#19** | UX wireframes for desktop, tablet, and mobile |
+| **#20** | GitHub repository structure and Netlify deployment blueprint |
+
+---
+
+**Deferred:** Deep content articles (KG-IDs, Evidence IDs) — after product inventory stabilizes.
 
 ---
 

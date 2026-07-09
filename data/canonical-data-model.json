@@ -1,0 +1,207 @@
+{
+  "version": "1.0",
+  "build": 15,
+  "updated": "2026-07-09",
+  "title": "Canonical Data Constitution v1.0",
+  "scope": "arkansas",
+  "route": "/mission-control/data-model.html",
+  "data_file": "/data/canonical-data-model.json",
+  "relationship_registry": "/data/relationship-registry.json",
+  "constitution": "/docs/CANONICAL_DATA_CONSTITUTION.md",
+  "philosophy": "Everything is connected. Every object has relationships. Every relationship creates new educational opportunities.",
+  "purpose": "Define the canonical data architecture for the Citizens United Education Platform — one interconnected civic education ecosystem rather than separate systems.",
+  "governing_principle": "The platform becomes more valuable not because it has more pages, but because it has stronger relationships. As the network grows, the educational value of every individual connection grows with it.",
+  "canonical_objects": [
+    {
+      "id": "person",
+      "title": "Person",
+      "description": "Individual participant",
+      "id_prefix": "PERSON",
+      "schema": "/data/participant-profile-schema.json",
+      "tracker": "/js/civic-profile.js",
+      "fields": [
+        "person_id", "name", "contact_information", "county", "city",
+        "learning_progress", "leadership_level", "interests", "skills",
+        "volunteer_interests", "referral_history", "community_conversations",
+        "downloads", "organization_memberships"
+      ],
+      "relationships_out": ["organization", "county", "event", "resource", "public_official", "research", "referral"]
+    },
+    {
+      "id": "organization",
+      "title": "Organization",
+      "description": "Coalition partner (ACUCOS)",
+      "id_prefix": "ORG",
+      "schema": "/data/organization-profile-schema.json",
+      "directory": "/data/coalition-directory.json",
+      "fields": [
+        "organization_id", "name", "type", "county", "website", "contacts",
+        "partnership_level", "educational_interests", "events", "resource_usage"
+      ],
+      "relationships_out": ["person", "event", "resource", "county", "community_conversation"]
+    },
+    {
+      "id": "county",
+      "title": "County",
+      "description": "Arkansas county geographic and civic hub",
+      "id_prefix": "COUNTY",
+      "schema": "/data/county-coalition-index.json",
+      "counties_file": "/data/arkansas-counties.json",
+      "fields": [
+        "county_id", "fips", "name", "population", "legislative_districts",
+        "coalition_organizations", "education_leaders", "events", "downloads",
+        "conversations", "public_officials", "completeness_pct"
+      ],
+      "relationships_out": ["organization", "person", "event", "public_official", "resource"]
+    },
+    {
+      "id": "educational_resource",
+      "title": "Educational Resource",
+      "description": "Tracked educational asset",
+      "id_prefix": "RES",
+      "inventory": "/data/content-inventory.json",
+      "examples": ["article", "timeline", "video", "download", "presentation", "discussion_guide", "chart", "faq", "toolkit"],
+      "fields": ["resource_id", "type", "title", "url", "depth_level", "topics", "evidence_ids", "kg_ids"],
+      "relationships_out": ["topic", "person", "organization", "event", "research"]
+    },
+    {
+      "id": "event",
+      "title": "Event",
+      "description": "Educational gathering or session",
+      "id_prefix": "EVT",
+      "calendar": "/data/coalition-events.json",
+      "examples": ["community_conversation", "civic_club_presentation", "faith_discussion", "campus_presentation", "webinar", "training_session"],
+      "fields": ["event_id", "type", "title", "date", "county", "city", "host", "organization", "attendance"],
+      "relationships_out": ["county", "person", "organization", "resource", "follow_up"]
+    },
+    {
+      "id": "research_object",
+      "title": "Research Object",
+      "description": "Verified research and evidence",
+      "id_prefix": "EV",
+      "registry": "/data/evidence-registry.json",
+      "framework": "/data/research-framework.json",
+      "fields": ["evidence_id", "source", "citation", "topic", "related_pages", "related_laws", "related_cases", "review_status"],
+      "relationships_out": ["content", "chart", "timeline", "reform", "solution", "model_law"]
+    },
+    {
+      "id": "public_official",
+      "title": "Public Official",
+      "description": "Educational reference object for elected officials",
+      "id_prefix": "OFF",
+      "route": "/action/contact-legislators.html",
+      "fields": ["official_id", "office", "district", "jurisdiction", "contact", "materials_shared", "legislative_interests"],
+      "relationships_out": ["county", "state", "educational_packet", "model_law", "person"]
+    },
+    {
+      "id": "model_law",
+      "title": "Model Law",
+      "description": "Educational draft legislation",
+      "id_prefix": "MLAW",
+      "workspace": "/action/draft-laws.html",
+      "fields": ["model_law_id", "title", "jurisdiction", "status", "constitutional_notes", "contributors"],
+      "relationships_out": ["research", "constitutional_principle", "current_law", "organization", "person", "public_official"]
+    },
+    {
+      "id": "ballot_initiative_concept",
+      "title": "Ballot Initiative Concept",
+      "description": "Educational workspace for initiative ideas",
+      "id_prefix": "BAL",
+      "workspace": "/action/ballot-lab.html",
+      "fields": ["initiative_id", "title", "state", "constitutional_considerations", "draft_language", "status"],
+      "relationships_out": ["research", "constitution", "organization", "person", "public_official", "historical_initiative"]
+    },
+    {
+      "id": "topic",
+      "title": "Topic",
+      "description": "Knowledge graph topic node (cross-cutting)",
+      "id_prefix": "KG",
+      "registry": "/data/kg-registry.json",
+      "graph": "/data/knowledge-graph.json",
+      "relationships_out": ["resource", "research", "person", "organization", "event"]
+    }
+  ],
+  "relationship_engine": {
+    "title": "Relationship Engine",
+    "principle": "Mission Control understands relationships automatically. Every connection strengthens institutional knowledge.",
+    "example_chain": [
+      { "step": 1, "object": "person", "action": "belongs_to", "target": "county" },
+      { "step": 2, "object": "person", "action": "member_of", "target": "organization" },
+      { "step": 3, "object": "person", "action": "hosted", "target": "event" },
+      { "step": 4, "object": "person", "action": "downloaded", "target": "resource" },
+      { "step": 5, "object": "person", "action": "shared", "target": "referral" },
+      { "step": 6, "object": "person", "action": "created", "target": "model_law" },
+      { "step": 7, "object": "person", "action": "presented", "target": "public_official" }
+    ],
+    "status": "scaffold"
+  },
+  "geographic_intelligence": {
+    "hierarchy": ["Arkansas", "County", "City", "Community", "Organization", "Person"],
+    "pilot_state": "Arkansas",
+    "counties_total": 75,
+    "mission_control": "Visualize educational growth geographically"
+  },
+  "timeline_intelligence": {
+    "events": ["joined", "downloaded", "hosted", "presented", "shared", "updated", "reviewed"],
+    "purpose": "Complete institutional history per object"
+  },
+  "search_intelligence": {
+    "status": "planned",
+    "example_queries": [
+      "All organizations in White County",
+      "Every presentation hosted in Pulaski County",
+      "Resources about Super PACs",
+      "Community conversations this month",
+      "Research supporting a model law",
+      "Organizations interested in transparency",
+      "Events related to constitutional amendments"
+    ]
+  },
+  "future_ai_readiness": {
+    "principle": "AI should always rely on verified platform data.",
+    "capabilities": [
+      "Recommend organizations",
+      "Suggest educational resources",
+      "Build county education plans",
+      "Recommend community partners",
+      "Identify underserved counties",
+      "Generate educational event packets",
+      "Connect researchers",
+      "Answer questions using verified platform knowledge"
+    ],
+    "status": "schema_ready"
+  },
+  "mission_control_integration": {
+    "route": "/mission-control/data-model.html",
+    "relationship_health_metrics": [
+      { "id": "people_connected", "title": "People connected" },
+      { "id": "organizations_connected", "title": "Organizations connected" },
+      { "id": "counties_active", "title": "Counties active" },
+      { "id": "events_hosted", "title": "Events hosted" },
+      { "id": "resources_shared", "title": "Resources shared" },
+      { "id": "community_conversations", "title": "Community conversations" },
+      { "id": "research_objects", "title": "Research objects" },
+      { "id": "model_laws", "title": "Model laws" },
+      { "id": "initiative_concepts", "title": "Initiative concepts" },
+      { "id": "packets_shared", "title": "Educational packets shared" }
+    ]
+  },
+  "platform_integrations": [
+    { "system": "Knowledge Graph", "build": 11, "route": "/mission-control/knowledge-graph.html", "role": "Topic and content relationships" },
+    { "system": "Research Framework", "build": 10, "route": "/mission-control/research.html", "role": "Research objects and evidence" },
+    { "system": "Arkansas Civic Ecosystem", "build": 12, "route": "/mission-control/civic-ecosystem.html", "role": "Person and county leadership" },
+    { "system": "ACUCOS", "build": 14, "route": "/mission-control/coalition.html", "role": "Organization and county coalition" },
+    { "system": "Content Inventory", "build": 6, "route": "/mission-control/inventory.html", "role": "Educational resources" },
+    { "system": "MRID System", "build": 7, "route": "/mission-control/mrid.html", "role": "Requirement traceability" }
+  ],
+  "implementation_pivot": {
+    "note": "Builds #16–#20 pivot from constitutions to concrete product design.",
+    "next_builds": [
+      { "number": 16, "title": "Complete page inventory (every screen and route)" },
+      { "number": 17, "title": "Component inventory (cards, timelines, Action Hub, dashboards, forms)" },
+      { "number": 18, "title": "Database schema and entity relationships" },
+      { "number": 19, "title": "UX wireframes for desktop, tablet, and mobile" },
+      { "number": 20, "title": "GitHub repository structure and Netlify deployment blueprint" }
+    ]
+  }
+}
