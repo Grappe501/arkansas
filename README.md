@@ -1,33 +1,50 @@
 # Citizens Facts
 
-A versioned research system tracking **Citizens United** reform, ballot initiatives, and democratic finance policy across the United States.
+**The definitive public encyclopedia on one Supreme Court case and its consequences.**
 
-Built incrementally from verified research snapshots provided by Ernie. Each entry receives a new version, GitHub commit, and Netlify deployment.
+A civic education engine — not a brochure. Turn a curious reader into a local educator.
 
-## Research Tracks
+**Mission path:** Understand → Trust → Care → Teach → Lead
 
-1. **Citizens United Legal & Political History** — What the decision held, Super PAC power, state regulatory limits.
-2. **Anti–Citizens United Reform Efforts** — Maine litigation, American Promise amendment, state test cases.
-3. **Ballot Initiatives & Legislative Routes** — Missouri, Florida, California, and state-specific paths.
+## Live Site
 
-## Current Version: 1.0.0
+**[arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)**
 
-### Entry 001 — Montana & Hawaii: Two Paths Against Citizens United
+## Architecture
 
-- **Montana** — Initiative 194 (ballot initiative path); county signature verification due July 17, 2026.
-- **Hawaii** — Act 11 (legislative corporate-charter path); effective July 1, 2027.
+| Level | What it is |
+|-------|------------|
+| **0 — Front Door** | Six plain-language questions. "Why should I care?" |
+| **1 — Learning Halls** | Seven halls from history through live reform (Montana/Hawaii) |
+| **2 — Depth** | Every topic: 1-min → 5-min → 20-min → Research file |
+| **3 — Educate** | Education Lead signup — host, teach, research, lead locally |
+
+### Seven Learning Halls
+
+1. The Story Before Citizens United
+2. The Case Itself
+3. What Changed After 2010
+4. The Money Map
+5. The Debate
+6. Reform Paths
+7. **Montana and Hawaii** (LIVE)
+
+## Current Version: 1.1.0
+
+Phase 1 civic education engine scaffold. Halls 1–6 have L1 content; deeper levels expand in future versions.
 
 ## Project Structure
 
 ```
-├── index.html              # Homepage
-├── entries/                # Published research entries (HTML)
-├── content/entries/        # Structured entry data (JSON)
-├── data/site.json          # Site manifest & entry index
-├── css/styles.css          # Design system
-├── js/app.js               # Site utilities
-├── VERSION                 # Current release version
-└── netlify.toml            # Netlify deployment config
+├── index.html              # Level 0 — Front Door
+├── halls/                  # Level 1 — Seven Learning Halls
+├── educate/                # Level 3 — Education Lead funnel + form
+├── content/entries/        # Structured live research nodes (JSON)
+├── data/
+│   ├── site.json           # Site manifest
+│   └── knowledge.json      # Halls, ladder, depths schema
+├── css/                    # styles.css + education.css
+└── js/                     # layout.js, depth.js, app.js
 ```
 
 ## Local Development
@@ -36,16 +53,14 @@ Built incrementally from verified research snapshots provided by Ernie. Each ent
 npm start
 ```
 
-Opens a local server at `http://localhost:8080`.
-
 ## Deployment
 
 - **GitHub:** [Grappe501/arkansas](https://github.com/Grappe501/arkansas)
-- **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
-- **Netlify:** Auto-deploys on push to `main`
+- **Netlify:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/) — auto-deploys on push to `main`
 
 ## Versioning
 
-| Version | Entry | Description |
-|---------|-------|-------------|
-| 1.0.0   | 001   | Initial site + Montana/Hawaii Citizens United snapshot |
+| Version | Description |
+|---------|-------------|
+| 1.1.0   | Civic education engine — Front Door, 7 Halls, Educate funnel |
+| 1.0.0   | Initial site + Montana/Hawaii research entry |

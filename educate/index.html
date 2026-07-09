@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Become a Citizens United Education Lead — host, teach, research, or build materials for your community.">
+  <title>Educate Your Community | Citizens Facts</title>
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/education.css">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="site-header"></div>
+  <main class="site-main">
+    <nav class="breadcrumb"><a href="/">Front Door</a> → Educate</nav>
+
+    <header class="hall-header">
+      <span class="ladder-badge">Level 3 — Education to Action</span>
+      <h1>Do you want to help other people understand this?</h1>
+      <p class="hall-purpose">The site does not jump from "learn" to "donate." It creates people who can explain <em>Citizens United</em> to others.</p>
+      <div class="ladder-strip">
+        <span class="ladder-step">Understand</span>
+        <span class="ladder-step">Trust</span>
+        <span class="ladder-step">Care</span>
+        <span class="ladder-step ladder-step--active">Teach</span>
+        <span class="ladder-step ladder-step--active">Lead</span>
+      </div>
+    </header>
+
+    <section aria-labelledby="paths-heading">
+      <h2 id="paths-heading" class="section-title">Choose Your Path</h2>
+      <div class="action-paths">
+        <article class="action-card">
+          <h3>I want to host a conversation</h3>
+          <p>For living rooms, churches, libraries, campuses, and civic clubs.</p>
+        </article>
+        <article class="action-card">
+          <h3>I want to teach a class</h3>
+          <p>For educators, organizers, retired professionals, and students.</p>
+        </article>
+        <article class="action-card">
+          <h3>I want to research my state</h3>
+          <p>For policy, legal, and data volunteers.</p>
+        </article>
+        <article class="action-card">
+          <h3>I want to help build materials</h3>
+          <p>For writers, designers, video editors, and speakers.</p>
+        </article>
+        <article class="action-card">
+          <h3>I want to lead my county or city</h3>
+          <p>For serious local education leads.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="form-heading">
+      <h2 id="form-heading" class="section-title">Raise Your Hand to Lead Education in Your Area</h2>
+      <p>This form is an invitation to leadership — not a mailing list signup.</p>
+
+      <form class="lead-form" name="education-lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/educate/thanks.html">
+        <input type="hidden" name="form-name" value="education-lead">
+        <p class="form-note" hidden>
+          <label>Don't fill this out: <input name="bot-field"></label>
+        </p>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="city">City *</label>
+            <input type="text" id="city" name="city" required>
+          </div>
+          <div class="form-group">
+            <label for="state">State *</label>
+            <input type="text" id="state" name="state" required>
+          </div>
+          <div class="form-group">
+            <label for="county">County</label>
+            <input type="text" id="county" name="county">
+          </div>
+          <div class="form-group">
+            <label for="zip">ZIP *</label>
+            <input type="text" id="zip" name="zip" required>
+          </div>
+          <div class="form-group form-group--full">
+            <label>I want to help as: *</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="role" value="local-education-lead"> Local education lead</label>
+              <label><input type="checkbox" name="role" value="research-volunteer"> Research volunteer</label>
+              <label><input type="checkbox" name="role" value="speaker-presenter"> Speaker / presenter</label>
+              <label><input type="checkbox" name="role" value="host-conversation"> Host a community conversation</label>
+              <label><input type="checkbox" name="role" value="data-research"> Data / research support</label>
+              <label><input type="checkbox" name="role" value="campus-organizer"> Student / campus organizer</label>
+              <label><input type="checkbox" name="role" value="faith-outreach"> Faith / community group outreach</label>
+              <label><input type="checkbox" name="role" value="legal-policy"> Legal / policy research</label>
+              <label><input type="checkbox" name="role" value="content-video"> Content / writing / video</label>
+            </div>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="experience">Experience level *</label>
+            <select id="experience" name="experience" required>
+              <option value="">Select one</option>
+              <option value="just-learning">Just learning</option>
+              <option value="some-knowledge">Some knowledge</option>
+              <option value="very-knowledgeable">Very knowledgeable</option>
+              <option value="professional">Professional / legal / policy background</option>
+            </select>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="host-event">Are you willing to host or help organize an event?</label>
+            <select id="host-event" name="host-event">
+              <option value="">Select one</option>
+              <option value="yes">Yes</option>
+              <option value="maybe">Maybe — need more info</option>
+              <option value="no">Not right now</option>
+            </select>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="toolkit">Do you want a starter toolkit?</label>
+            <select id="toolkit" name="toolkit">
+              <option value="">Select one</option>
+              <option value="yes">Yes</option>
+              <option value="no">No thanks</option>
+            </select>
+          </div>
+          <div class="form-group form-group--full">
+            <label for="notes">Notes</label>
+            <textarea id="notes" name="notes" placeholder="Tell us about your community, interests, or questions."></textarea>
+          </div>
+        </div>
+
+        <button type="submit" class="form-submit">Raise Your Hand to Lead Education in Your Area</button>
+        <p class="form-note">Submitted via Netlify Forms. We will follow up about education opportunities in your area.</p>
+      </form>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="/js/layout.js"></script>
+</body>
+</html>

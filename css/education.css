@@ -1,0 +1,386 @@
+/* Citizens Facts — Education Engine extensions v1.1.0 */
+
+/* Front Door */
+.lobby-question {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.lobby-question h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+  color: var(--color-accent);
+}
+
+.lobby-question p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.ladder-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-highlight);
+  margin-bottom: 0.5rem;
+}
+
+/* CTA */
+.cta-banner {
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin: 2.5rem 0;
+  text-align: center;
+}
+
+.cta-banner h2 {
+  margin: 0 0 0.75rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.cta-banner p {
+  margin: 0 0 1.25rem;
+  opacity: 0.92;
+}
+
+.cta-button {
+  display: inline-block;
+  background: var(--color-highlight);
+  color: #fff;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cta-button:hover {
+  background: #a34a1e;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* Halls grid */
+.halls-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.hall-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.hall-card:hover {
+  border-color: var(--color-accent-light);
+  box-shadow: 0 4px 20px rgba(26, 31, 46, 0.12);
+}
+
+.hall-card a {
+  display: block;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.hall-card__number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-highlight);
+}
+
+.hall-card h3 {
+  margin: 0.35rem 0 0.5rem;
+  font-size: 1.1rem;
+  color: var(--color-accent);
+}
+
+.hall-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.hall-card--live {
+  border-left: 4px solid var(--color-montana);
+}
+
+.hall-card__live {
+  display: inline-block;
+  background: #e8f5e9;
+  color: var(--color-montana);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+/* Depth toggle */
+.depth-panel {
+  margin: 2rem 0;
+}
+
+.depth-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  padding: 0.35rem;
+  background: var(--color-surface-alt);
+  border-radius: var(--radius);
+}
+
+.depth-toggle__btn {
+  flex: 1;
+  min-width: 5rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: var(--color-surface);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.depth-toggle__btn:hover {
+  border-color: var(--color-accent-light);
+  color: var(--color-accent);
+}
+
+.depth-toggle__btn--active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+.depth-layer {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+}
+
+.depth-layer[hidden] {
+  display: none;
+}
+
+.depth-layer--stub {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* Hall page */
+.hall-header {
+  margin-bottom: 2rem;
+}
+
+.hall-header h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  color: var(--color-accent);
+}
+
+.hall-purpose {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  border-left: 4px solid var(--color-highlight);
+  padding-left: 1.25rem;
+  margin: 1rem 0 0;
+}
+
+.drilldown-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.drilldown-list li {
+  padding: 0.75rem 1rem;
+  background: var(--color-surface-alt);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+}
+
+.drilldown-list li::before {
+  content: "→ ";
+  color: var(--color-highlight);
+  font-weight: 700;
+}
+
+/* Education funnel */
+.action-paths {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.action-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.action-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  color: var(--color-accent);
+}
+
+.action-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* Signup form */
+.lead-form {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  margin: 2rem 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group--full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.checkbox-group {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  margin-top: 0.25rem;
+}
+
+.form-submit {
+  background: var(--color-highlight);
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 1rem;
+}
+
+.form-submit:hover {
+  background: #a34a1e;
+}
+
+.form-note {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: 1rem;
+}
+
+/* Ladder strip */
+.ladder-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+}
+
+.ladder-step {
+  font-size: 0.75rem;
+  padding: 0.3rem 0.65rem;
+  background: var(--color-surface-alt);
+  border-radius: 999px;
+  color: var(--color-text-muted);
+}
+
+.ladder-step--active {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.site-footer__mission {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Halls index */
+.halls-index-intro {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 640px) {
+  .depth-toggle__btn {
+    min-width: calc(50% - 0.25rem);
+  }
+}

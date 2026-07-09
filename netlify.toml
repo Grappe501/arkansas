@@ -2,10 +2,17 @@
   publish = "."
   command = "echo 'Static site — no build step'"
 
+# Netlify Forms — detected from educate/index.html on deploy
+
 [[redirects]]
-  from = "/entries/*"
-  to = "/entries/:splat"
-  status = 200
+  from = "/halls"
+  to = "/halls/"
+  status = 301
+
+[[redirects]]
+  from = "/educate"
+  to = "/educate/"
+  status = 301
 
 [[headers]]
   for = "/*"

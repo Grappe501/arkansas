@@ -1,0 +1,216 @@
+{
+  "system": {
+    "name": "Citizens United Civic Education Ladder",
+    "mission": "Turn a curious reader into a local educator.",
+    "path": ["Understand", "Trust", "Care", "Teach", "Lead"],
+    "core_question": "How did one Supreme Court decision change American politics?"
+  },
+  "ladder": [
+    { "stage": 1, "id": "awareness", "title": "Awareness", "description": "Discover why Citizens United matters." },
+    { "stage": 2, "id": "understanding", "title": "Understanding", "description": "Learn what happened and what changed." },
+    { "stage": 3, "id": "evidence", "title": "Evidence", "description": "Examine data, cases, and primary sources." },
+    { "stage": 4, "id": "conviction", "title": "Conviction", "description": "Weigh the strongest arguments on both sides." },
+    { "stage": 5, "id": "local-leadership", "title": "Local Leadership", "description": "Decide to help others understand." },
+    { "stage": 6, "id": "community-education", "title": "Community Education", "description": "Host, teach, or organize locally." },
+    { "stage": 7, "id": "movement-growth", "title": "Movement Growth", "description": "Build durable civic education capacity." }
+  ],
+  "depths": [
+    { "id": "L1", "label": "1 minute", "description": "Plain English overview" },
+    { "id": "L2", "label": "5 minutes", "description": "Reader-friendly article" },
+    { "id": "L3", "label": "20 minutes", "description": "Detailed explainer with charts" },
+    { "id": "L4", "label": "Research file", "description": "Sources, cases, data, citations" }
+  ],
+  "front_door": [
+    {
+      "id": "what-happened",
+      "title": "What happened?",
+      "ladder_stage": "awareness",
+      "L1": "In January 2010, the Supreme Court decided Citizens United v. FEC. The Court ruled that the government cannot restrict independent political spending by corporations and unions — treating much of that spending as protected free speech under the First Amendment."
+    },
+    {
+      "id": "why-it-matters",
+      "title": "Why it matters",
+      "ladder_stage": "awareness",
+      "L1": "The decision removed key limits on how wealthy individuals, corporations, and outside groups can influence elections. It helped fuel Super PACs, massive independent expenditures, and ongoing fights over disclosure and corruption."
+    },
+    {
+      "id": "money-after-2010",
+      "title": "How money changed after 2010",
+      "ladder_stage": "understanding",
+      "L1": "Outside spending in federal elections rose sharply. Super PACs — which can raise unlimited sums — became major players. Much spending flows through nonprofits with limited disclosure, creating the 'dark money' debate."
+    },
+    {
+      "id": "who-gained-power",
+      "title": "Who gained power",
+      "ladder_stage": "understanding",
+      "L1": "Wealthy donors, corporate treasuries, unions, and well-funded outside groups gained more ability to shape elections independently of candidates. Critics say this amplifies elite voices; supporters say it expands who can participate in political debate."
+    },
+    {
+      "id": "what-people-do-now",
+      "title": "What people are doing now",
+      "ladder_stage": "evidence",
+      "L1": "Reform efforts include constitutional amendments, federal legislation, state ballot initiatives (like Montana), state corporate-law approaches (like Hawaii), disclosure pushes, and litigation testing what states can still regulate."
+    },
+    {
+      "id": "how-you-can-help",
+      "title": "How you can help educate your community",
+      "ladder_stage": "local-leadership",
+      "L1": "You do not need a law degree to help neighbors understand this case. Host a conversation, teach a short class, research your state, or become a local education lead. The goal is people who can explain Citizens United to others."
+    }
+  ],
+  "halls": [
+    {
+      "id": "hall-1",
+      "slug": "story-before",
+      "number": 1,
+      "title": "The Story Before Citizens United",
+      "purpose": "Show that this did not come from nowhere.",
+      "ladder_stage": "understanding",
+      "drilldowns": [
+        "1907 Tillman Act",
+        "Watergate",
+        "Buckley v. Valeo",
+        "PACs",
+        "McCain-Feingold",
+        "The corporate money question before 2010"
+      ]
+    },
+    {
+      "id": "hall-2",
+      "slug": "the-case",
+      "number": 2,
+      "title": "The Case Itself",
+      "purpose": "Make the court case understandable.",
+      "ladder_stage": "understanding",
+      "drilldowns": [
+        "Who was Citizens United?",
+        "What was Hillary: The Movie?",
+        "Why did the FEC get involved?",
+        "What question did the Court answer?",
+        "Majority opinion",
+        "Dissent",
+        "What the ruling did and did not say"
+      ]
+    },
+    {
+      "id": "hall-3",
+      "slug": "after-2010",
+      "number": 3,
+      "title": "What Changed After 2010",
+      "purpose": "Show the measurable impact.",
+      "ladder_stage": "evidence",
+      "drilldowns": [
+        "Super PAC explosion",
+        "Dark money growth",
+        "Independent expenditures",
+        "Donor concentration",
+        "State-level effects",
+        "Ballot-measure spending",
+        "Judicial races",
+        "Local races"
+      ]
+    },
+    {
+      "id": "hall-4",
+      "slug": "money-map",
+      "number": 4,
+      "title": "The Money Map",
+      "purpose": "Follow the dollars.",
+      "ladder_stage": "evidence",
+      "drilldowns": [
+        "Individual donors",
+        "Corporations",
+        "Nonprofits",
+        "501(c)(4)s",
+        "Super PACs",
+        "Independent expenditures",
+        "Coordination loopholes",
+        "Disclosure gaps"
+      ]
+    },
+    {
+      "id": "hall-5",
+      "slug": "debate",
+      "number": 5,
+      "title": "The Debate",
+      "purpose": "Build credibility by showing both sides clearly.",
+      "ladder_stage": "conviction",
+      "drilldowns": [
+        "Free speech argument",
+        "Anti-corruption argument",
+        "Corporate rights argument",
+        "Equality argument",
+        "Disclosure argument",
+        "Incumbency argument",
+        "Public trust argument"
+      ]
+    },
+    {
+      "id": "hall-6",
+      "slug": "reform",
+      "number": 6,
+      "title": "Reform Paths",
+      "purpose": "Show what can be done.",
+      "ladder_stage": "conviction",
+      "drilldowns": [
+        "Federal amendment",
+        "State ballot initiatives",
+        "State corporate law theory",
+        "Disclosure laws",
+        "Public financing",
+        "Anti-coordination rules",
+        "Shareholder/member consent",
+        "Litigation strategy"
+      ]
+    },
+    {
+      "id": "hall-7",
+      "slug": "montana-hawaii",
+      "number": 7,
+      "title": "Montana and Hawaii",
+      "purpose": "Show the live battlefield.",
+      "ladder_stage": "evidence",
+      "live": true,
+      "drilldowns": [
+        "Montana: ballot initiative path",
+        "Montana: artificial person theory",
+        "Montana: signature process",
+        "Hawaii: legislative path",
+        "Hawaii: Act 11",
+        "Hawaii: corporate-charter theory"
+      ]
+    }
+  ],
+  "action_paths": [
+    {
+      "id": "host",
+      "title": "I want to host a conversation",
+      "description": "For living rooms, churches, libraries, campuses, and civic clubs.",
+      "ladder_stage": "community-education"
+    },
+    {
+      "id": "teach",
+      "title": "I want to teach a class",
+      "description": "For educators, organizers, retired professionals, and students.",
+      "ladder_stage": "community-education"
+    },
+    {
+      "id": "research",
+      "title": "I want to research my state",
+      "description": "For policy, legal, and data volunteers.",
+      "ladder_stage": "evidence"
+    },
+    {
+      "id": "materials",
+      "title": "I want to help build materials",
+      "description": "For writers, designers, video editors, and speakers.",
+      "ladder_stage": "movement-growth"
+    },
+    {
+      "id": "lead",
+      "title": "I want to lead my county or city",
+      "description": "For serious local education leads.",
+      "ladder_stage": "local-leadership"
+    }
+  ]
+}
