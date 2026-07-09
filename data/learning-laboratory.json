@@ -335,7 +335,7 @@
     "Accessibility standards defined but not verified per lab"
   ],
   "recommended_next_build": {
-    "number": 39,
+    "number": 40,
     "title": "Component Specifications with Props/States",
     "note": "Map laboratory shells, interactive widgets, and accessibility patterns to COMP-* from Build #17."
   }

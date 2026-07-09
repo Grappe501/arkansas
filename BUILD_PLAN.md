@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.42.0 · **Learning Lab:** [/mission-control/learning-lab.html](/mission-control/learning-lab.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #38:** ✅ Learning Lab · **Build #37:** ✅ Research Library · **Build #36:** ✅ Trust Framework  
+**Current version:** 1.43.0 · **Media Studio:** [/mission-control/media-studio.html](/mission-control/media-studio.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #39:** ✅ Media Studio · **Build #38:** ✅ Learning Lab · **Build #37:** ✅ Research Library · **Build #36:** ✅ Trust Framework  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,11 +274,28 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **39** | **Documentary Experience & Media Studio** | **✅ v1.43.0** |
 | **38** | **Interactive Learning Laboratory** | **✅ v1.42.0** |
 | **37** | **Master Research Library** | **✅ v1.41.0** |
 | **36** | **Trust Framework** | **✅ v1.40.0** |
 
-**Next:** Build #39 — Component specifications with props/states.
+**Next:** Build #40 — Component specifications with props/states.
+
+---
+
+## Phase 39 — Documentary Experience & Media Studio (Build #39) ★ NEW
+
+*Multimedia learning — documentary experience as educational pillar.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| M1 | Media Studio Blueprint v1.0 | ✅ | `data/media-studio.json` |
+| M2 | 8 media divisions defined | ✅ | Documentary through Classroom Resources |
+| M3 | 6 documentary chapters | ✅ | Aligned to narrative acts |
+| M4 | 7 media standards + 5 accessibility | ✅ | Per multimedia asset |
+| M5 | Hall/educate pages as interim | 🟡 | 0 videos published |
+| M6 | MC media metrics (8) | ✅ | Tracking planned |
+| M7 | MC media studio dashboard | ✅ | `/mission-control/media-studio.html` |
 
 ---
 

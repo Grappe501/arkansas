@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Media Studio <a href="/mission-control/media-studio.html" class="mc-inline-link">8 Divisions →</a></h2>
+    <p class="mc-bar-note">Build #39 — Documentary experience & multimedia learning, 6 chapters, media standards. 0 videos published. 18% media readiness.</p>
     <h2 class="mc-section-title">Interactive Learning Lab <a href="/mission-control/learning-lab.html" class="mc-inline-link">10 Labs →</a></h2>
     <p class="mc-bar-note">Build #38 — Civic discovery & simulation, 10 laboratories, accessibility standards. 0 interactive experiences live. 22% lab readiness.</p>
     <h2 class="mc-section-title">Master Research Library <a href="/mission-control/research-library.html" class="mc-inline-link">7 Collections →</a></h2>
@@ -3790,6 +3792,91 @@ async function initLearningLaboratory() {
   initDevConsole(mc);
 }
 
+async function initMediaStudio() {
+  const root = document.getElementById('mc-media-studio-root');
+  if (!root) return;
+
+  const [mediaRes, mcRes] = await Promise.all([
+    fetch('/data/media-studio.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const media = await mediaRes.json();
+  const mc = await mcRes.json();
+  const s = media.summary;
+
+  const divRows = media.divisions.map(d => `
+    <tr><td>Div ${d.number}</td><td>${d.title}</td><td>${d.readiness_pct}%</td>
+      <td><a href="${d.interim_route}">${d.interim_route}</a></td>
+      <td>${d.video_live ? 'Yes' : 'No'}</td><td>${d.status}</td></tr>`).join('');
+
+  const divCards = media.divisions.map(d => `
+    <div class="mc-card"><h3>Division ${d.number}: ${d.title}</h3>
+      <p class="mc-bar-note">${d.purpose}</p>
+      <p class="mc-bar-note">${d.readiness_pct}% · Video: ${d.video_live ? 'live' : 'no'} · ${d.status}</p>
+      <ul class="mc-deliverables">${d.examples.map(e => `<li>${e}</li>`).join('')}</ul>
+      ${d.note ? `<p class="mc-bar-note">${d.note}</p>` : ''}
+    </div>`).join('');
+
+  const chapterRows = media.documentary_chapters.map(c => `
+    <tr><td>Ch ${c.number}</td><td>${c.title}</td><td>${c.readiness_pct}%</td>
+      <td><a href="${c.interim_route}">${c.interim_route}</a></td>
+      <td>${c.video_live ? 'Yes' : 'No'}</td><td>${c.status}</td></tr>`).join('');
+
+  const metricRows = media.mc_integration.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.status}</td><td>${m.current}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Media Studio</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #39 · ${media.title}</p>
+      <h1>Documentary Experience & Media Studio</h1>
+      <p class="mc-header__question">${media.governing_principle}</p>
+      <p class="mc-bar-note">${media.vision}</p>
+      <p class="mc-bar-note">Canonical: <code>${media.canonical_media_route}</code></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Media readiness</div><div class="mc-stat__value">${s.media_studio_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Divisions</div><div class="mc-stat__value">${s.divisions_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Avg division</div><div class="mc-stat__value">${s.avg_division_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Videos</div><div class="mc-stat__value">${s.videos_published}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Chapters</div><div class="mc-stat__value">${s.documentary_chapters_partial}/${s.documentary_chapters_total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Engagement</div><div class="mc-stat__value">${s.engagement_tracking_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Eight Media Divisions</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>Division</th><th>Ready</th><th>Interim</th><th>Video</th><th>Status</th></tr></thead>
+      <tbody>${divRows}</tbody></table>
+    <div class="mc-grid-2">${divCards}</div>
+    <h2 class="mc-section-title">Documentary Chapters</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>Chapter</th><th>Ready</th><th>Interim</th><th>Video</th><th>Status</th></tr></thead>
+      <tbody>${chapterRows}</tbody></table>
+    <h2 class="mc-section-title">Chapter Structure (8 elements)</h2>
+    <ul class="mc-deliverables">${media.chapter_structure.map(e => `<li>${e}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Media Standards</h2>
+    <ul class="mc-deliverables">${media.media_standards.map(m => `<li>${m}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Accessibility Standards</h2>
+    <ul class="mc-deliverables">${media.accessibility_standards.map(a => `<li>${a}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Community Media Library</h2>
+    <ul class="mc-deliverables">${media.community_media_library.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Engagement Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Status</th><th>Current</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Future Expansion</h2>
+    <ul class="mc-deliverables">${media.future_expansion.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${media.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${media.recommended_next_build.number} — ${media.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${media.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/DOCUMENTARY_EXPERIENCE_MEDIA_STUDIO.md">DOCUMENTARY_EXPERIENCE_MEDIA_STUDIO.md</a> ·
+      <a href="/data/media-studio.json">JSON</a> ·
+      <a href="/mission-control/narrative.html">Narrative →</a> ·
+      <a href="/educate/#toolkit">Presentation Toolkit</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -3827,4 +3914,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initTrustFramework();
   initMasterResearchLibrary();
   initLearningLaboratory();
+  initMediaStudio();
 });

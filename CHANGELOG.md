@@ -13,6 +13,15 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.43.0] - 2026-07-09 — Build #39 Documentary Experience & Media Studio
+
+### Multimedia Learning Architecture
+- **Documentary Experience & Media Studio v1.0** — 8 divisions, 6 documentary chapters
+- Documentary films, explainers, infographics, presentation studio, classroom resources
+- Narrative acts + halls mapped as interim — 0 videos published
+- 18% honest readiness — architecture only, no transcript/caption workflow
+- MC dashboard: `/mission-control/media-studio.html`
+
 ## [1.42.0] - 2026-07-09 — Build #38 Interactive Learning Laboratory
 
 ### Civic Discovery & Simulation System
