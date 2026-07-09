@@ -1,0 +1,118 @@
+{
+  "id": "001",
+  "slug": "montana-hawaii-citizens-united",
+  "version": "1.0.0",
+  "date": "2026-07-09",
+  "author": "Ernie",
+  "title": "Montana & Hawaii: Two Paths Against Citizens United",
+  "summary": "A verified snapshot comparing Montana's ballot-initiative path (Initiative 194) with Hawaii's legislative test-case path (Act 11).",
+  "tracks": ["reform-efforts", "ballot-initiatives"],
+  "research_context": {
+    "tracks_overview": [
+      {
+        "id": "legal-history",
+        "title": "Citizens United Legal/Political History",
+        "points": [
+          "What the decision actually held.",
+          "How it enabled Super PAC/independent-expenditure power.",
+          "What states can and cannot regulate after Citizens United."
+        ]
+      },
+      {
+        "id": "reform-efforts",
+        "title": "Current Anti–Citizens United Reform Efforts",
+        "points": [
+          "Maine: voters approved a 2024 measure limiting contributions to Super PACs; resulting litigation is a major test case.",
+          "American Promise is pushing a federal constitutional amendment to restore authority over campaign-finance rules."
+        ]
+      },
+      {
+        "id": "ballot-initiatives",
+        "title": "Ballot Initiatives Currently Circulating",
+        "points": [
+          "Missouri has 2026 initiative petitions approved for circulation, including direct-democracy protection language.",
+          "Florida maintains an official active constitutional-initiative database.",
+          "California lists initiatives cleared for circulation."
+        ]
+      }
+    ],
+    "focus_states": ["Montana", "Hawaii"],
+    "comparison_rationale": "Montana = ballot initiative path. Hawaii = legislative test-case path. These two together are the right comparison: one people-powered ballot route, one legislature-enacted route."
+  },
+  "states": {
+    "montana": {
+      "name": "Montana",
+      "route": "ballot-initiative",
+      "measure": {
+        "id": "Montana Initiative 194",
+        "title": "Exclude Political Spending from Artificial Persons' Charter Powers Initiative",
+        "year": 2026,
+        "description": "Would prohibit artificial persons from contributing to campaigns, ballot-measure elections, or political parties.",
+        "status": "Signatures submitted; county verification in progress",
+        "deadlines": {
+          "signatures_submitted": "June 2026",
+          "county_verification_due": "July 17, 2026"
+        }
+      },
+      "sources": [
+        {
+          "label": "Ballotpedia — Montana Initiative 194",
+          "url": "https://ballotpedia.org/Montana_Initiative_194%2C_Exclude_Political_Spending_from_Artificial_Persons%E2%80%99_Charter_Powers_Initiative_%282026%29"
+        },
+        {
+          "label": "Montana Secretary of State — Petition Signatures",
+          "url": "https://sosmt.gov/petition-signatures-for-proposed-statewide-ballot-issues-submitted-to-montana-counties-election-officials-to-verify-and-certify/"
+        }
+      ]
+    },
+    "hawaii": {
+      "name": "Hawaii",
+      "route": "legislative",
+      "note": "Hawaii is not a citizen ballot initiative state in the same way Montana is.",
+      "measure": {
+        "id": "Act 11",
+        "title": "Corporate Charter Restrictions on Election Spending",
+        "signed": "May 2026",
+        "effective": "July 1, 2027",
+        "description": "Uses corporate-charter theory to restrict corporations and other artificial entities from election spending. Expected to face First Amendment litigation.",
+        "framing": {
+          "supporters": "Frame Hawaii as a test state for undoing Citizens United through state corporate law.",
+          "critics": "Argue the law likely conflicts with Supreme Court precedent."
+        }
+      },
+      "sources": [
+        {
+          "label": "AP News — Hawaii Corporate Influence Law",
+          "url": "https://apnews.com/article/71a28bc7e8f6e0279b31e999f222519a"
+        },
+        {
+          "label": "Center for American Progress — Hawaii Analysis",
+          "url": "https://www.americanprogress.org/article/addressing-questions-surrounding-hawaiis-bold-move-to-undo-citizens-united/"
+        }
+      ]
+    }
+  },
+  "related_references": [
+    {
+      "label": "Maine Question 1 — Limit Contributions to Super PACs (2024)",
+      "url": "https://ballotpedia.org/Maine_Question_1%2C_Limit_Contributions_to_Super_PACs_Initiative_%282024%29"
+    },
+    {
+      "label": "American Promise — For Our Freedom Amendment",
+      "url": "https://americanpromise.net/"
+    },
+    {
+      "label": "Missouri 2026 Initiative Petitions",
+      "url": "https://www.sos.mo.gov/petitions/2026IPcirculation"
+    },
+    {
+      "label": "Florida Constitutional Initiatives",
+      "url": "https://constitutionalinitiatives.dos.fl.gov/"
+    },
+    {
+      "label": "California Initiatives Cleared for Circulation",
+      "url": "https://www.sos.ca.gov/elections/ballot-measures/initiative-and-referendum-status/initiatives-referenda-cleared-circulation"
+    }
+  ],
+  "bottom_line": "Montana = ballot initiative path. Hawaii = legislative test-case path. These two together are exactly the right comparison: one people-powered ballot route, one legislature-enacted route."
+}

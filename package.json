@@ -1,0 +1,9 @@
+{
+  "name": "arkansas-citizens-facts",
+  "version": "1.0.0",
+  "description": "Research and tracking system for Citizens United reform, ballot initiatives, and democratic finance policy.",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes serve . -l 8080"
+  }
+}

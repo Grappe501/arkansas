@@ -1,0 +1,37 @@
+{
+  "site": {
+    "title": "Citizens Facts",
+    "tagline": "Tracking Citizens United reform, ballot initiatives, and democratic finance policy",
+    "version": "1.0.0"
+  },
+  "tracks": [
+    {
+      "id": "legal-history",
+      "title": "Citizens United Legal & Political History",
+      "description": "What the decision held, Super PAC power, and state regulatory authority."
+    },
+    {
+      "id": "reform-efforts",
+      "title": "Anti–Citizens United Reform Efforts",
+      "description": "State test cases, federal amendment pushes, and active litigation."
+    },
+    {
+      "id": "ballot-initiatives",
+      "title": "Ballot Initiatives & Legislative Routes",
+      "description": "Circulating petitions, enacted laws, and signature deadlines."
+    }
+  ],
+  "entries": [
+    {
+      "id": "001",
+      "slug": "montana-hawaii-citizens-united",
+      "version": "1.0.0",
+      "date": "2026-07-09",
+      "title": "Montana & Hawaii: Two Paths Against Citizens United",
+      "summary": "Montana Initiative 194 pursues a ballot-initiative route; Hawaii Act 11 tests a legislative corporate-charter approach.",
+      "states": ["Montana", "Hawaii"],
+      "tracks": ["reform-efforts", "ballot-initiatives"],
+      "status": "published"
+    }
+  ]
+}
