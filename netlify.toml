@@ -447,6 +447,11 @@
   status = 301
 
 [[redirects]]
+  from = "/mission-control/neighborhood-organizing"
+  to = "/mission-control/neighborhood-organizing.html"
+  status = 301
+
+[[redirects]]
   from = "/admin"
   to = "/admin/mission-control/"
   status = 301

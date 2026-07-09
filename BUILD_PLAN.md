@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.60.0 · **Statewide Growth:** [/mission-control/statewide-growth.html](/mission-control/statewide-growth.html) · **North Star:** [/mission-control/master-plan.html](/mission-control/master-plan.html)  
-**Measurable statewide objectives** — 75 counties · 250 cities · 200K participants · **Next:** Build #57 Engineering Artifacts  
+**Current version:** 1.61.0 · **Last Mile:** [/mission-control/neighborhood-organizing.html](/mission-control/neighborhood-organizing.html) · **Growth:** [/mission-control/statewide-growth.html](/mission-control/statewide-growth.html)  
+**Neighborhood organizing architecture** — relational network · 4 layers · **Next:** Build #58 Engineering Artifacts  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -274,6 +274,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **28** | **Education Academy** | **✅ v1.32.0** |
 | **29** | **Research Observatory** | **✅ v1.33.0** |
 | **30** | **Outreach Engine** | **✅ v1.34.0** |
+| **57** | **Neighborhood Organizing & Relational Network** | **✅ v1.61.0** |
 | **56** | **Statewide Growth & Leadership Blueprint** | **✅ v1.60.0** |
 | **55** | **Master Master Plan** ★ | **✅ v1.59.0** |
 | **54** | **Master Project Management Office (PMO)** | **✅ v1.58.0** |
@@ -296,7 +297,7 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **37** | **Master Research Library** | **✅ v1.41.0** |
 | **36** | **Trust Framework** | **✅ v1.40.0** |
 
-**Next:** Build #57 — Implementation translation layer & engineering artifacts.
+**Next:** Build #58 — Implementation translation layer & engineering artifacts.
 
 ---
 

@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.61.0] - 2026-07-09 — Build #57 Neighborhood Organizing & Relational Network
+
+### The Last Mile Architecture
+- **Neighborhood Organizing v1.0** — relational network connecting knowledge to communities
+- Four geographic layers: statewide → county → city → neighborhood
+- Relational organizing (5 pathways), mentorship ladder, resource kits, conversation model
+- `neighborhood-profiles.json` — privacy-first profile schema (0 profiles)
+- Honest: 0 neighborhoods · 0 leaders · illumination map planned · 2/7 kit items partial
+- MC dashboard: `/mission-control/neighborhood-organizing.html`
+
 ## [1.60.0] - 2026-07-09 — Build #56 Statewide Growth & Leadership Blueprint
 
 ### Arkansas Civic Education Network

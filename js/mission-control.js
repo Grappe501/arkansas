@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Neighborhood Organizing <a href="/mission-control/neighborhood-organizing.html" class="mc-inline-link">Last Mile #57 →</a></h2>
+    <p class="mc-bar-note">Build #57 — Neighborhood Organizing & Relational Network. 4 geographic layers, relational organizing, last mile dashboard. 0 neighborhoods · 0 leaders. ~50% last mile readiness.</p>
     <h2 class="mc-section-title">Statewide Growth <a href="/mission-control/statewide-growth.html" class="mc-inline-link">Arkansas Network #56 →</a></h2>
     <p class="mc-bar-note">Build #56 — Statewide Growth & Leadership Blueprint. 75 counties, 250 cities, 200K participant objective. 0 leaders · 0 participants. ~48% growth blueprint readiness.</p>
     <h2 class="mc-section-title">Master Plan <a href="/mission-control/master-plan.html" class="mc-inline-link">★ North Star #55 →</a></h2>
@@ -5157,6 +5159,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPmo();
   initMasterPlan();
   initStatewideGrowth();
+  initNeighborhoodOrganizing();
 });
 
 async function initUxArchitecture() {
@@ -5793,6 +5796,124 @@ async function initStatewideGrowth() {
       <a href="/data/arkansas-cities.json">250 Cities</a> ·
       <a href="/mission-control/county-os.html">County OS</a> ·
       <a href="/mission-control/master-plan.html">Master Plan</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
+async function initNeighborhoodOrganizing() {
+  const root = document.getElementById('mc-neighborhood-organizing-root');
+  if (!root) return;
+
+  const [noRes, mcRes] = await Promise.all([
+    fetch('/data/neighborhood-organizing.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const no = await noRes.json();
+  const mc = await mcRes.json();
+  const s = no.summary;
+
+  const layerRows = no.four_geographic_layers.map(l => `
+    <tr><td>L${l.layer}</td><td><code>${l.id}</code></td><td>${l.title}</td>
+      <td>${l.mission}</td><td>${l.target ?? '—'}</td><td>${l.status}</td></tr>`).join('');
+
+  const pathwayRows = no.relational_organizing.pathways.map(p => `
+    <tr><td><code>${p.id}</code></td><td>${p.pathway}</td><td>${p.status}</td></tr>`).join('');
+
+  const kitRows = no.neighborhood_resource_kits.items.map(k => `
+    <tr><td><code>${k.id}</code></td><td>${k.item}</td><td>${k.status}</td>
+      <td>${k.route ? `<a href="${k.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  const formatRows = no.community_conversation_model.formats.map(f => `<li>${f}</li>`).join('');
+
+  const mentorRows = no.mentorship_network.stages.map(st => `
+    <tr><td>${st.stage}</td><td><code>${st.id}</code></td><td>${st.title}</td><td>${st.status}</td></tr>`).join('');
+
+  const healthRows = no.community_health_indicators.map(h => `
+    <tr><td><code>${h.id}</code></td><td>${h.indicator}</td><td>${h.current}</td><td>${h.status}</td></tr>`).join('');
+
+  const systemRows = no.system_connections.map(sys => `
+    <tr><td>${sys.system}</td><td>${sys.status}</td>
+      <td>${sys.route ? `<a href="${sys.route}">→</a>` : '—'}</td></tr>`).join('');
+
+  const dashRows = no.neighborhood_dashboard.metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.current}</td>
+      <td>${m.target ?? '—'}</td><td>${m.status}</td></tr>`).join('');
+
+  const vizRows = no.arkansas_neighbor_goal.visualization_dimensions.map(v => `
+    <tr><td>${v.dimension}</td><td>${v.current}</td><td>${v.target}</td><td>${v.status}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Neighborhood Organizing</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #57 · ${no.title}</p>
+      <h1>The Last Mile Architecture</h1>
+      <p class="mc-header__question">${no.governing_principle}</p>
+      <p class="mc-bar-note">${no.purpose}</p>
+      <p class="mc-bar-note"><strong>Vision:</strong> ${no.vision}</p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Last mile readiness</div><div class="mc-stat__value">${s.neighborhood_organizing_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Neighborhoods</div><div class="mc-stat__value">${s.neighborhoods_represented}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Neighborhood Leaders</div><div class="mc-stat__value">${s.neighborhood_leaders}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Conversations</div><div class="mc-stat__value">${s.active_conversations}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Participants</div><div class="mc-stat__value">${s.participants_current.toLocaleString()}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Map status</div><div class="mc-stat__value" style="font-size:1.25rem">${s.illumination_map_status}</div></div>
+    </div>
+    <h2 class="mc-section-title">Four Geographic Layers</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Layer</th><th>Mission</th><th>Target</th><th>Status</th></tr></thead>
+      <tbody>${layerRows}</tbody></table>
+    <h2 class="mc-section-title">Neighborhood Education Leaders</h2>
+    <p class="mc-bar-note"><strong>Role:</strong> ${no.neighborhood_education_leaders.role}</p>
+    <p class="mc-bar-note"><strong>Purpose:</strong> ${no.neighborhood_education_leaders.purpose}</p>
+    <ul class="mc-deliverables">${no.neighborhood_education_leaders.activities.map(a => `<li>${a}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Neighborhood Profiles</h2>
+    <p class="mc-bar-note">${no.neighborhood_profiles.privacy} · <a href="${no.neighborhood_profiles.registry}">Registry</a> · ${no.neighborhood_profiles.profiles_count} profiles</p>
+    <ul class="mc-deliverables">${no.neighborhood_profiles.fields.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Relational Organizing</h2>
+    <p class="mc-bar-note">${no.relational_organizing.principle}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Pathway</th><th>Status</th></tr></thead>
+      <tbody>${pathwayRows}</tbody></table>
+    <h2 class="mc-section-title">Arkansas Neighbor Goal — 200,000 Connected</h2>
+    <p class="mc-bar-note">${no.arkansas_neighbor_goal.progress_pct}% progress · Aligned with ${no.arkansas_neighbor_goal.aligned_with}</p>
+    <table class="mc-table"><thead><tr><th>Dimension</th><th>Current</th><th>Target</th><th>Status</th></tr></thead>
+      <tbody>${vizRows}</tbody></table>
+    <h2 class="mc-section-title">Neighborhood Resource Kits</h2>
+    <p class="mc-bar-note">${no.neighborhood_resource_kits.items_ready}/${no.neighborhood_resource_kits.items_total} items ready · ${no.neighborhood_resource_kits.emphasis}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Item</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${kitRows}</tbody></table>
+    <h2 class="mc-section-title">Community Conversation Model</h2>
+    <p class="mc-bar-note">${no.community_conversation_model.emphasis}</p>
+    <ul class="mc-deliverables">${formatRows}</ul>
+    <h2 class="mc-section-title">Last Mile Dashboard</h2>
+    <p class="mc-bar-note">Illumination map: ${no.neighborhood_dashboard.illumination_map_status}</p>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Target</th><th>Status</th></tr></thead>
+      <tbody>${dashRows}</tbody></table>
+    <h2 class="mc-section-title">Mentorship Network</h2>
+    <p class="mc-bar-note">${no.mentorship_network.flow}</p>
+    <p class="mc-bar-note">${no.mentorship_network.principle}</p>
+    <table class="mc-table"><thead><tr><th>#</th><th>ID</th><th>Stage</th><th>Status</th></tr></thead>
+      <tbody>${mentorRows}</tbody></table>
+    <h2 class="mc-section-title">Community Health Indicators</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Indicator</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${healthRows}</tbody></table>
+    <h2 class="mc-section-title">Privacy Principles</h2>
+    <ul class="mc-deliverables">${no.privacy_principles.principles.map(p => `<li>${p}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">System Connections</h2>
+    <table class="mc-table"><thead><tr><th>System</th><th>Status</th><th>Route</th></tr></thead>
+      <tbody>${systemRows}</tbody></table>
+    <h2 class="mc-section-title">Long-Term Vision</h2>
+    <ul class="mc-deliverables">${no.long_term_vision.map(v => `<li>${v}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${no.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${no.recommended_next_build.number} — ${no.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${no.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/MASTER_NEIGHBORHOOD_ORGANIZING.md">MASTER_NEIGHBORHOOD_ORGANIZING.md</a> ·
+      <a href="/data/neighborhood-organizing.json">JSON</a> ·
+      <a href="/data/neighborhood-profiles.json">Profiles</a> ·
+      <a href="/mission-control/statewide-growth.html">Statewide Growth (#56)</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
 

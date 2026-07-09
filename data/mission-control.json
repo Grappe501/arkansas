@@ -1,6 +1,6 @@
 {
-  "version": "1.60.0",
-  "build": 56,
+  "version": "1.61.0",
+  "build": 57,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 56,
+    "overall_completion": 57,
     "current_build": {
-      "number": 56,
-      "title": "Citizens United Facts Statewide Growth & Leadership Blueprint v1.0"
-    },
-    "active_phase": "Statewide Growth Objectives \u2192 Implementation Translation",
-    "last_completed": "Master Master Plan (North Star)",
-    "next_build": {
       "number": 57,
+      "title": "Citizens United Facts Arkansas Neighborhood Organizing & Relational Network v1.0"
+    },
+    "active_phase": "Last Mile Architecture \u2192 Implementation Translation",
+    "last_completed": "Statewide Growth & Leadership Blueprint",
+    "next_build": {
+      "number": 58,
       "title": "Implementation translation layer & engineering artifacts"
     },
     "github_status": "connected",
@@ -57,7 +57,7 @@
     "evidence_ledger_readiness": 22,
     "civic_action_lab_readiness": 26,
     "research_methodology_readiness": 25,
-    "institutional_maturity_pct": 43,
+    "institutional_maturity_pct": 44,
     "current_institutional_version": "V1",
     "systems_integration_readiness": 28,
     "production_matrix_readiness": 39,
@@ -71,6 +71,7 @@
     "pmo_readiness": 46,
     "master_plan_readiness": 56,
     "statewide_growth_readiness": 48,
+    "neighborhood_organizing_readiness": 50,
     "rollout_phase": 0,
     "rollout_phase_title": "Private Development",
     "planning_phase_complete": true,
@@ -84,8 +85,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 56,
-      "note": "Build #56 \u2014 Statewide Growth & Leadership Blueprint."
+      "value": 57,
+      "note": "Build #57 \u2014 Neighborhood Organizing & Relational Network."
     },
     {
       "id": "constitution",
@@ -414,9 +415,9 @@
     {
       "id": "institutional_maturity",
       "label": "Institutional Maturity (V1\u2013V10)",
-      "value": 43,
+      "value": 44,
       "max": 100,
-      "note": "Measurable statewide objectives live \u2014 0/75 counties, 0/250 cities."
+      "note": "Last mile architecture live \u2014 0 neighborhoods illuminated."
     },
     {
       "id": "systems_integration",
@@ -501,6 +502,13 @@
       "value": 48,
       "max": 100,
       "note": "0 leaders \u00b7 0/200,000 participants \u00b7 maps planned."
+    },
+    {
+      "id": "neighborhood_organizing",
+      "label": "Neighborhood Organizing",
+      "value": 50,
+      "max": 100,
+      "note": "0 neighborhoods \u00b7 0 leaders \u00b7 map planned."
     }
   ],
   "public_readiness": {
@@ -1129,6 +1137,12 @@
       "id": "statewide_growth",
       "label": "Statewide Growth",
       "href": "/mission-control/statewide-growth.html",
+      "status": "complete"
+    },
+    {
+      "id": "neighborhood_organizing",
+      "label": "Neighborhood Organizing",
+      "href": "/mission-control/neighborhood-organizing.html",
       "status": "complete"
     }
   ],
@@ -2155,6 +2169,60 @@
     }
   ],
   "builds": [
+    {
+      "number": 57,
+      "title": "Citizens United Facts Arkansas Neighborhood Organizing & Relational Network v1.0",
+      "version": "1.61.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Last mile architecture \u2014 neighborhood organizing & relational network",
+      "summary": "4 geographic layers; relational organizing; neighborhood dashboard; 50% last mile readiness. 0 neighborhoods \u00b7 0 leaders.",
+      "files_created": [
+        "data/neighborhood-organizing.json",
+        "data/neighborhood-profiles.json",
+        "docs/MASTER_NEIGHBORHOOD_ORGANIZING.md",
+        "builds/057-neighborhood-organizing.md",
+        "mission-control/neighborhood-organizing.html",
+        "scripts/gen-neighborhood-organizing.py",
+        "scripts/update-mc-build57.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/neighborhood-organizing.html"
+      ],
+      "decisions_made": [
+        "Four geographic layers: statewide \u2192 county \u2192 city \u2192 neighborhood",
+        "Neighborhood Leaders are educators and connectors \u2014 not campaign managers",
+        "Relational organizing over mass messaging \u2014 5 pathways defined",
+        "Privacy-first neighborhood profiles \u2014 no precise residential data public",
+        "Mentorship ladder: Education Leader \u2192 Regional Mentor (5 stages)",
+        "200K neighbor goal visualized by county, city, neighborhood, region",
+        "50% readiness \u2014 architecture documented, network empty"
+      ],
+      "open_questions": [
+        "Neighborhood illumination map: heatmap vs discrete pins?",
+        "Referral tracking: invite codes vs relationship graph edges?",
+        "Unify #56 leadership ladder with #57 mentorship pathway?",
+        "Neighborhood kit bundle: single PDF vs modular downloads?"
+      ],
+      "risks": [
+        "0 neighborhoods onboarded \u2014 last mile architecture documented only",
+        "0 neighborhood leaders \u00b7 0 statewide Education Leaders total",
+        "Neighborhood illumination map not built \u2014 MC tables only",
+        "Relational referral tracking not implemented \u2014 0 pathways live"
+      ],
+      "next_recommended": 58,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/neighborhood-organizing.html",
+      "review_status": "complete"
+    },
     {
       "number": 56,
       "title": "Citizens United Facts Statewide Growth & Leadership Blueprint v1.0",
@@ -4906,21 +4974,21 @@
     }
   ],
   "briefing": {
-    "what_built": "Statewide Growth Blueprint v1.0 \u2014 75 counties, 250 cities, 200K participant objective",
-    "building_now": "Growth objectives defined \u2014 implementation translation next",
+    "what_built": "Neighborhood Organizing v1.0 \u2014 last mile architecture, relational network, 4 layers",
+    "building_now": "Community growth stack complete (#56+#57) \u2014 implementation translation next",
     "blocked": [
-      "Interactive maps",
-      "Participant schema",
-      "Signup funnel",
-      "Leader training pipeline"
+      "Illumination map",
+      "Referral tracking",
+      "Neighborhood profiles DB",
+      "Event calendar"
     ],
     "ready_public": [
-      "Statewide objectives dashboard",
-      "250-city index",
-      "Leadership ladder",
-      "Community benchmarks"
+      "Last mile dashboard",
+      "4-layer model",
+      "Resource kit index",
+      "Privacy principles"
     ],
-    "next": "Build #57 \u2014 Implementation translation layer & engineering artifacts"
+    "next": "Build #58 \u2014 Implementation translation layer & engineering artifacts"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -5538,5 +5606,16 @@
     "participants_target": 200000,
     "participants_current": 0,
     "benchmarks_met": 0
+  },
+  "neighborhood_organizing": "/data/neighborhood-organizing.json",
+  "neighborhood_organizing_dashboard": "/mission-control/neighborhood-organizing.html",
+  "neighborhood_organizing_inventory": {
+    "readiness_score": 50,
+    "neighborhoods_represented": 0,
+    "neighborhood_leaders": 0,
+    "active_conversations": 0,
+    "participants_target": 200000,
+    "participants_current": 0,
+    "illumination_map_status": "planned"
   }
 }

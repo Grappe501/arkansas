@@ -1,0 +1,511 @@
+{
+  "version": "1.0",
+  "build": 57,
+  "updated": "2026-07-09",
+  "title": "Neighborhood Organizing & Relational Network v1.0",
+  "subtitle": "The Last Mile Architecture \u2014 Connecting Knowledge to Communities",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/neighborhood-organizing.html",
+  "constitution": "/docs/MASTER_NEIGHBORHOOD_ORGANIZING.md",
+  "purpose": "Connect the institution with Arkansas neighborhoods through relational organizing and community education \u2014 the largest neighborhood-based civic education network in Arkansas.",
+  "governing_principle": "The institution grows one trusted relationship at a time. The most powerful educational technology is one informed Arkansan helping another understand reliable evidence.",
+  "vision": "Mission Control shows Arkansas illuminated one neighborhood at a time \u2014 not by party or ideology, but by civic education.",
+  "not_a_political_machine": true,
+  "four_geographic_layers": [
+    {
+      "layer": 1,
+      "id": "statewide",
+      "title": "Statewide",
+      "mission": "Coordinate the entire institution",
+      "target": null,
+      "current": {
+        "status": "partial",
+        "route": "/mission-control/"
+      },
+      "status": "partial"
+    },
+    {
+      "layer": 2,
+      "id": "county",
+      "title": "County",
+      "mission": "Coordinate county education",
+      "target": "75 county teams",
+      "current": {
+        "teams": 0,
+        "counties_total": 75
+      },
+      "status": "scaffolded",
+      "route": "/mission-control/county-os.html"
+    },
+    {
+      "layer": 3,
+      "id": "city",
+      "title": "City",
+      "mission": "Coordinate community education",
+      "target": "250 largest Arkansas cities",
+      "current": {
+        "cities_represented": 0,
+        "cities_total": 250
+      },
+      "status": "scaffolded",
+      "route": "/data/arkansas-cities.json"
+    },
+    {
+      "layer": 4,
+      "id": "neighborhood",
+      "title": "Neighborhood",
+      "mission": "Bring civic education directly into communities",
+      "target": "Lasting local relationships",
+      "current": {
+        "neighborhoods_represented": 0,
+        "leaders": 0
+      },
+      "status": "planned",
+      "note": "Last mile \u2014 where relationships are built"
+    }
+  ],
+  "neighborhood_education_leaders": {
+    "title": "Neighborhood Education Leaders",
+    "role": "Educators and connectors \u2014 not campaign managers",
+    "purpose": "Help neighbors learn",
+    "activities": [
+      "Sharing educational resources",
+      "Hosting small discussions",
+      "Connecting neighbors with local events",
+      "Introducing people to the Community Education Academy",
+      "Identifying local organizations interested in civic education"
+    ],
+    "current": 0,
+    "status": "planned"
+  },
+  "neighborhood_profiles": {
+    "title": "Participating Neighborhood Profiles",
+    "registry": "/data/neighborhood-profiles.json",
+    "fields": [
+      "General neighborhood name or identifier",
+      "Associated city",
+      "Associated county",
+      "Education Leader(s)",
+      "Community conversations",
+      "Coalition connections",
+      "Educational events",
+      "Resource distribution"
+    ],
+    "privacy": "No precise residential information publicly displayed",
+    "profiles_count": 0,
+    "status": "scaffolded"
+  },
+  "relational_organizing": {
+    "title": "Growth Through Trusted Relationships",
+    "principle": "Spread through existing relationships \u2014 not mass messaging alone",
+    "pathways": [
+      {
+        "id": "friend",
+        "pathway": "Friend invites friend",
+        "status": "planned"
+      },
+      {
+        "id": "neighbor",
+        "pathway": "Neighbor invites neighbor",
+        "status": "planned"
+      },
+      {
+        "id": "family",
+        "pathway": "Family member shares learning resources",
+        "status": "planned"
+      },
+      {
+        "id": "org",
+        "pathway": "Community organization introduces participants",
+        "status": "planned"
+      },
+      {
+        "id": "mentor",
+        "pathway": "Education Leader mentors another Education Leader",
+        "status": "planned"
+      }
+    ],
+    "referrals_tracked": 0,
+    "status": "planned"
+  },
+  "arkansas_neighbor_goal": {
+    "title": "200,000 Arkansans Connected",
+    "target": 200000,
+    "current": 0,
+    "progress_pct": 0.0,
+    "visualization_dimensions": [
+      {
+        "dimension": "County",
+        "current": 0,
+        "target": 75,
+        "status": "scaffolded"
+      },
+      {
+        "dimension": "City",
+        "current": 0,
+        "target": 250,
+        "status": "scaffolded"
+      },
+      {
+        "dimension": "Neighborhood",
+        "current": 0,
+        "target": "open",
+        "status": "planned"
+      },
+      {
+        "dimension": "Region",
+        "current": 0,
+        "target": 7,
+        "status": "planned",
+        "note": "7 Arkansas regions from County OS"
+      }
+    ],
+    "aligned_with": "Build #56 Objective Three"
+  },
+  "neighborhood_resource_kits": {
+    "title": "Neighborhood Resource Kits",
+    "emphasis": "Learning and respectful discussion",
+    "items": [
+      {
+        "id": "RK-1",
+        "item": "Conversation guides",
+        "status": "planned"
+      },
+      {
+        "id": "RK-2",
+        "item": "One-page summaries",
+        "status": "partial",
+        "route": "/educate/"
+      },
+      {
+        "id": "RK-3",
+        "item": "Printable handouts",
+        "status": "planned"
+      },
+      {
+        "id": "RK-4",
+        "item": "QR codes linking to lessons",
+        "status": "planned"
+      },
+      {
+        "id": "RK-5",
+        "item": "Frequently asked questions",
+        "status": "partial",
+        "route": "/educate/"
+      },
+      {
+        "id": "RK-6",
+        "item": "Presentation materials",
+        "status": "planned",
+        "route": "/mission-control/education-academy.html"
+      },
+      {
+        "id": "RK-7",
+        "item": "Source packets",
+        "status": "planned",
+        "route": "/mission-control/research-library.html"
+      }
+    ],
+    "items_ready": 2,
+    "items_total": 7
+  },
+  "community_conversation_model": {
+    "title": "Intentionally Small Conversations",
+    "emphasis": "Dialogue, questions, and evidence-based learning",
+    "formats": [
+      "Living rooms",
+      "Libraries",
+      "Coffee shops",
+      "Community centers",
+      "Civic organizations",
+      "Faith community meeting spaces"
+    ],
+    "active_conversations": 0,
+    "status": "planned"
+  },
+  "neighborhood_dashboard": {
+    "title": "Last Mile Dashboard",
+    "subtitle": "Civic education reach at the neighborhood level",
+    "metrics": [
+      {
+        "id": "neighborhoods",
+        "title": "Neighborhoods represented",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "leaders",
+        "title": "Neighborhood Leaders",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "conversations",
+        "title": "Active conversations",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "participants",
+        "title": "New participants",
+        "current": 0,
+        "target": 200000,
+        "status": "live"
+      },
+      {
+        "id": "events",
+        "title": "Educational events",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "resources",
+        "title": "Resources shared",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "referrals",
+        "title": "Relational referrals",
+        "current": 0,
+        "status": "planned"
+      }
+    ],
+    "illumination_map_status": "planned",
+    "status": "partial"
+  },
+  "mentorship_network": {
+    "title": "Leader Mentorship Pathway",
+    "flow": "Education Leader \u2192 Neighborhood Mentor \u2192 City Mentor \u2192 County Mentor \u2192 Regional Mentor",
+    "stages": [
+      {
+        "stage": 1,
+        "id": "education_leader",
+        "title": "Education Leader",
+        "status": "planned"
+      },
+      {
+        "stage": 2,
+        "id": "neighborhood_mentor",
+        "title": "Neighborhood Mentor",
+        "status": "planned"
+      },
+      {
+        "stage": 3,
+        "id": "city_mentor",
+        "title": "City Mentor",
+        "status": "planned"
+      },
+      {
+        "stage": 4,
+        "id": "county_mentor",
+        "title": "County Mentor",
+        "status": "planned"
+      },
+      {
+        "stage": 5,
+        "id": "regional_mentor",
+        "title": "Regional Mentor",
+        "status": "planned"
+      }
+    ],
+    "principle": "Knowledge grows through personal relationships"
+  },
+  "community_health_indicators": [
+    {
+      "id": "HI-1",
+      "indicator": "Neighborhood activity",
+      "current": 0,
+      "status": "not_started"
+    },
+    {
+      "id": "HI-2",
+      "indicator": "Returning participants",
+      "current": 0,
+      "status": "not_started"
+    },
+    {
+      "id": "HI-3",
+      "indicator": "Educational event frequency",
+      "current": 0,
+      "status": "not_started"
+    },
+    {
+      "id": "HI-4",
+      "indicator": "Resource usage",
+      "current": 0,
+      "status": "not_started"
+    },
+    {
+      "id": "HI-5",
+      "indicator": "Leadership development",
+      "current": 0,
+      "status": "not_started"
+    },
+    {
+      "id": "HI-6",
+      "indicator": "Coalition participation",
+      "current": 0,
+      "status": "not_started"
+    },
+    {
+      "id": "HI-7",
+      "indicator": "Volunteer capacity",
+      "current": 0,
+      "status": "not_started"
+    }
+  ],
+  "privacy_principles": {
+    "title": "Privacy-First Organizing",
+    "principles": [
+      "Avoid collecting unnecessary personal information",
+      "Allow participants to control what is shared publicly",
+      "Use general geographic identifiers where appropriate",
+      "Clearly explain how information is used"
+    ],
+    "status": "documented"
+  },
+  "system_connections": [
+    {
+      "system": "Community Education Academy",
+      "route": "/mission-control/education-academy.html",
+      "status": "partial"
+    },
+    {
+      "system": "Contact Network",
+      "route": "/mission-control/contact-intelligence.html",
+      "status": "partial"
+    },
+    {
+      "system": "Coalition Network",
+      "route": "/coalition/",
+      "status": "planned"
+    },
+    {
+      "system": "County Operating System",
+      "route": "/mission-control/county-os.html",
+      "status": "partial"
+    },
+    {
+      "system": "Event Calendar",
+      "route": null,
+      "status": "planned"
+    },
+    {
+      "system": "Mission Control",
+      "route": "/mission-control/",
+      "status": "live"
+    },
+    {
+      "system": "Resource Library",
+      "route": "/mission-control/research-library.html",
+      "status": "partial"
+    },
+    {
+      "system": "Outreach Engine",
+      "route": "/mission-control/outreach.html",
+      "status": "partial"
+    },
+    {
+      "system": "Statewide Growth (#56)",
+      "route": "/mission-control/statewide-growth.html",
+      "status": "live"
+    }
+  ],
+  "long_term_vision": [
+    "Every county has Education Leaders",
+    "250 largest cities have active civic education communities",
+    "Thousands of neighborhood conversations have taken place",
+    "200,000 Arkansans connected through learning and trusted relationships",
+    "Civic education at kitchen tables, libraries, community centers, and civic clubs"
+  ],
+  "mc_integration": {
+    "title": "Last Mile Metrics",
+    "status": "partial",
+    "measures_alongside": [
+      "County coverage (#56)",
+      "City coverage (#56)",
+      "Neighborhood coverage (#57)"
+    ],
+    "metrics": [
+      {
+        "id": "neighborhoods",
+        "title": "Neighborhoods represented",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "leaders",
+        "title": "Neighborhood Leaders",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "conversations",
+        "title": "Active conversations",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "participants",
+        "title": "New participants",
+        "current": 0,
+        "target": 200000,
+        "status": "live"
+      },
+      {
+        "id": "events",
+        "title": "Educational events",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "resources",
+        "title": "Resources shared",
+        "current": 0,
+        "status": "live"
+      },
+      {
+        "id": "referrals",
+        "title": "Relational referrals",
+        "current": 0,
+        "status": "planned"
+      }
+    ]
+  },
+  "summary": {
+    "neighborhoods_represented": 0,
+    "neighborhood_leaders": 0,
+    "active_conversations": 0,
+    "participants_current": 0,
+    "participants_target": 200000,
+    "resources_shared": 0,
+    "events_held": 0,
+    "referrals_tracked": 0,
+    "resource_kit_items_ready": 2,
+    "relational_pathways_live": 0,
+    "system_connections_live": 2,
+    "illumination_map_status": "planned",
+    "neighborhood_organizing_readiness_pct": 50,
+    "statewide_growth_readiness_pct": 48,
+    "public_launch_readiness_pct": 8
+  },
+  "catalog_gaps": [
+    "0 neighborhoods onboarded \u2014 last mile architecture documented only",
+    "0 neighborhood leaders \u00b7 0 statewide Education Leaders total",
+    "Neighborhood illumination map not built \u2014 MC tables only",
+    "Relational referral tracking not implemented \u2014 0 pathways live",
+    "Neighborhood profiles registry empty \u2014 schema defined",
+    "Resource kit 2/7 partial \u2014 no dedicated neighborhood kit bundle",
+    "Event calendar not built \u2014 conversation scheduling manual",
+    "Privacy controls documented \u2014 no participant visibility settings in schema",
+    "Mentorship ladder 0/5 operational \u2014 no mentor matching",
+    "Unify Build #56 leadership ladder with Build #57 mentorship pathway"
+  ],
+  "recommended_next_build": {
+    "number": 58,
+    "title": "Implementation Translation Layer & Engineering Artifacts",
+    "note": "Neon schema for neighborhoods, referrals, and privacy fields; relational graph edges; route inventory, COMP-* specs, API contracts, GitHub issue backlog."
+  }
+}

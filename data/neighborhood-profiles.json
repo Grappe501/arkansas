@@ -1,0 +1,39 @@
+{
+  "version": "1.0",
+  "build": 57,
+  "updated": "2026-07-09",
+  "title": "Neighborhood Profiles Registry",
+  "privacy_note": "No precise residential information \u2014 general geographic identifiers only",
+  "summary": {
+    "profiles_total": 0,
+    "with_leaders": 0,
+    "with_conversations": 0,
+    "with_events": 0
+  },
+  "profile_schema": {
+    "fields": [
+      "General neighborhood name or identifier",
+      "Associated city",
+      "Associated county",
+      "Education Leader(s)",
+      "Community conversations",
+      "Coalition connections",
+      "Educational events",
+      "Resource distribution"
+    ],
+    "public_fields": [
+      "neighborhood_identifier",
+      "city",
+      "county",
+      "leader_count",
+      "conversation_count",
+      "event_count"
+    ],
+    "private_fields": [
+      "leader_contact",
+      "participant_details",
+      "precise_location"
+    ]
+  },
+  "neighborhoods": []
+}
