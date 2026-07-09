@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.32.0] - 2026-07-09 — Build #28 Education Academy
+
+### Community Education Academy
+- **Arkansas Education Leader Development System v1.0** — 4 stages, 8 modules
+- Learn → Understand → Communicate → Lead progression
+- Community Conversation Certification (educational only)
+- Presentation toolkit, 7 audience toolkits, leadership metrics
+- 24% honest readiness — educate signup partial, no module tracking
+- MC dashboard: `/mission-control/education-academy.html`
+
 ## [1.31.0] - 2026-07-09 — Build #27 Content Production Factory
 
 ### Citizens United Facts Content Production Factory

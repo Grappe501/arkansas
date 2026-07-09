@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Education Academy <a href="/mission-control/education-academy.html" class="mc-inline-link">Leader Development →</a></h2>
+    <p class="mc-bar-note">Build #28 — 4 learning stages, 8 curriculum modules, certification, presentation toolkit. 24% academy readiness.</p>
     <h2 class="mc-section-title">Content Production Factory <a href="/mission-control/content-factory.html" class="mc-inline-link">Editorial OS →</a></h2>
     <p class="mc-bar-note">Build #27 — 7 content types, 11-stage workflow, standard article structure, evergreen review. 28% factory readiness.</p>
     <h2 class="mc-section-title">AI Knowledge Engine <a href="/mission-control/ai-knowledge.html" class="mc-inline-link">Educational Intelligence →</a></h2>
@@ -2728,6 +2730,98 @@ async function initContentProductionFactory() {
   initDevConsole(mc);
 }
 
+async function initEducationAcademy() {
+  const root = document.getElementById('mc-education-academy-root');
+  if (!root) return;
+
+  const [acadRes, mcRes] = await Promise.all([
+    fetch('/data/education-academy.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const acad = await acadRes.json();
+  const mc = await mcRes.json();
+  const s = acad.summary;
+
+  const stageCards = acad.learning_stages.map(st => `
+    <div class="mc-card">
+      <h3>Stage ${st.stage}: ${st.title}</h3>
+      <p class="mc-bar-note">${st.focus}</p>
+      ${st.questions ? `<ul class="mc-deliverables">${st.questions.map(q => `<li>${q}</li>`).join('')}</ul>` : ''}
+      ${st.distinctions ? `<ul class="mc-deliverables">${st.distinctions.map(d => `<li>${d}</li>`).join('')}</ul>` : ''}
+      ${st.topics ? `<ul class="mc-deliverables">${st.topics.map(t => `<li>${t}</li>`).join('')}</ul>` : ''}
+      ${st.activities ? `<ul class="mc-deliverables">${st.activities.map(a => `<li>${a}</li>`).join('')}</ul>` : ''}
+      <p class="mc-bar-note">${st.route ? `<a href="${st.route}">${st.route}</a> · ` : ''}${st.status}${st.notes ? ` — <em>${st.notes}</em>` : ''}</p>
+    </div>`).join('');
+
+  const moduleRows = acad.curriculum_modules.map(m => `
+    <tr class="${m.status === 'partial' ? 'mc-table__row--approved' : ''}">
+      <td>${m.number}</td><td><strong>${m.title}</strong></td>
+      <td>${m.world || '—'}</td>
+      <td>${m.route ? `<a href="${m.route}">${m.route}</a>` : '—'}</td>
+      <td>${m.status}</td></tr>`).join('');
+
+  const metricRows = acad.leadership_metrics.map(m => `
+    <tr><td><code>${m.id}</code></td><td>${m.title}</td><td>${m.current}</td><td>${m.status}</td></tr>`).join('');
+
+  const audienceRows = acad.audience_toolkits.map(a => `
+    <tr><td>${a.audience}</td><td>${a.route ? `<a href="${a.route}">${a.route}</a>` : '—'}</td><td>${a.status}</td></tr>`).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Education Academy</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #28 · ${acad.title}</p>
+      <h1>Community Education Academy</h1>
+      <p class="mc-header__question">${acad.governing_principle}</p>
+      <p class="mc-bar-note">${acad.academy_mission} · <a href="${acad.public_route}">Public signup →</a></p>
+    </header>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Academy readiness</div><div class="mc-stat__value">${s.academy_readiness_pct}%</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Modules</div><div class="mc-stat__value">${s.curriculum_modules}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Learning stages</div><div class="mc-stat__value">${s.learning_stages}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Modules partial</div><div class="mc-stat__value">${s.modules_partial}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Audience toolkits</div><div class="mc-stat__value">${s.audience_toolkits}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Enrollment tracking</div><div class="mc-stat__value">${s.enrollment_tracking_live ? 'Live' : 'Planned'}</div></div>
+    </div>
+    <h2 class="mc-section-title">Four Learning Stages</h2>
+    <div class="mc-grid-2">${stageCards}</div>
+    <h2 class="mc-section-title">Academy Curriculum (${s.curriculum_modules} modules)</h2>
+    <table class="mc-table"><thead><tr><th>#</th><th>Module</th><th>World</th><th>Interim route</th><th>Status</th></tr></thead>
+      <tbody>${moduleRows}</tbody></table>
+    <h2 class="mc-section-title">Module Materials (each module)</h2>
+    <ul class="mc-deliverables">${acad.module_materials.map(m => `<li>${m}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">${acad.certification.title}</h2>
+    <p class="mc-bar-note"><em>${acad.certification.disclaimer}</em></p>
+    <ul class="mc-deliverables">${acad.certification.competencies.map(c => `<li>${c}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Presentation Toolkit</h2>
+    <ul class="mc-deliverables">${acad.presentation_toolkit.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Audience-Specific Toolkits</h2>
+    <table class="mc-table"><thead><tr><th>Audience</th><th>Route</th><th>Status</th></tr></thead>
+      <tbody>${audienceRows}</tbody></table>
+    <h2 class="mc-section-title">Leadership Dashboard Metrics</h2>
+    <table class="mc-table"><thead><tr><th>ID</th><th>Metric</th><th>Current</th><th>Status</th></tr></thead>
+      <tbody>${metricRows}</tbody></table>
+    <h2 class="mc-section-title">Continuing Education</h2>
+    <ul class="mc-deliverables">${acad.continuing_education.map(t => `<li>${t}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Future Expansion</h2>
+    <ul class="mc-deliverables">${acad.future_expansion.map(f => `<li>${f}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Mission Control Integration</h2>
+    <table class="mc-table"><thead><tr><th>Metric</th><th>Source</th><th>Status</th></tr></thead>
+      <tbody>${acad.mc_integration.map(i => `<tr><td>${i.metric}</td><td>${i.source || '—'}</td><td>${i.status}</td></tr>`).join('')}</tbody></table>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${acad.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Recommended: Build #${acad.recommended_next_build.number} — ${acad.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${acad.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/COMMUNITY_EDUCATION_ACADEMY.md">COMMUNITY_EDUCATION_ACADEMY.md</a> ·
+      <a href="/data/education-academy.json">JSON</a> ·
+      <a href="/educate/">Educate signup</a> ·
+      <a href="/mission-control/civic-ecosystem.html">Civic Ecosystem</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -2754,4 +2848,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initExecutiveCommandCenter();
   initAiKnowledgeEngine();
   initContentProductionFactory();
+  initEducationAcademy();
 });

@@ -1,6 +1,6 @@
 {
-  "version": "1.31.0",
-  "build": 27,
+  "version": "1.32.0",
+  "build": 28,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,15 +9,15 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 27,
+    "overall_completion": 28,
     "current_build": {
-      "number": 27,
-      "title": "Citizens United Facts Content Production Factory"
-    },
-    "active_phase": "Editorial Operating System \u2014 Content Production Factory",
-    "last_completed": "AI Knowledge & Research Engine",
-    "next_build": {
       "number": 28,
+      "title": "Citizens United Facts Community Education Academy"
+    },
+    "active_phase": "Education Leader Development \u2014 Community Education Academy",
+    "last_completed": "Content Production Factory",
+    "next_build": {
+      "number": 29,
       "title": "Component specifications with props/states"
     },
     "github_status": "connected",
@@ -25,8 +25,8 @@
     "content_readiness": 20,
     "research_readiness": 20,
     "data_viz_readiness": 2,
-    "signup_funnel_readiness": 18,
-    "civic_action_readiness": 26,
+    "signup_funnel_readiness": 20,
+    "civic_action_readiness": 28,
     "coalition_readiness": 14,
     "data_model_readiness": 38,
     "route_inventory_readiness": 18,
@@ -41,6 +41,7 @@
     "mc2_readiness": 33,
     "ai_engine_readiness": 14,
     "content_factory_readiness": 28,
+    "education_academy_readiness": 24,
     "public_launch_readiness": 8,
     "public_launch_label": "Early Foundation"
   },
@@ -48,8 +49,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 27,
-      "note": "Content factory live \u2014 7 types, 351 assets registered, 11-stage workflow."
+      "value": 28,
+      "note": "Education Academy live \u2014 8 modules, 4 learning stages. Highest-impact program architecture."
     },
     {
       "id": "constitution",
@@ -108,8 +109,8 @@
     {
       "id": "signup",
       "label": "Signup Funnel Completion",
-      "value": 12,
-      "note": "Three homepage paths: Learn, Help, Partner. Org join + event forms scaffolded."
+      "value": 20,
+      "note": "Academy defined \u2014 educate signup partial; module progress tracking not built."
     },
     {
       "id": "action_hub",
@@ -262,6 +263,13 @@
       "value": 28,
       "max": 100,
       "note": "9 in pipeline \u2014 workflow aligned with content inventory; automation pending."
+    },
+    {
+      "id": "education_academy",
+      "label": "Education Academy",
+      "value": 24,
+      "max": 100,
+      "note": "7 modules partial via hall pages \u2014 no enrollment/progress backend."
     }
   ],
   "public_readiness": {
@@ -716,6 +724,12 @@
       "id": "content_factory",
       "label": "Content Production Factory",
       "href": "/mission-control/content-factory.html",
+      "status": "complete"
+    },
+    {
+      "id": "education_academy",
+      "label": "Education Academy",
+      "href": "/mission-control/education-academy.html",
       "status": "complete"
     }
   ],
@@ -1742,6 +1756,54 @@
     }
   ],
   "builds": [
+    {
+      "number": 28,
+      "title": "Citizens United Facts Community Education Academy",
+      "version": "1.32.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Arkansas Education Leader Development System v1.0 \u2014 civic education, not advocacy",
+      "summary": "4 stages, 8 modules, certification + toolkit; 24% readiness.",
+      "files_created": [
+        "data/education-academy.json",
+        "docs/COMMUNITY_EDUCATION_ACADEMY.md",
+        "builds/028-education-academy.md",
+        "mission-control/education-academy.html",
+        "scripts/gen-education-academy.py",
+        "scripts/update-mc-build28.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml"
+      ],
+      "pages_created": [
+        "/mission-control/education-academy.html"
+      ],
+      "decisions_made": [
+        "4 learning stages: Learn \u2192 Understand \u2192 Communicate \u2192 Lead",
+        "8 curriculum modules mapped to knowledge atlas worlds + interim routes",
+        "Community Conversation Certification \u2014 educational only, not government credential",
+        "7 audience-specific toolkits + 8-item presentation toolkit",
+        "24% honest readiness \u2014 educate signup partial, no module tracking",
+        "Highest-impact program per MC briefing"
+      ],
+      "open_questions": [
+        "When to build module progress UI?",
+        "Certification badge design?"
+      ],
+      "risks": [
+        "24% readiness \u2014 curriculum is architecture not full academy",
+        "No enrollment backend"
+      ],
+      "next_recommended": 29,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/education-academy.html",
+      "review_status": "complete"
+    },
     {
       "number": 27,
       "title": "Citizens United Facts Content Production Factory",
@@ -2936,20 +2998,20 @@
     }
   ],
   "briefing": {
-    "what_built": "Content Production Factory v1.0 \u2014 7 types, 11-stage workflow, institutional voice",
-    "building_now": "Editorial OS \u2014 component specs to map article sections next",
+    "what_built": "Education Academy v1.0 \u2014 4 stages, 8 modules, leader development system",
+    "building_now": "Highest-impact program architecture \u2014 component specs next",
     "blocked": [
-      "Workflow dashboard not unified",
-      "Evergreen review not automated",
-      "L3/L4 sparse"
+      "No module progress tracking",
+      "Certification not operational",
+      "Most toolkit materials planned"
     ],
     "ready_public": [
-      "Factory MC dashboard",
-      "Content type templates",
-      "Workflow + quality gates",
-      "Inventory alignment"
+      "Academy MC dashboard",
+      "Curriculum map",
+      "Learning stages",
+      "Leadership metrics schema"
     ],
-    "next": "Build #28 \u2014 Component specifications with props/states"
+    "next": "Build #29 \u2014 Component specifications with props/states"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -3209,5 +3271,16 @@
     "assets_in_pipeline": 9,
     "automated_review_scheduling": false,
     "workflow_dashboard_live": false
+  },
+  "education_academy": "/data/education-academy.json",
+  "education_academy_dashboard": "/mission-control/education-academy.html",
+  "education_academy_inventory": {
+    "readiness_score": 24,
+    "learning_stages": 4,
+    "curriculum_modules": 8,
+    "modules_partial": 7,
+    "audience_toolkits": 7,
+    "enrollment_tracking_live": false,
+    "module_progress_live": false
   }
 }

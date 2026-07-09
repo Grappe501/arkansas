@@ -1,0 +1,372 @@
+{
+  "version": "1.0",
+  "build": 28,
+  "updated": "2026-07-09",
+  "title": "Community Education Academy v1.0",
+  "platform": "Citizens United Facts",
+  "organization": "Arkansas Civic Education Initiative",
+  "route": "/mission-control/education-academy.html",
+  "public_route": "/educate/",
+  "constitution": "/docs/COMMUNITY_EDUCATION_ACADEMY.md",
+  "purpose": "Develop Arkansas community educators who explain Citizens United accurately \u2014 not an advocacy program.",
+  "academy_mission": "Develop a statewide network of trusted educators using verified facts, primary sources, and respectful dialogue.",
+  "governing_principle": "Success measured by understanding quality and educator confidence \u2014 not persuasion.",
+  "learning_stages": [
+    {
+      "id": "ACAD-ST-01",
+      "stage": 1,
+      "title": "Learn",
+      "focus": "History, law, and facts",
+      "questions": [
+        "What happened?",
+        "Why did it matter?",
+        "What changed?"
+      ],
+      "status": "partial",
+      "route": "/start-here/",
+      "notes": "Start-here and halls provide interim L1 content"
+    },
+    {
+      "id": "ACAD-ST-02",
+      "stage": 2,
+      "title": "Understand",
+      "focus": "Distinguish facts, principles, holdings, context, proposals, opinions",
+      "distinctions": [
+        "Facts",
+        "Constitutional principles",
+        "Court holdings",
+        "Historical context",
+        "Policy proposals",
+        "Personal opinions"
+      ],
+      "status": "partial",
+      "route": "/mission-control/facts.html",
+      "notes": "Facts framework defines confidence levels"
+    },
+    {
+      "id": "ACAD-ST-03",
+      "stage": 3,
+      "title": "Communicate",
+      "focus": "Explain complex ideas clearly",
+      "topics": [
+        "Explaining difficult legal concepts",
+        "Answering common questions",
+        "Using charts and timelines",
+        "Guiding discussions respectfully",
+        "Working with different viewpoints"
+      ],
+      "status": "planned"
+    },
+    {
+      "id": "ACAD-ST-04",
+      "stage": 4,
+      "title": "Lead",
+      "focus": "Educate others in the community",
+      "activities": [
+        "Hosting community conversations",
+        "Giving presentations",
+        "Working with coalition organizations",
+        "Training new Education Leaders",
+        "Contributing to educational resources"
+      ],
+      "status": "partial",
+      "route": "/educate/",
+      "notes": "Educate signup live; structured lead track not built"
+    }
+  ],
+  "curriculum_modules": [
+    {
+      "id": "ACAD-M01",
+      "number": 1,
+      "title": "Understanding Citizens United",
+      "world": "WORLD-01",
+      "status": "partial",
+      "route": "/start-here/"
+    },
+    {
+      "id": "ACAD-M02",
+      "number": 2,
+      "title": "Campaign Finance History",
+      "world": "WORLD-01",
+      "status": "partial",
+      "route": "/halls/story-before.html"
+    },
+    {
+      "id": "ACAD-M03",
+      "number": 3,
+      "title": "The Supreme Court Decision",
+      "world": "WORLD-02",
+      "status": "partial",
+      "route": "/halls/the-case.html"
+    },
+    {
+      "id": "ACAD-M04",
+      "number": 4,
+      "title": "Constitutional Principles",
+      "world": "WORLD-03",
+      "status": "planned",
+      "route": "/halls/what-court-decided.html"
+    },
+    {
+      "id": "ACAD-M05",
+      "number": 5,
+      "title": "Political Spending After 2010",
+      "world": "WORLD-04",
+      "status": "partial",
+      "route": "/halls/after-2010.html"
+    },
+    {
+      "id": "ACAD-M06",
+      "number": 6,
+      "title": "Current Reform Discussions",
+      "world": "WORLD-06",
+      "status": "partial",
+      "route": "/solutions/"
+    },
+    {
+      "id": "ACAD-M07",
+      "number": 7,
+      "title": "Arkansas Civic Education",
+      "topics": [
+        "Arkansas legislative process",
+        "Ballot initiative process",
+        "Community education strategies"
+      ],
+      "world": "WORLD-06",
+      "status": "partial",
+      "route": "/arkansas/"
+    },
+    {
+      "id": "ACAD-M08",
+      "number": 8,
+      "title": "Teaching Others",
+      "topics": [
+        "Adult learning principles",
+        "Community conversations",
+        "Presentation skills",
+        "Question facilitation",
+        "Handling disagreement"
+      ],
+      "world": "WORLD-07",
+      "status": "partial",
+      "route": "/educate/"
+    }
+  ],
+  "module_count": 8,
+  "module_materials": [
+    "Reading assignments",
+    "Interactive graphics",
+    "Historical timelines",
+    "Source documents",
+    "Videos",
+    "Reflection questions",
+    "Discussion prompts",
+    "Printable reference sheets"
+  ],
+  "certification": {
+    "title": "Community Conversation Certification",
+    "competencies": [
+      "Understanding the material",
+      "Explaining concepts clearly",
+      "Guiding respectful discussion",
+      "Directing participants to reliable sources"
+    ],
+    "disclaimer": "Educational program completion \u2014 not a professional credential or government certification",
+    "status": "planned"
+  },
+  "presentation_toolkit": [
+    "Slide presentations",
+    "Speaker notes",
+    "Handouts",
+    "Frequently asked questions",
+    "Discussion guides",
+    "Infographics",
+    "Historical timelines",
+    "Resource packets"
+  ],
+  "audience_toolkits": [
+    {
+      "audience": "Civic organizations",
+      "status": "planned"
+    },
+    {
+      "audience": "Faith communities",
+      "status": "planned"
+    },
+    {
+      "audience": "Libraries",
+      "status": "planned"
+    },
+    {
+      "audience": "College campuses",
+      "status": "planned"
+    },
+    {
+      "audience": "Community colleges",
+      "status": "planned"
+    },
+    {
+      "audience": "Neighborhood associations",
+      "status": "planned"
+    },
+    {
+      "audience": "Community education events",
+      "status": "partial",
+      "route": "/action/community-conversation.html"
+    }
+  ],
+  "leadership_metrics": [
+    {
+      "id": "ACAD-LM-01",
+      "title": "Participants enrolled",
+      "current": 0,
+      "status": "partial"
+    },
+    {
+      "id": "ACAD-LM-02",
+      "title": "Modules completed",
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "id": "ACAD-LM-03",
+      "title": "Resource downloads",
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "id": "ACAD-LM-04",
+      "title": "Community conversations hosted",
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "id": "ACAD-LM-05",
+      "title": "Presentations delivered",
+      "current": 0,
+      "status": "planned"
+    },
+    {
+      "id": "ACAD-LM-06",
+      "title": "Coalition organizations participating",
+      "current": 0,
+      "status": "partial"
+    },
+    {
+      "id": "ACAD-LM-07",
+      "title": "Counties with active Education Leaders",
+      "current": 0,
+      "status": "planned"
+    }
+  ],
+  "continuing_education": [
+    "New court decisions",
+    "Arkansas legislative developments",
+    "New ballot initiative proposals",
+    "Updated spending data",
+    "Newly added platform resources"
+  ],
+  "future_expansion": [
+    "Live webinars",
+    "Regional workshops",
+    "Guest lectures",
+    "Advanced research seminars",
+    "Specialized legal education modules",
+    "Topic-specific discussion series"
+  ],
+  "mc_integration": [
+    {
+      "metric": "Academy enrollment",
+      "status": "partial",
+      "source": "Netlify Forms / educate"
+    },
+    {
+      "metric": "Module completion rates",
+      "status": "planned"
+    },
+    {
+      "metric": "Learning progress",
+      "status": "planned"
+    },
+    {
+      "metric": "Community education activity",
+      "status": "planned"
+    },
+    {
+      "metric": "County participation",
+      "status": "partial",
+      "source": "county-coalition-index"
+    },
+    {
+      "metric": "Toolkit usage",
+      "status": "planned"
+    },
+    {
+      "metric": "New Education Leaders",
+      "status": "partial",
+      "source": "civic_action"
+    },
+    {
+      "metric": "Continuing education participation",
+      "status": "planned"
+    }
+  ],
+  "related_systems": [
+    {
+      "title": "Educate / Signup",
+      "route": "/educate/",
+      "build": 3
+    },
+    {
+      "title": "Community Conversation",
+      "route": "/action/community-conversation.html",
+      "build": 12
+    },
+    {
+      "title": "Arkansas Civic Ecosystem",
+      "route": "/mission-control/civic-ecosystem.html",
+      "build": 12
+    },
+    {
+      "title": "Knowledge Atlas",
+      "route": "/mission-control/atlas.html",
+      "build": 19
+    },
+    {
+      "title": "Contact Intelligence",
+      "route": "/mission-control/contact-intelligence.html",
+      "build": 24
+    }
+  ],
+  "summary": {
+    "learning_stages": 4,
+    "curriculum_modules": 8,
+    "module_materials_per_module": 8,
+    "certification_competencies": 4,
+    "presentation_toolkit_items": 8,
+    "audience_toolkits": 7,
+    "leadership_metrics": 7,
+    "continuing_education_topics": 5,
+    "future_expansion_items": 6,
+    "modules_partial": 7,
+    "modules_planned": 1,
+    "enrollment_tracking_live": false,
+    "module_progress_live": false,
+    "academy_readiness_pct": 24
+  },
+  "catalog_gaps": [
+    "No structured academy enrollment or module progress tracking",
+    "8 modules mapped to interim hall pages \u2014 not full curriculum",
+    "Module materials (videos, graphics, reflection Qs) not built per module",
+    "Community Conversation Certification not operational",
+    "Audience-specific toolkits mostly planned",
+    "Presentation toolkit partial \u2014 educate page scaffold only",
+    "Continuing education update system not built",
+    "No webinar/workshop infrastructure"
+  ],
+  "recommended_next_build": {
+    "number": 29,
+    "title": "Component Specifications with Props/States",
+    "note": "Map academy modules and toolkit UI to components; wire enrollment to contact intelligence."
+  }
+}

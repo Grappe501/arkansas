@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.31.0 · **Content Factory:** [/mission-control/content-factory.html](/mission-control/content-factory.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #27:** ✅ Content Factory · **Build #26:** ✅ AI Engine · **Build #25:** ✅ MC 2.0  
+**Current version:** 1.32.0 · **Education Academy:** [/mission-control/education-academy.html](/mission-control/education-academy.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #28:** ✅ Education Academy · **Build #27:** ✅ Content Factory · **Build #26:** ✅ AI Engine  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -271,8 +271,25 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **25** | **Mission Control 2.0** | **✅ v1.29.0** |
 | **26** | **AI Knowledge Engine** | **✅ v1.30.0** |
 | **27** | **Content Production Factory** | **✅ v1.31.0** |
+| **28** | **Education Academy** | **✅ v1.32.0** |
 
-**Next:** Build #28 — Component specifications with props/states.
+**Next:** Build #29 — Component specifications with props/states.
+
+---
+
+## Phase 28 — Education Academy (Build #28) ★ NEW
+
+*Arkansas Education Leader Development — highest-impact program.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| A1 | Academy Blueprint v1.0 | ✅ | `data/education-academy.json` |
+| A2 | 4 learning stages | ✅ | Learn → Lead |
+| A3 | 8 curriculum modules | ✅ | Mapped to knowledge worlds |
+| A4 | Certification + presentation toolkit | ✅ | Educational only disclaimer |
+| A5 | 7 audience toolkits | ✅ | 1 partial (community conversation) |
+| A6 | Leadership dashboard metrics | ✅ | 7 metrics defined |
+| A7 | MC education academy dashboard | ✅ | `/mission-control/education-academy.html` |
 
 ---
 
@@ -525,7 +542,8 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 | ~~**#25**~~ | ~~Mission Control 2.0 & Executive Command Center~~ ✅ Done |
 | ~~**#26**~~ | ~~AI Knowledge & Research Engine~~ ✅ Done |
 | ~~**#27**~~ | ~~Content Production Factory~~ ✅ Done |
-| **#28** | **Component specifications with props/states** |
+| ~~**#28**~~ | ~~Community Education Academy~~ ✅ Done |
+| **#29** | **Component specifications with props/states** |
 
 ---
 
