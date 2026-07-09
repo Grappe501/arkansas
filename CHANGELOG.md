@@ -13,6 +13,16 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [1.22.0] - 2026-07-09 — Build #18 Facts Framework
+
+### Citizens United Facts Framework
+- **Canonical Facts & Evidence Architecture v1.0** — 6 categories (FACT-1000–6000)
+- 13 seed facts with honest verification status (8 verified, 3 under review)
+- 4 confidence levels, L1–L4 presentation depths, five philosophy questions
+- Claims ledger migrated (3 claims → FACT-IDs); EV-* and KG-* integrations
+- MC dashboard: `/mission-control/facts.html`
+- **Recommended next:** Build #19 Brand & Identity System
+
 ## [1.21.0] - 2026-07-09 — Build #17 Component Registry
 
 ### Component Architecture & ACEI Branding

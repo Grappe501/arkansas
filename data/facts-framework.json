@@ -1,0 +1,193 @@
+{
+  "version": "1.0",
+  "build": 18,
+  "updated": "2026-07-09",
+  "title": "Citizens United Facts Framework v1.0",
+  "route": "/mission-control/facts.html",
+  "registry": "/data/facts-registry.json",
+  "constitution": "/docs/FACTS_CONSTITUTION.md",
+  "evidence_registry": "/data/evidence-registry.json",
+  "claims_ledger": "/data/claims-ledger.json",
+  "knowledge_graph": "/data/kg-registry.json",
+  "organization": "Arkansas Civic Education Initiative",
+  "platform": "The Citizens United Education Platform",
+  "principle": "Facts are the foundation of the Citizens United Education Platform. Every educational resource should trace back to verified facts supported by transparent evidence.",
+  "governing_principle": "Readers should leave the platform not only with greater understanding, but also with confidence that they can examine the evidence for themselves.",
+  "philosophy_questions": [
+    { "id": "what", "question": "What happened?" },
+    { "id": "when", "question": "When did it happen?" },
+    { "id": "why", "question": "Why did it happen?" },
+    { "id": "what_changed", "question": "What changed because of it?" },
+    { "id": "how_we_know", "question": "How do we know?" }
+  ],
+  "categories": [
+    {
+      "id": "FACT-1000",
+      "code": "CASE",
+      "title": "The Case",
+      "description": "Core facts about Citizens United v. Federal Election Commission.",
+      "examples": [
+        "Parties involved",
+        "Procedural history",
+        "Questions before the Court",
+        "Vote breakdown",
+        "Holding",
+        "Constitutional provisions discussed",
+        "Opinions issued"
+      ]
+    },
+    {
+      "id": "FACT-2000",
+      "code": "HIST",
+      "title": "Historical Context",
+      "description": "Development of campaign finance law before 2010.",
+      "examples": [
+        "Major federal legislation",
+        "Significant Supreme Court decisions",
+        "Historical events influencing reform",
+        "Evolution of campaign finance regulation"
+      ]
+    },
+    {
+      "id": "FACT-3000",
+      "code": "CONST",
+      "title": "Constitutional Principles",
+      "description": "Constitutional doctrines discussed in the case.",
+      "examples": [
+        "First Amendment protections",
+        "Political speech",
+        "Corporate speech",
+        "Independent expenditures",
+        "Judicial standards of review"
+      ]
+    },
+    {
+      "id": "FACT-4000",
+      "code": "SPEND",
+      "title": "Political Spending",
+      "description": "Campaign finance before and after the decision.",
+      "examples": [
+        "Independent expenditure trends",
+        "Outside spending",
+        "Super PAC development",
+        "Disclosure rules",
+        "Election spending comparisons"
+      ]
+    },
+    {
+      "id": "FACT-5000",
+      "code": "CURRENT",
+      "title": "Current Developments",
+      "description": "Ongoing legal and legislative developments.",
+      "examples": [
+        "State legislation",
+        "Ballot initiatives",
+        "Court challenges",
+        "Congressional proposals",
+        "Regulatory developments"
+      ]
+    },
+    {
+      "id": "FACT-6000",
+      "code": "AR",
+      "title": "Arkansas",
+      "description": "Arkansas-specific educational information.",
+      "examples": [
+        "Arkansas campaign finance framework",
+        "Legislative process",
+        "Ballot initiative process",
+        "Arkansas reform discussions",
+        "Arkansas educational activities"
+      ]
+    }
+  ],
+  "record_schema": [
+    "fact_id",
+    "category_id",
+    "short_statement",
+    "plain_explanation",
+    "detailed_explanation",
+    "source_type",
+    "supporting_sources",
+    "evidence_ids",
+    "related_topics",
+    "related_timeline_events",
+    "related_cases",
+    "related_charts",
+    "related_educational_resources",
+    "philosophy_question",
+    "presentation_levels",
+    "last_verification_date",
+    "review_status",
+    "legacy_claim_id"
+  ],
+  "confidence_levels": [
+    {
+      "id": "confirmed",
+      "label": "Confirmed",
+      "description": "Supported by primary or authoritative sources."
+    },
+    {
+      "id": "strongly_supported",
+      "label": "Strongly Supported",
+      "description": "Supported by multiple reliable independent sources."
+    },
+    {
+      "id": "context_dependent",
+      "label": "Context Dependent",
+      "description": "Factually accurate but requires additional explanation or historical context."
+    },
+    {
+      "id": "under_review",
+      "label": "Under Review",
+      "description": "Pending verification or update."
+    }
+  ],
+  "presentation_levels": [
+    { "level": 1, "id": "L1", "title": "One-sentence summary", "field": "short_statement" },
+    { "level": 2, "id": "L2", "title": "Plain-language explanation", "field": "plain_explanation" },
+    { "level": 3, "id": "L3", "title": "Detailed educational discussion", "field": "detailed_explanation" },
+    { "level": 4, "id": "L4", "title": "Primary sources, citations, and related research", "field": "supporting_sources" }
+  ],
+  "relationship_types": [
+    "timeline_entries",
+    "supreme_court_cases",
+    "historical_legislation",
+    "charts",
+    "research_sources",
+    "educational_videos",
+    "faqs",
+    "community_discussion_guides"
+  ],
+  "how_we_know_section": {
+    "required_on": "major_educational_pages",
+    "includes": [
+      "Primary documents",
+      "Historical records",
+      "Government publications",
+      "Court opinions",
+      "Academic research",
+      "Data sources"
+    ]
+  },
+  "mission_control_metrics": [
+    "total_facts_cataloged",
+    "facts_verified",
+    "facts_needing_review",
+    "facts_awaiting_sources",
+    "arkansas_facts",
+    "by_category"
+  ],
+  "integrations": [
+    { "system": "Evidence Registry", "build": 10, "id_prefix": "EV-", "route": "/mission-control/research.html" },
+    { "system": "Claims Ledger", "build": 10, "note": "Legacy claims migrate to FACT-*", "route": "/data/claims-ledger.json" },
+    { "system": "Knowledge Graph", "build": 11, "id_prefix": "KG-", "route": "/mission-control/knowledge-graph.html" },
+    { "system": "Canonical Data Model", "build": 15, "route": "/mission-control/data-model.html" }
+  ],
+  "v1_target_facts": 200,
+  "recommended_next_build": {
+    "number": 19,
+    "title": "Brand & Identity System",
+    "note": "Logo, color, typography, voice, messaging — before mass content production."
+  }
+}

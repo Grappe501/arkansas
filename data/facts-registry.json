@@ -1,0 +1,462 @@
+{
+  "version": "1.0",
+  "build": 18,
+  "updated": "2026-07-09",
+  "title": "Citizens United Facts Registry",
+  "framework": "/data/facts-framework.json",
+  "constitution": "/docs/FACTS_CONSTITUTION.md",
+  "id_format": "FACT-{NNNN}",
+  "principle": "Every factual statement receives a permanent Fact ID. Nothing presented as fact without traceability.",
+  "summary": {
+    "total": 13,
+    "verified": 8,
+    "confirmed": 6,
+    "strongly_supported": 2,
+    "context_dependent": 2,
+    "under_review": 3,
+    "awaiting_sources": 5,
+    "by_category": {
+      "FACT-1000": 4,
+      "FACT-2000": 2,
+      "FACT-3000": 2,
+      "FACT-4000": 1,
+      "FACT-5000": 2,
+      "FACT-6000": 2
+    },
+    "by_philosophy_question": {
+      "what": 7,
+      "when": 1,
+      "why": 3,
+      "what_changed": 1,
+      "how_we_know": 1
+    },
+    "arkansas_facts": 2,
+    "migrated_from_claims": 3,
+    "fact_completeness_pct": 62,
+    "v1_target": 200,
+    "catalog_gaps": [
+      "FEC spending datasets (2010\u2013present) for FACT-4000 series",
+      "Buckley v. Valeo primary opinion (EV-ID)",
+      "Arkansas Ethics Commission primary sources",
+      "Oral argument transcripts",
+      "Super PAC formation timeline facts",
+      "Congressional reform proposal facts"
+    ]
+  },
+  "items": [
+    {
+      "fact_id": "FACT-1001",
+      "category_id": "FACT-1000",
+      "short_statement": "Citizens United held that government may not restrict independent political spending by corporations and unions.",
+      "plain_explanation": "The Supreme Court ruled that independent expenditures \u2014 spending not coordinated with a candidate \u2014 cannot be limited under the First Amendment, even when made by corporations or unions.",
+      "detailed_explanation": "In Citizens United v. Federal Election Commission (558 U.S. 310), the Court addressed whether federal law could prohibit corporations and unions from making independent expenditures in elections. The majority held that such restrictions violate the First Amendment. This holding is central to understanding post-2010 campaign finance.",
+      "source_type": "primary",
+      "supporting_sources": [],
+      "evidence_ids": [
+        "EV-000001"
+      ],
+      "related_topics": [
+        "KG-CASE-000003"
+      ],
+      "related_timeline_events": [],
+      "related_cases": [
+        "Citizens United v. FEC (2010)"
+      ],
+      "related_charts": [],
+      "related_educational_resources": [
+        "/halls/what-court-decided.html"
+      ],
+      "philosophy_question": "what",
+      "presentation_levels": [
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "last_verification_date": "2026-07-09",
+      "review_status": "confirmed",
+      "legacy_claim_id": "claim-001"
+    },
+    {
+      "fact_id": "FACT-1002",
+      "category_id": "FACT-1000",
+      "short_statement": "The Supreme Court decided Citizens United on January 21, 2010.",
+      "plain_explanation": "The opinion was released on January 21, 2010, during the January 2010 Term.",
+      "detailed_explanation": "The opinion was released on January 21, 2010, during the January 2010 Term.",
+      "source_type": "primary",
+      "supporting_sources": [],
+      "evidence_ids": [
+        "EV-000001"
+      ],
+      "related_topics": [
+        "KG-CASE-000003",
+        "KG-EVENT-000007"
+      ],
+      "related_timeline_events": [],
+      "related_cases": [
+        "Citizens United v. FEC (2010)"
+      ],
+      "related_charts": [],
+      "related_educational_resources": [
+        "/halls/the-case.html",
+        "/halls/after-2010.html"
+      ],
+      "philosophy_question": "when",
+      "presentation_levels": [
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "last_verification_date": "2026-07-09",
+      "review_status": "confirmed",
+      "legacy_claim_id": null
+    },
+    {
+      "fact_id": "FACT-1003",
+      "category_id": "FACT-1000",
+      "short_statement": "The Citizens United decision was decided by a 5\u20134 vote.",
+      "plain_explanation": "Five justices joined the majority opinion; four dissented. The close vote reflects deep disagreement over corporate political speech and campaign finance regulation.",
+      "detailed_explanation": "Five justices joined the majority opinion; four dissented. The close vote reflects deep disagreement over corporate political speech and campaign finance regulation.",
+      "source_type": "primary",
+      "supporting_sources": [],
+      "evidence_ids": [
+        "EV-000001"
+      ],
+      "related_topics": [
+        "KG-CASE-000003"
+      ],
+      "related_timeline_events": [],
+      "related_cases": [
+        "Citizens United v. FEC (2010)"
+      ],
+      "related_charts": [],
+      "related_educational_resources": [
+        "/halls/what-court-decided.html"
+      ],
+      "philosophy_question": "what",
+      "presentation_levels": [
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "last_verification_date": "2026-07-09",
+      "review_status": "strongly_supported",
+      "legacy_claim_id": null
+    },
+    {
+      "fact_id": "FACT-1004",
+      "category_id": "FACT-1000",
+      "short_statement": "The case was brought by Citizens United, a nonprofit corporation, against the Federal Election Commission.",
+      "plain_explanation": "Citizens United produced a film about Hillary Clinton and sought to distribute it; FEC restrictions on corporate electioneering communications were at issue.",
+      "detailed_explanation": "Citizens United produced a film about Hillary Clinton and sought to distribute it; FEC restrictions on corporate electioneering communications were at issue.",
+      "source_type": "primary",
+      "supporting_sources": [],
+      "evidence_ids": [
+        "EV-000001"
+      ],
+      "related_topics": [
+        "KG-CASE-000003",
+        "KG-ORG-000002"
+      ],
+      "related_timeline_events": [],
+      "related_cases": [
+        "Citizens United v. FEC (2010)"
+      ],
+      "related_charts": [],
+      "related_educational_resources": [
+        "/halls/the-case.html"
+      ],
+      "philosophy_question": "what",
+      "presentation_levels": [
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "last_verification_date": "2026-07-09",
+      "review_status": "confirmed",
+      "legacy_claim_id": null
+    },
+    {
+      "fact_id": "FACT-2001",
+      "category_id": "FACT-2000",
+      "short_statement": "The Bipartisan Campaign Reform Act of 2002 (BCRA) restricted corporate and union electioneering communications.",
+      "plain_explanation": "BCRA, often called McCain-Feingold, prohibited corporations and unions from funding electioneering communications close to elections \u2014 provisions later challenged and narrowed by Citizens United and related cases.",
+      "detailed_explanation": "BCRA built on earlier reforms including FECA amendments. Its corporate electioneering restrictions were a direct precursor to the legal questions in Citizens United.",
+      "source_type": "government",
+      "supporting_sources": [],
+      "evidence_ids": [],
+      "related_topics": [
+        "KG-LAW-000002"
+      ],
+      "related_timeline_events": [],
+      "related_cases": [
+        "McConnell v. FEC",
+        "Citizens United v. FEC"
+      ],
+      "related_charts": [],
+      "related_educational_resources": [
+        "/halls/story-before.html"
+      ],
+      "philosophy_question": "why",
+      "presentation_levels": [
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "last_verification_date": "2026-07-09",
+      "review_status": "context_dependent",
+      "legacy_claim_id": null
+    },
+    {
+      "fact_id": "FACT-2002",
+      "category_id": "FACT-2000",
+      "short_statement": "Buckley v. Valeo (1976) established that campaign spending is a form of protected political speech.",
+      "plain_explanation": "The Court held that expenditure limits implicate First Amendment rights, while contribution limits may be regulated differently \u2014 a framework that shaped later campaign finance jurisprudence.",
+      "detailed_explanation": "Buckley remains foundational. Citizens United extended expenditure protections to corporate and union independent spending. Primary opinion not yet in Evidence Registry \u2014 under documentation.",
+      "source_type": "primary",
+      "supporting_sources": [],
+      "evidence_ids": [],
+      "related_topics": [
+        "KG-CASE-000001"
+      ],
+      "related_timeline_events": [],
+      "related_cases": [
+        "Buckley v. Valeo (1976)"
+      ],
+      "related_charts": [],
+      "related_educational_resources": [
+        "/halls/story-before.html"
+      ],
+      "philosophy_question": "why",
+      "presentation_levels": [
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "last_verification_date": "2026-07-09",
+      "review_status": "context_dependent",
+      "legacy_claim_id": null
+    },
+    {
+      "fact_id": "FACT-3001",
+      "category_id": "FACT-3000",
+      "short_statement": "The First Amendment was central to the Citizens United majority's reasoning.",
+      "plain_explanation": "The majority framed independent political spending as protected speech; restrictions must survive strict scrutiny.",
+      "detailed_explanation": "The majority framed independent political spending as protected speech; restrictions must survive strict scrutiny.",
+      "source_type": "primary",
+      "supporting_sources": [],
+      "evidence_ids": [
+        "EV-000001"
+      ],
+      "related_topics": [
+        "KG-PRIN-000001",
+        "KG-CASE-000003"
+      ],
+      "related_timeline_events": [],
+      "related_cases": [],
+      "related_charts": [],
+      "related_educational_resources": [
+        "/halls/what-court-decided.html",
+        "/halls/debate.html"
+      ],
+      "philosophy_question": "why",
+      "presentation_levels": [
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "last_verification_date": "2026-07-09",
+      "review_status": "confirmed",
+      "legacy_claim_id": null
+    },
+    {
+      "fact_id": "FACT-3002",
+      "category_id": "FACT-3000",
+      "short_statement": "The decision addressed independent expenditures separately from direct contributions to candidates.",
+      "plain_explanation": "Independent spending \u2014 not coordinated with a campaign \u2014 received different constitutional treatment than contributions, following Buckley's expenditure/contribution distinction.",
+      "detailed_explanation": "Independent spending \u2014 not coordinated with a campaign \u2014 received different constitutional treatment than contributions, following Buckley's expenditure/contribution distinction.",
+      "source_type": "primary",
+      "supporting_sources": [],
+      "evidence_ids": [
+        "EV-000001"
+      ],
+      "related_topics": [
+        "KG-PRIN-000002"
+      ],
+      "related_timeline_events": [],
+      "related_cases": [],
+      "related_charts": [],
+      "related_educational_resources": [
+        "/halls/what-court-decided.html"
+      ],
+      "philosophy_question": "what",
+      "presentation_levels": [
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "last_verification_date": "2026-07-09",
+      "review_status": "confirmed",
+      "legacy_claim_id": null
+    },
+    {
+      "fact_id": "FACT-4001",
+      "category_id": "FACT-4000",
+      "short_statement": "Outside spending in federal elections increased substantially after 2010.",
+      "plain_explanation": "Independent expenditure and outside-group spending grew in the decade following Citizens United, though causation involves multiple factors beyond a single decision.",
+      "detailed_explanation": "FEC and OpenSecrets data document spending trends. Platform requires verified datasets (EV-IDs) before upgrading to Confirmed status.",
+      "source_type": "government",
+      "supporting_sources": [],
+      "evidence_ids": [],
+      "related_topics": [
+        "KG-DATA-000001",
+        "KG-EVENT-000007"
+      ],
+      "related_timeline_events": [],
+      "related_cases": [],
+      "related_charts": [
+        "money-map-preview"
+      ],
+      "related_educational_resources": [
+        "/halls/after-2010.html",
+        "/halls/money-map.html"
+      ],
+      "philosophy_question": "what_changed",
+      "presentation_levels": [
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "last_verification_date": "2026-07-09",
+      "review_status": "under_review",
+      "legacy_claim_id": null
+    },
+    {
+      "fact_id": "FACT-5001",
+      "category_id": "FACT-5000",
+      "short_statement": "Montana Initiative 194 would prohibit artificial persons from contributing to campaigns, ballot measures, or political parties.",
+      "plain_explanation": "A 2026 Montana ballot measure seeks to restrict corporate and similar entity political contributions \u2014 part of ongoing state-level responses to Citizens United.",
+      "detailed_explanation": "A 2026 Montana ballot measure seeks to restrict corporate and similar entity political contributions \u2014 part of ongoing state-level responses to Citizens United.",
+      "source_type": "government",
+      "supporting_sources": [],
+      "evidence_ids": [
+        "EV-000004",
+        "EV-000005"
+      ],
+      "related_topics": [
+        "KG-REFORM-000004"
+      ],
+      "related_timeline_events": [],
+      "related_cases": [],
+      "related_charts": [],
+      "related_educational_resources": [
+        "/halls/montana-hawaii.html"
+      ],
+      "philosophy_question": "what",
+      "presentation_levels": [
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "last_verification_date": "2026-07-09",
+      "review_status": "strongly_supported",
+      "legacy_claim_id": "claim-002"
+    },
+    {
+      "fact_id": "FACT-5002",
+      "category_id": "FACT-5000",
+      "short_statement": "Hawaii Act 11 restricts corporate election spending; effective July 1, 2027.",
+      "plain_explanation": "Hawaii enacted legislation limiting corporate influence in state elections, with an effective date in 2027 \u2014 subject to ongoing verification and legal context.",
+      "detailed_explanation": "Hawaii enacted legislation limiting corporate influence in state elections, with an effective date in 2027 \u2014 subject to ongoing verification and legal context.",
+      "source_type": "journalism",
+      "supporting_sources": [],
+      "evidence_ids": [
+        "EV-000006",
+        "EV-000014"
+      ],
+      "related_topics": [
+        "KG-REFORM-000005"
+      ],
+      "related_timeline_events": [],
+      "related_cases": [],
+      "related_charts": [],
+      "related_educational_resources": [
+        "/halls/montana-hawaii.html"
+      ],
+      "philosophy_question": "what",
+      "presentation_levels": [
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "last_verification_date": "2026-07-09",
+      "review_status": "under_review",
+      "legacy_claim_id": "claim-003"
+    },
+    {
+      "fact_id": "FACT-6001",
+      "category_id": "FACT-6000",
+      "short_statement": "The platform's Arkansas pilot covers all 75 counties.",
+      "plain_explanation": "ACEI coalition infrastructure indexes all 75 Arkansas counties for educational partner outreach \u2014 Arkansas is the v1 geographic scope.",
+      "detailed_explanation": "ACEI coalition infrastructure indexes all 75 Arkansas counties for educational partner outreach \u2014 Arkansas is the v1 geographic scope.",
+      "source_type": "platform",
+      "supporting_sources": [],
+      "evidence_ids": [],
+      "related_topics": [],
+      "related_timeline_events": [],
+      "related_cases": [],
+      "related_charts": [],
+      "related_educational_resources": [
+        "/arkansas/",
+        "/coalition/counties.html"
+      ],
+      "philosophy_question": "what",
+      "presentation_levels": [
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "last_verification_date": "2026-07-09",
+      "review_status": "confirmed",
+      "legacy_claim_id": null
+    },
+    {
+      "fact_id": "FACT-6002",
+      "category_id": "FACT-6000",
+      "short_statement": "Arkansas campaign finance is governed by state statute and Arkansas Ethics Commission rules.",
+      "plain_explanation": "Arkansas maintains its own disclosure and contribution framework for state elections, separate from federal FEC rules.",
+      "detailed_explanation": "Primary Arkansas statutes and Ethics Commission guidance must be cataloged in Evidence Registry before Confirmed status.",
+      "source_type": "government",
+      "supporting_sources": [],
+      "evidence_ids": [],
+      "related_topics": [],
+      "related_timeline_events": [],
+      "related_cases": [],
+      "related_charts": [],
+      "related_educational_resources": [
+        "/arkansas/"
+      ],
+      "philosophy_question": "how_we_know",
+      "presentation_levels": [
+        "L1",
+        "L2",
+        "L3",
+        "L4"
+      ],
+      "last_verification_date": "2026-07-09",
+      "review_status": "under_review",
+      "legacy_claim_id": null
+    }
+  ]
+}

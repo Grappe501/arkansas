@@ -1,6 +1,6 @@
 {
-  "version": "1.21.0",
-  "build": 17,
+  "version": "1.22.0",
+  "build": 18,
   "updated": "2026-07-09",
   "identity": {
     "public_name": "Citizens United Mission Control",
@@ -9,21 +9,21 @@
     "principle": "Mission Control tells the truth about itself. Never inflate completion."
   },
   "executive": {
-    "overall_completion": 17,
+    "overall_completion": 18,
     "current_build": {
-      "number": 17,
-      "title": "Component Architecture & Design System Inventory"
-    },
-    "active_phase": "Product Design \u2014 Component Registry",
-    "last_completed": "Complete Page & Route Inventory",
-    "next_build": {
       "number": 18,
+      "title": "Citizens United Facts Framework"
+    },
+    "active_phase": "Content Foundation \u2014 Facts Framework",
+    "last_completed": "Component Architecture & Design System Inventory",
+    "next_build": {
+      "number": 19,
       "title": "Brand & Identity System (logo, color, typography, voice, messaging)"
     },
     "github_status": "connected",
     "netlify_status": "production_healthy",
-    "content_readiness": 12,
-    "research_readiness": 18,
+    "content_readiness": 14,
+    "research_readiness": 20,
     "data_viz_readiness": 2,
     "signup_funnel_readiness": 14,
     "civic_action_readiness": 22,
@@ -31,6 +31,7 @@
     "data_model_readiness": 8,
     "route_inventory_readiness": 18,
     "component_registry_readiness": 22,
+    "facts_framework_readiness": 12,
     "public_launch_readiness": 6,
     "public_launch_label": "Early Foundation"
   },
@@ -38,8 +39,8 @@
     {
       "id": "overall",
       "label": "Overall Platform Completion",
-      "value": 17,
-      "note": "Component registry live \u2014 42 components (A\u2013G). Brand & Identity System next."
+      "value": 18,
+      "note": "Facts framework live \u2014 13 facts cataloged (8 verified). Brand & Identity next."
     },
     {
       "id": "constitution",
@@ -182,6 +183,13 @@
       "value": 22,
       "max": 100,
       "note": "22 live, 11 partial, 6 stub, 3 planned \u2014 honest inventory."
+    },
+    {
+      "id": "facts",
+      "label": "Facts Framework",
+      "value": 12,
+      "max": 100,
+      "note": "13 facts, 8 verified, 3 under review \u2014 honest v1 catalog."
     }
   ],
   "public_readiness": {
@@ -576,6 +584,12 @@
       "id": "components",
       "label": "Component Registry",
       "href": "/mission-control/components.html",
+      "status": "complete"
+    },
+    {
+      "id": "facts",
+      "label": "Facts Framework",
+      "href": "/mission-control/facts.html",
       "status": "complete"
     }
   ],
@@ -1603,6 +1617,55 @@
   ],
   "builds": [
     {
+      "number": 18,
+      "title": "Citizens United Facts Framework",
+      "version": "1.22.0",
+      "status": "complete",
+      "started": "2026-07-09",
+      "completed": "2026-07-09",
+      "purpose": "Canonical Facts & Evidence Architecture v1.0 \u2014 foundation for all educational content",
+      "summary": "13 facts in 6 categories; 4 confidence levels; L1\u2013L4 presentation; EV/KG integration; claims migrated.",
+      "files_created": [
+        "data/facts-framework.json",
+        "data/facts-registry.json",
+        "docs/FACTS_CONSTITUTION.md",
+        "builds/018-citizens-united-facts-framework.md",
+        "mission-control/facts.html",
+        "scripts/gen-facts-registry.py",
+        "scripts/update-mc-build18.py"
+      ],
+      "files_modified": [
+        "js/mission-control.js",
+        "data/claims-ledger.json",
+        "data/site.json",
+        "BUILD_PLAN.md",
+        "netlify.toml",
+        "data/brand-identity.json"
+      ],
+      "pages_created": [
+        "/mission-control/facts.html"
+      ],
+      "decisions_made": [
+        "FACT-1000 through FACT-6000 category system",
+        "Four confidence levels: confirmed, strongly_supported, context_dependent, under_review",
+        "Facts trace to Evidence Registry (EV-*) and Knowledge Graph (KG-*)",
+        "Claims ledger linked via fact_id \u2014 3 claims migrated",
+        "Build #19: Brand & Identity System before mass content"
+      ],
+      "open_questions": [
+        "Public FACT-IDs on educational pages?",
+        "FEC dataset integration timeline?"
+      ],
+      "risks": [
+        "Only 13 of ~200 v1 target facts cataloged \u2014 gaps documented"
+      ],
+      "next_recommended": 19,
+      "branch": "main",
+      "git_commit": "pending",
+      "netlify_deploy": "https://arkansas-facts.netlify.app/mission-control/facts.html",
+      "review_status": "complete"
+    },
+    {
       "number": 17,
       "title": "Component Architecture & Design System Inventory",
       "version": "1.21.0",
@@ -2323,18 +2386,18 @@
     }
   ],
   "briefing": {
-    "what_built": "Component Registry v1.0 \u2014 42 components + ACEI branding",
-    "building_now": "Product design phase \u2014 Brand & Identity System next (Build #18)",
+    "what_built": "Facts Framework v1.0 \u2014 13 canonical facts with evidence traceability",
+    "building_now": "Content foundation \u2014 Brand & Identity System next (Build #19)",
     "blocked": [
-      "Stub/planned components need implementation",
-      "Brand system not yet defined"
+      "Hundreds of facts not yet cataloged",
+      "FEC spending data for FACT-4000 series"
     ],
     "ready_public": [
-      "Component MC dashboard",
-      "Brand identity JSON",
-      "ACEI coalition rebrand on hub pages"
+      "Facts MC dashboard",
+      "FACTS_CONSTITUTION.md",
+      "Claims-to-facts migration"
     ],
-    "next": "Build #18 \u2014 Brand & Identity System"
+    "next": "Build #19 \u2014 Brand & Identity System"
   },
   "admin_only": {
     "internal_notes": "Update site-architecture.json, phase-registry.json, and mission-control.json every commit.",
@@ -2448,5 +2511,22 @@
     "design_system_linked": 12,
     "organization": "Arkansas Civic Education Initiative",
     "platform": "The Citizens United Education Platform"
+  },
+  "facts_framework": "/data/facts-framework.json",
+  "facts_registry": "/data/facts-registry.json",
+  "facts_dashboard": "/mission-control/facts.html",
+  "facts_inventory": {
+    "readiness_score": 12,
+    "total_facts": 13,
+    "verified": 8,
+    "confirmed": 6,
+    "strongly_supported": 2,
+    "context_dependent": 2,
+    "under_review": 3,
+    "awaiting_sources": 5,
+    "arkansas_facts": 2,
+    "categories": 6,
+    "fact_completeness_pct": 62,
+    "v1_target": 200
   }
 }

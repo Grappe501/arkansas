@@ -3,6 +3,7 @@
   "claims": [
     {
       "id": "claim-001",
+      "fact_id": "FACT-1001",
       "claim_text": "Citizens United held that government may not restrict independent political spending by corporations and unions.",
       "hall": "what-court-decided",
       "evidence_ids": ["EV-000001"],
@@ -14,6 +15,7 @@
     },
     {
       "id": "claim-002",
+      "fact_id": "FACT-5001",
       "claim_text": "Montana Initiative 194 would prohibit artificial persons from contributing to campaigns, ballot measures, or political parties.",
       "hall": "montana-hawaii",
       "evidence_ids": ["EV-000004", "EV-000005"],
@@ -26,6 +28,7 @@
     },
     {
       "id": "claim-003",
+      "fact_id": "FACT-5002",
       "claim_text": "Hawaii Act 11 restricts corporate election spending; effective July 1, 2027.",
       "hall": "montana-hawaii",
       "evidence_ids": ["EV-000006", "EV-000014"],

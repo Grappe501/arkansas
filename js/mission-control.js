@@ -232,6 +232,8 @@ async function initMissionControl() {
     </div>
     ${renderAdminPanel(admin ? data.admin_only : null)}
     <p class="mc-bar-note">${reg.guiding_principle}</p>
+    <h2 class="mc-section-title">Facts Framework <a href="/mission-control/facts.html" class="mc-inline-link">Canonical Facts →</a></h2>
+    <p class="mc-bar-note">Build #18 — 6 fact categories (FACT-1000–6000), confidence levels, 4 presentation depths, evidence traceability.</p>
     <h2 class="mc-section-title">Component Registry <a href="/mission-control/components.html" class="mc-inline-link">Master Inventory →</a></h2>
     <p class="mc-bar-note">Build #17 — 42 components (A–G), ACEI branding, linked to design system.</p>
     <h2 class="mc-section-title">Route Registry <a href="/mission-control/routes.html" class="mc-inline-link">Complete Inventory →</a></h2>
@@ -1023,6 +1025,7 @@ async function initResearchBlueprint() {
       <a href="/docs/RESEARCH_CONSTITUTION.md">RESEARCH_CONSTITUTION.md</a> ·
       <a href="/data/evidence-registry.json">Evidence JSON</a> ·
       <a href="/data/claims-ledger.json">Claims ledger</a> ·
+      <a href="/mission-control/facts.html">Facts Framework</a> ·
       <a href="/library/">Source Library</a> ·
       <a href="/mission-control/">← Mission Control</a>
     </p>`;
@@ -1682,6 +1685,116 @@ async function initComponentRegistryBlueprint() {
   initDevConsole(mc);
 }
 
+function renderFactRow(item) {
+  const ev = (item.evidence_ids || []).map(id => `<code>${id}</code>`).join(' ') || '—';
+  const kg = (item.related_topics || []).slice(0, 2).map(id => `<code>${id}</code>`).join(' ') || '—';
+  const statusClass = item.review_status === 'confirmed' ? 'mc-table__row--approved' : '';
+  return `
+    <tr class="${statusClass}" id="${item.fact_id}">
+      <td><code>${item.fact_id}</code></td>
+      <td><code>${item.category_id}</code></td>
+      <td>${item.short_statement}</td>
+      <td>${item.review_status}</td>
+      <td>${item.philosophy_question}</td>
+      <td>${ev}</td>
+      <td>${kg}</td>
+    </tr>`;
+}
+
+async function initFactsFrameworkBlueprint() {
+  const root = document.getElementById('mc-facts-root');
+  if (!root) return;
+
+  const [fwRes, regRes, mcRes] = await Promise.all([
+    fetch('/data/facts-framework.json'),
+    fetch('/data/facts-registry.json'),
+    fetch('/data/mission-control.json')
+  ]);
+  const fw = await fwRes.json();
+  const reg = await regRes.json();
+  const mc = await mcRes.json();
+  const s = reg.summary;
+
+  const byCat = fw.categories.map(cat => {
+    const count = s.by_category?.[cat.id] ?? 0;
+    return `
+      <tr>
+        <td><code>${cat.id}</code></td>
+        <td>${cat.title}</td>
+        <td>${count}</td>
+        <td>${cat.examples.slice(0, 3).join('; ')}…</td>
+      </tr>`;
+  }).join('');
+
+  const factRows = reg.items.map(renderFactRow).join('');
+
+  root.innerHTML = `
+    <nav class="breadcrumb mc-breadcrumb"><a href="/mission-control/">Mission Control</a> → Facts Framework</nav>
+    <header class="mc-header">
+      <p class="mc-header__eyebrow">Build #18 · ${fw.title}</p>
+      <h1>Citizens United Facts Framework</h1>
+      <p class="mc-header__question">${fw.principle}</p>
+    </header>
+    <section class="mc-card">
+      <h3>${fw.organization}</h3>
+      <p class="mc-bar-note"><strong>${fw.platform}</strong></p>
+      <p class="mc-bar-note">${fw.governing_principle}</p>
+    </section>
+    <div class="mc-executive mc-executive--hero">
+      <div class="mc-stat"><div class="mc-stat__label">Facts cataloged</div><div class="mc-stat__value">${s.total}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Verified</div><div class="mc-stat__value">${s.verified}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Confirmed</div><div class="mc-stat__value">${s.confirmed}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Strongly supported</div><div class="mc-stat__value">${s.strongly_supported}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Under review</div><div class="mc-stat__value">${s.under_review}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Awaiting sources</div><div class="mc-stat__value">${s.awaiting_sources}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">Arkansas facts</div><div class="mc-stat__value">${s.arkansas_facts}</div></div>
+      <div class="mc-stat"><div class="mc-stat__label">V1 target</div><div class="mc-stat__value">~${s.v1_target}</div></div>
+    </div>
+    <h2 class="mc-section-title">Fact Philosophy — Five Questions</h2>
+    <ul class="mc-deliverables">${fw.philosophy_questions.map(q => `<li><strong>${q.question}</strong></li>`).join('')}</ul>
+    <h2 class="mc-section-title">Fact Categories (${fw.categories.length})</h2>
+    <table class="mc-table">
+      <thead><tr><th>ID</th><th>Category</th><th>Facts</th><th>Examples</th></tr></thead>
+      <tbody>${byCat}</tbody>
+    </table>
+    <h2 class="mc-section-title">Confidence Levels</h2>
+    <ul class="mc-deliverables">${fw.confidence_levels.map(c => `<li><strong>${c.label}</strong> — ${c.description}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Presentation Levels (L1–L4)</h2>
+    <table class="mc-table">
+      <thead><tr><th>Level</th><th>Format</th><th>Field</th></tr></thead>
+      <tbody>${fw.presentation_levels.map(p => `<tr><td>${p.id}</td><td>${p.title}</td><td><code>${p.field}</code></td></tr>`).join('')}</tbody>
+    </table>
+    <h2 class="mc-section-title">"How We Know" — Required Transparency</h2>
+    <p class="mc-bar-note">Every major educational page includes sources readers can verify:</p>
+    <ul class="mc-deliverables">${fw.how_we_know_section.includes.map(i => `<li>${i}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Catalog Gaps</h2>
+    <ul class="mc-deliverables">${s.catalog_gaps.map(g => `<li>${g}</li>`).join('')}</ul>
+    <h2 class="mc-section-title">Facts Registry (${s.total})</h2>
+    <p class="mc-bar-note">Fact completeness: ${s.fact_completeness_pct}% · ${s.migrated_from_claims} migrated from claims ledger</p>
+    <div class="mc-card mc-inv-table-wrap" style="max-height:360px;overflow-y:auto">
+      <table class="mc-table mc-inv-table">
+        <thead><tr><th>ID</th><th>Category</th><th>Statement</th><th>Status</th><th>Question</th><th>EV-IDs</th><th>KG-IDs</th></tr></thead>
+        <tbody>${factRows}</tbody>
+      </table>
+    </div>
+    <h2 class="mc-section-title">Platform Integrations</h2>
+    <table class="mc-table">
+      <thead><tr><th>System</th><th>Build</th><th>Link</th></tr></thead>
+      <tbody>${fw.integrations.map(i => `<tr><td>${i.system}</td><td>#${i.build}</td><td><a href="${i.route}">${i.route}</a></td></tr>`).join('')}</tbody>
+    </table>
+    <h2 class="mc-section-title">Recommended: Build #${fw.recommended_next_build.number} — ${fw.recommended_next_build.title}</h2>
+    <p class="mc-bar-note">${fw.recommended_next_build.note}</p>
+    <p class="mc-bar-note">
+      <a href="/docs/FACTS_CONSTITUTION.md">FACTS_CONSTITUTION.md</a> ·
+      <a href="/data/facts-registry.json">Facts JSON</a> ·
+      <a href="/data/facts-framework.json">Framework JSON</a> ·
+      <a href="/mission-control/research.html">Evidence Registry</a> ·
+      <a href="/mission-control/">← Mission Control</a>
+    </p>`;
+
+  initDevConsole(mc);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   initMissionControl();
   initBuildDetail();
@@ -1698,4 +1811,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initDataModelBlueprint();
   initRouteRegistryBlueprint();
   initComponentRegistryBlueprint();
+  initFactsFrameworkBlueprint();
 });

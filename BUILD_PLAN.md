@@ -4,8 +4,8 @@
 
 Status: ✅ Done · 🟡 Partial · ⬜ Not started
 
-**Current version:** 1.21.0 · **Components:** [/mission-control/components.html](/mission-control/components.html) · **OS:** [Mission Control](/mission-control/)  
-**Build #17:** ✅ Component Registry · **Build #16:** ✅ Route Inventory · **Build #15:** ✅ Data Model  
+**Current version:** 1.22.0 · **Facts:** [/mission-control/facts.html](/mission-control/facts.html) · **OS:** [Mission Control](/mission-control/)  
+**Build #18:** ✅ Facts Framework · **Build #17:** ✅ Component Registry · **Build #16:** ✅ Route Inventory  
 **Organization:** Arkansas Civic Education Initiative (ACEI) · *Citizens United* = subject, not identity  
 **Public map:** [/explore/](/explore/) · **Live site:** [arkansas-facts.netlify.app](https://arkansas-facts.netlify.app/)
 
@@ -261,8 +261,28 @@ Learn          →  Participate     →  Organize         →  Build Solutions  
 | **15** | **Canonical Data Model** | **✅ v1.19.0** |
 | **16** | **Route Inventory** | **✅ v1.20.0** |
 | **17** | **Component Registry** | **✅ v1.21.0** |
+| **18** | **Facts Framework** | **✅ v1.22.0** |
 
-**Next:** Build #18 — Brand & Identity System (logo, color, typography, voice, messaging).
+**Next:** Build #19 — Brand & Identity System (logo, color, typography, voice, messaging).
+
+---
+
+## Phase 18 — Facts Framework (Build #18) ★ NEW
+
+*Canonical facts & evidence architecture — foundation for all educational content.*
+
+| # | Step | Status | Route |
+|---|------|--------|-------|
+| F1 | Facts Framework v1.0 | ✅ | `data/facts-framework.json` |
+| F2 | 6 fact categories (FACT-1000–6000) | ✅ | Constitution |
+| F3 | Fact record schema + confidence levels | ✅ | 4 statuses |
+| F4 | L1–L4 presentation levels | ✅ | Depth model aligned |
+| F5 | Facts registry with seed facts | ✅ | `data/facts-registry.json` |
+| F6 | Claims ledger migration (fact_id) | ✅ | 3 claims linked |
+| F7 | EV-* and KG-* integrations | ✅ | Traceability |
+| F8 | MC facts dashboard | ✅ | `/mission-control/facts.html` |
+
+**Governing principle:** Facts are the foundation. Every resource traces back to verified facts with transparent evidence.
 
 ---
 
@@ -329,10 +349,11 @@ Stop creating high-level constitutions. Next builds are **concrete product desig
 |-------|-------|
 | ~~**#16**~~ | ~~Complete page inventory~~ ✅ Done |
 | ~~**#17**~~ | ~~Component inventory~~ ✅ Done |
-| **#18** | **Brand & Identity System** (logo, color, typography, voice, messaging) |
-| **#19** | Database schema and entity relationships |
-| **#20** | UX wireframes for desktop, tablet, and mobile |
-| **#21** | GitHub repository structure and Netlify deployment blueprint |
+| ~~**#18**~~ | ~~Citizens United Facts Framework~~ ✅ Done |
+| **#19** | **Brand & Identity System** (logo, color, typography, voice, messaging) |
+| **#20** | Database schema and entity relationships |
+| **#21** | UX wireframes for desktop, tablet, and mobile |
+| **#22** | GitHub repository structure and Netlify deployment blueprint |
 
 ---
 
