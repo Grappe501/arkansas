@@ -89,7 +89,7 @@ ex = mc.get('executive', {})
 
 # Honest operational metrics
 steps_implemented = 0
-steps_documented = 34  # IMP-01 through IMP-34 (doctrinal)
+steps_documented = 35  # IMP-01 through IMP-35 (doctrinal)
 sprint_zero_started = False
 cursor_scripts_consolidated = False
 qa_gates_passed = 0
@@ -3335,7 +3335,7 @@ INSTITUTIONAL_OS_SYSTEMS = [
     'institutional_analytics', 'institutional_automation', 'public_digital_experience',
     'mobile_field_operations', 'institutional_digital_library',
     'institutional_integration_platform', 'institutional_security_trust',
-    'institutional_engineering_standards', 'institutional_executive_cockpit',
+    'institutional_executive_cockpit', 'institutional_research_intelligence',
 ]
 
 RELATIONSHIP_PHILOSOPHY_REMEMBERS = [
@@ -6266,6 +6266,182 @@ EXECUTIVE_COCKPIT_MANIFEST = {
     'implemented': False,
 }
 
+RESEARCH_PHILOSOPHY_VALUES = [
+    'observe_continuously', 'verify_carefully', 'explain_clearly',
+    'educate_responsibly', 'archive_permanently',
+]
+
+RESEARCH_INTELLIGENCE_DIVISIONS = [
+    'legal_intelligence', 'legislative_intelligence', 'community_intelligence',
+    'educational_intelligence', 'institutional_intelligence', 'historical_intelligence',
+]
+
+LEGAL_INTELLIGENCE_TRACKS = [
+    'court_opinions', 'constitutional_cases', 'election_law', 'campaign_finance_law',
+    'administrative_law', 'attorney_general_opinions', 'federal_developments_affecting_arkansas',
+]
+
+LEGISLATIVE_INTELLIGENCE_MONITORS = [
+    'bills', 'committee_activity', 'floor_action', 'enacted_laws', 'rulemaking',
+    'public_hearings', 'legislative_calendars',
+]
+
+COMMUNITY_INTELLIGENCE_OBSERVES = [
+    'community_concerns', 'county_priorities', 'public_meetings',
+    'community_conversations', 'volunteer_observations', 'educational_requests',
+    'emerging_issues',
+]
+
+EDUCATIONAL_INTELLIGENCE_MEASURES = [
+    'frequently_asked_questions', 'learning_challenges', 'popular_academy_courses',
+    'knowledge_gaps', 'presentation_requests', 'educational_trends',
+]
+
+INSTITUTIONAL_INTELLIGENCE_TRACKS = [
+    'volunteer_expertise', 'organization_capabilities', 'research_productivity',
+    'academy_growth', 'county_development', 'community_health',
+]
+
+HISTORICAL_INTELLIGENCE_MAINTAINS = [
+    'historical_timelines', 'past_legislation', 'archived_research',
+    'institutional_history', 'arkansas_civic_history', 'constitutional_development',
+]
+
+CIVIC_ISSUE_OBSERVATORIES = [
+    'campaign_finance', 'election_administration', 'constitutional_government',
+    'ballot_initiatives', 'local_government', 'open_government', 'public_records',
+    'civic_education',
+]
+
+RESEARCH_WATCHLIST_ITEMS = [
+    'pending_court_cases', 'pending_legislation', 'emerging_civic_issues',
+    'research_requests', 'important_anniversaries', 'scheduled_government_actions',
+    'potential_educational_opportunities',
+]
+
+ARKANSAS_CIVIC_INDICATORS = [
+    'volunteer_participation', 'community_conversations', 'educational_engagement',
+    'county_readiness', 'organization_growth', 'leadership_development',
+    'public_interest_trends',
+]
+
+RESEARCH_REQUEST_TYPES = [
+    'research_questions', 'fact_check_requests', 'presentation_requests',
+    'community_issues', 'suggested_topics',
+]
+
+AI_RESEARCH_ASSISTANT_CAPABILITIES = [
+    'locating_sources', 'summarizing_documents', 'identifying_related_research',
+    'building_timelines', 'suggesting_citations', 'preparing_educational_summaries',
+    'flagging_information_gaps',
+]
+
+RESEARCH_PUBLICATION_COMPONENTS = [
+    'executive_summary', 'supporting_evidence', 'educational_explanation',
+    'related_academy_resources', 'community_discussion_guide', 'references',
+    'suggested_next_learning',
+]
+
+MC_RESEARCH_DASHBOARD_DISPLAYS = [
+    'research_pipeline', 'observatories', 'watchlists', 'publication_schedule',
+    'community_requests', 'research_workload', 'emerging_issues', 'knowledge_gaps',
+    'research_impact',
+]
+
+OCTOBER_RESEARCH_OBJECTIVE_SCOPE = [
+    'county_research_profile', 'core_educational_resources', 'local_government_overview',
+    'historical_context', 'community_organization_directory', 'local_civic_reference_materials',
+]
+
+RESEARCH_INTELLIGENCE_DELIVERABLES = [
+    'research_intelligence_architecture', 'arkansas_civic_insights_center',
+    'legal_intelligence', 'legislative_intelligence', 'community_intelligence',
+    'historical_intelligence', 'civic_issue_observatories', 'research_watchlists',
+    'ai_research_assistant', 'research_dashboard', 'arkansas_civic_indicators',
+]
+
+RESEARCH_INTELLIGENCE_SYSTEM_CHAIN = [
+    'mission_control', 'knowledge_platform', 'research_institute',
+    'community_education_academy', 'volunteer_network', 'county_operating_system',
+    'city_operating_system', 'neighborhood_operating_system', 'communications',
+    'analytics', 'ai_localbrains',
+]
+
+RESEARCH_INTELLIGENCE_MANIFEST = {
+    'version': '1.0',
+    'build': 101,
+    'package': 'IMP-35',
+    'updated': today,
+    'title': 'Master Research Intelligence, Public Policy Observatory & Arkansas Civic Insights Center',
+    'constitution': '/docs/IMPLEMENTATION_PACKAGE_35_RESEARCH_INTELLIGENCE.md',
+    'source_registries': {
+        'research_institute': '/data/research-institute-manifest.json',
+        'knowledge_graph': '/data/knowledge-graph-manifest.json',
+        'digital_library': '/data/digital-library-manifest.json',
+        'executive_cockpit': '/data/executive-cockpit-manifest.json',
+        'local_operating_systems': '/data/local-operating-systems-manifest.json',
+    },
+    'philosophy': 'Continuously discover, organize, analyze, and explain civic knowledge — not merely preserve it',
+    'governing_principle': (
+        'Knowledge shared helps communities; research that educates equips citizens to '
+        'participate thoughtfully in civic life'
+    ),
+    'master_timeline': MASTER_TIMELINE,
+    'software_completion_date': software_completion_date,
+    'county_milestone_date': county_milestone_date,
+    'organizational_readiness_date': organizational_readiness_date,
+    'days_to_software': days_to_software,
+    'days_to_county_milestone': days_to_county_milestone,
+    'days_to_organizational': days_to_organizational,
+    'research_philosophy_values': RESEARCH_PHILOSOPHY_VALUES,
+    'research_intelligence_divisions': RESEARCH_INTELLIGENCE_DIVISIONS,
+    'research_intelligence_division_count': len(RESEARCH_INTELLIGENCE_DIVISIONS),
+    'legal_intelligence_tracks': LEGAL_INTELLIGENCE_TRACKS,
+    'legislative_intelligence_monitors': LEGISLATIVE_INTELLIGENCE_MONITORS,
+    'community_intelligence_observes': COMMUNITY_INTELLIGENCE_OBSERVES,
+    'educational_intelligence_measures': EDUCATIONAL_INTELLIGENCE_MEASURES,
+    'institutional_intelligence_tracks': INSTITUTIONAL_INTELLIGENCE_TRACKS,
+    'historical_intelligence_maintains': HISTORICAL_INTELLIGENCE_MAINTAINS,
+    'civic_issue_observatories': CIVIC_ISSUE_OBSERVATORIES,
+    'civic_issue_observatory_count': len(CIVIC_ISSUE_OBSERVATORIES),
+    'research_watchlist_items': RESEARCH_WATCHLIST_ITEMS,
+    'research_watchlist_item_count': len(RESEARCH_WATCHLIST_ITEMS),
+    'arkansas_civic_indicators': ARKANSAS_CIVIC_INDICATORS,
+    'arkansas_civic_indicator_count': len(ARKANSAS_CIVIC_INDICATORS),
+    'research_request_types': RESEARCH_REQUEST_TYPES,
+    'research_request_type_count': len(RESEARCH_REQUEST_TYPES),
+    'ai_research_assistant_capabilities': AI_RESEARCH_ASSISTANT_CAPABILITIES,
+    'ai_research_assistant_capability_count': len(AI_RESEARCH_ASSISTANT_CAPABILITIES),
+    'research_publication_components': RESEARCH_PUBLICATION_COMPONENTS,
+    'research_publication_component_count': len(RESEARCH_PUBLICATION_COMPONENTS),
+    'mc_research_dashboard_displays': MC_RESEARCH_DASHBOARD_DISPLAYS,
+    'mc_research_dashboard_display_count': len(MC_RESEARCH_DASHBOARD_DISPLAYS),
+    'research_intelligence_deliverables': RESEARCH_INTELLIGENCE_DELIVERABLES,
+    'research_intelligence_deliverable_count': len(RESEARCH_INTELLIGENCE_DELIVERABLES),
+    'october_research_objective': {
+        'target_date': county_milestone_date,
+        'scope': OCTOBER_RESEARCH_OBJECTIVE_SCOPE,
+        'label': 'County civic knowledge foundation in every Arkansas county by October 1',
+    },
+    'organizational_goals': {
+        'counties_total': 75,
+        'counties_with_partnerships_goal': 75,
+        'target_cities': target_cities,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+    },
+    'research_intelligence_system_chain': RESEARCH_INTELLIGENCE_SYSTEM_CHAIN,
+    'institutional_systems': INSTITUTIONAL_OS_SYSTEMS,
+    'mc_dashboard': '/mission-control/research-observatory.html',
+    'seventy_pct_milestone': True,
+    'packages_completed': 35,
+    'packages_total': 50,
+    'packages_complete_pct': 70,
+    'engineering_note': 'Doctrinal IMP-35 Research Intelligence; engineering IMP-35 is City dashboard template',
+    'status': 'documented',
+    'implemented': False,
+}
+
 TIME_INTELLIGENCE_MANIFEST = {
     'version': '1.0',
     'build': 101,
@@ -6416,7 +6592,8 @@ PACKAGE_DASHBOARD_INDICATORS = [
     {'id': 'CIP-D35', 'indicator': 'Implementation Roadmap (IMP-32)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D36', 'indicator': 'Engineering Standards (IMP-33)', 'current': 'Documented', 'status': 'partial'},
     {'id': 'CIP-D37', 'indicator': 'Executive Cockpit (IMP-34)', 'current': 'Documented', 'status': 'partial'},
-    {'id': 'CIP-D38', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
+    {'id': 'CIP-D38', 'indicator': 'Research Intelligence (IMP-35)', 'current': 'Documented', 'status': 'partial'},
+    {'id': 'CIP-D39', 'indicator': 'Sprint Zero started', 'current': 'Yes' if sprint_zero_started else 'No', 'status': 'planned'},
 ]
 
 implementation_package_readiness = min(
@@ -7308,6 +7485,34 @@ out = {
             'number': 35,
             'id': 'IMP-35',
             'title': 'Master Research Intelligence, Public Policy Observatory & Arkansas Civic Insights Center',
+            'status': 'documented',
+        },
+    },
+    'research_intelligence': {
+        'title': 'Master Research Intelligence, Public Policy Observatory & Arkansas Civic Insights Center',
+        'package': 'Implementation Package 35 of 50',
+        'route': '/docs/IMPLEMENTATION_PACKAGE_35_RESEARCH_INTELLIGENCE.md',
+        'manifest': '/data/research-intelligence-manifest.json',
+        'status': 'documented',
+        'documented_date': today,
+        'philosophy': RESEARCH_INTELLIGENCE_MANIFEST['philosophy'],
+        'research_intelligence_division_count': RESEARCH_INTELLIGENCE_MANIFEST['research_intelligence_division_count'],
+        'civic_issue_observatory_count': RESEARCH_INTELLIGENCE_MANIFEST['civic_issue_observatory_count'],
+        'research_watchlist_item_count': RESEARCH_INTELLIGENCE_MANIFEST['research_watchlist_item_count'],
+        'arkansas_civic_indicator_count': RESEARCH_INTELLIGENCE_MANIFEST['arkansas_civic_indicator_count'],
+        'research_intelligence_deliverable_count': RESEARCH_INTELLIGENCE_MANIFEST['research_intelligence_deliverable_count'],
+        'seventy_pct_milestone': RESEARCH_INTELLIGENCE_MANIFEST['seventy_pct_milestone'],
+        'packages_completed': RESEARCH_INTELLIGENCE_MANIFEST['packages_completed'],
+        'packages_complete_pct': RESEARCH_INTELLIGENCE_MANIFEST['packages_complete_pct'],
+        'county_milestone_date': county_milestone_date,
+        'engagement_goal_pct': engagement_goal_pct,
+        'arkansans_connected_goal': arkansans_connected_goal,
+        'mc_dashboard': RESEARCH_INTELLIGENCE_MANIFEST['mc_dashboard'],
+        'engineering_note': RESEARCH_INTELLIGENCE_MANIFEST['engineering_note'],
+        'next_package': {
+            'number': 36,
+            'id': 'IMP-36',
+            'title': 'Master Community Engagement, Civic Participation & Local Action Platform',
             'status': 'specified',
         },
     },
@@ -7536,6 +7741,10 @@ with open(root / 'data/engineering-standards-manifest.json', 'w', newline='\n') 
 
 with open(root / 'data/executive-cockpit-manifest.json', 'w', newline='\n') as f:
     json.dump(EXECUTIVE_COCKPIT_MANIFEST, f, indent=2)
+    f.write('\n')
+
+with open(root / 'data/research-intelligence-manifest.json', 'w', newline='\n') as f:
+    json.dump(RESEARCH_INTELLIGENCE_MANIFEST, f, indent=2)
     f.write('\n')
 
 print(

@@ -13,6 +13,19 @@ Each entry from Ernie corresponds to a new version and GitHub commit.
 - Action Hub labels aligned to Constitution §8
 - Front Door + footer updated to Constitution v1.0
 
+## [2.05.35] - 2026-07-09 — IMP-35 Research Intelligence — 70% Milestone
+
+### Implementation Package 35 of 50
+- **Master Research Intelligence, Public Policy Observatory & Arkansas Civic Insights Center**
+- 6 intelligence divisions · 8 civic issue observatories · research watchlists
+- Legal, legislative, community, educational, institutional, historical intelligence
+- AI research assistant · Arkansas civic indicators · research dashboard
+- Oct 1 county research profiles and civic knowledge foundation statewide
+- Machine-readable **research-intelligence-manifest.json**
+- Institutional OS evolution: **35/50 packages (70%)**
+- IMP-36 next (doctrinal): Community Engagement, Civic Participation & Local Action
+- Honest: 35/50 documented · 0/50 implemented · 100% package readiness
+
 ## [2.05.34] - 2026-07-09 — IMP-34 Executive Cockpit & MC Command Environment
 
 ### Implementation Package 34 of 50

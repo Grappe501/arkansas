@@ -987,6 +987,34 @@
       "number": 35,
       "id": "IMP-35",
       "title": "Master Research Intelligence, Public Policy Observatory & Arkansas Civic Insights Center",
+      "status": "documented"
+    }
+  },
+  "research_intelligence": {
+    "title": "Master Research Intelligence, Public Policy Observatory & Arkansas Civic Insights Center",
+    "package": "Implementation Package 35 of 50",
+    "route": "/docs/IMPLEMENTATION_PACKAGE_35_RESEARCH_INTELLIGENCE.md",
+    "manifest": "/data/research-intelligence-manifest.json",
+    "status": "documented",
+    "documented_date": "2026-07-09",
+    "philosophy": "Continuously discover, organize, analyze, and explain civic knowledge \u2014 not merely preserve it",
+    "research_intelligence_division_count": 6,
+    "civic_issue_observatory_count": 8,
+    "research_watchlist_item_count": 7,
+    "arkansas_civic_indicator_count": 7,
+    "research_intelligence_deliverable_count": 11,
+    "seventy_pct_milestone": true,
+    "packages_completed": 35,
+    "packages_complete_pct": 70,
+    "county_milestone_date": "2026-10-01",
+    "engagement_goal_pct": 15,
+    "arkansans_connected_goal": 200000,
+    "mc_dashboard": "/mission-control/research-observatory.html",
+    "engineering_note": "Doctrinal IMP-35 Research Intelligence; engineering IMP-35 is City dashboard template",
+    "next_package": {
+      "number": 36,
+      "id": "IMP-36",
+      "title": "Master Community Engagement, Civic Participation & Local Action Platform",
       "status": "specified"
     }
   },
@@ -2389,7 +2417,7 @@
       {
         "id": "CIP-D02",
         "indicator": "Steps documented",
-        "current": 34,
+        "current": 35,
         "status": "partial"
       },
       {
@@ -2604,6 +2632,12 @@
       },
       {
         "id": "CIP-D38",
+        "indicator": "Research Intelligence (IMP-35)",
+        "current": "Documented",
+        "status": "partial"
+      },
+      {
+        "id": "CIP-D39",
         "indicator": "Sprint Zero started",
         "current": "No",
         "status": "planned"
@@ -2658,7 +2692,7 @@
     "days_remaining": 176,
     "implementation_package_readiness_pct": 100,
     "steps_total": 50,
-    "steps_documented": 34,
+    "steps_documented": 35,
     "steps_implemented": 0,
     "steps_remaining": 50,
     "bands_total": 5,

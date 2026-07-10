@@ -271,8 +271,8 @@
     "institutional_digital_library",
     "institutional_integration_platform",
     "institutional_security_trust",
-    "institutional_engineering_standards",
-    "institutional_executive_cockpit"
+    "institutional_executive_cockpit",
+    "institutional_research_intelligence"
   ],
   "mc_dashboard": "/mission-control/trust.html",
   "halfway_milestone": true,

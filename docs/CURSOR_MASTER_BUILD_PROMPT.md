@@ -50,6 +50,7 @@ Subject: **Citizens United**, campaign finance, constitutional literacy, civic e
 0af. **Implementation Roadmap (IMP-32):** [/docs/IMPLEMENTATION_PACKAGE_32_IMPLEMENTATION_ROADMAP.md](/docs/IMPLEMENTATION_PACKAGE_32_IMPLEMENTATION_ROADMAP.md) · [/data/implementation-roadmap-manifest.json](/data/implementation-roadmap-manifest.json)
 0ag. **Engineering Standards (IMP-33):** [/docs/IMPLEMENTATION_PACKAGE_33_ENGINEERING_STANDARDS.md](/docs/IMPLEMENTATION_PACKAGE_33_ENGINEERING_STANDARDS.md) · [/data/engineering-standards-manifest.json](/data/engineering-standards-manifest.json)
 0ah. **Executive Cockpit (IMP-34):** [/docs/IMPLEMENTATION_PACKAGE_34_EXECUTIVE_COCKPIT.md](/docs/IMPLEMENTATION_PACKAGE_34_EXECUTIVE_COCKPIT.md) · [/data/executive-cockpit-manifest.json](/data/executive-cockpit-manifest.json)
+0ai. **Research Intelligence (IMP-35):** [/docs/IMPLEMENTATION_PACKAGE_35_RESEARCH_INTELLIGENCE.md](/docs/IMPLEMENTATION_PACKAGE_35_RESEARCH_INTELLIGENCE.md) · [/data/research-intelligence-manifest.json](/data/research-intelligence-manifest.json)
 
 ## Master timeline (updated IMP-11)
 
@@ -155,7 +156,7 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 
 ## First step to implement
 
-**IMP-01** through **IMP-34** are **documented**:
+**IMP-01** through **IMP-35** are **documented** (70% blueprint milestone):
 - [Technical Constitution](/docs/IMPLEMENTATION_PACKAGE_01_TECHNICAL_CONSTITUTION.md)
 - [Technical Architecture](/docs/IMPLEMENTATION_PACKAGE_02_TECHNICAL_ARCHITECTURE.md)
 - [Route Map](/docs/IMPLEMENTATION_PACKAGE_03_ROUTE_MAP.md) · [route-manifest.json](/data/route-manifest.json)
@@ -190,7 +191,8 @@ After **software completion (July 11, 2026)**, organizational build-out targets:
 - [Implementation Roadmap](/docs/IMPLEMENTATION_PACKAGE_32_IMPLEMENTATION_ROADMAP.md) · [implementation-roadmap-manifest.json](/data/implementation-roadmap-manifest.json)
 - [Engineering Standards](/docs/IMPLEMENTATION_PACKAGE_33_ENGINEERING_STANDARDS.md) · [engineering-standards-manifest.json](/data/engineering-standards-manifest.json)
 - [Executive Cockpit](/docs/IMPLEMENTATION_PACKAGE_34_EXECUTIVE_COCKPIT.md) · [executive-cockpit-manifest.json](/data/executive-cockpit-manifest.json)
+- [Research Intelligence](/docs/IMPLEMENTATION_PACKAGE_35_RESEARCH_INTELLIGENCE.md) · [research-intelligence-manifest.json](/data/research-intelligence-manifest.json)
 
-**IMP-35** is next (doctrinal): Master Research Intelligence, Public Policy Observatory & Arkansas Civic Insights Center.
+**IMP-36** is next (doctrinal): Master Community Engagement, Civic Participation & Local Action Platform.
 
 Engineering **Sprint Zero (IMP-10 step registry)** is the Band A gate before Band B code slices.
